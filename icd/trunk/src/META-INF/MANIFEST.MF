@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+
+Name: edu.stanford.bmir.protegex.icd.ICDTab.class
+Tab-Widget: True
+
+Name: edu.stanford.bmir.protegex.icd.diff.ICDDiff.class
+Tab-Widget: True
+
+Name: edu.stanford.bmir.icd.claml.ClamlCreateProjectPlugin.class
+Create-Project-Plugin: True
+
