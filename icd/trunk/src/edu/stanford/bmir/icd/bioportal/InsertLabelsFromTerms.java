@@ -28,34 +28,33 @@ import edu.stanford.smi.protegex.owl.model.RDFProperty;
 public class InsertLabelsFromTerms {
     private static Logger log = Log.getLogger(InsertLabelsFromTerms.class);
    
-    public static String BIOPORTAL_DELAY_PROPERTY="bioportal.call.delay";
-    public static String ICD_ONTOLOGY_LOCATION_PROPERTY="labels.to.term.ontology.location";
-    public static String REFERENCE_TERM_PROPERTY="labels.to.term.class";
-    public static String RECURSIVE_PROPERTY="labels.to.term.recursive";
-    public static String TERM_ID_PROPERTY="labels.to.term.id.property";
+    public static final String BIOPORTAL_DELAY_PROPERTY="bioportal.call.delay";
+    public static final String ICD_ONTOLOGY_LOCATION_PROPERTY="labels.from.term.ontology.location";
+    public static final String LABEL_PROPERTY="labels.from.term.label.property";
+    public static final String REFERENCE_TERM_PROPERTY="labels.from.term.class";
+    public static final String RECURSIVE_PROPERTY="labels.from.term.recursive";
+    public static final String SNOMED_REST_URL="labels.from.term.rest.url.prefix";
+    public static final String TERM_ID_PROPERTY="labels.from.term.id.property";
     
-    public static String SNOMED_REST_URL="http://rest.bioontology.org/bioportal/concepts/40403/";
+
     public static String ICD_NS = "http://who.int/icd#";
 
-    private String referenceTermName;
+    private String  labelPropertyName;
     private boolean recursive;
-    private String termIdPropertyName=ICD_NS + "termId";
+    private String  referenceTermName;
+    private String  restUrlPrefix;
+    private String  termIdPropertyName=ICD_NS + "termId";
     
     private Properties parameters = new Properties();
     private OWLModel owlModel;
-    private long delay = 1000;
     
     public InsertLabelsFromTerms() throws FileNotFoundException, IOException {
         parameters.load(new FileInputStream(new File("local.properties")));
+        labelPropertyName = parameters.getProperty(LABEL_PROPERTY);
         referenceTermName = parameters.getProperty(REFERENCE_TERM_PROPERTY);
+        restUrlPrefix = parameters.getProperty(SNOMED_REST_URL);
         recursive = parameters.getProperty(RECURSIVE_PROPERTY).toLowerCase().equals("true");
         termIdPropertyName = parameters.getProperty(TERM_ID_PROPERTY);
-        try {
-            delay = Integer.parseInt(parameters.getProperty(BIOPORTAL_DELAY_PROPERTY));
-        }
-        catch (Throwable t) {
-            ;
-        }
     }
     
     @SuppressWarnings("unchecked")
@@ -97,27 +96,33 @@ public class InsertLabelsFromTerms {
     }
     
     public void run() throws MalformedURLException {
-        OWLNamedClass referenceTerm = owlModel.getOWLNamedClass(referenceTermName);
-        OWLDatatypeProperty termId = owlModel.getOWLDatatypeProperty(termIdPropertyName);
-        RDFProperty rdfLabel = owlModel.getRDFSLabelProperty();
-        int total = referenceTerm.getInstanceCount(true);
-        log.info("Examining " + total + " individuals");
+        OWLNamedClass referenceTermCls = owlModel.getOWLNamedClass(referenceTermName);
+        OWLDatatypeProperty termIdProperty = owlModel.getOWLDatatypeProperty(termIdPropertyName);
+        RDFProperty labelProperty = owlModel.getRDFProperty(labelPropertyName);
+        
+        int total = referenceTermCls.getInstanceCount(true);
+        int found = 0;
         int counter = 0;
-        for (Object o : referenceTerm.getInstances(true)) {
+        log.info("Examining " + total + " individuals");
+        for (Object o : referenceTermCls.getInstances(true)) {
             if (++counter % 1000 == 0) {
                 log.info("" + counter + " individuals examined");
             }
             if (o instanceof OWLIndividual) {
                 OWLIndividual i = (OWLIndividual) o;
-                Object v = i.getPropertyValue(termId);
-                if (i.getPropertyValue(rdfLabel) == null && 
-                        i.getPropertyValue(termId) != null &&
+                Object v = i.getPropertyValue(termIdProperty);
+
+                if (i.getPropertyValue(labelProperty) == null && 
+                        i.getPropertyValue(termIdProperty) != null &&
                         v instanceof String) {
                     String value = (String) v;
+                    
                     String label = getLabelFromTermId(value);
                     if (label != null) {
-                        log.info("Found individual " + label);
-                        i.setPropertyValue(rdfLabel, label);
+                        if (++found % 1000 == 0) {
+                            log.info("Added label property for " + found + " individuals");
+                        }
+                        i.setPropertyValue(labelProperty, label);
                     }
                 }
             }
@@ -125,9 +130,16 @@ public class InsertLabelsFromTerms {
     }
     
     private String getLabelFromTermId(String termId) throws MalformedURLException {
+        try {
+            Long.parseLong(termId);
+        }
+        catch (NumberFormatException nfe) {
+            return null;
+        }
+        
         ClassBean cb;
         try {
-            cb = new BioportalConcept().getConceptProperties(new URL(SNOMED_REST_URL + termId));
+            cb = new BioportalConcept().getConceptProperties(new URL(restUrlPrefix + termId));
         }
         catch (Throwable t) {
             return null;
