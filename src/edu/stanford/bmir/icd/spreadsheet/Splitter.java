@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
+import java.util.logging.Logger;
 
 import jxl.Cell;
 import jxl.LabelCell;
@@ -19,8 +20,11 @@ import jxl.write.WritableSheet;
 import jxl.write.WritableWorkbook;
 import jxl.write.WriteException;
 import jxl.write.biff.RowsExceededException;
+import edu.stanford.smi.protege.util.Log;
 
 public class Splitter {
+    private Logger log = Log.getLogger(Splitter.class);
+    
     public final static String ORIGINAL_PROPERTY="spreadsheet.original";
     public final static String NO_COMMENTS_PROPERTY="spreadsheet.property.value";
     public final static String COMMENTS_ONLY_PROPERTY="spreadsheet.annotations";
@@ -36,6 +40,7 @@ public class Splitter {
     }
     
     public void run() throws BiffException, IOException, RowsExceededException, WriteException {
+        log.info("Reading spreadsheet");
         Workbook workbook = Workbook.getWorkbook(new File(parameters.getProperty(ORIGINAL_PROPERTY)));
         Sheet input = workbook.getSheet(0);
         writeWithoutComments(input);
@@ -43,11 +48,12 @@ public class Splitter {
     
     private void writeWithoutComments(Sheet input) throws IOException, RowsExceededException, WriteException {
         WritableWorkbook propertyValueWorkBook = Workbook.createWorkbook(new File(parameters.getProperty(NO_COMMENTS_PROPERTY)));
-        WritableSheet propertyValueSheet = propertyValueWorkBook.createSheet("ICD Class/Property Values", 0);
+        WritableSheet propertyValueSheet = propertyValueWorkBook.createSheet("ICD Property Values", 0);
         
         WritableWorkbook annotationsWorkBook = Workbook.createWorkbook(new File(parameters.getProperty(COMMENTS_ONLY_PROPERTY)));
         WritableSheet annotationsSheet = annotationsWorkBook.createSheet("ICD Annotations", 0);
-           
+        
+        log.info("Writing to class/property values and annotations spreadsheet");
         int propertyValueRow = 0;
         int annotationsRow = 0;
         for (int i = 0; i < input.getRows(); i++) {
@@ -81,11 +87,14 @@ public class Splitter {
             }
         }
         
+        log.info("Saving property values spreadsheet");
         propertyValueWorkBook.write();
         propertyValueWorkBook.close();
         
+        log.info("Saving  annotations spreadsheet");
         annotationsWorkBook.write();
         annotationsWorkBook.close();
+        log.info("done");
     }
     
     private WritableCell copyCell(int col, int row, Cell cell) {
