@@ -28,7 +28,8 @@ import edu.stanford.smi.protegex.owl.model.RDFProperty;
 public class InsertLabelsFromTerms {
     private static Logger log = Log.getLogger(InsertLabelsFromTerms.class);
     
-    public static String ICD_ONTOLOGY_LOCATION_PROPERTY="latels.to.term.ontology.location";
+    public static String ICD_ONTOLOGY_LOCATION_PROPERTY="labels.to.term.ontology.location";
+    public static String BIOPORTAL_DELAY="bioportal.call.delay";
     public static String SNOMED_REST_URL="http://rest.bioontology.org/bioportal/concepts/40403/";
     public static String ICD_NS = "http://who.int/icd#";
     public static String REFERENCE_TERM=ICD_NS + "ReferenceTerm";
@@ -36,9 +37,16 @@ public class InsertLabelsFromTerms {
     
     private Properties parameters = new Properties();
     private OWLModel owlModel;
+    private long delay = 1000;
     
     public InsertLabelsFromTerms() throws FileNotFoundException, IOException {
-        parameters.load(new FileInputStream(new File("local.properties")));  
+        parameters.load(new FileInputStream(new File("local.properties")));
+        try {
+            delay = Integer.parseInt(parameters.getProperty(BIOPORTAL_DELAY));
+        }
+        catch (Throwable t) {
+            ;
+        }
     }
     
     @SuppressWarnings("unchecked")
@@ -62,13 +70,34 @@ public class InsertLabelsFromTerms {
         owlModel = creator.getOwlModel();
     }
     
+    @SuppressWarnings("unchecked")
+    public void saveOntology() throws IOException  {
+        List errors  = new ArrayList();
+        owlModel.getProject().save(errors);
+        if (!errors.isEmpty()) {
+            for (Object o : errors) {
+                if (o instanceof Throwable) {
+                    log.log(Level.WARNING, "Exception caught", (Throwable) o);
+                }
+                else {
+                    log.warning(o.toString());
+                }
+            }
+            throw new IOException();
+        }
+    }
+    
     public void run() throws MalformedURLException {
         OWLNamedClass referenceTerm = owlModel.getOWLNamedClass(REFERENCE_TERM);
         OWLDatatypeProperty termId = owlModel.getOWLDatatypeProperty(TERM_ID_PROPERTY);
         RDFProperty rdfLabel = owlModel.getRDFSLabelProperty();
         int total = referenceTerm.getInstanceCount(true);
-        log.info("Examining " + total + "individuals");
+        log.info("Examining " + total + " individuals");
+        int counter = 0;
         for (Object o : referenceTerm.getInstances(true)) {
+            if (++counter % 1000 == 0) {
+                log.info("" + counter + " individuals examined");
+            }
             if (o instanceof OWLIndividual) {
                 OWLIndividual i = (OWLIndividual) o;
                 Object v = i.getPropertyValue(termId);
@@ -78,6 +107,7 @@ public class InsertLabelsFromTerms {
                     String value = (String) v;
                     String label = getLabelFromTermId(value);
                     if (label != null) {
+                        log.info("Found individual " + label);
                         i.setPropertyValue(rdfLabel, label);
                     }
                 }
@@ -109,9 +139,11 @@ public class InsertLabelsFromTerms {
      * @throws OntologyLoadException 
      */
     public static void main(String[] args) throws FileNotFoundException, IOException, OntologyLoadException {
+        Logger.getLogger(BioportalConcept.class.getName()).setLevel(Level.SEVERE);
         InsertLabelsFromTerms i = new InsertLabelsFromTerms();
         i.loadOntology();
         i.run();
+        i.saveOntology();
     }
 
 }
