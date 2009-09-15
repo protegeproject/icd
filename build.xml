@@ -17,8 +17,7 @@
 
    <property name="protege.lib"       location = "${protege.home}/protege.jar"/>
    <property name="protege.owl.lib"   location = "${protege.home}/plugins/${owl.path}/protege-owl.jar"/>
-
-
+   <property name="bio.refs.lib"      location="${protege.home}/plugins/edu.stanford.bmir.protegex.bp.ref/bioportalReference.jar"/>
    <!-- 
      #  ********** Finding Protege Libraries. *************
      -->
@@ -29,6 +28,7 @@
         <and>
           <available file="${protege.lib}" type = "file"/>
           <available file="${protege.owl.lib}" type = "file"/>
+          <available file="${bio.refs.lib}" type = "file"/>
         </and>
       </condition>
       <path id = "project.classpath">    
@@ -167,7 +167,19 @@
         </java>
     </target>
 
-
+    <target name="InsertLabelsFromTermIds" depends="jar">
+        <java fork="true" 
+              classname="edu.stanford.bmir.icd.bioportal.InsertLabelsFromTerms">
+            <classpath>
+                <pathelement location = "${protege.lib}"/>
+		<fileset dir="${protege.home}/plugins/${owl.path}"/>
+                <fileset dir="${protege.home}/plugins/edu.stanford.bmir.protegex.bp.ref"/>
+                <fileset dir="./lib"/>
+            	<pathelement location="${classes}"/>
+            </classpath>
+            <jvmarg name="-Xmx900M"/>
+        </java>
+    </target>
 
    <target name = "clean">
      <delete dir = "${build}"/>
