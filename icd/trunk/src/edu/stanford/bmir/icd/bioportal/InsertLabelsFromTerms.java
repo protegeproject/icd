@@ -119,7 +119,7 @@ public class InsertLabelsFromTerms {
                     
                     String label = getLabelFromTermId(value);
                     if (label != null) {
-                        if (++found % 1000 == 0) {
+                        if (++found % 100 == 0) {
                             log.info("Added label property for " + found + " individuals");
                         }
                         i.setPropertyValue(labelProperty, label);
@@ -127,6 +127,7 @@ public class InsertLabelsFromTerms {
                 }
             }
         }
+        log.info("Added Property level for " + found  + "individual");
     }
     
     private String getLabelFromTermId(String termId) throws MalformedURLException {
