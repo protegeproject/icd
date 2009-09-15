@@ -6,15 +6,15 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
-import jxl.CellFeatures;
-import jxl.CellType;
+import jxl.Cell;
 import jxl.LabelCell;
 import jxl.NumberCell;
 import jxl.Sheet;
 import jxl.Workbook;
-import jxl.format.CellFormat;
+import jxl.biff.EmptyCell;
 import jxl.read.biff.BiffException;
 import jxl.write.Label;
+import jxl.write.WritableCell;
 import jxl.write.WritableSheet;
 import jxl.write.WritableWorkbook;
 import jxl.write.WriteException;
@@ -22,11 +22,11 @@ import jxl.write.biff.RowsExceededException;
 
 public class Splitter {
     public final static String ORIGINAL_PROPERTY="spreadsheet.original";
-    public final static String NO_COMMENTS_PROPERTY="spreadsheet.no.comments";
-    public final static String COMMENTS_ONLY_PROPERTY="spreadsheet.comments.only";
+    public final static String NO_COMMENTS_PROPERTY="spreadsheet.property.value";
+    public final static String COMMENTS_ONLY_PROPERTY="spreadsheet.annotations";
     
     public final static int COLUMNS = 4;
-    public final static int COMMENT_COLUMN = 2;
+    public final static int COMMENT_COLUMN = 1;
     public final static String COMMENT_CONTENTS = "Comment";
     
     private Properties parameters = new Properties();
@@ -35,33 +35,68 @@ public class Splitter {
         parameters.load(new FileInputStream(new File("local.properties")));
     }
     
-    public void run() throws BiffException, IOException {
+    public void run() throws BiffException, IOException, RowsExceededException, WriteException {
         Workbook workbook = Workbook.getWorkbook(new File(parameters.getProperty(ORIGINAL_PROPERTY)));
         Sheet input = workbook.getSheet(0);
         writeWithoutComments(input);
     }
     
     private void writeWithoutComments(Sheet input) throws IOException, RowsExceededException, WriteException {
-        WritableWorkbook workbook = Workbook.createWorkbook(new File(parameters.getProperty(NO_COMMENTS_PROPERTY)));
-        WritableSheet sheet = workbook.getSheet(0);
-        sheet.setName("ICD Class/Property Values");
-        int outputRow = 0;
+        WritableWorkbook propertyValueWorkBook = Workbook.createWorkbook(new File(parameters.getProperty(NO_COMMENTS_PROPERTY)));
+        WritableSheet propertyValueSheet = propertyValueWorkBook.createSheet("ICD Class/Property Values", 0);
+        
+        WritableWorkbook annotationsWorkBook = Workbook.createWorkbook(new File(parameters.getProperty(COMMENTS_ONLY_PROPERTY)));
+        WritableSheet annotationsSheet = annotationsWorkBook.createSheet("ICD Annotations", 0);
+           
+        int propertyValueRow = 0;
+        int annotationsRow = 0;
         for (int i = 0; i < input.getRows(); i++) {
-            LabelCell commentCell = (LabelCell) input.getCell(COMMENT_COLUMN, i);
+            Cell commentCell =  input.getCell(COMMENT_COLUMN, i);
+            
+            String clsName =  ((LabelCell) input.getCell(0, i)).getContents();
+            clsName = "icd:" + clsName;
+            
             if (!commentCell.getContents().equals(COMMENT_CONTENTS)) {
-                outputRow++;
-                
-                String clsName =  ((LabelCell) input.getCell(0, i)).getContents();
-                clsName = "icd:" + clsName;
-                sheet.addCell(new Label(0, outputRow, clsName));
-                
+                propertyValueSheet.addCell(new Label(0, propertyValueRow, clsName));
+
                 String propertyName = ((LabelCell) input.getCell(1, i)).getContents();
                 propertyName = "icd:" + propertyName.substring(0, 1).toLowerCase() + propertyName.substring(1);
-                sheet.addCell(new Label(1, outputRow, propertyName));
+                propertyValueSheet.addCell(new Label(1, propertyValueRow, propertyName));
                 
-                
-
+                for (int j = 2; j < COLUMNS; j++) {
+                    propertyValueSheet.addCell(copyCell(j, propertyValueRow, input.getCell(j, i)));
+                }
+                propertyValueRow++;
             }
+            else {
+                annotationsSheet.addCell(new Label(0, annotationsRow, clsName));
+
+                for (int j = 1; j < COLUMNS; j++) {
+                    annotationsSheet.addCell(copyCell(j, annotationsRow, input.getCell(j, i)));
+                }
+                annotationsRow++;
+            }
+        }
+        
+        propertyValueWorkBook.write();
+        propertyValueWorkBook.close();
+        
+        annotationsWorkBook.write();
+        annotationsWorkBook.close();
+    }
+    
+    private WritableCell copyCell(int col, int row, Cell cell) {
+        if (cell instanceof LabelCell) {
+            return new Label(col, row, ((LabelCell) cell).getString());
+        }
+        else if (cell instanceof NumberCell) {
+            return new jxl.write.Number(col, row, ((NumberCell) cell).getValue());
+        }
+        else if (cell instanceof EmptyCell) {
+            return new EmptyCell(col, row);
+        }
+        else {
+            throw new UnsupportedOperationException("Not implemented yet.");
         }
     }
     
@@ -71,8 +106,10 @@ public class Splitter {
      * @throws IOException 
      * @throws FileNotFoundException 
      * @throws BiffException 
+     * @throws WriteException 
+     * @throws RowsExceededException 
      */
-    public static void main(String[] args) throws BiffException, FileNotFoundException, IOException {
+    public static void main(String[] args) throws BiffException, FileNotFoundException, IOException, RowsExceededException, WriteException {
         new Splitter().run();
     }
 
