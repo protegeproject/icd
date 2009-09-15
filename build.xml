@@ -177,7 +177,7 @@
                 <fileset dir="./lib"/>
             	<pathelement location="${classes}"/>
             </classpath>
-            <jvmarg name="-Xmx900M"/>
+            <jvmarg value="-Xmx900M"/>
         </java>
     </target>
 
