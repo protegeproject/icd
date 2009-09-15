@@ -27,13 +27,19 @@ import edu.stanford.smi.protegex.owl.model.RDFProperty;
 
 public class InsertLabelsFromTerms {
     private static Logger log = Log.getLogger(InsertLabelsFromTerms.class);
-    
+   
+    public static String BIOPORTAL_DELAY_PROPERTY="bioportal.call.delay";
     public static String ICD_ONTOLOGY_LOCATION_PROPERTY="labels.to.term.ontology.location";
-    public static String BIOPORTAL_DELAY="bioportal.call.delay";
+    public static String REFERENCE_TERM_PROPERTY="labels.to.term.class";
+    public static String RECURSIVE_PROPERTY="labels.to.term.recursive";
+    public static String TERM_ID_PROPERTY="labels.to.term.id.property";
+    
     public static String SNOMED_REST_URL="http://rest.bioontology.org/bioportal/concepts/40403/";
     public static String ICD_NS = "http://who.int/icd#";
-    public static String REFERENCE_TERM=ICD_NS + "ReferenceTerm";
-    public static String TERM_ID_PROPERTY=ICD_NS + "termId";
+
+    private String referenceTermName;
+    private boolean recursive;
+    private String termIdPropertyName=ICD_NS + "termId";
     
     private Properties parameters = new Properties();
     private OWLModel owlModel;
@@ -41,8 +47,11 @@ public class InsertLabelsFromTerms {
     
     public InsertLabelsFromTerms() throws FileNotFoundException, IOException {
         parameters.load(new FileInputStream(new File("local.properties")));
+        referenceTermName = parameters.getProperty(REFERENCE_TERM_PROPERTY);
+        recursive = parameters.getProperty(RECURSIVE_PROPERTY).toLowerCase().equals("true");
+        termIdPropertyName = parameters.getProperty(TERM_ID_PROPERTY);
         try {
-            delay = Integer.parseInt(parameters.getProperty(BIOPORTAL_DELAY));
+            delay = Integer.parseInt(parameters.getProperty(BIOPORTAL_DELAY_PROPERTY));
         }
         catch (Throwable t) {
             ;
@@ -88,8 +97,8 @@ public class InsertLabelsFromTerms {
     }
     
     public void run() throws MalformedURLException {
-        OWLNamedClass referenceTerm = owlModel.getOWLNamedClass(REFERENCE_TERM);
-        OWLDatatypeProperty termId = owlModel.getOWLDatatypeProperty(TERM_ID_PROPERTY);
+        OWLNamedClass referenceTerm = owlModel.getOWLNamedClass(referenceTermName);
+        OWLDatatypeProperty termId = owlModel.getOWLDatatypeProperty(termIdPropertyName);
         RDFProperty rdfLabel = owlModel.getRDFSLabelProperty();
         int total = referenceTerm.getInstanceCount(true);
         log.info("Examining " + total + " individuals");
