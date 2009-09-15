@@ -59,12 +59,15 @@ public class Splitter {
             if (!commentCell.getContents().equals(COMMENT_CONTENTS)) {
                 propertyValueSheet.addCell(new Label(0, propertyValueRow, clsName));
 
-                String propertyName = ((LabelCell) input.getCell(1, i)).getContents();
-                propertyName = "icd:" + propertyName.substring(0, 1).toLowerCase() + propertyName.substring(1);
+                String spreadSheetPropertyName = ((LabelCell) input.getCell(1, i)).getContents();
+                String propertyRangeName = "icd:" + spreadSheetPropertyName + "Term";
+                String propertyName = "icd:" + spreadSheetPropertyName.substring(0, 1).toLowerCase() + spreadSheetPropertyName.substring(1);
+                
                 propertyValueSheet.addCell(new Label(1, propertyValueRow, propertyName));
+                propertyValueSheet.addCell(new Label(2, propertyValueRow, propertyRangeName));
                 
                 for (int j = 2; j < COLUMNS; j++) {
-                    propertyValueSheet.addCell(copyCell(j, propertyValueRow, input.getCell(j, i)));
+                    propertyValueSheet.addCell(copyCell(j+1, propertyValueRow, input.getCell(j, i)));
                 }
                 propertyValueRow++;
             }
