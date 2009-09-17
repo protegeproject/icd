@@ -66,6 +66,9 @@ public class Splitter {
                 propertyValueSheet.addCell(new Label(0, propertyValueRow, clsName));
 
                 String spreadSheetPropertyName = ((LabelCell) input.getCell(1, i)).getContents();
+                if (spreadSheetPropertyName.equals("CausalMechanism")) {
+                    spreadSheetPropertyName = "CausalFactor";
+                }
                 String propertyRangeName = "icd:" + spreadSheetPropertyName + "Term";
                 String propertyName = "icd:" + spreadSheetPropertyName.substring(0, 1).toLowerCase() + spreadSheetPropertyName.substring(1);
                 
