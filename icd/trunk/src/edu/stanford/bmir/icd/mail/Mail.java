@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
+import javax.mail.Address;
 import javax.mail.MessagingException;
 import javax.mail.Session;
 import javax.mail.Transport;
@@ -38,10 +39,12 @@ public class Mail {
     public static void main(String[] args) throws FileNotFoundException, IOException, MessagingException {
         Session session = Session.getInstance(getMailProperties());
         MimeMessage msg = new MimeMessage(session);
-        msg.setRecipient(RecipientType.TO, new InternetAddress("tredmond@stanford.edu", "Timothy Redmond"));
+        Address to = new InternetAddress("tredmond@stanford.edu", "Timothy Redmond");
+        msg.setRecipient(RecipientType.TO, to);
         msg.setSubject("Hello there");
         msg.setText("This is a message from java");
-        Transport.send(msg);
+        Transport transport = session.getTransport();
+        transport.sendMessage(msg, new Address[] { to });
     }
 
 }
