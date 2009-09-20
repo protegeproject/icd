@@ -7,13 +7,13 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-import javax.mail.Address;
 import javax.mail.MessagingException;
 import javax.mail.Session;
-import javax.mail.Transport;
 import javax.mail.Message.RecipientType;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+
+import com.sun.mail.smtp.SMTPSSLTransport;
 
 public class Mail {
     private static Properties parameters;
@@ -38,13 +38,23 @@ public class Mail {
      */
     public static void main(String[] args) throws FileNotFoundException, IOException, MessagingException {
         Session session = Session.getInstance(getMailProperties());
+        // session.setDebug(true);
         MimeMessage msg = new MimeMessage(session);
-        Address to = new InternetAddress("tredmond@stanford.edu", "Timothy Redmond");
-        msg.setRecipient(RecipientType.TO, to);
-        msg.setSubject("Hello there");
+        // InternetAddress[]  to = InternetAddress.parse("tredmond@stanford.edu", false);
+        InternetAddress[] to = new InternetAddress[] { 
+            new InternetAddress("tredmond@stanford.edu", "Timothy Redmond")
+        };
+        msg.setRecipients(RecipientType.TO, to);
+        msg.setSubject("Alt internet address 3");
         msg.setText("This is a message from java");
-        Transport transport = session.getTransport();
-        transport.sendMessage(msg, new Address[] { to });
+
+        SMTPSSLTransport transport = (SMTPSSLTransport) session.getTransport();
+        transport.connect(parameters.getProperty("mail.host"), 
+                          parameters.getProperty("mail.user"), 
+                          parameters.getProperty("mail.password"));
+        msg.saveChanges();
+        transport.sendMessage(msg, to);
+
     }
 
 }
