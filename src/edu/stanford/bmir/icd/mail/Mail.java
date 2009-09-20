@@ -1,10 +1,12 @@
 package edu.stanford.bmir.icd.mail;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.Properties;
 
 import javax.mail.MessagingException;
@@ -13,7 +15,7 @@ import javax.mail.Message.RecipientType;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
-import com.sun.mail.smtp.SMTPSSLTransport;
+import com.sun.mail.smtp.SMTPTransport;
 
 public class Mail {
     private static Properties parameters;
@@ -29,6 +31,11 @@ public class Mail {
         return parameters;
     }
     
+    private static String getPassword() throws IOException {
+        System.out.print("Password:  ");
+        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+        return in.readLine();
+    }
     
     /**
      * @param args
@@ -37,6 +44,7 @@ public class Mail {
      * @throws MessagingException 
      */
     public static void main(String[] args) throws FileNotFoundException, IOException, MessagingException {
+        
         Session session = Session.getInstance(getMailProperties());
         // session.setDebug(true);
         MimeMessage msg = new MimeMessage(session);
@@ -45,13 +53,13 @@ public class Mail {
             new InternetAddress("tredmond@stanford.edu", "Timothy Redmond")
         };
         msg.setRecipients(RecipientType.TO, to);
-        msg.setSubject("Alt internet address 3");
+        msg.setSubject("Alt internet address 5");
         msg.setText("This is a message from java");
 
-        SMTPSSLTransport transport = (SMTPSSLTransport) session.getTransport();
+        SMTPTransport transport = (SMTPTransport) session.getTransport();
         transport.connect(parameters.getProperty("mail.host"), 
                           parameters.getProperty("mail.user"), 
-                          parameters.getProperty("mail.password"));
+                          getPassword());
         msg.saveChanges();
         transport.sendMessage(msg, to);
 
