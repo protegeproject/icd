@@ -70,6 +70,8 @@ public class ICDContentModel {
     private RDFProperty preferredProperty;
     private RDFProperty preferredLongProperty;
 
+    private RDFProperty morbidityProperty;
+
     public ICDContentModel(OWLModel owlModel) {
         this.owlModel = owlModel;
     }
@@ -87,7 +89,8 @@ public class ICDContentModel {
 
     public RDFSNamedClass getClinicalDescriptionMetaClass() {
         if (clincalDescriptionMetaClass == null) {
-            clincalDescriptionMetaClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.ICD_CLINICAL_DESC_METACLASS);
+            clincalDescriptionMetaClass = owlModel
+                    .getRDFSNamedClass(ICDContentModelConstants.ICD_CLINICAL_DESC_METACLASS);
         }
         return clincalDescriptionMetaClass;
     }
@@ -101,7 +104,8 @@ public class ICDContentModel {
 
     public RDFSNamedClass getFunctionalImpactMetaClass() {
         if (functionalImpactMetaClass == null) {
-            functionalImpactMetaClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.ICD_FUNCTIONAL_IMPACT_METACLASS);
+            functionalImpactMetaClass = owlModel
+                    .getRDFSNamedClass(ICDContentModelConstants.ICD_FUNCTIONAL_IMPACT_METACLASS);
         }
         return functionalImpactMetaClass;
     }
@@ -136,7 +140,8 @@ public class ICDContentModel {
 
     public RDFSNamedClass getDiagnosticCriteriaMetaClass() {
         if (diagnosticCriteriaMetaClass == null) {
-            diagnosticCriteriaMetaClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.ICD_DIAGNOSTIC_CRITERIA_METACLASS);
+            diagnosticCriteriaMetaClass = owlModel
+                    .getRDFSNamedClass(ICDContentModelConstants.ICD_DIAGNOSTIC_CRITERIA_METACLASS);
         }
         return diagnosticCriteriaMetaClass;
     }
@@ -334,6 +339,13 @@ public class ICDContentModel {
         return exclusionProperty;
     }
 
+    public RDFProperty getMorbidityParentProperty() {
+        if (morbidityProperty == null) {
+            morbidityProperty = owlModel.getRDFProperty(ICDContentModelConstants.MORBIDITY_PARENT_PROP);
+        }
+        return morbidityProperty;
+    }
+
     /*
      * Create methods
      */
@@ -351,7 +363,12 @@ public class ICDContentModel {
             cls.addSuperclass(supercls);
             cls.removeSuperclass(owlModel.getOWLThingClass());
         }
+        addMorbidityParent(cls, supercls);
         return cls;
+    }
+
+    protected void addMorbidityParent(RDFSNamedClass cls, RDFSNamedClass parent) {
+        cls.addPropertyValue(getMorbidityParentProperty(), parent);
     }
 
     @SuppressWarnings("deprecation")
