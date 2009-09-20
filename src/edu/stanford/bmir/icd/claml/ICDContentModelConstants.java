@@ -57,4 +57,17 @@ public class ICDContentModelConstants {
     public final static String PREFFERED_PROP = NS + "preferred";
     public final static String PREFERRED_LONG_PROP = NS + "preferredLong";
 
+    public final static String URL_PROP = NS + "url";
+
+    public final static String MORBIDITY_PARENT_PROP = NS + "morbidityParent";
+
+    /*
+     * BioPortal 
+     */
+
+    public final static String NS_BP = "http://bioportal.bioontology.org#";
+
+    public final static String BP_SHORT_TERM_ID_PROP = NS_BP + "shortTermId";
+    public final static String BP_ONTOLOGY_LABEL_PROP = NS_BP + "ontologyLabel";
+    public final static String BP_ONTOLOGY_ID_PROP = NS_BP + "ontologyId";
 }
