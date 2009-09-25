@@ -31,6 +31,7 @@ public class ICDContentModelConstants {
     public final static String TERM_EXCLUSION_CLASS = NS + "ExclusionTerm";
     public final static String TERM_ICD10_NOTES_CLASS = NS + "ICD10NotesTerm";
     public final static String TERM_DEFINITION_CLASS = NS + "DefinitionTerm";
+    public final static String TERM_SYNONYM_CLASS = NS + "SynonymTerm";
 
     /*
      * Properties
@@ -42,6 +43,8 @@ public class ICDContentModelConstants {
     public final static String CLAML_USAGE_PROP = NS + "clamlUsage";
     public final static String TEXT_PROP = NS + "text";
     public final static String DEFINITION_PROP = NS + "definition";
+    public final static String PREFILLED_DEFINITION_PROP = NS + "definitionPrefilled";
+    public final static String SYNOYM_PROP = NS + "synonym";
 
     public final static String INCLUSION_PROP = NS + "inclusion";
     public final static String EXCLUSION_PROP = NS + "exclusion";
@@ -49,6 +52,7 @@ public class ICDContentModelConstants {
     public final static String ID_PROP = NS + "id";
     public final static String LABEL_PROP = NS + "label";
     public final static String LANG_PROP = NS + "language";
+    public final static String ONTOLOGYID_PROP = NS + "ontologyId";
     public final static String CLAML_CONTENT_PROP = NS + "clamlContent";
     public final static String CLAML_REFERENCES_PROP = NS + "clamlReferences";
     public final static String ICD_REF_CODE_PROP = NS + "icdRefCode";
