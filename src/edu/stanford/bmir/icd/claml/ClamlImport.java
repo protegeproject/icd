@@ -44,7 +44,8 @@ public class ClamlImport {
 
         //Project prj = Project.loadProjectFromFile("/home/ttania/Desktop/icd project/content_model/icd_int/icd_content_model_owl_with_categories.pprj", new ArrayList());
 
-        Project prj = Project.loadProjectFromFile("/home/ttania/Desktop/icd project/icf/icd_content_model_owl_with_categories.pprj", new ArrayList());
+        Project prj = Project.loadProjectFromFile(
+                "/home/ttania/Desktop/icd project/icf/icd_content_model_owl_with_categories.pprj", new ArrayList());
         OWLModel owlModel = (OWLModel) prj.getKnowledgeBase();
 
         ClamlImport ci = new ClamlImport(owlModel);
@@ -91,7 +92,8 @@ public class ClamlImport {
         } catch (JDOMException e) {
             log.log(Level.SEVERE, "Error at parsing CLAML file: " + e.getMessage(), e);
         } catch (IOException e) {
-            log.log(Level.SEVERE, "Could not open CLAML file: " + file.getAbsolutePath() + " Error message:" + e.getMessage(), e);
+            log.log(Level.SEVERE, "Could not open CLAML file: " + file.getAbsolutePath() + " Error message:"
+                    + e.getMessage(), e);
         }
     }
 
@@ -122,7 +124,8 @@ public class ClamlImport {
             }
         }
         if (cls != null) {
-            icdContentModel.addClassMetadata(cls, code, el.getAttributeValue(ClamlConstants.KIND_ATTR), el.getAttributeValue(ClamlConstants.USAGE_ATTR));
+            icdContentModel.addClassMetadata(cls, code, el.getAttributeValue(ClamlConstants.KIND_ATTR), el
+                    .getAttributeValue(ClamlConstants.USAGE_ATTR));
         }
 
         return cls;
@@ -156,7 +159,15 @@ public class ClamlImport {
             parseNote(cls, id, labelElement);
         } else if (kind.equals(ClamlConstants.RUBRIC_KIND_PREFFERD_LONG_ATTR)) {
             parsePreferredLong(cls, id, labelElement);
+        } else if (kind.equals(ClamlConstants.RUBRIC_KIND_DEFINITION_ATTR)) {
+            parseDefinition(cls, id, labelElement);
         }
+    }
+
+    private void parseDefinition(RDFSNamedClass cls, String id, Element labelElement) {
+        RDFResource term = icdContentModel.createDefinitionTerm();
+        parseLabel(cls, term, id, labelElement);
+        icdContentModel.addDefinitionTermToClass(cls, term);
     }
 
     private void parsePreferred(RDFSNamedClass cls, String id, Element labelElement) {
