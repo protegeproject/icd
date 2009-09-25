@@ -44,6 +44,7 @@ public class ICDContentModel {
     private RDFSNamedClass termInclusionClass;
     private RDFSNamedClass termExclusionClass;
     private RDFSNamedClass icd10NotesClass;
+    private RDFSNamedClass termDefinitionClass;
 
     /*
      * Properties
@@ -52,6 +53,7 @@ public class ICDContentModel {
     private RDFProperty icdCodeProperty;
     private RDFProperty kindProperty;
     private RDFProperty usageProperty;
+    private RDFProperty definitionProperty;
 
     private RDFProperty inclusionProperty;
     private RDFProperty exclusionProperty;
@@ -195,6 +197,13 @@ public class ICDContentModel {
         return termTitleClass;
     }
 
+    public RDFSNamedClass getTermDefinitionClass() {
+        if (termDefinitionClass == null) {
+            termDefinitionClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.TERM_DEFINITION_CLASS);
+        }
+        return termDefinitionClass;
+    }
+
     public RDFSNamedClass getTermInclusionClass() {
         if (termInclusionClass == null) {
             termInclusionClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.TERM_INCLUSION_CLASS);
@@ -246,6 +255,13 @@ public class ICDContentModel {
             labelProperty = owlModel.getRDFProperty(ICDContentModelConstants.LABEL_PROP);
         }
         return labelProperty;
+    }
+
+    public RDFProperty getDefinitionProperty() {
+        if (definitionProperty == null) {
+            definitionProperty = owlModel.getRDFProperty(ICDContentModelConstants.DEFINITION_PROP);
+        }
+        return definitionProperty;
     }
 
     public RDFProperty getLangProperty() {
@@ -430,12 +446,20 @@ public class ICDContentModel {
         cls.addPropertyValue(prop, term);
     }
 
+    public RDFResource createDefinitionTerm() {
+        return createTerm(getTermDefinitionClass());
+    }
+
     public RDFResource createTitleTerm() {
         return createTerm(getTermTitleClass());
     }
 
     public void addTitleTermToClass(RDFSNamedClass cls, RDFResource term) {
         addTermToClass(cls, getIcdTitleProperty(), term);
+    }
+
+    public void addDefinitionTermToClass(RDFSNamedClass cls, RDFResource term) {
+        addTermToClass(cls, getDefinitionProperty(), term);
     }
 
     public RDFResource createInclusionTerm() {
