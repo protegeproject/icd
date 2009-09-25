@@ -30,6 +30,7 @@ public class ICDContentModelConstants {
     public final static String TERM_INCLUSION_CLASS = NS + "InclusionTerm";
     public final static String TERM_EXCLUSION_CLASS = NS + "ExclusionTerm";
     public final static String TERM_ICD10_NOTES_CLASS = NS + "ICD10NotesTerm";
+    public final static String TERM_DEFINITION_CLASS = NS + "DefinitionTerm";
 
     /*
      * Properties
@@ -40,6 +41,7 @@ public class ICDContentModelConstants {
     public final static String CLAML_KIND_PROP = NS + "clamlKind";
     public final static String CLAML_USAGE_PROP = NS + "clamlUsage";
     public final static String TEXT_PROP = NS + "text";
+    public final static String DEFINITION_PROP = NS + "definition";
 
     public final static String INCLUSION_PROP = NS + "inclusion";
     public final static String EXCLUSION_PROP = NS + "exclusion";
