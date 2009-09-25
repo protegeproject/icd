@@ -45,6 +45,7 @@ public class ICDContentModel {
     private RDFSNamedClass termExclusionClass;
     private RDFSNamedClass icd10NotesClass;
     private RDFSNamedClass termDefinitionClass;
+    private RDFSNamedClass termSynonymClass;
 
     /*
      * Properties
@@ -54,6 +55,8 @@ public class ICDContentModel {
     private RDFProperty kindProperty;
     private RDFProperty usageProperty;
     private RDFProperty definitionProperty;
+    private RDFProperty prefilledDefinitionProperty;
+    private RDFProperty synonymProperty;
 
     private RDFProperty inclusionProperty;
     private RDFProperty exclusionProperty;
@@ -61,6 +64,7 @@ public class ICDContentModel {
     private RDFProperty idProperty;
     private RDFProperty labelProperty;
     private RDFProperty langProperty;
+    private RDFProperty ontologyIdProperty;
 
     private RDFProperty icdRefCodeProperty;
     private RDFProperty clamlRefProperty;
@@ -204,6 +208,13 @@ public class ICDContentModel {
         return termDefinitionClass;
     }
 
+    public RDFSNamedClass getTermSynonymClass() {
+        if (termSynonymClass == null) {
+            termSynonymClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.TERM_SYNONYM_CLASS);
+        }
+        return termSynonymClass;
+    }
+
     public RDFSNamedClass getTermInclusionClass() {
         if (termInclusionClass == null) {
             termInclusionClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.TERM_INCLUSION_CLASS);
@@ -264,11 +275,32 @@ public class ICDContentModel {
         return definitionProperty;
     }
 
+    public RDFProperty getPrefilledDefinitionProperty() {
+        if (prefilledDefinitionProperty == null) {
+            prefilledDefinitionProperty = owlModel.getRDFProperty(ICDContentModelConstants.PREFILLED_DEFINITION_PROP);
+        }
+        return prefilledDefinitionProperty;
+    }
+
+    public RDFProperty getSynonymProperty() {
+        if (synonymProperty == null) {
+            synonymProperty = owlModel.getRDFProperty(ICDContentModelConstants.SYNOYM_PROP);
+        }
+        return synonymProperty;
+    }
+
     public RDFProperty getLangProperty() {
         if (langProperty == null) {
             langProperty = owlModel.getRDFProperty(ICDContentModelConstants.LANG_PROP);
         }
         return langProperty;
+    }
+
+    public RDFProperty getOntologyIdProperty() {
+        if (ontologyIdProperty == null) {
+            ontologyIdProperty = owlModel.getRDFProperty(ICDContentModelConstants.ONTOLOGYID_PROP);
+        }
+        return ontologyIdProperty;
     }
 
     public RDFProperty getKindProperty() {
@@ -431,6 +463,10 @@ public class ICDContentModel {
     }
 
     public void fillTerm(RDFResource term, String id, String label, String lang) {
+        fillTerm(term, id, label, lang, null);
+    }
+
+    public void fillTerm(RDFResource term, String id, String label, String lang, String ontology) {
         if (id != null) {
             term.addPropertyValue(getIdProperty(), id);
         }
@@ -440,6 +476,9 @@ public class ICDContentModel {
         if (lang != null) {
             term.addPropertyValue(getLangProperty(), lang);
         }
+        if (ontology != null) {
+            term.addPropertyValue(getOntologyIdProperty(), ontology);
+        }
     }
 
     protected void addTermToClass(RDFSNamedClass cls, RDFProperty prop, RDFResource term) {
@@ -448,6 +487,10 @@ public class ICDContentModel {
 
     public RDFResource createDefinitionTerm() {
         return createTerm(getTermDefinitionClass());
+    }
+
+    public RDFResource createSynonymTerm() {
+        return createTerm(getTermSynonymClass());
     }
 
     public RDFResource createTitleTerm() {
@@ -460,6 +503,14 @@ public class ICDContentModel {
 
     public void addDefinitionTermToClass(RDFSNamedClass cls, RDFResource term) {
         addTermToClass(cls, getDefinitionProperty(), term);
+    }
+
+    public void addPrefilledDefinitionTermToClass(RDFSNamedClass cls, RDFResource term) {
+        addTermToClass(cls, getPrefilledDefinitionProperty(), term);
+    }
+
+    public void addSynonymTermToClass(RDFSNamedClass cls, RDFResource term) {
+        addTermToClass(cls, getSynonymProperty(), term);
     }
 
     public RDFResource createInclusionTerm() {
