@@ -28,17 +28,9 @@ public class CreateSnomedAnnotations {
         File file = new File("/home/ttania/Desktop/annotation_snomed_mappings.csv");
 
         try {
-            //use buffering, reading one line at a time
-            //FileReader always assumes default encoding is OK!
             BufferedReader input = new BufferedReader(new FileReader(file));
             try {
-                String line = null; //not declared within while loop
-                /*
-                * readLine is a bit quirky :
-                * it returns the content of a line MINUS the newline.
-                * it returns null only for the END of the stream.
-                * it returns an empty String if two newlines appear in a row.
-                */
+                String line = null;
                 while ((line = input.readLine()) != null) {
                     if (line != null) {
                         try {
@@ -46,7 +38,7 @@ public class CreateSnomedAnnotations {
                             String[] split = line.split(";");
                             String entity = split[0];
                             String comment = split[1];
-                            Ontology_Component oc = ServerChangesUtil.getOntologyComponent(chao, entity);
+                            Ontology_Component oc = ServerChangesUtil.getOntologyComponentFromChao(chao, entity);
                             if (oc == null) {
                                 oc = ocF.createOntology_Class(null);
                                 oc.setCurrentName(entity);
@@ -70,7 +62,9 @@ public class CreateSnomedAnnotations {
             ex.printStackTrace();
         }
 
+        System.out.println("Saving..");
         prj.save(new ArrayList());
+        System.out.println("Done..");
 
     }
 
