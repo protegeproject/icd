@@ -55,6 +55,10 @@ public class ClamlImport {
         this.icdContentModel = new ICDContentModel(this.owlModel);
     }
 
+    /**
+     * Method that does the actual import of the clamlFile given as argument
+     * @param clamlFile - the CLAML file to import
+     */
     public void doImport(File clamlFile) {
         boolean generateEventsEnabled = owlModel.getGenerateEventsEnabled();
         owlModel.setGenerateEventsEnabled(false);
