@@ -28,24 +28,14 @@ public class ClamlImport {
     private ICDContentModel icdContentModel;
 
     /**
-     * @param args
+     * This is just an example on how to use the importer programatically
+     * @param args - no args needed
      */
     public static void main(String[] args) {
+        File file = new File("/tmp/icd10_claml.xml");
 
-        // File file = new
-        // File("/home/ttania/Desktop/icd/icd_files/claml/icd102008enwho2008_test.xml");
-        // File file = new
-        // File("/home/ttania/Desktop/icd project/claml/20090817/icd2008en-simple.xml");
-        //File file = new File("/home/ttania/Desktop/icd project/claml/20090831/icd10en2010syst_claml_20090831-simple_test.xml");
-
-        //File file = new File("/home/ttania/Desktop/icd project/content_model/icd_int/icd10en2010syst_claml_20090831-simple.xml");
-
-        File file = new File("/home/ttania/Desktop/icd project/icf/icfen_ClaML.xml");
-
-        //Project prj = Project.loadProjectFromFile("/home/ttania/Desktop/icd project/content_model/icd_int/icd_content_model_owl_with_categories.pprj", new ArrayList());
-
-        Project prj = Project.loadProjectFromFile(
-                "/home/ttania/Desktop/icd project/icf/icd_content_model_owl_with_categories.pprj", new ArrayList());
+        //load into a file that has the empty content model in it
+        Project prj = Project.loadProjectFromFile("/tmp/icd_content_model_empty.pprj", new ArrayList());
         OWLModel owlModel = (OWLModel) prj.getKnowledgeBase();
 
         ClamlImport ci = new ClamlImport(owlModel);
@@ -174,7 +164,7 @@ public class ClamlImport {
         RDFResource term = icdContentModel.createTitleTerm();
         parseLabel(cls, term, id, labelElement);
         icdContentModel.addTitleTermToClass(cls, term);
-        //add also the rdfs:label as the code + title for BioPortal        
+        //add also the rdfs:label as the code + title for BioPortal
         icdContentModel.addRdfsLabel(cls);
     }
 
