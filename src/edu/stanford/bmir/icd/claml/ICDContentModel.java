@@ -642,5 +642,13 @@ public class ICDContentModel {
         return owlModel.getRDFSNamedClass(id);
     }
 
+    public RDFResource getTerm(RDFSNamedClass icdClass, RDFProperty icdTermProp) {
+        return (RDFResource) icdClass.getPropertyValue(icdTermProp);
+    }
+
+    public Collection<RDFResource> getTerms(RDFSNamedClass icdClass, RDFProperty icdTermProp) {
+        return (Collection<RDFResource>) icdClass.getPropertyValue(icdTermProp);
+    }
+
 
 }
