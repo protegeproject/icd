@@ -20,7 +20,8 @@ public class ICD_API_Example {
         icdContentModel = new ICDContentModel(owlModel);
 
         //getICDcategories(); //takes around 90 secs to get the result back, that is why it is commented out
-        getTerms();
+        getCategoryDetails();
+        getChildren();
     }
 
     public static void getICDcategories() {
@@ -29,7 +30,7 @@ public class ICD_API_Example {
         System.out.println("ICD Categories count: " + icdCategories.size() + " in time: " + ((System.currentTimeMillis() - t0)/1000) + " sec");
     }
 
-    public static void getTerms() {
+    public static void getCategoryDetails() {
         RDFSNamedClass category = icdContentModel.getICDCategory("http://who.int/icd#L89.2");
         System.out.println("Displayed as in the tree: " + category.getBrowserText());
 
@@ -38,6 +39,11 @@ public class ICD_API_Example {
             String definition = (String) defTerm.getPropertyValue(icdContentModel.getLabelProperty());
             System.out.println("Definition: " + definition);
         }
+    }
+
+    public static void getChildren() {
+        RDFSNamedClass category = icdContentModel.getICDCategory("http://who.int/icd#I");
+        System.out.println("Children of " + category.getBrowserText() + " : " + icdContentModel.getChildren(category));
     }
 
 
