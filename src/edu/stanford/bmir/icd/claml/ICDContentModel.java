@@ -2,6 +2,9 @@ package edu.stanford.bmir.icd.claml;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Iterator;
+import java.util.LinkedHashSet;
+import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -590,5 +593,28 @@ public class ICDContentModel {
     public void addClamlRefToTerm(RDFResource term, RDFResource ref) {
         term.addPropertyValue(getClamlReferencesProperty(), ref);
     }
+
+
+    /*
+     * Getters
+     */
+
+    public Collection<RDFSNamedClass> getICDCategories() {
+        Set<RDFSNamedClass> coll = new LinkedHashSet<RDFSNamedClass>();
+        for (Iterator iterator = getICDCategoryClass().getSubclasses(true).iterator(); iterator.hasNext();) {
+            Object cls = iterator.next();
+            if (cls instanceof RDFSNamedClass) {
+                coll.add((RDFSNamedClass) cls);
+            }
+        }
+        return coll;
+    }
+
+    public RDFSNamedClass getICDCategory(String id) {
+        return owlModel.getRDFSNamedClass(id);
+    }
+
+
+
 
 }
