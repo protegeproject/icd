@@ -599,9 +599,11 @@ public class ICDContentModel {
      * Getters
      */
 
-    public Collection<RDFSNamedClass> getICDCategories() {
+    @SuppressWarnings("unchecked")
+    private Collection<RDFSNamedClass> getRDFSNamedClassCollection(Collection someColl) {
+        if (someColl == null) { return null; }
         Set<RDFSNamedClass> coll = new LinkedHashSet<RDFSNamedClass>();
-        for (Iterator iterator = getICDCategoryClass().getSubclasses(true).iterator(); iterator.hasNext();) {
+        for (Iterator iterator = someColl.iterator(); iterator.hasNext();) {
             Object cls = iterator.next();
             if (cls instanceof RDFSNamedClass) {
                 coll.add((RDFSNamedClass) cls);
@@ -610,11 +612,35 @@ public class ICDContentModel {
         return coll;
     }
 
+    /**
+     * Returns a set of all ICD Categories from the entire category tree.
+     * This is a very expensive method and should only be used if necessary.
+     * @return the closure of all ICD classes in the tree
+     */
+    public Collection<RDFSNamedClass> getICDCategories() {
+        return getRDFSNamedClassCollection(getICDCategoryClass().getSubclasses(true));
+
+    }
+
+    /**
+     * Returns the direct children of the ICD class given as argument.
+     * @param icdClass
+     * @return the childre of the class
+     */
+    public Collection<RDFSNamedClass> getChildren(RDFSNamedClass icdClass) {
+        return getRDFSNamedClassCollection(icdClass.getSubclasses(false));
+    }
+
+    /**
+     * Returns the ICD Category for the given id.
+     * The id corresponds to the Protege class full name
+     * (e.g., http://who.int/icd#L42.5)
+     * @param id
+     * @return
+     */
     public RDFSNamedClass getICDCategory(String id) {
         return owlModel.getRDFSNamedClass(id);
     }
-
-
 
 
 }
