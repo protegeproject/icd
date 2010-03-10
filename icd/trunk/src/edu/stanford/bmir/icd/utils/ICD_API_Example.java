@@ -34,11 +34,14 @@ public class ICD_API_Example {
         RDFSNamedClass category = icdContentModel.getICDCategory("http://who.int/icd#L89.2");
         System.out.println("Displayed as in the tree: " + category.getBrowserText());
 
-        RDFResource defTerm = (RDFResource) category.getPropertyValue(icdContentModel.getDefinitionProperty());
+        RDFResource defTerm = icdContentModel.getTerm(category, icdContentModel.getDefinitionProperty());
         if (defTerm != null) {
             String definition = (String) defTerm.getPropertyValue(icdContentModel.getLabelProperty());
             System.out.println("Definition: " + definition);
         }
+
+        Collection<RDFResource> prefilledDefsTerm = icdContentModel.getTerms(category, icdContentModel.getPrefilledDefinitionProperty());
+        System.out.println("Prefilled defintion terms: " + prefilledDefsTerm);
     }
 
     public static void getChildren() {
