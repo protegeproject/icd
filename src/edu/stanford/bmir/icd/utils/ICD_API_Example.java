@@ -37,11 +37,14 @@ public class ICD_API_Example {
         RDFResource defTerm = icdContentModel.getTerm(category, icdContentModel.getDefinitionProperty());
         if (defTerm != null) {
             String definition = (String) defTerm.getPropertyValue(icdContentModel.getLabelProperty());
+            String rubricId = (String) defTerm.getPropertyValue(icdContentModel.getIdProperty());
+            System.out.println("Definition rubric id: " + rubricId);
             System.out.println("Definition: " + definition);
         }
 
         Collection<RDFResource> prefilledDefsTerm = icdContentModel.getTerms(category, icdContentModel.getPrefilledDefinitionProperty());
-        System.out.println("Prefilled defintion terms: " + prefilledDefsTerm);
+        System.out.println("\nPrefilled defintion terms: " + prefilledDefsTerm);
+
     }
 
     public static void getChildren() {
