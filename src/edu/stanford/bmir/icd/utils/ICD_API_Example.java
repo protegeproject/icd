@@ -22,6 +22,7 @@ public class ICD_API_Example {
         //getICDcategories(); //takes around 90 secs to get the result back, that is why it is commented out
         getCategoryDetails();
         getChildren();
+        getClamlRef();
     }
 
     public static void getICDcategories() {
@@ -44,7 +45,6 @@ public class ICD_API_Example {
 
         Collection<RDFResource> prefilledDefsTerm = icdContentModel.getTerms(category, icdContentModel.getPrefilledDefinitionProperty());
         System.out.println("\nPrefilled defintion terms: " + prefilledDefsTerm);
-
     }
 
     public static void getChildren() {
@@ -52,6 +52,23 @@ public class ICD_API_Example {
         System.out.println("Children of " + category.getBrowserText() + " : " + icdContentModel.getChildren(category));
     }
 
+    public static void getClamlRef() {
+        RDFSNamedClass category = icdContentModel.getICDCategory("http://who.int/icd#A65-A69");
+        System.out.println("\n" + category.getBrowserText());
+        Collection<RDFResource> exclusionTerms = category.getPropertyValues(icdContentModel.getExclusionProperty());
+        for (RDFResource exclusionTerm : exclusionTerms) {
+            System.out.println("\tExclusion: " + exclusionTerm.getBrowserText());
+            Collection<RDFResource> clamlRefs = exclusionTerm.getPropertyValues(icdContentModel.getClamlReferencesProperty());
+            if (clamlRefs != null) {
+                for (RDFResource clamlRef : clamlRefs) {
+                    System.out.println("\t\tClaml Reference: " + clamlRef.getBrowserText());
+                    System.out.println("\t\tClaml text: " + clamlRef.getPropertyValue(icdContentModel.getTextProperty()));
+                    System.out.println("\t\tClaml usage: " + clamlRef.getPropertyValue(icdContentModel.getUsageProperty()));
+                    System.out.println("\t\tClaml category ref in ICD: " + ((RDFResource)clamlRef.getPropertyValue(icdContentModel.getIcdRefProperty())).getBrowserText());
+                }
+            }
+        }
+    }
 
 
 }
