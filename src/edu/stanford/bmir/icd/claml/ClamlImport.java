@@ -101,7 +101,7 @@ public class ClamlImport {
         String code = el.getAttributeValue(ClamlConstants.CODE_ATTR);
         List classChildren = el.getChildren(ClamlConstants.SUPERCLASS_ELEMENT);
         if (classChildren.isEmpty()) {
-            cls = icdContentModel.createICDCategory(code, null);
+            cls = icdContentModel.createICDCategory(code, (String)null);
             if (log.isLoggable(Level.FINE)) {
                 log.fine("Created cls: " + cls.getBrowserText() + " superclass: " + cls.getSuperclasses(false));
             }
