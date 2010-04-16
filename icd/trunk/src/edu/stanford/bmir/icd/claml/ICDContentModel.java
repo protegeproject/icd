@@ -10,6 +10,7 @@ import java.util.logging.Logger;
 
 import edu.stanford.smi.protege.model.Instance;
 import edu.stanford.smi.protege.util.CollectionUtilities;
+import edu.stanford.smi.protege.util.IDGenerator;
 import edu.stanford.smi.protege.util.Log;
 import edu.stanford.smi.protegex.owl.model.OWLModel;
 import edu.stanford.smi.protegex.owl.model.RDFProperty;
@@ -34,8 +35,16 @@ public class ICDContentModel {
     private RDFSNamedClass linearizationMetaClass;
     private RDFSNamedClass snomedReferenceMetaClass;
     private RDFSNamedClass termMetaClass;
+    private RDFSNamedClass specificConditionMetaClass;
+    private RDFSNamedClass externalCauseMetaClass;
 
-    private Collection<RDFSNamedClass> sectionMetaclasses;
+    private RDFSNamedClass linearizationViewClass;
+    private RDFSNamedClass linearizationSpecificationClass;
+
+    private Collection<RDFSNamedClass> diseaseMetaclasses;
+    private Collection<RDFSNamedClass> externalCausesMetaclasses;
+
+    private Collection<RDFResource> linearizationValueSet;
 
     /*
      * Classes
@@ -49,6 +58,8 @@ public class ICDContentModel {
     private RDFSNamedClass icd10NotesClass;
     private RDFSNamedClass termDefinitionClass;
     private RDFSNamedClass termSynonymClass;
+
+    private RDFSNamedClass externalCausesTopClass;
 
     /*
      * Properties
@@ -79,7 +90,13 @@ public class ICDContentModel {
     private RDFProperty preferredProperty;
     private RDFProperty preferredLongProperty;
 
-    private RDFProperty morbidityProperty;
+    private RDFProperty linearizationProperty;
+    private RDFProperty isIncludedInLinearizationProperty;
+    private RDFProperty linearizationParentProperty;
+    private RDFProperty linearizationViewProperty;
+    private RDFProperty linearizationSequenceNoProperty;
+
+
 
     public ICDContentModel(OWLModel owlModel) {
         this.owlModel = owlModel;
@@ -99,7 +116,7 @@ public class ICDContentModel {
     public RDFSNamedClass getClinicalDescriptionMetaClass() {
         if (clincalDescriptionMetaClass == null) {
             clincalDescriptionMetaClass = owlModel
-                    .getRDFSNamedClass(ICDContentModelConstants.ICD_CLINICAL_DESC_METACLASS);
+            .getRDFSNamedClass(ICDContentModelConstants.ICD_CLINICAL_DESC_METACLASS);
         }
         return clincalDescriptionMetaClass;
     }
@@ -114,7 +131,7 @@ public class ICDContentModel {
     public RDFSNamedClass getFunctionalImpactMetaClass() {
         if (functionalImpactMetaClass == null) {
             functionalImpactMetaClass = owlModel
-                    .getRDFSNamedClass(ICDContentModelConstants.ICD_FUNCTIONAL_IMPACT_METACLASS);
+            .getRDFSNamedClass(ICDContentModelConstants.ICD_FUNCTIONAL_IMPACT_METACLASS);
         }
         return functionalImpactMetaClass;
     }
@@ -150,26 +167,46 @@ public class ICDContentModel {
     public RDFSNamedClass getDiagnosticCriteriaMetaClass() {
         if (diagnosticCriteriaMetaClass == null) {
             diagnosticCriteriaMetaClass = owlModel
-                    .getRDFSNamedClass(ICDContentModelConstants.ICD_DIAGNOSTIC_CRITERIA_METACLASS);
+            .getRDFSNamedClass(ICDContentModelConstants.ICD_DIAGNOSTIC_CRITERIA_METACLASS);
         }
         return diagnosticCriteriaMetaClass;
     }
 
-    public Collection<RDFSNamedClass> getSectionMetaclasses() {
-        if (sectionMetaclasses == null) {
-            sectionMetaclasses = new ArrayList<RDFSNamedClass>();
-            sectionMetaclasses.add(owlModel.getOWLNamedClassClass());
-            sectionMetaclasses.add(getDefinitionMetaClass());
-            sectionMetaclasses.add(getTermMetaClass());
-            sectionMetaclasses.add(getClinicalDescriptionMetaClass());
-            sectionMetaclasses.add(getCausalMechanismMetaClass());
-            sectionMetaclasses.add(getDiagnosticCriteriaMetaClass());
-            sectionMetaclasses.add(getFunctionalImpactMetaClass());
-            sectionMetaclasses.add(getSnomedReferenceMetaClass());
-            sectionMetaclasses.add(getLinearizationMetaClass());
-            sectionMetaclasses.add(getNotesMetaClass());
+    public RDFSNamedClass getSpecificConditionMetaClass() {
+        if (specificConditionMetaClass == null) {
+            specificConditionMetaClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.ICD_SPECIFIC_CONDITION_METACLASS);
         }
-        return sectionMetaclasses;
+        return specificConditionMetaClass;
+    }
+
+    public RDFSNamedClass getExternalCausenMetaClass() {
+        if (externalCauseMetaClass == null) {
+            externalCauseMetaClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.ICD_EXTERNAL_CAUSE_METACLASS);
+        }
+        return externalCauseMetaClass;
+    }
+
+    @SuppressWarnings({ "deprecation", "unchecked" })
+    public Collection<RDFSNamedClass> getRegularDiseaseMetaclasses() {
+        if (diseaseMetaclasses == null) {
+            diseaseMetaclasses = new ArrayList<RDFSNamedClass>(getICDCategoryClass().getDirectTypes());
+        }
+        return diseaseMetaclasses;
+    }
+
+    @SuppressWarnings({ "deprecation", "unchecked" })
+    public Collection<RDFSNamedClass> getExternalCauseMetaclasses() {
+        if (externalCausesMetaclasses == null) {
+            externalCausesMetaclasses = new ArrayList<RDFSNamedClass>(getExternalCausesTopClass().getDirectTypes());
+        }
+        return externalCausesMetaclasses;
+    }
+
+    public Collection<RDFResource> getLinearizationValueSet() {
+        if (linearizationValueSet == null) {
+            linearizationValueSet = new ArrayList<RDFResource>(getLinearizationViewClass().getInstances(true));
+        }
+        return linearizationValueSet;
     }
 
     /*
@@ -238,6 +275,28 @@ public class ICDContentModel {
         }
         return icd10NotesClass;
     }
+
+    public RDFSNamedClass getExternalCausesTopClass() {
+        if (externalCausesTopClass == null) {
+            externalCausesTopClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.EXTERNAL_CAUSES_TOP_CLASS);
+        }
+        return externalCausesTopClass;
+    }
+
+    public RDFSNamedClass getLinearizationViewClass() {
+        if (linearizationViewClass == null) {
+            linearizationViewClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.LINEARIZATION_VIEW_CLASS);
+        }
+        return linearizationViewClass;
+    }
+
+    public RDFSNamedClass getLinearizationSpecificationClass() {
+        if (linearizationSpecificationClass == null) {
+            linearizationSpecificationClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.LINEARIZATION_SPECIFICATION_CLASS);
+        }
+        return linearizationSpecificationClass;
+    }
+
 
     /*
      * Getters for properties
@@ -390,47 +449,129 @@ public class ICDContentModel {
         return exclusionProperty;
     }
 
-    public RDFProperty getMorbidityParentProperty() {
-        if (morbidityProperty == null) {
-            morbidityProperty = owlModel.getRDFProperty(ICDContentModelConstants.MORBIDITY_PARENT_PROP);
+    public RDFProperty getLinearizationProperty() {
+        if (linearizationProperty == null) {
+            linearizationProperty = owlModel.getRDFProperty(ICDContentModelConstants.LINEARIZATION_PROP);
         }
-        return morbidityProperty;
+        return linearizationProperty;
     }
+
+    public RDFProperty getIsIncludedInLinearizationProperty() {
+        if (isIncludedInLinearizationProperty == null) {
+            isIncludedInLinearizationProperty = owlModel.getRDFProperty(ICDContentModelConstants.IS_INCLUDED_IN_LINEARIZATION_PROP);
+        }
+        return isIncludedInLinearizationProperty;
+    }
+
+    public RDFProperty getLinearizationParentProperty() {
+        if (linearizationParentProperty == null) {
+            linearizationParentProperty = owlModel.getRDFProperty(ICDContentModelConstants.LINEARIZATION_PARENT_PROP);
+        }
+        return linearizationParentProperty;
+    }
+
+    public RDFProperty getLinearizationViewProperty() {
+        if (linearizationViewProperty == null) {
+            linearizationViewProperty = owlModel.getRDFProperty(ICDContentModelConstants.LINEARIZATION_VIEW_PROP);
+        }
+        return linearizationViewProperty;
+    }
+
+    public RDFProperty getLinearizationSequenceNoProperty() {
+        if (linearizationSequenceNoProperty == null) {
+            linearizationSequenceNoProperty = owlModel.getRDFProperty(ICDContentModelConstants.LINEARIZATION_SEQUENCE_NO_PROP);
+        }
+        return linearizationSequenceNoProperty;
+    }
+
 
     /*
      * Create methods
      */
 
     public RDFSNamedClass createICDCategory(String name, String superclsName) {
-        //TODO: Handle multiple parents? Right now assume one parent
-        RDFSNamedClass supercls = null;
-        if (superclsName == null || superclsName.length() == 0) {
-            supercls = getICDCategoryClass();
-        } else {
-            supercls = getICDClass(superclsName, true);
-        }
-        RDFSNamedClass cls = getICDClass(name, true);
-        if (!cls.getSuperclasses(true).contains(supercls)) {
-            cls.addSuperclass(supercls);
-            cls.removeSuperclass(owlModel.getOWLThingClass());
-        }
-        addMorbidityParent(cls, supercls);
-        return cls;
-    }
-
-    protected void addMorbidityParent(RDFSNamedClass cls, RDFSNamedClass parent) {
-        cls.addPropertyValue(getMorbidityParentProperty(), parent);
+        return createICDCategory(superclsName, CollectionUtilities.createCollection(superclsName));
     }
 
     @SuppressWarnings("deprecation")
-    public RDFSNamedClass getICDClass(String name, boolean create) {
+    public RDFSNamedClass createICDCategory(String name, Collection<String> superclsesName) {
+        if (name == null) {
+            name = IDGenerator.getNextUniqueId();
+        }
+        RDFSNamedClass cls = getICDClass(name, true);
+
+        Collection<RDFSNamedClass> superclses = new ArrayList<RDFSNamedClass>();
+
+        //we could treat also the case when a class has an external cause and another normal disease as parents..
+        boolean isExternalCause = false;
+
+        if (superclsesName == null || superclsesName.size() == 0) {
+            superclses.add(getICDCategoryClass());
+        } else {
+            for (String superclsName : superclsesName) {
+                RDFSNamedClass supercls = getICDSuperclass(superclsName, true);
+                if (supercls != null) {
+                    superclses.add(supercls);
+                    //add superclasses
+                    if (!cls.getSuperclasses(true).contains(supercls)) {
+                        cls.addSuperclass(supercls);
+                        if (cls.hasDirectSuperclass(owlModel.getOWLThingClass())) {
+                            cls.removeSuperclass(owlModel.getOWLThingClass());
+                        }
+                    }
+                    if (supercls.equals(getExternalCausesTopClass()) || supercls.hasSuperclass(getExternalCausesTopClass())) {
+                        isExternalCause = true;
+                    }
+                }
+            }
+        }
+
+        //set metaclasses
+        cls.setDirectTypes(isExternalCause ? getExternalCauseMetaclasses() : getRegularDiseaseMetaclasses());
+
+        RDFSNamedClass singleParent = superclses.size() > 1 ? null : CollectionUtilities.getFirstItem(superclses);
+
+        //add linearization instances
+        for (RDFResource linView : getLinearizationValueSet()) {
+            RDFResource linSpec = getLinearizationSpecificationClass().createInstance(IDGenerator.getNextUniqueId());
+            linSpec.setPropertyValue(getLinearizationViewProperty(), linView);
+            if (singleParent != null) {
+                linSpec.setPropertyValue(getLinearizationParentProperty(), singleParent);
+            }
+            cls.addPropertyValue(getLinearizationProperty(), linSpec);
+        }
+
+        return cls;
+    }
+
+
+    @SuppressWarnings("deprecation")
+    private RDFSNamedClass getICDSuperclass(String name, boolean create) {
+        RDFSNamedClass cls = getICDClass(name, create);
+        if (cls != null) {
+            cls.setDirectTypes(getRegularDiseaseMetaclasses());
+        }
+        return cls;
+    }
+
+    /**
+     * It gets or creates and ICDClass. If it creates, it will not add the metaclasses.
+     * To create an ICDMetaclass, it is better to use {@link #createICDCategory(String, Collection)}
+     * @param name - name of the class to be retrieved or created
+     * @param create - true to create class if it doesn't exit
+     * @return - the class
+     */
+    private RDFSNamedClass getICDClass(String name, boolean create) {
         RDFSNamedClass cls = owlModel.getRDFSNamedClass(name);
         if (cls == null && create) {
             cls = owlModel.createOWLNamedClass(name);
-            cls.setDirectTypes(getSectionMetaclasses());
             cls.addSuperclass(owlModel.getOWLThingClass());
         }
         return cls;
+    }
+
+    public RDFSNamedClass getICDClass(String name) {
+        return owlModel.getRDFSNamedClass(name);
     }
 
     public void addClassMetadata(RDFSNamedClass cls, String code, String kind, String usage) {
@@ -461,7 +602,7 @@ public class ICDContentModel {
      */
 
     protected RDFResource createTerm(RDFSNamedClass type) {
-        RDFResource term = (RDFResource) owlModel.createInstance(null, CollectionUtilities.createCollection(type));
+        RDFResource term = (RDFResource) owlModel.createInstance(IDGenerator.getNextUniqueId(), CollectionUtilities.createCollection(type));
         return term;
     }
 
