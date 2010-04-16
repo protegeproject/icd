@@ -2,7 +2,7 @@ package edu.stanford.bmir.icd.claml;
 
 public class ICDContentModelConstants {
 
-    //TODO- what should we do with the default NS?	
+    //TODO- what should we do with the default NS?
     public final static String NS = "http://who.int/icd#";
 
     /*
@@ -18,6 +18,8 @@ public class ICDContentModelConstants {
     public final static String ICD_SNOMED_METACLASS = NS + "SnomedReferenceSection";
     public final static String ICD_TERM_METACLASS = NS + "TermSection";
     public final static String ICD_DIAGNOSTIC_CRITERIA_METACLASS = NS + "DiagnosticCriteriaSection";
+    public static final String ICD_SPECIFIC_CONDITION_METACLASS = NS + "SpecificConditionSection";
+    public static final String ICD_EXTERNAL_CAUSE_METACLASS = NS + "ExternalCauseSection";
 
     /*
      * Classes
@@ -32,6 +34,10 @@ public class ICDContentModelConstants {
     public final static String TERM_ICD10_NOTES_CLASS = NS + "ICD10NotesTerm";
     public final static String TERM_DEFINITION_CLASS = NS + "DefinitionTerm";
     public final static String TERM_SYNONYM_CLASS = NS + "SynonymTerm";
+
+    public final static String LINEARIZATION_VIEW_CLASS = NS + "LinearizationView";
+    public final static String LINEARIZATION_SPECIFICATION_CLASS = NS + "LinearizationSpecification";
+
 
     /*
      * Properties
@@ -65,10 +71,21 @@ public class ICDContentModelConstants {
 
     public final static String URL_PROP = NS + "url";
 
-    public final static String MORBIDITY_PARENT_PROP = NS + "morbidityParent";
+    public final static String LINEARIZATION_PROP = NS + "linearization";
+    public final static String IS_INCLUDED_IN_LINEARIZATION_PROP = NS + "isIncludedInLinearization";
+    public final static String LINEARIZATION_PARENT_PROP = NS + "linearizationParent";
+    public final static String LINEARIZATION_VIEW_PROP = NS + "linearizationView";
+    public final static String LINEARIZATION_SEQUENCE_NO_PROP = NS + "sequenceNumber";
+
+    public final static String LINEARIZATION_VIEW_MORBIDITY = NS + "Morbidity";
+    public final static String LINEARIZATION_VIEW_MORTALITY = NS + "Mortality";
+    public final static String LINEARIZATION_VIEW_PRIMARY_CARE = NS + "PrimaryCare";
+
+    public final static String EXTERNAL_CAUSES_TOP_CLASS = NS + "XX";
+
 
     /*
-     * BioPortal 
+     * BioPortal
      */
 
     public final static String NS_BP = "http://bioportal.bioontology.org#";
@@ -76,4 +93,5 @@ public class ICDContentModelConstants {
     public final static String BP_SHORT_TERM_ID_PROP = NS_BP + "shortTermId";
     public final static String BP_ONTOLOGY_LABEL_PROP = NS_BP + "ontologyLabel";
     public final static String BP_ONTOLOGY_ID_PROP = NS_BP + "ontologyId";
+
 }
