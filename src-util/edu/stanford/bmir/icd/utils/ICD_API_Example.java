@@ -23,6 +23,7 @@ public class ICD_API_Example {
         getCategoryDetails();
         getChildren();
         getClamlRef();
+        getLinearizationInfo();
     }
 
     public static void getICDcategories() {
@@ -68,6 +69,22 @@ public class ICD_API_Example {
                 }
             }
         }
+    }
+
+    public static void getLinearizationInfo() {
+        RDFSNamedClass category = icdContentModel.getICDCategory("http://who.int/icd#A65-A69");
+        System.out.println("\n" + category.getBrowserText());
+
+       Collection<RDFResource> linearizationSpecs = icdContentModel.getLinearizationSpecifications(category);
+       for (RDFResource linearizationSpec : linearizationSpecs) {
+           RDFResource linearization = (RDFResource) linearizationSpec.getPropertyValue(icdContentModel.getLinearizationViewProperty());
+           RDFSNamedClass linearizationParent = (RDFSNamedClass) linearizationSpec.getPropertyValue(icdContentModel.getLinearizationParentProperty());
+           Boolean isIncludedInLinearization = (Boolean) linearizationSpec.getPropertyValue(icdContentModel.getIsIncludedInLinearizationProperty());
+
+           System.out.println("Linearization: " + linearization.getBrowserText() +
+                   "; is included: " + (isIncludedInLinearization == null ? "(not specified)" : isIncludedInLinearization) +
+                   "; linearization parent: " + linearizationParent.getBrowserText());
+       }
     }
 
 
