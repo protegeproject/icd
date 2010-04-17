@@ -298,6 +298,7 @@ public class ICDContentModel {
     }
 
 
+
     /*
      * Getters for properties
      */
@@ -791,5 +792,8 @@ public class ICDContentModel {
         return (Collection<RDFResource>) icdClass.getPropertyValue(icdTermProp);
     }
 
+    public Collection<RDFResource> getLinearizationSpecifications(RDFSNamedClass icdClass) {
+        return icdClass.getPropertyValues(getLinearizationProperty());
+    }
 
 }
