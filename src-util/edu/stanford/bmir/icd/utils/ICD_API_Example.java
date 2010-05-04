@@ -36,10 +36,14 @@ public class ICD_API_Example {
         RDFSNamedClass category = icdContentModel.getICDCategory("http://who.int/icd#L89.2");
         System.out.println("Displayed as in the tree: " + category.getBrowserText());
 
+        String sortingLabel = (String) category.getPropertyValue(icdContentModel.getSortingLabelProperty());
+        System.out.println("Sorting label: " + sortingLabel);
+
         RDFResource defTerm = icdContentModel.getTerm(category, icdContentModel.getDefinitionProperty());
         if (defTerm != null) {
             String definition = (String) defTerm.getPropertyValue(icdContentModel.getLabelProperty());
             String rubricId = (String) defTerm.getPropertyValue(icdContentModel.getIdProperty());
+
             System.out.println("Definition rubric id: " + rubricId);
             System.out.println("Definition: " + definition);
         }
@@ -80,10 +84,12 @@ public class ICD_API_Example {
            RDFResource linearization = (RDFResource) linearizationSpec.getPropertyValue(icdContentModel.getLinearizationViewProperty());
            RDFSNamedClass linearizationParent = (RDFSNamedClass) linearizationSpec.getPropertyValue(icdContentModel.getLinearizationParentProperty());
            Boolean isIncludedInLinearization = (Boolean) linearizationSpec.getPropertyValue(icdContentModel.getIsIncludedInLinearizationProperty());
+           String linSortingLabel = (String) linearizationSpec.getPropertyValue(icdContentModel.getLinearizationSortingLabelProperty());
 
            System.out.println("Linearization: " + linearization.getBrowserText() +
                    "; is included: " + (isIncludedInLinearization == null ? "(not specified)" : isIncludedInLinearization) +
-                   "; linearization parent: " + linearizationParent.getBrowserText());
+                   "; linearization parent: " + linearizationParent.getBrowserText() +
+                   "; linearization sorting label: " + (linSortingLabel == null ? "(not specified)" : linSortingLabel));
        }
     }
 
