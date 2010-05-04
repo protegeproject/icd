@@ -51,6 +51,7 @@ public class ICDContentModelConstants {
     public final static String DEFINITION_PROP = NS + "definition";
     public final static String PREFILLED_DEFINITION_PROP = NS + "definitionPrefilled";
     public final static String SYNOYM_PROP = NS + "synonym";
+    public final static String SORTING_LABEL_PROP = NS + "sortingLabel";
 
     public final static String INCLUSION_PROP = NS + "inclusion";
     public final static String EXCLUSION_PROP = NS + "exclusion";
@@ -76,6 +77,7 @@ public class ICDContentModelConstants {
     public final static String LINEARIZATION_PARENT_PROP = NS + "linearizationParent";
     public final static String LINEARIZATION_VIEW_PROP = NS + "linearizationView";
     public final static String LINEARIZATION_SEQUENCE_NO_PROP = NS + "sequenceNumber";
+    public final static String LINEARIZATION_SORTING_LABEL_PROP = NS + "linearizationSortingLabel";
 
     public final static String LINEARIZATION_VIEW_MORBIDITY = NS + "Morbidity";
     public final static String LINEARIZATION_VIEW_MORTALITY = NS + "Mortality";

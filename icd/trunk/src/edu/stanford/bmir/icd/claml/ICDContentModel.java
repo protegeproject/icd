@@ -71,6 +71,7 @@ public class ICDContentModel {
     private RDFProperty definitionProperty;
     private RDFProperty prefilledDefinitionProperty;
     private RDFProperty synonymProperty;
+    private RDFProperty sortingLabelProperty;
 
     private RDFProperty inclusionProperty;
     private RDFProperty exclusionProperty;
@@ -95,6 +96,7 @@ public class ICDContentModel {
     private RDFProperty linearizationParentProperty;
     private RDFProperty linearizationViewProperty;
     private RDFProperty linearizationSequenceNoProperty;
+    private RDFProperty linearizationSortingLabelProperty;
 
 
 
@@ -352,6 +354,13 @@ public class ICDContentModel {
         return synonymProperty;
     }
 
+    public RDFProperty getSortingLabelProperty() {
+        if (sortingLabelProperty == null) {
+            sortingLabelProperty = owlModel.getRDFProperty(ICDContentModelConstants.SORTING_LABEL_PROP);
+        }
+        return sortingLabelProperty;
+    }
+
     public RDFProperty getLangProperty() {
         if (langProperty == null) {
             langProperty = owlModel.getRDFProperty(ICDContentModelConstants.LANG_PROP);
@@ -485,6 +494,12 @@ public class ICDContentModel {
         return linearizationSequenceNoProperty;
     }
 
+    public RDFProperty getLinearizationSortingLabelProperty() {
+        if (linearizationSortingLabelProperty == null) {
+            linearizationSortingLabelProperty = owlModel.getRDFProperty(ICDContentModelConstants.LINEARIZATION_SORTING_LABEL_PROP);
+        }
+        return linearizationSortingLabelProperty;
+    }
 
     /*
      * Create methods
