@@ -21,7 +21,7 @@ public class ICDContentModel {
 
     private static transient Logger log = Log.getLogger(ICDContentModel.class);
 
-    private OWLModel owlModel;
+    private final OWLModel owlModel;
 
     /*
      * Metaclasses
@@ -506,11 +506,15 @@ public class ICDContentModel {
      */
 
     public RDFSNamedClass createICDCategory(String name, String superclsName) {
-        return createICDCategory(superclsName, CollectionUtilities.createCollection(superclsName));
+        return createICDCategory(superclsName, CollectionUtilities.createCollection(superclsName), true); //method is used by the CLAML parser
+    }
+    
+    public RDFSNamedClass createICDCategory(String name, Collection<String> superclsesName) {
+        return createICDCategory(name, superclsesName, false);
     }
 
     @SuppressWarnings("deprecation")
-    public RDFSNamedClass createICDCategory(String name, Collection<String> superclsesName) {
+    public RDFSNamedClass createICDCategory(String name, Collection<String> superclsesName, boolean createSuperclasses) {
         if (name == null) {
             name = IDGenerator.getNextUniqueId();
         }
@@ -525,7 +529,7 @@ public class ICDContentModel {
             superclses.add(getICDCategoryClass());
         } else {
             for (String superclsName : superclsesName) {
-                RDFSNamedClass supercls = getICDSuperclass(superclsName, true);
+                RDFSNamedClass supercls = getICDSuperclass(superclsName, createSuperclasses);
                 if (supercls != null) {
                     superclses.add(supercls);
                     //add superclasses
@@ -564,8 +568,8 @@ public class ICDContentModel {
     @SuppressWarnings("deprecation")
     private RDFSNamedClass getICDSuperclass(String name, boolean create) {
         RDFSNamedClass cls = getICDClass(name, create);
-        if (cls != null) {
-            cls.setDirectTypes(getRegularDiseaseMetaclasses());
+        if (cls != null && create) { //TODO: not ideal; check if this works with the CLAML parser
+            cls.setDirectTypes(getRegularDiseaseMetaclasses()); //TODO: how to handle External Causes superclasses?
         }
         return cls;
     }
