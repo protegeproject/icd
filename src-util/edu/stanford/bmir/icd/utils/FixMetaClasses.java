@@ -48,7 +48,7 @@ public class FixMetaClasses {
 
         Collection<RDFSNamedClass> catMetaclasses = icdContentModel.getRegularDiseaseMetaclasses();
 
-        Collection<RDFSNamedClass> topClses = icdCatCls.getDirectSubclasses();
+        Collection<RDFSNamedClass> topClses = new ArrayList(icdCatCls.getDirectSubclasses());
         topClses.remove(extCauseCls);
 
         //fix regular disease
