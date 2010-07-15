@@ -56,10 +56,10 @@
 	        <java 
 			fork="true" 
 	        	dir="." 
-	            	classname="edu.stanford.bmir.icd.utils.FillInValuesFromExcel"
-                        maxmemory="${heap.size.max}">
+	            	classname="edu.stanford.bmir.icd.utils.FixMetaClasses"
+                        maxmemory="2500M">
 		      	<classpath refid = "project.classpath"/>	        	
-	 		<arg value="${pprj.file}"/>		
+	 		<arg value="myfile"/>		
 	        </java>
 	 </target>
 	
