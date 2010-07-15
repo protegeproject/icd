@@ -83,6 +83,9 @@ public class ICDContentModelConstants {
     public final static String LINEARIZATION_VIEW_MORTALITY = NS + "Mortality";
     public final static String LINEARIZATION_VIEW_PRIMARY_CARE = NS + "PrimaryCare";
 
+    public final static String BIOLOGICAL_SEX_PROP = NS + "biologicalSex";
+    public final static String BIOLOGICAL_SEX_NA = NS + "BiologicalSexNotAppSCTerm";
+
     public final static String EXTERNAL_CAUSES_TOP_CLASS = NS + "XX";
 
 
