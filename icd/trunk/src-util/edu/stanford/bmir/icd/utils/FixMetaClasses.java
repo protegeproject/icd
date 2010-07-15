@@ -21,7 +21,7 @@ public class FixMetaClasses {
         }
 
         Collection errors = new ArrayList();
-        Project prj = Project.loadProjectFromFile("/work/protege/projects/icd/content_model/icd_int/icd_mysql/icd_umbrella.pprj", errors);
+        Project prj = Project.loadProjectFromFile(args[0], errors);
 
         if (errors != null) {
             ProjectManager.getProjectManager().displayErrors("Errors", errors);
