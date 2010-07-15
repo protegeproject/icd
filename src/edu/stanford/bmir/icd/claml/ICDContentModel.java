@@ -98,6 +98,7 @@ public class ICDContentModel {
     private RDFProperty linearizationSequenceNoProperty;
     private RDFProperty linearizationSortingLabelProperty;
 
+    private RDFProperty biologicalSexProperty;
 
 
     public ICDContentModel(OWLModel owlModel) {
@@ -501,6 +502,13 @@ public class ICDContentModel {
         return linearizationSortingLabelProperty;
     }
 
+    public RDFProperty getBiologicalSexProperty() {
+        if (biologicalSexProperty == null) {
+            biologicalSexProperty = owlModel.getRDFProperty(ICDContentModelConstants.BIOLOGICAL_SEX_PROP);
+        }
+        return biologicalSexProperty;
+    }
+
     /*
      * Create methods
      */
@@ -508,11 +516,25 @@ public class ICDContentModel {
     public RDFSNamedClass createICDCategory(String name, String superclsName) {
         return createICDCategory(superclsName, CollectionUtilities.createCollection(superclsName), true); //method is used by the CLAML parser
     }
-    
+
     public RDFSNamedClass createICDCategory(String name, Collection<String> superclsesName) {
         return createICDCategory(name, superclsesName, false);
     }
 
+    /**
+     * Creates an ICD Category under the given parents. Default actions:
+     * <ul>
+     * <li>Add the correct metaclasses (if regular disease, use metaclasses of ICDCategory; if subclass of External causes, use metaclasses of
+     * External Causes</li>
+     * <li>Create the linearization values: morbidity - is included, and mortality - is not included</li>
+     * <li>If the category has only one parent, it sets the linearization parent to that parent</li>
+     * <li>Set the biologicalSex to NA </li>
+     * </ul>
+     * @param name - name of the new category
+     * @param superclsesName - names of the parents
+     * @param createSuperclasses - true to create parents, if they don't already exist (only the CLAML parser needs to set this to true, all the rest, should use false)
+     * @return
+     */
     @SuppressWarnings("deprecation")
     public RDFSNamedClass createICDCategory(String name, Collection<String> superclsesName, boolean createSuperclasses) {
         if (name == null) {
@@ -559,7 +581,16 @@ public class ICDContentModel {
                 linSpec.setPropertyValue(getLinearizationParentProperty(), singleParent);
             }
             cls.addPropertyValue(getLinearizationProperty(), linSpec);
+            //default for new properties: morbidity: included; mortality: not included
+            if (linView.getName().equals(ICDContentModelConstants.LINEARIZATION_VIEW_MORBIDITY)) {
+                linSpec.setPropertyValue(getIsIncludedInLinearizationProperty(), Boolean.TRUE);
+            } else if (linView.getName().equals(ICDContentModelConstants.LINEARIZATION_VIEW_MORTALITY)) {
+                linSpec.setPropertyValue(getIsIncludedInLinearizationProperty(), Boolean.FALSE);
+            }
         }
+
+        //set biologicalSex not applicable
+        cls.addPropertyValue(getBiologicalSexProperty(), owlModel.getRDFResource(ICDContentModelConstants.BIOLOGICAL_SEX_NA));
 
         return cls;
     }
