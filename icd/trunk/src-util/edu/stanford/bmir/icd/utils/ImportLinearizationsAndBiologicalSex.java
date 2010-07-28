@@ -2,15 +2,12 @@ package edu.stanford.bmir.icd.utils;
 import java.io.File;
 import java.io.IOException;
 import java.net.URI;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 
 import jxl.Sheet;
 import jxl.Workbook;
 import jxl.read.biff.BiffException;
-import edu.stanford.smi.protege.model.KnowledgeBase;
-import edu.stanford.smi.protege.model.Project;
 import edu.stanford.smi.protege.util.Log;
 import edu.stanford.smi.protege.util.SystemUtilities;
 import edu.stanford.smi.protegex.owl.model.OWLModel;
@@ -64,7 +61,7 @@ public class ImportLinearizationsAndBiologicalSex {
 		Log.getLogger().info("=== Excel file no mortality: " + xlFileNoMortality);
 		
 		//open owl model
-		OWLModel owlModel = openOWLModel(pprjFileUri);
+		OWLModel owlModel = ImportUtils.openOWLModel(pprjFileUri);
 		
 		//call migration functions
 		setAllBiologicalSexToNA(owlModel);
@@ -72,20 +69,7 @@ public class ImportLinearizationsAndBiologicalSex {
 		importNoMortalityFromXls(owlModel, xlFileNoMortality);
 		
 		//finish processing
-		Log.getLogger().info("\n===== End import to Excel at " + new Date());
-	}
-
-
-	private static OWLModel openOWLModel(URI pprjFileUri) {
-		Log.getLogger().info("\nOpening OWL model... ");
-		return (OWLModel)openKb(pprjFileUri);
-	}
-
-	private static KnowledgeBase openKb(URI pprjFileUri) {
-		Collection<String> errors = new ArrayList<String>();
-		Project prj = Project.loadProjectFromURI(pprjFileUri, errors);
-		prj.setChangeTrackingActive(false);
-		return prj.getKnowledgeBase();
+		Log.getLogger().info("\n===== End import from Excel at " + new Date());
 	}
 
 	
