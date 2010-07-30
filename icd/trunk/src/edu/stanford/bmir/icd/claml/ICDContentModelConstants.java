@@ -71,6 +71,7 @@ public class ICDContentModelConstants {
     public final static String PREFERRED_LONG_PROP = NS + "preferredLong";
 
     public final static String URL_PROP = NS + "url";
+    public final static String TERM_ID_PROP = NS + "termId";
 
     public final static String LINEARIZATION_PROP = NS + "linearization";
     public final static String IS_INCLUDED_IN_LINEARIZATION_PROP = NS + "isIncludedInLinearization";

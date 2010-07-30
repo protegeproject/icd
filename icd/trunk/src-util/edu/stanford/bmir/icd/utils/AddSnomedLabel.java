@@ -41,10 +41,9 @@ public class AddSnomedLabel {
                 .getRDFProperty(ICDContentModelConstants.BP_ONTOLOGY_LABEL_PROP);
         RDFProperty bpOntologyIdProp = snomedMappingKb.getRDFProperty(ICDContentModelConstants.BP_ONTOLOGY_ID_PROP);
         RDFProperty urlProp = snomedMappingKb.getRDFProperty(ICDContentModelConstants.URL_PROP);
-
-        RDFProperty ontologyIdProp = snomedMappingKb.getRDFProperty("http://who.int/icd#ontologyId");
-        RDFProperty termIdProp = snomedMappingKb.getRDFProperty("http://who.int/icd#termId");
-        RDFProperty labelProp = snomedMappingKb.getRDFProperty("http://who.int/icd#label");
+        RDFProperty ontologyIdProp = snomedMappingKb.getRDFProperty(ICDContentModelConstants.ONTOLOGYID_PROP);
+        RDFProperty termIdProp = snomedMappingKb.getRDFProperty(ICDContentModelConstants.TERM_ID_PROP);
+        RDFProperty labelProp = snomedMappingKb.getRDFProperty(ICDContentModelConstants.LABEL_PROP);
 
         RDFSNamedClass refTermCls = snomedMappingKb.getRDFSNamedClass("http://who.int/icd#ReferenceTerm");
         Collection<RDFResource> refTerms = refTermCls.getInstances(true);
