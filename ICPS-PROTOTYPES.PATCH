@@ -1,13 +1,69 @@
 Index: ICPS-PROTOTYPES.PATCH
 ===================================================================
---- ICPS-PROTOTYPES.PATCH	(revision 19774)
+--- ICPS-PROTOTYPES.PATCH	(revision 19775)
 +++ ICPS-PROTOTYPES.PATCH	(working copy)
-@@ -1,51 +0,0 @@
+@@ -1,96 +0,0 @@
+-Index: ICPS-PROTOTYPES.PATCH
+-===================================================================
+---- ICPS-PROTOTYPES.PATCH	(revision 19774)
+-+++ ICPS-PROTOTYPES.PATCH	(working copy)
+-@@ -1,51 +0,0 @@
+--Index: src/edu/stanford/bmir/icd/claml/ICDContentModelConstants.java
+--===================================================================
+----- src/edu/stanford/bmir/icd/claml/ICDContentModelConstants.java	(revision 19770)
+--+++ src/edu/stanford/bmir/icd/claml/ICDContentModelConstants.java	(working copy)
+--@@ -11,12 +11,12 @@
+-- 
+--     public final static String ICD_CAUSAL_MECH_METACLASS = NS + "CausalMechanismAndRiskFactorsSection";
+--     public final static String ICD_CLINICAL_DESC_METACLASS = NS + "ClinicalDescriptionSection";
+---    public final static String ICD_DEFINITION_METACLASS = NS + "DefinitionSection";
+--+    public final static String ICD_DEFINITION_METACLASS = "http://who.int/icps#" + "DefinitionSection";
+--     public final static String ICD_FUNCTIONAL_IMPACT_METACLASS = NS + "FunctionalImpactSection";
+--     public final static String ICD_NOTES_METACLASS = NS + "ICD10NotesAndHintsSection";
+---    public final static String ICD_LINEARIZATION_METACLASS = NS + "LinearizationSection";
+--+    public final static String ICD_LINEARIZATION_METACLASS = "http://who.int/icps#" + "LinearizationSection";
+--     public final static String ICD_SNOMED_METACLASS = NS + "SnomedReferenceSection";
+---    public final static String ICD_TERM_METACLASS = NS + "TermSection";
+--+    public final static String ICD_TERM_METACLASS = "http://who.int/icps#" + "TermSection";
+--     public final static String ICD_DIAGNOSTIC_CRITERIA_METACLASS = NS + "DiagnosticCriteriaSection";
+--     public static final String ICD_SPECIFIC_CONDITION_METACLASS = NS + "SpecificConditionSection";
+--     public static final String ICD_EXTERNAL_CAUSE_METACLASS = NS + "ExternalCauseSection";
+--@@ -25,10 +25,10 @@
+--      * Classes
+--      */
+-- 
+---    public final static String ICD_CATEGORY_CLASS = NS + "ICDCategory";
+--+    public final static String ICD_CATEGORY_CLASS = "http://who.int/icd#" + "ICPSCategory";
+--     public final static String CLAML_REF_CLASS = NS + "ClamlReference";
+--     public final static String TERM_CLASS = NS + "Term";
+---    public final static String TERM_TITLE_CLASS = NS + "TitleTerm";
+--+    public final static String TERM_TITLE_CLASS = "http://who.int/icps#" + "TitleTerm";
+--     public final static String TERM_INCLUSION_CLASS = NS + "InclusionTerm";
+--     public final static String TERM_EXCLUSION_CLASS = NS + "ExclusionTerm";
+--     public final static String TERM_ICD10_NOTES_CLASS = NS + "ICD10NotesTerm";
+--@@ -44,7 +44,7 @@
+--      */
+-- 
+--     public final static String ICD_CODE_PROP = NS + "icdCode";
+---    public final static String ICD_TITLE_PROP = NS + "icdTitle";
+--+    public final static String ICD_TITLE_PROP = "http://who.int/icps#" + "icpsTitle";
+--     public final static String CLAML_KIND_PROP = NS + "clamlKind";
+--     public final static String CLAML_USAGE_PROP = NS + "clamlUsage";
+--     public final static String TEXT_PROP = NS + "text";
+--@@ -57,7 +57,7 @@
+--     public final static String EXCLUSION_PROP = NS + "exclusion";
+-- 
+--     public final static String ID_PROP = NS + "id";
+---    public final static String LABEL_PROP = NS + "label";
+--+    public final static String LABEL_PROP = "http://who.int/icd#" + "label";
+--     public final static String LANG_PROP = NS + "language";
+--     public final static String ONTOLOGYID_PROP = NS + "ontologyId";
+--     public final static String CLAML_CONTENT_PROP = NS + "clamlContent";
 -Index: src/edu/stanford/bmir/icd/claml/ICDContentModelConstants.java
 -===================================================================
 ---- src/edu/stanford/bmir/icd/claml/ICDContentModelConstants.java	(revision 19770)
 -+++ src/edu/stanford/bmir/icd/claml/ICDContentModelConstants.java	(working copy)
--@@ -11,12 +11,12 @@
+-@@ -11,7 +11,7 @@
 - 
 -     public final static String ICD_CAUSAL_MECH_METACLASS = NS + "CausalMechanismAndRiskFactorsSection";
 -     public final static String ICD_CLINICAL_DESC_METACLASS = NS + "ClinicalDescriptionSection";
@@ -15,20 +71,9 @@ Index: ICPS-PROTOTYPES.PATCH
 -+    public final static String ICD_DEFINITION_METACLASS = "http://who.int/icps#" + "DefinitionSection";
 -     public final static String ICD_FUNCTIONAL_IMPACT_METACLASS = NS + "FunctionalImpactSection";
 -     public final static String ICD_NOTES_METACLASS = NS + "ICD10NotesAndHintsSection";
---    public final static String ICD_LINEARIZATION_METACLASS = NS + "LinearizationSection";
--+    public final static String ICD_LINEARIZATION_METACLASS = "http://who.int/icps#" + "LinearizationSection";
--     public final static String ICD_SNOMED_METACLASS = NS + "SnomedReferenceSection";
---    public final static String ICD_TERM_METACLASS = NS + "TermSection";
--+    public final static String ICD_TERM_METACLASS = "http://who.int/icps#" + "TermSection";
--     public final static String ICD_DIAGNOSTIC_CRITERIA_METACLASS = NS + "DiagnosticCriteriaSection";
--     public static final String ICD_SPECIFIC_CONDITION_METACLASS = NS + "SpecificConditionSection";
--     public static final String ICD_EXTERNAL_CAUSE_METACLASS = NS + "ExternalCauseSection";
--@@ -25,10 +25,10 @@
--      * Classes
--      */
-- 
---    public final static String ICD_CATEGORY_CLASS = NS + "ICDCategory";
--+    public final static String ICD_CATEGORY_CLASS = "http://who.int/icd#" + "ICPSCategory";
+-     public final static String ICD_LINEARIZATION_METACLASS = NS + "LinearizationSection";
+-@@ -28,7 +28,7 @@
+-     public final static String ICD_CATEGORY_CLASS = NS + "ICDCategory";
 -     public final static String CLAML_REF_CLASS = NS + "ClamlReference";
 -     public final static String TERM_CLASS = NS + "Term";
 --    public final static String TERM_TITLE_CLASS = NS + "TitleTerm";
@@ -67,8 +112,12 @@ Index: src/edu/stanford/bmir/icd/claml/ICDContentModelConstants.java
      public final static String ICD_FUNCTIONAL_IMPACT_METACLASS = NS + "FunctionalImpactSection";
      public final static String ICD_NOTES_METACLASS = NS + "ICD10NotesAndHintsSection";
      public final static String ICD_LINEARIZATION_METACLASS = NS + "LinearizationSection";
-@@ -28,7 +28,7 @@
-     public final static String ICD_CATEGORY_CLASS = NS + "ICDCategory";
+@@ -25,10 +25,10 @@
+      * Classes
+      */
+ 
+-    public final static String ICD_CATEGORY_CLASS = NS + "ICDCategory";
++    public final static String ICD_CATEGORY_CLASS = "http://who.int/icps#" + "ICPSCategory";
      public final static String CLAML_REF_CLASS = NS + "ClamlReference";
      public final static String TERM_CLASS = NS + "Term";
 -    public final static String TERM_TITLE_CLASS = NS + "TitleTerm";
