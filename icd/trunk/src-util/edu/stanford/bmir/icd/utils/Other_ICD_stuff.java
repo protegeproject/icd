@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 import edu.stanford.bmir.icd.claml.ICDContentModel;
+import edu.stanford.smi.protege.model.Cls;
 import edu.stanford.smi.protege.model.Project;
 import edu.stanford.smi.protege.model.Slot;
 import edu.stanford.smi.protege.util.CollectionUtilities;
@@ -203,6 +204,52 @@ public class Other_ICD_stuff {
             }
         }
         Log.getLogger().info("Fixed defs count: " + count);
+    }
+
+    private static void fixMetaclasses() {
+        owlModel.setGenerateEventsEnabled(false);
+        RDFSNamedClass icdCatCls = icdContentModel.getICDCategoryClass();
+
+        RDFSNamedClass extCauseCls = icdContentModel.getExternalCausesTopClass();
+
+        Collection<RDFSNamedClass> catMetaclasses = icdContentModel.getRegularDiseaseMetaclasses();
+
+        Collection<RDFSNamedClass> topClses = icdCatCls.getDirectSubclasses();
+        topClses.remove(extCauseCls);
+
+        //fix regular disease
+        for (RDFSNamedClass topCls : topClses) {
+            fixMetaclses(topCls, catMetaclasses);
+            Collection<Cls> subclses = topCls.getSubclasses();
+            for (Cls subcls :subclses) {
+                if (subcls instanceof RDFSNamedClass) {
+                    fixMetaclses(subcls, catMetaclasses);
+                }
+            }
+        }
+
+        //fix external causes
+        Collection<RDFSNamedClass> extCauseMetaclses = icdContentModel.getExternalCauseMetaclasses();
+        Collection<RDFSNamedClass> extClses = extCauseCls.getSubclasses();
+        for (RDFSNamedClass cls : extClses) {
+            if (cls instanceof RDFSNamedClass) {
+                fixMetaclses(cls, extCauseMetaclses);
+            }
+        }
+    }
+
+    private static void fixMetaclses(Cls c, Collection<RDFSNamedClass> metaclasses) {
+        for (RDFSNamedClass metacls : metaclasses) {
+            if (!c.hasType(metacls)) {
+                c.addDirectType(metacls);
+            }
+        }
+        Collection<Cls> extraMetaclases = new ArrayList<Cls>(c.getDirectTypes());
+        extraMetaclases.removeAll(metaclasses);
+
+        for (Cls metacls : extraMetaclases) {
+            c.removeDirectType(metacls);
+        }
     }
 
 }
