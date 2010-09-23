@@ -33,7 +33,7 @@ import edu.stanford.smi.protegex.owl.model.RDFSNamedClass;
 /**
  * This class imports new content for Chapter XX (External Causes and Injuries)
  * with values specified in a spreadsheet.
- * 
+ *
  * @author csnyulas
  *
  */
@@ -47,9 +47,9 @@ public class ImportChapterXX {
 	private static final String EXCEL_SHEET_CATEGORY_COMMENTS = "Notes for TAG";
 	private static final String EXCEL_SHEET_ICD10_CODES_AND_DESCRIPTIONS = "ICD-10 Code+Desc & ICD-11 Mech";
 	private static final String EXCEL_SHEET_ICD10_CODES_AND_DESCRIPTIONS_NEW = "ICD-10 Code+Desc UPDATED 3007";
-	
+
 	private static final String CLASS_ICD10_REFERENCE_TERM = "http://who.int/icd#ICD10ReferenceTerm";
-	
+
 	private static final String PROPERTY_ICD10_REFERENCE = "http://who.int/icd#icd10Reference";
 
 	private static final String ICD10_BP_ONTOLOGY_VERSION_ID = "44103";
@@ -57,10 +57,10 @@ public class ImportChapterXX {
 	private static final String ICD10_ONTOLOGY_ID = ICD10_BP_ONTOLOGY_LABEL;
 	private static final String ICD10_TERM_ID_PREFIX = "http://purl.bioontology.org/ontology/" + ICD10_BP_ONTOLOGY_LABEL + "/";
 	private static final String ICD10_URL_PREFIX = "http://bioportal.bioontology.org/visualize/" + ICD10_BP_ONTOLOGY_VERSION_ID + "/?conceptid=";
-	
+
 	private static URI pprjFileUri = new File(PPRJ_FILE_URI).toURI();
 	private static File xlFileChaperXX = new File(EXCEL_FILE_CHAPTER_XX);
-	
+
 	/**
 	 * @param args
 	 */
@@ -75,15 +75,15 @@ public class ImportChapterXX {
 			pprjFileUri = new File(args[0]).toURI();
 			xlFileChaperXX = new File(args[1]);
 		}
-		
+
 		SystemUtilities.logSystemInfo();
 		Log.getLogger().info("\n===== Started import from Excel " + new Date());
 		Log.getLogger().info("=== PPRJ File: " + pprjFileUri);
 		Log.getLogger().info("=== Excel file Chapter XX: " + xlFileChaperXX);
-		
+
 		//open owl model
 		OWLModel owlModel = ImportUtils.openOWLModel(pprjFileUri);
-		
+
 		//call migration functions
 		fixXlsContent(xlFileChaperXX);
 		Map<String, CategoryInfo> categoryInfoMap = extractCategoryInfoFromXls(owlModel, xlFileChaperXX);
@@ -94,7 +94,7 @@ public class ImportChapterXX {
 			System.out.println(catInfo);
 		}
 		writeCategoryInfoToModel(catInfos, owlModel);
-		
+
 		//finish processing
 		Log.getLogger().info("\n===== End import from Excel at " + new Date());
 	}
@@ -103,14 +103,14 @@ public class ImportChapterXX {
 	private static void fixXlsContent(File excelFile) {
 		// TODO Auto-generated method stub
 		Log.getLogger().info("\nFixing sorting labels in Excel file... ");
-		
+
 		Map<String, CategoryInfo> res = new HashMap<String, CategoryInfo>();
-		
+
 		try {
 			Workbook wb = jxl.Workbook.getWorkbook(excelFile);
 			//File tmpOutputXlsFile = File.createTempFile("ch20", ".xls", new File("."));
 			WritableWorkbook wwb = Workbook.createWorkbook(excelFile, wb);
-			
+
 			WritableSheet sh = wwb.getSheet(EXCEL_SHEET_CATEGORY_COMMENTS);
 			if (sh != null) {
 				fixSortingLabels(sh, 0);
@@ -118,7 +118,7 @@ public class ImportChapterXX {
 			else {
 				System.out.println("Warning! Sheet '" + EXCEL_SHEET_CATEGORY_COMMENTS + "' could not be opened.");
 			}
-			
+
 			sh = wwb.getSheet(EXCEL_SHEET_ICD10_CODES);
 			if (sh != null) {
 				fixSortingLabels(sh, 1);
@@ -126,7 +126,7 @@ public class ImportChapterXX {
 			else {
 				System.out.println("Warning! Sheet '" + EXCEL_SHEET_ICD10_CODES + "' could not be opened.");
 			}
-			
+
 			sh = wwb.getSheet(EXCEL_SHEET_ICD10_CODES_NEW);
 			if (sh != null) {
 				fixSortingLabels(sh, 1);
@@ -142,7 +142,7 @@ public class ImportChapterXX {
 			else {
 				System.out.println("Warning! Sheet '" + EXCEL_SHEET_ICD10_CODES_AND_DESCRIPTIONS + "' could not be opened.");
 			}
-			
+
 			sh = wwb.getSheet(EXCEL_SHEET_ICD10_CODES_AND_DESCRIPTIONS_NEW);
 			if (sh != null) {
 				fixSortingLabels(sh, 2);
@@ -153,7 +153,7 @@ public class ImportChapterXX {
 
 			wwb.write();
 			wwb.close();
-			
+
 			wb.close();
 			System.out.println("Done!");
 		} catch (BiffException e) {
@@ -168,7 +168,7 @@ public class ImportChapterXX {
 
 	private static void fixSortingLabels(WritableSheet sh, int columnSortingLabel) {
 		for (int r =1; r < sh.getRows(); r++) { //skip first line (0)
-			
+
 			//if (r<10 || r>sh.getRows()-10) //JUST FOR TEST
 			{
 				WritableCell cellSortLabel = sh.getWritableCell(columnSortingLabel,r);
@@ -190,11 +190,11 @@ public class ImportChapterXX {
 						((Label)cellSortLabel).setString(sortLabel);
 					}
 					else {
-						System.out.println("Warning!!! Can't modify content for cell (" + 
+						System.out.println("Warning!!! Can't modify content for cell (" +
 								cellSortLabel.getColumn() + "," + cellSortLabel.getRow() + ") on worksheet " + sh.getName());
 					}
 				}
-			}				
+			}
 		}
 	}
 
@@ -202,62 +202,62 @@ public class ImportChapterXX {
 	private static Map<String, CategoryInfo> extractCategoryInfoFromXls(OWLModel owlModel,
 			File excelFile) {
 		Log.getLogger().info("\nImporting values for chapter XX from Excel file... ");
-		
+
 		Map<String, CategoryInfo> res = new HashMap<String, CategoryInfo>();
-		
+
 		try {
 			Workbook wb = jxl.Workbook.getWorkbook(excelFile);
 			Sheet sh = wb.getSheet(EXCEL_SHEET_CATEGORY_COMMENTS);
 			for (int r =1; r < sh.getRows(); r++) { //skip first line (0)
-				
+
 				//if (r<10 || r>sh.getRows()-10) //JUST FOR TEST
 				{
 					String sortLabel = sh.getCell(0,r).getContents();
 					String comment = sh.getCell(1,r).getContents();
-					
+
 					CategoryInfo catInfo = res.get(sortLabel);
 					if (catInfo == null) {
 						catInfo = new CategoryInfo(sortLabel);
 						res.put(sortLabel, catInfo);
 					}
 					catInfo.setDescription(comment);
-				}				
+				}
 			}
-			
+
 			sh = wb.getSheet(EXCEL_SHEET_ICD10_CODES_AND_DESCRIPTIONS_NEW);
 			for (int r =1; r < sh.getRows(); r++) { //skip first line (0)
-				
+
 				//if (r<10 || r>sh.getRows()-10) //JUST FOR TEST
 				{
 					String icd10Code = sh.getCell(0,r).getContents();
 					String icd10Label = sh.getCell(1,r).getContents();
 					String sortLabel = sh.getCell(2,r).getContents();
-					
+
 					CategoryInfo catInfo = res.get(sortLabel);
 					if (catInfo == null) {
 						catInfo = new CategoryInfo(sortLabel);
 						res.put(sortLabel, catInfo);
 					}
 					catInfo.addIcd10Code(new ICD10Reference(icd10Code, icd10Label));
-				}				
+				}
 			}
-			
+
 			System.out.println("Done!");
 		} catch (BiffException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
+
 		return res;
 	}
 
-	
+
 	private static void writeCategoryInfoToModel(
 			Collection<CategoryInfo> categoryInfo, OWLModel owlModel) {
 		RDFProperty propSortingLabel = owlModel.getRDFProperty(ICDContentModelConstants.SORTING_LABEL_PROP);
 		RDFProperty propICD10Ref = owlModel.getRDFProperty(PROPERTY_ICD10_REFERENCE);
-		
+
         RDFProperty propBpShortTerm = owlModel.getRDFProperty(ICDContentModelConstants.BP_SHORT_TERM_ID_PROP);
         RDFProperty propBpOntologyLabel = owlModel.getRDFProperty(ICDContentModelConstants.BP_ONTOLOGY_LABEL_PROP);
         RDFProperty propBpOntologyId = owlModel.getRDFProperty(ICDContentModelConstants.BP_ONTOLOGY_ID_PROP);
@@ -267,20 +267,20 @@ public class ImportChapterXX {
         RDFProperty propLabel = owlModel.getRDFProperty(ICDContentModelConstants.LABEL_PROP);
 
         RDFSNamedClass clsICD10RefTerm = owlModel.getRDFSNamedClass(CLASS_ICD10_REFERENCE_TERM);
-        
+
 	    ICDContentModel icdContentModel = new ICDContentModel(owlModel);
         Collection<String> superClses = CollectionUtilities.createCollection(ICDContentModelConstants.EXTERNAL_CAUSES_TOP_CLASS);
 
         for (CategoryInfo catInfo : categoryInfo) {
             RDFSNamedClass category = icdContentModel.createICDCategory(null, superClses);
             category.setPropertyValue(owlModel.getRDFSLabelProperty(), catInfo.getFullLabel());
-            
+
             category.setPropertyValue(propSortingLabel, catInfo.getSortingLabel());
-            
+
             RDFResource titleTerm = icdContentModel.createTitleTerm();
             icdContentModel.fillTerm(titleTerm, null,  catInfo.getTitle(), null);
             icdContentModel.addTitleTermToClass(category, titleTerm);
-            
+
             List<ICD10Reference> icd10Codes = catInfo.getIcd10Codes();
             if (icd10Codes != null) {
 	            for (ICD10Reference icd10Code : icd10Codes) {
@@ -292,34 +292,34 @@ public class ImportChapterXX {
 	            	icd10Ref.setPropertyValue(propOntologyId, ICD10_ONTOLOGY_ID);
 	            	icd10Ref.setPropertyValue(propTermId, ICD10_TERM_ID_PREFIX + icd10Code.code);
 	            	icd10Ref.setPropertyValue(propUrl, ICD10_URL_PREFIX + icd10Code.code);
-	            	
+
 	            	category.addPropertyValue(propICD10Ref, icd10Ref);
 	            }
             }
 		}
-		
+
 	}
 
-	
+
 	static class ICD10Reference {
 		String code;
 		String label;
-		
+
 		public ICD10Reference (String icd10code, String label) {
 			this.code = icd10code;
 			this.label = label;
 		}
 	}
-	
-	
+
+
 	static class CategoryInfo implements Comparable<CategoryInfo> {
 		private static final String CODE_SEPARATOR = ". ";
-		
+
 		private String sortingLabel;
 		private String title;
 		private String description;
 		private List<ICD10Reference> icd10Codes;
-		
+
 		public CategoryInfo(String label) {
 			int posEndOfCode = label.indexOf(CODE_SEPARATOR);
 			if (posEndOfCode > 0) {
@@ -331,7 +331,7 @@ public class ImportChapterXX {
 				title = label;
 			}
 		}
-		
+
 		public String getSortingLabel() {
 			return sortingLabel;
 		}
@@ -359,17 +359,18 @@ public class ImportChapterXX {
 					this.icd10Codes.add(icd10Code);
 				}
 			}
-			
+
 		}
 		public List<ICD10Reference> getIcd10Codes() {
 			return icd10Codes;
 		}
-		
-		public String toString() {
+
+		@Override
+        public String toString() {
 			String res = getFullLabel();
 			//add comment
-			res += " (" + 
-				(description != null && description.length()>30 ? description.substring(0, 25)+"..." : description) + 
+			res += " (" +
+				(description != null && description.length()>30 ? description.substring(0, 25)+"..." : description) +
 				")";
 			//add icd 10 codes
 			res += " [";
@@ -389,7 +390,7 @@ public class ImportChapterXX {
 			return res;
 		}
 
-		@Override
+
 		public int compareTo(CategoryInfo other) {
 			int res = this.sortingLabel.compareTo(other.sortingLabel);
 			if (res == 0) {
