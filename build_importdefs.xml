@@ -4,7 +4,7 @@
    <property name="protege.home" value="${env.PROTEGE_HOME}"/>
    <property name = "owl.path"         value = "edu.stanford.smi.protegex.owl"/>
    <property name = "owl.plugin.path"  value = "${protege.home}/plugins/${owl.path}"/>
-	<property name = "lib"             location = "./lib"/>
+	<property name = "lib"             location = "./bin"/>
 
    <!-- 
      #  ********** Finding Protege Libraries. *************
