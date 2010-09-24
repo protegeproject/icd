@@ -33,7 +33,7 @@
       <path id = "project.classpath">    
         <pathelement location = "${protege.lib}"/>
         <pathelement location = "${protege.home}/driver.jar"/>
-        <pathelement location = "build/plugins/edu.stanford.bmir.icd.misc/icd.jar"/>        
+        <pathelement location = "${protege.home}/plugins/edu.stanford.bmir.icd.misc/icd.jar"/>        
         <fileset dir="${owl.plugin.path}"/>
       	<fileset dir="./lib" />
       </path>
