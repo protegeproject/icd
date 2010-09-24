@@ -35,7 +35,7 @@
         <pathelement location = "${protege.home}/driver.jar"/>
         <pathelement location = "build/plugins/edu.stanford.bmir.icd.misc/icd.jar"/>        
         <fileset dir="${owl.plugin.path}"/>
-      	<fileset dir="$[lib}" />
+      	<fileset dir="./lib" />
       </path>
 
     </target>
@@ -59,8 +59,8 @@
 	            	classname="edu.stanford.bmir.icd.utils.ImportDefs"
                         maxmemory="2500M">
 		      	<classpath refid = "project.classpath"/>	        	
-	 		     <arg value="mypprjfile"/>
-	        	<arg value="mycsvfile"/>
+	 		     <arg value="/usr/local/icat-files/projects/icd/icd_umbrella.pprj"/>
+	        	<arg value="additionalDefinitions.cs"/>
 	        </java>
 	 </target>
 	
