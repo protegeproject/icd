@@ -1,17 +1,22 @@
 package edu.stanford.bmir.protegex.icd.lucene;
+import java.util.Collection;
 import java.util.logging.Level;
 
 import edu.stanford.bmir.icd.claml.ICDContentModel;
 import edu.stanford.smi.protege.event.FrameAdapter;
 import edu.stanford.smi.protege.event.FrameEvent;
 import edu.stanford.smi.protege.event.FrameListener;
+import edu.stanford.smi.protege.model.Frame;
+import edu.stanford.smi.protege.model.Instance;
 import edu.stanford.smi.protege.model.KnowledgeBase;
 import edu.stanford.smi.protege.model.Project;
+import edu.stanford.smi.protege.model.Reference;
 import edu.stanford.smi.protege.model.Slot;
 import edu.stanford.smi.protege.plugin.ProjectPluginAdapter;
 import edu.stanford.smi.protege.query.indexer.BrowserTextChanged;
 import edu.stanford.smi.protege.util.Log;
 import edu.stanford.smi.protegex.owl.model.OWLModel;
+import edu.stanford.smi.protegex.owl.model.RDFProperty;
 
 
 public class UpdateLuceneIndexProjectPlugin extends ProjectPluginAdapter {
@@ -44,11 +49,28 @@ public class UpdateLuceneIndexProjectPlugin extends ProjectPluginAdapter {
             kbListener = new FrameAdapter() {
                 @Override
                 public void ownSlotValueChanged(FrameEvent event) {
-                    Slot slot = event.getSlot();
-                    if (slot.equals(cm.getIcdTitleProperty()) || slot.equals(cm.getSortingLabelProperty())) {
-                        BrowserTextChanged.browserTextChanged(event.getFrame());
+                    Frame changedFrame = null;
+                    try {
+                        Slot slot = event.getSlot();
+                        RDFProperty icdTitleProperty = cm.getIcdTitleProperty();
+                        if (slot.equals(cm.getSortingLabelProperty()) || slot.equals(icdTitleProperty)) {
+                            BrowserTextChanged.browserTextChanged(changedFrame = event.getFrame());
+                        } else if (slot.equals(cm.getLabelProperty() )) {
+                            Collection<Reference> refs = event.getFrame().getReferences(1);
+                            for (Reference ref : refs) {
+                                if (ref.getSlot().equals(icdTitleProperty)) {
+                                    changedFrame = ref.getFrame();
+                                    if (((Instance)changedFrame).hasDirectType(cm.getDefinitionMetaClass())) {
+                                        BrowserTextChanged.browserTextChanged(changedFrame);
+                                    }
+                                }
+                            }
+                        }
                     }
-                };
+                    catch (Exception e) {
+                        Log.getLogger().log(Level.WARNING, "Error at updating the Lucene index for: " + changedFrame);
+                    }
+                }
             };
         }
         return kbListener;
