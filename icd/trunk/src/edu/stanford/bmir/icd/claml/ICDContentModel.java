@@ -58,6 +58,8 @@ public class ICDContentModel {
     private RDFSNamedClass icd10NotesClass;
     private RDFSNamedClass termDefinitionClass;
     private RDFSNamedClass termSynonymClass;
+    private RDFSNamedClass termIndexClass;
+    private RDFSNamedClass indexTermTypeClass;
 
     private RDFSNamedClass externalCausesTopClass;
 
@@ -69,12 +71,15 @@ public class ICDContentModel {
     private RDFProperty kindProperty;
     private RDFProperty usageProperty;
     private RDFProperty definitionProperty;
+    private RDFProperty longDefinitionProperty;
     private RDFProperty prefilledDefinitionProperty;
     private RDFProperty synonymProperty;
+    private RDFProperty baseIndexProperty;
     private RDFProperty sortingLabelProperty;
 
     private RDFProperty inclusionProperty;
     private RDFProperty exclusionProperty;
+    private RDFProperty indexTypeProperty;
 
     private RDFProperty idProperty;
     private RDFProperty labelProperty;
@@ -100,6 +105,11 @@ public class ICDContentModel {
 
     private RDFProperty biologicalSexProperty;
 
+    /*
+     * Instances
+     */
+
+    private RDFResource indexTypeSynoymInst;
 
     public ICDContentModel(OWLModel owlModel) {
         this.owlModel = owlModel;
@@ -258,6 +268,20 @@ public class ICDContentModel {
         return termSynonymClass;
     }
 
+    public RDFSNamedClass getTermIndexClass() {
+        if (termIndexClass == null) {
+            termIndexClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.TERM_INDEX_CLASS);
+        }
+        return termIndexClass;
+    }
+
+    public RDFSNamedClass getTermIndexTypeClass() {
+        if (indexTermTypeClass == null) {
+            indexTermTypeClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.INDEX_TERM_TYPE_CLASS);
+        }
+        return indexTermTypeClass;
+    }
+
     public RDFSNamedClass getTermInclusionClass() {
         if (termInclusionClass == null) {
             termInclusionClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.TERM_INCLUSION_CLASS);
@@ -341,6 +365,13 @@ public class ICDContentModel {
         return definitionProperty;
     }
 
+    public RDFProperty getLongDefinitionProperty() {
+        if (longDefinitionProperty == null) {
+            longDefinitionProperty = owlModel.getRDFProperty(ICDContentModelConstants.LONG_DEFINITION_PROP);
+        }
+        return longDefinitionProperty;
+    }
+
     public RDFProperty getPrefilledDefinitionProperty() {
         if (prefilledDefinitionProperty == null) {
             prefilledDefinitionProperty = owlModel.getRDFProperty(ICDContentModelConstants.PREFILLED_DEFINITION_PROP);
@@ -353,6 +384,22 @@ public class ICDContentModel {
             synonymProperty = owlModel.getRDFProperty(ICDContentModelConstants.SYNOYM_PROP);
         }
         return synonymProperty;
+    }
+
+
+    public RDFProperty getBaseIndexProperty() {
+        if (baseIndexProperty == null) {
+            baseIndexProperty = owlModel.getRDFProperty(ICDContentModelConstants.BASE_INDEX_PROP);
+        }
+        return baseIndexProperty;
+    }
+
+
+    public RDFProperty getIndexTypeProperty() {
+        if (indexTypeProperty == null) {
+            indexTypeProperty = owlModel.getRDFProperty(ICDContentModelConstants.BASE_INDEX_TYPE_PROP);
+        }
+        return indexTypeProperty;
     }
 
     public RDFProperty getSortingLabelProperty() {
@@ -508,6 +555,18 @@ public class ICDContentModel {
         }
         return biologicalSexProperty;
     }
+
+    /*
+     * Getters for instances
+     */
+
+    public RDFResource getIndexTypeSynonymInst() {
+        if (indexTypeSynoymInst == null) {
+            indexTypeSynoymInst = owlModel.getRDFResource(ICDContentModelConstants.INDEX_TYPE_SYNONYM_INST);
+        }
+        return indexTypeSynoymInst;
+    }
+
 
     /*
      * Create methods

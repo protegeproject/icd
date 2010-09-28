@@ -34,6 +34,8 @@ public class ICDContentModelConstants {
     public final static String TERM_ICD10_NOTES_CLASS = NS + "ICD10NotesTerm";
     public final static String TERM_DEFINITION_CLASS = NS + "DefinitionTerm";
     public final static String TERM_SYNONYM_CLASS = NS + "SynonymTerm";
+    public final static String TERM_INDEX_CLASS = NS + "IndexTerm";
+    public final static String INDEX_TERM_TYPE_CLASS = NS + "IndexTermType";
 
     public final static String LINEARIZATION_VIEW_CLASS = NS + "LinearizationView";
     public final static String LINEARIZATION_SPECIFICATION_CLASS = NS + "LinearizationSpecification";
@@ -49,12 +51,16 @@ public class ICDContentModelConstants {
     public final static String CLAML_USAGE_PROP = NS + "clamlUsage";
     public final static String TEXT_PROP = NS + "text";
     public final static String DEFINITION_PROP = NS + "definition";
+    public final static String LONG_DEFINITION_PROP = NS + "longDefinition";
     public final static String PREFILLED_DEFINITION_PROP = NS + "definitionPrefilled";
     public final static String SYNOYM_PROP = NS + "synonym";
+    public final static String BASE_INDEX_PROP = NS + "baseIndex";
     public final static String SORTING_LABEL_PROP = NS + "sortingLabel";
 
     public final static String INCLUSION_PROP = NS + "inclusion";
     public final static String EXCLUSION_PROP = NS + "exclusion";
+    public final static String BASE_INDEX_TYPE_PROP = NS + "indexTermType";
+
 
     public final static String ID_PROP = NS + "id";
     public final static String LABEL_PROP = NS + "label";
@@ -89,6 +95,12 @@ public class ICDContentModelConstants {
 
     public final static String EXTERNAL_CAUSES_TOP_CLASS = NS + "XX";
 
+
+    /*
+     * Instances
+     */
+
+    public final static String INDEX_TYPE_SYNONYM_INST = NS + "Synonym";
 
     /*
      * BioPortal
