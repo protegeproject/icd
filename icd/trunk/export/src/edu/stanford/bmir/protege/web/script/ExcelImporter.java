@@ -10,4 +10,6 @@ import java.io.IOException;
  */
 public interface ExcelImporter {
     void importFile(String csvLocation, String inputWorkbookLocation, String outputWorkbookLocation, String sheetName) throws IOException, BiffException, WriteException;
+
+    Integer getColumnNumber(String name);
 }

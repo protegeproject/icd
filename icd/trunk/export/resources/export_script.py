@@ -47,6 +47,7 @@ titleProp=kb.getRDFProperty("http://who.int/icd#icdTitle")
 codeProp=kb.getRDFProperty("http://who.int/icd#icdCode")
 labelProp=kb.getRDFProperty("http://who.int/icd#label")
 definitionProp=kb.getRDFProperty("http://who.int/icd#definition")
+longDefinitionProp=kb.getRDFProperty("http://who.int/icd#longDefinition")
 linViewProp=kb.getRDFProperty("http://who.int/icd#linearizationView")
 parentsProp=kb.getRDFProperty("http://who.int/icd#linearizationParent")
 linProp =kb.getRDFProperty("http://who.int/icd#linearization")
@@ -73,12 +74,8 @@ def exportICD(icdCls, subclassLevel, output):
     row[sortLabelIndex]=makeEntry(getItemName(icdCls, sortLabelProp, 0, 0))
     row[typeIndex] = makeEntry(getItemName(icdCls, typeProp, labelProp, 0))
     row[icd10CodeIndex]=makeEntry(getItemName(icdCls, codeProp, 0, 0))
-    definition =makeEntry(filterLFTAB(getItemName(icdCls, definitionProp, labelProp, 1)))
-    words = string.split(definition)
-    if len(words) > 100:
-        row[detailedDefinitionIndex] = definition
-    else:
-        row[definitionIndex] = definition
+    row[definitionIndex]=makeEntry(filterLFTAB(getItemName(icdCls, definitionProp, labelProp, 1)))
+    row[detailedDefinitionIndex]=makeEntry(filterLFTAB(getItemName(icdCls, longDefinitionProp, labelProp, 1)))
     row[synonymIndex] = makeEntry(getMultipleItemNames(icdCls, synonymProp, labelProp, 1))
     row[bodySystemIndex] = makeEntry(getMultipleItemNames(icdCls, bodySystemProp, labelProp, 1))
     row[bodyPartIndex] = makeEntry(getMultipleItemNames(icdCls, bodyPartProp, labelProp, 0))

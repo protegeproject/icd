@@ -28,6 +28,7 @@ public class JxlImporter implements ExcelImporter{
     private Map<String, Map<String, String>> columnValuesMap = new HashMap<String, Map<String, String>>();
     private int excelTitleRow;
     private int csvTitleRow;
+    private Map<String, Integer> excelTitleToColumnNumberMap;
 
     /**
      * The constructor for this class.
@@ -55,7 +56,7 @@ public class JxlImporter implements ExcelImporter{
         if (sheet == null){
             throw new IllegalArgumentException("Could not find sheet " + sheetName + " in spreadsheet file " + inputWorkbookLocation);
         }
-        final Map<String, Integer> excelTitleToColumnNumberMap = mapExcelColumnNamesToColumnNumbers(sheet, excelTitleRow);
+        excelTitleToColumnNumberMap = mapExcelColumnNamesToColumnNumbers(sheet, excelTitleRow);
         CsvReader reader = new CsvReader(csvLocation, csvTitleRow);
         String nextValue = "";
         ErrorChecker checker = new ErrorChecker(reader.titles, excelTitleToColumnNumberMap.keySet(), csvColumnNamesToExcelColumnNames.keySet(), new HashSet<String>(csvColumnNamesToExcelColumnNames.values()), 9);
@@ -127,6 +128,13 @@ public class JxlImporter implements ExcelImporter{
             titleToColumnMap.put(writableCell.getContents(), columnNumber);
         }
         return titleToColumnMap;
+    }
+
+    public Integer getColumnNumber(String name){
+        if (excelTitleToColumnNumberMap == null ){
+            throw new IllegalStateException("columns not yet mapped");
+        }
+        return excelTitleToColumnNumberMap.get(name);
     }
 
 }
