@@ -5,6 +5,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author Jack Elliott <jacke@stanford.edu>
@@ -64,6 +66,14 @@ public class CsvReader {
 
     public int getCurrentColumn(){
         return currentColumn;
+    }
+
+    public Map<String, String> getNamedColumnsAsMap(){
+        Map<String, String> map = new HashMap<String, String>();
+        for (int i = 0; i< titles.length; i ++) {
+            map.put(titles[i], row[i]);
+        }
+        return map;
     }
 
     public boolean hasMoreColumns(){

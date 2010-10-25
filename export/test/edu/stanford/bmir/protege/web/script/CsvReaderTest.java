@@ -23,6 +23,7 @@ public class CsvReaderTest extends TestCase {
         assertEquals("e", unit.nextEntry());
         assertEquals("five", unit.getCurrentColumnName());
     }
+    
     public void testReadsLastRow() throws FileNotFoundException {
         CsvReader unit = new CsvReader("test/simple-test-export.csv", 3);
         unit.nextRow();
