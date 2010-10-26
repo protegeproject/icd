@@ -40,4 +40,20 @@ public class CsvReaderTest extends TestCase {
         assertEquals("eee", unit.nextEntry());
         assertEquals("five", unit.getCurrentColumnName());
     }
+
+    public void testPipeDelimited() throws FileNotFoundException {
+        CsvReader unit = new CsvReader("test/complex-validated-cells-export.csv", 3);
+        unit.nextRow();
+        assertEquals("mapped || also mapped", unit.nextEntry());
+        assertEquals("abc", unit.nextEntry());
+        assertEquals("c", unit.nextEntry());
+        assertEquals("d", unit.nextEntry());
+        assertEquals("e", unit.nextEntry());
+        unit.nextRow();
+        assertEquals("mapped again || not mapped", unit.nextEntry());
+        assertEquals("y", unit.nextEntry());
+        assertEquals("", unit.nextEntry());
+        assertEquals("aa", unit.nextEntry());
+        assertEquals("bb", unit.nextEntry());
+    }
 }
