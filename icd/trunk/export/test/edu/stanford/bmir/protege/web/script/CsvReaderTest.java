@@ -23,7 +23,7 @@ public class CsvReaderTest extends TestCase {
         assertEquals("e", unit.nextEntry());
         assertEquals("five", unit.getCurrentColumnName());
     }
-    
+
     public void testReadsLastRow() throws FileNotFoundException {
         CsvReader unit = new CsvReader("test/simple-test-export.csv", 3);
         unit.nextRow();
@@ -55,5 +55,11 @@ public class CsvReaderTest extends TestCase {
         assertEquals("", unit.nextEntry());
         assertEquals("aa", unit.nextEntry());
         assertEquals("bb", unit.nextEntry());
+    }
+
+    public void testTimestampRetrieval() throws FileNotFoundException {
+        CsvReader unit = new CsvReader("test/simple-test-export.csv", 3);
+        unit.nextRow();
+        assertEquals("Sat, 23 Oct 2010 00:21:49 +0000", unit.getTimestamp());
     }
 }
