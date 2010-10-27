@@ -22,15 +22,16 @@ public class ICDImporter implements ExcelImporter {
         importer.importFile(csvLocation, inputWorkbookLocation, outputWorkbookLocation, sheetName);
     }
 
+    /**
+     * This generates the mapping from column number to input value to desired write value.
+     * <p/>
+     * Note that, due to some late-breaking changes in requirements, this functionality is no longer needed, so here
+     * we simply return an empty map.
+     *
+     * @return
+     */
     private static Map<String, Map<String, String>> columnValueMapper() {
-
-        Map<String, Map<String, String>> map = new HashMap<String, Map<String, String>>();
-        map.put("RETIRE ??", new HashMap<String, String>());
-        map.put("Body system ", new HashMap<String, String>());
-        map.get("Body system ").put("Skin and subcutaneous tissue", "Skin System (Integumentary System)");
-        map.get("Body system ").put("Skin System (Integumentary System)", "Skin System (Integumentary System)");
-
-        return map;
+        return new HashMap<String, Map<String, String>>();
     }
 
 }
