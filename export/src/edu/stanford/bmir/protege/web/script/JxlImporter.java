@@ -26,6 +26,8 @@ public class JxlImporter implements ExcelImporter {
     private Map<String, Map<String, String>> columnValuesMap = new HashMap<String, Map<String, String>>();
     private int excelTitleRow;
     private int csvTitleRow;
+    private int timestampRow;
+    private int timestampColumn;
 
     /**
      * The constructor for this class.
@@ -33,13 +35,17 @@ public class JxlImporter implements ExcelImporter {
      * @param excelTitleRow   Note that this is array-based (0 is first number), not an excel-based (1 is first number) parameter
      * @param csvTitleRow     Note that this is an array-based (0 is first number), not an excel-based (1 is first number) parameter.
      * @param columnValuesMap The values used to map from ICD values to 'pretty' spreadsheet values.
+     * @param timestampRow
+     * @param timestampColumn
      */
-    public JxlImporter(final int excelTitleRow, final int csvTitleRow, Map<String, Map<String, String>> columnValuesMap) {
+    public JxlImporter(final int excelTitleRow, final int csvTitleRow, Map<String, Map<String, String>> columnValuesMap, int timestampRow, int timestampColumn) {
         this.excelTitleRow = excelTitleRow;
         this.csvTitleRow = csvTitleRow;
         if (columnValuesMap != null) {
             this.columnValuesMap = columnValuesMap;
         }
+        this.timestampRow = timestampRow;
+        this.timestampColumn = timestampColumn;
     }
 
     public void importFile(String csvLocation, String inputWorkbookLocation, String outputWorkbookLocation, String sheetName) throws IOException, BiffException, WriteException {
@@ -51,6 +57,7 @@ public class JxlImporter implements ExcelImporter {
             throw new IllegalArgumentException("Could not find sheet " + sheetName + " in spreadsheet file " + inputWorkbookLocation);
         }
         CsvReader reader = new CsvReader(csvLocation, csvTitleRow);
+        writeCell(timestampRow, timestampColumn, sheet, reader.getTimestamp());
         String nextValue = "";
         try {
             while (reader.hasMoreRows()) {

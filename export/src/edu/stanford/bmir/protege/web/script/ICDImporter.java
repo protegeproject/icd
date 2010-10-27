@@ -18,7 +18,7 @@ public class ICDImporter implements ExcelImporter {
     private ExcelImporter importer;
 
     public void importFile(String csvLocation, String inputWorkbookLocation, String outputWorkbookLocation, String sheetName) throws IOException, BiffException, WriteException {
-        importer = new JxlImporter(2, 1, columnValueMapper());
+        importer = new JxlImporter(2, 1, columnValueMapper(), 0, 1);
         importer.importFile(csvLocation, inputWorkbookLocation, outputWorkbookLocation, sheetName);
     }
 
