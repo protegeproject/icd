@@ -1,4 +1,4 @@
-package edu.stanford.bmir.protege.web.script;
+package edu.stanford.bmir.protege.icd.export.script;
 /**
  * @author Jack Elliott <jacke@stanford.edu>
  */

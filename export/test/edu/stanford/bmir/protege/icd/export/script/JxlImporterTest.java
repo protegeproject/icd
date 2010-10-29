@@ -1,5 +1,6 @@
-package edu.stanford.bmir.protege.web.script;
+package edu.stanford.bmir.protege.icd.export.script;
 
+import edu.stanford.bmir.protege.icd.export.script.JxlImporter;
 import junit.framework.TestCase;
 import jxl.Cell;
 import jxl.Sheet;

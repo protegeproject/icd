@@ -1,4 +1,4 @@
-package edu.stanford.bmir.protege.web.script;
+package edu.stanford.bmir.protege.icd.export.script;
 
 import edu.stanford.smi.protege.model.Project;
 import org.apache.bsf.BSFException;

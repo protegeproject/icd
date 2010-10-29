@@ -1,4 +1,4 @@
-package edu.stanford.bmir.protege.web.script;
+package edu.stanford.bmir.protege.icd.export.script;
 
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.CommandLineParser;
