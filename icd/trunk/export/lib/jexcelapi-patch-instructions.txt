@@ -1,0 +1,11 @@
+This folder contains a patch for jexcel api version 2.6.12.
+
+Unfortunately, this library was failing to copy our template file correctly, as it expected every cell in the BiffParser
+to have a formula not equal to null. For whatever reason, our template file does not.
+
+To apply the patch, simply download jexcel api version 2.6.12, copy the jexcelapi.patch file to the directory you've
+installed it in, and run the following command:
+
+patch -p1 < jexcelapi.patch
+
+After this, simply rebuild using the ant scripts in the build directory.
