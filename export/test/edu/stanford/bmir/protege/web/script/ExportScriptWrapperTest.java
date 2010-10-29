@@ -4,32 +4,30 @@ package edu.stanford.bmir.protege.web.script;
  */
 
 import edu.stanford.smi.protege.model.Project;
-import junit.framework.TestCase;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Map;
 
-public class ExportScriptWrapperTest extends TestCase {
-    private final String outputFileName = "output/myunit.csv";
+public class ExportScriptWrapperTest extends ValuesTest {
+    private CsvReader reader;
 
-    public void setUp() {
-        File file = new File(outputFileName);
+    @Override
+    protected String getFieldContents(final int fieldPosition, int rowNumber) {
+        return reader.row[fieldPosition];
+    }
+
+    @Override
+    protected void initializeTest(String topNode, final String csvFileName, String excelOutputFileName) throws Exception {
+        File file = new File(csvFileName);
         if (file.exists()) {
             file.delete();
         }
-    }
-
-    public void testConvertsShortDefinitionGreaterThan100WordsIntoDetailedDefinition() throws Exception {
         final Project project = Project.loadProjectFromFile("pprj/icd_umbrella.pprj", new ArrayList());
         ExportScriptWrapper unit = new ExportScriptWrapper(project, "resources/export_script.py");
-        String topNode = "http://who.int/icd#Class_2554";
-        unit.exportToFile(outputFileName, topNode);
-        CsvReader reader = new CsvReader(outputFileName, 1);
+        unit.exportToFile(csvFileName, topNode);
+        reader = new CsvReader(csvFileName, 1);
         reader.nextRow();
-        Map<String, String> map = reader.getNamedColumnsAsMap();
-        assertEquals(topNode, map.get("Class name (Internal)"));
-        assertTrue(map.get("Detailed Definition").trim().length() > 100);
-        assertTrue(map.get("Textual Definition").trim().length() == 0);
     }
+
+
 }
