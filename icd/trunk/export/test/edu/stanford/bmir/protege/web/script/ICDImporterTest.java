@@ -12,7 +12,7 @@ import java.io.File;
  *
  * @author Jack Elliott <jacke@stanford.edu>
  */
-public class ICDImporterTest extends ValuesTest {
+public class ICDImporterTest extends ValidateFieldsAddedCorrectlyTest {
     private final String templateLocation = "excel/template.xls";
     private final String sheetName = "Authoring template";
     private ExcelImporter importer = new ICDImporter();
