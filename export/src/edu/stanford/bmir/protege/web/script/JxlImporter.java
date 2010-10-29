@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Does the actual heavily lifting of reading a csv file of an expected format into a spreadsheet.
+ * Does the heavy lifting of reading a csv file of an expected format into a spreadsheet.
  * <p/>
  * Excel title row and the csv title row are passed in.
  *
@@ -71,7 +71,7 @@ public class JxlImporter implements ExcelImporter {
                 excelCurrentRowNumber++;
             }
         } catch (Exception e) {
-            throw new IllegalArgumentException("caught exception when writing exelCurrentRowNumber=" + excelCurrentRowNumber + ", csvColumnName=" + reader.getCurrentColumnName() + " with value " + nextValue, e);
+            throw new IllegalArgumentException("caught exception when writing excelCurrentRowNumber=" + excelCurrentRowNumber + ", excelColumnNumber=" + reader.getCurrentColumn() + ", csvColumnName=" + reader.getCurrentColumnName() + " with value " + nextValue, e);
         }
         outputWorkbook.write();
         outputWorkbook.close();
