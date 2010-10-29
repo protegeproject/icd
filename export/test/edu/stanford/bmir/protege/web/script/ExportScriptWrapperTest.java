@@ -8,7 +8,7 @@ import edu.stanford.smi.protege.model.Project;
 import java.io.File;
 import java.util.ArrayList;
 
-public class ExportScriptWrapperTest extends ValuesTest {
+public class ExportScriptWrapperTest extends ValidateFieldsAddedCorrectlyTest {
     private CsvReader reader;
 
     @Override

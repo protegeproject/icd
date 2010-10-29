@@ -11,7 +11,7 @@ import junit.framework.TestCase;
  *
  * @author Jack Elliott <jacke@stanford.edu>
  */
-public abstract class ValuesTest extends TestCase {
+public abstract class ValidateFieldsAddedCorrectlyTest extends TestCase {
     protected static int RETIRED_POSITION = 0;
     protected static int HASTYPE_LABEL_POSITION = 12;
     protected static int SORTINGLABEL_POSITION = 13;
