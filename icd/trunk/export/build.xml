@@ -124,7 +124,7 @@
         <!--<copy file="plugin.properties" todir="${plugin.dir}"/>-->
         <copy todir="${plugin.dir}/">
             <fileset dir="lib" includes="**/*.jar"/>
-            <fileset dir="lib" includes="**/Lib"/>
+            <fileset dir="lib" includes="**/Lib/**/*"/>
         </copy>
         <zip basedir="${build}/plugins"
              destfile="${distribution}"/>
