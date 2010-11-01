@@ -10,7 +10,9 @@ import jxl.write.WriteException;
 import org.apache.commons.logging.LogFactory;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -21,8 +23,8 @@ import java.util.Map;
  *
  * @author Jack Elliott <jacke@stanford.edu>
  */
-public class JxlImporter implements ExcelImporter {
-    private static final org.apache.commons.logging.Log logger = LogFactory.getLog(JxlImporter.class);
+public class JxlCsvToExcelConverter implements CsvToExcelConverter {
+    private static final org.apache.commons.logging.Log logger = LogFactory.getLog(JxlCsvToExcelConverter.class);
     private Map<String, Map<String, String>> columnValuesMap = new HashMap<String, Map<String, String>>();
     private int excelTitleRow;
     private int csvTitleRow;
@@ -38,7 +40,7 @@ public class JxlImporter implements ExcelImporter {
      * @param timestampRow
      * @param timestampColumn
      */
-    public JxlImporter(final int excelTitleRow, final int csvTitleRow, Map<String, Map<String, String>> columnValuesMap, int timestampRow, int timestampColumn) {
+    public JxlCsvToExcelConverter(final int excelTitleRow, final int csvTitleRow, Map<String, Map<String, String>> columnValuesMap, int timestampRow, int timestampColumn) {
         this.excelTitleRow = excelTitleRow;
         this.csvTitleRow = csvTitleRow;
         if (columnValuesMap != null) {
@@ -49,7 +51,14 @@ public class JxlImporter implements ExcelImporter {
     }
 
     public void importFile(String csvLocation, String inputWorkbookLocation, String outputWorkbookLocation, String sheetName) throws IOException, BiffException, WriteException {
-        final Workbook inputWorkbook = Workbook.getWorkbook(new File(inputWorkbookLocation));
+        final File file = new File(inputWorkbookLocation);
+        InputStream is = null;
+        if (!file.exists()) {
+            is = getClass().getResourceAsStream(inputWorkbookLocation);
+        } else {
+            is = new FileInputStream(file);
+        }
+        final Workbook inputWorkbook = Workbook.getWorkbook(is);
         final WritableWorkbook outputWorkbook = Workbook.createWorkbook(new File(outputWorkbookLocation), inputWorkbook);
         int excelCurrentRowNumber = excelTitleRow + 1;
         final WritableSheet sheet = outputWorkbook.getSheet(sheetName);

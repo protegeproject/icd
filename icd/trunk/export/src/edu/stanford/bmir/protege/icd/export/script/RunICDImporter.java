@@ -26,13 +26,13 @@ public class RunICDImporter {
             options.addOption(outputWorkbookLocationParameter, true, "the final location of the merged excel file");
             options.addOption(sheetNameParameter, true, "the name of the sheet to use");
             CommandLineParser parser = new PosixParser();
-            CommandLine cmd = parser.parse( options, args);
+            CommandLine cmd = parser.parse(options, args);
             final String csvLocation = cmd.getOptionValue(csvLocationParameter);
             final String inputWorkbookLocation = cmd.getOptionValue(inputWorkbookLocationParameter);
             final String outputWorkbookLocation = cmd.getOptionValue(outputWorkbookLocationParameter);
             final String sheetName = cmd.getOptionValue(sheetNameParameter);
-            ExcelImporter importer = new ICDImporter();
-            importer.importFile(csvLocation, inputWorkbookLocation, outputWorkbookLocation, sheetName);
+            CsvToExcelConverter converter = new ICDCsvToExcelConverter();
+            converter.importFile(csvLocation, inputWorkbookLocation, outputWorkbookLocation, sheetName);
         } catch (Exception e) {
             logger.error("error when exporting csv file with arguments " + Arrays.asList(args), e);
         }

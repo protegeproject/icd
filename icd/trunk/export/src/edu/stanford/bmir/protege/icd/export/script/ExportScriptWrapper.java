@@ -8,11 +8,13 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.Reader;
 import java.text.MessageFormat;
 
 /**
  * Wraps the actual script that we use for ICD export.
- * 
+ *
  * @author Jack Elliott <jacke@stanford.edu>
  */
 public class ExportScriptWrapper {
@@ -24,23 +26,44 @@ public class ExportScriptWrapper {
         this.scriptFileLocation = scriptFileLocation;
     }
 
-    public void exportToFile(String outputCsvFile, String topNode) throws BSFException, IOException {
+    public void exportToFile(String outputCsvFile, String... topNodes) throws BSFException, IOException {
+        if (topNodes == null || topNodes.length == 0) {
+            throw new IllegalArgumentException("Must supply at least one top node.");
+        }
+        File file = new File(outputCsvFile);
+        final File parentFile = file.getParentFile();
+        if (!parentFile.exists()) {
+            parentFile.mkdirs();
+        }
         BSFManager.registerScriptingEngine("python", "org.apache.bsf.engines.jython.JythonEngine", new String[]{"py"});
         BSFManager manager = new BSFManager();
         manager.declareBean("kb", project.getKnowledgeBase(), project.getKnowledgeBase().getClass());
         final String langFromFilename = BSFManager.getLangFromFilename(scriptFileLocation);
         final String script = loadScript(scriptFileLocation);
         manager.exec(langFromFilename, scriptFileLocation, 1, 1, script);
+        StringBuffer topNodesAsString = new StringBuffer();
+        for (int i = 0; i < topNodes.length; i++) {
+            if (i > 0) {
+                topNodesAsString.append(",");
+            }
+            topNodesAsString.append(topNodes[i]);
+        }
         final String fragment = MessageFormat.format("topNodes = [\"{1}\"]\n" +
-                "startICDExport(topNodes, \"{0}\");\n", outputCsvFile, topNode);
-        manager.exec(langFromFilename, scriptFileLocation, 1,1, fragment);
+                "startICDExport(topNodes, \"{0}\");\n", outputCsvFile, topNodesAsString.toString());
+        manager.exec(langFromFilename, scriptFileLocation, 1, 1, fragment);
     }
 
     private String loadScript(String fileName) throws IOException {
         File file = new File(fileName);
-        BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
+        Reader reader = null;
+        if (!file.exists()) {
+            reader = new InputStreamReader(getClass().getClassLoader().getResourceAsStream(fileName));
+        } else {
+            reader = new FileReader(file);
+        }
+        BufferedReader bufferedReader = new BufferedReader(reader);
         StringBuffer stringBuffer = new StringBuffer();
-        while(bufferedReader.ready()){
+        while (bufferedReader.ready()) {
             stringBuffer.append(bufferedReader.readLine());
             stringBuffer.append("\n");
         }
