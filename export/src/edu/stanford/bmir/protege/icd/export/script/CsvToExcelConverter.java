@@ -8,7 +8,6 @@ import java.io.IOException;
 /**
  * @author Jack Elliott <jacke@stanford.edu>
  */
-public interface ExcelImporter {
+public interface CsvToExcelConverter {
     void importFile(String csvLocation, String inputWorkbookLocation, String outputWorkbookLocation, String sheetName) throws IOException, BiffException, WriteException;
-
 }

@@ -11,7 +11,7 @@
     <property name="manage.classes" location="${build}/classes"/>
     <property name="junit.classes" location="${build}/junit.classes"/>
 
-    <property name="plugin.dist" value="edu.stanford.smi.protegex.changes"/>
+    <property name="plugin.dist" value="edu.stanford.smi.protegex.icd.export"/>
     <property name="plugin.dir" location="${build}/plugins/${plugin.dist}"/>
     <property name="manage.jar" location="${plugin.dir}/icd-export.jar"/>
 
@@ -104,7 +104,16 @@
         </manifest>
     </target>
 
-    <target name="jar" depends="compile,manifests">
+    <target name="resources">
+        <copy todir="${manage.classes}"
+              file="resources/export_script.py"
+              overwrite="true"/>
+        <copy todir="${manage.classes}"
+              file="excel/template.xls"
+              overwrite="true"/>
+    </target>
+
+    <target name="jar" depends="compile,manifests,resources">
         <mkdir dir="${plugin.dir}"/>
         <jar destfile="${manage.jar}"
              manifest="${plugin.manifest}"
@@ -112,13 +121,10 @@
     </target>
 
     <target name="dist" depends="jar">
-        <copy file="${lib}/icu4j.jar" todir="${plugin.dir}"/>
-        <copy file="plugin.properties" todir="${plugin.dir}"/>
-        <copy todir="${plugin.dir}/projects">
-            <fileset dir="projects"/>
-        </copy>
-        <copy todir="${plugin.dir}/doc">
-            <fileset dir="./docs"/>
+        <!--<copy file="plugin.properties" todir="${plugin.dir}"/>-->
+        <copy todir="${plugin.dir}/">
+            <fileset dir="lib" includes="**/*.jar"/>
+            <fileset dir="lib" includes="**/Lib"/>
         </copy>
         <zip basedir="${build}/plugins"
              destfile="${distribution}"/>
@@ -143,10 +149,6 @@
     </target>
 
     <target name="junit" depends="compile.junit, jar">
-        <mkdir dir="${build}/projects"/>
-        <copy todir="${build}/projects">
-            <fileset dir="./junit/projects"/>
-        </copy>
         <junit fork="true" haltonerror="true" haltonfailure="true"
                filtertrace="true"
                printsummary="true"
@@ -167,8 +169,9 @@
 
             </classpath>
             <batchtest>
-                <fileset dir="${junit}/src">
+                <fileset dir="${junit.src}">
                     <include name="**/*Test.java"/>
+                    <exclude name="**/ValidateFieldsAddedCorrectlyTest.java"/>
                 </fileset>
             </batchtest>
         </junit>

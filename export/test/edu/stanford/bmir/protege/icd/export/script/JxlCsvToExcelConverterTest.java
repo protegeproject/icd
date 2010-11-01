@@ -1,6 +1,5 @@
 package edu.stanford.bmir.protege.icd.export.script;
 
-import edu.stanford.bmir.protege.icd.export.script.JxlImporter;
 import junit.framework.TestCase;
 import jxl.Cell;
 import jxl.Sheet;
@@ -16,9 +15,9 @@ import java.util.Map;
 /**
  * @author Jack Elliott <jacke@stanford.edu>
  */
-public class JxlImporterTest extends TestCase {
+public class JxlCsvToExcelConverterTest extends TestCase {
     public void testSimpleCase() throws BiffException, IOException, WriteException {
-        JxlImporter unit = new JxlImporter(5, 3, null, 0, 1);
+        JxlCsvToExcelConverter unit = new JxlCsvToExcelConverter(5, 3, null, 0, 1);
         final String outputWorkbookLocation = "output/simpleTestOutput.xls";
         final String sheetName = "My Test Sheet";
         unit.importFile("test/simple-test-export.csv", "test/TestTemplate.xls", outputWorkbookLocation, sheetName);
@@ -32,7 +31,7 @@ public class JxlImporterTest extends TestCase {
     }
 
     public void testTimestamp() throws BiffException, IOException, WriteException {
-        JxlImporter unit = new JxlImporter(5, 3, null, 0, 1);
+        JxlCsvToExcelConverter unit = new JxlCsvToExcelConverter(5, 3, null, 0, 1);
         final String outputWorkbookLocation = "output/simpleTestOutput.xls";
         final String sheetName = "My Test Sheet";
         unit.importFile("test/simple-test-export.csv", "test/TestTemplate.xls", outputWorkbookLocation, sheetName);
@@ -42,7 +41,7 @@ public class JxlImporterTest extends TestCase {
     }
 
     public void testMissingColumnNamesInCsvFileCase() throws BiffException, IOException, WriteException {
-        JxlImporter unit = new JxlImporter(3, 3, null, 0, 1);
+        JxlCsvToExcelConverter unit = new JxlCsvToExcelConverter(3, 3, null, 0, 1);
         final String outputWorkbookLocation = "output/simpleTestOutput.xls";
         final String sheetName = "My Missing Columns Sheet";
         unit.importFile("test/missing-column-names-export.csv", "test/TestTemplate.xls", outputWorkbookLocation, sheetName);
@@ -58,7 +57,7 @@ public class JxlImporterTest extends TestCase {
     }
 
     public void testInsertIntoValidatedCellsCase() throws BiffException, IOException, WriteException {
-        JxlImporter unit = new JxlImporter(1, 3, null, 0, 1);
+        JxlCsvToExcelConverter unit = new JxlCsvToExcelConverter(1, 3, null, 0, 1);
         final String outputWorkbookLocation = "output/simpleTestOutput.xls";
         final String sheetName = "Drop Downs Sheet";
         unit.importFile("test/validated-cells-export.csv", "test/TestTemplate.xls", outputWorkbookLocation, sheetName);
@@ -75,7 +74,7 @@ public class JxlImporterTest extends TestCase {
         map.put("0", new HashMap<String, String>());
         map.get("0").put("x", "123");
         map.get("0").put("xxxxx", "xxxx");
-        JxlImporter unit = new JxlImporter(1, 3, map, 0, 1);
+        JxlCsvToExcelConverter unit = new JxlCsvToExcelConverter(1, 3, map, 0, 1);
         final String outputWorkbookLocation = "output/simpleTestOutput.xls";
         final String sheetName = "Drop Downs Sheet";
         unit.importFile("test/validated-cells-export.csv", "test/TestTemplate.xls", outputWorkbookLocation, sheetName);
@@ -93,7 +92,7 @@ public class JxlImporterTest extends TestCase {
         map.get("0").put("mapped", "123");
         map.get("0").put("also mapped", "456");
         map.get("0").put("mapped again", "789");
-        JxlImporter unit = new JxlImporter(1, 3, map, 0, 1);
+        JxlCsvToExcelConverter unit = new JxlCsvToExcelConverter(1, 3, map, 0, 1);
         final String outputWorkbookLocation = "output/simpleTestOutput.xls";
         final String sheetName = "Drop Downs Sheet";
         unit.importFile("test/complex-validated-cells-export.csv", "test/TestTemplate.xls", outputWorkbookLocation, sheetName);

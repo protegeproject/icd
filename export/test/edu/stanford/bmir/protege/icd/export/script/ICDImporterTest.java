@@ -6,7 +6,7 @@ import jxl.Workbook;
 import java.io.File;
 
 /**
- * Test for the ICDImporter.
+ * Test for the ICDCsvToExcelConverter.
  * <p/>
  * If this test does not work, go and run the ExportScriptWrapperTest on who's output it depends!
  *
@@ -15,7 +15,7 @@ import java.io.File;
 public class ICDImporterTest extends ValidateFieldsAddedCorrectlyTest {
     private final String templateLocation = "excel/template.xls";
     private final String sheetName = "Authoring template";
-    private ExcelImporter importer = new ICDImporter();
+    private CsvToExcelConverter converter = new ICDCsvToExcelConverter();
     private Sheet sheet;
 
     @Override
@@ -25,7 +25,7 @@ public class ICDImporterTest extends ValidateFieldsAddedCorrectlyTest {
 
     @Override
     protected void initializeTest(final String topNode, final String csvFileName, final String outputWorkbookLocation) throws Exception {
-        importer.importFile(csvFileName, templateLocation, outputWorkbookLocation, sheetName);
+        converter.importFile(csvFileName, templateLocation, outputWorkbookLocation, sheetName);
         final Workbook outputWorkbook = Workbook.getWorkbook(new File(outputWorkbookLocation));
         sheet = outputWorkbook.getSheet(sheetName);
     }

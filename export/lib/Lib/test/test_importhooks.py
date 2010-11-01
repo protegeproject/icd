@@ -145,7 +145,7 @@ class ImportHooksBaseTestCase(unittest.TestCase):
 
 class ImportHooksTestCase(ImportHooksBaseTestCase):
 
-    def doTestImports(self, importer=None):
+    def doTestImports(self, converter=None):
         import hooktestmodule
         import hooktestpackage
         import hooktestpackage.sub
@@ -158,11 +158,11 @@ class ImportHooksTestCase(ImportHooksBaseTestCase):
                          "hooktestpackage.sub")
         self.assertEqual(hooktestpackage.sub.subber.get_name(),
                          "hooktestpackage.sub.subber")
-        if importer:
-            self.assertEqual(hooktestmodule.__loader__, importer)
-            self.assertEqual(hooktestpackage.__loader__, importer)
-            self.assertEqual(hooktestpackage.sub.__loader__, importer)
-            self.assertEqual(hooktestpackage.sub.subber.__loader__, importer)
+        if converter:
+            self.assertEqual(hooktestmodule.__loader__, converter)
+            self.assertEqual(hooktestpackage.__loader__, converter)
+            self.assertEqual(hooktestpackage.sub.__loader__, converter)
+            self.assertEqual(hooktestpackage.sub.subber.__loader__, converter)
 
     def testMetaPath(self):
         i = MetaImporter()

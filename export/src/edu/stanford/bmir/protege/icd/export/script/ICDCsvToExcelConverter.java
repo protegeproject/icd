@@ -8,18 +8,18 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Holds all the logic specific to the ICD Import.
+ * Holds all the logic specific to the ICD Conversion from Csv to Excel.
  * <p/>
- * Delegates the actual work for the importation down to the JxlImporter.
+ * Delegates the actual work for the importation down to the JxlCsvToExcelConverter.
  *
  * @author Jack Elliott <jacke@stanford.edu>
  */
-public class ICDImporter implements ExcelImporter {
-    private ExcelImporter importer;
+public class ICDCsvToExcelConverter implements CsvToExcelConverter {
+    private CsvToExcelConverter converter;
 
     public void importFile(String csvLocation, String inputWorkbookLocation, String outputWorkbookLocation, String sheetName) throws IOException, BiffException, WriteException {
-        importer = new JxlImporter(2, 1, columnValueMapper(), 0, 1);
-        importer.importFile(csvLocation, inputWorkbookLocation, outputWorkbookLocation, sheetName);
+        converter = new JxlCsvToExcelConverter(2, 1, columnValueMapper(), 0, 1);
+        converter.importFile(csvLocation, inputWorkbookLocation, outputWorkbookLocation, sheetName);
     }
 
     /**
