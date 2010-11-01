@@ -31,9 +31,8 @@ public class ExportICDClassesJob extends ProtegeJob {
         if (logger.isLoggable(Level.FINE)) {
             logger.fine("Executing script on the server.");
         }
-        if (System.getProperty("python.home") == null) {
-            System.getProperties().put("python.home", "./plugins/edu.stanford.smi.protegex.icd.export");
-        }
+        setSystemPropertyIfUnset("python.home", "./plugins/edu.stanford.smi.protegex.icd.export");
+        setSystemPropertyIfUnset("jxl.nowarnings", "true");
         final String csvLocation = outputFileLocation + ".csv";
         final String scriptFileLocation = ApplicationProperties.getApplicationOrSystemProperty("icd.export.script.file.name", "export_script.py");
         final String inputWorkbookLocation = ApplicationProperties.getApplicationOrSystemProperty("icd.export.excel.file.name", "/template.xls");
@@ -55,5 +54,11 @@ public class ExportICDClassesJob extends ProtegeJob {
             throw new ProtegeException(e);
         }
         return null;
+    }
+
+    private void setSystemPropertyIfUnset(final String propertyName, final String propertyValue) {
+        if (System.getProperty(propertyName) == null) {
+            System.getProperties().put(propertyName, propertyValue);
+        }
     }
 }
