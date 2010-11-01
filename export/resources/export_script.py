@@ -65,7 +65,6 @@ idRow=["Retired\t", "ICD category\t","\t","\t","\t","\t","\t","\t","\t","\t","\t
 
 
 def exportICD(icdCls, subclassLevel, output):
-    print icdCls.getName()
     row=["\t","\t","\t","\t","\t","\t","\t","\t","\t","\t",
          "\t","\t","\t","\t","\t","\t","\t","\t","\t","\t",
          "\t","\t","\t","\t","\t","\t","\t","\t","\t","\t",
