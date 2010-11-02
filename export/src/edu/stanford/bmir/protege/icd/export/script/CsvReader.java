@@ -17,6 +17,7 @@ public class CsvReader {
     String[] titles;
     String timestamp;
     int currentColumn = -1;
+    int currentRow = 0;
 
     public CsvReader(String csvLocation, int titleRow) {
         File file = new File(csvLocation);
@@ -45,6 +46,7 @@ public class CsvReader {
         for (int i = 1; i < titleRow + 1; i++) {
             nextRow();
         }
+        currentRow = titleRow;
         titles = row;
     }
 
@@ -68,6 +70,7 @@ public class CsvReader {
     public void nextRow() {
         try {
             row = bufferedReader.readLine().split("\t");
+            currentRow = currentRow + 1;
             currentColumn = -1;
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -98,4 +101,11 @@ public class CsvReader {
         return timestamp;
     }
 
+    public int getCurrentRow() {
+        return currentRow;
+    }
+
+    public void close() throws IOException {
+        bufferedReader.close();
+    }
 }

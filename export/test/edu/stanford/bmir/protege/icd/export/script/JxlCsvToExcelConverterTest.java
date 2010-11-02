@@ -20,7 +20,7 @@ public class JxlCsvToExcelConverterTest extends TestCase {
         JxlCsvToExcelConverter unit = new JxlCsvToExcelConverter(5, 3, null, 0, 1);
         final String outputWorkbookLocation = "output/simpleTestOutput.xls";
         final String sheetName = "My Test Sheet";
-        unit.importFile("test/simple-test-export.csv", "test/TestTemplate.xls", outputWorkbookLocation, sheetName);
+        unit.convertFile("test/simple-test-export.csv", "test/TestTemplate.xls", outputWorkbookLocation, sheetName);
         final Workbook outputWorkbook = Workbook.getWorkbook(new File(outputWorkbookLocation));
         final Sheet sheet = outputWorkbook.getSheet(sheetName);
         assertEquals("a", getCellContents(sheet, 0, 6));
@@ -34,7 +34,7 @@ public class JxlCsvToExcelConverterTest extends TestCase {
         JxlCsvToExcelConverter unit = new JxlCsvToExcelConverter(5, 3, null, 0, 1);
         final String outputWorkbookLocation = "output/simpleTestOutput.xls";
         final String sheetName = "My Test Sheet";
-        unit.importFile("test/simple-test-export.csv", "test/TestTemplate.xls", outputWorkbookLocation, sheetName);
+        unit.convertFile("test/simple-test-export.csv", "test/TestTemplate.xls", outputWorkbookLocation, sheetName);
         final Workbook outputWorkbook = Workbook.getWorkbook(new File(outputWorkbookLocation));
         final Sheet sheet = outputWorkbook.getSheet(sheetName);
         assertEquals("Sat, 23 Oct 2010 00:21:49 +0000", getCellContents(sheet, 1, 0));
@@ -44,7 +44,7 @@ public class JxlCsvToExcelConverterTest extends TestCase {
         JxlCsvToExcelConverter unit = new JxlCsvToExcelConverter(3, 3, null, 0, 1);
         final String outputWorkbookLocation = "output/simpleTestOutput.xls";
         final String sheetName = "My Missing Columns Sheet";
-        unit.importFile("test/missing-column-names-export.csv", "test/TestTemplate.xls", outputWorkbookLocation, sheetName);
+        unit.convertFile("test/missing-column-names-export.csv", "test/TestTemplate.xls", outputWorkbookLocation, sheetName);
         final Workbook outputWorkbook = Workbook.getWorkbook(new File(outputWorkbookLocation));
         final Sheet sheet = outputWorkbook.getSheet(sheetName);
         assertEquals("a", getCellContents(sheet, 0, 4));
@@ -60,7 +60,7 @@ public class JxlCsvToExcelConverterTest extends TestCase {
         JxlCsvToExcelConverter unit = new JxlCsvToExcelConverter(1, 3, null, 0, 1);
         final String outputWorkbookLocation = "output/simpleTestOutput.xls";
         final String sheetName = "Drop Downs Sheet";
-        unit.importFile("test/validated-cells-export.csv", "test/TestTemplate.xls", outputWorkbookLocation, sheetName);
+        unit.convertFile("test/validated-cells-export.csv", "test/TestTemplate.xls", outputWorkbookLocation, sheetName);
         final Workbook outputWorkbook = Workbook.getWorkbook(new File(outputWorkbookLocation));
         final Sheet sheet = outputWorkbook.getSheet(sheetName);
         assertEquals("xxx", getCellContents(sheet, 0, 2));
@@ -77,7 +77,7 @@ public class JxlCsvToExcelConverterTest extends TestCase {
         JxlCsvToExcelConverter unit = new JxlCsvToExcelConverter(1, 3, map, 0, 1);
         final String outputWorkbookLocation = "output/simpleTestOutput.xls";
         final String sheetName = "Drop Downs Sheet";
-        unit.importFile("test/validated-cells-export.csv", "test/TestTemplate.xls", outputWorkbookLocation, sheetName);
+        unit.convertFile("test/validated-cells-export.csv", "test/TestTemplate.xls", outputWorkbookLocation, sheetName);
         final Workbook outputWorkbook = Workbook.getWorkbook(new File(outputWorkbookLocation));
         final Sheet sheet = outputWorkbook.getSheet(sheetName);
         assertEquals("123", getCellContents(sheet, 0, 3));
@@ -95,7 +95,7 @@ public class JxlCsvToExcelConverterTest extends TestCase {
         JxlCsvToExcelConverter unit = new JxlCsvToExcelConverter(1, 3, map, 0, 1);
         final String outputWorkbookLocation = "output/simpleTestOutput.xls";
         final String sheetName = "Drop Downs Sheet";
-        unit.importFile("test/complex-validated-cells-export.csv", "test/TestTemplate.xls", outputWorkbookLocation, sheetName);
+        unit.convertFile("test/complex-validated-cells-export.csv", "test/TestTemplate.xls", outputWorkbookLocation, sheetName);
         final Workbook outputWorkbook = Workbook.getWorkbook(new File(outputWorkbookLocation));
         final Sheet sheet = outputWorkbook.getSheet(sheetName);
         assertEquals("123 || 456", getCellContents(sheet, 0, 2));

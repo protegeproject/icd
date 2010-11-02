@@ -17,9 +17,9 @@ import java.util.Map;
 public class ICDCsvToExcelConverter implements CsvToExcelConverter {
     private CsvToExcelConverter converter;
 
-    public void importFile(String csvLocation, String inputWorkbookLocation, String outputWorkbookLocation, String sheetName) throws IOException, BiffException, WriteException {
+    public void convertFile(String csvLocation, String inputWorkbookLocation, String outputWorkbookLocation, String sheetName) throws IOException, BiffException, WriteException {
         converter = new JxlCsvToExcelConverter(2, 1, columnValueMapper(), 0, 1);
-        converter.importFile(csvLocation, inputWorkbookLocation, outputWorkbookLocation, sheetName);
+        converter.convertFile(csvLocation, inputWorkbookLocation, outputWorkbookLocation, sheetName);
     }
 
     /**
