@@ -8,6 +8,7 @@ import edu.stanford.smi.protege.util.ApplicationProperties;
 import edu.stanford.smi.protege.util.Log;
 import edu.stanford.smi.protege.util.ProtegeJob;
 
+import java.io.File;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -53,7 +54,7 @@ public class ExportICDClassesJob extends ProtegeJob {
             logger.log(Level.SEVERE, "Caught when trying to generate an excel file for " + topNode + " at " + outputFileLocation);
             throw new ProtegeException(e);
         }
-        return null;
+        return new File(outputFileLocation).getAbsolutePath();
     }
 
     private void setSystemPropertyIfUnset(final String propertyName, final String propertyValue) {
