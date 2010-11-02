@@ -32,7 +32,7 @@ public class ExportScriptWrapper {
         }
         File file = new File(outputCsvFile);
         final File parentFile = file.getParentFile();
-        if (!parentFile.exists()) {
+        if (parentFile != null && !parentFile.exists()) {
             parentFile.mkdirs();
         }
         BSFManager.registerScriptingEngine("python", "org.apache.bsf.engines.jython.JythonEngine", new String[]{"py"});
