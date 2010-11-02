@@ -32,7 +32,7 @@ public class RunICDImporter {
             final String outputWorkbookLocation = cmd.getOptionValue(outputWorkbookLocationParameter);
             final String sheetName = cmd.getOptionValue(sheetNameParameter);
             CsvToExcelConverter converter = new ICDCsvToExcelConverter();
-            converter.importFile(csvLocation, inputWorkbookLocation, outputWorkbookLocation, sheetName);
+            converter.convertFile(csvLocation, inputWorkbookLocation, outputWorkbookLocation, sheetName);
         } catch (Exception e) {
             logger.error("error when exporting csv file with arguments " + Arrays.asList(args), e);
         }

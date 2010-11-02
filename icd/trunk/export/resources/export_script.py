@@ -14,7 +14,9 @@ Required declarations:
 """
 from time import *
 import string
+from sets import Set
 
+seenClsSet = Set()
 fsnIndex=11
 typeIndex=12
 sortLabelIndex=13
@@ -70,28 +72,30 @@ def exportICD(icdCls, subclassLevel, output):
          "\t","\t","\t","\t","\t","\t","\t","\t","\t","\t",
          "\t", "\t", "\t"]
     row[subclassLevel]=makeEntry(filterLFTAB(getItemName(icdCls, titleProp, labelProp, 1)))
-    row[sortLabelIndex]=makeEntry(getItemName(icdCls, sortLabelProp, 0, 0))
-    row[typeIndex] = makeEntry(getItemName(icdCls, typeProp, labelProp, 0))
     row[icd10CodeIndex]=makeEntry(getItemName(icdCls, codeProp, 0, 0))
-    definition =makeEntry(filterLFTAB(getItemName(icdCls, definitionProp, labelProp, 1)))
-    words = string.split(definition)
-    if len(words) > 100:
-        row[detailedDefinitionIndex] = definition
-    else:
-        row[definitionIndex] = definition
-    row[synonymIndex] = makeEntry(getMultipleItemNames(icdCls, synonymProp, labelProp, 1))
-    row[bodySystemIndex] = makeEntry(getMultipleItemNames(icdCls, bodySystemProp, labelProp, 1))
-    row[bodyPartIndex] = makeEntry(getMultipleItemNames(icdCls, bodyPartProp, labelProp, 0))
-    row[bodyPartSNMDCTIndex] = makeEntry(getMultipleItemNames(icdCls, bodyPartProp, bpShortTermId, 0))
-    row[pathohistologyIndex] = makeEntry(getMultipleItemNames(icdCls, pathoPhysioProp, labelProp, 0))
-    row[pathohistologySNMDCTIndex] = makeEntry(getMultipleItemNames(icdCls, pathoPhysioProp, bpShortTermId, 0))
-    row[exclusionIndex]=makeEntry(getMultipleItemNames(icdCls, exclusionProp, labelProp, 1))
-    row[inclusionIndex]=makeEntry(getMultipleItemNames(icdCls, inclusionProp, labelProp, 1))
     row[classNameIndex]=icdCls.getName()+"\t"
-    if (icdCls.getSuperclassCount()> 1):
-        row[OriginalParentsIndex] =getAllParents(icdCls)
+    if icdCls.getName() not in seenClsSet:
+        row[sortLabelIndex]=makeEntry(getItemName(icdCls, sortLabelProp, 0, 0))
+        row[typeIndex] = makeEntry(getItemName(icdCls, typeProp, labelProp, 0))
+        definition =makeEntry(filterLFTAB(getItemName(icdCls, definitionProp, labelProp, 1)))
+        words = string.split(definition)
+        if len(words) > 100:
+            row[detailedDefinitionIndex] = definition
+        else:
+            row[definitionIndex] = definition
+        row[synonymIndex] = makeEntry(getMultipleItemNames(icdCls, synonymProp, labelProp, 1))
+        row[bodySystemIndex] = makeEntry(getMultipleItemNames(icdCls, bodySystemProp, labelProp, 1))
+        row[bodyPartIndex] = makeEntry(getMultipleItemNames(icdCls, bodyPartProp, labelProp, 0))
+        row[bodyPartSNMDCTIndex] = makeEntry(getMultipleItemNames(icdCls, bodyPartProp, bpShortTermId, 0))
+        row[pathohistologyIndex] = makeEntry(getMultipleItemNames(icdCls, pathoPhysioProp, labelProp, 0))
+        row[pathohistologySNMDCTIndex] = makeEntry(getMultipleItemNames(icdCls, pathoPhysioProp, bpShortTermId, 0))
+        row[exclusionIndex]=makeEntry(getMultipleItemNames(icdCls, exclusionProp, labelProp, 1))
+        row[inclusionIndex]=makeEntry(getMultipleItemNames(icdCls, inclusionProp, labelProp, 1))
+        if (icdCls.getSuperclassCount()> 1):
+            row[OriginalParentsIndex] =getAllParents(icdCls)
     filter(lambda x: output.write(x), row)
     output.write("\n")
+    seenClsSet.add(icdCls.getName())
     subClasses=icdCls.getNamedSubclasses(0)
     pairs = [(getItemName(x, sortLabelProp, 0, 0), x) for x in subClasses]
     pairs.sort()
@@ -178,6 +182,7 @@ def getAllParents(icdCls):
 
 
 def startICDExport(clsNameList, fileName):
+    seenClsSet.clear()
     output = open(fileName, 'w')
     output.write("Export timestamp:\t"+strftime("%a, %d %b %Y %H:%M:%S +0000", gmtime())+"\n")
     filter(lambda x: output.write(x), idRow)
@@ -189,6 +194,7 @@ def startICDExport(clsNameList, fileName):
                 exportICD(cls, 1, output)
     finally:
         output.close()
+        seenClsSet.clear()
 
 
 def checkLFTAB(c):

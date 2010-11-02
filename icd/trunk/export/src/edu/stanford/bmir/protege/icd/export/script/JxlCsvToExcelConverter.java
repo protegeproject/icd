@@ -50,7 +50,7 @@ public class JxlCsvToExcelConverter implements CsvToExcelConverter {
         this.timestampColumn = timestampColumn;
     }
 
-    public void importFile(String csvLocation, String inputWorkbookLocation, String outputWorkbookLocation, String sheetName) throws IOException, BiffException, WriteException {
+    public void convertFile(String csvLocation, String inputWorkbookLocation, String outputWorkbookLocation, String sheetName) throws IOException, BiffException, WriteException {
         final File file = new File(inputWorkbookLocation);
         InputStream is = null;
         if (!file.exists()) {
@@ -60,30 +60,35 @@ public class JxlCsvToExcelConverter implements CsvToExcelConverter {
         }
         final Workbook inputWorkbook = Workbook.getWorkbook(is);
         final WritableWorkbook outputWorkbook = Workbook.createWorkbook(new File(outputWorkbookLocation), inputWorkbook);
-        int excelCurrentRowNumber = excelTitleRow + 1;
-        final WritableSheet sheet = outputWorkbook.getSheet(sheetName);
-        if (sheet == null) {
-            throw new IllegalArgumentException("Could not find sheet " + sheetName + " in spreadsheet file " + inputWorkbookLocation);
-        }
         CsvReader reader = new CsvReader(csvLocation, csvTitleRow);
-        writeCell(timestampRow, timestampColumn, sheet, reader.getTimestamp());
-        String nextValue = "";
         try {
-            while (reader.hasMoreRows()) {
-                reader.nextRow();
-                while (reader.hasMoreColumns()) {
-                    nextValue = reader.nextEntry();
-                    // if we don't have a title, just assume that we're writing to the same location.
-                    nextValue = mapToExcelValueSet(reader, nextValue, Integer.toString(reader.getCurrentColumn()));
-                    writeCell(excelCurrentRowNumber, reader.getCurrentColumn(), sheet, nextValue);
-                }
-                excelCurrentRowNumber++;
+            int excelCurrentRowNumber = excelTitleRow + 1;
+            final WritableSheet sheet = outputWorkbook.getSheet(sheetName);
+            if (sheet == null) {
+                throw new IllegalArgumentException("Could not find sheet " + sheetName + " in spreadsheet file " + inputWorkbookLocation);
             }
-        } catch (Exception e) {
-            throw new IllegalArgumentException("caught exception when writing excelCurrentRowNumber=" + excelCurrentRowNumber + ", excelColumnNumber=" + reader.getCurrentColumn() + ", csvColumnName=" + reader.getCurrentColumnName() + " with value " + nextValue, e);
+            writeCell(timestampRow, timestampColumn, sheet, reader.getTimestamp());
+            String nextValue = "";
+            try {
+                while (reader.hasMoreRows()) {
+                    reader.nextRow();
+                    while (reader.hasMoreColumns()) {
+                        nextValue = reader.nextEntry();
+                        // if we don't have a title, just assume that we're writing to the same location.
+                        nextValue = mapToExcelValueSet(reader, nextValue, Integer.toString(reader.getCurrentColumn()));
+                        writeCell(excelCurrentRowNumber, reader.getCurrentColumn(), sheet, nextValue);
+                    }
+                    excelCurrentRowNumber++;
+                }
+            } catch (Exception e) {
+                throw new IllegalArgumentException("caught exception when writing excelCurrentRowNumber=" + excelCurrentRowNumber + ", excelColumnNumber=" + reader.getCurrentColumn() + ", csvColumnName=" + reader.getCurrentColumnName() + " with value " + nextValue, e);
+            }
+            outputWorkbook.write();
+        } finally {
+            inputWorkbook.close();
+            outputWorkbook.close();
+            reader.close();
         }
-        outputWorkbook.write();
-        outputWorkbook.close();
     }
 
     private String mapToExcelValueSet(CsvReader reader, String nextValue, String currentExcelColumnName) {

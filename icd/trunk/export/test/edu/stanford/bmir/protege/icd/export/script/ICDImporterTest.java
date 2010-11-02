@@ -24,8 +24,8 @@ public class ICDImporterTest extends ValidateFieldsAddedCorrectlyTest {
     }
 
     @Override
-    protected void initializeTest(final String topNode, final String csvFileName, final String outputWorkbookLocation) throws Exception {
-        converter.importFile(csvFileName, templateLocation, outputWorkbookLocation, sheetName);
+    protected void initializeTest(final String csvFileName, final String outputWorkbookLocation, final String... topNode) throws Exception {
+        converter.convertFile(csvFileName, templateLocation, outputWorkbookLocation, sheetName);
         final Workbook outputWorkbook = Workbook.getWorkbook(new File(outputWorkbookLocation));
         sheet = outputWorkbook.getSheet(sheetName);
     }

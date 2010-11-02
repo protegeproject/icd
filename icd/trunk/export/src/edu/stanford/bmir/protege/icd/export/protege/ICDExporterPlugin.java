@@ -1,4 +1,4 @@
-package edu.stanford.bmir.protege.icd.export.server;
+package edu.stanford.bmir.protege.icd.export.protege;
 
 import edu.stanford.smi.protege.exception.ProtegeException;
 import edu.stanford.smi.protege.model.Cls;
@@ -20,6 +20,7 @@ import java.util.List;
  */
 public class ICDExporterPlugin implements ExportPlugin {
     private static final String EXTENSION = ".xls";
+    private static final String TOP_LEVEL_ICD_CLASS_PROPERTY = "top.level.icd.class";
 
     public String getName() {
         return "ICD Excel Export";
@@ -27,7 +28,7 @@ public class ICDExporterPlugin implements ExportPlugin {
 
     public void handleExportRequest(final Project project) {
         String topLevelICDClass = "http://who.int/icd#ICDCategory";
-        topLevelICDClass = ApplicationProperties.getApplicationOrSystemProperty("top.level.icd.class", topLevelICDClass);
+        topLevelICDClass = ApplicationProperties.getApplicationOrSystemProperty(TOP_LEVEL_ICD_CLASS_PROPERTY, topLevelICDClass);
         final List rootClasses = Arrays.asList(project.getKnowledgeBase().getCls(topLevelICDClass));
         final JComponent mainPanel = ProjectManager.getProjectManager().getMainPanel();
         final Cls clsToExport = DisplayUtilities.pickCls(mainPanel, project.getKnowledgeBase(), rootClasses);
@@ -39,7 +40,7 @@ public class ICDExporterPlugin implements ExportPlugin {
                 String prettyClassName = clsToExport.getBrowserText();
                 prettyClassName = prettyClassName == null ? clsToExport.getName() : prettyClassName;
                 try {
-                    new ExportICDClassesJob(project.getKnowledgeBase(), clsToExport.getName(), file.getAbsolutePath()).execute();
+                    new ExportICDClassesJob(project.getKnowledgeBase(), file.getAbsolutePath(), clsToExport.getName()).execute();
                     ModalDialog.showMessageDialog(mainPanel, "Successfully exported branch " + prettyClassName + " to file " + file.getAbsolutePath());
                     return null;
                 } catch (ProtegeException e) {
