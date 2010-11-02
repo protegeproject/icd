@@ -10,6 +10,7 @@ import edu.stanford.smi.protege.util.Log;
 import edu.stanford.smi.protege.util.ProtegeJob;
 
 import java.io.File;
+import java.util.Arrays;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -20,7 +21,7 @@ public class ExportICDClassesJob extends ProtegeJob {
     private static final long serialVersionUID = 818316286562363577L;
     private static final Logger logger = Log.getLogger(ExportICDClassesJob.class);
     private String outputFileLocation;
-    private final String[] topNode;
+    private final String[] topNodes;
 
     static final String PYTHON_HOME_PROPERTY = "python.home";
     private static final String JXL_NOWARNINGS_PROPERTY = "jxl.nowarnings";
@@ -31,10 +32,10 @@ public class ExportICDClassesJob extends ProtegeJob {
     private static final String EXPORT_SCRIPT_DEFAULT_LOCATION = "export_script.py";
     private static final String TEMPLATE_XLS_FILE_DEFAULT_LOCATION = "/template.xls";
 
-    public ExportICDClassesJob(KnowledgeBase kb, String outputFileLocation, String... topNode) {
+    public ExportICDClassesJob(KnowledgeBase kb, String outputFileLocation, String... topNodes) {
         super(kb);
         this.outputFileLocation = outputFileLocation;
-        this.topNode = topNode;
+        this.topNodes = topNodes;
     }
 
     @Override
@@ -56,9 +57,9 @@ public class ExportICDClassesJob extends ProtegeJob {
         synchronized (getKnowledgeBase()) {
             try {
                 ExportScriptWrapper wrapper = new ExportScriptWrapper(getKnowledgeBase().getProject(), scriptFileLocation);
-                wrapper.exportToFile(csvLocation, topNode);
+                wrapper.exportToFile(csvLocation, topNodes);
             } catch (Exception e) {
-                logger.log(Level.SEVERE, "Caught when trying to generate a csv file for " + topNode + " at " + outputFileLocation + " using script file " + scriptFileLocation);
+                logger.log(Level.SEVERE, "Caught when trying to generate a csv file for " + Arrays.asList(topNodes) + " at " + outputFileLocation + " using script file " + scriptFileLocation);
                 throw new ProtegeException(e);
             }
         }
@@ -66,7 +67,7 @@ public class ExportICDClassesJob extends ProtegeJob {
             ICDCsvToExcelConverter csvToExcelConverter = new ICDCsvToExcelConverter();
             csvToExcelConverter.convertFile(csvLocation, inputWorkbookLocation, outputFileLocation, "Authoring template");
         } catch (Exception e) {
-            logger.log(Level.SEVERE, "Caught when trying to generate an excel file for " + topNode + " at " + outputFileLocation);
+            logger.log(Level.SEVERE, "Caught when trying to generate an excel file for " + Arrays.asList(topNodes) + " at " + outputFileLocation);
             throw new ProtegeException(e);
         }
         return new File(outputFileLocation).getAbsolutePath();
