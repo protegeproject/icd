@@ -5,6 +5,7 @@ import jxl.write.WriteException;
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 
 /**
@@ -16,9 +17,17 @@ import java.util.Map;
  */
 public class ICDCsvToExcelConverter implements CsvToExcelConverter {
     private CsvToExcelConverter converter;
+    protected static final int TIMESTAMP_ROW = 0;
+    protected static final int TIMESTAMP_COLUMN = 1;
+    protected static final int CSV_TITLE_ROW = 1;
+    protected static final int EXCEL_TITLE_ROW = 2;
+    protected static final int CLASS_FIELD_POSITION = 32;
 
     public void convertFile(String csvLocation, String inputWorkbookLocation, String outputWorkbookLocation, String sheetName) throws IOException, BiffException, WriteException {
-        converter = new JxlCsvToExcelConverter(2, 1, columnValueMapper(), 0, 1);
+        final HashSet<Integer> fieldsNotToColor = new HashSet<Integer>();
+        fieldsNotToColor.add(0);
+        fieldsNotToColor.add(1);
+        converter = new JxlCsvToExcelConverter(EXCEL_TITLE_ROW, CSV_TITLE_ROW, columnValueMapper(), TIMESTAMP_ROW, TIMESTAMP_COLUMN, CLASS_FIELD_POSITION, fieldsNotToColor);
         converter.convertFile(csvLocation, inputWorkbookLocation, outputWorkbookLocation, sheetName);
     }
 
