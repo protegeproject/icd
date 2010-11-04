@@ -57,6 +57,12 @@ public class CsvReaderTest extends TestCase {
         assertEquals("bb", unit.nextEntry());
     }
 
+    public void testReadsUtf8() throws FileNotFoundException {
+        CsvReader unit = new CsvReader("test/utf-8-encoding.csv", 1);
+        unit.nextRow();
+        assertEquals("Sézary disease", unit.row[5]);
+    }
+
     public void testTimestampRetrieval() throws FileNotFoundException {
         CsvReader unit = new CsvReader("test/simple-test-export.csv", 3);
         unit.nextRow();
