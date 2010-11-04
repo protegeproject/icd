@@ -94,7 +94,7 @@ public class JxlCsvToExcelConverter implements CsvToExcelConverter {
                     duplicates.add(className);
                 }
             } catch (Exception e) {
-                throw new IllegalArgumentException("caught exception when writing excelCurrentRowNumber=" + excelCurrentRowNumber + ", excelColumnNumber=" + reader.getCurrentColumn() + ", csvColumnName=" + reader.getCurrentColumnName() + " with value " + nextValue, e);
+                throw new IllegalArgumentException("caught exception when writing excelCurrentRowNumber=" + excelCurrentRowNumber + ", excelColumnNumber=" + reader.getCurrentColumn() + " with value " + nextValue, e);
             }
             outputWorkbook.write();
         } finally {
