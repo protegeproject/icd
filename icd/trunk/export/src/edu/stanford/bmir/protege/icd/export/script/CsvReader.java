@@ -1,5 +1,7 @@
 package edu.stanford.bmir.protege.icd.export.script;
 
+import edu.stanford.smi.protege.util.ApplicationProperties;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -18,12 +20,13 @@ public class CsvReader {
     String timestamp;
     int currentColumn = -1;
     int currentRow = 0;
-    protected static final String FILE_ENCODING = "ISO-8859-1";
+    protected static final String DEFAULT_FILE_ENCODING = "ISO-8859-1";
 
     public CsvReader(String csvLocation, int titleRow) {
         File file = new File(csvLocation);
         try {
-            final InputStreamReader inputStreamReader = new InputStreamReader(new FileInputStream(file), FILE_ENCODING);
+            final String fileEncoding = ApplicationProperties.getApplicationOrSystemProperty("csv.file.encoding", DEFAULT_FILE_ENCODING);
+            final InputStreamReader inputStreamReader = new InputStreamReader(new FileInputStream(file), fileEncoding);
             bufferedReader = new BufferedReader(inputStreamReader);
         } catch (IOException e) {
             throw new RuntimeException(e);
