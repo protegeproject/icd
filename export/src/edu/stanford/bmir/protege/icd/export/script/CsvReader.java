@@ -2,9 +2,9 @@ package edu.stanford.bmir.protege.icd.export.script;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -18,12 +18,14 @@ public class CsvReader {
     String timestamp;
     int currentColumn = -1;
     int currentRow = 0;
+    protected static final String FILE_ENCODING = "ISO-8859-1";
 
     public CsvReader(String csvLocation, int titleRow) {
         File file = new File(csvLocation);
         try {
-            bufferedReader = new BufferedReader(new FileReader(file));
-        } catch (FileNotFoundException e) {
+            final InputStreamReader inputStreamReader = new InputStreamReader(new FileInputStream(file), FILE_ENCODING);
+            bufferedReader = new BufferedReader(inputStreamReader);
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
         initializeTimestamp();
