@@ -57,10 +57,18 @@ public class CsvReaderTest extends TestCase {
         assertEquals("bb", unit.nextEntry());
     }
 
-    public void testReadsUtf8() throws FileNotFoundException {
+    public void testReadsCharactersCorrectlyWhenUsingISO88591() throws FileNotFoundException {
         CsvReader unit = new CsvReader("test/utf-8-encoding.csv", 1);
         unit.nextRow();
         assertEquals("Sézary disease", unit.row[5]);
+    }
+
+    public void testReadsCorruptCharacterWhenUsingUTF8() throws FileNotFoundException {
+        System.setProperty("csv.file.encoding", "UTF-8");
+        CsvReader unit = new CsvReader("test/utf-8-encoding.csv", 1);
+        unit.nextRow();
+        assertEquals("S�zary disease", unit.row[5]);
+        System.setProperty("csv.file.encoding", CsvReader.DEFAULT_FILE_ENCODING);
     }
 
     public void testTimestampRetrieval() throws FileNotFoundException {
