@@ -3,6 +3,8 @@ package edu.stanford.bmir.protege.icd.export.script;
  * @author Jack Elliott <jacke@stanford.edu>
  */
 
+import edu.stanford.bmir.protege.icd.export.ValidateFieldsAddedCorrectlyTest;
+import edu.stanford.bmir.protege.icd.export.excel.CsvReader;
 import edu.stanford.smi.protege.model.Project;
 
 import java.io.File;
@@ -16,7 +18,7 @@ public class ExportScriptWrapperTest extends ValidateFieldsAddedCorrectlyTest {
         while (reader.getCurrentRow() < rowNumber - 1) {
             reader.nextRow();
         }
-        return reader.row[fieldPosition];
+        return reader.getEntry(fieldPosition);
     }
 
     @Override
@@ -87,23 +89,12 @@ public class ExportScriptWrapperTest extends ValidateFieldsAddedCorrectlyTest {
         validateNeverPopulatedFields(4);
     }
 
-    public void testSubsequentRows() throws Exception {
-        String topNode1 = "http://who.int/icd#C81-C96";
-//        String topNode2 = "http://who.int/icd#D12";
-        initializeTest("output/duplicate-rows.csv", "output/icd-code.xsl", topNode1);
-//        assertEquals(topNode, getFieldContents(CLASS_NAME_POSITION, 3));
-//        assertEquals("K23.0", getFieldContents(ICDCODE_POSITION, 3));
-//        assertEquals("K23.0", getFieldContents(SORTINGLABEL_POSITION, 3));
-//        assertEquals("", getFieldContents(INCLUSION_LABEL_POSITION, 3));
-//        assertEquals(topNode, getFieldContents(CLASS_NAME_POSITION, 3));
-//        assertEquals("Tuberculosis of other specified organs || Infectious oesophagitis coded elsewhere", getFieldContents(ORIGINAL_PARENT_POSITION, 3));
-//        validateNeverPopulatedFields(3);
-//        assertEquals(topNode, getFieldContents(CLASS_NAME_POSITION, 4));
-//        assertEquals("K23.0", getFieldContents(ICDCODE_POSITION, 4));
-//        assertEquals("", getFieldContents(SORTINGLABEL_POSITION, 4));
-//        assertEquals("", getFieldContents(INCLUSION_LABEL_POSITION, 4));
-//        assertEquals("", getFieldContents(ORIGINAL_PARENT_POSITION, 4));
-//        assertEquals(topNode, getFieldContents(CLASS_NAME_POSITION, 4));
-//        validateNeverPopulatedFields(4);
+    public void testInfiniteDepthRecursionWillFail() throws Exception {
+        String topNode1 = "http://who.int/icd#660_0120d721_21a2_4c15_9bd8_f4e7b2fbba1e";
+        try {
+            initializeTest("output/duplicate-rows.csv", "output/icd-code.xsl", topNode1);
+        } catch (Exception e) {
+            assertEquals("AssertionError: Could not export 'http://who.int/icd#154_0120d721_21a2_4c15_9bd8_f4e7b2fbba1e' because the class depth is too great", e.getMessage());
+        }
     }
 }

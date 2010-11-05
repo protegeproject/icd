@@ -71,6 +71,7 @@ def exportICD(icdCls, subclassLevel, output):
          "\t","\t","\t","\t","\t","\t","\t","\t","\t","\t",
          "\t","\t","\t","\t","\t","\t","\t","\t","\t","\t",
          "\t", "\t", "\t"]
+    assert subclassLevel < 11, "Could not export %r because the class depth is too great" % icdCls.getName()
     row[subclassLevel]=makeEntry(filterLFTAB(getItemName(icdCls, titleProp, labelProp, 1)))
     row[icd10CodeIndex]=makeEntry(getItemName(icdCls, codeProp, 0, 0))
     row[classNameIndex]=icdCls.getName()+"\t"
