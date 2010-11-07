@@ -50,6 +50,7 @@ titleProp=kb.getRDFProperty("http://who.int/icd#icdTitle")
 codeProp=kb.getRDFProperty("http://who.int/icd#icdCode")
 labelProp=kb.getRDFProperty("http://who.int/icd#label")
 definitionProp=kb.getRDFProperty("http://who.int/icd#definition")
+longDefinitionProp=kb.getRDFProperty("http://who.int/icd#longDefinition")
 linViewProp=kb.getRDFProperty("http://who.int/icd#linearizationView")
 parentsProp=kb.getRDFProperty("http://who.int/icd#linearizationParent")
 linProp =kb.getRDFProperty("http://who.int/icd#linearization")
@@ -78,12 +79,8 @@ def exportICD(icdCls, subclassLevel, output):
     if icdCls.getName() not in seenClsSet:
         row[sortLabelIndex]=makeEntry(getItemName(icdCls, sortLabelProp, 0, 0))
         row[typeIndex] = makeEntry(getItemName(icdCls, typeProp, labelProp, 0))
-        definition =makeEntry(filterLFTAB(getItemName(icdCls, definitionProp, labelProp, 1)))
-        words = string.split(definition)
-        if len(words) > 100:
-            row[detailedDefinitionIndex] = definition
-        else:
-            row[definitionIndex] = definition
+        row[definitionIndex]=makeEntry(filterLFTAB(getItemName(icdCls, definitionProp, labelProp, 1)))
+        row[detailedDefinitionIndex]=makeEntry(filterLFTAB(getItemName(icdCls, longDefinitionProp, labelProp, 1)))
         row[synonymIndex] = makeEntry(getMultipleItemNames(icdCls, synonymProp, labelProp, 1))
         row[bodySystemIndex] = makeEntry(getMultipleItemNames(icdCls, bodySystemProp, labelProp, 1))
         row[bodyPartIndex] = makeEntry(getMultipleItemNames(icdCls, bodyPartProp, labelProp, 0))
@@ -198,9 +195,10 @@ def startICDExport(clsNameList, fileName):
         seenClsSet.clear()
 
 
+#TT: We should filter out all ASCII < 32 
 def checkLFTAB(c):
-    #Filter LF and TAB
-    if ((c != chr(10)) and (c != chr(9))):
+    #Filter LF and TAB and carriage return
+    if ((c != chr(10)) and (c != chr(9)) and (c != chr(13)):
         return c
 
 def filterLFTAB(str):
