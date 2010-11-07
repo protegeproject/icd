@@ -586,7 +586,6 @@ public class ICDContentModel {
      * <li>Add the correct metaclasses (if regular disease, use metaclasses of ICDCategory; if subclass of External causes, use metaclasses of
      * External Causes</li>
      * <li>Create the linearization values: morbidity - is included, and mortality - is not included</li>
-     * <li>If the category has only one parent, it sets the linearization parent to that parent</li>
      * <li>Set the biologicalSex to NA </li>
      * </ul>
      * @param name - name of the new category
@@ -636,9 +635,7 @@ public class ICDContentModel {
         for (RDFResource linView : getLinearizationValueSet()) {
             RDFResource linSpec = getLinearizationSpecificationClass().createInstance(IDGenerator.getNextUniqueId());
             linSpec.setPropertyValue(getLinearizationViewProperty(), linView);
-            if (singleParent != null) {
-                linSpec.setPropertyValue(getLinearizationParentProperty(), singleParent);
-            }
+
             cls.addPropertyValue(getLinearizationProperty(), linSpec);
             //default for new properties: morbidity: included; mortality: not included
             if (linView.getName().equals(ICDContentModelConstants.LINEARIZATION_VIEW_MORBIDITY)) {
