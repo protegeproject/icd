@@ -27,6 +27,7 @@ public class UpdateLuceneIndexProjectPlugin extends ProjectPluginAdapter {
 
     private RDFProperty icdTitleProp;
     private RDFProperty sortingLabelProp;
+    private RDFProperty labelProp;
 
     @SuppressWarnings("deprecation")
     @Override
@@ -41,13 +42,15 @@ public class UpdateLuceneIndexProjectPlugin extends ProjectPluginAdapter {
         OWLModel owlModel = (OWLModel) kb;
 
         if (owlModel.getRDFProperty(ICDContentModelConstants.ICD_TITLE_PROP) == null ||
-                owlModel.getRDFProperty(ICDContentModelConstants.SORTING_LABEL_PROP) == null) {
+                owlModel.getRDFProperty(ICDContentModelConstants.SORTING_LABEL_PROP) == null ||
+                owlModel.getRDFProperty(ICDContentModelConstants.LABEL_PROP) == null) {
             return; //most likely not a ICD project
         }
 
         cm = new ICDContentModel(owlModel);
         icdTitleProp = cm.getIcdTitleProperty();
         sortingLabelProp = cm.getSortingLabelProperty();
+        labelProp = cm.getLabelProperty();
 
         kbListener = getKbListener(owlModel);
         owlModel.addFrameListener(kbListener);
@@ -63,7 +66,7 @@ public class UpdateLuceneIndexProjectPlugin extends ProjectPluginAdapter {
                         Slot slot = event.getSlot();
                         if (slot.equals(sortingLabelProp) || slot.equals(icdTitleProp)) {
                             BrowserTextChanged.browserTextChanged(changedFrame = event.getFrame());
-                        } else if (slot.equals(cm.getLabelProperty() )) {
+                        } else if (slot.equals(labelProp)) {
                             Collection<Reference> refs = event.getFrame().getReferences(1);
                             for (Reference ref : refs) {
                                 if (ref.getSlot().equals(icdTitleProp)) {
