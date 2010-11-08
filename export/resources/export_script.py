@@ -198,7 +198,7 @@ def startICDExport(clsNameList, fileName):
 #TT: We should filter out all ASCII < 32 
 def checkLFTAB(c):
     #Filter LF and TAB and carriage return
-    if ((c != chr(10)) and (c != chr(9)) and (c != chr(13)):
+    if ((c != chr(10)) and (c != chr(9)) and (c != chr(13))):
         return c
 
 def filterLFTAB(str):
