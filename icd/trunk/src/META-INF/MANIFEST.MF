@@ -9,8 +9,7 @@ Tab-Widget: True
 Name: edu.stanford.bmir.icd.claml.ClamlCreateProjectPlugin.class
 Create-Project-Plugin: True
 
-Name: edu.stanford.bmir.protegex.icd.lucene.UpdateLuceneIndexProjectPlugin.class
-Project-Plugin: True
+
 
 
 
