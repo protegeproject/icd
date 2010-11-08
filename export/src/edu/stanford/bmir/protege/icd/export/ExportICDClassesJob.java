@@ -75,6 +75,7 @@ public class ExportICDClassesJob extends ProtegeJob {
             }
             System.setProperty(PropertyConstants.PYTHON_HOME_PROPERTY, file.getPath());
         }
+        setSystemPropertyIfUnset(PropertyConstants.PYTHON_INTERNAL_TABLES_OPTION_PROPERTY, PropertyConstants.PYTHON_INTERNAL_TABLES_OPTION_DEFAULT);
     }
 
     private String getCsvLocation(String outputFileLocation) {
