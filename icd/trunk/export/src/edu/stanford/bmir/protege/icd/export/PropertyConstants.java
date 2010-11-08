@@ -17,4 +17,7 @@ public class PropertyConstants {
 
     public static final String CSV_FILE_ENCODING_PROPERTY = "csv.file.encoding";
     public static final String CSV_FILE_ENCODING_PROPERTY_DEFAULT = "ISO-8859-1";
+
+    public static final String PYTHON_INTERNAL_TABLES_OPTION_PROPERTY = "python.options.internalTablesImpl";
+    public static final String PYTHON_INTERNAL_TABLES_OPTION_DEFAULT = "weak";
 }
