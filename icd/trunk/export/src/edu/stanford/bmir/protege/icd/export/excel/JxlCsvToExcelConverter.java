@@ -13,6 +13,7 @@ import jxl.write.WritableSheet;
 import jxl.write.WritableWorkbook;
 import jxl.write.WriteException;
 
+import java.io.Closeable;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
@@ -97,16 +98,10 @@ public class JxlCsvToExcelConverter implements CsvToExcelConverter {
                 throw new ProtegeException("Could not write out output workbook at " + outputWorkbookLocation, e);
             }
         } finally {
-            inputWorkbook.close();
-            try {
-                is.close();
-                outputWorkbook.close();
-                reader.close();
-            } catch (IOException e) {
-                logger.log(Level.SEVERE, "Error closing input stream", e);
-            } catch (WriteException e) {
-                logger.log(Level.SEVERE, "Error closing input stream", e);
-            }
+            close(inputWorkbook);
+            close(is);
+            close(outputWorkbook);
+            close(reader);
             duplicates.clear();
         }
     }
@@ -136,7 +131,7 @@ public class JxlCsvToExcelConverter implements CsvToExcelConverter {
             if (duplicates.contains(className)) {
                 WritableCellFormat cellFormat = new WritableCellFormat(label.getCellFormat());
                 if (!fieldsNotToColor.contains(columnNumber)) {
-                    // WTH - If I attempt to hold this value as a constant or class member variable, then JExcel will fail when writing out the workbook.
+                    // If I attempt to hold this value as a constant or class member variable, then JExcel will fail when writing out the workbook.
                     cellFormat.setBackground(Colour.CORAL);
                 }
                 label.setCellFormat(cellFormat);
@@ -147,6 +142,34 @@ public class JxlCsvToExcelConverter implements CsvToExcelConverter {
             }
         } catch (WriteException e) {
             throw new ProtegeException("Could not write to cell rowNumber=" + rowNumber + ", columnNumber=" + columnNumber + ", sheet=" + sheet + " nextValue=" + nextValue + " className=" + className, e);
+        }
+    }
+
+
+    private void close(Closeable closeable) {
+        try {
+            if (closeable != null)
+                closeable.close();
+        } catch (Exception e) {
+            logger.log(Level.SEVERE, "Error closing input stream", e);
+        }
+    }
+
+    private void close(WritableWorkbook writableWorkbook) {
+        try {
+            if (writableWorkbook != null)
+                writableWorkbook.close();
+        } catch (Exception e) {
+            logger.log(Level.SEVERE, "Error closing input stream", e);
+        }
+    }
+
+    private void close(Workbook workbook) {
+        try {
+            if (workbook != null)
+                workbook.close();
+        } catch (Exception e) {
+            logger.log(Level.SEVERE, "Error closing input stream", e);
         }
     }
 

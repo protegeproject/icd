@@ -4,6 +4,7 @@ import edu.stanford.bmir.protege.icd.export.PropertyConstants;
 import edu.stanford.smi.protege.util.ApplicationProperties;
 
 import java.io.BufferedReader;
+import java.io.Closeable;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -12,7 +13,7 @@ import java.io.InputStreamReader;
 /**
  * @author Jack Elliott <jacke@stanford.edu>
  */
-public class CsvReader {
+public class CsvReader implements Closeable {
     private BufferedReader bufferedReader;
     public String[] row;
     String[] titles;
