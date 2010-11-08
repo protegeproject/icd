@@ -3,6 +3,7 @@ import java.util.Collection;
 import java.util.logging.Level;
 
 import edu.stanford.bmir.icd.claml.ICDContentModel;
+import edu.stanford.bmir.icd.claml.ICDContentModelConstants;
 import edu.stanford.smi.protege.event.FrameAdapter;
 import edu.stanford.smi.protege.event.FrameEvent;
 import edu.stanford.smi.protege.event.FrameListener;
@@ -24,6 +25,9 @@ public class UpdateLuceneIndexProjectPlugin extends ProjectPluginAdapter {
     private FrameListener kbListener;
     private ICDContentModel cm;
 
+    private RDFProperty icdTitleProp;
+    private RDFProperty sortingLabelProp;
+
     @SuppressWarnings("deprecation")
     @Override
     public void afterLoad(Project p) {
@@ -35,10 +39,15 @@ public class UpdateLuceneIndexProjectPlugin extends ProjectPluginAdapter {
             return;
         }
         OWLModel owlModel = (OWLModel) kb;
-        cm = new ICDContentModel(owlModel);
-        if (cm.getIcdTitleProperty() == null) { //most likely not a ICD project
-            return;
+
+        if (owlModel.getRDFProperty(ICDContentModelConstants.ICD_TITLE_PROP) == null ||
+                owlModel.getRDFProperty(ICDContentModelConstants.SORTING_LABEL_PROP) == null) {
+            return; //most likely not a ICD project
         }
+
+        cm = new ICDContentModel(owlModel);
+        icdTitleProp = cm.getIcdTitleProperty();
+        sortingLabelProp = cm.getSortingLabelProperty();
 
         kbListener = getKbListener(owlModel);
         owlModel.addFrameListener(kbListener);
@@ -52,13 +61,12 @@ public class UpdateLuceneIndexProjectPlugin extends ProjectPluginAdapter {
                     Frame changedFrame = null;
                     try {
                         Slot slot = event.getSlot();
-                        RDFProperty icdTitleProperty = cm.getIcdTitleProperty();
-                        if (slot.equals(cm.getSortingLabelProperty()) || slot.equals(icdTitleProperty)) {
+                        if (slot.equals(sortingLabelProp) || slot.equals(icdTitleProp)) {
                             BrowserTextChanged.browserTextChanged(changedFrame = event.getFrame());
                         } else if (slot.equals(cm.getLabelProperty() )) {
                             Collection<Reference> refs = event.getFrame().getReferences(1);
                             for (Reference ref : refs) {
-                                if (ref.getSlot().equals(icdTitleProperty)) {
+                                if (ref.getSlot().equals(icdTitleProp)) {
                                     changedFrame = ref.getFrame();
                                     if (((Instance)changedFrame).hasDirectType(cm.getDefinitionMetaClass())) {
                                         BrowserTextChanged.browserTextChanged(changedFrame);
