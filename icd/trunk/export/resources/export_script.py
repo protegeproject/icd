@@ -14,6 +14,9 @@ Required declarations:
 """
 from time import *
 import string
+import codecs
+from edu.stanford.smi.protege.util import ApplicationProperties
+from edu.stanford.bmir.protege.icd.export import PropertyConstants
 from sets import Set
 
 seenClsSet = Set()
@@ -181,7 +184,8 @@ def getAllParents(icdCls):
 
 def startICDExport(clsNameList, fileName):
     seenClsSet.clear()
-    output = open(fileName, 'w')
+    fileEncoding = ApplicationProperties.getApplicationOrSystemProperty(PropertyConstants.CSV_FILE_ENCODING_PROPERTY, PropertyConstants.CSV_FILE_ENCODING_PROPERTY_DEFAULT)
+    output = codecs.open(fileName, 'w', encoding=fileEncoding)
     output.write("Export timestamp:\t"+strftime("%a, %d %b %Y %H:%M:%S +0000", gmtime())+"\n")
     filter(lambda x: output.write(x), idRow)
     output.write("\n")
