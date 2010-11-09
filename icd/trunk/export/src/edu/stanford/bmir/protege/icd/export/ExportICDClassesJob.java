@@ -40,6 +40,8 @@ public class ExportICDClassesJob extends ProtegeJob {
         }
         performValidation();
 
+        initializePython();
+
         final String csvLocation = getCsvLocation(outputFileLocation);
 
         generateCsvFile(csvLocation);
@@ -54,7 +56,6 @@ public class ExportICDClassesJob extends ProtegeJob {
 
     private void performValidation() {
         try {
-            initializePython();
             if (outputFileLocation == null || !outputFileLocation.endsWith(EXCEL_FILE_EXTENSION)) {
                 throw new IllegalArgumentException("The output file location must be set to a non-null value and must have a " + EXCEL_FILE_EXTENSION + " extension.");
             }
