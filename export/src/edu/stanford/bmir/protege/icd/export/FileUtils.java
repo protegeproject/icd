@@ -1,5 +1,8 @@
 package edu.stanford.bmir.protege.icd.export;
 
+import edu.stanford.bmir.protege.icd.export.ui.ICDExporterPlugin;
+import edu.stanford.smi.protege.plugin.PluginUtilities;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -9,12 +12,14 @@ import java.io.InputStream;
  * @author Jack Elliott <jacke@stanford.edu>
  */
 public class FileUtils {
-    public static InputStream getInputStream(String inputWorkbookLocation) throws FileNotFoundException {
-        final File file = new File(inputWorkbookLocation);
+    public static InputStream getInputStream(String location) throws FileNotFoundException {
+        File file = new File(location);
         if (!file.exists()) {
-            return FileUtils.class.getClassLoader().getResourceAsStream(inputWorkbookLocation);
-        } else {
-            return new FileInputStream(file);
+            file = new File(PluginUtilities.getInstallationDirectory(ICDExporterPlugin.class.getName()).getPath() + "/" + location);
+            if (!file.exists()) {
+                throw new IllegalArgumentException("Could not find file " + file.getAbsolutePath() + " on path.");
+            }
         }
+        return new FileInputStream(file);
     }
 }
