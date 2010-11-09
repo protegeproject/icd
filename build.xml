@@ -5,10 +5,12 @@
    <property file="local.properties"/>
 
    <property name = "src"             location = "./src"/>  
+   <property name = "export.src"      location = "./export/src"/>
    <property name = "build"           location = "./build"/>
    <property name = "classes"         location = "${build}/classes"/>
    <property name = "plugins"         location = "${build}/plugins"/>
    <property name = "lib"             location = "./lib"/>
+   <property name = "export.lib"      location = "./export/lib"/>
 
    <property name = "plugin_dist"     value = "edu.stanford.bmir.icd.misc"/>
    <property name = "pluginName"      value = "icd"/>
@@ -37,6 +39,7 @@
         <pathelement location = "${protege.owl.lib}"/>
       	<pathelement location = "${lucene.lib}"/>
         <fileset dir="${lib}"/>
+        <fileset dir="${export.lib}"/>
       </path>
 
     </target>
@@ -74,6 +77,12 @@
             includeAntRuntime="false">
        <classpath refid = "project.classpath"/>  
      </javac>
+     <javac srcdir = "${export.src}"
+            destdir = "${classes}"
+            debug="on"
+            includeAntRuntime="false">
+       <classpath refid = "project.classpath"/>
+     </javac>
      <copy todir="${classes}">
        <fileset dir="${src}">
          <include name="**/*"/>
@@ -87,6 +96,12 @@
    <target name = "jar" depends = "compile">
      <copy tofile="${build}/manifest.mf" 
            file="src/META-INF/MANIFEST.MF" overwrite="true"/>
+     <copy todir="${classes}"
+              file="export/resources/export_script.py"
+              overwrite="true"/>
+     <copy todir="${classes}"
+              file="export/excel/template.xls"
+              overwrite="true"/>
      <manifest file="${build}/manifest.mf" 
                mode = "update">
         <attribute name="Built-By" value = "${user.name}"/>
@@ -97,6 +112,7 @@
           manifest = "${build}/manifest.mf"/>
      <copy todir="${plugins}/${plugin_dist}">
        <fileset dir="${lib}" excludes="junit*.jar"/>
+       <fileset dir="${export.lib}" excludes="junit*.jar"/>
      </copy>
      <copy  todir="${plugins}/${plugin_dist}" file="plugin.properties"/>
    </target>
