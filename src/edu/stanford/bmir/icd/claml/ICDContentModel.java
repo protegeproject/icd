@@ -1,13 +1,5 @@
 package edu.stanford.bmir.icd.claml;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.LinkedHashSet;
-import java.util.Set;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 import edu.stanford.smi.protege.model.Instance;
 import edu.stanford.smi.protege.util.CollectionUtilities;
 import edu.stanford.smi.protege.util.IDGenerator;
@@ -16,6 +8,14 @@ import edu.stanford.smi.protegex.owl.model.OWLModel;
 import edu.stanford.smi.protegex.owl.model.RDFProperty;
 import edu.stanford.smi.protegex.owl.model.RDFResource;
 import edu.stanford.smi.protegex.owl.model.RDFSNamedClass;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.LinkedHashSet;
+import java.util.Set;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class ICDContentModel {
 
@@ -129,7 +129,7 @@ public class ICDContentModel {
     public RDFSNamedClass getClinicalDescriptionMetaClass() {
         if (clincalDescriptionMetaClass == null) {
             clincalDescriptionMetaClass = owlModel
-            .getRDFSNamedClass(ICDContentModelConstants.ICD_CLINICAL_DESC_METACLASS);
+                    .getRDFSNamedClass(ICDContentModelConstants.ICD_CLINICAL_DESC_METACLASS);
         }
         return clincalDescriptionMetaClass;
     }
@@ -144,7 +144,7 @@ public class ICDContentModel {
     public RDFSNamedClass getFunctionalImpactMetaClass() {
         if (functionalImpactMetaClass == null) {
             functionalImpactMetaClass = owlModel
-            .getRDFSNamedClass(ICDContentModelConstants.ICD_FUNCTIONAL_IMPACT_METACLASS);
+                    .getRDFSNamedClass(ICDContentModelConstants.ICD_FUNCTIONAL_IMPACT_METACLASS);
         }
         return functionalImpactMetaClass;
     }
@@ -180,7 +180,7 @@ public class ICDContentModel {
     public RDFSNamedClass getDiagnosticCriteriaMetaClass() {
         if (diagnosticCriteriaMetaClass == null) {
             diagnosticCriteriaMetaClass = owlModel
-            .getRDFSNamedClass(ICDContentModelConstants.ICD_DIAGNOSTIC_CRITERIA_METACLASS);
+                    .getRDFSNamedClass(ICDContentModelConstants.ICD_DIAGNOSTIC_CRITERIA_METACLASS);
         }
         return diagnosticCriteriaMetaClass;
     }
@@ -199,7 +199,7 @@ public class ICDContentModel {
         return externalCauseMetaClass;
     }
 
-    @SuppressWarnings({ "deprecation", "unchecked" })
+    @SuppressWarnings({"deprecation", "unchecked"})
     public Collection<RDFSNamedClass> getRegularDiseaseMetaclasses() {
         if (diseaseMetaclasses == null) {
             diseaseMetaclasses = new ArrayList<RDFSNamedClass>(getICDCategoryClass().getDirectTypes());
@@ -207,7 +207,7 @@ public class ICDContentModel {
         return diseaseMetaclasses;
     }
 
-    @SuppressWarnings({ "deprecation", "unchecked" })
+    @SuppressWarnings({"deprecation", "unchecked"})
     public Collection<RDFSNamedClass> getExternalCauseMetaclasses() {
         if (externalCausesMetaclasses == null) {
             externalCausesMetaclasses = new ArrayList<RDFSNamedClass>(getExternalCausesTopClass().getDirectTypes());
@@ -325,10 +325,9 @@ public class ICDContentModel {
     }
 
 
-
     /*
-     * Getters for properties
-     */
+    * Getters for properties
+    */
 
     public RDFProperty getIcdTitleProperty() {
         if (icdTitleProperty == null) {
@@ -573,11 +572,11 @@ public class ICDContentModel {
      */
 
     public RDFSNamedClass createICDCategory(String name, String superclsName) {
-        return createICDCategory(superclsName, CollectionUtilities.createCollection(superclsName), true); //method is used by the CLAML parser
+        return createICDCategory(superclsName, CollectionUtilities.createCollection(superclsName), true, true); //method is used by the CLAML parser
     }
 
     public RDFSNamedClass createICDCategory(String name, Collection<String> superclsesName) {
-        return createICDCategory(name, superclsesName, false);
+        return createICDCategory(name, superclsesName, false, true);
     }
 
     /**
@@ -588,13 +587,15 @@ public class ICDContentModel {
      * <li>Create the linearization values: morbidity - is included, and mortality - is not included</li>
      * <li>Set the biologicalSex to NA </li>
      * </ul>
-     * @param name - name of the new category
-     * @param superclsesName - names of the parents
-     * @param createSuperclasses - true to create parents, if they don't already exist (only the CLAML parser needs to set this to true, all the rest, should use false)
+     *
+     * @param name                      - name of the new category
+     * @param superclsesName            - names of the parents
+     * @param createSuperclasses        - true to create parents, if they don't already exist (only the CLAML parser needs to set this to true, all the rest, should use false)
+     * @param createICDSpecificEntities
      * @return
      */
     @SuppressWarnings("deprecation")
-    public RDFSNamedClass createICDCategory(String name, Collection<String> superclsesName, boolean createSuperclasses) {
+    public RDFSNamedClass createICDCategory(String name, Collection<String> superclsesName, boolean createSuperclasses, boolean createICDSpecificEntities) {
         if (name == null) {
             name = IDGenerator.getNextUniqueId();
         }
@@ -603,13 +604,12 @@ public class ICDContentModel {
         Collection<RDFSNamedClass> superclses = new ArrayList<RDFSNamedClass>();
 
         //we could treat also the case when a class has an external cause and another normal disease as parents..
-        boolean isExternalCause = false;
 
         if (superclsesName == null || superclsesName.size() == 0) {
             superclses.add(getICDCategoryClass());
         } else {
             for (String superclsName : superclsesName) {
-                RDFSNamedClass supercls = getICDSuperclass(superclsName, createSuperclasses);
+                RDFSNamedClass supercls = getICDClass(superclsName, createSuperclasses);
                 if (supercls != null) {
                     superclses.add(supercls);
                     //add superclasses
@@ -618,53 +618,40 @@ public class ICDContentModel {
                         if (cls.hasDirectSuperclass(owlModel.getOWLThingClass())) {
                             cls.removeSuperclass(owlModel.getOWLThingClass());
                         }
-                    }
-                    if (supercls.equals(getExternalCausesTopClass()) || supercls.hasSuperclass(getExternalCausesTopClass())) {
-                        isExternalCause = true;
+                        cls.setDirectTypes(supercls.getProtegeTypes());
                     }
                 }
             }
         }
 
-        //set metaclasses
-        cls.setDirectTypes(isExternalCause ? getExternalCauseMetaclasses() : getRegularDiseaseMetaclasses());
+        if (createICDSpecificEntities) {
 
-        RDFSNamedClass singleParent = superclses.size() > 1 ? null : CollectionUtilities.getFirstItem(superclses);
+            //add linearization instances
+            for (RDFResource linView : getLinearizationValueSet()) {
+                RDFResource linSpec = getLinearizationSpecificationClass().createInstance(IDGenerator.getNextUniqueId());
+                linSpec.setPropertyValue(getLinearizationViewProperty(), linView);
 
-        //add linearization instances
-        for (RDFResource linView : getLinearizationValueSet()) {
-            RDFResource linSpec = getLinearizationSpecificationClass().createInstance(IDGenerator.getNextUniqueId());
-            linSpec.setPropertyValue(getLinearizationViewProperty(), linView);
-
-            cls.addPropertyValue(getLinearizationProperty(), linSpec);
-            //default for new properties: morbidity: included; mortality: not included
-            if (linView.getName().equals(ICDContentModelConstants.LINEARIZATION_VIEW_MORBIDITY)) {
-                linSpec.setPropertyValue(getIsIncludedInLinearizationProperty(), Boolean.TRUE);
-            } else if (linView.getName().equals(ICDContentModelConstants.LINEARIZATION_VIEW_MORTALITY)) {
-                linSpec.setPropertyValue(getIsIncludedInLinearizationProperty(), Boolean.FALSE);
+                cls.addPropertyValue(getLinearizationProperty(), linSpec);
+                //default for new properties: morbidity: included; mortality: not included
+                if (linView.getName().equals(ICDContentModelConstants.LINEARIZATION_VIEW_MORBIDITY)) {
+                    linSpec.setPropertyValue(getIsIncludedInLinearizationProperty(), Boolean.TRUE);
+                } else if (linView.getName().equals(ICDContentModelConstants.LINEARIZATION_VIEW_MORTALITY)) {
+                    linSpec.setPropertyValue(getIsIncludedInLinearizationProperty(), Boolean.FALSE);
+                }
             }
+
+            //set biologicalSex not applicable
+            cls.addPropertyValue(getBiologicalSexProperty(), owlModel.getRDFResource(ICDContentModelConstants.BIOLOGICAL_SEX_NA));
         }
 
-        //set biologicalSex not applicable
-        cls.addPropertyValue(getBiologicalSexProperty(), owlModel.getRDFResource(ICDContentModelConstants.BIOLOGICAL_SEX_NA));
-
-        return cls;
-    }
-
-
-    @SuppressWarnings("deprecation")
-    private RDFSNamedClass getICDSuperclass(String name, boolean create) {
-        RDFSNamedClass cls = getICDClass(name, create);
-        if (cls != null && create) { //TODO: not ideal; check if this works with the CLAML parser
-            cls.setDirectTypes(getRegularDiseaseMetaclasses()); //TODO: how to handle External Causes superclasses?
-        }
         return cls;
     }
 
     /**
      * It gets or creates and ICDClass. If it creates, it will not add the metaclasses.
      * To create an ICDMetaclass, it is better to use {@link #createICDCategory(String, Collection)}
-     * @param name - name of the class to be retrieved or created
+     *
+     * @param name   - name of the class to be retrieved or created
      * @param create - true to create class if it doesn't exit
      * @return - the class
      */
@@ -849,7 +836,9 @@ public class ICDContentModel {
 
     @SuppressWarnings("unchecked")
     private Collection<RDFSNamedClass> getRDFSNamedClassCollection(Collection someColl) {
-        if (someColl == null) { return null; }
+        if (someColl == null) {
+            return null;
+        }
         Set<RDFSNamedClass> coll = new LinkedHashSet<RDFSNamedClass>();
         for (Iterator iterator = someColl.iterator(); iterator.hasNext();) {
             Object cls = iterator.next();
@@ -863,6 +852,7 @@ public class ICDContentModel {
     /**
      * Returns a set of all ICD Categories from the entire category tree.
      * This is a very expensive method and should only be used if necessary.
+     *
      * @return the closure of all ICD classes in the tree
      */
     public Collection<RDFSNamedClass> getICDCategories() {
@@ -872,6 +862,7 @@ public class ICDContentModel {
 
     /**
      * Returns the direct children of the ICD class given as argument.
+     *
      * @param icdClass
      * @return the childre of the class
      */
@@ -883,6 +874,7 @@ public class ICDContentModel {
      * Returns the ICD Category for the given id.
      * The id corresponds to the Protege class full name
      * (e.g., http://who.int/icd#L42.5)
+     *
      * @param id
      * @return
      */
