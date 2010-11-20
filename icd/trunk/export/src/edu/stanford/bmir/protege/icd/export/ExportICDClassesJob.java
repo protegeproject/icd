@@ -1,5 +1,10 @@
 package edu.stanford.bmir.protege.icd.export;
 
+import java.io.File;
+import java.util.Arrays;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 import edu.stanford.bmir.protege.icd.export.excel.ICDCsvToExcelConverter;
 import edu.stanford.bmir.protege.icd.export.script.ExportScriptWrapper;
 import edu.stanford.bmir.protege.icd.export.ui.ICDExporterPlugin;
@@ -9,11 +14,6 @@ import edu.stanford.smi.protege.plugin.PluginUtilities;
 import edu.stanford.smi.protege.util.ApplicationProperties;
 import edu.stanford.smi.protege.util.Log;
 import edu.stanford.smi.protege.util.ProtegeJob;
-
-import java.io.File;
-import java.util.Arrays;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * @author Jack Elliott <jacke@stanford.edu>
@@ -92,7 +92,8 @@ public class ExportICDClassesJob extends ProtegeJob {
                 wrapper.exportToFile(csvLocation, topNodes);
             }
         } catch (RuntimeException e) {
-            logger.log(Level.SEVERE, "Caught when trying to generate a csv file for " + Arrays.asList(topNodes) + " at " + csvLocation + " using script file " + scriptFileLocation);
+            logger.log(Level.SEVERE, "Caught when trying to generate a csv file for " + Arrays.asList(topNodes) + " at "
+                    + csvLocation + " using script file " + scriptFileLocation, e);
             throw e;
         }
     }
@@ -104,7 +105,7 @@ public class ExportICDClassesJob extends ProtegeJob {
             ICDCsvToExcelConverter csvToExcelConverter = new ICDCsvToExcelConverter();
             csvToExcelConverter.convertFile(csvLocation, inputWorkbookLocation, outputFileLocation, "Authoring template");
         } catch (RuntimeException e) {
-            logger.log(Level.SEVERE, "Caught when trying to generate an excel file for " + Arrays.asList(topNodes) + " at " + outputFileLocation);
+            logger.log(Level.SEVERE, "Caught when trying to generate an excel file for " + Arrays.asList(topNodes) + " at " + outputFileLocation, e);
             throw e;
         }
     }
