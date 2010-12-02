@@ -33,6 +33,7 @@ public class ICDContentModelConstants {
     public final static String TERM_EXCLUSION_CLASS = NS + "ExclusionTerm";
     public final static String TERM_ICD10_NOTES_CLASS = NS + "ICD10NotesTerm";
     public final static String TERM_DEFINITION_CLASS = NS + "DefinitionTerm";
+    public final static String TERM_REFERENCE_CLASS = NS + "ReferenceTerm";
     public final static String TERM_SYNONYM_CLASS = NS + "SynonymTerm";
     public final static String TERM_INDEX_CLASS = NS + "IndexTerm";
     public final static String INDEX_TERM_TYPE_CLASS = NS + "IndexTermType";
