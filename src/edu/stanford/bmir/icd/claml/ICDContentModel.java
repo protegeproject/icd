@@ -57,7 +57,7 @@ public class ICDContentModel {
     private RDFSNamedClass termExclusionClass;
     private RDFSNamedClass icd10NotesClass;
     private RDFSNamedClass termDefinitionClass;
-    private RDFSNamedClass termSynonymClass;
+    private RDFSNamedClass termReferenceClass;
     private RDFSNamedClass termIndexClass;
     private RDFSNamedClass indexTermTypeClass;
 
@@ -261,11 +261,18 @@ public class ICDContentModel {
         return termDefinitionClass;
     }
 
-    public RDFSNamedClass getTermSynonymClass() {
-        if (termSynonymClass == null) {
-            termSynonymClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.TERM_SYNONYM_CLASS);
+    public RDFSNamedClass getTermReferenceClass() {
+        if (termReferenceClass == null) {
+            termReferenceClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.TERM_REFERENCE_CLASS);
         }
-        return termSynonymClass;
+        return termReferenceClass;
+    }
+
+    public RDFSNamedClass getTermSynonymClass() {
+        if (termReferenceClass == null) {
+            termReferenceClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.TERM_SYNONYM_CLASS);
+        }
+        return termReferenceClass;
     }
 
     public RDFSNamedClass getTermIndexClass() {
@@ -572,7 +579,7 @@ public class ICDContentModel {
      */
 
     public RDFSNamedClass createICDCategory(String name, String superclsName) {
-        return createICDCategory(superclsName, CollectionUtilities.createCollection(superclsName), true, true); //method is used by the CLAML parser
+        return createICDCategory(name, CollectionUtilities.createCollection(superclsName), true, true); //method is used by the CLAML parser
     }
 
     public RDFSNamedClass createICDCategory(String name, Collection<String> superclsesName) {
@@ -725,6 +732,10 @@ public class ICDContentModel {
 
     public RDFResource createDefinitionTerm() {
         return createTerm(getTermDefinitionClass());
+    }
+
+    public RDFResource createReferenceTerm() {
+        return createTerm(getTermReferenceClass());
     }
 
     public RDFResource createSynonymTerm() {
