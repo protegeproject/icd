@@ -12,6 +12,10 @@ Create-Project-Plugin: True
 Name: edu.stanford.bmir.protege.icd.export.ui.ICDExporterPlugin.class
 Export-Plugin: True
 
+Name: edu.stanford.bmir.protegex.icd.lucene.UpdateLuceneIndexProjectPlugin.class
+Project-Plugin: True
+
+
 
 
 
