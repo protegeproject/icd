@@ -2,11 +2,11 @@ package edu.stanford.bmir.protegex.icd.lucene;
 import java.util.Collection;
 import java.util.logging.Level;
 
-import edu.stanford.bmir.icd.claml.ICDContentModel;
 import edu.stanford.bmir.icd.claml.ICDContentModelConstants;
 import edu.stanford.smi.protege.event.FrameAdapter;
 import edu.stanford.smi.protege.event.FrameEvent;
 import edu.stanford.smi.protege.event.FrameListener;
+import edu.stanford.smi.protege.model.Cls;
 import edu.stanford.smi.protege.model.Frame;
 import edu.stanford.smi.protege.model.Instance;
 import edu.stanford.smi.protege.model.KnowledgeBase;
@@ -14,20 +14,23 @@ import edu.stanford.smi.protege.model.Project;
 import edu.stanford.smi.protege.model.Reference;
 import edu.stanford.smi.protege.model.Slot;
 import edu.stanford.smi.protege.plugin.ProjectPluginAdapter;
+import edu.stanford.smi.protege.query.api.QueryApi;
+import edu.stanford.smi.protege.query.api.QueryConfiguration;
 import edu.stanford.smi.protege.query.indexer.BrowserTextChanged;
 import edu.stanford.smi.protege.util.Log;
 import edu.stanford.smi.protegex.owl.model.OWLModel;
 import edu.stanford.smi.protegex.owl.model.RDFProperty;
 
 
+/**
+ * Updates the Lucene index when a new ICD category is being created.
+ *
+ * @author ttania
+ *
+ */
 public class UpdateLuceneIndexProjectPlugin extends ProjectPluginAdapter {
 
     private FrameListener kbListener;
-    private ICDContentModel cm;
-
-    private RDFProperty icdTitleProp;
-    private RDFProperty sortingLabelProp;
-    private RDFProperty labelProp;
 
     @SuppressWarnings("deprecation")
     @Override
@@ -47,16 +50,23 @@ public class UpdateLuceneIndexProjectPlugin extends ProjectPluginAdapter {
             return; //most likely not a ICD project
         }
 
-        cm = new ICDContentModel(owlModel);
-        icdTitleProp = cm.getIcdTitleProperty();
-        sortingLabelProp = cm.getSortingLabelProperty();
-        labelProp = cm.getLabelProperty();
+        //check if Lucene is there for this project
+        //TODO: we need a nicer way of checking if lucene is there
+        QueryConfiguration qConf = new QueryApi(owlModel).install();
+        if (qConf == null) {
+            return;
+        }
 
         kbListener = getKbListener(owlModel);
         owlModel.addFrameListener(kbListener);
     }
 
     private FrameListener getKbListener(final OWLModel owlModel) {
+
+        final RDFProperty icdTitleProp = owlModel.getRDFProperty(ICDContentModelConstants.ICD_TITLE_PROP);
+        final RDFProperty sortingLabelProp = owlModel.getRDFProperty(ICDContentModelConstants.SORTING_LABEL_PROP);
+        final RDFProperty labelProp = owlModel.getRDFProperty(ICDContentModelConstants.LABEL_PROP);
+
         if (kbListener == null) {
             kbListener = new FrameAdapter() {
                 @Override
@@ -71,7 +81,8 @@ public class UpdateLuceneIndexProjectPlugin extends ProjectPluginAdapter {
                             for (Reference ref : refs) {
                                 if (ref.getSlot().equals(icdTitleProp)) {
                                     changedFrame = ref.getFrame();
-                                    if (((Instance)changedFrame).hasDirectType(cm.getDefinitionMetaClass())) {
+                                    Cls defMetaCls = owlModel.getCls(ICDContentModelConstants.ICD_DEFINITION_METACLASS);
+                                    if (((Instance)changedFrame).hasDirectType(defMetaCls)) {
                                         BrowserTextChanged.browserTextChanged(changedFrame);
                                     }
                                 }
