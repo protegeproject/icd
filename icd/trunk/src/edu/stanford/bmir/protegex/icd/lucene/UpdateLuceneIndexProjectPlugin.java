@@ -62,15 +62,15 @@ public class UpdateLuceneIndexProjectPlugin extends ProjectPluginAdapter {
     }
 
     private FrameListener getKbListener(final OWLModel owlModel) {
-
-        final RDFProperty icdTitleProp = owlModel.getRDFProperty(ICDContentModelConstants.ICD_TITLE_PROP);
-        final RDFProperty sortingLabelProp = owlModel.getRDFProperty(ICDContentModelConstants.SORTING_LABEL_PROP);
-        final RDFProperty labelProp = owlModel.getRDFProperty(ICDContentModelConstants.LABEL_PROP);
-
         if (kbListener == null) {
             kbListener = new FrameAdapter() {
                 @Override
                 public void ownSlotValueChanged(FrameEvent event) {
+
+                    final RDFProperty icdTitleProp = owlModel.getRDFProperty(ICDContentModelConstants.ICD_TITLE_PROP);
+                    final RDFProperty sortingLabelProp = owlModel.getRDFProperty(ICDContentModelConstants.SORTING_LABEL_PROP);
+                    final RDFProperty labelProp = owlModel.getRDFProperty(ICDContentModelConstants.LABEL_PROP);
+
                     Frame changedFrame = null;
                     try {
                         Slot slot = event.getSlot();
