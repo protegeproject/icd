@@ -35,11 +35,11 @@ public class RetireMuskuloSkeletal {
 
         //create retired cls
         OWLNamedClass retiredCls = owlModel.getOWLNamedClass("http://who.int/icd#Retired");
-        RDFSNamedClass MLocalRetiredCls = owlModel.getRDFSNamedClass("http://who.int/icd#297_6bc3f235_b24a_493e_a8a3_60cb9fb52dbd");
+        OWLNamedClass MLocalRetiredCls = owlModel.getOWLNamedClass("http://who.int/icd#297_6bc3f235_b24a_493e_a8a3_60cb9fb52dbd");
 
-        RDFSNamedClass mChapterRetired = owlModel.getRDFSNamedClass("http://who.int/icd#MChapterRetired");
+        RDFSNamedClass mChapterRetired = owlModel.getRDFSNamedClass("http://who.int/icd#BulkRetire_2011_01_26");
         if (mChapterRetired == null) {
-            mChapterRetired= owlModel.createOWLNamedSubclass("http://who.int/icd#MChapterRetired", retiredCls);
+            mChapterRetired= owlModel.createOWLNamedSubclass("http://who.int/icd#MChapterRetired", MLocalRetiredCls);
         }
 
         //TODO - cols should be split by "\t"
