@@ -39,7 +39,7 @@ public class RetireMuskuloSkeletal {
 
         RDFSNamedClass mChapterRetired = owlModel.getRDFSNamedClass("http://who.int/icd#BulkRetire_2011_01_26");
         if (mChapterRetired == null) {
-            mChapterRetired= owlModel.createOWLNamedSubclass("http://who.int/icd#MChapterRetired", MLocalRetiredCls);
+            mChapterRetired= owlModel.createOWLNamedSubclass("http://who.int/icd#BulkRetire_2011_01_26", MLocalRetiredCls);
         }
 
         //TODO - cols should be split by "\t"
