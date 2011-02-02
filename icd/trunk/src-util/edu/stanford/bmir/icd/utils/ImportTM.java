@@ -10,7 +10,6 @@ import edu.stanford.bmir.icd.claml.ICDContentModel;
 import edu.stanford.bmir.icd.claml.ICDContentModelConstants;
 import edu.stanford.smi.protege.model.Instance;
 import edu.stanford.smi.protege.model.Project;
-import edu.stanford.smi.protege.util.CollectionUtilities;
 import edu.stanford.smi.protege.util.Log;
 import edu.stanford.smi.protegex.owl.model.NamespaceUtil;
 import edu.stanford.smi.protegex.owl.model.OWLModel;
@@ -40,17 +39,18 @@ public class ImportTM {
     private static RDFSNamedClass orphanCls;
     private static RDFSNamedClass ictmCatCls;
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args)  {
         String prjPath = "/work/src/GWT/web-protege/war/projects/ictm/ictm_umbrella_db.pprj";
-        String csvPath = "/work/src/GWT/web-protege/war/projects/ictm/TM Import - Stanford Version.V5.cutforimport.csv";
+       //String prjPath = "/work/src/GWT/web-protege/war/projects/ictm/ictm_umbrella.pprj";
+        String csvPath = "/work/src/GWT/web-protege/war/projects/ictm/sources/TM Import - Stanford Version.V5.cutforimport.csv";
 
         Project prj = Project.loadProjectFromFile(prjPath, new ArrayList());
         owlModel = (OWLModel) prj.getKnowledgeBase();
 
         cm = new ICDContentModel(owlModel);
 
-        codesProp = owlModel.getRDFProperty("http://who.int/ictm#" + "codes");
-        typeProp = owlModel.getRDFProperty("http://who.int/icd#hasType");
+        codesProp = owlModel.getRDFProperty("http://who.int/ictm#codes");
+        typeProp = owlModel.getRDFProperty("http://who.int/ictm#hasType");
         sourceProp = owlModel.getRDFProperty(ICDContentModelConstants.NS + "source");
         termIdProp = owlModel.getRDFProperty(ICDContentModelConstants.TERM_ID_PROP);
         diseaseType = owlModel.getRDFResource("http://who.int/ictm#DiseaseTMType");
@@ -62,6 +62,7 @@ public class ImportTM {
             orphanCls = cm.createICDCategory(ORPHANS_CLASS, ICTM_CATEGORY);
         }
 
+        try {
         BufferedReader input = new BufferedReader(new FileReader(csvPath));
         input.readLine();
 
@@ -77,6 +78,9 @@ public class ImportTM {
                     Log.getLogger().log(Level.WARNING, " Could not read line: " + line, e);
                 }
             }
+        }
+        } catch (Exception e) {
+            Log.getLogger().log(Level.WARNING, "Error at parsing csv", e);
         }
 
         createHierarchy();
@@ -105,7 +109,7 @@ public class ImportTM {
             final String koreanDefinitionValue = getSafeValue(split, 12);
             final String type = getSafeValue(split, 13);
 
-            final RDFSNamedClass cls = cm.createICDCategory(name, CollectionUtilities.createCollection(ORPHANS_CLASS), false, false);
+            final RDFSNamedClass cls = cm.createICDCategory(name, ORPHANS_CLASS);
 
             cls.setPropertyValue(cm.getSortingLabelProperty(), sortingLabel);
             createTitleTerm(cm, cls, englishTitleValue, ENGLISH);
