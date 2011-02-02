@@ -23,9 +23,11 @@ public class ImportTmValueSets {
     //private static final String NS = "http://who.int/ictm/otherFactors#";
     //private static final String ONT_NAME = "http://who.int/ictm/otherFactors";
 
-    private static final String NS = "http://who.int/ictm/signsAndSymptoms#";
-    private static final String ONT_NAME = "http://who.int/ictm/signsAndSymptoms";
+    //private static final String NS = "http://who.int/ictm/signsAndSymptoms#";
+    //private static final String ONT_NAME = "http://who.int/ictm/signsAndSymptoms";
 
+    private static final String NS = "http://who.int/ictm/meridians#";
+    private static final String ONT_NAME = "http://who.int/ictm/meridians";
 
     private static final String ICTM_NS = "http://who.int/ictm#";
     private static final String SEP = " / ";
@@ -50,6 +52,8 @@ public class ImportTmValueSets {
     private static RDFProperty origSourceProp;
     private static RDFProperty origCodeProp;
 
+    private static RDFProperty synEnProp;
+
     private static int startId;
     private static int counter = 0;
 
@@ -60,8 +64,11 @@ public class ImportTmValueSets {
         //String csvPath = "/work/src/GWT/web-protege/war/projects/ictm/sources/TM_OtherFactors.csv";
         //String filePath = "/work/src/GWT/web-protege/war/projects/ictm/value_sets/TM_OtherFactors.owl";
 
-        String csvPath = "/work/src/GWT/web-protege/war/projects/ictm/sources/TM_SignsAndSymptoms.csv";
-        String filePath = "/work/src/GWT/web-protege/war/projects/ictm/value_sets/TM_SignsAndSymptoms.owl";
+        //String csvPath = "/work/src/GWT/web-protege/war/projects/ictm/sources/TM_SignsAndSymptoms.csv";
+        //String filePath = "/work/src/GWT/web-protege/war/projects/ictm/value_sets/TM_SignsAndSymptoms.owl";
+
+        String csvPath = "/work/src/GWT/web-protege/war/projects/ictm/sources/TM_Meridians.csv";
+        String filePath = "/work/src/GWT/web-protege/war/projects/ictm/value_sets/TM_Meridians.owl";
 
         startId = getRandomIdStart();
 
@@ -113,10 +120,14 @@ public class ImportTmValueSets {
         titleKrProp = owlModel.createAnnotationProperty(ICTM_NS + "titleKorean");
         titleKrProp.addLabel("Title Korean", null);
 
-        origSourceProp = owlModel.createAnnotationProperty(ICTM_NS + "originalProperty");
+        origSourceProp = owlModel.createAnnotationProperty(ICTM_NS + "originalSource");
         origSourceProp.addLabel("Original Source", null);
         origCodeProp = owlModel.createAnnotationProperty(ICTM_NS + "originalCode");
         origCodeProp.addLabel("Original Code", null);
+
+        synEnProp = owlModel.createAnnotationProperty(ICTM_NS + "synonymEnglish");
+        synEnProp.addLabel("Synonym English", null);
+
     }
 
     private static int getRandomIdStart() {
@@ -144,6 +155,8 @@ public class ImportTmValueSets {
             final String japaneseDefinitionValue = getSafeValue(split, 8);
             final String koreanDefinitionValue = getSafeValue(split, 9);
 
+            final String englishSynonymValue = getSafeValue(split, 10);
+
             final String name = getName();
 
             RDFSNamedClass cls = owlModel.createOWLNamedClass(name);
@@ -163,6 +176,8 @@ public class ImportTmValueSets {
 
             setValue(cls, origSourceProp, originalSource, null);
             setValue(cls, origCodeProp, originalCode, null);
+
+            setValue(cls, synEnProp, englishSynonymValue, ENGLISH);
 
         } catch (Exception e) {
             Log.getLogger().log(Level.WARNING, "Error at import", e);
