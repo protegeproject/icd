@@ -57,15 +57,22 @@ public class UpdateLuceneIndexProjectPlugin extends ProjectPluginAdapter {
             return;
         }
 
-        kbListener = getKbListener(owlModel);
+        kbListener = getKbListener();
         owlModel.addFrameListener(kbListener);
     }
 
-    private FrameListener getKbListener(final OWLModel owlModel) {
+    private FrameListener getKbListener() {
         if (kbListener == null) {
             kbListener = new FrameAdapter() {
                 @Override
                 public void ownSlotValueChanged(FrameEvent event) {
+
+                    Frame frame = event.getFrame();
+                    if (frame == null) {
+                        return;
+                    }
+
+                    OWLModel owlModel = (OWLModel) frame.getKnowledgeBase();
 
                     final RDFProperty icdTitleProp = owlModel.getRDFProperty(ICDContentModelConstants.ICD_TITLE_PROP);
                     final RDFProperty sortingLabelProp = owlModel.getRDFProperty(ICDContentModelConstants.SORTING_LABEL_PROP);
