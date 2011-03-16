@@ -98,7 +98,7 @@ def exportICD(icdCls, subclassLevel, output):
     output.write("\n")
     seenClsSet.add(icdCls.getName())
     subClasses=icdCls.getNamedSubclasses(0)
-    pairs = [(getItemName(x, sortLabelProp, 0, 0), x) for x in subClasses]
+    pairs = [(getItemName(x, 0, 0, 0), x) for x in subClasses]
     pairs.sort()
     sortedSubclasses = [x[1] for x in pairs] 
     for cls in sortedSubclasses:
@@ -114,6 +114,8 @@ def makeEntry(item):
     # if the alert parameter is not null. 
     #===========================================================================
 def getItemName(icdCls, itemProp, labelProp, alert):
+    if not itemProp:
+        return icdCls.getBrowserText()
     item=icdCls.getPropertyValue(itemProp)
     if item != None:
         # check to see if item is an instance
