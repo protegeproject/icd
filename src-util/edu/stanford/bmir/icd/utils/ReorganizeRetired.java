@@ -8,7 +8,6 @@ import java.util.Map;
 import edu.stanford.bmir.icd.claml.ICDContentModel;
 import edu.stanford.smi.protege.model.Project;
 import edu.stanford.smi.protegex.owl.model.OWLModel;
-import edu.stanford.smi.protegex.owl.model.RDFProperty;
 import edu.stanford.smi.protegex.owl.model.RDFResource;
 import edu.stanford.smi.protegex.owl.model.RDFSClass;
 import edu.stanford.smi.protegex.owl.model.RDFSNamedClass;
@@ -35,6 +34,10 @@ public class ReorganizeRetired {
 	}
 
 	public static void reorganizeBulkRetiredMuskuloSkeletal(OWLModel owlModel) {
+    	String prefixMatchString = "M\\d\\d\\.";
+        String newParentNamePrefix = "Retired ";
+		String newParentNameSuffix = "XX codes";
+    	
         ICDContentModel cm = new ICDContentModel(owlModel);
         RDFSNamedClass icdDefinitionSectionMetaclass = owlModel.getRDFSNamedClass("http://who.int/icd#DefinitionSection");
         RDFSNamedClass mChapterRetired = owlModel.getRDFSNamedClass("http://who.int/icd#BulkRetire_2011_01_26");
@@ -43,27 +46,46 @@ public class ReorganizeRetired {
         if (! metaclasses.contains(icdDefinitionSectionMetaclass)) {
         	mChapterRetired.addRDFType(icdDefinitionSectionMetaclass);
         	RDFResource titleTerm = cm.createTitleTerm();
-        	RDFProperty icdTitleProp = owlModel.getRDFProperty("http://who.int/icd#icdTitle");
-			titleTerm.addPropertyValue(icdTitleProp, "BulkRetire_2011-01-26");
+			titleTerm.addPropertyValue(cm.getLabelProperty(), "BulkRetire_2011-01-26");
+			titleTerm.addPropertyValue(cm.getLangProperty(), "en");
         	cm.addTitleTermToClass(mChapterRetired, titleTerm);
         }
         
         parentMap = new HashMap<String, RDFSClass>();
         
         Collection<RDFSClass> retiredMSClasses = mChapterRetired.getSubclasses(false);
+        //initialize parentMap
+		for (RDFSClass retiredClass : retiredMSClasses) {
+        	String className = retiredClass.getBrowserText();
+        	if (className.matches(newParentNamePrefix + prefixMatchString + newParentNameSuffix)) {
+        		String matchedPrefix = className.replaceFirst(newParentNamePrefix + "(" + prefixMatchString + ")" + newParentNameSuffix, "$1");
+        		parentMap.put(matchedPrefix, retiredClass);
+        	}
+        }
+        //reorganize subclasses
         for (RDFSClass retiredClass : retiredMSClasses) {
         	String className = retiredClass.getBrowserText();
+        	System.out.print(className);
         	//if the class' display name starts with Mxx. (where xx are two digits)
-        	if (className.matches("^M\\d\\d\\..*") && retiredClass.getSubclassCount() == 0) {
-        		String matchedPrefix = className.substring(0, "Mxx.".length());
+        	if (className.matches("^\\s*" + prefixMatchString + ".*") && retiredClass.getSubclassCount() == 0) {
+        		//String matchedPrefix = className.substring(0, "Mxx.".length());
+        		String matchedPrefix = className.replaceFirst("^\\s*(" + prefixMatchString + ").*", "$1");
+            	System.out.print("/matched: " + matchedPrefix);
         		RDFSClass newParent = parentMap.get(matchedPrefix);
         		if (newParent == null) {
-        			newParent = cm.createICDCategory("Retired " + matchedPrefix + "XX codes" , mChapterRetired.getName());
+        			newParent = cm.createICDCategory(null , mChapterRetired.getName());
+        			String newParentName = newParentNamePrefix + matchedPrefix + newParentNameSuffix;
+        			RDFResource titleTerm = cm.createTitleTerm();
+        			titleTerm.addPropertyValue(cm.getLabelProperty(), newParentName);
+        			titleTerm.addPropertyValue(cm.getLangProperty(), "en");
+					cm.addTitleTermToClass((RDFSNamedClass)newParent, titleTerm);
         			parentMap.put(matchedPrefix, newParent);
         		}
+            	System.out.print("/new parent: " + newParent.getBrowserText());
         		retiredClass.addSuperclass(newParent);
         		retiredClass.removeSuperclass(mChapterRetired);
         	}
+        	System.out.println();
         }
         
 	}
