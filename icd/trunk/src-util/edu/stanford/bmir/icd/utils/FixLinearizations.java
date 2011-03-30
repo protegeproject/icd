@@ -135,7 +135,7 @@ public class FixLinearizations {
             linSpec.setPropertyValue(linearizationViewProp, linViewInstance);
 
             c.addPropertyValue(linProp, linSpec);
-            Log.getLogger().info("Added " + linViewInstance.getBrowserText() + " to " + c.getBrowserText());
+            Log.getLogger().fine("Added " + linViewInstance.getBrowserText() + " to " + c.getBrowserText());
 		}
     }
 
