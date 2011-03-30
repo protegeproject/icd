@@ -22,8 +22,9 @@ public class FixLinearizations {
 	private static RDFSNamedClass linearizationMetaClass;
 
     private static OWLNamedClass linearizationSpecificationClass;
+    private static RDFProperty linearizationProp;
     private static RDFProperty linearizationViewProp;
-    private static RDFProperty linProp;
+    private static RDFProperty linearizationParentProp;
     
     public static void main(String[] args) {
         if (args.length != 1) {
@@ -48,8 +49,9 @@ public class FixLinearizations {
 
         linearizationMetaClass = icdContentModel.getLinearizationMetaClass();
         linearizationSpecificationClass = (OWLNamedClass) icdContentModel.getLinearizationSpecificationClass();
+        linearizationProp = icdContentModel.getLinearizationProperty();
         linearizationViewProp = icdContentModel.getLinearizationViewProperty();
-        linProp = icdContentModel.getLinearizationProperty();
+        linearizationParentProp = icdContentModel.getLinearizationParentProperty();
 
         fixLinearizations();
     }
@@ -61,15 +63,15 @@ public class FixLinearizations {
         RDFSNamedClass icdCatCls = icdContentModel.getICDCategoryClass();
 
         Collection<RDFResource> linearizationViewInstances = icdContentModel.getLinearizationValueSet();
-        Collection<RDFResource> missingIcdCategoryLinSpecs = getMissingLinearizations(icdCatCls, linearizationViewInstances);
+        Collection<RDFResource> missingIcdCategoryLinViews = removeLinearizationParentsAndGetMissingLinearizations(icdCatCls, linearizationViewInstances);
         
         //checking whether whether changes are necessary or not
         boolean proceed = true;
-        if (missingIcdCategoryLinSpecs.isEmpty()) {
+        if (missingIcdCategoryLinViews.isEmpty()) {
         	System.out.println("There is no linarization view missing from 'ICD Categories', " +
         			"which means that probably there is no point in running this time-consuming script!");
         	try {
-        		System.out.print("Do you wish to run the script on all the ICD categories, nevertheless? [Y/N] ");
+        		System.out.println("Do you wish to run the script on all the ICD categories, nevertheless? [Y/N] ");
 				int ch = System.in.read();
 				if (ch != 'Y' && ch != 'y') {
 					proceed = false;
@@ -80,11 +82,11 @@ public class FixLinearizations {
         }
         else {
         	System.out.println("Adding the following linearizations:");
-        	for (RDFResource linView : missingIcdCategoryLinSpecs) {
+        	for (RDFResource linView : missingIcdCategoryLinViews) {
 				System.out.println("    " + linView.getBrowserText());
 			}
         }
-
+        
         //applying the fix
         if (proceed) {
 	        fixLinearization(icdCatCls, linearizationViewInstances);
@@ -103,21 +105,57 @@ public class FixLinearizations {
         
         System.out.println("Time: " + (System.currentTimeMillis() - t0) /1000 + " sec");
     }
+    
+    
+    private static void fixLinearization(RDFSNamedClass c, Collection<RDFResource> linViewInstances) {
+        Collection<RDFResource> missingLinSpecs = removeLinearizationParentsAndGetMissingLinearizations(c, linViewInstances);
+
+    	for (RDFResource linViewInstance : missingLinSpecs) {
+            RDFResource linSpec = linearizationSpecificationClass.createInstance(IDGenerator.getNextUniqueId());
+            linSpec.setPropertyValue(linearizationViewProp, linViewInstance);
+
+            c.addPropertyValue(linearizationProp, linSpec);
+            Log.getLogger().fine("Added " + linViewInstance.getBrowserText() + " to " + c.getBrowserText());
+		}
+    }
 
     
-    private static Collection<RDFResource> getMissingLinearizations(RDFSNamedClass c, Collection<RDFResource> linViewInstances) {
+    private static Collection<RDFResource> removeLinearizationParentsAndGetMissingLinearizations(RDFSNamedClass c, Collection<RDFResource> linViewInstances) {
     	ArrayList<RDFResource> res = new ArrayList<RDFResource>();
     	
     	if ( c.getRDFTypes().contains(linearizationMetaClass) ) {
     		res.addAll(linViewInstances);
     		
             Collection<RDFResource> linearizationSpecs = icdContentModel.getLinearizationSpecifications(c);
+            
+            RDFSNamedClass singleParent = getSingleParent(c);
 
-            for (RDFResource icdCatLinSpec : linearizationSpecs) {
-            	Object linView = icdCatLinSpec.getPropertyValue(linearizationViewProp);
+            for (RDFResource linSpec : linearizationSpecs) {
+            	Object linView = linSpec.getPropertyValue(linearizationViewProp);
+            	//remove linearization parent if necessary
+            	if (singleParent != null) {
+            		Object linParent = linSpec.getPropertyValue(linearizationParentProp);
+            		if (singleParent.equals(linParent)) {
+            			linSpec.removePropertyValue(linearizationParentProp, linParent);
+            		}
+            		else {
+            			//if we have a linearization parent that is not a direct superclass
+            			if (linParent != null && !c.getSuperclasses(false).contains(linParent)) {
+            				if (c.getSuperclasses(true).contains(linParent)) {
+            					Log.getLogger().log(Level.INFO, "POSSIBLE ERROR IN THE MODEL: The linearization parent of " + c +
+            							" for linearization " + linView + " does not refer to a parent, but to a higher order ancestor: " + linParent);
+            				}
+            				else {
+            					Log.getLogger().log(Level.WARNING, "ERROR IN THE MODEL: The linearization parent of " + c +
+            							" for linearization " + linView + " does not refer to an ancestor (superclass), but to:" + linParent);
+            				}
+            			}
+            		}
+            	}
+            	//remove this linearization view from the result
     			boolean found = res.remove(linView);
     			if (!found) {
-    				Log.getLogger().log(Level.WARNING, "The linearization view referred by the linearization spec." + icdCatLinSpec + 
+    				Log.getLogger().log(Level.WARNING, "The linearization view " + linView + " referred by the linearization spec." + linSpec + 
     						" at class " + c + " could not be removed from the list of available LinearizationView instances");
     			}
     		}
@@ -125,19 +163,37 @@ public class FixLinearizations {
     	
         return res;
     }
-    
-    
-    private static void fixLinearization(RDFSNamedClass c, Collection<RDFResource> linViewInstances) {
-        Collection<RDFResource> missingLinSpecs = getMissingLinearizations(c, linViewInstances);
 
-    	for (RDFResource linViewInstance : missingLinSpecs) {
-            RDFResource linSpec = linearizationSpecificationClass.createInstance(IDGenerator.getNextUniqueId());
-            linSpec.setPropertyValue(linearizationViewProp, linViewInstance);
-
-            c.addPropertyValue(linProp, linSpec);
-            Log.getLogger().fine("Added " + linViewInstance.getBrowserText() + " to " + c.getBrowserText());
+    
+	/**
+	 * Checks whether the class <code>c</code> has exactly one superclass, and in case
+	 * it does it returns that superclass. If the class has more than one superclass
+	 * the method returns null.
+	 * 
+	 * @param c a class
+	 * @return
+	 */
+	private static RDFSNamedClass getSingleParent(RDFSNamedClass c) {
+		RDFSNamedClass singleParent = null;
+		Collection<?> superclasses = c.getSuperclasses(false);
+		if (superclasses != null && superclasses.size() > 0) {
+			boolean lookingForFirst = true;
+			for (Object superclass : superclasses) {
+				if (superclass instanceof RDFSNamedClass) {
+					if (lookingForFirst) {
+						//found the first valid parent
+						singleParent = (RDFSNamedClass) superclass;
+					}
+					else {
+						//this is one of the multiple parents: reset singleParent to null
+						singleParent = null;
+					}
+					lookingForFirst = false;
+				}
+			}
 		}
-    }
+		return singleParent;
+	}
 
 
 }
