@@ -26,6 +26,11 @@ public class FixLinearizations {
     private static RDFProperty linearizationViewProp;
     private static RDFProperty linearizationParentProp;
     
+    private static int cntWrongLinParentRetired = 0;
+    private static int cntPossiblyWrongLinParent = 0;
+    private static int cntWrongLinParent = 0;
+    private static int cntWrongLinParentMultiParent = 0;
+    
     public static void main(String[] args) {
         if (args.length != 1) {
             System.out.println("Argument missing: pprj file name");
@@ -96,6 +101,10 @@ public class FixLinearizations {
 	                fixLinearization(subcls, linearizationViewInstances);
 	            }
 	        }
+	        Log.getLogger().info("There were " + cntWrongLinParentRetired + " RETIRED classes with wrong linearization parents.");
+	        Log.getLogger().info("There were " + cntPossiblyWrongLinParent + " classes with POSSIBLY wrong linearization parents (i.e. indirect parent).");
+	        Log.getLogger().info("There were " + cntWrongLinParent + " SINGLE PARENT classes with wrong linearization parents.");
+	        Log.getLogger().info("There were " + cntWrongLinParentMultiParent + " MULTIPLE PARENT classes with wrong linearization parents.");
 	        Log.getLogger().info("Done");
         }
         else {
@@ -124,6 +133,11 @@ public class FixLinearizations {
     	ArrayList<RDFResource> res = new ArrayList<RDFResource>();
     	
     	if ( c.getRDFTypes().contains(linearizationMetaClass) ) {
+    	    int wrongLinParentRetired = 0;
+    	    int possiblyWrongLinParent = 0;
+    	    int wrongLinParent = 0;
+    	    int wrongLinParentMultiParent = 0;
+    	    
     		res.addAll(linViewInstances);
     		
             Collection<RDFResource> linearizationSpecs = icdContentModel.getLinearizationSpecifications(c);
@@ -143,15 +157,18 @@ public class FixLinearizations {
             			if (linParent != null && !c.getSuperclasses(false).contains(linParent)) {
             				Collection<RDFSNamedClass> allSuperclasses = c.getSuperclasses(true);
             				if (getBrowserTexts(allSuperclasses).toUpperCase().contains("RETIRED")) {
-            					Log.getLogger().log(Level.INFO, "POSSIBLE ERROR IN RETIRED CLASS: The retired class " + c.getBrowserText() +
+            					wrongLinParentRetired ++;
+            					Log.getLogger().log(Level.FINE, "POSSIBLE ERROR IN RETIRED CLASS: The retired class " + c.getBrowserText() +
             							" has a linearization parent set for linearization " + linView.getBrowserText() + ", other then its direct parent, namely: " + linParent.getBrowserText());
             				}
             				else {
 	            				if (allSuperclasses.contains(linParent)) {
+	            					possiblyWrongLinParent ++;
 	            					Log.getLogger().log(Level.INFO, "POSSIBLE ERROR IN THE MODEL: The linearization parent of " + c.getBrowserText() +
 	            							" for linearization " + linView.getBrowserText() + " does not refer to a parent, but to a higher order ancestor: " + linParent.getBrowserText());
 	            				}
 	            				else {
+	            					wrongLinParent ++;
 	            					Log.getLogger().log(Level.WARNING, "ERROR IN THE MODEL: The linearization parent of " + c.getBrowserText() +
 	            							" for linearization " + linView.getBrowserText() + " does not refer to an ancestor (superclass), but to:" + linParent.getBrowserText());
 	            				}
@@ -163,9 +180,17 @@ public class FixLinearizations {
             		//check if linearization parent is in the ancestors of one of the multiple parents
     				Collection<RDFSNamedClass> allSuperclasses = c.getSuperclasses(true);
     				if (linParent != null && !allSuperclasses.contains(linParent)) {
+        				wrongLinParentMultiParent ++;
     					Log.getLogger().log(Level.WARNING, "ERROR IN THE MODEL: The linearization parent of " + c.getBrowserText() +
     							" for linearization " + linView.getBrowserText() + " does not refer to any of the ancestors (superclasses), but to:" + linParent.getBrowserText());
     				}
+            	}
+            	//update wrong linearization parent counters
+            	if (wrongLinParentRetired + possiblyWrongLinParent + wrongLinParent + wrongLinParentMultiParent > 0) {
+            		cntWrongLinParentRetired += (wrongLinParentRetired == 0 ? 0 : 1);
+            		cntPossiblyWrongLinParent += (possiblyWrongLinParent == 0 ? 0 : 1);
+            		cntWrongLinParent += (wrongLinParent == 0 ? 0 : 1);
+            		cntWrongLinParentMultiParent += (wrongLinParentMultiParent == 0 ? 0 : 1);
             	}
             	
             	//remove this linearization view from the result
