@@ -131,27 +131,43 @@ public class FixLinearizations {
             RDFSNamedClass singleParent = getSingleParent(c);
 
             for (RDFResource linSpec : linearizationSpecs) {
-            	Object linView = linSpec.getPropertyValue(linearizationViewProp);
+            	RDFResource linView = (RDFResource) linSpec.getPropertyValue(linearizationViewProp);
             	//remove linearization parent if necessary
+            	RDFResource linParent = (RDFResource) linSpec.getPropertyValue(linearizationParentProp);
             	if (singleParent != null) {
-            		Object linParent = linSpec.getPropertyValue(linearizationParentProp);
             		if (singleParent.equals(linParent)) {
             			linSpec.removePropertyValue(linearizationParentProp, linParent);
             		}
             		else {
             			//if we have a linearization parent that is not a direct superclass
             			if (linParent != null && !c.getSuperclasses(false).contains(linParent)) {
-            				if (c.getSuperclasses(true).contains(linParent)) {
-            					Log.getLogger().log(Level.INFO, "POSSIBLE ERROR IN THE MODEL: The linearization parent of " + c +
-            							" for linearization " + linView + " does not refer to a parent, but to a higher order ancestor: " + linParent);
+            				Collection<RDFSNamedClass> allSuperclasses = c.getSuperclasses(true);
+            				if (getBrowserTexts(allSuperclasses).toUpperCase().contains("RETIRED")) {
+            					Log.getLogger().log(Level.INFO, "POSSIBLE ERROR IN RETIRED CLASS: The retired class " + c.getBrowserText() +
+            							" has a linearization parent set for linearization " + linView.getBrowserText() + ", other then its direct parent, namely: " + linParent.getBrowserText());
             				}
             				else {
-            					Log.getLogger().log(Level.WARNING, "ERROR IN THE MODEL: The linearization parent of " + c +
-            							" for linearization " + linView + " does not refer to an ancestor (superclass), but to:" + linParent);
+	            				if (allSuperclasses.contains(linParent)) {
+	            					Log.getLogger().log(Level.INFO, "POSSIBLE ERROR IN THE MODEL: The linearization parent of " + c.getBrowserText() +
+	            							" for linearization " + linView.getBrowserText() + " does not refer to a parent, but to a higher order ancestor: " + linParent.getBrowserText());
+	            				}
+	            				else {
+	            					Log.getLogger().log(Level.WARNING, "ERROR IN THE MODEL: The linearization parent of " + c.getBrowserText() +
+	            							" for linearization " + linView.getBrowserText() + " does not refer to an ancestor (superclass), but to:" + linParent.getBrowserText());
+	            				}
             				}
             			}
             		}
             	}
+            	else {
+            		//check if linearization parent is in the ancestors of one of the multiple parents
+    				Collection<RDFSNamedClass> allSuperclasses = c.getSuperclasses(true);
+    				if (linParent != null && !allSuperclasses.contains(linParent)) {
+    					Log.getLogger().log(Level.WARNING, "ERROR IN THE MODEL: The linearization parent of " + c.getBrowserText() +
+    							" for linearization " + linView.getBrowserText() + " does not refer to any of the ancestors (superclasses), but to:" + linParent.getBrowserText());
+    				}
+            	}
+            	
             	//remove this linearization view from the result
     			boolean found = res.remove(linView);
     			if (!found) {
@@ -165,6 +181,23 @@ public class FixLinearizations {
     }
 
     
+	private static String getBrowserTexts( Collection<RDFSNamedClass> classes) {
+		String s = "[";
+		boolean first = true;
+		for (RDFSNamedClass c : classes) {
+			if (first) {
+				//add nothing, just switch the flag
+				first = false;
+			}
+			else {
+				s += ", ";
+			}
+			s += c.getBrowserText();
+		}
+		s += "]";
+		return s;
+	}
+
 	/**
 	 * Checks whether the class <code>c</code> has exactly one superclass, and in case
 	 * it does it returns that superclass. If the class has more than one superclass
