@@ -26,6 +26,7 @@ public class FixLinearizations {
     private static RDFProperty linearizationViewProp;
     private static RDFProperty linearizationParentProp;
     
+    private static int cntProblemsWithLinParent = 0;
     private static int cntWrongLinParentRetired = 0;
     private static int cntPossiblyWrongLinParent = 0;
     private static int cntWrongLinParent = 0;
@@ -63,6 +64,8 @@ public class FixLinearizations {
 
     private static void fixLinearizations() {
         long t0 = System.currentTimeMillis();
+        
+        Log.getLogger().setLevel(Level.FINE);
 
         owlModel.setGenerateEventsEnabled(false);
         RDFSNamedClass icdCatCls = icdContentModel.getICDCategoryClass();
@@ -101,6 +104,7 @@ public class FixLinearizations {
 	                fixLinearization(subcls, linearizationViewInstances);
 	            }
 	        }
+	        Log.getLogger().info("A TOTAL of " + cntProblemsWithLinParent + " classes had some kind of problem with their linearization parents.");
 	        Log.getLogger().info("There were " + cntWrongLinParentRetired + " RETIRED classes with wrong linearization parents.");
 	        Log.getLogger().info("There were " + cntPossiblyWrongLinParent + " classes with POSSIBLY wrong linearization parents (i.e. indirect parent).");
 	        Log.getLogger().info("There were " + cntWrongLinParent + " SINGLE PARENT classes with wrong linearization parents.");
@@ -185,13 +189,6 @@ public class FixLinearizations {
     							" for linearization " + linView.getBrowserText() + " does not refer to any of the ancestors (superclasses), but to:" + linParent.getBrowserText());
     				}
             	}
-            	//update wrong linearization parent counters
-            	if (wrongLinParentRetired + possiblyWrongLinParent + wrongLinParent + wrongLinParentMultiParent > 0) {
-            		cntWrongLinParentRetired += (wrongLinParentRetired == 0 ? 0 : 1);
-            		cntPossiblyWrongLinParent += (possiblyWrongLinParent == 0 ? 0 : 1);
-            		cntWrongLinParent += (wrongLinParent == 0 ? 0 : 1);
-            		cntWrongLinParentMultiParent += (wrongLinParentMultiParent == 0 ? 0 : 1);
-            	}
             	
             	//remove this linearization view from the result
     			boolean found = res.remove(linView);
@@ -200,6 +197,15 @@ public class FixLinearizations {
     						" at class " + c + " could not be removed from the list of available LinearizationView instances");
     			}
     		}
+            
+        	//update wrong linearization parent counters
+        	if (wrongLinParentRetired + possiblyWrongLinParent + wrongLinParent + wrongLinParentMultiParent > 0) {
+        		cntProblemsWithLinParent ++;
+        		cntWrongLinParentRetired += (wrongLinParentRetired == 0 ? 0 : 1);
+        		cntPossiblyWrongLinParent += (possiblyWrongLinParent == 0 ? 0 : 1);
+        		cntWrongLinParent += (wrongLinParent == 0 ? 0 : 1);
+        		cntWrongLinParentMultiParent += (wrongLinParentMultiParent == 0 ? 0 : 1);
+        	}
     	}
     	
         return res;
