@@ -25,13 +25,13 @@ public class FixLinearizations {
     private static RDFProperty linearizationProp;
     private static RDFProperty linearizationViewProp;
     private static RDFProperty linearizationParentProp;
-    
+
     private static int cntProblemsWithLinParent = 0;
     private static int cntWrongLinParentRetired = 0;
     private static int cntPossiblyWrongLinParent = 0;
     private static int cntWrongLinParent = 0;
     private static int cntWrongLinParentMultiParent = 0;
-    
+
     public static void main(String[] args) {
         if (args.length != 1) {
             System.out.println("Argument missing: pprj file name");
@@ -64,7 +64,7 @@ public class FixLinearizations {
 
     private static void fixLinearizations() {
         long t0 = System.currentTimeMillis();
-        
+
         Log.getLogger().setLevel(Level.FINE);
 
         owlModel.setGenerateEventsEnabled(false);
@@ -72,7 +72,7 @@ public class FixLinearizations {
 
         Collection<RDFResource> linearizationViewInstances = icdContentModel.getLinearizationValueSet();
         Collection<RDFResource> missingIcdCategoryLinViews = removeLinearizationParentsAndGetMissingLinearizations(icdCatCls, linearizationViewInstances);
-        
+
         //checking whether whether changes are necessary or not
         boolean proceed = true;
         if (missingIcdCategoryLinViews.isEmpty()) {
@@ -94,7 +94,7 @@ public class FixLinearizations {
 				System.out.println("    " + linView.getBrowserText());
 			}
         }
-        
+
         //applying the fix
         if (proceed) {
 	        fixLinearization(icdCatCls, linearizationViewInstances);
@@ -115,11 +115,11 @@ public class FixLinearizations {
         	System.out.println("There was nothing to be done");
         	Log.getLogger().info("Script aborted on user request");
         }
-        
+
         System.out.println("Time: " + (System.currentTimeMillis() - t0) /1000 + " sec");
     }
-    
-    
+
+
     private static void fixLinearization(RDFSNamedClass c, Collection<RDFResource> linViewInstances) {
         Collection<RDFResource> missingLinSpecs = removeLinearizationParentsAndGetMissingLinearizations(c, linViewInstances);
 
@@ -128,24 +128,26 @@ public class FixLinearizations {
             linSpec.setPropertyValue(linearizationViewProp, linViewInstance);
 
             c.addPropertyValue(linearizationProp, linSpec);
-            Log.getLogger().fine("Added " + linViewInstance.getBrowserText() + " to " + c.getBrowserText());
+            if (Log.getLogger().isLoggable(Level.FINER)) {
+                Log.getLogger().finer("Added " + linViewInstance.getBrowserText() + " to " + c.getBrowserText());
+            }
 		}
     }
 
-    
+
     private static Collection<RDFResource> removeLinearizationParentsAndGetMissingLinearizations(RDFSNamedClass c, Collection<RDFResource> linViewInstances) {
     	ArrayList<RDFResource> res = new ArrayList<RDFResource>();
-    	
+
     	if ( c.getRDFTypes().contains(linearizationMetaClass) ) {
     	    int wrongLinParentRetired = 0;
     	    int possiblyWrongLinParent = 0;
     	    int wrongLinParent = 0;
     	    int wrongLinParentMultiParent = 0;
-    	    
+
     		res.addAll(linViewInstances);
-    		
+
             Collection<RDFResource> linearizationSpecs = icdContentModel.getLinearizationSpecifications(c);
-            
+
             RDFSNamedClass singleParent = getSingleParent(c);
 
             for (RDFResource linSpec : linearizationSpecs) {
@@ -162,8 +164,10 @@ public class FixLinearizations {
             				Collection<RDFSNamedClass> allSuperclasses = c.getSuperclasses(true);
             				if (getBrowserTexts(allSuperclasses).toUpperCase().contains("RETIRED")) {
             					wrongLinParentRetired ++;
-            					Log.getLogger().log(Level.FINE, "POSSIBLE ERROR IN RETIRED CLASS: The retired class " + c.getBrowserText() +
+            					if (Log.getLogger().isLoggable(Level.FINER)) {
+            					    Log.getLogger().log(Level.FINER, "POSSIBLE ERROR IN RETIRED CLASS: The retired class " + c.getBrowserText() +
             							" has a linearization parent set for linearization " + linView.getBrowserText() + ", other then its direct parent, namely: " + linParent.getBrowserText());
+            					}
             				}
             				else {
 	            				if (allSuperclasses.contains(linParent)) {
@@ -189,15 +193,15 @@ public class FixLinearizations {
     							" for linearization " + linView.getBrowserText() + " does not refer to any of the ancestors (superclasses), but to:" + linParent.getBrowserText());
     				}
             	}
-            	
+
             	//remove this linearization view from the result
     			boolean found = res.remove(linView);
     			if (!found) {
-    				Log.getLogger().log(Level.WARNING, "The linearization view " + linView + " referred by the linearization spec." + linSpec + 
+    				Log.getLogger().log(Level.WARNING, "The linearization view " + linView + " referred by the linearization spec." + linSpec +
     						" at class " + c + " could not be removed from the list of available LinearizationView instances");
     			}
     		}
-            
+
         	//update wrong linearization parent counters
         	if (wrongLinParentRetired + possiblyWrongLinParent + wrongLinParent + wrongLinParentMultiParent > 0) {
         		cntProblemsWithLinParent ++;
@@ -207,11 +211,11 @@ public class FixLinearizations {
         		cntWrongLinParentMultiParent += (wrongLinParentMultiParent == 0 ? 0 : 1);
         	}
     	}
-    	
+
         return res;
     }
 
-    
+
 	private static String getBrowserTexts( Collection<RDFSNamedClass> classes) {
 		String s = "[";
 		boolean first = true;
@@ -233,7 +237,7 @@ public class FixLinearizations {
 	 * Checks whether the class <code>c</code> has exactly one superclass, and in case
 	 * it does it returns that superclass. If the class has more than one superclass
 	 * the method returns null.
-	 * 
+	 *
 	 * @param c a class
 	 * @return
 	 */
