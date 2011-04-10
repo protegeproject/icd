@@ -8,6 +8,8 @@ import edu.stanford.smi.protege.model.Frame;
 import edu.stanford.smi.protege.model.Project;
 import edu.stanford.smi.protegex.owl.model.OWLModel;
 import edu.stanford.smi.protegex.owl.model.RDFProperty;
+import edu.stanford.smi.protegex.owl.model.RDFResource;
+import edu.stanford.smi.protegex.owl.model.RDFSLiteral;
 import edu.stanford.smi.protegex.owl.model.RDFSNamedClass;
 
 public class AddCategoryLabelsForBioPortal {
@@ -27,11 +29,31 @@ public class AddCategoryLabelsForBioPortal {
         long t0 = System.currentTimeMillis();
 
         RDFProperty labelProp = icdContentModel.getLabelProperty();
+        RDFProperty rdfsLabelProp = icdContentModel.getLabelProperty();
+        RDFProperty linearizationProp = icdContentModel.getLinearizationProperty();
+        RDFProperty diagCriteriaProp = owlModel.getRDFProperty("http://who.int/icd#diagnosticCriteria");
+        RDFProperty diagCriteriaTextProp = owlModel.getRDFProperty("http://who.int/icd#diagnosticCriteriaText");
+        
         Collection<RDFSNamedClass> icdCategories = icdContentModel.getICDCategories();
-
         for (RDFSNamedClass icdCategory : icdCategories) {
+        	//set icd:label of the category
             String browserText = getBrowserText(icdCategory);
             icdCategory.setPropertyValue(labelProp, browserText);
+            
+            //set rdfs:label for some of the property values
+            // linearization specifications
+            Collection<RDFResource> linearizations = icdCategory.getPropertyValues(linearizationProp);
+            for (RDFResource linearization : linearizations) {
+				linearization.setPropertyValue(rdfsLabelProp, linearization.getBrowserText());
+			}
+            // diagnostic criteria
+            Collection<RDFResource> diagCriteriaInstances = icdCategory.getPropertyValues(diagCriteriaProp);
+            for (RDFResource diagCriteria : diagCriteriaInstances) {
+            	RDFSLiteral diagCriteriaText = diagCriteria.getPropertyValueLiteral(diagCriteriaTextProp);
+            	String label = (diagCriteriaText == null ? "" : diagCriteriaText.getString());
+				diagCriteria.setPropertyValue(labelProp, label);
+			}
+
         }
 
         System.out.println("Labels updated for " + icdCategories.size() + " ICD Categories. Duration : " + ((System.currentTimeMillis() - t0)/1000) + " sec");
