@@ -75,7 +75,7 @@ public class ClamlCreateProjectPlugin extends AbstractCreateProjectPlugin {
     }
 
     protected void importClamlCM(OWLModel owlModel) throws OntologyLoadException {
-        owlModel.getNamespaceManager().setDefaultNamespace("http://who.int/icd#");
+        owlModel.getNamespaceManager().setDefaultNamespace(ICDContentModelConstants.NS);
         URI uri = getClamlDir();
         if (uri != null) {
             LocalFolderRepository rep = new LocalFolderRepository(new File(uri));
