@@ -311,14 +311,39 @@ public class ImportChapterXX {
 		}
 	}
 
+	
+	static class ICECIReference {
+		String code;
+		String label;
+		
+		public ICECIReference (String iceciCode, String label) {
+			this.code = iceciCode;
+			this.label = label;
+		}
+	}
+	
 
 	static class CategoryInfo implements Comparable<CategoryInfo> {
 		private static final String CODE_SEPARATOR = ". ";
 
 		private String sortingLabel;
 		private String title;
+		private String parentLabel;
 		private String description;
 		private List<ICD10Reference> icd10Codes;
+		private List<ICECIReference> intentCodes;
+		private List<ICECIReference> intentDescriptorCodes;
+		private List<ICECIReference> mechanismCodes;
+		private List<ICECIReference> mechanismDetailsCodes;
+		private List<ICECIReference> objectCodes;
+		private List<ICECIReference> placeCodes;
+		private List<ICECIReference> activityCodes;
+		private List<ICECIReference> substanceUseCodes;
+
+		public CategoryInfo(String sortingLabel, String title) {
+			this.sortingLabel = sortingLabel;
+			this.title = title;
+		}
 
 		public CategoryInfo(String label) {
 			int posEndOfCode = label.indexOf(CODE_SEPARATOR);
@@ -331,7 +356,7 @@ public class ImportChapterXX {
 				title = label;
 			}
 		}
-
+		
 		public String getSortingLabel() {
 			return sortingLabel;
 		}
@@ -340,6 +365,12 @@ public class ImportChapterXX {
 		}
 		public String getFullLabel() {
 			return sortingLabel + CODE_SEPARATOR + title;
+		}
+		public void setParentLabel(String parentLabel) {
+			this.parentLabel = parentLabel;
+		}
+		public String getParentLabel() {
+			return parentLabel;
 		}
 		public void setDescription(String description) {
 			this.description = description;
@@ -359,10 +390,145 @@ public class ImportChapterXX {
 					this.icd10Codes.add(icd10Code);
 				}
 			}
-
 		}
 		public List<ICD10Reference> getIcd10Codes() {
 			return icd10Codes;
+		}
+		//intentCodes
+		private void removeAllIntentCodes() {
+			this.intentCodes = new ArrayList<ICECIReference>();
+		}
+		public void addIntentCode(ICECIReference intentCode) {
+			if (this.intentCodes == null) {
+				removeAllIntentCodes();
+			}
+			if (intentCode != null) {
+				if (intentCode.code != null && intentCode.code.trim().length() > 0) {
+					this.intentCodes.add(intentCode);
+				}
+			}
+		}
+		public List<ICECIReference> getIntentCodes() {
+			return intentCodes;
+		}
+		//intentDescriptorCodes
+		private void removeAllIntentDescriptorCodes() {
+			this.intentDescriptorCodes = new ArrayList<ICECIReference>();
+		}
+		public void addIntentDescriptorCode(ICECIReference intentDescriptorCode) {
+			if (this.intentDescriptorCodes == null) {
+				removeAllIntentDescriptorCodes();
+			}
+			if (intentDescriptorCode != null) {
+				if (intentDescriptorCode.code != null && intentDescriptorCode.code.trim().length() > 0) {
+					this.intentDescriptorCodes.add(intentDescriptorCode);
+				}
+			}
+		}
+		public List<ICECIReference> getIntentDescriptorCodes() {
+			return intentDescriptorCodes;
+		}
+		//mechanismCodes
+		private void removeAllMechanismCodes() {
+			this.mechanismCodes = new ArrayList<ICECIReference>();
+		}
+		public void addMechanismCode(ICECIReference mechanismCode) {
+			if (this.mechanismCodes == null) {
+				removeAllMechanismCodes();
+			}
+			if (mechanismCode != null) {
+				if (mechanismCode.code != null && mechanismCode.code.trim().length() > 0) {
+					this.mechanismCodes.add(mechanismCode);
+				}
+			}
+		}
+		public List<ICECIReference> getMechanismCodes() {
+			return mechanismCodes;
+		}
+		//mechanismDetailsCodes
+		private void removeAllMechanismDetailsCodes() {
+			this.mechanismDetailsCodes = new ArrayList<ICECIReference>();
+		}
+		public void addMechanismDetailsCode(ICECIReference mechanismDetailsCode) {
+			if (this.mechanismDetailsCodes == null) {
+				removeAllMechanismDetailsCodes();
+			}
+			if (mechanismDetailsCode != null) {
+				if (mechanismDetailsCode.code != null && mechanismDetailsCode.code.trim().length() > 0) {
+					this.mechanismDetailsCodes.add(mechanismDetailsCode);
+				}
+			}
+		}
+		public List<ICECIReference> getMechanismDetailsCodes() {
+			return mechanismDetailsCodes;
+		}
+		//objectCodes
+		private void removeAllObjectCodes() {
+			this.objectCodes = new ArrayList<ICECIReference>();
+		}
+		public void addObjectCode(ICECIReference objectCode) {
+			if (this.objectCodes == null) {
+				removeAllObjectCodes();
+			}
+			if (objectCode != null) {
+				if (objectCode.code != null && objectCode.code.trim().length() > 0) {
+					this.objectCodes.add(objectCode);
+				}
+			}
+		}
+		public List<ICECIReference> getObjectCodes() {
+			return objectCodes;
+		}
+		//placeCodes
+		private void removeAllPlaceCodes() {
+			this.placeCodes = new ArrayList<ICECIReference>();
+		}
+		public void addPlaceCode(ICECIReference placeCode) {
+			if (this.placeCodes == null) {
+				removeAllPlaceCodes();
+			}
+			if (placeCode != null) {
+				if (placeCode.code != null && placeCode.code.trim().length() > 0) {
+					this.placeCodes.add(placeCode);
+				}
+			}
+		}
+		public List<ICECIReference> getPlaceCodes() {
+			return placeCodes;
+		}
+		//activityCodes
+		private void removeAllActivityCodes() {
+			this.activityCodes = new ArrayList<ICECIReference>();
+		}
+		public void addActivityCode(ICECIReference activityCode) {
+			if (this.activityCodes == null) {
+				removeAllActivityCodes();
+			}
+			if (activityCode != null) {
+				if (activityCode.code != null && activityCode.code.trim().length() > 0) {
+					this.activityCodes.add(activityCode);
+				}
+			}
+		}
+		public List<ICECIReference> getActivityCodes() {
+			return activityCodes;
+		}
+		//substanceUseCodes
+		private void removeAllSubstanceUseCodes() {
+			this.substanceUseCodes = new ArrayList<ICECIReference>();
+		}
+		public void addSubstanceUseCode(ICECIReference substanceUseCode) {
+			if (this.substanceUseCodes == null) {
+				removeAllSubstanceUseCodes();
+			}
+			if (substanceUseCode != null) {
+				if (substanceUseCode.code != null && substanceUseCode.code.trim().length() > 0) {
+					this.substanceUseCodes.add(substanceUseCode);
+				}
+			}
+		}
+		public List<ICECIReference> getSubstanceUseCodes() {
+			return substanceUseCodes;
 		}
 
 		@Override
@@ -373,33 +539,68 @@ public class ImportChapterXX {
 				(description != null && description.length()>30 ? description.substring(0, 25)+"..." : description) +
 				")";
 			//add icd 10 codes
-			res += " [";
+			res += " " + icd10ReferenceList2String(icd10Codes);
+			//add all the iceci references 
+			String iceciRefs = iceciReferenceList2String(intentCodes) +
+					iceciReferenceList2String(intentDescriptorCodes) +
+					iceciReferenceList2String(mechanismCodes) +
+					iceciReferenceList2String(mechanismDetailsCodes) +
+					iceciReferenceList2String(objectCodes) +
+					iceciReferenceList2String(placeCodes) +
+					iceciReferenceList2String(activityCodes) +
+					iceciReferenceList2String(substanceUseCodes);
+			res += " " + iceciRefs.replaceAll("\\]\\[", " / ");
+			return res;
+		}
+
+		private String icd10ReferenceList2String(List<ICD10Reference> list) {
+			String res = "[";
 			boolean first = true;
-			if (icd10Codes != null) {
-				for (ICD10Reference icd10Code : icd10Codes) {
+			if (list != null) {
+				for (ICD10Reference icd10Ref : list) {
 					if (first) {
 						first = false;
 					}
 					else {
 						res += ", ";
 					}
-					res += icd10Code.code;
+					res += icd10Ref.code;
+				}
+			}
+			res += "]";
+			return res;
+		}
+		
+		private String iceciReferenceList2String(List<ICECIReference> list) {
+			String res = "[";
+			boolean first = true;
+			if (list != null) {
+				for (ICECIReference iceciRef : list) {
+					if (first) {
+						first = false;
+					}
+					else {
+						res += ", ";
+					}
+					res += iceciRef.code;
 				}
 			}
 			res += "]";
 			return res;
 		}
 
-
 		public int compareTo(CategoryInfo other) {
-			int res = this.sortingLabel.compareTo(other.sortingLabel);
+			int res = this.parentLabel.compareTo(other.parentLabel);
 			if (res == 0) {
-				res = (this.icd10Codes == null && other.icd10Codes == null ? 0 :
-						this.icd10Codes == null ? -1 :
-							other.icd10Codes == null ? 1 :
-								this.icd10Codes.size() - other.icd10Codes.size() );
+				res = this.sortingLabel.compareTo(other.sortingLabel);
 				if (res == 0) {
-					res = this.description.compareTo(other.description);
+					res = (this.icd10Codes == null && other.icd10Codes == null ? 0 :
+							this.icd10Codes == null ? -1 :
+								other.icd10Codes == null ? 1 :
+									this.icd10Codes.size() - other.icd10Codes.size() );
+					if (res == 0) {
+						res = this.description.compareTo(other.description);
+					}
 				}
 			}
 			return res;
