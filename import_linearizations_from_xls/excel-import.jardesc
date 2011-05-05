@@ -12,5 +12,6 @@
     </manifest>
     <selectedElements exportClassFiles="true" exportJavaFiles="true" exportOutputFolder="false">
         <javaElement handleIdentifier="=ICD/src-util&lt;edu.stanford.bmir.icd.utils{ImportLinearizationsAndBiologicalSex.java"/>
+        <javaElement handleIdentifier="=ICD/src-util&lt;edu.stanford.bmir.icd.utils{ImportUtils.java"/>
     </selectedElements>
 </jardesc>
