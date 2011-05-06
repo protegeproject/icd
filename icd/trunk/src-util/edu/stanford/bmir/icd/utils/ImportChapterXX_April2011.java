@@ -425,7 +425,7 @@ public class ImportChapterXX_April2011 {
 						categoryBulkRetire = icdContentModel.createICDCategory(categoryNameBulkRetire, categoryXX.getName());
 						//set title term
 			            RDFResource titleTerm = icdContentModel.createTitleTerm();
-			            icdContentModel.fillTerm(titleTerm, null,  categoryNameBulkRetire, null);
+			            icdContentModel.fillTerm(titleTerm, null,  categoryBulkRetire.getLocalName(), null);
 			            icdContentModel.addTitleTermToClass(categoryBulkRetire, titleTerm);
 					}
 					oldCat.addSuperclass(categoryBulkRetire);
