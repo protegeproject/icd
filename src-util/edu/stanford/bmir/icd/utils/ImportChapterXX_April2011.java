@@ -142,14 +142,14 @@ public class ImportChapterXX_April2011 {
 				fixTitle(sh, 1);
 			}
 			else {
-				System.out.println("Warning! Sheet '" + EXCEL_SHEET_1 + "' could not be opened.");
+				Log.getLogger().warning("Warning! Sheet '" + EXCEL_SHEET_1 + "' could not be opened.");
 			}
 
 			wwb.write();
 			wwb.close();
 
 			wb.close();
-			System.out.println("Done!");
+			Log.getLogger().info("Done!");
 		} catch (BiffException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -181,7 +181,7 @@ public class ImportChapterXX_April2011 {
 						((Label)cellSortLabel).setString(sortLabel);
 					}
 					else {
-						System.out.println("Warning!!! Can't modify content for cell (" +
+						Log.getLogger().warning("Warning!!! Can't modify content for cell (" +
 								cellSortLabel.getColumn() + "," + cellSortLabel.getRow() + ") on worksheet " + sh.getName());
 					}
 				}
@@ -207,7 +207,7 @@ public class ImportChapterXX_April2011 {
 						((Label)cellTitle).setString(title);
 					}
 					else {
-						System.out.println("Warning!!! Can't modify content for cell (" +
+						Log.getLogger().warning("Warning!!! Can't modify content for cell (" +
 								cellTitle.getColumn() + "," + cellTitle.getRow() + ") on worksheet " + sh.getName());
 					}
 				}
@@ -307,7 +307,7 @@ public class ImportChapterXX_April2011 {
 				}
 			}
 
-			System.out.println("Done!");
+			Log.getLogger().info("Done!");
 		} catch (BiffException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -358,16 +358,16 @@ public class ImportChapterXX_April2011 {
 							}
 						}
 						else {
-							System.out.println("ERROR: Invalid code range: " + icd10Token + 
+							Log.getLogger().severe("ERROR: Invalid code range: " + icd10Token + 
 									" - Starting ICD-10 code '" + startICD10Code + "' needs to preceed ending ICD-10 code '" + endICD10Code + "'");
 						}
 					} catch (NumberFormatException e) {
-						System.out.println("ERROR: Invalid code range: " + icd10Token +
+						Log.getLogger().severe("ERROR: Invalid code range: " + icd10Token +
 									" - Both starting and ending ICD-10 codes '" + startICD10Code + "' and '" + endICD10Code + "' need to end in a number.");
 					}
 				}
 				else {
-					System.out.println("ERROR: Invalid code range: " + icd10Token + 
+					Log.getLogger().severe("ERROR: Invalid code range: " + icd10Token + 
 							" - Could not extract ICD-10 codes, because prefix of the starting and endig code" +
 							" ('" + startICD10CodePrefix + "' and '" + endICD10CodePrefix + "') did not match." +
 							" You can try to fix this issue by splitting up the code range in smaller code ranges that share the same preffix");
@@ -397,11 +397,13 @@ public class ImportChapterXX_April2011 {
 
 	
 	private static void cleanUpChapterXX(OWLModel owlModel) {
+		Log.getLogger().info("\nClean-up existing content of Chapter XX... ");
+
 		RDFProperty propSortingLabel = owlModel.getRDFProperty(ICDContentModelConstants.SORTING_LABEL_PROP);
 		
 		RDFSNamedClass categoryXX = owlModel.getRDFSNamedClass(ICDContentModelConstants.EXTERNAL_CAUSES_TOP_CLASS);
 		if (categoryXX == null) {
-			System.out.println("ERROR: We can't find the top level class for Chapter XX (" + 
+			Log.getLogger().severe("ERROR: We can't find the top level class for Chapter XX (" + 
 					ICDContentModelConstants.EXTERNAL_CAUSES_TOP_CLASS + "). Cleanup operation will be aborted");
 			return;
 		}
@@ -429,12 +431,16 @@ public class ImportChapterXX_April2011 {
 				}
 			}
 		}
+
+		Log.getLogger().info("Done!");
 	}
 
 
 	//TODO check and fix
 	private static void writeCategoryInfoToModel(
 			Collection<CategoryInfo> categoryInfo, OWLModel owlModel) {
+		Log.getLogger().info("\nWrite category information to model... ");
+
 		RDFProperty propSortingLabel = owlModel.getRDFProperty(ICDContentModelConstants.SORTING_LABEL_PROP);
 		RDFProperty propICD10Ref = owlModel.getRDFProperty(PROPERTY_ICD10_REFERENCE);
 		RDFProperty propIntent = owlModel.getRDFProperty(PROPERTY_INTENT);
@@ -457,7 +463,7 @@ public class ImportChapterXX_April2011 {
         for (CategoryInfo catInfo : categoryInfo) {
             String superclassName = parentLabelToIdMap.get(catInfo.getParentLabel());
             if (superclassName == null) {
-            	System.out.println("ERROR: We can't create category " + catInfo + " becaues its parent, " + catInfo.getParentLabel() + ", was not created yet");
+            	Log.getLogger().severe("ERROR: We can't create category " + catInfo + " becaues its parent, " + catInfo.getParentLabel() + ", was not created yet");
             	continue;
             }
 			RDFSNamedClass category = icdContentModel.createICDCategory(null, superclassName);
@@ -483,6 +489,7 @@ public class ImportChapterXX_April2011 {
             addICECIReferences(category, catInfo.getSubstanceUseCodes(), propSubstanceUse, resourceBean);
 		}
 
+        Log.getLogger().info("Done!");
 	}
 
 
