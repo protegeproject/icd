@@ -3,7 +3,7 @@
    <property file="excel_import.properties"/>  
    <property name = "owl.path"         value = "edu.stanford.smi.protegex.owl"/>   
    <property name = "owl.plugin.path"  value = "${protege.home}/plugins/${owl.path}"/>
-   <property name = "icd.path"         value = "${protege.home}/edu.stanford.bmir.icd.misc"/>
+   <property name = "icd.path"         value = "${protege.home}/plugins/edu.stanford.bmir.icd.misc"/>
 
    <!-- 
      #  ********** Finding Protege Libraries. *************
