@@ -408,6 +408,8 @@ public class ImportChapterXX_April2011 {
 			return;
 		}
 		
+		Log.getLogger().info("\nActual cleaning is starting now: " + new Date());
+		
 		Date now = new Date();
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yy-MM-dd");
 		String categoryNameBulkRetire = CLASS_BULK_RETIRE + dateFormat.format(now);
