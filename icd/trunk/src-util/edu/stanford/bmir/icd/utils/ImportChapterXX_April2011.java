@@ -10,6 +10,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -118,6 +119,8 @@ public class ImportChapterXX_April2011 {
 			System.out.println(catInfo);
 		}
 		
+		//checkForProblems(catInfos);
+		
 		cleanUpChapterXX(owlModel);
 		writeCategoryInfoToModel(catInfos, owlModel);
 
@@ -127,6 +130,7 @@ public class ImportChapterXX_April2011 {
 
 
 	// ------------ Fix Content ------------- //
+
 
 	private static void fixXlsContent(File excelFile) {
 		Log.getLogger().info("\nFixing sorting labels in Excel file... ");
@@ -216,7 +220,7 @@ public class ImportChapterXX_April2011 {
 	}
 	
 
-	// ------------ Fix Content ------------- //
+	// ------------ Extract Category Info ------------- //
 
 
 	private static Map<String, CategoryInfo> extractCategoryInfoFromXls(OWLModel owlModel,
@@ -394,8 +398,106 @@ public class ImportChapterXX_April2011 {
 		}
 		return res;
 	}
-
 	
+
+	// ------------ Check for Problems in Category Info ------------- //
+
+
+	private static void checkForProblems(List<CategoryInfo> categoryInfos) {
+		List<CategoryInfo> newSortedCatInfos = new ArrayList<CategoryInfo>(categoryInfos);
+		CategoryInfoICECIContentComparator iceciComparator = new CategoryInfoICECIContentComparator();
+		CategoryInfoICECIContentPlusDefaultComparator fullComparator = new CategoryInfoICECIContentPlusDefaultComparator();
+		Collections.sort(newSortedCatInfos, fullComparator);
+		CategoryInfo prev = null;
+		for (CategoryInfo categoryInfo : categoryInfos) {
+			if (iceciComparator.compare(categoryInfo, prev) == 0) {
+				System.out.print("IDENTICAL ");
+			}
+			else {
+				System.out.print("          ");
+			}
+			System.out.println(categoryInfo);
+			prev = categoryInfo;
+		}
+	}
+
+	private static class CategoryInfoICECIContentComparator implements Comparator<CategoryInfo> {
+		@Override
+		public int compare(CategoryInfo first, CategoryInfo second) {
+			if (first == null || second == null) {
+				return (first == null && second == null ? 0 :
+					(first == null ? -1 : 1 ));
+			}
+			
+			int res = compare(first.getIntentCodes(), second.getIntentCodes());
+			if (res == 0) {
+				res = compare(first.getIntentDescriptorCodes(), second.getIntentDescriptorCodes());
+				if (res == 0) {
+					res = compare(first.getMechanismCodes(), second.getMechanismCodes());
+					if (res == 0) {
+						res = compare(first.getMechanismDetailsCodes(), second.getMechanismDetailsCodes());
+						if (res == 0) {
+							res = compare(first.getObjectCodes(), second.getObjectCodes());
+							if (res == 0) {
+								res = compare(first.getPlaceCodes(), second.getPlaceCodes());
+								if (res == 0) {
+									res = compare(first.getActivityCodes(), second.getActivityCodes());
+									if (res == 0) {
+										res = compare(first.getSubstanceUseCodes(), second.getSubstanceUseCodes());
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			return res;
+		}
+		
+		private int compare(List<ICECIReference> firstList, List<ICECIReference> secondList) {
+			if (firstList == null || secondList == null) {
+				return (firstList == null && secondList == null ? 0 :
+					(firstList == null ? -1 : 1 ));
+			}
+
+			int l1 = firstList.size();
+			int l2 = secondList.size();
+			int lMin = (l1 < l2 ? l1 : l2);
+			for (int i = 0; i < lMin; i++) {
+				ICECIReference ref1 = firstList.get(i);
+				ICECIReference ref2 = secondList.get(i);
+				if (ref1 == null || ref2 == null) {
+					if (ref1 == null && ref2 == null) {
+						continue;
+					}
+					else {
+						return (ref1 == null ? -1 : 1 );
+					}
+				}
+				int localCompRes = ref1.compareTo(ref2);
+				if (localCompRes != 0) {
+					return localCompRes;
+				}
+			}
+			
+			return (l1 == l2 ? 0 : (l1 < l2 ? -1 : 1));
+		}
+	}
+	
+	private static class CategoryInfoICECIContentPlusDefaultComparator extends CategoryInfoICECIContentComparator {
+		@Override
+		public int compare(CategoryInfo first, CategoryInfo second) {
+			int res = super.compare(first, second);
+			if (res == 0 && first != null) {
+				res = first.compareTo(second);
+			}
+			return res;
+		}
+	}
+	
+	// ------------ Clean-up Chapter XX ------------- //
+
+
 	private static void cleanUpChapterXX(OWLModel owlModel) {
 		Log.getLogger().info("\nClean-up existing content of Chapter XX... ");
 
@@ -436,9 +538,11 @@ public class ImportChapterXX_April2011 {
 
 		Log.getLogger().info("Done!");
 	}
+	
+
+	// ------------ Write Category Info to OWL Model ------------- //
 
 
-	//TODO check and fix
 	private static void writeCategoryInfoToModel(
 			Collection<CategoryInfo> categoryInfo, OWLModel owlModel) {
 		Log.getLogger().info("\nWrite category information to model... ");
