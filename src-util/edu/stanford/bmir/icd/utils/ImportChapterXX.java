@@ -312,13 +312,18 @@ public class ImportChapterXX {
 	}
 
 	
-	static class ICECIReference {
+	static class ICECIReference implements Comparable<ICECIReference> {
 		String code;
 		String label;
 		
 		public ICECIReference (String iceciCode, String label) {
 			this.code = iceciCode;
 			this.label = label;
+		}
+
+		@Override
+		public int compareTo(ICECIReference other) {
+			return this.code.compareTo(other.code);
 		}
 	}
 	
