@@ -153,6 +153,8 @@ public class ImportChapterXX_April2011 {
 		
 		Log.getLogger().info("Starting writing to ChAO from: " + chaoKb.getProject().getProjectURI() + " on " + new Date());
 		
+		ChangesProject.initialize(owlModel.getProject());
+		
 		ChangeFactory changeFactory = new ChangeFactory(chaoKb);
 		OntologyComponentFactory ocFactory = new OntologyComponentFactory(chaoKb);
 		PostProcessorManager changes_db = ChangesProject.getPostProcessorManager(owlModel);
