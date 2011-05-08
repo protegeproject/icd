@@ -30,12 +30,21 @@ import edu.stanford.bmir.icd.claml.ICDContentModelConstants;
 import edu.stanford.bmir.icd.utils.ImportChapterXX.CategoryInfo;
 import edu.stanford.bmir.icd.utils.ImportChapterXX.ICD10Reference;
 import edu.stanford.bmir.icd.utils.ImportChapterXX.ICECIReference;
+import edu.stanford.bmir.protegex.chao.ChAOKbManager;
+import edu.stanford.bmir.protegex.chao.change.api.Change;
+import edu.stanford.bmir.protegex.chao.change.api.ChangeFactory;
+import edu.stanford.bmir.protegex.chao.ontologycomp.api.OntologyComponentFactory;
+import edu.stanford.smi.protege.model.Cls;
+import edu.stanford.smi.protege.model.KnowledgeBase;
 import edu.stanford.smi.protege.util.Log;
 import edu.stanford.smi.protege.util.SystemUtilities;
 import edu.stanford.smi.protegex.owl.model.OWLModel;
 import edu.stanford.smi.protegex.owl.model.RDFProperty;
 import edu.stanford.smi.protegex.owl.model.RDFResource;
 import edu.stanford.smi.protegex.owl.model.RDFSNamedClass;
+import edu.stanford.smi.protegex.server_changes.ChangesProject;
+import edu.stanford.smi.protegex.server_changes.PostProcessorManager;
+import edu.stanford.smi.protegex.server_changes.ServerChangesUtil;
 
 /**
  * This class is for the second round of importing new content 
@@ -84,7 +93,8 @@ public class ImportChapterXX_April2011 {
 	private static URI pprjFileUri = new File(PPRJ_FILE_URI).toURI();
 	private static File xlFileChaperXX = new File(EXCEL_FILE_CHAPTER_XX);
 	
-	private static final boolean TEST_RUN = false; 
+	private static final boolean TEST_RUN = false;
+	private static Map<String, String> parentLabelToIdMap; 
 
 	/**
 	 * @param args
@@ -124,12 +134,40 @@ public class ImportChapterXX_April2011 {
 		cleanUpChapterXX(owlModel);
 		writeCategoryInfoToModel(catInfos, owlModel);
 
+		writeChangesToChao(owlModel);
+		
 		//finish processing
 		Log.getLogger().info("\n===== End import from Excel at " + new Date());
 	}
 
 
 	// ------------ Fix Content ------------- //
+
+
+	private static void writeChangesToChao(OWLModel owlModel) {
+		KnowledgeBase chaoKb = ChAOKbManager.getChAOKb(owlModel);
+		if (chaoKb == null) {
+			Log.getLogger().info("Could not find ChAO for: " + owlModel);
+			return;
+		}
+		
+		Log.getLogger().info("Starting writing to ChAO at: " + new Date());
+		
+		ChangeFactory changeFactory = new ChangeFactory(owlModel);
+		OntologyComponentFactory ocFactory = new OntologyComponentFactory(owlModel);
+		PostProcessorManager changes_db = ChangesProject.getPostProcessorManager(owlModel);
+		
+		for (String id : parentLabelToIdMap.values()) {
+			Cls cls = owlModel.getCls(id);
+			if (cls == null) {
+				Log.getLogger().warning("Writing to ChAO: Could not find class " + id);
+			}
+			Change change = changeFactory.createComposite_Change(null);
+			ServerChangesUtil.createChangeStd(changes_db, change, cls, "Automatic import on May 08, 2011");
+			change.setAuthor("External Causes TAG");
+		}
+		
+	}
 
 
 	private static void fixXlsContent(File excelFile) {
@@ -563,7 +601,7 @@ public class ImportChapterXX_April2011 {
 	    ICDContentModel icdContentModel = new ICDContentModel(owlModel);
         //Collection<String> superClses = CollectionUtilities.createCollection(ICDContentModelConstants.EXTERNAL_CAUSES_TOP_CLASS);
 
-        Map<String, String> parentLabelToIdMap = new HashMap<String, String>();
+        parentLabelToIdMap = new HashMap<String, String>();
         parentLabelToIdMap.put("2", ICDContentModelConstants.EXTERNAL_CAUSES_TOP_CLASS);
         
         for (CategoryInfo catInfo : categoryInfo) {
