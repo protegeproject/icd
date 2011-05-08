@@ -4,6 +4,7 @@
    <property name = "owl.path"         value = "edu.stanford.smi.protegex.owl"/>   
    <property name = "owl.plugin.path"  value = "${protege.home}/plugins/${owl.path}"/>
    <property name = "icd.path"         value = "${protege.home}/plugins/edu.stanford.bmir.icd.misc"/>
+   <property name = "chao.path"         value = "${protege.home}/plugins/edu.stanford.smi.protegex.changes"/>
 
    <!-- 
      #  ********** Finding Protege Libraries. *************
@@ -35,6 +36,7 @@
         <pathelement location = "../lib/jxl.jar"/>
         <fileset dir="${owl.plugin.path}"/>
       	<fileset dir="${icd.path}"/>
+      	<fileset dir="${chao.path}"/>
       	<pathelement location = "excel_import_ch20.jar"/>
       </path>
 
