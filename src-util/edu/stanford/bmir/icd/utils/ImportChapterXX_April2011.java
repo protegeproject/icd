@@ -151,10 +151,10 @@ public class ImportChapterXX_April2011 {
 			return;
 		}
 		
-		Log.getLogger().info("Starting writing to ChAO at: " + new Date());
+		Log.getLogger().info("Starting writing to ChAO from: " + chaoKb.getProject().getProjectURI() + " on " + new Date());
 		
-		ChangeFactory changeFactory = new ChangeFactory(owlModel);
-		OntologyComponentFactory ocFactory = new OntologyComponentFactory(owlModel);
+		ChangeFactory changeFactory = new ChangeFactory(chaoKb);
+		OntologyComponentFactory ocFactory = new OntologyComponentFactory(chaoKb);
 		PostProcessorManager changes_db = ChangesProject.getPostProcessorManager(owlModel);
 		
 		for (String id : catLabelToIdMap.values()) {
