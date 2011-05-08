@@ -94,7 +94,7 @@ public class ImportChapterXX_April2011 {
 	private static File xlFileChaperXX = new File(EXCEL_FILE_CHAPTER_XX);
 	
 	private static final boolean TEST_RUN = false;
-	private static Map<String, String> parentLabelToIdMap; 
+	private static Map<String, String> catLabelToIdMap; 
 
 	/**
 	 * @param args
@@ -157,7 +157,7 @@ public class ImportChapterXX_April2011 {
 		OntologyComponentFactory ocFactory = new OntologyComponentFactory(owlModel);
 		PostProcessorManager changes_db = ChangesProject.getPostProcessorManager(owlModel);
 		
-		for (String id : parentLabelToIdMap.values()) {
+		for (String id : catLabelToIdMap.values()) {
 			Cls cls = owlModel.getCls(id);
 			if (cls == null) {
 				Log.getLogger().warning("Writing to ChAO: Could not find class " + id);
@@ -601,17 +601,17 @@ public class ImportChapterXX_April2011 {
 	    ICDContentModel icdContentModel = new ICDContentModel(owlModel);
         //Collection<String> superClses = CollectionUtilities.createCollection(ICDContentModelConstants.EXTERNAL_CAUSES_TOP_CLASS);
 
-        parentLabelToIdMap = new HashMap<String, String>();
-        parentLabelToIdMap.put("2", ICDContentModelConstants.EXTERNAL_CAUSES_TOP_CLASS);
+        catLabelToIdMap = new HashMap<String, String>();
+        catLabelToIdMap.put("2", ICDContentModelConstants.EXTERNAL_CAUSES_TOP_CLASS);
         
         for (CategoryInfo catInfo : categoryInfo) {
-            String superclassName = parentLabelToIdMap.get(catInfo.getParentLabel());
+            String superclassName = catLabelToIdMap.get(catInfo.getParentLabel());
             if (superclassName == null) {
             	Log.getLogger().severe("ERROR: We can't create category " + catInfo + " becaues its parent, " + catInfo.getParentLabel() + ", was not created yet");
             	continue;
             }
 			RDFSNamedClass category = icdContentModel.createICDCategory(null, superclassName);
-			parentLabelToIdMap.put(catInfo.getSortingLabel(), category.getName());
+			catLabelToIdMap.put(catInfo.getSortingLabel(), category.getName());
 			
             category.setPropertyValue(owlModel.getRDFSLabelProperty(), catInfo.getFullLabel());
 
