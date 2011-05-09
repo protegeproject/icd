@@ -311,22 +311,21 @@ public class ImportChapterXX {
 		}
 	}
 
-	
+
 	static class ICECIReference implements Comparable<ICECIReference> {
 		String code;
 		String label;
-		
+
 		public ICECIReference (String iceciCode, String label) {
 			this.code = iceciCode;
 			this.label = label;
 		}
 
-		@Override
 		public int compareTo(ICECIReference other) {
 			return this.code.compareTo(other.code);
 		}
 	}
-	
+
 
 	static class CategoryInfo implements Comparable<CategoryInfo> {
 		private static final String CODE_SEPARATOR = ". ";
@@ -361,7 +360,7 @@ public class ImportChapterXX {
 				title = label;
 			}
 		}
-		
+
 		public String getSortingLabel() {
 			return sortingLabel;
 		}
@@ -545,7 +544,7 @@ public class ImportChapterXX {
 				")";
 			//add icd 10 codes
 			res += " " + icd10ReferenceList2String(icd10Codes);
-			//add all the iceci references 
+			//add all the iceci references
 			String iceciRefs = iceciReferenceList2String(intentCodes) +
 					iceciReferenceList2String(intentDescriptorCodes) +
 					iceciReferenceList2String(mechanismCodes) +
@@ -575,7 +574,7 @@ public class ImportChapterXX {
 			res += "]";
 			return res;
 		}
-		
+
 		private String iceciReferenceList2String(List<ICECIReference> list) {
 			String res = "[";
 			boolean first = true;
