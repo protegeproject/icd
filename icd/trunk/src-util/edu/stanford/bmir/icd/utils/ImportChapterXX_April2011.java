@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package edu.stanford.bmir.icd.utils;
 
@@ -47,15 +47,15 @@ import edu.stanford.smi.protegex.server_changes.PostProcessorManager;
 import edu.stanford.smi.protegex.server_changes.ServerChangesUtil;
 
 /**
- * This class is for the second round of importing new content 
+ * This class is for the second round of importing new content
  * for Chapter XX (External Causes and Injuries)
  * with values specified in a spreadsheet, as of April/May 2011.
- * 
+ *
  * @author csnyulas
  *
  */
 public class ImportChapterXX_April2011 {
-	
+
 	private static final String PPRJ_FILE_URI = "resources/projects/icd/icd_umbrella.pprj";
 	private static final String EXCEL_FILE_CHAPTER_XX = "resources/xls/Ch20_Spreadsheet_to_import_20110502.xls";
 
@@ -77,7 +77,7 @@ public class ImportChapterXX_April2011 {
 	private static final String PROPERTY_SUBSTANCE_USE = "http://who.int/icd#substanceUse";
 
 	private static final String CLASS_BULK_RETIRE = ICDContentModelConstants.NS + "BulkRetire_";
-	
+
 	private static final String ICD10_BP_ONTOLOGY_VERSION_ID = "44103";
 	private static final String ICD10_BP_ONTOLOGY_LABEL = "ICD10";
 	private static final String ICD10_ONTOLOGY_ID = ICD10_BP_ONTOLOGY_LABEL;
@@ -89,12 +89,12 @@ public class ImportChapterXX_April2011 {
 	private static final String ICECI_ONTOLOGY_ID = ICECI_BP_ONTOLOGY_LABEL;
 	private static final String ICECI_TERM_ID_PREFIX = "http://purl.bioontology.org/ontology/" + ICECI_BP_ONTOLOGY_LABEL + "/";
 	private static final String ICECI_URL_PREFIX = "http://bioportal.bioontology.org/visualize/" + ICECI_BP_ONTOLOGY_VERSION_ID + "/?conceptid=";
-	
+
 	private static URI pprjFileUri = new File(PPRJ_FILE_URI).toURI();
 	private static File xlFileChaperXX = new File(EXCEL_FILE_CHAPTER_XX);
-	
+
 	private static final boolean TEST_RUN = false;
-	private static Map<String, String> catLabelToIdMap; 
+	private static Map<String, String> catLabelToIdMap;
 
 	/**
 	 * @param args
@@ -128,14 +128,14 @@ public class ImportChapterXX_April2011 {
 		for (CategoryInfo catInfo : catInfos) {
 			System.out.println(catInfo);
 		}
-		
+
 		//checkForProblems(catInfos);
-		
+
 		cleanUpChapterXX(owlModel);
 		writeCategoryInfoToModel(catInfos, owlModel);
 
 		writeChangesToChao(owlModel);
-		
+
 		//finish processing
 		Log.getLogger().info("\n===== End import from Excel at " + new Date());
 	}
@@ -150,15 +150,15 @@ public class ImportChapterXX_April2011 {
 			Log.getLogger().info("Could not find ChAO for: " + owlModel);
 			return;
 		}
-		
+
 		Log.getLogger().info("Starting writing to ChAO from: " + chaoKb.getProject().getProjectURI() + " on " + new Date());
-		
+
 		ChangesProject.initialize(owlModel.getProject());
-		
+
 		ChangeFactory changeFactory = new ChangeFactory(chaoKb);
 		OntologyComponentFactory ocFactory = new OntologyComponentFactory(chaoKb);
 		PostProcessorManager changes_db = ChangesProject.getPostProcessorManager(owlModel);
-		
+
 		for (String id : catLabelToIdMap.values()) {
 			Cls cls = owlModel.getCls(id);
 			if (cls == null) {
@@ -168,7 +168,7 @@ public class ImportChapterXX_April2011 {
 			ServerChangesUtil.createChangeStd(changes_db, change, cls, "Automatic import on May 08, 2011");
 			change.setAuthor("External Causes TAG");
 		}
-		
+
 	}
 
 
@@ -212,13 +212,13 @@ public class ImportChapterXX_April2011 {
 				WritableCell cellSortLabel = sh.getWritableCell(columnSortingLabel,r);
 				String sortLabel = cellSortLabel.getContents();
 				int indexOfUnnecessaryTrailingChars = sortLabel.length();
-				while (indexOfUnnecessaryTrailingChars >= 1 
+				while (indexOfUnnecessaryTrailingChars >= 1
 						&& (sortLabel.charAt(indexOfUnnecessaryTrailingChars - 1) == '.'
 							|| sortLabel.charAt(indexOfUnnecessaryTrailingChars - 1) == '*')) {
 					indexOfUnnecessaryTrailingChars --;
 				}
 				sortLabel = sortLabel.substring(0, indexOfUnnecessaryTrailingChars);
-				
+
 				//modify cell content if necessary
 				if ( ! sortLabel.equals(cellSortLabel.getContents()) ) {
 					if (cellSortLabel.getType() == CellType.LABEL) {
@@ -233,7 +233,7 @@ public class ImportChapterXX_April2011 {
 		}
 	}
 
-	
+
 	private static void fixTitle(WritableSheet sh, int columnTitle) {
 		for (int r =1; r < sh.getRows(); r++) { //skip first line (0)
 
@@ -258,7 +258,7 @@ public class ImportChapterXX_April2011 {
 			}
 		}
 	}
-	
+
 
 	// ------------ Extract Category Info ------------- //
 
@@ -271,7 +271,7 @@ public class ImportChapterXX_April2011 {
 
 		try {
 			Workbook wb = jxl.Workbook.getWorkbook(excelFile);
-			
+
 			Map<String, String> icd10CodeToLabel = new HashMap<String, String>();
 			Sheet sh = wb.getSheet(EXCEL_SHEET_ICD10_CODES_AND_DESCRIPTIONS_NEW);
 			for (int r =1; r < sh.getRows(); r++) { //skip first line (0)
@@ -279,7 +279,7 @@ public class ImportChapterXX_April2011 {
 				String icd10Label = sh.getCell(1,r).getContents();
 				icd10CodeToLabel.put(icd10Code, icd10Label);
 			}
-			
+
 			Map<String, String> iceciCodeToLabel = new HashMap<String, String>();
 			sh = wb.getSheet(EXCEL_SHEET_ICECI_CODES_AND_DESCRIPTIONS);
 			for (int r =1; r < sh.getRows(); r++) { //skip first line (0)
@@ -287,7 +287,7 @@ public class ImportChapterXX_April2011 {
 				String iceciLabel = sh.getCell(1,r).getContents();
 				iceciCodeToLabel.put(iceciCode, iceciLabel);
 			}
-			
+
 			sh = wb.getSheet(EXCEL_SHEET_1);
 			for (int r =1; r < sh.getRows(); r++) { //skip first line (0)
 
@@ -295,7 +295,7 @@ public class ImportChapterXX_April2011 {
 				{
 					String sortLabel = sh.getCell(0,r).getContents();
 					String title = sh.getCell(1,r).getContents();
-					
+
 					String icd10Codes = sh.getCell(2,r).getContents();
 					String parentSortLabel = sh.getCell(4,r).getContents();
 
@@ -314,9 +314,9 @@ public class ImportChapterXX_April2011 {
 						catInfo = new CategoryInfo(sortLabel, title);
 						res.put(sortLabel, catInfo);
 					}
-					
+
 					catInfo.setParentLabel(parentSortLabel);
-					
+
 					for (String icd10Code : tokenizeICD10Codes(icd10Codes)) {
 						catInfo.addIcd10Code(new ICD10Reference(icd10Code, icd10CodeToLabel.get(icd10Code)));
 					}
@@ -363,7 +363,7 @@ public class ImportChapterXX_April2011 {
 
 	private static List<String> tokenizeICD10Codes(String icd10Codes) {
 		List<String> res = new ArrayList<String>();
-		if (icd10Codes == null || icd10Codes.trim().length() == 0 
+		if (icd10Codes == null || icd10Codes.trim().length() == 0
 				|| icd10Codes.trim().equalsIgnoreCase("new")) {
 			return res;
 		}
@@ -373,7 +373,7 @@ public class ImportChapterXX_April2011 {
 			if (icd10Token.contains(":")) {
 				String startICD10Code = icd10Token.substring(0, icd10Token.indexOf(":"));
 				String endICD10Code = icd10Token.substring(icd10Token.indexOf(":") + 1);
-				
+
 				//separate startICD10Code into prefix containing arbitrary characters and numeric suffix
 				int i = startICD10Code.length();
 				while (i >= 1 && startICD10Code.charAt(i-1) >= '0' && startICD10Code.charAt(i-1) <= '9') {
@@ -381,7 +381,7 @@ public class ImportChapterXX_April2011 {
 				}
 				String startICD10CodePrefix = startICD10Code.substring(0, i);
 				String startICD10CodeSuffix = startICD10Code.substring(i);
-				
+
 				//separate endICD10Code into prefix containing arbitrary characters and numeric suffix
 				i = endICD10Code.length();
 				while (i >= 1 && endICD10Code.charAt(i-1) >= '0' && endICD10Code.charAt(i-1) <= '9') {
@@ -402,7 +402,7 @@ public class ImportChapterXX_April2011 {
 							}
 						}
 						else {
-							Log.getLogger().severe("ERROR: Invalid code range: " + icd10Token + 
+							Log.getLogger().severe("ERROR: Invalid code range: " + icd10Token +
 									" - Starting ICD-10 code '" + startICD10Code + "' needs to preceed ending ICD-10 code '" + endICD10Code + "'");
 						}
 					} catch (NumberFormatException e) {
@@ -411,7 +411,7 @@ public class ImportChapterXX_April2011 {
 					}
 				}
 				else {
-					Log.getLogger().severe("ERROR: Invalid code range: " + icd10Token + 
+					Log.getLogger().severe("ERROR: Invalid code range: " + icd10Token +
 							" - Could not extract ICD-10 codes, because prefix of the starting and endig code" +
 							" ('" + startICD10CodePrefix + "' and '" + endICD10CodePrefix + "') did not match." +
 							" You can try to fix this issue by splitting up the code range in smaller code ranges that share the same preffix");
@@ -424,7 +424,7 @@ public class ImportChapterXX_April2011 {
 		return res;
 	}
 
-	
+
 	private static List<String> tokenizeICECICodes(String iceciCodes) {
 		List<String> res = new ArrayList<String>();
 		if (iceciCodes == null || iceciCodes.trim().length() == 0
@@ -438,7 +438,7 @@ public class ImportChapterXX_April2011 {
 		}
 		return res;
 	}
-	
+
 
 	// ------------ Check for Problems in Category Info ------------- //
 
@@ -462,13 +462,12 @@ public class ImportChapterXX_April2011 {
 	}
 
 	private static class CategoryInfoICECIContentComparator implements Comparator<CategoryInfo> {
-		@Override
 		public int compare(CategoryInfo first, CategoryInfo second) {
 			if (first == null || second == null) {
 				return (first == null && second == null ? 0 :
 					(first == null ? -1 : 1 ));
 			}
-			
+
 			int res = compare(first.getIntentCodes(), second.getIntentCodes());
 			if (res == 0) {
 				res = compare(first.getIntentDescriptorCodes(), second.getIntentDescriptorCodes());
@@ -493,7 +492,7 @@ public class ImportChapterXX_April2011 {
 			}
 			return res;
 		}
-		
+
 		private int compare(List<ICECIReference> firstList, List<ICECIReference> secondList) {
 			if (firstList == null || secondList == null) {
 				return (firstList == null && secondList == null ? 0 :
@@ -519,11 +518,11 @@ public class ImportChapterXX_April2011 {
 					return localCompRes;
 				}
 			}
-			
+
 			return (l1 == l2 ? 0 : (l1 < l2 ? -1 : 1));
 		}
 	}
-	
+
 	private static class CategoryInfoICECIContentPlusDefaultComparator extends CategoryInfoICECIContentComparator {
 		@Override
 		public int compare(CategoryInfo first, CategoryInfo second) {
@@ -534,7 +533,7 @@ public class ImportChapterXX_April2011 {
 			return res;
 		}
 	}
-	
+
 	// ------------ Clean-up Chapter XX ------------- //
 
 
@@ -542,21 +541,21 @@ public class ImportChapterXX_April2011 {
 		Log.getLogger().info("\nClean-up existing content of Chapter XX... ");
 
 		RDFProperty propSortingLabel = owlModel.getRDFProperty(ICDContentModelConstants.SORTING_LABEL_PROP);
-		
+
 		RDFSNamedClass categoryXX = owlModel.getRDFSNamedClass(ICDContentModelConstants.EXTERNAL_CAUSES_TOP_CLASS);
 		if (categoryXX == null) {
-			Log.getLogger().severe("ERROR: We can't find the top level class for Chapter XX (" + 
+			Log.getLogger().severe("ERROR: We can't find the top level class for Chapter XX (" +
 					ICDContentModelConstants.EXTERNAL_CAUSES_TOP_CLASS + "). Cleanup operation will be aborted");
 			return;
 		}
-		
+
 		Log.getLogger().info("\nActual cleaning is starting now: " + new Date());
-		
+
 		Date now = new Date();
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yy-MM-dd");
 		String categoryNameBulkRetire = CLASS_BULK_RETIRE + dateFormat.format(now);
 		RDFSNamedClass categoryBulkRetire = owlModel.getRDFSNamedClass(categoryNameBulkRetire);
-		
+
 		for (Object subclass : categoryXX.getSubclasses(false)) {
 			if (subclass instanceof RDFSNamedClass) {
 				RDFSNamedClass oldCat = (RDFSNamedClass)subclass;
@@ -578,7 +577,7 @@ public class ImportChapterXX_April2011 {
 
 		Log.getLogger().info("Done!");
 	}
-	
+
 
 	// ------------ Write Category Info to OWL Model ------------- //
 
@@ -597,15 +596,15 @@ public class ImportChapterXX_April2011 {
 		RDFProperty propPlace = owlModel.getRDFProperty(PROPERTY_PLACE);
 		RDFProperty propActivity = owlModel.getRDFProperty(PROPERTY_ACTIVITY);
 		RDFProperty propSubstanceUse = owlModel.getRDFProperty(PROPERTY_SUBSTANCE_USE);
-		
+
 		RDFResourceBean resourceBean = new RDFResourceBean(owlModel);
-		
+
 	    ICDContentModel icdContentModel = new ICDContentModel(owlModel);
         //Collection<String> superClses = CollectionUtilities.createCollection(ICDContentModelConstants.EXTERNAL_CAUSES_TOP_CLASS);
 
         catLabelToIdMap = new HashMap<String, String>();
         catLabelToIdMap.put("2", ICDContentModelConstants.EXTERNAL_CAUSES_TOP_CLASS);
-        
+
         for (CategoryInfo catInfo : categoryInfo) {
             String superclassName = catLabelToIdMap.get(catInfo.getParentLabel());
             if (superclassName == null) {
@@ -614,7 +613,7 @@ public class ImportChapterXX_April2011 {
             }
 			RDFSNamedClass category = icdContentModel.createICDCategory(null, superclassName);
 			catLabelToIdMap.put(catInfo.getSortingLabel(), category.getName());
-			
+
             category.setPropertyValue(owlModel.getRDFSLabelProperty(), catInfo.getFullLabel());
 
             category.setPropertyValue(propSortingLabel, catInfo.getSortingLabel());
@@ -624,7 +623,7 @@ public class ImportChapterXX_April2011 {
             icdContentModel.addTitleTermToClass(category, titleTerm);
 
             addICD10References(category, catInfo.getIcd10Codes(), propICD10Ref, resourceBean);
-            
+
             addICECIReferences(category, catInfo.getIntentCodes(), propIntent, resourceBean);
             addICECIReferences(category, catInfo.getIntentDescriptorCodes(), propIntentDescriptor, resourceBean);
             addICECIReferences(category, catInfo.getMechanismCodes(), propMechanism, resourceBean);
@@ -658,7 +657,7 @@ public class ImportChapterXX_April2011 {
 		}
 	}
 
-	
+
 	private static void addICECIReferences(RDFSNamedClass category,
 			List<ICECIReference> iceciCodes, RDFProperty propICECICodeRef,
 			RDFResourceBean resBean) {
@@ -672,13 +671,13 @@ public class ImportChapterXX_April2011 {
 				iceciRef.setPropertyValue(resBean.getPropOntologyId(), ICECI_ONTOLOGY_ID);
 				iceciRef.setPropertyValue(resBean.getPropTermId(), ICECI_TERM_ID_PREFIX + iceciCode.code);
 				iceciRef.setPropertyValue(resBean.getPropUrl(), ICECI_URL_PREFIX + iceciCode.code);
-				
+
 				category.addPropertyValue(propICECICodeRef, iceciRef);
 			}
 		}
 	}
-	
-	
+
+
 	private static class RDFResourceBean {
 
         private RDFProperty propBpShortTerm;
@@ -688,10 +687,10 @@ public class ImportChapterXX_April2011 {
         private RDFProperty propOntologyId;
         private RDFProperty propTermId;
         private RDFProperty propLabel;
-        
+
         private RDFSNamedClass clsICD10RefTerm;
         private RDFSNamedClass clsExtCauseTerm;
-        
+
         public RDFResourceBean(OWLModel owlModel) {
             propBpShortTerm = owlModel.getRDFProperty(ICDContentModelConstants.BP_SHORT_TERM_ID_PROP);
             propBpOntologyLabel = owlModel.getRDFProperty(ICDContentModelConstants.BP_ONTOLOGY_LABEL_PROP);
@@ -704,7 +703,7 @@ public class ImportChapterXX_April2011 {
             clsICD10RefTerm = owlModel.getRDFSNamedClass(CLASS_ICD10_REFERENCE_TERM);
             clsExtCauseTerm = owlModel.getRDFSNamedClass(CLASS_EXTERNAL_CAUSE_TERM);
         }
-        
+
         public RDFProperty getPropBpShortTerm() {
 			return propBpShortTerm;
 		}
@@ -726,7 +725,7 @@ public class ImportChapterXX_April2011 {
 		public RDFProperty getPropLabel() {
 			return propLabel;
 		}
-		
+
 		public RDFSNamedClass getClsICD10RefTerm() {
 			return clsICD10RefTerm;
 		}
