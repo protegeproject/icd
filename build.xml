@@ -1,5 +1,5 @@
 <?xml version = "1.0" encoding = "utf-8"?>
-<project name="Misc ICD Utilitis" default="dist" basedir=".">
+<project name="ICD Utilities" default="dist" basedir=".">
     <property environment="env"/>
     <property name="protege.home" value="${env.PROTEGE_HOME}"/>
     <property file="local.properties"/>
