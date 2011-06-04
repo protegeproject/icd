@@ -1,4 +1,4 @@
-; Fri Jun 03 18:59:32 PDT 2011
+; Fri Jun 03 19:16:19 PDT 2011
 ; 
 ;+ (version "3.4.6")
 ;+ (build "Build 612")
@@ -6,11 +6,13 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[icd_content_model_ProjectKB_Class10171]
-		[icd_content_model_ProjectKB_Class10172]
-		[icd_content_model_ProjectKB_Class10173]
-		[icd_content_model_ProjectKB_Class10174]
-		[icd_content_model_ProjectKB_Class10175]))
+		[icd_content_model_ProjectKB_Class10364]
+		[icd_content_model_ProjectKB_Class10365]
+		[icd_content_model_ProjectKB_Class10366]
+		[icd_content_model_ProjectKB_Class10367]
+		[icd_content_model_ProjectKB_Class10368]
+		[icd_content_model_ProjectKB_Class10369]
+		[icd_content_model_ProjectKB_Class10370]))
 
 ([CLSES_TAB] of  Widget
 
@@ -49,53 +51,63 @@
 	(name "OWL-DEFAULT-ANNOT-PROP-IN-VIEW")
 	(string_value "http://www.w3.org/2000/01/rdf-schema#comment,http://www.w3.org/2000/01/rdf-schema#label"))
 
-([icd_content_model_ProjectKB_Class10171] of  String
+([icd_content_model_ProjectKB_Class10364] of  String
 
 	(name ":INSTANCE-ANNOTATION")
 	(string_value "%3AANNOTATION-TEXT"))
 
-([icd_content_model_ProjectKB_Class10172] of  String
+([icd_content_model_ProjectKB_Class10365] of  String
 
 	(name "http://www.w3.org/2002/07/owl#Class")
 	(string_value "%3ANAME"))
 
-([icd_content_model_ProjectKB_Class10173] of  String
+([icd_content_model_ProjectKB_Class10366] of  String
+
+	(name "http://who.int/icd#DisplayStatusValueSet")
+	(string_value "http%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23label"))
+
+([icd_content_model_ProjectKB_Class10367] of  String
 
 	(name ":PAL-CONSTRAINT")
 	(string_value "%3APAL-NAME"))
 
-([icd_content_model_ProjectKB_Class10174] of  String
+([icd_content_model_ProjectKB_Class10368] of  String
 
 	(name ":META-CLASS")
 	(string_value "%3ANAME"))
 
-([icd_content_model_ProjectKB_Class10175] of  String
+([icd_content_model_ProjectKB_Class10369] of  String
+
+	(name "http://who.int/icd#TAG")
+	(string_value "http%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23label"))
+
+([icd_content_model_ProjectKB_Class10370] of  String
 
 	(name "http://www.w3.org/2002/07/owl#Thing")
 	(string_value "%3ANAME"))
 
-([icd_content_model_ProjectKB_Class10176] of  Map_Entry
+([icd_content_model_ProjectKB_Class10371] of  Map_Entry
 
 	(key "show_collaboration_panel")
 	(key_class "java.lang.String")
 	(value "true")
 	(value_class "java.lang.Boolean"))
 
-([icd_content_model_ProjectKB_Class10177] of  Map_Entry
+([icd_content_model_ProjectKB_Class10372] of  Map_Entry
 
 	(key "chaoProject")
 	(key_class "java.lang.String")
 	(value "annotation_icd_content_model.pprj")
 	(value_class "java.lang.String"))
 
-([icd_content_model_ProjectKB_Class10178] of  Map_Entry
+([icd_content_model_ProjectKB_Class10373] of  Map_Entry
 
 	(key "edu.stanford.smi.protege.collab.annotation.gui.panel.ChatPanel")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([icd_content_model_ProjectKB_Class10179] of  Map_Entry
+([icd_content_model_ProjectKB_Class10374] of  Map_Entry
 
 	(key "change_tracking_active")
 	(key_class "java.lang.String")
@@ -697,10 +709,10 @@
 ([KB_325529_Class0] of  Map
 
 	(entries
-		[icd_content_model_ProjectKB_Class10176]
-		[icd_content_model_ProjectKB_Class10177]
-		[icd_content_model_ProjectKB_Class10178]
-		[icd_content_model_ProjectKB_Class10179]))
+		[icd_content_model_ProjectKB_Class10371]
+		[icd_content_model_ProjectKB_Class10372]
+		[icd_content_model_ProjectKB_Class10373]
+		[icd_content_model_ProjectKB_Class10374]))
 
 ([KB_325529_Class4] of  String
 
@@ -7886,7 +7898,6 @@
 		"http://www.w3.org/2000/01/rdf-schema#Literal"
 		"http://www.w3.org/2002/07/owl#equivalentProperty"
 		"http://www.w3.org/2003/11/swrl#classPredicate"
-		"http://www.w3.org/2000/01/rdf-schema#label"
 		"http://www.w3.org/2001/XMLSchema#long"
 		"http://www.w3.org/2002/07/owl#SomeValuesFromRestriction"
 		":SLOT-VALUE-TYPE"
@@ -7936,7 +7947,6 @@
 		"http://www.w3.org/2003/11/swrlb#ceiling"
 		"http://www.w3.org/2003/11/swrlb#lessThanOrEqual"
 		"http://www.w3.org/2001/XMLSchema#ENTITY"
-		"http://www.w3.org/2000/01/rdf-schema#comment"
 		"http://www.w3.org/2001/XMLSchema#byte"
 		"http://www.w3.org/2001/XMLSchema#float"
 		":NUMERIC-MINIMUM"

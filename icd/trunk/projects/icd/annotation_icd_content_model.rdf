@@ -3300,6 +3300,524 @@
 	 kb:date="06/03/2011 18:59:29 PDT"
 	 kb:sequence="155"
 	 rdfs:label="06/03/2011 18:59:29 PDT"/>
+<kb:Property_Created rdf:about="&kb;annotation_icd_content_model_Class20331"
+	 kb:action="Property_Created"
+	 kb:author="ttania"
+	 kb:context="Property Create: objectProperty_20"
+	 kb:creationName="http://who.int/icd#objectProperty_20"
+	 rdfs:label="Property Create: objectProperty_20">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20332"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20333"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20338"/>
+</kb:Property_Created>
+<kb:Ontology_Property rdf:about="&kb;annotation_icd_content_model_Class20332"
+	 kb:currentName="http://who.int/icd#assignedTAG"
+	 rdfs:label="http://who.int/icd#assignedTAG">
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20331"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20334"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20336"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20338"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20340"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20342"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20349"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20386"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20400"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20402"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20404"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20408"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20410"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20412"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20414"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20432"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20434"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20436"/>
+</kb:Ontology_Property>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20333"
+	 kb:date="06/03/2011 19:04:02 PDT"
+	 kb:sequence="156"
+	 rdfs:label="06/03/2011 19:04:02 PDT"/>
+<kb:Individual_Added rdf:about="&kb;annotation_icd_content_model_Class20334"
+	 kb:action="Individual_Added"
+	 kb:author="ttania">
+	<kb:context>Instance Added: objectProperty_20 (instance of: owl:ObjectProperty)</kb:context>
+	<rdfs:label>Instance Added: objectProperty_20 (instance of: owl:ObjectProperty)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20332"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20335"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20338"/>
+</kb:Individual_Added>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20335"
+	 kb:date="06/03/2011 19:04:02 PDT"
+	 kb:sequence="157"
+	 rdfs:label="06/03/2011 19:04:02 PDT"/>
+<kb:DomainProperty_Added rdf:about="&kb;annotation_icd_content_model_Class20336"
+	 kb:action="DomainProperty_Added"
+	 kb:author="ttania">
+	<kb:context>Domain Property Added: objectProperty_20(added to: owl:Thing)</kb:context>
+	<rdfs:label>Domain Property Added: objectProperty_20(added to: owl:Thing)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20332"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20337"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20338"/>
+</kb:DomainProperty_Added>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20337"
+	 kb:date="06/03/2011 19:04:02 PDT"
+	 kb:sequence="158"
+	 rdfs:label="06/03/2011 19:04:02 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_icd_content_model_Class20338"
+	 kb:action="Composite_Change"
+	 kb:author="ttania">
+	<kb:context>Create object property objectProperty_20 -- Apply to: http://who.int/icd#objectProperty_20</kb:context>
+	<rdfs:label>Create object property objectProperty_20 -- Apply to: http://who.int/icd#objectProperty_20</rdfs:label>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20331"/>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20332"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20334"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20336"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20339"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20342"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20339"
+	 kb:date="06/03/2011 19:04:02 PDT"
+	 kb:sequence="159"
+	 rdfs:label="06/03/2011 19:04:02 PDT"/>
+<kb:Name_Changed rdf:about="&kb;annotation_icd_content_model_Class20340"
+	 kb:action="Name_Changed"
+	 kb:author="ttania"
+	 kb:context="Name change from 'objectProperty_20' to 'assignedTAG'"
+	 kb:newName="http://who.int/icd#assignedTAG"
+	 kb:oldName="http://who.int/icd#objectProperty_20"
+	 rdfs:label="Name change from 'objectProperty_20' to 'assignedTAG'">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20332"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20341"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20342"/>
+</kb:Name_Changed>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20341"
+	 kb:date="06/03/2011 19:04:09 PDT"
+	 kb:sequence="160"
+	 rdfs:label="06/03/2011 19:04:09 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_icd_content_model_Class20342"
+	 kb:action="Composite_Change"
+	 kb:author="ttania"
+	 kb:context="Create Property assignedTAG"
+	 rdfs:label="Create Property assignedTAG">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20332"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20338"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20340"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20343"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20343"
+	 kb:date="06/03/2011 19:04:09 PDT"
+	 kb:sequence="161"
+	 rdfs:label="06/03/2011 19:04:09 PDT"/>
+<kb:Property_Created rdf:about="&kb;annotation_icd_content_model_Class20344"
+	 kb:action="Property_Created"
+	 kb:author="ttania"
+	 kb:context="Property Create: assignedTAG_21"
+	 kb:creationName="http://who.int/icd#assignedTAG_21"
+	 rdfs:label="Property Create: assignedTAG_21">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20345"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20346"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20353"/>
+</kb:Property_Created>
+<kb:Ontology_Property rdf:about="&kb;annotation_icd_content_model_Class20345"
+	 kb:currentName="http://who.int/icd#assignedPrimaryTAG"
+	 rdfs:label="http://who.int/icd#assignedPrimaryTAG">
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20344"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20347"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20351"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20353"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20355"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20357"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20396"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20398"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20416"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20418"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20420"/>
+</kb:Ontology_Property>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20346"
+	 kb:date="06/03/2011 19:04:12 PDT"
+	 kb:sequence="162"
+	 rdfs:label="06/03/2011 19:04:12 PDT"/>
+<kb:Individual_Added rdf:about="&kb;annotation_icd_content_model_Class20347"
+	 kb:action="Individual_Added"
+	 kb:author="ttania">
+	<kb:context>Instance Added: assignedTAG_21 (instance of: owl:ObjectProperty)</kb:context>
+	<rdfs:label>Instance Added: assignedTAG_21 (instance of: owl:ObjectProperty)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20345"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20348"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20353"/>
+</kb:Individual_Added>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20348"
+	 kb:date="06/03/2011 19:04:12 PDT"
+	 kb:sequence="163"
+	 rdfs:label="06/03/2011 19:04:12 PDT"/>
+<kb:Subproperty_Added rdf:about="&kb;annotation_icd_content_model_Class20349"
+	 kb:action="Subproperty_Added"
+	 kb:author="ttania"
+	 kb:context="Subproperty Added: assignedTAG (added to: assignedTAG_21)"
+	 rdfs:label="Subproperty Added: assignedTAG (added to: assignedTAG_21)">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20332"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20350"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20353"/>
+</kb:Subproperty_Added>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20350"
+	 kb:date="06/03/2011 19:04:12 PDT"
+	 kb:sequence="164"
+	 rdfs:label="06/03/2011 19:04:12 PDT"/>
+<kb:DomainProperty_Added rdf:about="&kb;annotation_icd_content_model_Class20351"
+	 kb:action="DomainProperty_Added"
+	 kb:author="ttania"
+	 kb:context="Domain Property Added: assignedTAG_21(added to: owl:Thing)"
+	 rdfs:label="Domain Property Added: assignedTAG_21(added to: owl:Thing)">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20345"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20352"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20353"/>
+</kb:DomainProperty_Added>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20352"
+	 kb:date="06/03/2011 19:04:12 PDT"
+	 kb:sequence="165"
+	 rdfs:label="06/03/2011 19:04:12 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_icd_content_model_Class20353"
+	 kb:action="Composite_Change"
+	 kb:author="ttania">
+	<kb:context>Create assignedTAG_21 as subproperty of assignedTAG -- Apply to: http://who.int/icd#assignedTAG_21</kb:context>
+	<rdfs:label>Create assignedTAG_21 as subproperty of assignedTAG -- Apply to: http://who.int/icd#assignedTAG_21</rdfs:label>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20344"/>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20345"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20347"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20349"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20351"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20354"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20357"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20354"
+	 kb:date="06/03/2011 19:04:12 PDT"
+	 kb:sequence="166"
+	 rdfs:label="06/03/2011 19:04:12 PDT"/>
+<kb:Name_Changed rdf:about="&kb;annotation_icd_content_model_Class20355"
+	 kb:action="Name_Changed"
+	 kb:author="ttania"
+	 kb:context="Name change from 'assignedTAG_21' to 'assignedPrimaryTAG'"
+	 kb:newName="http://who.int/icd#assignedPrimaryTAG"
+	 kb:oldName="http://who.int/icd#assignedTAG_21"
+	 rdfs:label="Name change from 'assignedTAG_21' to 'assignedPrimaryTAG'">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20345"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20356"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20357"/>
+</kb:Name_Changed>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20356"
+	 kb:date="06/03/2011 19:04:22 PDT"
+	 kb:sequence="167"
+	 rdfs:label="06/03/2011 19:04:22 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_icd_content_model_Class20357"
+	 kb:action="Composite_Change"
+	 kb:author="ttania"
+	 kb:context="Create Property assignedPrimaryTAG"
+	 rdfs:label="Create Property assignedPrimaryTAG">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20345"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20353"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20355"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20358"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20358"
+	 kb:date="06/03/2011 19:04:22 PDT"
+	 kb:sequence="168"
+	 rdfs:label="06/03/2011 19:04:22 PDT"/>
+<kb:Property_Created rdf:about="&kb;annotation_icd_content_model_Class20359"
+	 kb:action="Property_Created"
+	 kb:author="ttania"
+	 kb:context="Property Create: objectProperty_22"
+	 kb:creationName="http://who.int/icd#objectProperty_22"
+	 rdfs:label="Property Create: objectProperty_22">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20360"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20361"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20366"/>
+</kb:Property_Created>
+<kb:Ontology_Property rdf:about="&kb;annotation_icd_content_model_Class20360"
+	 rdfs:label="annotation_icd_content_model_Class20360">
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20359"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20362"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20364"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20366"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20368"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20373"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20375"/>
+</kb:Ontology_Property>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20361"
+	 kb:date="06/03/2011 19:04:24 PDT"
+	 kb:sequence="169"
+	 rdfs:label="06/03/2011 19:04:24 PDT"/>
+<kb:Individual_Added rdf:about="&kb;annotation_icd_content_model_Class20362"
+	 kb:action="Individual_Added"
+	 kb:author="ttania">
+	<kb:context>Instance Added: objectProperty_22 (instance of: owl:ObjectProperty)</kb:context>
+	<rdfs:label>Instance Added: objectProperty_22 (instance of: owl:ObjectProperty)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20360"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20363"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20366"/>
+</kb:Individual_Added>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20363"
+	 kb:date="06/03/2011 19:04:24 PDT"
+	 kb:sequence="170"
+	 rdfs:label="06/03/2011 19:04:24 PDT"/>
+<kb:DomainProperty_Added rdf:about="&kb;annotation_icd_content_model_Class20364"
+	 kb:action="DomainProperty_Added"
+	 kb:author="ttania">
+	<kb:context>Domain Property Added: objectProperty_22(added to: owl:Thing)</kb:context>
+	<rdfs:label>Domain Property Added: objectProperty_22(added to: owl:Thing)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20360"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20365"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20366"/>
+</kb:DomainProperty_Added>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20365"
+	 kb:date="06/03/2011 19:04:24 PDT"
+	 kb:sequence="171"
+	 rdfs:label="06/03/2011 19:04:24 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_icd_content_model_Class20366"
+	 kb:action="Composite_Change"
+	 kb:author="ttania">
+	<kb:context>Create object property objectProperty_22 -- Apply to: http://who.int/icd#objectProperty_22</kb:context>
+	<rdfs:label>Create object property objectProperty_22 -- Apply to: http://who.int/icd#objectProperty_22</rdfs:label>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20359"/>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20360"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20362"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20364"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20367"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20367"
+	 kb:date="06/03/2011 19:04:24 PDT"
+	 kb:sequence="172"
+	 rdfs:label="06/03/2011 19:04:24 PDT"/>
+<kb:DomainProperty_Removed rdf:about="&kb;annotation_icd_content_model_Class20368"
+	 kb:action="DomainProperty_Removed"
+	 kb:author="ttania">
+	<kb:context>Domain Property Removed: objectProperty_22(removed from: owl:Thing)</kb:context>
+	<rdfs:label>Domain Property Removed: objectProperty_22(removed from: owl:Thing)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20360"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20369"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20371"/>
+</kb:DomainProperty_Removed>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20369"
+	 kb:date="06/03/2011 19:04:29 PDT"
+	 kb:sequence="173"
+	 rdfs:label="06/03/2011 19:04:29 PDT"/>
+<kb:Ontology_Class rdf:about="&kb;annotation_icd_content_model_Class20370"
+	 kb:currentName="http://www.w3.org/2002/07/owl#Thing"
+	 rdfs:label="http://www.w3.org/2002/07/owl#Thing">
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20371"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20377"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20379"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20406"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20531"/>
+</kb:Ontology_Class>
+<kb:Composite_Change rdf:about="&kb;annotation_icd_content_model_Class20371"
+	 kb:action="Composite_Change"
+	 kb:author="ttania">
+	<kb:context>Remove template slot objectProperty_22 from class owl:Thing -- Apply to: http://www.w3.org/2002/07/owl#Thing</kb:context>
+	<rdfs:label>Remove template slot objectProperty_22 from class owl:Thing -- Apply to: http://www.w3.org/2002/07/owl#Thing</rdfs:label>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20368"/>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20370"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20372"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20377"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20372"
+	 kb:date="06/03/2011 19:04:29 PDT"
+	 kb:sequence="174"
+	 rdfs:label="06/03/2011 19:04:29 PDT"/>
+<kb:Property_Deleted rdf:about="&kb;annotation_icd_content_model_Class20373"
+	 kb:action="Property_Deleted"
+	 kb:author="ttania"
+	 kb:context="Property Delete: objectProperty_22"
+	 kb:deletionName="http://who.int/icd#objectProperty_22"
+	 rdfs:label="Property Delete: objectProperty_22">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20360"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20374"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20377"/>
+</kb:Property_Deleted>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20374"
+	 kb:date="06/03/2011 19:04:29 PDT"
+	 kb:sequence="175"
+	 rdfs:label="06/03/2011 19:04:29 PDT"/>
+<kb:Individual_Removed rdf:about="&kb;annotation_icd_content_model_Class20375"
+	 kb:action="Individual_Removed"
+	 kb:author="ttania">
+	<kb:context>Instance Removed: objectProperty_22 (instance of: owl:ObjectProperty)</kb:context>
+	<rdfs:label>Instance Removed: objectProperty_22 (instance of: owl:ObjectProperty)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20360"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20376"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20377"/>
+</kb:Individual_Removed>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20376"
+	 kb:date="06/03/2011 19:04:29 PDT"
+	 kb:sequence="176"
+	 rdfs:label="06/03/2011 19:04:29 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_icd_content_model_Class20377"
+	 kb:action="Composite_Change"
+	 kb:author="ttania"
+	 kb:context="Delete slot objectProperty_22"
+	 rdfs:label="Delete slot objectProperty_22">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20370"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20371"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20373"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20375"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20378"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20379"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20378"
+	 kb:date="06/03/2011 19:04:29 PDT"
+	 kb:sequence="177"
+	 rdfs:label="06/03/2011 19:04:29 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_icd_content_model_Class20379"
+	 kb:action="Composite_Change"
+	 kb:author="ttania"
+	 kb:context="Delete properties objectProperty_22"
+	 rdfs:label="Delete properties objectProperty_22">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20370"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20377"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20380"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20380"
+	 kb:date="06/03/2011 19:04:29 PDT"
+	 kb:sequence="178"
+	 rdfs:label="06/03/2011 19:04:29 PDT"/>
+<kb:Property_Created rdf:about="&kb;annotation_icd_content_model_Class20381"
+	 kb:action="Property_Created"
+	 kb:author="ttania"
+	 kb:context="Property Create: assignedTAG_23"
+	 kb:creationName="http://who.int/icd#assignedTAG_23"
+	 rdfs:label="Property Create: assignedTAG_23">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20382"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20383"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20390"/>
+</kb:Property_Created>
+<kb:Ontology_Property rdf:about="&kb;annotation_icd_content_model_Class20382"
+	 kb:currentName="http://who.int/icd#assignedSecondaryTAG"
+	 rdfs:label="http://who.int/icd#assignedSecondaryTAG">
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20381"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20384"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20388"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20390"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20392"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20394"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20422"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20424"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20426"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20428"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20430"/>
+</kb:Ontology_Property>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20383"
+	 kb:date="06/03/2011 19:04:31 PDT"
+	 kb:sequence="179"
+	 rdfs:label="06/03/2011 19:04:31 PDT"/>
+<kb:Individual_Added rdf:about="&kb;annotation_icd_content_model_Class20384"
+	 kb:action="Individual_Added"
+	 kb:author="ttania">
+	<kb:context>Instance Added: assignedTAG_23 (instance of: owl:ObjectProperty)</kb:context>
+	<rdfs:label>Instance Added: assignedTAG_23 (instance of: owl:ObjectProperty)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20382"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20385"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20390"/>
+</kb:Individual_Added>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20385"
+	 kb:date="06/03/2011 19:04:31 PDT"
+	 kb:sequence="180"
+	 rdfs:label="06/03/2011 19:04:31 PDT"/>
+<kb:Subproperty_Added rdf:about="&kb;annotation_icd_content_model_Class20386"
+	 kb:action="Subproperty_Added"
+	 kb:author="ttania"
+	 kb:context="Subproperty Added: assignedTAG (added to: assignedTAG_23)"
+	 rdfs:label="Subproperty Added: assignedTAG (added to: assignedTAG_23)">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20332"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20387"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20390"/>
+</kb:Subproperty_Added>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20387"
+	 kb:date="06/03/2011 19:04:31 PDT"
+	 kb:sequence="181"
+	 rdfs:label="06/03/2011 19:04:31 PDT"/>
+<kb:DomainProperty_Added rdf:about="&kb;annotation_icd_content_model_Class20388"
+	 kb:action="DomainProperty_Added"
+	 kb:author="ttania"
+	 kb:context="Domain Property Added: assignedTAG_23(added to: owl:Thing)"
+	 rdfs:label="Domain Property Added: assignedTAG_23(added to: owl:Thing)">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20382"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20389"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20390"/>
+</kb:DomainProperty_Added>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20389"
+	 kb:date="06/03/2011 19:04:31 PDT"
+	 kb:sequence="182"
+	 rdfs:label="06/03/2011 19:04:31 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_icd_content_model_Class20390"
+	 kb:action="Composite_Change"
+	 kb:author="ttania">
+	<kb:context>Create assignedTAG_23 as subproperty of assignedTAG -- Apply to: http://who.int/icd#assignedTAG_23</kb:context>
+	<rdfs:label>Create assignedTAG_23 as subproperty of assignedTAG -- Apply to: http://who.int/icd#assignedTAG_23</rdfs:label>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20381"/>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20382"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20384"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20386"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20388"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20391"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20394"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20391"
+	 kb:date="06/03/2011 19:04:31 PDT"
+	 kb:sequence="183"
+	 rdfs:label="06/03/2011 19:04:31 PDT"/>
+<kb:Name_Changed rdf:about="&kb;annotation_icd_content_model_Class20392"
+	 kb:action="Name_Changed"
+	 kb:author="ttania"
+	 kb:context="Name change from 'assignedTAG_23' to 'assignedSecondaryTAG'"
+	 kb:newName="http://who.int/icd#assignedSecondaryTAG"
+	 kb:oldName="http://who.int/icd#assignedTAG_23"
+	 rdfs:label="Name change from 'assignedTAG_23' to 'assignedSecondaryTAG'">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20382"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20393"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20394"/>
+</kb:Name_Changed>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20393"
+	 kb:date="06/03/2011 19:04:39 PDT"
+	 kb:sequence="184"
+	 rdfs:label="06/03/2011 19:04:39 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_icd_content_model_Class20394"
+	 kb:action="Composite_Change"
+	 kb:author="ttania"
+	 kb:context="Create Property assignedSecondaryTAG"
+	 rdfs:label="Create Property assignedSecondaryTAG">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20382"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20390"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20392"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20395"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20395"
+	 kb:date="06/03/2011 19:04:39 PDT"
+	 kb:sequence="185"
+	 rdfs:label="06/03/2011 19:04:39 PDT"/>
+<kb:Individual_Added rdf:about="&kb;annotation_icd_content_model_Class20396"
+	 kb:action="Individual_Added"
+	 kb:author="ttania">
+	<kb:context>Instance Added: assignedPrimaryTAG (instance of: owl:FunctionalProperty)</kb:context>
+	<rdfs:label>Instance Added: assignedPrimaryTAG (instance of: owl:FunctionalProperty)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20345"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20397"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20398"/>
+</kb:Individual_Added>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20397"
+	 kb:date="06/03/2011 19:04:41 PDT"
+	 kb:sequence="186"
+	 rdfs:label="06/03/2011 19:04:41 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_icd_content_model_Class20398"
+	 kb:action="Composite_Change"
+	 kb:author="ttania">
+	<kb:context>Add to assignedPrimaryTAG direct type : owl:FunctionalProperty -- Apply to: http://who.int/icd#assignedPrimaryTAG</kb:context>
+	<rdfs:label>Add to assignedPrimaryTAG direct type : owl:FunctionalProperty -- Apply to: http://who.int/icd#assignedPrimaryTAG</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20345"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20396"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20399"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20399"
+	 kb:date="06/03/2011 19:04:41 PDT"
+	 kb:sequence="187"
+	 rdfs:label="06/03/2011 19:04:41 PDT"/>
 <kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class204"
 	 kb:action="Property Value Changed"
 	 kb:author="ttania">
@@ -3308,10 +3826,1393 @@
 	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class205"/>
 	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class54"/>
 </kb:Property_Value>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class20400"
+	 kb:action="Property Value Changed"
+	 kb:author="ttania">
+	<kb:context>Property: rdfs:domain for instance: assignedTAG set to: (Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:domain for instance: assignedTAG set to: (Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20332"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20401"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20410"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20401"
+	 kb:date="06/03/2011 19:05:50 PDT"
+	 kb:sequence="188"
+	 rdfs:label="06/03/2011 19:05:50 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class20402"
+	 kb:action="Property Value Changed"
+	 kb:author="ttania">
+	<kb:context>Property: rdfs:domain for instance: assignedTAG set to: ICDSection(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:domain for instance: assignedTAG set to: ICDSection(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20332"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20403"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20410"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20403"
+	 kb:date="06/03/2011 19:05:50 PDT"
+	 kb:sequence="189"
+	 rdfs:label="06/03/2011 19:05:50 PDT"/>
+<kb:DomainProperty_Removed rdf:about="&kb;annotation_icd_content_model_Class20404"
+	 kb:action="DomainProperty_Removed"
+	 kb:author="ttania">
+	<kb:context>Domain Property Removed: assignedTAG(removed from: owl:Thing)</kb:context>
+	<rdfs:label>Domain Property Removed: assignedTAG(removed from: owl:Thing)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20332"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20405"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20406"/>
+</kb:DomainProperty_Removed>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20405"
+	 kb:date="06/03/2011 19:05:50 PDT"
+	 kb:sequence="190"
+	 rdfs:label="06/03/2011 19:05:50 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_icd_content_model_Class20406"
+	 kb:action="Composite_Change"
+	 kb:author="ttania">
+	<kb:context>Remove template slot from class DefaultOWLNamedClass(http://www.w3.org/2002/07/owl#Thing) -- Apply to: http://www.w3.org/2002/07/owl#Thing</kb:context>
+	<rdfs:label>Remove template slot from class DefaultOWLNamedClass(http://www.w3.org/2002/07/owl#Thing) -- Apply to: http://www.w3.org/2002/07/owl#Thing</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20370"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20404"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20407"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20410"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20407"
+	 kb:date="06/03/2011 19:05:50 PDT"
+	 kb:sequence="191"
+	 rdfs:label="06/03/2011 19:05:50 PDT"/>
+<kb:DomainProperty_Added rdf:about="&kb;annotation_icd_content_model_Class20408"
+	 kb:action="DomainProperty_Added"
+	 kb:author="ttania"
+	 kb:context="Domain Property Added: assignedTAG(added to: ICDSection)"
+	 rdfs:label="Domain Property Added: assignedTAG(added to: ICDSection)">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20332"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20409"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20410"/>
+</kb:DomainProperty_Added>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20409"
+	 kb:date="06/03/2011 19:05:50 PDT"
+	 kb:sequence="192"
+	 rdfs:label="06/03/2011 19:05:50 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_icd_content_model_Class20410"
+	 kb:action="Composite_Change"
+	 kb:author="ttania">
+	<kb:context>Add ICDSection to the domain of assignedTAG -- Apply to: http://who.int/icd#assignedTAG</kb:context>
+	<rdfs:label>Add ICDSection to the domain of assignedTAG -- Apply to: http://who.int/icd#assignedTAG</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20332"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20400"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20402"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20406"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20408"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20411"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20411"
+	 kb:date="06/03/2011 19:05:50 PDT"
+	 kb:sequence="193"
+	 rdfs:label="06/03/2011 19:05:50 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class20412"
+	 kb:action="Property Value Changed"
+	 kb:author="ttania">
+	<kb:context>Property: rdfs:range for instance: assignedTAG set to: TAG(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:range for instance: assignedTAG set to: TAG(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20332"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20413"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20414"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20413"
+	 kb:date="06/03/2011 19:06:05 PDT"
+	 kb:sequence="194"
+	 rdfs:label="06/03/2011 19:06:05 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_icd_content_model_Class20414"
+	 kb:action="Composite_Change"
+	 kb:author="ttania">
+	<kb:context>Add TAG to range of assignedTAG -- Apply to: http://who.int/icd#assignedTAG</kb:context>
+	<rdfs:label>Add TAG to range of assignedTAG -- Apply to: http://who.int/icd#assignedTAG</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20332"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20412"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20415"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20415"
+	 kb:date="06/03/2011 19:06:05 PDT"
+	 kb:sequence="195"
+	 rdfs:label="06/03/2011 19:06:05 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class20416"
+	 kb:action="Property Value Changed"
+	 kb:author="ttania">
+	<kb:context>Property: rdfs:comment for instance: assignedPrimaryTAG set to: (Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:comment for instance: assignedPrimaryTAG set to: (Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20345"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20417"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20417"
+	 kb:date="06/03/2011 19:06:47 PDT"
+	 kb:sequence="196"
+	 rdfs:label="06/03/2011 19:06:47 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class20418"
+	 kb:action="Property Value Changed"
+	 kb:author="ttania">
+	<kb:context>Property: rdfs:comment for instance: assignedPrimaryTAG set to: (Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:comment for instance: assignedPrimaryTAG set to: (Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20345"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20419"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20419"
+	 kb:date="06/03/2011 19:07:24 PDT"
+	 kb:sequence="197"
+	 rdfs:label="06/03/2011 19:07:24 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class20420"
+	 kb:action="Property Value Changed"
+	 kb:author="ttania">
+	<kb:context>Property: rdfs:comment for instance: assignedPrimaryTAG set to: The TAG mainly responsible for a category, can be only one of them, it is not inherited to the child classes(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:comment for instance: assignedPrimaryTAG set to: The TAG mainly responsible for a category, can be only one of them, it is not inherited to the child classes(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20345"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20421"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20421"
+	 kb:date="06/03/2011 19:07:24 PDT"
+	 kb:sequence="198"
+	 rdfs:label="06/03/2011 19:07:24 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class20422"
+	 kb:action="Property Value Changed"
+	 kb:author="ttania">
+	<kb:context>Property: rdfs:comment for instance: assignedSecondaryTAG set to: (Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:comment for instance: assignedSecondaryTAG set to: (Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20382"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20423"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20423"
+	 kb:date="06/03/2011 19:07:27 PDT"
+	 kb:sequence="199"
+	 rdfs:label="06/03/2011 19:07:27 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class20424"
+	 kb:action="Property Value Changed"
+	 kb:author="ttania">
+	<kb:context>Property: rdfs:comment for instance: assignedSecondaryTAG set to: (Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:comment for instance: assignedSecondaryTAG set to: (Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20382"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20425"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20425"
+	 kb:date="06/03/2011 19:08:12 PDT"
+	 kb:sequence="200"
+	 rdfs:label="06/03/2011 19:08:12 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class20426"
+	 kb:action="Property Value Changed"
+	 kb:author="ttania">
+	<kb:context>Property: rdfs:comment for instance: assignedSecondaryTAG set to: the secondary TAGs associated to a category, this property will hold only the local values, but the UI will display also the "inherited" secondary TAGs(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:comment for instance: assignedSecondaryTAG set to: the secondary TAGs associated to a category, this property will hold only the local values, but the UI will display also the "inherited" secondary TAGs(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20382"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20427"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20427"
+	 kb:date="06/03/2011 19:08:12 PDT"
+	 kb:sequence="201"
+	 rdfs:label="06/03/2011 19:08:12 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class20428"
+	 kb:action="Property Value Changed"
+	 kb:author="ttania">
+	<kb:context>Property: rdfs:comment for instance: assignedSecondaryTAG set to: (Old values:the secondary TAGs associated to a category, this property will hold only the local values, but the UI will display also the "inherited" secondary TAGs)</kb:context>
+	<rdfs:label>Property: rdfs:comment for instance: assignedSecondaryTAG set to: (Old values:the secondary TAGs associated to a category, this property will hold only the local values, but the UI will display also the "inherited" secondary TAGs)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20382"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20429"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20429"
+	 kb:date="06/03/2011 19:08:18 PDT"
+	 kb:sequence="202"
+	 rdfs:label="06/03/2011 19:08:18 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class20430"
+	 kb:action="Property Value Changed"
+	 kb:author="ttania">
+	<kb:context>Property: rdfs:comment for instance: assignedSecondaryTAG set to: the secondary TAGs associated to a category, this property will hold only the local values, but the UI will display also the "inherited" secondary TAGs, can be multiple(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:comment for instance: assignedSecondaryTAG set to: the secondary TAGs associated to a category, this property will hold only the local values, but the UI will display also the "inherited" secondary TAGs, can be multiple(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20382"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20431"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20431"
+	 kb:date="06/03/2011 19:08:18 PDT"
+	 kb:sequence="203"
+	 rdfs:label="06/03/2011 19:08:18 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class20432"
+	 kb:action="Property Value Changed"
+	 kb:author="ttania">
+	<kb:context>Property: rdfs:comment for instance: assignedTAG set to: (Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:comment for instance: assignedTAG set to: (Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20332"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20433"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20433"
+	 kb:date="06/03/2011 19:08:27 PDT"
+	 kb:sequence="204"
+	 rdfs:label="06/03/2011 19:08:27 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class20434"
+	 kb:action="Property Value Changed"
+	 kb:author="ttania">
+	<kb:context>Property: rdfs:comment for instance: assignedTAG set to: (Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:comment for instance: assignedTAG set to: (Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20332"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20435"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20435"
+	 kb:date="06/03/2011 19:08:34 PDT"
+	 kb:sequence="205"
+	 rdfs:label="06/03/2011 19:08:34 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class20436"
+	 kb:action="Property Value Changed"
+	 kb:author="ttania">
+	<kb:context>Property: rdfs:comment for instance: assignedTAG set to: assigned TAGs to a category(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:comment for instance: assignedTAG set to: assigned TAGs to a category(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20332"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20437"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20437"
+	 kb:date="06/03/2011 19:08:34 PDT"
+	 kb:sequence="206"
+	 rdfs:label="06/03/2011 19:08:34 PDT"/>
+<kb:Class_Created rdf:about="&kb;annotation_icd_content_model_Class20438"
+	 kb:action="Class_Created"
+	 kb:author="ttania"
+	 kb:context="Class Create: Class_24"
+	 kb:creationName="http://who.int/icd#Class_24"
+	 rdfs:label="Class Create: Class_24">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20439"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20440"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20451"/>
+</kb:Class_Created>
+<kb:Ontology_Class rdf:about="&kb;annotation_icd_content_model_Class20439"
+	 kb:currentName="http://who.int/icd#DisplayStatusValueSet"
+	 rdfs:label="http://who.int/icd#DisplayStatusValueSet">
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20438"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20441"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20443"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20445"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20447"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20449"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20451"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20453"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20455"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20589"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20591"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20593"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20595"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20599"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20601"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20603"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20605"/>
+</kb:Ontology_Class>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20440"
+	 kb:date="06/03/2011 19:10:27 PDT"
+	 kb:sequence="207"
+	 rdfs:label="06/03/2011 19:10:27 PDT"/>
+<kb:Individual_Added rdf:about="&kb;annotation_icd_content_model_Class20441"
+	 kb:action="Individual_Added"
+	 kb:author="ttania"
+	 kb:context="Instance Added: Class_24 (instance of: owl:Class)"
+	 rdfs:label="Instance Added: Class_24 (instance of: owl:Class)">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20439"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20442"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20451"/>
+</kb:Individual_Added>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20442"
+	 kb:date="06/03/2011 19:10:27 PDT"
+	 kb:sequence="208"
+	 rdfs:label="06/03/2011 19:10:27 PDT"/>
+<kb:Subclass_Added rdf:about="&kb;annotation_icd_content_model_Class20443"
+	 kb:action="Subclass_Added"
+	 kb:author="ttania"
+	 kb:context="Subclass Added: Class_24 (added to: ValueSet)"
+	 rdfs:label="Subclass Added: Class_24 (added to: ValueSet)">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20439"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20444"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20451"/>
+</kb:Subclass_Added>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20444"
+	 kb:date="06/03/2011 19:10:27 PDT"
+	 kb:sequence="209"
+	 rdfs:label="06/03/2011 19:10:27 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class20445"
+	 kb:action="Property Value Changed"
+	 kb:author="ttania">
+	<kb:context>Property: rdfs:subClassOf for instance: Class_24 set to: ValueSet(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:subClassOf for instance: Class_24 set to: ValueSet(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20439"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20446"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20451"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20446"
+	 kb:date="06/03/2011 19:10:27 PDT"
+	 kb:sequence="210"
+	 rdfs:label="06/03/2011 19:10:27 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class20447"
+	 kb:action="Property Value Changed"
+	 kb:author="ttania">
+	<kb:context>Property: rdfs:subClassOf for instance: Class_24 set to: ValueSet(Old values:ValueSet)</kb:context>
+	<rdfs:label>Property: rdfs:subClassOf for instance: Class_24 set to: ValueSet(Old values:ValueSet)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20439"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20448"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20451"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20448"
+	 kb:date="06/03/2011 19:10:27 PDT"
+	 kb:sequence="211"
+	 rdfs:label="06/03/2011 19:10:27 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class20449"
+	 kb:action="Property Value Changed"
+	 kb:author="ttania">
+	<kb:context>Property: rdfs:subClassOf for instance: Class_24 set to: ValueSet(Old values:ValueSet)</kb:context>
+	<rdfs:label>Property: rdfs:subClassOf for instance: Class_24 set to: ValueSet(Old values:ValueSet)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20439"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20450"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20451"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20450"
+	 kb:date="06/03/2011 19:10:27 PDT"
+	 kb:sequence="212"
+	 rdfs:label="06/03/2011 19:10:27 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_icd_content_model_Class20451"
+	 kb:action="Composite_Change"
+	 kb:author="ttania">
+	<kb:context>Create class Class_24 as subclass of ValueSet -- Apply to: http://who.int/icd#Class_24</kb:context>
+	<rdfs:label>Create class Class_24 as subclass of ValueSet -- Apply to: http://who.int/icd#Class_24</rdfs:label>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20438"/>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20439"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20441"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20443"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20445"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20447"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20449"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20452"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20455"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20452"
+	 kb:date="06/03/2011 19:10:27 PDT"
+	 kb:sequence="213"
+	 rdfs:label="06/03/2011 19:10:27 PDT"/>
+<kb:Name_Changed rdf:about="&kb;annotation_icd_content_model_Class20453"
+	 kb:action="Name_Changed"
+	 kb:author="ttania"
+	 kb:context="Name change from 'Class_24' to 'DisplayStatusValueSet'"
+	 kb:newName="http://who.int/icd#DisplayStatusValueSet"
+	 kb:oldName="http://who.int/icd#Class_24"
+	 rdfs:label="Name change from 'Class_24' to 'DisplayStatusValueSet'">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20439"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20454"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20455"/>
+</kb:Name_Changed>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20454"
+	 kb:date="06/03/2011 19:10:35 PDT"
+	 kb:sequence="214"
+	 rdfs:label="06/03/2011 19:10:35 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_icd_content_model_Class20455"
+	 kb:action="Composite_Change"
+	 kb:author="ttania"
+	 kb:context="Create Class DisplayStatusValueSet"
+	 rdfs:label="Create Class DisplayStatusValueSet">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20439"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20451"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20453"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20456"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20456"
+	 kb:date="06/03/2011 19:10:35 PDT"
+	 kb:sequence="215"
+	 rdfs:label="06/03/2011 19:10:35 PDT"/>
+<kb:Individual_Created rdf:about="&kb;annotation_icd_content_model_Class20457"
+	 kb:action="Individual_Created"
+	 kb:author="ttania"
+	 kb:context="Individual Create: DisplayStatusValueSet_25"
+	 kb:creationName="http://who.int/icd#DisplayStatusValueSet_25"
+	 rdfs:label="Individual Create: DisplayStatusValueSet_25">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20458"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20459"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20462"/>
+</kb:Individual_Created>
+<kb:Ontology_Individual rdf:about="&kb;annotation_icd_content_model_Class20458"
+	 kb:currentName="http://who.int/icd#DS_Green"
+	 rdfs:label="http://who.int/icd#DS_Green">
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20457"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20460"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20462"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20464"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20466"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20490"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20492"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20494"/>
+</kb:Ontology_Individual>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20459"
+	 kb:date="06/03/2011 19:10:50 PDT"
+	 kb:sequence="216"
+	 rdfs:label="06/03/2011 19:10:50 PDT"/>
+<kb:Individual_Added rdf:about="&kb;annotation_icd_content_model_Class20460"
+	 kb:action="Individual_Added"
+	 kb:author="ttania">
+	<kb:context>Instance Added: DisplayStatusValueSet_25 (instance of: DisplayStatusValueSet)</kb:context>
+	<rdfs:label>Instance Added: DisplayStatusValueSet_25 (instance of: DisplayStatusValueSet)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20458"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20461"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20462"/>
+</kb:Individual_Added>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20461"
+	 kb:date="06/03/2011 19:10:50 PDT"
+	 kb:sequence="217"
+	 rdfs:label="06/03/2011 19:10:50 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_icd_content_model_Class20462"
+	 kb:action="Composite_Change"
+	 kb:author="ttania">
+	<kb:context>Create Individual: DisplayStatusValueSet_25 of DisplayStatusValueSet -- Apply to: http://who.int/icd#DisplayStatusValueSet_25</kb:context>
+	<rdfs:label>Create Individual: DisplayStatusValueSet_25 of DisplayStatusValueSet -- Apply to: http://who.int/icd#DisplayStatusValueSet_25</rdfs:label>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20457"/>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20458"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20460"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20463"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20466"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20463"
+	 kb:date="06/03/2011 19:10:50 PDT"
+	 kb:sequence="218"
+	 rdfs:label="06/03/2011 19:10:50 PDT"/>
+<kb:Name_Changed rdf:about="&kb;annotation_icd_content_model_Class20464"
+	 kb:action="Name_Changed"
+	 kb:author="ttania"
+	 kb:context="Name change from 'DisplayStatusValueSet_25' to 'DS_Green'"
+	 kb:newName="http://who.int/icd#DS_Green"
+	 kb:oldName="http://who.int/icd#DisplayStatusValueSet_25"
+	 rdfs:label="Name change from 'DisplayStatusValueSet_25' to 'DS_Green'">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20458"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20465"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20466"/>
+</kb:Name_Changed>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20465"
+	 kb:date="06/03/2011 19:10:57 PDT"
+	 kb:sequence="219"
+	 rdfs:label="06/03/2011 19:10:57 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_icd_content_model_Class20466"
+	 kb:action="Composite_Change"
+	 kb:author="ttania"
+	 kb:context="Create Individual DS_Green"
+	 rdfs:label="Create Individual DS_Green">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20458"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20462"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20464"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20467"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20467"
+	 kb:date="06/03/2011 19:10:57 PDT"
+	 kb:sequence="220"
+	 rdfs:label="06/03/2011 19:10:57 PDT"/>
+<kb:Individual_Created rdf:about="&kb;annotation_icd_content_model_Class20468"
+	 kb:action="Individual_Created"
+	 kb:author="ttania"
+	 kb:context="Individual Create: DisplayStatusValueSet_26"
+	 kb:creationName="http://who.int/icd#DisplayStatusValueSet_26"
+	 rdfs:label="Individual Create: DisplayStatusValueSet_26">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20469"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20470"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20473"/>
+</kb:Individual_Created>
+<kb:Ontology_Individual rdf:about="&kb;annotation_icd_content_model_Class20469"
+	 kb:currentName="http://who.int/icd#DS_Yellow"
+	 rdfs:label="http://who.int/icd#DS_Yellow">
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20468"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20471"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20473"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20475"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20477"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20496"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20498"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20500"/>
+</kb:Ontology_Individual>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20470"
+	 kb:date="06/03/2011 19:11:00 PDT"
+	 kb:sequence="221"
+	 rdfs:label="06/03/2011 19:11:00 PDT"/>
+<kb:Individual_Added rdf:about="&kb;annotation_icd_content_model_Class20471"
+	 kb:action="Individual_Added"
+	 kb:author="ttania">
+	<kb:context>Instance Added: DisplayStatusValueSet_26 (instance of: DisplayStatusValueSet)</kb:context>
+	<rdfs:label>Instance Added: DisplayStatusValueSet_26 (instance of: DisplayStatusValueSet)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20469"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20472"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20473"/>
+</kb:Individual_Added>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20472"
+	 kb:date="06/03/2011 19:11:00 PDT"
+	 kb:sequence="222"
+	 rdfs:label="06/03/2011 19:11:00 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_icd_content_model_Class20473"
+	 kb:action="Composite_Change"
+	 kb:author="ttania">
+	<kb:context>Create Individual: DisplayStatusValueSet_26 of DisplayStatusValueSet -- Apply to: http://who.int/icd#DisplayStatusValueSet_26</kb:context>
+	<rdfs:label>Create Individual: DisplayStatusValueSet_26 of DisplayStatusValueSet -- Apply to: http://who.int/icd#DisplayStatusValueSet_26</rdfs:label>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20468"/>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20469"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20471"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20474"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20477"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20474"
+	 kb:date="06/03/2011 19:11:00 PDT"
+	 kb:sequence="223"
+	 rdfs:label="06/03/2011 19:11:00 PDT"/>
+<kb:Name_Changed rdf:about="&kb;annotation_icd_content_model_Class20475"
+	 kb:action="Name_Changed"
+	 kb:author="ttania"
+	 kb:context="Name change from 'DisplayStatusValueSet_26' to 'DS_Yellow'"
+	 kb:newName="http://who.int/icd#DS_Yellow"
+	 kb:oldName="http://who.int/icd#DisplayStatusValueSet_26"
+	 rdfs:label="Name change from 'DisplayStatusValueSet_26' to 'DS_Yellow'">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20469"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20476"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20477"/>
+</kb:Name_Changed>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20476"
+	 kb:date="06/03/2011 19:11:07 PDT"
+	 kb:sequence="224"
+	 rdfs:label="06/03/2011 19:11:07 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_icd_content_model_Class20477"
+	 kb:action="Composite_Change"
+	 kb:author="ttania"
+	 kb:context="Create Individual DS_Yellow"
+	 rdfs:label="Create Individual DS_Yellow">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20469"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20473"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20475"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20478"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20478"
+	 kb:date="06/03/2011 19:11:07 PDT"
+	 kb:sequence="225"
+	 rdfs:label="06/03/2011 19:11:07 PDT"/>
+<kb:Individual_Created rdf:about="&kb;annotation_icd_content_model_Class20479"
+	 kb:action="Individual_Created"
+	 kb:author="ttania"
+	 kb:context="Individual Create: DisplayStatusValueSet_27"
+	 kb:creationName="http://who.int/icd#DisplayStatusValueSet_27"
+	 rdfs:label="Individual Create: DisplayStatusValueSet_27">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20480"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20481"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20484"/>
+</kb:Individual_Created>
+<kb:Ontology_Individual rdf:about="&kb;annotation_icd_content_model_Class20480"
+	 kb:currentName="http://who.int/icd#DS_Red"
+	 rdfs:label="http://who.int/icd#DS_Red">
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20479"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20482"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20484"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20486"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20488"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20502"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20504"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20506"/>
+</kb:Ontology_Individual>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20481"
+	 kb:date="06/03/2011 19:11:08 PDT"
+	 kb:sequence="226"
+	 rdfs:label="06/03/2011 19:11:08 PDT"/>
+<kb:Individual_Added rdf:about="&kb;annotation_icd_content_model_Class20482"
+	 kb:action="Individual_Added"
+	 kb:author="ttania">
+	<kb:context>Instance Added: DisplayStatusValueSet_27 (instance of: DisplayStatusValueSet)</kb:context>
+	<rdfs:label>Instance Added: DisplayStatusValueSet_27 (instance of: DisplayStatusValueSet)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20480"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20483"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20484"/>
+</kb:Individual_Added>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20483"
+	 kb:date="06/03/2011 19:11:08 PDT"
+	 kb:sequence="227"
+	 rdfs:label="06/03/2011 19:11:08 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_icd_content_model_Class20484"
+	 kb:action="Composite_Change"
+	 kb:author="ttania">
+	<kb:context>Create Individual: DisplayStatusValueSet_27 of DisplayStatusValueSet -- Apply to: http://who.int/icd#DisplayStatusValueSet_27</kb:context>
+	<rdfs:label>Create Individual: DisplayStatusValueSet_27 of DisplayStatusValueSet -- Apply to: http://who.int/icd#DisplayStatusValueSet_27</rdfs:label>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20479"/>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20480"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20482"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20485"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20488"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20485"
+	 kb:date="06/03/2011 19:11:08 PDT"
+	 kb:sequence="228"
+	 rdfs:label="06/03/2011 19:11:08 PDT"/>
+<kb:Name_Changed rdf:about="&kb;annotation_icd_content_model_Class20486"
+	 kb:action="Name_Changed"
+	 kb:author="ttania"
+	 kb:context="Name change from 'DisplayStatusValueSet_27' to 'DS_Red'"
+	 kb:newName="http://who.int/icd#DS_Red"
+	 kb:oldName="http://who.int/icd#DisplayStatusValueSet_27"
+	 rdfs:label="Name change from 'DisplayStatusValueSet_27' to 'DS_Red'">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20480"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20487"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20488"/>
+</kb:Name_Changed>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20487"
+	 kb:date="06/03/2011 19:11:10 PDT"
+	 kb:sequence="229"
+	 rdfs:label="06/03/2011 19:11:10 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_icd_content_model_Class20488"
+	 kb:action="Composite_Change"
+	 kb:author="ttania"
+	 kb:context="Create Individual DS_Red"
+	 rdfs:label="Create Individual DS_Red">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20480"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20484"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20486"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20489"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20489"
+	 kb:date="06/03/2011 19:11:10 PDT"
+	 kb:sequence="230"
+	 rdfs:label="06/03/2011 19:11:10 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class20490"
+	 kb:action="Property Value Changed"
+	 kb:author="ttania">
+	<kb:context>Property: rdfs:label for instance: DS_Green set to: (Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: DS_Green set to: (Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20458"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20491"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20491"
+	 kb:date="06/03/2011 19:11:18 PDT"
+	 kb:sequence="231"
+	 rdfs:label="06/03/2011 19:11:18 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class20492"
+	 kb:action="Property Value Changed"
+	 kb:author="ttania">
+	<kb:context>Property: rdfs:label for instance: DS_Green set to: (Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: DS_Green set to: (Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20458"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20493"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20493"
+	 kb:date="06/03/2011 19:11:25 PDT"
+	 kb:sequence="232"
+	 rdfs:label="06/03/2011 19:11:25 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class20494"
+	 kb:action="Property Value Changed"
+	 kb:author="ttania">
+	<kb:context>Property: rdfs:label for instance: DS_Green set to: 1. Green(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: DS_Green set to: 1. Green(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20458"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20495"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20495"
+	 kb:date="06/03/2011 19:11:25 PDT"
+	 kb:sequence="233"
+	 rdfs:label="06/03/2011 19:11:25 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class20496"
+	 kb:action="Property Value Changed"
+	 kb:author="ttania">
+	<kb:context>Property: rdfs:label for instance: DS_Yellow set to: (Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: DS_Yellow set to: (Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20469"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20497"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20497"
+	 kb:date="06/03/2011 19:11:31 PDT"
+	 kb:sequence="234"
+	 rdfs:label="06/03/2011 19:11:31 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class20498"
+	 kb:action="Property Value Changed"
+	 kb:author="ttania">
+	<kb:context>Property: rdfs:label for instance: DS_Yellow set to: (Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: DS_Yellow set to: (Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20469"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20499"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20499"
+	 kb:date="06/03/2011 19:11:36 PDT"
+	 kb:sequence="235"
+	 rdfs:label="06/03/2011 19:11:36 PDT"/>
 <kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class205"
 	 kb:date="06/03/2011 18:42:19 PDT"
 	 kb:sequence="100"
 	 rdfs:label="06/03/2011 18:42:19 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class20500"
+	 kb:action="Property Value Changed"
+	 kb:author="ttania">
+	<kb:context>Property: rdfs:label for instance: DS_Yellow set to: 2. Yellow(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: DS_Yellow set to: 2. Yellow(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20469"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20501"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20501"
+	 kb:date="06/03/2011 19:11:36 PDT"
+	 kb:sequence="236"
+	 rdfs:label="06/03/2011 19:11:36 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class20502"
+	 kb:action="Property Value Changed"
+	 kb:author="ttania">
+	<kb:context>Property: rdfs:label for instance: DS_Red set to: (Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: DS_Red set to: (Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20480"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20503"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20503"
+	 kb:date="06/03/2011 19:11:41 PDT"
+	 kb:sequence="237"
+	 rdfs:label="06/03/2011 19:11:41 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class20504"
+	 kb:action="Property Value Changed"
+	 kb:author="ttania">
+	<kb:context>Property: rdfs:label for instance: DS_Red set to: (Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: DS_Red set to: (Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20480"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20505"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20505"
+	 kb:date="06/03/2011 19:11:44 PDT"
+	 kb:sequence="238"
+	 rdfs:label="06/03/2011 19:11:44 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class20506"
+	 kb:action="Property Value Changed"
+	 kb:author="ttania">
+	<kb:context>Property: rdfs:label for instance: DS_Red set to: 3. Red(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: DS_Red set to: 3. Red(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20480"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20507"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20507"
+	 kb:date="06/03/2011 19:11:44 PDT"
+	 kb:sequence="239"
+	 rdfs:label="06/03/2011 19:11:44 PDT"/>
+<kb:Property_Created rdf:about="&kb;annotation_icd_content_model_Class20508"
+	 kb:action="Property_Created"
+	 kb:author="ttania"
+	 kb:context="Property Create: objectProperty_28"
+	 kb:creationName="http://who.int/icd#objectProperty_28"
+	 rdfs:label="Property Create: objectProperty_28">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20509"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20510"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20515"/>
+</kb:Property_Created>
+<kb:Ontology_Property rdf:about="&kb;annotation_icd_content_model_Class20509"
+	 kb:currentName="http://who.int/icd#displayStatus"
+	 rdfs:label="http://who.int/icd#displayStatus">
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20508"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20511"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20513"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20515"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20517"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20519"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20521"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20523"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20525"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20527"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20529"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20533"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20535"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20537"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20539"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20541"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20543"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20545"/>
+</kb:Ontology_Property>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20510"
+	 kb:date="06/03/2011 19:12:37 PDT"
+	 kb:sequence="240"
+	 rdfs:label="06/03/2011 19:12:37 PDT"/>
+<kb:Individual_Added rdf:about="&kb;annotation_icd_content_model_Class20511"
+	 kb:action="Individual_Added"
+	 kb:author="ttania">
+	<kb:context>Instance Added: objectProperty_28 (instance of: owl:ObjectProperty)</kb:context>
+	<rdfs:label>Instance Added: objectProperty_28 (instance of: owl:ObjectProperty)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20509"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20512"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20515"/>
+</kb:Individual_Added>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20512"
+	 kb:date="06/03/2011 19:12:37 PDT"
+	 kb:sequence="241"
+	 rdfs:label="06/03/2011 19:12:37 PDT"/>
+<kb:DomainProperty_Added rdf:about="&kb;annotation_icd_content_model_Class20513"
+	 kb:action="DomainProperty_Added"
+	 kb:author="ttania">
+	<kb:context>Domain Property Added: objectProperty_28(added to: owl:Thing)</kb:context>
+	<rdfs:label>Domain Property Added: objectProperty_28(added to: owl:Thing)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20509"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20514"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20515"/>
+</kb:DomainProperty_Added>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20514"
+	 kb:date="06/03/2011 19:12:37 PDT"
+	 kb:sequence="242"
+	 rdfs:label="06/03/2011 19:12:37 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_icd_content_model_Class20515"
+	 kb:action="Composite_Change"
+	 kb:author="ttania">
+	<kb:context>Create object property objectProperty_28 -- Apply to: http://who.int/icd#objectProperty_28</kb:context>
+	<rdfs:label>Create object property objectProperty_28 -- Apply to: http://who.int/icd#objectProperty_28</rdfs:label>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20508"/>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20509"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20511"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20513"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20516"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20519"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20516"
+	 kb:date="06/03/2011 19:12:37 PDT"
+	 kb:sequence="243"
+	 rdfs:label="06/03/2011 19:12:37 PDT"/>
+<kb:Name_Changed rdf:about="&kb;annotation_icd_content_model_Class20517"
+	 kb:action="Name_Changed"
+	 kb:author="ttania"
+	 kb:context="Name change from 'objectProperty_28' to 'displayStatus'"
+	 kb:newName="http://who.int/icd#displayStatus"
+	 kb:oldName="http://who.int/icd#objectProperty_28"
+	 rdfs:label="Name change from 'objectProperty_28' to 'displayStatus'">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20509"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20518"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20519"/>
+</kb:Name_Changed>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20518"
+	 kb:date="06/03/2011 19:12:42 PDT"
+	 kb:sequence="244"
+	 rdfs:label="06/03/2011 19:12:42 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_icd_content_model_Class20519"
+	 kb:action="Composite_Change"
+	 kb:author="ttania"
+	 kb:context="Create Property displayStatus"
+	 rdfs:label="Create Property displayStatus">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20509"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20515"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20517"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20520"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20520"
+	 kb:date="06/03/2011 19:12:42 PDT"
+	 kb:sequence="245"
+	 rdfs:label="06/03/2011 19:12:42 PDT"/>
+<kb:Individual_Added rdf:about="&kb;annotation_icd_content_model_Class20521"
+	 kb:action="Individual_Added"
+	 kb:author="ttania">
+	<kb:context>Instance Added: displayStatus (instance of: owl:FunctionalProperty)</kb:context>
+	<rdfs:label>Instance Added: displayStatus (instance of: owl:FunctionalProperty)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20509"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20522"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20523"/>
+</kb:Individual_Added>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20522"
+	 kb:date="06/03/2011 19:12:44 PDT"
+	 kb:sequence="246"
+	 rdfs:label="06/03/2011 19:12:44 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_icd_content_model_Class20523"
+	 kb:action="Composite_Change"
+	 kb:author="ttania">
+	<kb:context>Add to displayStatus direct type : owl:FunctionalProperty -- Apply to: http://who.int/icd#displayStatus</kb:context>
+	<rdfs:label>Add to displayStatus direct type : owl:FunctionalProperty -- Apply to: http://who.int/icd#displayStatus</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20509"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20521"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20524"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20524"
+	 kb:date="06/03/2011 19:12:44 PDT"
+	 kb:sequence="247"
+	 rdfs:label="06/03/2011 19:12:44 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class20525"
+	 kb:action="Property Value Changed"
+	 kb:author="ttania">
+	<kb:context>Property: rdfs:domain for instance: displayStatus set to: (Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:domain for instance: displayStatus set to: (Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20509"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20526"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20535"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20526"
+	 kb:date="06/03/2011 19:13:26 PDT"
+	 kb:sequence="248"
+	 rdfs:label="06/03/2011 19:13:26 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class20527"
+	 kb:action="Property Value Changed"
+	 kb:author="ttania">
+	<kb:context>Property: rdfs:domain for instance: displayStatus set to: ICDSection(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:domain for instance: displayStatus set to: ICDSection(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20509"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20528"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20535"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20528"
+	 kb:date="06/03/2011 19:13:26 PDT"
+	 kb:sequence="249"
+	 rdfs:label="06/03/2011 19:13:26 PDT"/>
+<kb:DomainProperty_Removed rdf:about="&kb;annotation_icd_content_model_Class20529"
+	 kb:action="DomainProperty_Removed"
+	 kb:author="ttania">
+	<kb:context>Domain Property Removed: displayStatus(removed from: owl:Thing)</kb:context>
+	<rdfs:label>Domain Property Removed: displayStatus(removed from: owl:Thing)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20509"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20530"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20531"/>
+</kb:DomainProperty_Removed>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20530"
+	 kb:date="06/03/2011 19:13:26 PDT"
+	 kb:sequence="250"
+	 rdfs:label="06/03/2011 19:13:26 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_icd_content_model_Class20531"
+	 kb:action="Composite_Change"
+	 kb:author="ttania">
+	<kb:context>Remove template slot from class DefaultOWLNamedClass(http://www.w3.org/2002/07/owl#Thing) -- Apply to: http://www.w3.org/2002/07/owl#Thing</kb:context>
+	<rdfs:label>Remove template slot from class DefaultOWLNamedClass(http://www.w3.org/2002/07/owl#Thing) -- Apply to: http://www.w3.org/2002/07/owl#Thing</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20370"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20529"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20532"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20535"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20532"
+	 kb:date="06/03/2011 19:13:26 PDT"
+	 kb:sequence="251"
+	 rdfs:label="06/03/2011 19:13:26 PDT"/>
+<kb:DomainProperty_Added rdf:about="&kb;annotation_icd_content_model_Class20533"
+	 kb:action="DomainProperty_Added"
+	 kb:author="ttania"
+	 kb:context="Domain Property Added: displayStatus(added to: ICDSection)"
+	 rdfs:label="Domain Property Added: displayStatus(added to: ICDSection)">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20509"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20534"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20535"/>
+</kb:DomainProperty_Added>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20534"
+	 kb:date="06/03/2011 19:13:26 PDT"
+	 kb:sequence="252"
+	 rdfs:label="06/03/2011 19:13:26 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_icd_content_model_Class20535"
+	 kb:action="Composite_Change"
+	 kb:author="ttania">
+	<kb:context>Add ICDSection to the domain of displayStatus -- Apply to: http://who.int/icd#displayStatus</kb:context>
+	<rdfs:label>Add ICDSection to the domain of displayStatus -- Apply to: http://who.int/icd#displayStatus</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20509"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20525"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20527"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20531"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20533"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20536"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20536"
+	 kb:date="06/03/2011 19:13:26 PDT"
+	 kb:sequence="253"
+	 rdfs:label="06/03/2011 19:13:26 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class20537"
+	 kb:action="Property Value Changed"
+	 kb:author="ttania">
+	<kb:context>Property: rdfs:range for instance: displayStatus set to: DisplayStatusValueSet(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:range for instance: displayStatus set to: DisplayStatusValueSet(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20509"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20538"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20539"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20538"
+	 kb:date="06/03/2011 19:13:34 PDT"
+	 kb:sequence="254"
+	 rdfs:label="06/03/2011 19:13:34 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_icd_content_model_Class20539"
+	 kb:action="Composite_Change"
+	 kb:author="ttania">
+	<kb:context>Add DisplayStatusValueSet to range of displayStatus -- Apply to: http://who.int/icd#displayStatus</kb:context>
+	<rdfs:label>Add DisplayStatusValueSet to range of displayStatus -- Apply to: http://who.int/icd#displayStatus</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20509"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20537"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20540"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20540"
+	 kb:date="06/03/2011 19:13:34 PDT"
+	 kb:sequence="255"
+	 rdfs:label="06/03/2011 19:13:34 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class20541"
+	 kb:action="Property Value Changed"
+	 kb:author="ttania">
+	<kb:context>Property: rdfs:comment for instance: displayStatus set to: (Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:comment for instance: displayStatus set to: (Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20509"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20542"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20542"
+	 kb:date="06/03/2011 19:13:42 PDT"
+	 kb:sequence="256"
+	 rdfs:label="06/03/2011 19:13:42 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class20543"
+	 kb:action="Property Value Changed"
+	 kb:author="ttania">
+	<kb:context>Property: rdfs:comment for instance: displayStatus set to: (Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:comment for instance: displayStatus set to: (Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20509"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20544"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20544"
+	 kb:date="06/03/2011 19:14:10 PDT"
+	 kb:sequence="257"
+	 rdfs:label="06/03/2011 19:14:10 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class20545"
+	 kb:action="Property Value Changed"
+	 kb:author="ttania">
+	<kb:context>Property: rdfs:comment for instance: displayStatus set to: used to set the display status for a category (green, yellow, red) that indicated how ready is the TAG to get feedbacl from the community(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:comment for instance: displayStatus set to: used to set the display status for a category (green, yellow, red) that indicated how ready is the TAG to get feedbacl from the community(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20509"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20546"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20546"
+	 kb:date="06/03/2011 19:14:10 PDT"
+	 kb:sequence="258"
+	 rdfs:label="06/03/2011 19:14:10 PDT"/>
+<kb:Class_Created rdf:about="&kb;annotation_icd_content_model_Class20547"
+	 kb:action="Class_Created"
+	 kb:author="ttania"
+	 kb:context="Class Create: @1_2e145f16_e8a5_45e5_8478_b287f7b73f86"
+	 kb:creationName="@1_2e145f16_e8a5_45e5_8478_b287f7b73f86"
+	 rdfs:label="Class Create: @1_2e145f16_e8a5_45e5_8478_b287f7b73f86">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20548"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20549"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20605"/>
+</kb:Class_Created>
+<kb:Ontology_Class rdf:about="&kb;annotation_icd_content_model_Class20548"
+	 kb:currentName="@1_2e145f16_e8a5_45e5_8478_b287f7b73f86"
+	 rdfs:label="@1_2e145f16_e8a5_45e5_8478_b287f7b73f86">
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20547"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20550"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20552"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20559"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20587"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20597"/>
+</kb:Ontology_Class>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20549"
+	 kb:date="06/03/2011 19:16:07 PDT"
+	 kb:sequence="259"
+	 rdfs:label="06/03/2011 19:16:07 PDT"/>
+<kb:Individual_Added rdf:about="&kb;annotation_icd_content_model_Class20550"
+	 kb:action="Individual_Added"
+	 kb:author="ttania"
+	 kb:context="Instance Added: {} (instance of: owl:EnumeratedClass)"
+	 rdfs:label="Instance Added: {} (instance of: owl:EnumeratedClass)">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20548"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20551"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20605"/>
+</kb:Individual_Added>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20551"
+	 kb:date="06/03/2011 19:16:07 PDT"
+	 kb:sequence="260"
+	 rdfs:label="06/03/2011 19:16:07 PDT"/>
+<kb:Subclass_Added rdf:about="&kb;annotation_icd_content_model_Class20552"
+	 kb:action="Subclass_Added"
+	 kb:author="ttania"
+	 kb:context="Subclass Added: {} (added to: :OWL-ANONYMOUS-ROOT)"
+	 rdfs:label="Subclass Added: {} (added to: :OWL-ANONYMOUS-ROOT)">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20548"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20553"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20605"/>
+</kb:Subclass_Added>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20553"
+	 kb:date="06/03/2011 19:16:07 PDT"
+	 kb:sequence="261"
+	 rdfs:label="06/03/2011 19:16:07 PDT"/>
+<kb:Individual_Created rdf:about="&kb;annotation_icd_content_model_Class20554"
+	 kb:action="Individual_Created"
+	 kb:author="ttania"
+	 kb:context="Individual Create: @2_2e145f16_e8a5_45e5_8478_b287f7b73f86"
+	 kb:creationName="@2_2e145f16_e8a5_45e5_8478_b287f7b73f86"
+	 rdfs:label="Individual Create: @2_2e145f16_e8a5_45e5_8478_b287f7b73f86">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20555"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20556"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20605"/>
+</kb:Individual_Created>
+<kb:Ontology_Individual rdf:about="&kb;annotation_icd_content_model_Class20555"
+	 kb:currentName="@2_2e145f16_e8a5_45e5_8478_b287f7b73f86"
+	 rdfs:label="@2_2e145f16_e8a5_45e5_8478_b287f7b73f86">
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20554"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20557"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20561"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20563"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20574"/>
+</kb:Ontology_Individual>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20556"
+	 kb:date="06/03/2011 19:16:07 PDT"
+	 kb:sequence="262"
+	 rdfs:label="06/03/2011 19:16:07 PDT"/>
+<kb:Individual_Added rdf:about="&kb;annotation_icd_content_model_Class20557"
+	 kb:action="Individual_Added"
+	 kb:author="ttania"
+	 kb:context="Instance Added: rdf:List () (instance of: rdf:List)"
+	 rdfs:label="Instance Added: rdf:List () (instance of: rdf:List)">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20555"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20558"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20605"/>
+</kb:Individual_Added>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20558"
+	 kb:date="06/03/2011 19:16:07 PDT"
+	 kb:sequence="263"
+	 rdfs:label="06/03/2011 19:16:07 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class20559"
+	 kb:action="Property Value Changed"
+	 kb:author="ttania">
+	<kb:context>Property: owl:oneOf for instance: {} set to: rdf:List ()(Old values:)</kb:context>
+	<rdfs:label>Property: owl:oneOf for instance: {} set to: rdf:List ()(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20548"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20560"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20605"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20560"
+	 kb:date="06/03/2011 19:16:07 PDT"
+	 kb:sequence="264"
+	 rdfs:label="06/03/2011 19:16:07 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class20561"
+	 kb:action="Property Value Changed"
+	 kb:author="ttania">
+	<kb:context>Property: rdf:first for instance: rdf:List ('1. Green') set to: '1. Green'(Old values:)</kb:context>
+	<rdfs:label>Property: rdf:first for instance: rdf:List ('1. Green') set to: '1. Green'(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20555"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20562"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20605"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20562"
+	 kb:date="06/03/2011 19:16:07 PDT"
+	 kb:sequence="265"
+	 rdfs:label="06/03/2011 19:16:07 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class20563"
+	 kb:action="Property Value Changed"
+	 kb:author="ttania">
+	<kb:context>Property: rdf:rest for instance: rdf:List ('1. Green') set to: rdf:List ()(Old values:)</kb:context>
+	<rdfs:label>Property: rdf:rest for instance: rdf:List ('1. Green') set to: rdf:List ()(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20555"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20564"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20605"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20564"
+	 kb:date="06/03/2011 19:16:07 PDT"
+	 kb:sequence="266"
+	 rdfs:label="06/03/2011 19:16:07 PDT"/>
+<kb:Individual_Created rdf:about="&kb;annotation_icd_content_model_Class20565"
+	 kb:action="Individual_Created"
+	 kb:author="ttania"
+	 kb:context="Individual Create: @3_2e145f16_e8a5_45e5_8478_b287f7b73f86"
+	 kb:creationName="@3_2e145f16_e8a5_45e5_8478_b287f7b73f86"
+	 rdfs:label="Individual Create: @3_2e145f16_e8a5_45e5_8478_b287f7b73f86">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20566"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20567"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20605"/>
+</kb:Individual_Created>
+<kb:Ontology_Individual rdf:about="&kb;annotation_icd_content_model_Class20566"
+	 kb:currentName="@3_2e145f16_e8a5_45e5_8478_b287f7b73f86"
+	 rdfs:label="@3_2e145f16_e8a5_45e5_8478_b287f7b73f86">
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20565"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20568"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20570"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20572"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20585"/>
+</kb:Ontology_Individual>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20567"
+	 kb:date="06/03/2011 19:16:07 PDT"
+	 kb:sequence="267"
+	 rdfs:label="06/03/2011 19:16:07 PDT"/>
+<kb:Individual_Added rdf:about="&kb;annotation_icd_content_model_Class20568"
+	 kb:action="Individual_Added"
+	 kb:author="ttania"
+	 kb:context="Instance Added: rdf:List () (instance of: rdf:List)"
+	 rdfs:label="Instance Added: rdf:List () (instance of: rdf:List)">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20566"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20569"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20605"/>
+</kb:Individual_Added>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20569"
+	 kb:date="06/03/2011 19:16:07 PDT"
+	 kb:sequence="268"
+	 rdfs:label="06/03/2011 19:16:07 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class20570"
+	 kb:action="Property Value Changed"
+	 kb:author="ttania">
+	<kb:context>Property: rdf:first for instance: rdf:List ('2. Yellow') set to: '2. Yellow'(Old values:)</kb:context>
+	<rdfs:label>Property: rdf:first for instance: rdf:List ('2. Yellow') set to: '2. Yellow'(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20566"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20571"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20605"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20571"
+	 kb:date="06/03/2011 19:16:07 PDT"
+	 kb:sequence="269"
+	 rdfs:label="06/03/2011 19:16:07 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class20572"
+	 kb:action="Property Value Changed"
+	 kb:author="ttania">
+	<kb:context>Property: rdf:rest for instance: rdf:List ('2. Yellow') set to: rdf:List ()(Old values:)</kb:context>
+	<rdfs:label>Property: rdf:rest for instance: rdf:List ('2. Yellow') set to: rdf:List ()(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20566"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20573"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20605"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20573"
+	 kb:date="06/03/2011 19:16:07 PDT"
+	 kb:sequence="270"
+	 rdfs:label="06/03/2011 19:16:07 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class20574"
+	 kb:action="Property Value Changed"
+	 kb:author="ttania">
+	<kb:context>Property: rdf:rest for instance: rdf:List ('1. Green', '2. Yellow') set to: rdf:List ('2. Yellow')(Old values:rdf:List ())</kb:context>
+	<rdfs:label>Property: rdf:rest for instance: rdf:List ('1. Green', '2. Yellow') set to: rdf:List ('2. Yellow')(Old values:rdf:List ())</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20555"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20575"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20605"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20575"
+	 kb:date="06/03/2011 19:16:07 PDT"
+	 kb:sequence="271"
+	 rdfs:label="06/03/2011 19:16:07 PDT"/>
+<kb:Individual_Created rdf:about="&kb;annotation_icd_content_model_Class20576"
+	 kb:action="Individual_Created"
+	 kb:author="ttania"
+	 kb:context="Individual Create: @4_2e145f16_e8a5_45e5_8478_b287f7b73f86"
+	 kb:creationName="@4_2e145f16_e8a5_45e5_8478_b287f7b73f86"
+	 rdfs:label="Individual Create: @4_2e145f16_e8a5_45e5_8478_b287f7b73f86">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20577"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20578"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20605"/>
+</kb:Individual_Created>
+<kb:Ontology_Individual rdf:about="&kb;annotation_icd_content_model_Class20577"
+	 kb:currentName="@4_2e145f16_e8a5_45e5_8478_b287f7b73f86"
+	 rdfs:label="@4_2e145f16_e8a5_45e5_8478_b287f7b73f86">
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20576"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20579"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20581"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20583"/>
+</kb:Ontology_Individual>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20578"
+	 kb:date="06/03/2011 19:16:07 PDT"
+	 kb:sequence="272"
+	 rdfs:label="06/03/2011 19:16:07 PDT"/>
+<kb:Individual_Added rdf:about="&kb;annotation_icd_content_model_Class20579"
+	 kb:action="Individual_Added"
+	 kb:author="ttania"
+	 kb:context="Instance Added: rdf:List () (instance of: rdf:List)"
+	 rdfs:label="Instance Added: rdf:List () (instance of: rdf:List)">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20577"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20580"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20605"/>
+</kb:Individual_Added>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20580"
+	 kb:date="06/03/2011 19:16:07 PDT"
+	 kb:sequence="273"
+	 rdfs:label="06/03/2011 19:16:07 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class20581"
+	 kb:action="Property Value Changed"
+	 kb:author="ttania">
+	<kb:context>Property: rdf:first for instance: rdf:List ('3. Red') set to: '3. Red'(Old values:)</kb:context>
+	<rdfs:label>Property: rdf:first for instance: rdf:List ('3. Red') set to: '3. Red'(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20577"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20582"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20605"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20582"
+	 kb:date="06/03/2011 19:16:07 PDT"
+	 kb:sequence="274"
+	 rdfs:label="06/03/2011 19:16:07 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class20583"
+	 kb:action="Property Value Changed"
+	 kb:author="ttania">
+	<kb:context>Property: rdf:rest for instance: rdf:List ('3. Red') set to: rdf:List ()(Old values:)</kb:context>
+	<rdfs:label>Property: rdf:rest for instance: rdf:List ('3. Red') set to: rdf:List ()(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20577"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20584"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20605"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20584"
+	 kb:date="06/03/2011 19:16:07 PDT"
+	 kb:sequence="275"
+	 rdfs:label="06/03/2011 19:16:07 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class20585"
+	 kb:action="Property Value Changed"
+	 kb:author="ttania">
+	<kb:context>Property: rdf:rest for instance: rdf:List ('2. Yellow', '3. Red') set to: rdf:List ('3. Red')(Old values:rdf:List ())</kb:context>
+	<rdfs:label>Property: rdf:rest for instance: rdf:List ('2. Yellow', '3. Red') set to: rdf:List ('3. Red')(Old values:rdf:List ())</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20566"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20586"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20605"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20586"
+	 kb:date="06/03/2011 19:16:07 PDT"
+	 kb:sequence="276"
+	 rdfs:label="06/03/2011 19:16:07 PDT"/>
+<kb:Superclass_Added rdf:about="&kb;annotation_icd_content_model_Class20587"
+	 kb:action="Superclass_Added"
+	 kb:author="ttania">
+	<kb:context>Superclass Added: {'1. Green' '2. Yellow' '3. Red'} (added to: DisplayStatusValueSet)</kb:context>
+	<rdfs:label>Superclass Added: {'1. Green' '2. Yellow' '3. Red'} (added to: DisplayStatusValueSet)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20548"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20588"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20603"/>
+</kb:Superclass_Added>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20588"
+	 kb:date="06/03/2011 19:16:07 PDT"
+	 kb:sequence="277"
+	 rdfs:label="06/03/2011 19:16:07 PDT"/>
+<kb:Subclass_Added rdf:about="&kb;annotation_icd_content_model_Class20589"
+	 kb:action="Subclass_Added"
+	 kb:author="ttania">
+	<kb:context>Subclass Added: DisplayStatusValueSet (added to: {'1. Green' '2. Yellow' '3. Red'})</kb:context>
+	<rdfs:label>Subclass Added: DisplayStatusValueSet (added to: {'1. Green' '2. Yellow' '3. Red'})</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20439"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20590"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20603"/>
+</kb:Subclass_Added>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20590"
+	 kb:date="06/03/2011 19:16:07 PDT"
+	 kb:sequence="278"
+	 rdfs:label="06/03/2011 19:16:07 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class20591"
+	 kb:action="Property Value Changed"
+	 kb:author="ttania">
+	<kb:context>Property: rdfs:subClassOf for instance: DisplayStatusValueSet set to: ValueSet, {'1. Green' '2. Yellow' '3. Red'}(Old values:ValueSet)</kb:context>
+	<rdfs:label>Property: rdfs:subClassOf for instance: DisplayStatusValueSet set to: ValueSet, {'1. Green' '2. Yellow' '3. Red'}(Old values:ValueSet)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20439"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20592"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20603"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20592"
+	 kb:date="06/03/2011 19:16:07 PDT"
+	 kb:sequence="279"
+	 rdfs:label="06/03/2011 19:16:07 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class20593"
+	 kb:action="Property Value Changed"
+	 kb:author="ttania">
+	<kb:context>Property: owl:equivalentClass for instance: DisplayStatusValueSet set to: (Old values:)</kb:context>
+	<rdfs:label>Property: owl:equivalentClass for instance: DisplayStatusValueSet set to: (Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20439"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20594"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20603"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20594"
+	 kb:date="06/03/2011 19:16:07 PDT"
+	 kb:sequence="280"
+	 rdfs:label="06/03/2011 19:16:07 PDT"/>
+<kb:Superclass_Added rdf:about="&kb;annotation_icd_content_model_Class20595"
+	 kb:action="Superclass_Added"
+	 kb:author="ttania">
+	<kb:context>Superclass Added: DisplayStatusValueSet (added to: {'1. Green' '2. Yellow' '3. Red'})</kb:context>
+	<rdfs:label>Superclass Added: DisplayStatusValueSet (added to: {'1. Green' '2. Yellow' '3. Red'})</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20439"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20596"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20603"/>
+</kb:Superclass_Added>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20596"
+	 kb:date="06/03/2011 19:16:07 PDT"
+	 kb:sequence="281"
+	 rdfs:label="06/03/2011 19:16:07 PDT"/>
+<kb:Subclass_Added rdf:about="&kb;annotation_icd_content_model_Class20597"
+	 kb:action="Subclass_Added"
+	 kb:author="ttania">
+	<kb:context>Subclass Added: {'1. Green' '2. Yellow' '3. Red'} (added to: DisplayStatusValueSet)</kb:context>
+	<rdfs:label>Subclass Added: {'1. Green' '2. Yellow' '3. Red'} (added to: DisplayStatusValueSet)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20548"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20598"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20603"/>
+</kb:Subclass_Added>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20598"
+	 kb:date="06/03/2011 19:16:07 PDT"
+	 kb:sequence="282"
+	 rdfs:label="06/03/2011 19:16:07 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class20599"
+	 kb:action="Property Value Changed"
+	 kb:author="ttania">
+	<kb:context>Property: rdfs:subClassOf for instance: DisplayStatusValueSet set to: ValueSet(Old values:ValueSet, {'1. Green' '2. Yellow' '3. Red'})</kb:context>
+	<rdfs:label>Property: rdfs:subClassOf for instance: DisplayStatusValueSet set to: ValueSet(Old values:ValueSet, {'1. Green' '2. Yellow' '3. Red'})</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20439"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20600"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20603"/>
+</kb:Property_Value>
 <kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class206"
 	 kb:action="Property Value Changed"
 	 kb:author="ttania">
@@ -3320,6 +5221,75 @@
 	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class207"/>
 	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class54"/>
 </kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20600"
+	 kb:date="06/03/2011 19:16:07 PDT"
+	 kb:sequence="283"
+	 rdfs:label="06/03/2011 19:16:07 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class20601"
+	 kb:action="Property Value Changed"
+	 kb:author="ttania">
+	<kb:context>Property: owl:equivalentClass for instance: DisplayStatusValueSet set to: {'1. Green' '2. Yellow' '3. Red'}(Old values:)</kb:context>
+	<rdfs:label>Property: owl:equivalentClass for instance: DisplayStatusValueSet set to: {'1. Green' '2. Yellow' '3. Red'}(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20439"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20602"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20603"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20602"
+	 kb:date="06/03/2011 19:16:07 PDT"
+	 kb:sequence="284"
+	 rdfs:label="06/03/2011 19:16:07 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_icd_content_model_Class20603"
+	 kb:action="Composite_Change"
+	 kb:author="ttania">
+	<kb:context>Add Equivalent Class -- Apply to: http://who.int/icd#DisplayStatusValueSet</kb:context>
+	<rdfs:label>Add Equivalent Class -- Apply to: http://who.int/icd#DisplayStatusValueSet</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20439"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20587"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20589"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20591"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20593"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20595"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20597"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20599"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20601"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20604"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class20605"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20604"
+	 kb:date="06/03/2011 19:16:07 PDT"
+	 kb:sequence="285"
+	 rdfs:label="06/03/2011 19:16:07 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_icd_content_model_Class20605"
+	 kb:action="Composite_Change"
+	 kb:author="ttania">
+	<kb:context>Set condition at DisplayStatusValueSet to {'1. Green' '2. Yellow' '3. Red'} -- Apply to: http://who.int/icd#DisplayStatusValueSet</kb:context>
+	<rdfs:label>Set condition at DisplayStatusValueSet to {'1. Green' '2. Yellow' '3. Red'} -- Apply to: http://who.int/icd#DisplayStatusValueSet</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20439"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20547"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20550"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20552"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20554"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20557"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20559"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20561"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20563"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20565"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20568"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20570"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20572"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20574"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20576"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20579"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20581"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20583"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20585"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class20603"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20606"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20606"
+	 kb:date="06/03/2011 19:16:07 PDT"
+	 kb:sequence="286"
+	 rdfs:label="06/03/2011 19:16:07 PDT"/>
 <kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class207"
 	 kb:date="06/03/2011 18:42:19 PDT"
 	 kb:sequence="101"
