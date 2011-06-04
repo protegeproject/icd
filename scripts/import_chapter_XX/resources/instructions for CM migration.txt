@@ -1,0 +1,23 @@
+Note: If not otherwise specified all class, property and individual names 
+	are in the "http://who.int/icd#" namespace
+
+Create subclass of ReferenceTerm:
+- ICD10ReferenceTerm
+	add rdfs:label "ICD-10 Reference Term"
+	add rdfs:comment "Reference Term pointing to an ICD-10 category (available for example in BioPortal)."
+	??? should we add other superclasses also (such as DefiningTerm or LanguageTerm)?
+	
+Note: Why is SpecificConditionTerm not a subclass of DefiningTerm also? 
+	(Neither is SnomedReferenceTerm, but I suppose that may be fine) 
+
+Create new object property 
+- icd10Reference
+	set rdfs:label to "icd10Reference"
+	add rdfs:comment "This property can be used to create external references to ICD-10 categories (available in BioPortal) that correspond to the new External Causes and Injuries categories."
+	set domain to ExternalCauseSection
+	set range to ICD10ReferenceTerm
+
+
+
+!!! BEFORE starting the ImportChapterXX migration application 
+make sure to move all subclasses of XX under Retired!
