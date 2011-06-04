@@ -664,6 +664,27 @@ Mapping relationship: Mappings of the concept to different coding systems (e.g. 
   <owl:Class rdf:about="http://who.int/icd#LiteratureReference">
     <rdfs:subClassOf rdf:resource="http://who.int/icd#DomainConcept"/>
   </owl:Class>
+  <owl:Class rdf:about="http://who.int/icd#DisplayStatusValueSet">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:oneOf rdf:parseType="Collection">
+          <DisplayStatusValueSet rdf:about="http://who.int/icd#DS_Green">
+            <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >1. Green</rdfs:label>
+          </DisplayStatusValueSet>
+          <DisplayStatusValueSet rdf:about="http://who.int/icd#DS_Yellow">
+            <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >2. Yellow</rdfs:label>
+          </DisplayStatusValueSet>
+          <DisplayStatusValueSet rdf:about="http://who.int/icd#DS_Red">
+            <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >3. Red</rdfs:label>
+          </DisplayStatusValueSet>
+        </owl:oneOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="http://who.int/icd#ValueSet"/>
+  </owl:Class>
   <owl:Class rdf:about="http://who.int/icd#TAG">
     <rdfs:subClassOf rdf:resource="http://who.int/icd#ValueSet"/>
   </owl:Class>
@@ -1504,6 +1525,12 @@ Mapping relationship: Mappings of the concept to different coding systems (e.g. 
   <owl:ObjectProperty rdf:about="http://who.int/icd#mobilityImpact">
     <rdfs:subPropertyOf rdf:resource="http://who.int/icd#functionalImpact"/>
   </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://who.int/icd#assignedTAG">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >assigned TAGs to a category</rdfs:comment>
+    <rdfs:domain rdf:resource="http://who.int/icd#ICDSection"/>
+    <rdfs:range rdf:resource="http://who.int/icd#TAG"/>
+  </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://who.int/icd#definitionPrefilled">
     <rdfs:range rdf:resource="http://who.int/icd#ExternalDefinitionTerm"/>
     <owl:inverseOf>
@@ -1607,13 +1634,18 @@ This is the old inclusion term</rdfs:comment>
     <rdfs:domain rdf:resource="http://who.int/icd#ClinicalDescriptionSection"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://who.int/icd#primaryCareLinearization"/>
+  <owl:ObjectProperty rdf:about="http://who.int/icd#counterPartInCollision">
+    <rdfs:subPropertyOf rdf:resource="http://who.int/icd#transportDimension"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://who.int/icd#assignedSecondaryTAG">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >the secondary TAGs associated to a category, this property will hold only the local values, but the UI will display also the "inherited" secondary TAGs, can be multiple</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://who.int/icd#assignedTAG"/>
+  </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://who.int/icd#otherCommunicationImpact">
     <rdfs:domain rdf:resource="http://who.int/icd#FunctionalImpactSection"/>
     <rdfs:range rdf:resource="http://who.int/icd#FunctionalImpactTerm"/>
     <rdfs:subPropertyOf rdf:resource="http://who.int/icd#communicationImpact"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://who.int/icd#counterPartInCollision">
-    <rdfs:subPropertyOf rdf:resource="http://who.int/icd#transportDimension"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://who.int/icd#otherLifeManagementActivitiesImpact">
     <rdfs:range rdf:resource="http://who.int/icd#FunctionalImpactTerm"/>
@@ -1628,12 +1660,12 @@ This is the old inclusion term</rdfs:comment>
     <rdfs:subPropertyOf rdf:resource="http://who.int/icd#baseInclusion"/>
     <rdfs:range rdf:resource="http://who.int/icd#SubclassInclusionTerm"/>
   </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://who.int/icd#morbidityParent"/>
   <owl:ObjectProperty rdf:about="http://who.int/icd#selectedSchoolActivitiesImpact">
     <rdfs:range rdf:resource="http://who.int/icd#SelectedSchoolActivitiesImpact"/>
     <rdfs:domain rdf:resource="http://who.int/icd#FunctionalImpactSection"/>
     <rdfs:subPropertyOf rdf:resource="http://who.int/icd#schoolActivitiesImpact"/>
   </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://who.int/icd#morbidityParent"/>
   <owl:ObjectProperty rdf:about="http://who.int/icd#otherHouseholdActivitiesImpact">
     <rdfs:subPropertyOf rdf:resource="http://who.int/icd#householdActivitiesImpact"/>
     <rdfs:domain rdf:resource="http://who.int/icd#FunctionalImpactSection"/>
@@ -1821,16 +1853,16 @@ things true of members of a broader class are also true of the narrower class.</
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:domain rdf:resource="http://who.int/icd#SeverityScaleTerm"/>
   </owl:FunctionalProperty>
-  <owl:FunctionalProperty rdf:about="http://who.int/icd#hasSeverityScale">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >specifies which standard severity scale corresponds to the ICD category</rdfs:comment>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </owl:FunctionalProperty>
   <owl:FunctionalProperty rdf:about="http://who.int/icd#editorialStatusTerm">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:subPropertyOf>
       <owl:FunctionalProperty rdf:about="http://who.int/icd#editorialStatus"/>
     </rdfs:subPropertyOf>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://who.int/icd#hasSeverityScale">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >specifies which standard severity scale corresponds to the ICD category</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </owl:FunctionalProperty>
   <owl:FunctionalProperty rdf:about="http://who.int/icd#ontologyId">
     <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -2101,6 +2133,13 @@ Administrative information like "may be coded as underlying cause", "may be used
     <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >ICDtitle</rdfs:label>
   </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://who.int/icd#displayStatus">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="http://who.int/icd#DisplayStatusValueSet"/>
+    <rdfs:domain rdf:resource="http://who.int/icd#ICDSection"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >used to set the display status for a category (green, yellow, red) that indicated how ready is the TAG to get feedbacl from the community</rdfs:comment>
+  </owl:FunctionalProperty>
   <owl:FunctionalProperty rdf:about="http://who.int/icd#icdRefCode">
     <rdfs:domain rdf:resource="http://who.int/icd#ClamlReference"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -2116,6 +2155,12 @@ Administrative information like "may be coded as underlying cause", "may be used
       </owl:Class>
     </rdfs:domain>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://who.int/icd#assignedPrimaryTAG">
+    <rdfs:subPropertyOf rdf:resource="http://who.int/icd#assignedTAG"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The TAG mainly responsible for a category, can be only one of them, it is not inherited to the child classes</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </owl:FunctionalProperty>
   <owl:FunctionalProperty rdf:about="http://bioportal.bioontology.org#ontologyLabel">
     <rdfs:domain>
@@ -2728,6 +2773,10 @@ Administrative information like "may be coded as underlying cause", "may be used
     <bp:ontologyId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >40865</bp:ontologyId>
   </SelectedCommunicationImpact>
+  <TAG rdf:about="http://who.int/icd#TAG_Ophthalmology">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Ophthalmology TAG</rdfs:label>
+  </TAG>
   <SelectedInterpersonalRelationsImpact rdf:about="http://who.int/icd#FunctionalImpactTerm_d760">
     <termId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >http://who.int/icf#d760</termId>
@@ -2744,10 +2793,6 @@ Administrative information like "may be coded as underlying cause", "may be used
     <bp:ontologyLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >International Classification of Functioning, Disability and Health (ICF)</bp:ontologyLabel>
   </SelectedInterpersonalRelationsImpact>
-  <TAG rdf:about="http://who.int/icd#TAG_Ophthalmology">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Ophthalmology TAG</rdfs:label>
-  </TAG>
   <SelectedHouseholdActivitiesImpact rdf:about="http://who.int/icd#FunctionalImpactTerm_d660">
     <ontologyId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >International Classification of Functioning, Disability and Health (ICF)</ontologyId>
