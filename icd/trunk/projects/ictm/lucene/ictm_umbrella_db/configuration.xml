@@ -1,0 +1,18 @@
+<object-stream>
+  <edu.stanford.smi.protege.query.api.QueryConfiguration>
+    <searchableSlots>
+      <edu.stanford.smi.protege.model.DefaultSlot>
+        <id>
+          <name>:NAME</name>
+          <hashCode>55952879</hashCode>
+        </id>
+        <state>0</state>
+      </edu.stanford.smi.protege.model.DefaultSlot>
+    </searchableSlots>
+    <indexers class="enum-set" enum-type="edu.stanford.smi.protege.query.indexer.IndexMechanism">STANDARD_INDICIES</indexers>
+    <baseIndexPath>/work/src/GWT/web-protege/war/projects/ictm/lucene/ictm_umbrella_db</baseIndexPath>
+    <indexedFrameTypes>
+      <string>c</string>
+    </indexedFrameTypes>
+  </edu.stanford.smi.protege.query.api.QueryConfiguration>
+</object-stream>

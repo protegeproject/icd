@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=1" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1297305649129" name="http://who.int/ictm-umbrella" uri="ictm_umbrella.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1297305649129" name="http://who.int/icd" uri="icd_content_model.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1297305649129" name="http://who.int/ictm" uri="ictm_content_model.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1297305649129" name="http://who.int/ictm/signsAndSymptoms" uri="value_sets/TM_SignsAndSymptoms.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1297305649129" name="http://who.int/ictm/meridians" uri="value_sets/TM_Meridians.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1297305649129" name="http://who.int/ictm/constitution" uri="value_sets/TM_Constitution.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1297305649129" name="http://who.int/ictm/otherFactors" uri="value_sets/TM_OtherFactors.owl"/>
+    </group>
+</catalog>
