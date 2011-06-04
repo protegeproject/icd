@@ -1,0 +1,4 @@
+===== 2011.06.03 =====
+
+- Created class: TAG under ValueSet
+- Created instances of TAG using Sara's list, added full name in rdfs:label
