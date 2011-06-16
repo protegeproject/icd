@@ -975,8 +975,7 @@ public class ICDContentModel {
         Map<RDFResource, List<RDFSNamedClass>> typedMap = new LinkedHashMap<RDFResource, List<RDFSNamedClass>>();
 
         for (Object value : map.keySet()) {
-            Collection<? extends RDFSNamedClass> values = (Collection<? extends RDFSNamedClass>) map.get(value);
-            typedMap.put((RDFResource) value, new ArrayList<RDFSNamedClass>(values));
+            typedMap.put((RDFResource) value, new ArrayList<RDFSNamedClass>(getRDFSNamedClassCollection(map.get(value))));
         }
 
         return typedMap;
