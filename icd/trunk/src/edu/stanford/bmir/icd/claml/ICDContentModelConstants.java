@@ -41,6 +41,8 @@ public class ICDContentModelConstants {
     public final static String LINEARIZATION_VIEW_CLASS = NS + "LinearizationView";
     public final static String LINEARIZATION_SPECIFICATION_CLASS = NS + "LinearizationSpecification";
 
+    public final static String EXTERNAL_CAUSES_TOP_CLASS = NS + "XX";
+
 
     /*
      * Properties
@@ -94,7 +96,9 @@ public class ICDContentModelConstants {
     public final static String BIOLOGICAL_SEX_PROP = NS + "biologicalSex";
     public final static String BIOLOGICAL_SEX_NA = NS + "BiologicalSexNotAppSCTerm";
 
-    public final static String EXTERNAL_CAUSES_TOP_CLASS = NS + "XX";
+    public final static String ASSIGNED_TAG_PROP = NS + "assignedTAG";
+    public final static String ASSIGNED_PRIMARY_TAG_PROP = NS + "assignedPrimaryTAG";
+    public final static String ASSIGNED_SECONDARY_TAG_PROP = NS + "assignedSecondaryTAG";
 
 
     /*

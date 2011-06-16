@@ -1,5 +1,16 @@
 package edu.stanford.bmir.icd.claml;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 import edu.stanford.smi.protege.model.Instance;
 import edu.stanford.smi.protege.util.CollectionUtilities;
 import edu.stanford.smi.protege.util.IDGenerator;
@@ -8,14 +19,6 @@ import edu.stanford.smi.protegex.owl.model.OWLModel;
 import edu.stanford.smi.protegex.owl.model.RDFProperty;
 import edu.stanford.smi.protegex.owl.model.RDFResource;
 import edu.stanford.smi.protegex.owl.model.RDFSNamedClass;
-
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.LinkedHashSet;
-import java.util.Set;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class ICDContentModel {
 
@@ -104,6 +107,10 @@ public class ICDContentModel {
     private RDFProperty linearizationSortingLabelProperty;
 
     private RDFProperty biologicalSexProperty;
+
+    private RDFProperty assignedTagProperty;
+    private RDFProperty assignedPrimaryTagProperty;
+    private RDFProperty assignedSecondaryTagProperty;
 
     /*
      * Instances
@@ -562,6 +569,28 @@ public class ICDContentModel {
         return biologicalSexProperty;
     }
 
+    public RDFProperty getAssignedTagProperty() {
+        if (assignedTagProperty == null) {
+            assignedTagProperty = owlModel.getRDFProperty(ICDContentModelConstants.ASSIGNED_TAG_PROP);
+        }
+        return assignedTagProperty;
+    }
+
+    public RDFProperty getAssignedPrimaryTagProperty() {
+        if (assignedPrimaryTagProperty == null) {
+            assignedPrimaryTagProperty = owlModel.getRDFProperty(ICDContentModelConstants.ASSIGNED_PRIMARY_TAG_PROP);
+        }
+        return assignedPrimaryTagProperty;
+    }
+
+    public RDFProperty getAssignedSecondaryTagProperty() {
+        if (assignedSecondaryTagProperty == null) {
+            assignedSecondaryTagProperty = owlModel.getRDFProperty(ICDContentModelConstants.ASSIGNED_SECONDARY_TAG_PROP);
+        }
+        return assignedSecondaryTagProperty;
+    }
+
+
     /*
      * Getters for instances
      */
@@ -903,6 +932,53 @@ public class ICDContentModel {
 
     public Collection<RDFResource> getLinearizationSpecifications(RDFSNamedClass icdClass) {
         return icdClass.getPropertyValues(getLinearizationProperty());
+    }
+
+    /*
+     * TAG management methods
+     */
+
+    /**
+     * Returns the  primary and secondary TAGs assigned to this ICD class.
+     * It does not include the inherited primary and secondary TAGs.
+     *
+     * @param icdClass - the ICD class
+     * @return a collection of RDFResources (instances of TAG)
+     */
+    public Collection<RDFResource> getAssignedTags(RDFSNamedClass icdClass) {
+        return icdClass.getPropertyValues(getAssignedTagProperty());
+    }
+
+    /**
+     * Returns the primary TAG assigned to this ICD class.
+     * @param icdClass - a RDFResource (instance of TAG)
+     * @return
+     */
+    public RDFResource getAssignedPrimaryTag(RDFSNamedClass icdClass) {
+        return (RDFResource) icdClass.getPropertyValue(getAssignedPrimaryTagProperty());
+    }
+
+    /**
+     * Returns the secondary TAGs assigned to this ICD class.
+     * It does not include the inherited primary and secondary TAGs.
+     *
+     * @param icdClass - the ICD class
+     * @return a collection of RDFResources (instances of TAG)
+     */
+    public Collection<RDFResource> getAssignedSecondaryTags(RDFSNamedClass icdClass) {
+        return icdClass.getPropertyValues(getAssignedSecondaryTagProperty());
+    }
+
+    public Map<RDFResource, List<RDFSNamedClass>> getInvolvedTags(RDFSNamedClass icdClass) {
+        Map<Object, List<Instance>> map = KBUtilToBeRemoved.getPropertyValuesOnAllSuperclasses(icdClass, getAssignedTagProperty());
+
+        Map<RDFResource, List<RDFSNamedClass>> typedMap = new LinkedHashMap<RDFResource, List<RDFSNamedClass>>();
+
+        for (Object value : map.keySet()) {
+            typedMap.put((RDFResource) value, new ArrayList<RDFSNamedClass>((Collection<? extends RDFSNamedClass>) map.get(value)));
+        }
+
+        return typedMap;
     }
 
 }
