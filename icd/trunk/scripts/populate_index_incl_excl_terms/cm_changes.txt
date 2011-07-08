@@ -1,0 +1,38 @@
+
+.... Missing notes on original CM changes to accommodate index terms, inclusion terms and exclusion terms ....
+
+Additional CM changes:
+- created "InternalReferenceTerm" as a subclass of "Term" (sibling of "ReferenceTerm" & "BioPortalReferenceTerm")
+- added NEW object property to "InternalReferenceTerm" called "referencedCategory"
+- changed the range of the "referencedCategory" property to ICDCategory
+- renamed class "InclusionSubclassTerm" to "SubclassInclusionTerm"
+- moved "SubclassInclusionTerm" from being a subclass of "BaseInclusionTerm" to being a subclass of "InternalReferenceTerm"
+- removed "SubclassInclusionTerm" from the domain of "icdCategory"
+- added "SubclassInclusionTerm" to the range of "baseInclusion" property (i.e. the range of "baseInclusion" property will be "BaseInclusionTerm" union "SubclassInclusionTerm")
+
+- moved class "BaseInclusionTerm" as a subclass of "BaseIndexTerm"
+- created new object property "indexBaseInclusion" with range "BaseInclusionTerm"
+- created new object property "subclassBaseInclusion" with range "SubclassInclusionTerm"
+- moved both "indexBaseInclusion" and "subclassBaseInclusion" as a sub-properties of "baseInclusion" and deleted any other sub-properties
+
+- deleted class "InclusionIndexTerm"
+
+- created new class "BaseExclusionTerm" as a subclass of "InternalReferenceTerm"
+- added "BaseExclusionTerm" to the domain of "exclusionType"
+
+- deprecated the class "ExclusionTerm"
+- replaced the range of "baseExclusion" property "ExclusionTerm" with "BaseExclusionTerm"
+- moved "InclusionTerm" from being a subclass of "BaseInclusionTerm" to being a subclass of "LanguageTerm"
+
+- added "synonym" and "narrower" as sub-properties of "baseIndex" property, and fixed the domain and range of "narrower" (TermSection:NarrowerTerm)
+
+- deprecated the following properties: "index", "inclusion", "exclusion", and "indexTermType"
+- deprecated the following classes: "IndexTermType", "CodedTerm" and its subclasses
+
+
+
+-----
+Changes for the WHO req. related to grouping of categories in linearizations, display status and association of categories to TAGs
+- create datatype property "isGrouping" with domain: LinearizationSpecification, range: boolean, functional
+
+-----
