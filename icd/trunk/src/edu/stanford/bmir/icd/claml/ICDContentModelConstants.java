@@ -99,6 +99,7 @@ public class ICDContentModelConstants {
     public final static String ASSIGNED_TAG_PROP = NS + "assignedTAG";
     public final static String ASSIGNED_PRIMARY_TAG_PROP = NS + "assignedPrimaryTAG";
     public final static String ASSIGNED_SECONDARY_TAG_PROP = NS + "assignedSecondaryTAG";
+	public final static String DISPLAY_STATUS_PROP = "http://who.int/icd#displayStatus";
 
 
     /*

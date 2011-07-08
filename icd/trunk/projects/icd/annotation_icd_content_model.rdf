@@ -95,6 +95,8 @@
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class10013"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class10015"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class10017"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50140"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50142"/>
 </kb:Ontology_Individual>
 <kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class10004"
 	 kb:date="06/03/2011 18:46:22 PDT"
@@ -213,6 +215,8 @@
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class10028"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class10030"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20000"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50144"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50146"/>
 </kb:Ontology_Individual>
 <kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class10021"
 	 kb:date="06/03/2011 18:46:44 PDT"
@@ -959,6 +963,8 @@
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class30"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class32"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class34"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50082"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50084"/>
 </kb:Ontology_Individual>
 <kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class200"
 	 kb:action="Property Value Changed"
@@ -1003,6 +1009,8 @@
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20013"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20015"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20017"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50112"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50114"/>
 </kb:Ontology_Individual>
 <kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20004"
 	 kb:date="06/03/2011 18:48:48 PDT"
@@ -1122,6 +1130,8 @@
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20030"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20032"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20034"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50066"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50068"/>
 </kb:Ontology_Individual>
 <kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20021"
 	 kb:date="06/03/2011 18:49:04 PDT"
@@ -1241,6 +1251,8 @@
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20047"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20049"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20051"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50148"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50150"/>
 </kb:Ontology_Individual>
 <kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20038"
 	 kb:date="06/03/2011 18:49:50 PDT"
@@ -1360,6 +1372,8 @@
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20064"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20066"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20068"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50056"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50058"/>
 </kb:Ontology_Individual>
 <kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20055"
 	 kb:date="06/03/2011 18:50:18 PDT"
@@ -1479,6 +1493,8 @@
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20081"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20083"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20085"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50052"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50054"/>
 </kb:Ontology_Individual>
 <kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20072"
 	 kb:date="06/03/2011 18:50:53 PDT"
@@ -1599,6 +1615,8 @@
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20100"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20102"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20104"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50098"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50100"/>
 </kb:Ontology_Individual>
 <kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20089"
 	 kb:date="06/03/2011 18:51:27 PDT"
@@ -1736,6 +1754,8 @@
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20117"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20119"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20121"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50102"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50104"/>
 </kb:Ontology_Individual>
 <kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20108"
 	 kb:date="06/03/2011 18:52:03 PDT"
@@ -1855,6 +1875,8 @@
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20134"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20136"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20138"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50116"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50118"/>
 </kb:Ontology_Individual>
 <kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20125"
 	 kb:date="06/03/2011 18:52:28 PDT"
@@ -1974,6 +1996,8 @@
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20151"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20153"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20155"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50120"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50122"/>
 </kb:Ontology_Individual>
 <kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20142"
 	 kb:date="06/03/2011 18:53:45 PDT"
@@ -2093,6 +2117,8 @@
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20168"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20170"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20172"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50124"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50126"/>
 </kb:Ontology_Individual>
 <kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20159"
 	 kb:date="06/03/2011 18:54:06 PDT"
@@ -2212,6 +2238,8 @@
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20185"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20187"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20189"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50128"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50130"/>
 </kb:Ontology_Individual>
 <kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20176"
 	 kb:date="06/03/2011 18:54:59 PDT"
@@ -2331,6 +2359,8 @@
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20202"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20204"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20206"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50132"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50134"/>
 </kb:Ontology_Individual>
 <kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20193"
 	 kb:date="06/03/2011 18:55:15 PDT"
@@ -2458,6 +2488,8 @@
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20219"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20221"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20223"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50040"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50042"/>
 </kb:Ontology_Individual>
 <kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20210"
 	 kb:date="06/03/2011 18:55:56 PDT"
@@ -2579,6 +2611,8 @@
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20240"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20242"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20244"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50048"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50050"/>
 </kb:Ontology_Individual>
 <kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20227"
 	 kb:date="06/03/2011 18:56:28 PDT"
@@ -2722,6 +2756,8 @@
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20257"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20259"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20261"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50044"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50046"/>
 </kb:Ontology_Individual>
 <kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20248"
 	 kb:date="06/03/2011 18:56:48 PDT"
@@ -2841,6 +2877,8 @@
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20274"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20276"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20278"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50074"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50076"/>
 </kb:Ontology_Individual>
 <kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20265"
 	 kb:date="06/03/2011 18:57:29 PDT"
@@ -2960,6 +2998,8 @@
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20291"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20293"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20295"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50152"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50154"/>
 </kb:Ontology_Individual>
 <kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20282"
 	 kb:date="06/03/2011 18:58:15 PDT"
@@ -3079,6 +3119,8 @@
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20308"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20310"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20312"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50070"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50072"/>
 </kb:Ontology_Individual>
 <kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20299"
 	 kb:date="06/03/2011 18:58:49 PDT"
@@ -3202,6 +3244,8 @@
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20325"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20327"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20329"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50078"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50080"/>
 </kb:Ontology_Individual>
 <kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20316"
 	 kb:date="06/03/2011 18:59:14 PDT"
@@ -5953,6 +5997,9 @@
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class30000"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class30003"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class30005"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class60000"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class60002"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class60004"/>
 </kb:Ontology_Individual>
 <kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class30002"
 	 kb:date="06/06/2011 18:25:52 PDT"
@@ -6004,6 +6051,17 @@
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class30024"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class30026"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class30028"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class60006"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class60008"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class60010"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class60012"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class60014"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class60016"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class60018"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class60020"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class60022"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class60024"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class60026"/>
 </kb:Ontology_Individual>
 <kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class30009"
 	 kb:date="06/06/2011 18:25:52 PDT"
@@ -6589,6 +6647,8 @@
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class45"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class47"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class49"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50086"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50088"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class51"/>
 </kb:Ontology_Individual>
 <kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class370"
@@ -7564,6 +7624,9 @@
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class437"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class439"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class441"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50060"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50062"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50064"/>
 </kb:Ontology_Individual>
 <kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class434"
 	 kb:date="06/03/2011 18:42:54 PDT"
@@ -7664,6 +7727,8 @@
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class452"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class454"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class456"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50136"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50138"/>
 </kb:Ontology_Individual>
 <kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class447"
 	 kb:date="06/03/2011 18:43:27 PDT"
@@ -7870,6 +7935,986 @@
 	 kb:date="06/03/2011 18:42:12 PDT"
 	 kb:sequence="23"
 	 rdfs:label="06/03/2011 18:42:12 PDT"/>
+<kb:Individual_Created rdf:about="&kb;annotation_icd_content_model_Class50000"
+	 kb:action="Individual_Created"
+	 kb:author=""
+	 kb:context="Individual Create: TAG_1"
+	 kb:creationName="http://who.int/icd#TAG_1"
+	 rdfs:label="Individual Create: TAG_1">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class50001"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50002"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class50005"/>
+</kb:Individual_Created>
+<kb:Ontology_Individual rdf:about="&kb;annotation_icd_content_model_Class50001"
+	 kb:currentName="http://who.int/icd#WHO_Assigned"
+	 rdfs:label="http://who.int/icd#WHO_Assigned">
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50000"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50003"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50005"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50007"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50009"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50011"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50013"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50015"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50017"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50019"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50021"/>
+</kb:Ontology_Individual>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50002"
+	 kb:date="06/24/2011 16:32:11 PDT"
+	 kb:sequence="0"
+	 rdfs:label="06/24/2011 16:32:11 PDT"/>
+<kb:Individual_Added rdf:about="&kb;annotation_icd_content_model_Class50003"
+	 kb:action="Individual_Added"
+	 kb:author=""
+	 kb:context="Instance Added: TAG_1 (instance of: TAG)"
+	 rdfs:label="Instance Added: TAG_1 (instance of: TAG)">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class50001"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50004"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class50005"/>
+</kb:Individual_Added>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50004"
+	 kb:date="06/24/2011 16:32:11 PDT"
+	 kb:sequence="1"
+	 rdfs:label="06/24/2011 16:32:11 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_icd_content_model_Class50005"
+	 kb:action="Composite_Change"
+	 kb:author="">
+	<kb:context>Create Individual: TAG_1 of TAG -- Apply to: http://who.int/icd#TAG_1</kb:context>
+	<rdfs:label>Create Individual: TAG_1 of TAG -- Apply to: http://who.int/icd#TAG_1</rdfs:label>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class50000"/>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class50001"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class50003"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50006"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class50009"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50006"
+	 kb:date="06/24/2011 16:32:11 PDT"
+	 kb:sequence="2"
+	 rdfs:label="06/24/2011 16:32:11 PDT"/>
+<kb:Name_Changed rdf:about="&kb;annotation_icd_content_model_Class50007"
+	 kb:action="Name_Changed"
+	 kb:author=""
+	 kb:context="Name change from 'TAG_1' to 'TAG_WHO_Assigned'"
+	 kb:newName="http://who.int/icd#TAG_WHO_Assigned"
+	 kb:oldName="http://who.int/icd#TAG_1"
+	 rdfs:label="Name change from 'TAG_1' to 'TAG_WHO_Assigned'">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class50001"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50008"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class50009"/>
+</kb:Name_Changed>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50008"
+	 kb:date="06/24/2011 16:32:21 PDT"
+	 kb:sequence="3"
+	 rdfs:label="06/24/2011 16:32:21 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_icd_content_model_Class50009"
+	 kb:action="Composite_Change"
+	 kb:author=""
+	 kb:context="Create Individual TAG_WHO_Assigned"
+	 rdfs:label="Create Individual TAG_WHO_Assigned">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class50001"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class50005"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class50007"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50010"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50010"
+	 kb:date="06/24/2011 16:32:21 PDT"
+	 kb:sequence="4"
+	 rdfs:label="06/24/2011 16:32:21 PDT"/>
+<kb:Name_Changed rdf:about="&kb;annotation_icd_content_model_Class50011"
+	 kb:action="Name_Changed"
+	 kb:author=""
+	 kb:context="Name change from 'TAG_WHO_Assigned' to 'WHO_Assigned'"
+	 kb:newName="http://who.int/icd#WHO_Assigned"
+	 kb:oldName="http://who.int/icd#TAG_WHO_Assigned"
+	 rdfs:label="Name change from 'TAG_WHO_Assigned' to 'WHO_Assigned'">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class50001"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50012"/>
+</kb:Name_Changed>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50012"
+	 kb:date="06/24/2011 16:33:08 PDT"
+	 kb:sequence="5"
+	 rdfs:label="06/24/2011 16:33:08 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50013"
+	 kb:action="Property Value Changed"
+	 kb:author=""
+	 kb:context="Property: rdfs:label for instance: '' set to: (Old values:)"
+	 rdfs:label="Property: rdfs:label for instance: '' set to: (Old values:)">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class50001"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50014"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50014"
+	 kb:date="06/24/2011 16:33:23 PDT"
+	 kb:sequence="6"
+	 rdfs:label="06/24/2011 16:33:23 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50015"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: WHO_Assigned set to: (Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: WHO_Assigned set to: (Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class50001"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50016"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50016"
+	 kb:date="06/24/2011 16:33:25 PDT"
+	 kb:sequence="7"
+	 rdfs:label="06/24/2011 16:33:25 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50017"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: WHO_Assigned set to: WHO_Assigned(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: WHO_Assigned set to: WHO_Assigned(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class50001"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50018"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50018"
+	 kb:date="06/24/2011 16:33:25 PDT"
+	 kb:sequence="8"
+	 rdfs:label="06/24/2011 16:33:25 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50019"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: WHO_Assigned set to: (Old values:WHO_Assigned)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: WHO_Assigned set to: (Old values:WHO_Assigned)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class50001"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50020"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50020"
+	 kb:date="06/24/2011 16:33:28 PDT"
+	 kb:sequence="9"
+	 rdfs:label="06/24/2011 16:33:28 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50021"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: 'WHO Assigned' set to: WHO Assigned(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: 'WHO Assigned' set to: WHO Assigned(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class50001"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50022"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50022"
+	 kb:date="06/24/2011 16:33:28 PDT"
+	 kb:sequence="10"
+	 rdfs:label="06/24/2011 16:33:28 PDT"/>
+<kb:Individual_Created rdf:about="&kb;annotation_icd_content_model_Class50023"
+	 kb:action="Individual_Created"
+	 kb:author=""
+	 kb:context="Individual Create: TAG_2"
+	 kb:creationName="http://who.int/icd#TAG_2"
+	 rdfs:label="Individual Create: TAG_2">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class50024"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50025"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class50028"/>
+</kb:Individual_Created>
+<kb:Ontology_Individual rdf:about="&kb;annotation_icd_content_model_Class50024"
+	 kb:currentName="http://who.int/icd#TAG_IM_Gastroenterology"
+	 rdfs:label="http://who.int/icd#TAG_IM_Gastroenterology">
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50023"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50026"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50028"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50030"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50032"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50034"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50036"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50038"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50106"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50108"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50110"/>
+</kb:Ontology_Individual>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50025"
+	 kb:date="06/24/2011 16:34:23 PDT"
+	 kb:sequence="11"
+	 rdfs:label="06/24/2011 16:34:23 PDT"/>
+<kb:Individual_Added rdf:about="&kb;annotation_icd_content_model_Class50026"
+	 kb:action="Individual_Added"
+	 kb:author=""
+	 kb:context="Instance Added: TAG_2 (instance of: TAG)"
+	 rdfs:label="Instance Added: TAG_2 (instance of: TAG)">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class50024"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50027"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class50028"/>
+</kb:Individual_Added>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50027"
+	 kb:date="06/24/2011 16:34:23 PDT"
+	 kb:sequence="12"
+	 rdfs:label="06/24/2011 16:34:23 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_icd_content_model_Class50028"
+	 kb:action="Composite_Change"
+	 kb:author="">
+	<kb:context>Create Individual: TAG_2 of TAG -- Apply to: http://who.int/icd#TAG_2</kb:context>
+	<rdfs:label>Create Individual: TAG_2 of TAG -- Apply to: http://who.int/icd#TAG_2</rdfs:label>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class50023"/>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class50024"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class50026"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50029"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class50032"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50029"
+	 kb:date="06/24/2011 16:34:23 PDT"
+	 kb:sequence="13"
+	 rdfs:label="06/24/2011 16:34:23 PDT"/>
+<kb:Name_Changed rdf:about="&kb;annotation_icd_content_model_Class50030"
+	 kb:action="Name_Changed"
+	 kb:author=""
+	 kb:oldName="http://who.int/icd#TAG_2">
+	<kb:context>Name change from 'TAG_2' to 'TAG_Genitourinary_Reproductive_and_Maternal'</kb:context>
+	<kb:newName>http://who.int/icd#TAG_Genitourinary_Reproductive_and_Maternal</kb:newName>
+	<rdfs:label>Name change from 'TAG_2' to 'TAG_Genitourinary_Reproductive_and_Maternal'</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class50024"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50031"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class50032"/>
+</kb:Name_Changed>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50031"
+	 kb:date="06/24/2011 16:34:27 PDT"
+	 kb:sequence="14"
+	 rdfs:label="06/24/2011 16:34:27 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_icd_content_model_Class50032"
+	 kb:action="Composite_Change"
+	 kb:author="">
+	<kb:context>Create Individual TAG_Genitourinary_Reproductive_and_Maternal</kb:context>
+	<rdfs:label>Create Individual TAG_Genitourinary_Reproductive_and_Maternal</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class50024"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class50028"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class50030"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50033"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50033"
+	 kb:date="06/24/2011 16:34:27 PDT"
+	 kb:sequence="15"
+	 rdfs:label="06/24/2011 16:34:27 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50034"
+	 kb:action="Property Value Changed"
+	 kb:author=""
+	 kb:context="Property: rdfs:label for instance: '' set to: (Old values:)"
+	 rdfs:label="Property: rdfs:label for instance: '' set to: (Old values:)">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class50024"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50035"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50035"
+	 kb:date="06/24/2011 16:34:42 PDT"
+	 kb:sequence="16"
+	 rdfs:label="06/24/2011 16:34:42 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50036"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: TAG_Genitourinary_Reproductive_and_Maternal set to: (Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: TAG_Genitourinary_Reproductive_and_Maternal set to: (Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class50024"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50037"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50037"
+	 kb:date="06/24/2011 16:34:45 PDT"
+	 kb:sequence="17"
+	 rdfs:label="06/24/2011 16:34:45 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50038"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: 'TAG Genitourinary, Reproductive and Maternal' set to: TAG Genitourinary, Reproductive and Maternal(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: 'TAG Genitourinary, Reproductive and Maternal' set to: TAG Genitourinary, Reproductive and Maternal(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class50024"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50039"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50039"
+	 kb:date="06/24/2011 16:34:45 PDT"
+	 kb:sequence="18"
+	 rdfs:label="06/24/2011 16:34:45 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50040"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: TAG_WG_Occupational set to: (Old values:WG - Occupational Working Group)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: TAG_WG_Occupational set to: (Old values:WG - Occupational Working Group)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20209"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50041"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50041"
+	 kb:date="06/24/2011 16:35:51 PDT"
+	 kb:sequence="19"
+	 rdfs:label="06/24/2011 16:35:51 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50042"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: 'TAG WG Occupational' set to: TAG WG Occupational(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: 'TAG WG Occupational' set to: TAG WG Occupational(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20209"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50043"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50043"
+	 kb:date="06/24/2011 16:35:51 PDT"
+	 kb:sequence="20"
+	 rdfs:label="06/24/2011 16:35:51 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50044"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: TAG_WG_Nutrition set to: (Old values:WG - Nutrition Working Group)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: TAG_WG_Nutrition set to: (Old values:WG - Nutrition Working Group)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20247"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50045"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50045"
+	 kb:date="06/24/2011 16:36:09 PDT"
+	 kb:sequence="21"
+	 rdfs:label="06/24/2011 16:36:09 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50046"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: 'TAG WG Nutrition' set to: TAG WG Nutrition(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: 'TAG WG Nutrition' set to: TAG WG Nutrition(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20247"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50047"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50047"
+	 kb:date="06/24/2011 16:36:09 PDT"
+	 kb:sequence="22"
+	 rdfs:label="06/24/2011 16:36:09 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50048"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: TAG_WG_Environmental set to: (Old values:WG - Environmental Working Group)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: TAG_WG_Environmental set to: (Old values:WG - Environmental Working Group)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20226"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50049"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50049"
+	 kb:date="06/24/2011 16:36:23 PDT"
+	 kb:sequence="23"
+	 rdfs:label="06/24/2011 16:36:23 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50050"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: 'TAG WG Environmental' set to: TAG WG Environmental(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: 'TAG WG Environmental' set to: TAG WG Environmental(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20226"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50051"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50051"
+	 kb:date="06/24/2011 16:36:23 PDT"
+	 kb:sequence="24"
+	 rdfs:label="06/24/2011 16:36:23 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50052"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: TAG_Traditional_Medicine set to: (Old values:Traditional Medicine TAG)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: TAG_Traditional_Medicine set to: (Old values:Traditional Medicine TAG)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20071"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50053"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50053"
+	 kb:date="06/24/2011 16:36:37 PDT"
+	 kb:sequence="25"
+	 rdfs:label="06/24/2011 16:36:37 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50054"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: 'TAG Traditional Medicine' set to: TAG Traditional Medicine(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: 'TAG Traditional Medicine' set to: TAG Traditional Medicine(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20071"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50055"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50055"
+	 kb:date="06/24/2011 16:36:37 PDT"
+	 kb:sequence="26"
+	 rdfs:label="06/24/2011 16:36:37 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50056"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: TAG_Rare_Diseases set to: (Old values:Rare Diseases TAG)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: TAG_Rare_Diseases set to: (Old values:Rare Diseases TAG)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20054"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50057"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50057"
+	 kb:date="06/24/2011 16:36:53 PDT"
+	 kb:sequence="27"
+	 rdfs:label="06/24/2011 16:36:53 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50058"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: 'TAG Rare Diseases' set to: TAG Rare Diseases(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: 'TAG Rare Diseases' set to: TAG Rare Diseases(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20054"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50059"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50059"
+	 kb:date="06/24/2011 16:36:53 PDT"
+	 kb:sequence="28"
+	 rdfs:label="06/24/2011 16:36:53 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50060"
+	 kb:action="Property Value Changed"
+	 kb:author=""
+	 kb:context="Property: rdfs:label for instance: '' set to: (Old values:)"
+	 rdfs:label="Property: rdfs:label for instance: '' set to: (Old values:)">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class433"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50061"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50061"
+	 kb:date="06/24/2011 16:37:05 PDT"
+	 kb:sequence="29"
+	 rdfs:label="06/24/2011 16:37:05 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50062"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: TAG_Mental_Health set to: (Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: TAG_Mental_Health set to: (Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class433"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50063"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50063"
+	 kb:date="06/24/2011 16:37:07 PDT"
+	 kb:sequence="30"
+	 rdfs:label="06/24/2011 16:37:07 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50064"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: 'TAG Mental Health' set to: TAG Mental Health(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: 'TAG Mental Health' set to: TAG Mental Health(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class433"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50065"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50065"
+	 kb:date="06/24/2011 16:37:07 PDT"
+	 kb:sequence="31"
+	 rdfs:label="06/24/2011 16:37:07 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50066"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: TAG_Paediatrics set to: (Old values:Paediatrics TAG)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: TAG_Paediatrics set to: (Old values:Paediatrics TAG)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20020"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50067"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50067"
+	 kb:date="06/24/2011 16:37:24 PDT"
+	 kb:sequence="32"
+	 rdfs:label="06/24/2011 16:37:24 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50068"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: 'TAG Paediatrics' set to: TAG Paediatrics(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: 'TAG Paediatrics' set to: TAG Paediatrics(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20020"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50069"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50069"
+	 kb:date="06/24/2011 16:37:24 PDT"
+	 kb:sequence="33"
+	 rdfs:label="06/24/2011 16:37:24 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50070"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: TAG_H_Functioning set to: (Old values:Horiz - Functioning TAG)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: TAG_H_Functioning set to: (Old values:Horiz - Functioning TAG)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20298"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50071"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50071"
+	 kb:date="06/24/2011 16:37:52 PDT"
+	 kb:sequence="34"
+	 rdfs:label="06/24/2011 16:37:52 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50072"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: 'TAG (Horizontal) Functioning' set to: TAG (Horizontal) Functioning(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: 'TAG (Horizontal) Functioning' set to: TAG (Horizontal) Functioning(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20298"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50073"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50073"
+	 kb:date="06/24/2011 16:37:52 PDT"
+	 kb:sequence="35"
+	 rdfs:label="06/24/2011 16:37:52 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50074"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: TAG_H_Mortality set to: (Old values:Horiz - Mortality TAG)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: TAG_H_Mortality set to: (Old values:Horiz - Mortality TAG)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20264"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50075"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50075"
+	 kb:date="06/24/2011 16:38:06 PDT"
+	 kb:sequence="36"
+	 rdfs:label="06/24/2011 16:38:06 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50076"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: 'TAG (Horizontal) Mortality' set to: TAG (Horizontal) Mortality(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: 'TAG (Horizontal) Mortality' set to: TAG (Horizontal) Mortality(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20264"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50077"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50077"
+	 kb:date="06/24/2011 16:38:06 PDT"
+	 kb:sequence="37"
+	 rdfs:label="06/24/2011 16:38:06 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50078"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: TAG_H_Quality_and_Safety set to: (Old values:Horiz - Quality and Safety)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: TAG_H_Quality_and_Safety set to: (Old values:Horiz - Quality and Safety)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20315"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50079"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50079"
+	 kb:date="06/24/2011 16:38:24 PDT"
+	 kb:sequence="38"
+	 rdfs:label="06/24/2011 16:38:24 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50080"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: 'TAG (Horizontal) Quality and Safety' set to: TAG (Horizontal) Quality and Safety(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: 'TAG (Horizontal) Quality and Safety' set to: TAG (Horizontal) Quality and Safety(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20315"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50081"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50081"
+	 kb:date="06/24/2011 16:38:24 PDT"
+	 kb:sequence="39"
+	 rdfs:label="06/24/2011 16:38:24 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50082"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: TAG_Dentistry set to: (Old values:Dentistry TAG)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: TAG_Dentistry set to: (Old values:Dentistry TAG)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50083"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50083"
+	 kb:date="06/24/2011 16:38:44 PDT"
+	 kb:sequence="40"
+	 rdfs:label="06/24/2011 16:38:44 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50084"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: 'TAG Dentistry' set to: TAG Dentistry(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: 'TAG Dentistry' set to: TAG Dentistry(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50085"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50085"
+	 kb:date="06/24/2011 16:38:44 PDT"
+	 kb:sequence="41"
+	 rdfs:label="06/24/2011 16:38:44 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50086"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: TAG_Dermatology set to: (Old values:Dermatology TAG)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: TAG_Dermatology set to: (Old values:Dermatology TAG)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class37"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50087"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50087"
+	 kb:date="06/24/2011 16:38:56 PDT"
+	 kb:sequence="42"
+	 rdfs:label="06/24/2011 16:38:56 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50088"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: 'TAG Dermatology' set to: TAG Dermatology(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: 'TAG Dermatology' set to: TAG Dermatology(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class37"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50089"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50089"
+	 kb:date="06/24/2011 16:38:56 PDT"
+	 kb:sequence="43"
+	 rdfs:label="06/24/2011 16:38:56 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50090"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: TAG_External_Causes set to: (Old values:External Causes and Injury TAG)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: TAG_External_Causes set to: (Old values:External Causes and Injury TAG)</rdfs:label>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50091"/>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class54"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50091"
+	 kb:date="06/24/2011 16:39:20 PDT"
+	 kb:sequence="44"
+	 rdfs:label="06/24/2011 16:39:20 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50092"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: 'TAG External Causes and Injury' set to: TAG External Causes and Injury(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: 'TAG External Causes and Injury' set to: TAG External Causes and Injury(Old values:)</rdfs:label>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50093"/>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class54"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50093"
+	 kb:date="06/24/2011 16:39:20 PDT"
+	 kb:sequence="45"
+	 rdfs:label="06/24/2011 16:39:20 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50094"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: TAG_External_Causes set to: (Old values:TAG External Causes and Injury)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: TAG_External_Causes set to: (Old values:TAG External Causes and Injury)</rdfs:label>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50095"/>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class54"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50095"
+	 kb:date="06/24/2011 16:39:46 PDT"
+	 kb:sequence="46"
+	 rdfs:label="06/24/2011 16:39:46 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50096"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: 'TAG External Causes' set to: TAG External Causes(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: 'TAG External Causes' set to: TAG External Causes(Old values:)</rdfs:label>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50097"/>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class54"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50097"
+	 kb:date="06/24/2011 16:39:46 PDT"
+	 kb:sequence="47"
+	 rdfs:label="06/24/2011 16:39:46 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50098"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: TAG_IM_Cardiovascular set to: (Old values:IM - Cardiovascular Working Group)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: TAG_IM_Cardiovascular set to: (Old values:IM - Cardiovascular Working Group)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20088"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50099"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50099"
+	 kb:date="06/24/2011 16:40:10 PDT"
+	 kb:sequence="48"
+	 rdfs:label="06/24/2011 16:40:10 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50100"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: 'TAG IM Cardiovascular WG' set to: TAG IM Cardiovascular WG(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: 'TAG IM Cardiovascular WG' set to: TAG IM Cardiovascular WG(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20088"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50101"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50101"
+	 kb:date="06/24/2011 16:40:10 PDT"
+	 kb:sequence="49"
+	 rdfs:label="06/24/2011 16:40:10 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50102"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: TAG_IM_Endocrinology set to: (Old values:IM - Endocrinology Working Group)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: TAG_IM_Endocrinology set to: (Old values:IM - Endocrinology Working Group)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20107"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50103"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50103"
+	 kb:date="06/24/2011 16:40:23 PDT"
+	 kb:sequence="50"
+	 rdfs:label="06/24/2011 16:40:23 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50104"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: 'TAG IM Endocrinology WG' set to: TAG IM Endocrinology WG(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: 'TAG IM Endocrinology WG' set to: TAG IM Endocrinology WG(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20107"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50105"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50105"
+	 kb:date="06/24/2011 16:40:23 PDT"
+	 kb:sequence="51"
+	 rdfs:label="06/24/2011 16:40:23 PDT"/>
+<kb:Name_Changed rdf:about="&kb;annotation_icd_content_model_Class50106"
+	 kb:action="Name_Changed"
+	 kb:author=""
+	 kb:newName="http://who.int/icd#TAG_IM_Gastroenterology">
+	<kb:context>Name change from 'TAG_Genitourinary_Reproductive_and_Maternal' to 'TAG_IM_Gastroenterology'</kb:context>
+	<kb:oldName>http://who.int/icd#TAG_Genitourinary_Reproductive_and_Maternal</kb:oldName>
+	<rdfs:label>Name change from 'TAG_Genitourinary_Reproductive_and_Maternal' to 'TAG_IM_Gastroenterology'</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class50024"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50107"/>
+</kb:Name_Changed>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50107"
+	 kb:date="06/24/2011 16:45:50 PDT"
+	 kb:sequence="52"
+	 rdfs:label="06/24/2011 16:45:50 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50108"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: TAG_IM_Gastroenterology set to: (Old values:TAG Genitourinary, Reproductive and Maternal)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: TAG_IM_Gastroenterology set to: (Old values:TAG Genitourinary, Reproductive and Maternal)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class50024"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50109"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50109"
+	 kb:date="06/24/2011 16:46:07 PDT"
+	 kb:sequence="53"
+	 rdfs:label="06/24/2011 16:46:07 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50110"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: 'TAG IM Gastroenterology WG' set to: TAG IM Gastroenterology WG(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: 'TAG IM Gastroenterology WG' set to: TAG IM Gastroenterology WG(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class50024"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50111"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50111"
+	 kb:date="06/24/2011 16:46:07 PDT"
+	 kb:sequence="54"
+	 rdfs:label="06/24/2011 16:46:07 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50112"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: TAG_GURM set to: (Old values:GURM TAG)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: TAG_GURM set to: (Old values:GURM TAG)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20003"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50113"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50113"
+	 kb:date="06/24/2011 16:46:17 PDT"
+	 kb:sequence="55"
+	 rdfs:label="06/24/2011 16:46:17 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50114"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: 'TAG Genitourinary, Reproductive and Maternal' set to: TAG Genitourinary, Reproductive and Maternal(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: 'TAG Genitourinary, Reproductive and Maternal' set to: TAG Genitourinary, Reproductive and Maternal(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20003"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50115"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50115"
+	 kb:date="06/24/2011 16:46:17 PDT"
+	 kb:sequence="56"
+	 rdfs:label="06/24/2011 16:46:17 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50116"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: TAG_IM_Haematology set to: (Old values:IM - Haematology Working Group)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: TAG_IM_Haematology set to: (Old values:IM - Haematology Working Group)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20124"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50117"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50117"
+	 kb:date="06/24/2011 16:47:07 PDT"
+	 kb:sequence="57"
+	 rdfs:label="06/24/2011 16:47:07 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50118"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: 'TAG IM Haematology WG' set to: TAG IM Haematology WG(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: 'TAG IM Haematology WG' set to: TAG IM Haematology WG(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20124"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50119"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50119"
+	 kb:date="06/24/2011 16:47:07 PDT"
+	 kb:sequence="58"
+	 rdfs:label="06/24/2011 16:47:07 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50120"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: TAG_IM_Hepatology_and_Pancreatobiliary set to: (Old values:IM - Hepatology and Pancreatobiliary Working Group)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: TAG_IM_Hepatology_and_Pancreatobiliary set to: (Old values:IM - Hepatology and Pancreatobiliary Working Group)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20141"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50121"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50121"
+	 kb:date="06/24/2011 16:47:21 PDT"
+	 kb:sequence="59"
+	 rdfs:label="06/24/2011 16:47:21 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50122"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: 'TAG IM Hepatology and Pancreatobiliary WG' set to: TAG IM Hepatology and Pancreatobiliary WG(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: 'TAG IM Hepatology and Pancreatobiliary WG' set to: TAG IM Hepatology and Pancreatobiliary WG(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20141"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50123"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50123"
+	 kb:date="06/24/2011 16:47:21 PDT"
+	 kb:sequence="60"
+	 rdfs:label="06/24/2011 16:47:21 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50124"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: TAG_IM_Nephrology set to: (Old values:IM - Nephrology Working Group)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: TAG_IM_Nephrology set to: (Old values:IM - Nephrology Working Group)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20158"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50125"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50125"
+	 kb:date="06/24/2011 16:47:34 PDT"
+	 kb:sequence="61"
+	 rdfs:label="06/24/2011 16:47:34 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50126"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: 'TAG IM Nephrology WG' set to: TAG IM Nephrology WG(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: 'TAG IM Nephrology WG' set to: TAG IM Nephrology WG(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20158"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50127"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50127"
+	 kb:date="06/24/2011 16:47:34 PDT"
+	 kb:sequence="62"
+	 rdfs:label="06/24/2011 16:47:34 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50128"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: TAG_IM_Respiratory set to: (Old values:IM - Respiratory Working Group)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: TAG_IM_Respiratory set to: (Old values:IM - Respiratory Working Group)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20175"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50129"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50129"
+	 kb:date="06/24/2011 16:47:45 PDT"
+	 kb:sequence="63"
+	 rdfs:label="06/24/2011 16:47:45 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50130"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: 'TAG IM Respiratory WG' set to: TAG IM Respiratory WG(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: 'TAG IM Respiratory WG' set to: TAG IM Respiratory WG(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20175"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50131"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50131"
+	 kb:date="06/24/2011 16:47:45 PDT"
+	 kb:sequence="64"
+	 rdfs:label="06/24/2011 16:47:45 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50132"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: TAG_IM_Rheumatology set to: (Old values:IM - Rheumatology Working Group)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: TAG_IM_Rheumatology set to: (Old values:IM - Rheumatology Working Group)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20192"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50133"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50133"
+	 kb:date="06/24/2011 16:47:54 PDT"
+	 kb:sequence="65"
+	 rdfs:label="06/24/2011 16:47:54 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50134"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: 'TAG IM Rheumatology WG' set to: TAG IM Rheumatology WG(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: 'TAG IM Rheumatology WG' set to: TAG IM Rheumatology WG(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20192"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50135"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50135"
+	 kb:date="06/24/2011 16:47:54 PDT"
+	 kb:sequence="66"
+	 rdfs:label="06/24/2011 16:47:54 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50136"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: TAG_Musculoskeletal set to: (Old values:Musculoskeletal TAG)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: TAG_Musculoskeletal set to: (Old values:Musculoskeletal TAG)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class446"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50137"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50137"
+	 kb:date="06/24/2011 16:48:05 PDT"
+	 kb:sequence="67"
+	 rdfs:label="06/24/2011 16:48:05 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50138"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: 'TAG Musculoskeletal' set to: TAG Musculoskeletal(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: 'TAG Musculoskeletal' set to: TAG Musculoskeletal(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class446"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50139"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50139"
+	 kb:date="06/24/2011 16:48:05 PDT"
+	 kb:sequence="68"
+	 rdfs:label="06/24/2011 16:48:05 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50140"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: TAG_Neoplasms set to: (Old values:Neoplasms TAG)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: TAG_Neoplasms set to: (Old values:Neoplasms TAG)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class10003"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50141"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50141"
+	 kb:date="06/24/2011 16:48:16 PDT"
+	 kb:sequence="69"
+	 rdfs:label="06/24/2011 16:48:16 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50142"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: 'TAG Neoplasms' set to: TAG Neoplasms(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: 'TAG Neoplasms' set to: TAG Neoplasms(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class10003"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50143"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50143"
+	 kb:date="06/24/2011 16:48:16 PDT"
+	 kb:sequence="70"
+	 rdfs:label="06/24/2011 16:48:16 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50144"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: TAG_Neurology set to: (Old values:Neurology TAG)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: TAG_Neurology set to: (Old values:Neurology TAG)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class10020"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50145"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50145"
+	 kb:date="06/24/2011 16:48:27 PDT"
+	 kb:sequence="71"
+	 rdfs:label="06/24/2011 16:48:27 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50146"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: 'TAG Neurology' set to: TAG Neurology(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: 'TAG Neurology' set to: TAG Neurology(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class10020"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50147"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50147"
+	 kb:date="06/24/2011 16:48:27 PDT"
+	 kb:sequence="72"
+	 rdfs:label="06/24/2011 16:48:27 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50148"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: TAG_Ophthalmology set to: (Old values:Ophthalmology TAG)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: TAG_Ophthalmology set to: (Old values:Ophthalmology TAG)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20037"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50149"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50149"
+	 kb:date="06/24/2011 16:48:36 PDT"
+	 kb:sequence="73"
+	 rdfs:label="06/24/2011 16:48:36 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50150"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: 'TAG Ophthalmology' set to: TAG Ophthalmology(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: 'TAG Ophthalmology' set to: TAG Ophthalmology(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20037"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50151"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50151"
+	 kb:date="06/24/2011 16:48:36 PDT"
+	 kb:sequence="74"
+	 rdfs:label="06/24/2011 16:48:36 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50152"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: TAG_H_Morbidity set to: (Old values:Horiz - Morbidity TAG)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: TAG_H_Morbidity set to: (Old values:Horiz - Morbidity TAG)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20281"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50153"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50153"
+	 kb:date="06/24/2011 16:48:53 PDT"
+	 kb:sequence="75"
+	 rdfs:label="06/24/2011 16:48:53 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class50154"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: rdfs:label for instance: 'TAG (Horizontal) Morbidity' set to: TAG (Horizontal) Morbidity(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: 'TAG (Horizontal) Morbidity' set to: TAG (Horizontal) Morbidity(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20281"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class50155"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class50155"
+	 kb:date="06/24/2011 16:48:53 PDT"
+	 kb:sequence="76"
+	 rdfs:label="06/24/2011 16:48:53 PDT"/>
 <kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class51"
 	 kb:action="Property Value Changed"
 	 kb:author="ttania">
@@ -8061,6 +9106,10 @@
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class428"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class430"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class443"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50090"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50092"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50094"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class50096"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class53"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class56"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class58"/>
@@ -8125,6 +9174,175 @@
 	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class54"/>
 	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class61"/>
 </kb:Property_Value>
+<kb:Individual_Created rdf:about="&kb;annotation_icd_content_model_Class60000"
+	 kb:action="Individual_Created"
+	 kb:author=""
+	 kb:context="Individual Create: OWL-ONTOLOGY-POINTER-CLASS_1"
+	 kb:creationName="http://who.int/icd#:OWL-ONTOLOGY-POINTER-CLASS_1"
+	 rdfs:label="Individual Create: OWL-ONTOLOGY-POINTER-CLASS_1">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class30001"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class60001"/>
+</kb:Individual_Created>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class60001"
+	 kb:date="07/05/2011 14:06:19 PDT"
+	 kb:sequence="0"
+	 rdfs:label="07/05/2011 14:06:19 PDT"/>
+<kb:Individual_Added rdf:about="&kb;annotation_icd_content_model_Class60002"
+	 kb:action="Individual_Added"
+	 kb:author="">
+	<kb:context>Instance Added: http://who.int/icd#:OWL-ONTOLOGY-POINTER-CLASS_1 (instance of: :OWL-ONTOLOGY-POINTER-CLASS)</kb:context>
+	<rdfs:label>Instance Added: http://who.int/icd#:OWL-ONTOLOGY-POINTER-CLASS_1 (instance of: :OWL-ONTOLOGY-POINTER-CLASS)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class30001"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class60003"/>
+</kb:Individual_Added>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class60003"
+	 kb:date="07/05/2011 14:06:19 PDT"
+	 kb:sequence="1"
+	 rdfs:label="07/05/2011 14:06:19 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class60004"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: protege:OWL-ONTOLOGY-POINTER-PROPERTY for instance: http://who.int/icd#:OWL-ONTOLOGY-POINTER-CLASS_1 set to: Ontology(http://who.int/icd/contentModel)(Old values:)</kb:context>
+	<rdfs:label>Property: protege:OWL-ONTOLOGY-POINTER-PROPERTY for instance: http://who.int/icd#:OWL-ONTOLOGY-POINTER-CLASS_1 set to: Ontology(http://who.int/icd/contentModel)(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class30001"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class60005"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class60005"
+	 kb:date="07/05/2011 14:06:19 PDT"
+	 kb:sequence="2"
+	 rdfs:label="07/05/2011 14:06:19 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class60006"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: protege:OWL-ONTOLOGY-PREFIXES for instance: Ontology(http://who.int/icd/contentModel) set to: :http://who.int/icd#(Old values:)</kb:context>
+	<rdfs:label>Property: protege:OWL-ONTOLOGY-PREFIXES for instance: Ontology(http://who.int/icd/contentModel) set to: :http://who.int/icd#(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class30008"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class60007"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class60007"
+	 kb:date="07/05/2011 14:06:19 PDT"
+	 kb:sequence="3"
+	 rdfs:label="07/05/2011 14:06:19 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class60008"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: protege:OWL-ONTOLOGY-PREFIXES for instance: Ontology(http://who.int/icd/contentModel) set to: :http://who.int/icd#, rdfs:http://www.w3.org/2000/01/rdf-schema#(Old values::http://who.int/icd#)</kb:context>
+	<rdfs:label>Property: protege:OWL-ONTOLOGY-PREFIXES for instance: Ontology(http://who.int/icd/contentModel) set to: :http://who.int/icd#, rdfs:http://www.w3.org/2000/01/rdf-schema#(Old values::http://who.int/icd#)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class30008"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class60009"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class60009"
+	 kb:date="07/05/2011 14:06:19 PDT"
+	 kb:sequence="4"
+	 rdfs:label="07/05/2011 14:06:19 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class60010"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: protege:OWL-ONTOLOGY-PREFIXES for instance: Ontology(http://who.int/icd/contentModel) set to: :http://who.int/icd#, rdfs:http://www.w3.org/2000/01/rdf-schema#, bp:http://bioportal.bioontology.org#(Old values::http://who.int/icd#, rdfs:http://www.w3.org/2000/01/rdf-schema#)</kb:context>
+	<rdfs:label>Property: protege:OWL-ONTOLOGY-PREFIXES for instance: Ontology(http://who.int/icd/contentModel) set to: :http://who.int/icd#, rdfs:http://www.w3.org/2000/01/rdf-schema#, bp:http://bioportal.bioontology.org#(Old values::http://who.int/icd#, rdfs:http://www.w3.org/2000/01/rdf-schema#)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class30008"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class60011"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class60011"
+	 kb:date="07/05/2011 14:06:19 PDT"
+	 kb:sequence="5"
+	 rdfs:label="07/05/2011 14:06:19 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class60012"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: protege:OWL-ONTOLOGY-PREFIXES for instance: Ontology(http://who.int/icd/contentModel) set to: :http://who.int/icd#, rdfs:http://www.w3.org/2000/01/rdf-schema#, bp:http://bioportal.bioontology.org#, swrl:http://www.w3.org/2003/11/swrl#(Old values::http://who.int/icd#, rdfs:http://www.w3.org/2000/01/rdf-schema#, bp:http://bioportal.bioontology.org#)</kb:context>
+	<rdfs:label>Property: protege:OWL-ONTOLOGY-PREFIXES for instance: Ontology(http://who.int/icd/contentModel) set to: :http://who.int/icd#, rdfs:http://www.w3.org/2000/01/rdf-schema#, bp:http://bioportal.bioontology.org#, swrl:http://www.w3.org/2003/11/swrl#(Old values::http://who.int/icd#, rdfs:http://www.w3.org/2000/01/rdf-schema#, bp:http://bioportal.bioontology.org#)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class30008"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class60013"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class60013"
+	 kb:date="07/05/2011 14:06:19 PDT"
+	 kb:sequence="6"
+	 rdfs:label="07/05/2011 14:06:19 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class60014"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: protege:OWL-ONTOLOGY-PREFIXES for instance: Ontology(http://who.int/icd/contentModel) set to: :http://who.int/icd#, rdfs:http://www.w3.org/2000/01/rdf-schema#, bp:http://bioportal.bioontology.org#, swrl:http://www.w3.org/2003/11/swrl#, protege:http://protege.stanford.edu/plugins/owl/protege#(Old values::http://who.int/icd#, rdfs:http://www.w3.org/2000/01/rdf-schema#, bp:http://bioportal.bioontology.org#, swrl:http://www.w3.org/2003/11/swrl#)</kb:context>
+	<rdfs:label>Property: protege:OWL-ONTOLOGY-PREFIXES for instance: Ontology(http://who.int/icd/contentModel) set to: :http://who.int/icd#, rdfs:http://www.w3.org/2000/01/rdf-schema#, bp:http://bioportal.bioontology.org#, swrl:http://www.w3.org/2003/11/swrl#, protege:http://protege.stanford.edu/plugins/owl/protege#(Old values::http://who.int/icd#, rdfs:http://www.w3.org/2000/01/rdf-schema#, bp:http://bioportal.bioontology.org#, swrl:http://www.w3.org/2003/11/swrl#)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class30008"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class60015"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class60015"
+	 kb:date="07/05/2011 14:06:19 PDT"
+	 kb:sequence="7"
+	 rdfs:label="07/05/2011 14:06:19 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class60016"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: protege:OWL-ONTOLOGY-PREFIXES for instance: Ontology(http://who.int/icd/contentModel) set to: :http://who.int/icd#, rdfs:http://www.w3.org/2000/01/rdf-schema#, bp:http://bioportal.bioontology.org#, swrl:http://www.w3.org/2003/11/swrl#, protege:http://protege.stanford.edu/plugins/owl/protege#, xsp:http://www.owl-ontologies.com/2005/08/07/xsp.owl#(Old values::http://who.int/icd#, rdfs:http://www.w3.org/2000/01/rdf-schema#, bp:http://bioportal.bioontology.org#, swrl:http://www.w3.org/2003/11/swrl#, protege:http://protege.stanford.edu/plugins/owl/protege#)</kb:context>
+	<rdfs:label>Property: protege:OWL-ONTOLOGY-PREFIXES for instance: Ontology(http://who.int/icd/contentModel) set to: :http://who.int/icd#, rdfs:http://www.w3.org/2000/01/rdf-schema#, bp:http://bioportal.bioontology.org#, swrl:http://www.w3.org/2003/11/swrl#, protege:http://protege.stanford.edu/plugins/owl/protege#, xsp:http://www.owl-ontologies.com/2005/08/07/xsp.owl#(Old values::http://who.int/icd#, rdfs:http://www.w3.org/2000/01/rdf-schema#, bp:http://bioportal.bioontology.org#, swrl:http://www.w3.org/2003/11/swrl#, protege:http://protege.stanford.edu/plugins/owl/protege#)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class30008"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class60017"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class60017"
+	 kb:date="07/05/2011 14:06:19 PDT"
+	 kb:sequence="8"
+	 rdfs:label="07/05/2011 14:06:19 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class60018"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: protege:OWL-ONTOLOGY-PREFIXES for instance: Ontology(http://who.int/icd/contentModel) set to: :http://who.int/icd#, rdfs:http://www.w3.org/2000/01/rdf-schema#, bp:http://bioportal.bioontology.org#, swrl:http://www.w3.org/2003/11/swrl#, protege:http://protege.stanford.edu/plugins/owl/protege#, xsp:http://www.owl-ontologies.com/2005/08/07/xsp.owl#, swrlb:http://www.w3.org/2003/11/swrlb#(Old values::http://who.int/icd#, rdfs:http://www.w3.org/2000/01/rdf-schema#, bp:http://bioportal.bioontology.org#, swrl:http://www.w3.org/2003/11/swrl#, protege:http://protege.stanford.edu/plugins/owl/protege#, xsp:http://www.owl-ontologies.com/2005/08/07/xsp.owl#)</kb:context>
+	<rdfs:label>Property: protege:OWL-ONTOLOGY-PREFIXES for instance: Ontology(http://who.int/icd/contentModel) set to: :http://who.int/icd#, rdfs:http://www.w3.org/2000/01/rdf-schema#, bp:http://bioportal.bioontology.org#, swrl:http://www.w3.org/2003/11/swrl#, protege:http://protege.stanford.edu/plugins/owl/protege#, xsp:http://www.owl-ontologies.com/2005/08/07/xsp.owl#, swrlb:http://www.w3.org/2003/11/swrlb#(Old values::http://who.int/icd#, rdfs:http://www.w3.org/2000/01/rdf-schema#, bp:http://bioportal.bioontology.org#, swrl:http://www.w3.org/2003/11/swrl#, protege:http://protege.stanford.edu/plugins/owl/protege#, xsp:http://www.owl-ontologies.com/2005/08/07/xsp.owl#)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class30008"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class60019"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class60019"
+	 kb:date="07/05/2011 14:06:19 PDT"
+	 kb:sequence="9"
+	 rdfs:label="07/05/2011 14:06:19 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class60020"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: protege:OWL-ONTOLOGY-PREFIXES for instance: Ontology(http://who.int/icd/contentModel) set to: :http://who.int/icd#, rdfs:http://www.w3.org/2000/01/rdf-schema#, bp:http://bioportal.bioontology.org#, swrl:http://www.w3.org/2003/11/swrl#, protege:http://protege.stanford.edu/plugins/owl/protege#, xsp:http://www.owl-ontologies.com/2005/08/07/xsp.owl#, swrlb:http://www.w3.org/2003/11/swrlb#, xsd:http://www.w3.org/2001/XMLSchema#(Old values::http://who.int/icd#, rdfs:http://www.w3.org/2000/01/rdf-schema#, bp:http://bioportal.bioontology.org#, swrl:http://www.w3.org/2003/11/swrl#, protege:http://protege.stanford.edu/plugins/owl/protege#, xsp:http://www.owl-ontologies.com/2005/08/07/xsp.owl#, swrlb:http://www.w3.org/2003/11/swrlb#)</kb:context>
+	<rdfs:label>Property: protege:OWL-ONTOLOGY-PREFIXES for instance: Ontology(http://who.int/icd/contentModel) set to: :http://who.int/icd#, rdfs:http://www.w3.org/2000/01/rdf-schema#, bp:http://bioportal.bioontology.org#, swrl:http://www.w3.org/2003/11/swrl#, protege:http://protege.stanford.edu/plugins/owl/protege#, xsp:http://www.owl-ontologies.com/2005/08/07/xsp.owl#, swrlb:http://www.w3.org/2003/11/swrlb#, xsd:http://www.w3.org/2001/XMLSchema#(Old values::http://who.int/icd#, rdfs:http://www.w3.org/2000/01/rdf-schema#, bp:http://bioportal.bioontology.org#, swrl:http://www.w3.org/2003/11/swrl#, protege:http://protege.stanford.edu/plugins/owl/protege#, xsp:http://www.owl-ontologies.com/2005/08/07/xsp.owl#, swrlb:http://www.w3.org/2003/11/swrlb#)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class30008"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class60021"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class60021"
+	 kb:date="07/05/2011 14:06:19 PDT"
+	 kb:sequence="10"
+	 rdfs:label="07/05/2011 14:06:19 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class60022"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: protege:OWL-ONTOLOGY-PREFIXES for instance: Ontology(http://who.int/icd/contentModel) set to: :http://who.int/icd#, rdfs:http://www.w3.org/2000/01/rdf-schema#, bp:http://bioportal.bioontology.org#, swrl:http://www.w3.org/2003/11/swrl#, protege:http://protege.stanford.edu/plugins/owl/protege#, xsp:http://www.owl-ontologies.com/2005/08/07/xsp.owl#, swrlb:http://www.w3.org/2003/11/swrlb#, xsd:http://www.w3.org/2001/XMLSchema#, owl:http://www.w3.org/2002/07/owl#(Old values::http://who.int/icd#, rdfs:http://www.w3.org/2000/01/rdf-schema#, bp:http://bioportal.bioontology.org#, swrl:http://www.w3.org/2003/11/swrl#, protege:http://protege.stanford.edu/plugins/owl/protege#, xsp:http://www.owl-ontologies.com/2005/08/07/xsp.owl#, swrlb:http://www.w3.org/2003/11/swrlb#, xsd:http://www.w3.org/2001/XMLSchema#)</kb:context>
+	<rdfs:label>Property: protege:OWL-ONTOLOGY-PREFIXES for instance: Ontology(http://who.int/icd/contentModel) set to: :http://who.int/icd#, rdfs:http://www.w3.org/2000/01/rdf-schema#, bp:http://bioportal.bioontology.org#, swrl:http://www.w3.org/2003/11/swrl#, protege:http://protege.stanford.edu/plugins/owl/protege#, xsp:http://www.owl-ontologies.com/2005/08/07/xsp.owl#, swrlb:http://www.w3.org/2003/11/swrlb#, xsd:http://www.w3.org/2001/XMLSchema#, owl:http://www.w3.org/2002/07/owl#(Old values::http://who.int/icd#, rdfs:http://www.w3.org/2000/01/rdf-schema#, bp:http://bioportal.bioontology.org#, swrl:http://www.w3.org/2003/11/swrl#, protege:http://protege.stanford.edu/plugins/owl/protege#, xsp:http://www.owl-ontologies.com/2005/08/07/xsp.owl#, swrlb:http://www.w3.org/2003/11/swrlb#, xsd:http://www.w3.org/2001/XMLSchema#)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class30008"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class60023"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class60023"
+	 kb:date="07/05/2011 14:06:19 PDT"
+	 kb:sequence="11"
+	 rdfs:label="07/05/2011 14:06:19 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class60024"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: protege:OWL-ONTOLOGY-PREFIXES for instance: Ontology(http://who.int/icd/contentModel) set to: :http://who.int/icd#, rdfs:http://www.w3.org/2000/01/rdf-schema#, bp:http://bioportal.bioontology.org#, swrl:http://www.w3.org/2003/11/swrl#, protege:http://protege.stanford.edu/plugins/owl/protege#, xsp:http://www.owl-ontologies.com/2005/08/07/xsp.owl#, swrlb:http://www.w3.org/2003/11/swrlb#, xsd:http://www.w3.org/2001/XMLSchema#, owl:http://www.w3.org/2002/07/owl#, rdf:http://www.w3.org/1999/02/22-rdf-syntax-ns#(Old values::http://who.int/icd#, rdfs:http://www.w3.org/2000/01/rdf-schema#, bp:http://bioportal.bioontology.org#, swrl:http://www.w3.org/2003/11/swrl#, protege:http://protege.stanford.edu/plugins/owl/protege#, xsp:http://www.owl-ontologies.com/2005/08/07/xsp.owl#, swrlb:http://www.w3.org/2003/11/swrlb#, xsd:http://www.w3.org/2001/XMLSchema#, owl:http://www.w3.org/2002/07/owl#)</kb:context>
+	<rdfs:label>Property: protege:OWL-ONTOLOGY-PREFIXES for instance: Ontology(http://who.int/icd/contentModel) set to: :http://who.int/icd#, rdfs:http://www.w3.org/2000/01/rdf-schema#, bp:http://bioportal.bioontology.org#, swrl:http://www.w3.org/2003/11/swrl#, protege:http://protege.stanford.edu/plugins/owl/protege#, xsp:http://www.owl-ontologies.com/2005/08/07/xsp.owl#, swrlb:http://www.w3.org/2003/11/swrlb#, xsd:http://www.w3.org/2001/XMLSchema#, owl:http://www.w3.org/2002/07/owl#, rdf:http://www.w3.org/1999/02/22-rdf-syntax-ns#(Old values::http://who.int/icd#, rdfs:http://www.w3.org/2000/01/rdf-schema#, bp:http://bioportal.bioontology.org#, swrl:http://www.w3.org/2003/11/swrl#, protege:http://protege.stanford.edu/plugins/owl/protege#, xsp:http://www.owl-ontologies.com/2005/08/07/xsp.owl#, swrlb:http://www.w3.org/2003/11/swrlb#, xsd:http://www.w3.org/2001/XMLSchema#, owl:http://www.w3.org/2002/07/owl#)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class30008"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class60025"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class60025"
+	 kb:date="07/05/2011 14:06:19 PDT"
+	 kb:sequence="12"
+	 rdfs:label="07/05/2011 14:06:19 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class60026"
+	 kb:action="Property Value Changed"
+	 kb:author="">
+	<kb:context>Property: protege:OWL-ONTOLOGY-PREFIXES for instance: Ontology(http://who.int/icd/contentModel) set to: :http://who.int/icd#, rdfs:http://www.w3.org/2000/01/rdf-schema#, bp:http://bioportal.bioontology.org#, swrl:http://www.w3.org/2003/11/swrl#, protege:http://protege.stanford.edu/plugins/owl/protege#, xsp:http://www.owl-ontologies.com/2005/08/07/xsp.owl#, swrlb:http://www.w3.org/2003/11/swrlb#, xsd:http://www.w3.org/2001/XMLSchema#, owl:http://www.w3.org/2002/07/owl#, rdf:http://www.w3.org/1999/02/22-rdf-syntax-ns#, iceci:http://who.int/iceci/iceci.owl#(Old values::http://who.int/icd#, rdfs:http://www.w3.org/2000/01/rdf-schema#, bp:http://bioportal.bioontology.org#, swrl:http://www.w3.org/2003/11/swrl#, protege:http://protege.stanford.edu/plugins/owl/protege#, xsp:http://www.owl-ontologies.com/2005/08/07/xsp.owl#, swrlb:http://www.w3.org/2003/11/swrlb#, xsd:http://www.w3.org/2001/XMLSchema#, owl:http://www.w3.org/2002/07/owl#, rdf:http://www.w3.org/1999/02/22-rdf-syntax-ns#)</kb:context>
+	<rdfs:label>Property: protege:OWL-ONTOLOGY-PREFIXES for instance: Ontology(http://who.int/icd/contentModel) set to: :http://who.int/icd#, rdfs:http://www.w3.org/2000/01/rdf-schema#, bp:http://bioportal.bioontology.org#, swrl:http://www.w3.org/2003/11/swrl#, protege:http://protege.stanford.edu/plugins/owl/protege#, xsp:http://www.owl-ontologies.com/2005/08/07/xsp.owl#, swrlb:http://www.w3.org/2003/11/swrlb#, xsd:http://www.w3.org/2001/XMLSchema#, owl:http://www.w3.org/2002/07/owl#, rdf:http://www.w3.org/1999/02/22-rdf-syntax-ns#, iceci:http://who.int/iceci/iceci.owl#(Old values::http://who.int/icd#, rdfs:http://www.w3.org/2000/01/rdf-schema#, bp:http://bioportal.bioontology.org#, swrl:http://www.w3.org/2003/11/swrl#, protege:http://protege.stanford.edu/plugins/owl/protege#, xsp:http://www.owl-ontologies.com/2005/08/07/xsp.owl#, swrlb:http://www.w3.org/2003/11/swrlb#, xsd:http://www.w3.org/2001/XMLSchema#, owl:http://www.w3.org/2002/07/owl#, rdf:http://www.w3.org/1999/02/22-rdf-syntax-ns#)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class30008"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class60027"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class60027"
+	 kb:date="07/05/2011 14:06:19 PDT"
+	 kb:sequence="13"
+	 rdfs:label="07/05/2011 14:06:19 PDT"/>
 <kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class61"
 	 kb:date="06/03/2011 18:42:19 PDT"
 	 kb:sequence="28"

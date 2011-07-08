@@ -111,6 +111,7 @@ public class ICDContentModel {
     private RDFProperty assignedTagProperty;
     private RDFProperty assignedPrimaryTagProperty;
     private RDFProperty assignedSecondaryTagProperty;
+    private RDFProperty displayStatusProperty;
 
     /*
      * Instances
@@ -588,6 +589,13 @@ public class ICDContentModel {
             assignedSecondaryTagProperty = owlModel.getRDFProperty(ICDContentModelConstants.ASSIGNED_SECONDARY_TAG_PROP);
         }
         return assignedSecondaryTagProperty;
+    }
+    
+    public RDFProperty getDisplayStatusProperty() {
+    	if (displayStatusProperty == null) {
+    		displayStatusProperty = owlModel.getRDFProperty(ICDContentModelConstants.DISPLAY_STATUS_PROP);
+    	}
+    	return displayStatusProperty;
     }
 
 
