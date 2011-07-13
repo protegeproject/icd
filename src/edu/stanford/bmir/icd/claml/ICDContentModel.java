@@ -12,6 +12,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import edu.stanford.smi.protege.model.Instance;
+import edu.stanford.smi.protege.model.ModelUtilities;
 import edu.stanford.smi.protege.util.CollectionUtilities;
 import edu.stanford.smi.protege.util.IDGenerator;
 import edu.stanford.smi.protege.util.Log;
@@ -978,7 +979,7 @@ public class ICDContentModel {
     }
 
     public Map<RDFResource, List<RDFSNamedClass>> getInvolvedTags(RDFSNamedClass icdClass) {
-        Map<Object, List<Instance>> map = KBUtilToBeRemoved.getPropertyValuesOnAllSuperclasses(icdClass, getAssignedTagProperty());
+        Map<Object, List<Instance>> map = ModelUtilities.getPropertyValuesOnAllSuperclasses(icdClass, getAssignedTagProperty());
 
         Map<RDFResource, List<RDFSNamedClass>> typedMap = new LinkedHashMap<RDFResource, List<RDFSNamedClass>>();
 
