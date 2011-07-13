@@ -93,7 +93,7 @@ public class ImportTAGsAndStatus {
 
 		writeCategoryInfoToModel(catInfos, owlModel);
 		removeRedundantSecondaryTAGs(catInfos, owlModel);
-		
+
 		//TODO check whether we need this or not
 		writeChangesToChao(owlModel);
 
@@ -122,15 +122,15 @@ public class ImportTAGsAndStatus {
 				if ((!TEST_RUN) || (TEST_RUN && (r<10 || r>sh.getRows()-10))) //IF TEST ONLY
 				{
 					String id = sh.getCell(0,r).getContents();
-					
+
 					if (id != null && id.length() > 0) {
-	
+
 						String primaryTAG = sh.getCell(7,r).getContents();
 						String secondaryTAG1 = sh.getCell(8,r).getContents();
 						String secondaryTAG2 = sh.getCell(9,r).getContents();
 						String secondaryTAG3 = sh.getCell(10,r).getContents();
 						String status = sh.getCell(11,r).getContents();
-	
+
 						CategoryInfo catInfo = res.get(id);
 						if (catInfo == null) {
 							catInfo = new CategoryInfo(id);
@@ -139,7 +139,7 @@ public class ImportTAGsAndStatus {
 						else {
 							Log.getLogger().warning("Duplicate concept id in row " + r + ": " + id);
 						}
-						
+
 						catInfo.setPrimaryTAG(primaryTAG);
 						catInfo.addSecondaryTAG(secondaryTAG1);
 						catInfo.addSecondaryTAG(secondaryTAG2);
@@ -177,19 +177,19 @@ public class ImportTAGsAndStatus {
         for (CategoryInfo catInfo : categoryInfo) {
         	String id = catInfo.getId();
 			RDFSNamedClass category = icdContentModel.getICDCategory(id);
-			
+
 			if (id == null || category == null) {
 				logger.severe("Category could not be retrieved for id: " + id);
 				continue;
 			}
-			
+
 			Object oldStatus = category.getPropertyValue(propStatus);
 			RDFResource newStatus = getResource(owlModel, catInfo.getStatus());
 			if (oldStatus != null && (! oldStatus.equals(newStatus))) {
 				logger.warning("Overwriting status of " + id + ". Current value: " + oldStatus + ". New value: " + newStatus);
 			}
 			category.setPropertyValue(propStatus, newStatus);
-			
+
 			RDFResource oldPrimaryTag = icdContentModel.getAssignedPrimaryTag(category);
             RDFResource newPrimaryTag = getResource(owlModel, catInfo.getPrimaryTAG());
 			if (oldPrimaryTag != null && (! oldPrimaryTag.equals(newPrimaryTag))) {
@@ -212,7 +212,7 @@ public class ImportTAGsAndStatus {
         logger.info("Done!");
 	}
 
-	
+
 	private static RDFResource getResource(OWLModel owlModel, String uri) {
 		RDFResource res = valueId2IndMap.get(uri);
 		if (res == null) {
@@ -226,7 +226,7 @@ public class ImportTAGsAndStatus {
 		}
 		return res;
 	}
-	
+
 	private static List<RDFResource> getResourceList(OWLModel owlModel, List<String> uris) {
 		List<RDFResource> res = new ArrayList<RDFResource>();
 		for (String uri : uris) {
@@ -251,7 +251,7 @@ public class ImportTAGsAndStatus {
         for (CategoryInfo catInfo : categoryInfo) {
         	String id = catInfo.getId();
 			RDFSNamedClass category = icdContentModel.getICDCategory(id);
-			
+
 			if (id == null || category == null) {
 				logger.severe("Category could not be retrieved for id: " + id);
 				continue;
@@ -262,7 +262,7 @@ public class ImportTAGsAndStatus {
 			if (localSecondaryTAGs != null) {
 				for (RDFResource localSecondaryTAG : localSecondaryTAGs) {
 					List<RDFSNamedClass> tagAssignedAt = involvedTags.get(localSecondaryTAG);
-					//if local secondary TAG was assigned at more than one classes (i.e. it is also inherited from some of the parent categories) 
+					//if local secondary TAG was assigned at more than one classes (i.e. it is also inherited from some of the parent categories)
 					if (tagAssignedAt.size() > 1) {
 						logger.info("Removing secondary TAG from " + id + ": " + localSecondaryTAG);
 						category.removePropertyValue(propSecondaryTAG, localSecondaryTAG);
@@ -301,11 +301,11 @@ public class ImportTAGsAndStatus {
 
 	}
 
-	
+
 	static class CategoryInfo implements Comparable<CategoryInfo> {
 		private static final String ICD_NS = "http://who.int/icd#";
 		private static final String ICD_PREFIX = "icd:";
-		
+
 		private String id;
 		private String status;
 		private String primaryTAG;
@@ -315,7 +315,7 @@ public class ImportTAGsAndStatus {
 			this.id = id;
 		}
 
-		
+
 		public String getId() {
 			return id;
 		}
@@ -348,9 +348,8 @@ public class ImportTAGsAndStatus {
 				this.secondaryTAGs.add(secondaryTAG);
 			}
 		}
-		
 
-		@Override
+
 		public int compareTo(CategoryInfo other) {
 			int res = compare(this.primaryTAG, other.primaryTAG);
 			if (res == 0) {
@@ -364,17 +363,17 @@ public class ImportTAGsAndStatus {
 			}
 			return res;
 		}
-		
+
 		private int compare(String s1, String s2) {
-			return (s1 == null && s2 == null ? 0 : 
-				(s1 == null ? -1 : 
-					(s2 == null ? 1 : 
+			return (s1 == null && s2 == null ? 0 :
+				(s1 == null ? -1 :
+					(s2 == null ? 1 :
 						s1.compareTo(s2))));
 		}
-		
+
 		private int compare(List<String> l1, List<String> l2) {
-			int res = (l1 == null && l2 == null ? 0 : 
-				(l1 == null ? -1 : 
+			int res = (l1 == null && l2 == null ? 0 :
+				(l1 == null ? -1 :
 					(l2 == null ? 1 : 0)));
 			//if none of the lists is null
 			if (res == 0 && l1 != null) {
@@ -395,9 +394,9 @@ public class ImportTAGsAndStatus {
 		//--- toString() ---//
 		@Override
 		public String toString() {
-			return id.replaceFirst(ICD_NS, ICD_PREFIX) + 
-			" - " + primaryTAG.replaceFirst(ICD_NS, ICD_PREFIX) + 
-			" " + (secondaryTAGs == null ? "null" : secondaryTAGs.toString().replaceAll(ICD_NS, ICD_PREFIX)) + 
+			return id.replaceFirst(ICD_NS, ICD_PREFIX) +
+			" - " + primaryTAG.replaceFirst(ICD_NS, ICD_PREFIX) +
+			" " + (secondaryTAGs == null ? "null" : secondaryTAGs.toString().replaceAll(ICD_NS, ICD_PREFIX)) +
 			" - " + status.replaceFirst(ICD_NS, ICD_PREFIX);
 		}
 	}
