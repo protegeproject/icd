@@ -100,7 +100,9 @@ public class TreeComponent extends JPanel {
 	
 	protected Action getLoadAction() {
 		return new AbstractAction("Load") {
-			public void actionPerformed(ActionEvent arg0) {
+			private static final long serialVersionUID = 8541247235917469361L;
+
+            public void actionPerformed(ActionEvent arg0) {
 				if (fileField.getPath() == null) {
 					ModalDialog.showMessageDialog(TreeComponent.this, "Please select a file first, and then click Load");
 					return;
