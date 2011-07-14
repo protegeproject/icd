@@ -26,7 +26,8 @@ import edu.stanford.smi.protege.widget.AbstractTabWidget;
 
 public class ICDDiff extends AbstractTabWidget {	
 	
-	private TreeComponent treePanelLeft;
+	private static final long serialVersionUID = 1092702642237713810L;
+    private TreeComponent treePanelLeft;
 	private TreeComponent treePanelRight;
 	
 	private Map<Cls, FrameStatus> left_cls2Status = new HashMap<Cls, FrameStatus>();
@@ -55,7 +56,9 @@ public class ICDDiff extends AbstractTabWidget {
 
 	protected Action getCompareAction() {
 		return new AbstractAction("Compare") {
-			public void actionPerformed(ActionEvent arg0) {
+			private static final long serialVersionUID = 1058398400197261444L;
+
+            public void actionPerformed(ActionEvent arg0) {
 				if (treePanelLeft.getKb() == null || treePanelRight.getKb() == null) {
 					ModalDialog.showMessageDialog(ICDDiff.this, "Please load first two models to compare.");
 					return;

@@ -12,7 +12,9 @@ import edu.stanford.smi.protege.ui.FrameRenderer;
 
 public class ChangedFrameRenderer extends FrameRenderer {	
 
-	private Map<Cls, FrameStatus> frame2status;
+	private static final long serialVersionUID = 5646378888398296767L;
+
+    private Map<Cls, FrameStatus> frame2status;
 
 	private FrameStatus frameStatus;
 	protected Cls _cls = null;
