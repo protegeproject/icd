@@ -230,7 +230,10 @@ public class ImportTAGsAndStatus {
 	private static List<RDFResource> getResourceList(OWLModel owlModel, List<String> uris) {
 		List<RDFResource> res = new ArrayList<RDFResource>();
 		for (String uri : uris) {
-			res.add(getResource(owlModel, uri));
+			RDFResource resource = getResource(owlModel, uri);
+			if (resource != null) {
+				res.add(resource);
+			}
 		}
 		return res;
 	}
