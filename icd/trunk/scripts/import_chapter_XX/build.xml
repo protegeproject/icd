@@ -37,7 +37,7 @@
         <fileset dir="${owl.plugin.path}"/>
       	<fileset dir="${icd.path}"/>
       	<fileset dir="${chao.path}"/>
-      	<pathelement location = "excel_import_tags.jar"/>
+      	<pathelement location = "excel_import_ch20.jar"/>
       </path>
 
     </target>
@@ -58,11 +58,11 @@
 	        <java 
 			fork="true" 
 	        	dir="." 
-	            	classname="edu.stanford.bmir.icd.utils.ImportTAGsAndStatus"
+	            	classname="edu.stanford.bmir.icd.utils.ImportChapterXX_April2011"
                         maxmemory="${heap.size.max}">
 		      	<classpath refid = "project.classpath"/>	        	
 	 		<arg value="${pprj.file}"/>
-			<arg value="${xls.TAGs.file}"/>
+			<arg value="${xls.ch20.file}"/>
 	        </java>
 	 </target>
 	
