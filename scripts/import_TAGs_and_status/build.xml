@@ -62,7 +62,7 @@
                         maxmemory="${heap.size.max}">
 		      	<classpath refid = "project.classpath"/>	        	
 	 		<arg value="${pprj.file}"/>
-			<arg value="${xls.TAGs.file}"/>
+			<arg value="${xls.tags.file}"/>
 	        </java>
 	 </target>
 	
