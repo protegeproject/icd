@@ -108,6 +108,11 @@ public class ICDContentModelConstants {
 
     public final static String INDEX_TYPE_SYNONYM_INST = NS + "Synonym";
 
+    public final static String DISPLAY_STATUS_BLUE = "http://who.int/icd#DS_Blue";
+    public final static String DISPLAY_STATUS_GREEN = "http://who.int/icd#DS_Green";
+    public final static String DISPLAY_STATUS_YELLOW = "http://who.int/icd#DS_Yellow";
+    public final static String DISPLAY_STATUS_RED = "http://who.int/icd#DS_Red";
+
     /*
      * BioPortal
      */

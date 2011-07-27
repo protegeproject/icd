@@ -120,6 +120,10 @@ public class ICDContentModel {
 
     private RDFResource indexTypeSynoymInst;
 
+    private RDFResource displayStatusBlue;
+    private RDFResource displayStatusYellow;
+    private RDFResource displayStatusRed;
+
     public ICDContentModel(OWLModel owlModel) {
         this.owlModel = owlModel;
     }
@@ -591,7 +595,7 @@ public class ICDContentModel {
         }
         return assignedSecondaryTagProperty;
     }
-    
+
     public RDFProperty getDisplayStatusProperty() {
     	if (displayStatusProperty == null) {
     		displayStatusProperty = owlModel.getRDFProperty(ICDContentModelConstants.DISPLAY_STATUS_PROP);
@@ -611,6 +615,26 @@ public class ICDContentModel {
         return indexTypeSynoymInst;
     }
 
+    public RDFResource getDisplayStatusBlueInst() {
+        if (displayStatusBlue == null) {
+            displayStatusBlue = owlModel.getRDFResource(ICDContentModelConstants.DISPLAY_STATUS_BLUE);
+        }
+        return displayStatusBlue;
+    }
+
+    public RDFResource getDisplayStatusYellowInst() {
+        if (displayStatusYellow == null) {
+            displayStatusYellow = owlModel.getRDFResource(ICDContentModelConstants.DISPLAY_STATUS_YELLOW);
+        }
+        return displayStatusYellow;
+    }
+
+    public RDFResource getDisplayStatusRedInst() {
+        if (displayStatusRed == null) {
+            displayStatusRed = owlModel.getRDFResource(ICDContentModelConstants.DISPLAY_STATUS_RED);
+        }
+        return displayStatusRed;
+    }
 
     /*
      * Create methods
