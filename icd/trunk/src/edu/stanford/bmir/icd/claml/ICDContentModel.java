@@ -62,8 +62,13 @@ public class ICDContentModel {
     private RDFSNamedClass icd10NotesClass;
     private RDFSNamedClass termDefinitionClass;
     private RDFSNamedClass termReferenceClass;
+    private RDFSNamedClass termSynonymClass;
     private RDFSNamedClass termIndexClass;
     private RDFSNamedClass indexTermTypeClass;
+    private RDFSNamedClass termNarrowerClass;
+    private RDFSNamedClass termBaseIndexClass;
+    private RDFSNamedClass termBaseInclusionClass;
+    private RDFSNamedClass termBaseExclusionClass;
 
     private RDFSNamedClass externalCausesTopClass;
 
@@ -78,7 +83,11 @@ public class ICDContentModel {
     private RDFProperty longDefinitionProperty;
     private RDFProperty prefilledDefinitionProperty;
     private RDFProperty synonymProperty;
+    private RDFProperty narrowerProperty;
     private RDFProperty baseIndexProperty;
+    private RDFProperty baseInclusionProperty;
+    private RDFProperty indexBaseInclusionProperty;
+    private RDFProperty baseExclusionProperty;
     private RDFProperty sortingLabelProperty;
 
     private RDFProperty inclusionProperty;
@@ -281,13 +290,44 @@ public class ICDContentModel {
         return termReferenceClass;
     }
 
+    
     public RDFSNamedClass getTermSynonymClass() {
-        if (termReferenceClass == null) {
-            termReferenceClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.TERM_SYNONYM_CLASS);
+        if (termSynonymClass == null) {
+            termSynonymClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.TERM_SYNONYM_CLASS);
         }
-        return termReferenceClass;
+        return termSynonymClass;
     }
 
+    public RDFSNamedClass getTermNarrowerClass() {
+        if (termNarrowerClass == null) {
+            termNarrowerClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.TERM_NARROWER_CLASS);
+        }
+        return termNarrowerClass;
+    }
+
+    public RDFSNamedClass getTermBaseIndexClass() {
+        if (termBaseIndexClass == null) {
+            termBaseIndexClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.TERM_BASE_INDEX_CLASS);
+        }
+        return termBaseIndexClass;
+    }
+
+    public RDFSNamedClass getTermBaseInclusionClass() {
+        if (termBaseInclusionClass == null) {
+            termBaseInclusionClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.TERM_BASE_INCLUSION_CLASS);
+        }
+        return termBaseInclusionClass;
+    }
+
+    public RDFSNamedClass getTermBaseExclusionClass() {
+        if (termBaseExclusionClass == null) {
+            termBaseExclusionClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.TERM_BASE_EXCLUSION_CLASS);
+        }
+        return termBaseExclusionClass;
+    }
+
+    
+    @Deprecated
     public RDFSNamedClass getTermIndexClass() {
         if (termIndexClass == null) {
             termIndexClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.TERM_INDEX_CLASS);
@@ -295,6 +335,7 @@ public class ICDContentModel {
         return termIndexClass;
     }
 
+    @Deprecated
     public RDFSNamedClass getTermIndexTypeClass() {
         if (indexTermTypeClass == null) {
             indexTermTypeClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.INDEX_TERM_TYPE_CLASS);
@@ -302,6 +343,7 @@ public class ICDContentModel {
         return indexTermTypeClass;
     }
 
+    @Deprecated
     public RDFSNamedClass getTermInclusionClass() {
         if (termInclusionClass == null) {
             termInclusionClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.TERM_INCLUSION_CLASS);
@@ -309,6 +351,7 @@ public class ICDContentModel {
         return termInclusionClass;
     }
 
+    @Deprecated
     public RDFSNamedClass getTermExclusionClass() {
         if (termExclusionClass == null) {
             termExclusionClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.TERM_EXCLUSION_CLASS);
@@ -316,6 +359,7 @@ public class ICDContentModel {
         return termExclusionClass;
     }
 
+    
     public RDFSNamedClass getICD10NotesClass() {
         if (icd10NotesClass == null) {
             icd10NotesClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.TERM_ICD10_NOTES_CLASS);
@@ -398,6 +442,7 @@ public class ICDContentModel {
         return prefilledDefinitionProperty;
     }
 
+    
     public RDFProperty getSynonymProperty() {
         if (synonymProperty == null) {
             synonymProperty = owlModel.getRDFProperty(ICDContentModelConstants.SYNOYM_PROP);
@@ -405,6 +450,12 @@ public class ICDContentModel {
         return synonymProperty;
     }
 
+    public RDFProperty getNarrowerProperty() {
+    	if (narrowerProperty == null) {
+    		narrowerProperty = owlModel.getRDFProperty(ICDContentModelConstants.NARROWER_PROP);
+    	}
+    	return narrowerProperty;
+    }
 
     public RDFProperty getBaseIndexProperty() {
         if (baseIndexProperty == null) {
@@ -412,8 +463,30 @@ public class ICDContentModel {
         }
         return baseIndexProperty;
     }
+    
+    public RDFProperty getBaseInclusionProperty() {
+    	if (baseInclusionProperty == null) {
+    		baseInclusionProperty = owlModel.getRDFProperty(ICDContentModelConstants.BASE_INCLUSION_PROP);
+    	}
+    	return baseInclusionProperty;
+    }
+    
+    public RDFProperty getIndexBaseInclusionProperty() {
+    	if (indexBaseInclusionProperty == null) {
+    		indexBaseInclusionProperty = owlModel.getRDFProperty(ICDContentModelConstants.INDEX_BASE_INCLUSION_PROP);
+    	}
+    	return indexBaseInclusionProperty;
+    }
+    
+    public RDFProperty getBaseExclusionProperty() {
+    	if (baseExclusionProperty == null) {
+    		baseExclusionProperty = owlModel.getRDFProperty(ICDContentModelConstants.BASE_EXCLUSION_PROP);
+    	}
+    	return baseExclusionProperty;
+    }
 
 
+    @Deprecated
     public RDFProperty getIndexTypeProperty() {
         if (indexTypeProperty == null) {
             indexTypeProperty = owlModel.getRDFProperty(ICDContentModelConstants.BASE_INDEX_TYPE_PROP);
@@ -512,6 +585,7 @@ public class ICDContentModel {
         return preferredLongProperty;
     }
 
+    @Deprecated
     public RDFProperty getInclusionProperty() {
         if (inclusionProperty == null) {
             inclusionProperty = owlModel.getRDFProperty(ICDContentModelConstants.INCLUSION_PROP);
@@ -519,6 +593,7 @@ public class ICDContentModel {
         return inclusionProperty;
     }
 
+    @Deprecated
     public RDFProperty getExclusionProperty() {
         if (exclusionProperty == null) {
             exclusionProperty = owlModel.getRDFProperty(ICDContentModelConstants.EXCLUSION_PROP);

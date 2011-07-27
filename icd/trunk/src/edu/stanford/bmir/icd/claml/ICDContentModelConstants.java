@@ -29,15 +29,22 @@ public class ICDContentModelConstants {
     public final static String CLAML_REF_CLASS = NS + "ClamlReference";
     public final static String TERM_CLASS = NS + "Term";
     public final static String TERM_TITLE_CLASS = NS + "TitleTerm";
+    @Deprecated
     public final static String TERM_INCLUSION_CLASS = NS + "InclusionTerm";
+    @Deprecated
     public final static String TERM_EXCLUSION_CLASS = NS + "ExclusionTerm";
     public final static String TERM_ICD10_NOTES_CLASS = NS + "ICD10NotesTerm";
     public final static String TERM_DEFINITION_CLASS = NS + "DefinitionTerm";
     public final static String TERM_REFERENCE_CLASS = NS + "ReferenceTerm";
     public final static String TERM_SYNONYM_CLASS = NS + "SynonymTerm";
+    @Deprecated
     public final static String TERM_INDEX_CLASS = NS + "IndexTerm";
+    @Deprecated
     public final static String INDEX_TERM_TYPE_CLASS = NS + "IndexTermType";
-
+    public final static String TERM_NARROWER_CLASS = NS + "NarrowerTerm";
+    public final static String TERM_BASE_INDEX_CLASS = NS + "BaseIndexTerm";
+    public final static String TERM_BASE_INCLUSION_CLASS = NS + "BaseInclusionTerm";
+    public final static String TERM_BASE_EXCLUSION_CLASS = NS + "BaseExclusionTerm";
     public final static String LINEARIZATION_VIEW_CLASS = NS + "LinearizationView";
     public final static String LINEARIZATION_SPECIFICATION_CLASS = NS + "LinearizationSpecification";
 
@@ -57,11 +64,18 @@ public class ICDContentModelConstants {
     public final static String LONG_DEFINITION_PROP = NS + "longDefinition";
     public final static String PREFILLED_DEFINITION_PROP = NS + "definitionPrefilled";
     public final static String SYNOYM_PROP = NS + "synonym";
+    public final static String NARROWER_PROP = NS + "narrower";
     public final static String BASE_INDEX_PROP = NS + "baseIndex";
+    public final static String BASE_INCLUSION_PROP = NS + "baseInclusion";
+    public final static String INDEX_BASE_INCLUSION_PROP = NS + "indexBaseInclusion";
+    public final static String BASE_EXCLUSION_PROP = NS + "baseExclusion";
     public final static String SORTING_LABEL_PROP = NS + "sortingLabel";
 
+    @Deprecated
     public final static String INCLUSION_PROP = NS + "inclusion";
+    @Deprecated
     public final static String EXCLUSION_PROP = NS + "exclusion";
+    @Deprecated
     public final static String BASE_INDEX_TYPE_PROP = NS + "indexTermType";
 
 
