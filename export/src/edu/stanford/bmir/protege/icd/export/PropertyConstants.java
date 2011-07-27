@@ -8,6 +8,9 @@ public class PropertyConstants {
 
     public static final String JXL_NOWARNINGS_PROPERTY = "jxl.nowarnings";
     public static final String JXL_NOWARNINGS_DEFAULT = Boolean.TRUE.toString();
+    
+    public static final String ICD_EXPORT_SCRIPT_DIR_PROPERTY = "icd.export.script.dir";
+    public static final String ICD_EXPORT_EXCEL_DIR_PROPERTY = "icd.export.excel.dir";
 
     public static final String ICD_EXPORT_SCRIPT_FILE_NAME_PROPERTY = "icd.export.script.file.name";
     public static final String ICD_EXPORT_SCRIPT_FILE_NAME_DEFAULT = "export_script.py";

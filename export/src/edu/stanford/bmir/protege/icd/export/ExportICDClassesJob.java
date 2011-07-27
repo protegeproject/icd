@@ -84,7 +84,11 @@ public class ExportICDClassesJob extends ProtegeJob {
     }
 
     private void generateCsvFile(final String csvLocation) {
-        final String scriptFileLocation = ApplicationProperties.getApplicationOrSystemProperty(PropertyConstants.ICD_EXPORT_SCRIPT_FILE_NAME_PROPERTY, PropertyConstants.ICD_EXPORT_SCRIPT_FILE_NAME_DEFAULT);
+        String scriptFileLocation = ApplicationProperties.getApplicationOrSystemProperty(PropertyConstants.ICD_EXPORT_SCRIPT_FILE_NAME_PROPERTY, PropertyConstants.ICD_EXPORT_SCRIPT_FILE_NAME_DEFAULT);
+        File scriptFile = new File(scriptFileLocation);
+        if (scriptFile == null || !scriptFile.exists()) {
+        	scriptFileLocation = getUpdatedFileLocation(scriptFileLocation, PropertyConstants.ICD_EXPORT_SCRIPT_DIR_PROPERTY);
+        }
         try {
             // Only need to synchronize around access to the ExportScriptWrapper, as this is where all the KB access happens.
             synchronized (getKnowledgeBase()) {
@@ -99,8 +103,12 @@ public class ExportICDClassesJob extends ProtegeJob {
     }
 
     private void generateExcelFile(String csvLocation, final String outputFileLocation) {
+        String inputWorkbookLocation = ApplicationProperties.getApplicationOrSystemProperty(PropertyConstants.ICD_EXPORT_EXCEL_FILE_NAME_PROPERTY, PropertyConstants.ICD_EXPORT_EXCEL_FILE_NAME_LOCATION);
+        File inputWorkbook = new File(inputWorkbookLocation);
+        if (inputWorkbook == null || !inputWorkbook.exists()) {
+        	inputWorkbookLocation = getUpdatedFileLocation(inputWorkbookLocation, PropertyConstants.ICD_EXPORT_EXCEL_DIR_PROPERTY);
+        }
         try {
-            final String inputWorkbookLocation = ApplicationProperties.getApplicationOrSystemProperty(PropertyConstants.ICD_EXPORT_EXCEL_FILE_NAME_PROPERTY, PropertyConstants.ICD_EXPORT_EXCEL_FILE_NAME_LOCATION);
             setSystemPropertyIfUnset(PropertyConstants.JXL_NOWARNINGS_PROPERTY, PropertyConstants.JXL_NOWARNINGS_DEFAULT);
             ICDCsvToExcelConverter csvToExcelConverter = new ICDCsvToExcelConverter();
             csvToExcelConverter.convertFile(csvLocation, inputWorkbookLocation, outputFileLocation, "Authoring template");
@@ -109,6 +117,28 @@ public class ExportICDClassesJob extends ProtegeJob {
             throw e;
         }
     }
+
+	private String getUpdatedFileLocation(String fileLocation, String dirPropertyName) {
+		String dirName = ApplicationProperties.getApplicationOrSystemProperty(dirPropertyName);
+		if (dirName == null) {
+			//try to find another value
+		    final File file = PluginUtilities.getInstallationDirectory(ICDExporterPlugin.class.getName());
+		    if (file == null || !file.exists()) {
+		        throw new IllegalArgumentException("Please set " + dirPropertyName + " as a system or application property pointing to your ICD export Python script or install the ICD Export functionality as a ui plugin.");
+		    }
+		    System.setProperty(dirPropertyName, file.getPath());
+		    dirName = ApplicationProperties.getApplicationOrSystemProperty(dirPropertyName);
+		}
+		
+		if (dirName != null) {
+			File dir = new File(dirName);
+			if (dir != null && dir.exists()) {
+				fileLocation = (dirName.endsWith(File.separator) ? dirName : dirName + File.separator)
+										+ fileLocation;
+			}
+		}
+		return fileLocation;
+	}
 
     private void setSystemPropertyIfUnset(final String propertyName, final String propertyValue) {
         if (System.getProperty(propertyName) == null) {
