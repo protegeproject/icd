@@ -290,7 +290,7 @@ public class ICDContentModel {
         return termReferenceClass;
     }
 
-    
+
     public RDFSNamedClass getTermSynonymClass() {
         if (termSynonymClass == null) {
             termSynonymClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.TERM_SYNONYM_CLASS);
@@ -326,7 +326,7 @@ public class ICDContentModel {
         return termBaseExclusionClass;
     }
 
-    
+
     @Deprecated
     public RDFSNamedClass getTermIndexClass() {
         if (termIndexClass == null) {
@@ -359,7 +359,7 @@ public class ICDContentModel {
         return termExclusionClass;
     }
 
-    
+
     public RDFSNamedClass getICD10NotesClass() {
         if (icd10NotesClass == null) {
             icd10NotesClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.TERM_ICD10_NOTES_CLASS);
@@ -442,7 +442,7 @@ public class ICDContentModel {
         return prefilledDefinitionProperty;
     }
 
-    
+
     public RDFProperty getSynonymProperty() {
         if (synonymProperty == null) {
             synonymProperty = owlModel.getRDFProperty(ICDContentModelConstants.SYNOYM_PROP);
@@ -463,21 +463,21 @@ public class ICDContentModel {
         }
         return baseIndexProperty;
     }
-    
+
     public RDFProperty getBaseInclusionProperty() {
     	if (baseInclusionProperty == null) {
     		baseInclusionProperty = owlModel.getRDFProperty(ICDContentModelConstants.BASE_INCLUSION_PROP);
     	}
     	return baseInclusionProperty;
     }
-    
+
     public RDFProperty getIndexBaseInclusionProperty() {
     	if (indexBaseInclusionProperty == null) {
     		indexBaseInclusionProperty = owlModel.getRDFProperty(ICDContentModelConstants.INDEX_BASE_INCLUSION_PROP);
     	}
     	return indexBaseInclusionProperty;
     }
-    
+
     public RDFProperty getBaseExclusionProperty() {
     	if (baseExclusionProperty == null) {
     		baseExclusionProperty = owlModel.getRDFProperty(ICDContentModelConstants.BASE_EXCLUSION_PROP);
@@ -1077,6 +1077,14 @@ public class ICDContentModel {
         return icdClass.getPropertyValues(getAssignedSecondaryTagProperty());
     }
 
+    /**
+     * Returns a map that contains as a key the TAG instance and value is a list of classes from
+     * where the TAG is inherited from.
+     * It included also the local primary and secondary TAG.
+     *
+     * @param icdClass
+     * @return map between the TAG instance and a list of classes where it is inherited from
+     */
     public Map<RDFResource, List<RDFSNamedClass>> getInvolvedTags(RDFSNamedClass icdClass) {
         Map<Object, List<Instance>> map = ModelUtilities.getPropertyValuesOnAllSuperclasses(icdClass, getAssignedTagProperty());
 
@@ -1087,6 +1095,19 @@ public class ICDContentModel {
         }
 
         return typedMap;
+    }
+
+    /**
+     * Gets the display status as one of the instances defined in {@link ICDContentModelConstants} :
+     * "http://who.int/icd#DS_Blue" (browser text: Blue)
+     * "http://who.int/icd#DS_Yellow" (browser text: Yellow)
+     * "http://who.int/icd#DS_Red";
+     *
+     * @param the ICD category
+     * @return one of the DisplayStatus instances
+     */
+    public RDFResource getDisplayStatus(RDFSNamedClass icdClass) {
+        return (RDFResource) icdClass.getPropertyValue(getDisplayStatusProperty());
     }
 
 }
