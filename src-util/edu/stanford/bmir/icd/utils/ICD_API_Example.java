@@ -2,6 +2,8 @@ package edu.stanford.bmir.icd.utils;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
+import java.util.Map;
 
 import edu.stanford.bmir.icd.claml.ICDContentModel;
 import edu.stanford.smi.protege.model.Project;
@@ -24,6 +26,7 @@ public class ICD_API_Example {
         getChildren();
         getClamlRef();
         getLinearizationInfo();
+        getDisplayStatusAndTagResponsability();
     }
 
     public static void getICDcategories() {
@@ -88,9 +91,29 @@ public class ICD_API_Example {
 
            System.out.println("Linearization: " + linearization.getBrowserText() +
                    "; is included: " + (isIncludedInLinearization == null ? "(not specified)" : isIncludedInLinearization) +
-                   "; linearization parent: " + linearizationParent.getBrowserText() +
+                   "; linearization parent: " +( linearizationParent == null ? "none" : linearizationParent.getBrowserText()) +
                    "; linearization sorting label: " + (linSortingLabel == null ? "(not specified)" : linSortingLabel));
        }
+    }
+
+    public static void getDisplayStatusAndTagResponsability() {
+        RDFSNamedClass category = icdContentModel.getICDCategory("http://who.int/icd#I");
+        System.out.println("\n Category: " + category.getBrowserText());
+
+        RDFResource status = icdContentModel.getDisplayStatus(category);
+        System.out.println("Status: " + (status == null ? "none" : status.getBrowserText()));
+
+        RDFResource primaryTAG = icdContentModel.getAssignedPrimaryTag(category);
+        System.out.println("Primary TAG: " + (primaryTAG == null ? "none" : primaryTAG.getBrowserText()));
+
+        Collection<RDFResource> localSecondaryTAGs = icdContentModel.getAssignedSecondaryTags(category);
+        System.out.println("Assigned local secondary TAGs at this category (does not include inherited TAGs): " + localSecondaryTAGs);
+
+        Map<RDFResource, List<RDFSNamedClass>> involvedTAGs = icdContentModel.getInvolvedTags(category);
+        System.out.println("Involved TAGs: ");
+        for (RDFResource tag : involvedTAGs.keySet()) {
+            System.out.println("TAG: " + tag.getBrowserText() + " ---  inherited from: " + involvedTAGs.get(tag));
+        }
     }
 
 
