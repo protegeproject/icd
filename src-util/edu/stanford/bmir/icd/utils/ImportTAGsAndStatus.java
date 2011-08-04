@@ -43,7 +43,7 @@ public class ImportTAGsAndStatus {
 	private static final String PPRJ_FILE_URI = "resources/projects/icd/icd_umbrella.pprj";
 	private static final String EXCEL_FILE_TAGS_AND_STATUS = "resources/xls/TAGs.xls";
 
-	private static final String EXCEL_SHEET_TO_IMPORT = "List - prepared";
+	private static final String EXCEL_SHEET_TO_IMPORT = "List - Prepared";
 
 	private static URI pprjFileUri = new File(PPRJ_FILE_URI).toURI();
 	private static File xlFileTAGsAndStatus = new File(EXCEL_FILE_TAGS_AND_STATUS);
