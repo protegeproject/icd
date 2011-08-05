@@ -109,8 +109,6 @@ public class InitIsGroupings {
         Collection<RDFSNamedClass> icdCategories = icdContentModel.getICDCategories();
     	Log.getLogger().info("\n\nFinished retrieving " + icdCategories.size() + " categories");
     	
-    	owlModel.setGenerateEventsEnabled(false);
-    	
     	int countChangedCategories = 0;
     	int countUnchangedCategories = 0;
         for (RDFSNamedClass cat : icdCategories) {
@@ -186,8 +184,6 @@ public class InitIsGroupings {
 				Log.getLogger().info(cat);
 			}
         }
-        
-        owlModel.setGenerateEventsEnabled(true);
 	}
 
 }
