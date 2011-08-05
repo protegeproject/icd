@@ -98,6 +98,7 @@ public class ICDContentModelConstants {
 
     public final static String LINEARIZATION_PROP = NS + "linearization";
     public final static String IS_INCLUDED_IN_LINEARIZATION_PROP = NS + "isIncludedInLinearization";
+    public final static String IS_GROUPING_PROP = NS + "isGrouping";
     public final static String LINEARIZATION_PARENT_PROP = NS + "linearizationParent";
     public final static String LINEARIZATION_VIEW_PROP = NS + "linearizationView";
     public final static String LINEARIZATION_SEQUENCE_NO_PROP = NS + "sequenceNumber";

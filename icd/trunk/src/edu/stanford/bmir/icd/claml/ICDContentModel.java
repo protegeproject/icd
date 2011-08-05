@@ -111,6 +111,7 @@ public class ICDContentModel {
 
     private RDFProperty linearizationProperty;
     private RDFProperty isIncludedInLinearizationProperty;
+    private RDFProperty isGroupingProperty;
     private RDFProperty linearizationParentProperty;
     private RDFProperty linearizationViewProperty;
     private RDFProperty linearizationSequenceNoProperty;
@@ -613,6 +614,13 @@ public class ICDContentModel {
             isIncludedInLinearizationProperty = owlModel.getRDFProperty(ICDContentModelConstants.IS_INCLUDED_IN_LINEARIZATION_PROP);
         }
         return isIncludedInLinearizationProperty;
+    }
+    
+    public RDFProperty getIsGroupingProperty() {
+    	if (isGroupingProperty == null) {
+    		isGroupingProperty = owlModel.getRDFProperty(ICDContentModelConstants.IS_GROUPING_PROP);
+    	}
+    	return isGroupingProperty;
     }
 
     public RDFProperty getLinearizationParentProperty() {
