@@ -24,7 +24,7 @@ public class InitIsGroupings {
 	private static final int UPDATE_INTERVALS_UNCHANGED = 250;
 	private static final int UPDATE_INTERVALS_CHANGED = 500;
 	public static Set<String> groupingCategories = new HashSet<String>();
-	
+
     public static void main(String[] args) {
 
     	if (args.length < 2) {
@@ -35,7 +35,7 @@ public class InitIsGroupings {
     		System.out.println(" - the fully specified name of the CSV file, which contains the list of grouping categories.");
     		return;
     	}
-    	
+
 		URI pprjFileUri = new File(args[0]).toURI();
 		String server = args[0];
 		String user = args[1];
@@ -57,7 +57,7 @@ public class InitIsGroupings {
                     }
                 }
             }
-            
+
             Log.getLogger().info("Read the name of " + groupingCategories.size() + " categories from CSV file");
             Log.getLogger().info("");
         } catch (Exception e) {
@@ -65,7 +65,7 @@ public class InitIsGroupings {
             return;
         }
 
-        Log.getLogger().info("Connecting to project ICD on server: " + server + " - user: " + user + " password: " + password);
+        Log.getLogger().info("Connecting to project ICD on server: " + server + " - user: " + user);
         RemoteProjectManager rpm = RemoteProjectManager.getInstance();
         Project p = rpm.getProject(server, user, password, "ICD", true);
         if (p == null) {
@@ -74,10 +74,10 @@ public class InitIsGroupings {
         }
         OWLModel owlModel = (OWLModel) p.getKnowledgeBase();
         Log.getLogger().info("Connection successful.");
-        
+
         //open ICD umbrella OWL model
         //OWLModel owlModel = ImportUtils.openOWLModel(pprjFileUri);
-        
+
         updateGroupings(owlModel);
     }
 
@@ -86,7 +86,7 @@ public class InitIsGroupings {
         final String[] split = line.split("\t");
 
         String name = getSafeValue(split, 0).trim();
-        
+
         groupingCategories.add(name);
 
         //Log.getLogger().info(name);
@@ -109,22 +109,22 @@ public class InitIsGroupings {
 		Set<String> validGroupingCategories = new HashSet<String>();
 		Collection<RDFSNamedClass> unchagedCategories = new ArrayList<RDFSNamedClass>();
 		Collection<RDFSNamedClass> unchagedCategoriesNotification = new ArrayList<RDFSNamedClass>();
-		
+
 		ICDContentModel icdContentModel = new ICDContentModel(owlModel);
 		RDFProperty isGroupingProp = icdContentModel.getIsGroupingProperty();
         Collection<RDFSNamedClass> icdCategories = icdContentModel.getICDCategories();
     	Log.getLogger().info("\n\nFinished retrieving " + icdCategories.size() + " categories");
-    	
+
     	int countChangedCategories = 0;
     	int countUnchangedCategories = 0;
         for (RDFSNamedClass cat : icdCategories) {
         	boolean isGrouping = false;
-        	String catId = cat.getURI();
+        	String catId = cat.getName();
 			if (groupingCategories.contains(catId)) {
 				isGrouping = true;
 				validGroupingCategories.add(catId);
 			}
-			
+
 			Collection<RDFResource> linSpecs = icdContentModel.getLinearizationSpecifications(cat);
 			int linWithModGrouping = 0;
 			for (RDFResource linSpec : linSpecs) {
@@ -149,7 +149,7 @@ public class InitIsGroupings {
 			else {
                 String operationDescription = "Automatic import of the initial value for the isGrouping property. Value set to: " + isGrouping;
                 try {
-					owlModel.beginTransaction(operationDescription);
+					owlModel.beginTransaction(operationDescription, catId);
 
     				for (RDFResource linSpec : linSpecs) {
     					linSpec.setPropertyValue(isGroupingProp, isGrouping);
@@ -181,7 +181,7 @@ public class InitIsGroupings {
         for (RDFSNamedClass cat : unchagedCategoriesNotification) {
         	Log.getLogger().info(cat.getURI());
         }
-        
+
         //display invalid category names
         groupingCategories.removeAll(validGroupingCategories);
         if ( ! groupingCategories.isEmpty() ){
