@@ -65,9 +65,15 @@ public class InitIsGroupings {
             return;
         }
 
+        Log.getLogger().info("Connecting to project ICD on server: " + server + " - user: " + user + " password: " + password);
         RemoteProjectManager rpm = RemoteProjectManager.getInstance();
         Project p = rpm.getProject(server, user, password, "ICD", true);
+        if (p == null) {
+        	Log.getLogger().info("Connection failed :(");
+        	return;
+        }
         OWLModel owlModel = (OWLModel) p.getKnowledgeBase();
+        Log.getLogger().info("Connection successful.");
         
         //open ICD umbrella OWL model
         //OWLModel owlModel = ImportUtils.openOWLModel(pprjFileUri);
