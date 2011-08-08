@@ -35,6 +35,7 @@
         <pathelement location = "${protege.home}/driver.jar"/>
         <pathelement location = "${protege.home}/plugins/edu.stanford.bmir.icd.misc/icd.jar"/>        
         <fileset dir="${owl.plugin.path}"/>
+      	<fileset dir="${protege.home}/plugins/edu.stanford.smi.protegex.changes"/>
       	<fileset dir="./lib" />
       </path>
 
