@@ -89,7 +89,7 @@ public class InitIsGroupings {
 
 
 	private static void updateGroupings(OWLModel owlModel) {
-		Set<String> validGroupingCategories = new HashSet<String>();
+		Set<String> unfoundGroupingCategories = new HashSet<String>(groupingCategories);
 		Collection<RDFSNamedClass> unchagedCategories = new ArrayList<RDFSNamedClass>();
 		Collection<RDFSNamedClass> unchagedCategoriesNotification = new ArrayList<RDFSNamedClass>();
 
@@ -105,7 +105,8 @@ public class InitIsGroupings {
         	String catId = cat.getName();
 			if (groupingCategories.contains(catId)) {
 				isGrouping = true;
-				validGroupingCategories.add(catId);
+				//this grouping category was found. Remove it from the set of unfoundGroupingCategories
+				unfoundGroupingCategories.remove(catId);
 			}
 
 			Collection<RDFResource> linSpecs = icdContentModel.getLinearizationSpecifications(cat);
@@ -165,11 +166,10 @@ public class InitIsGroupings {
         	Log.getLogger().info(cat.getURI());
         }
 
-        //display invalid category names
-        groupingCategories.removeAll(validGroupingCategories);
-        if ( ! groupingCategories.isEmpty() ){
+        //display unfound/invalid category names
+        if ( ! unfoundGroupingCategories.isEmpty() ){
         	Log.getLogger().info("\n\nThe following categories listed in the CVS file were invalid category names:");
-        	for (String cat : groupingCategories) {
+        	for (String cat : unfoundGroupingCategories) {
 				Log.getLogger().info(cat);
 			}
         }
