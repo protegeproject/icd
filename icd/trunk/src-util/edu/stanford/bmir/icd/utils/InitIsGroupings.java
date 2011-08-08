@@ -11,8 +11,6 @@ import java.util.Set;
 import java.util.logging.Level;
 
 import edu.stanford.bmir.icd.claml.ICDContentModel;
-import edu.stanford.smi.protege.model.Project;
-import edu.stanford.smi.protege.server.RemoteProjectManager;
 import edu.stanford.smi.protege.util.Log;
 import edu.stanford.smi.protegex.owl.model.OWLModel;
 import edu.stanford.smi.protegex.owl.model.RDFProperty;
@@ -28,19 +26,14 @@ public class InitIsGroupings {
     public static void main(String[] args) {
 
     	if (args.length < 2) {
-    		System.out.println("Please specify 4 command line arguments:");
-    		System.out.println(" - the Protege server name (and port)");
-    		System.out.println(" - the user name");
-    		System.out.println(" - the password");
+    		System.out.println("Please specify 2 command line arguments:");
+    		System.out.println(" - the fully specified name of the ICD umbrella project file");
     		System.out.println(" - the fully specified name of the CSV file, which contains the list of grouping categories.");
     		return;
     	}
 
 		URI pprjFileUri = new File(args[0]).toURI();
-		String server = args[0];
-		String user = args[1];
-		String password = args[2];
-        String csvPath = args[3];
+        String csvPath = args[1];
 
         //read list of groupings category names from CSV file
         try {
@@ -65,18 +58,8 @@ public class InitIsGroupings {
             return;
         }
 
-        Log.getLogger().info("Connecting to project ICD on server: " + server + " - user: " + user);
-        RemoteProjectManager rpm = RemoteProjectManager.getInstance();
-        Project p = rpm.getProject(server, user, password, "ICD", true);
-        if (p == null) {
-        	Log.getLogger().info("Connection failed :(");
-        	return;
-        }
-        OWLModel owlModel = (OWLModel) p.getKnowledgeBase();
-        Log.getLogger().info("Connection successful.");
-
         //open ICD umbrella OWL model
-        //OWLModel owlModel = ImportUtils.openOWLModel(pprjFileUri);
+        OWLModel owlModel = ImportUtils.openOWLModel(pprjFileUri);
 
         updateGroupings(owlModel);
     }
