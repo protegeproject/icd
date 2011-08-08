@@ -59,7 +59,7 @@
 	            	classname="edu.stanford.bmir.icd.utils.InitIsGroupings"
                         maxmemory="2500M">
 		      	<classpath refid = "project.classpath"/>	        	
-			<arg value="/user/local/icat-files/project/icd/icd_umbrella.pprj"/>
+			<arg value="/usr/local/icat-files/projects/icd/icd_umbrella.pprj"/>
 			<arg value="groupings.csv" />
 	        </java>
 	 </target>
