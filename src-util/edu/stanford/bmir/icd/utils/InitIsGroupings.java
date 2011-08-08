@@ -16,6 +16,7 @@ import edu.stanford.smi.protegex.owl.model.OWLModel;
 import edu.stanford.smi.protegex.owl.model.RDFProperty;
 import edu.stanford.smi.protegex.owl.model.RDFResource;
 import edu.stanford.smi.protegex.owl.model.RDFSNamedClass;
+import edu.stanford.smi.protegex.server_changes.ChangesProject;
 
 public class InitIsGroupings {
 
@@ -60,6 +61,11 @@ public class InitIsGroupings {
 
         //open ICD umbrella OWL model
         OWLModel owlModel = ImportUtils.openOWLModel(pprjFileUri);
+
+        //init change tracking
+        if (!ChangesProject.isInitialized(owlModel.getProject())) {
+            ChangesProject.initialize(owlModel.getProject());
+        }
 
         updateGroupings(owlModel);
     }
@@ -131,7 +137,8 @@ public class InitIsGroupings {
 				}
 			}
 			else {
-                String operationDescription = "Automatic import of the initial value for the isGrouping property. Value set to: " + isGrouping;
+                String operationDescription = "Automatic import of the isGrouping initial value for " + getBrowserText(icdContentModel, cat)
+                                                                +". Value set to: " + isGrouping;
                 try {
 					owlModel.beginTransaction(operationDescription, catId);
 
@@ -173,6 +180,15 @@ public class InitIsGroupings {
 				Log.getLogger().info(cat);
 			}
         }
+	}
+
+	private static String getBrowserText(ICDContentModel cm, RDFSNamedClass res) {
+	    String sortingLabel = (String) res.getPropertyValue(cm.getSortingLabelProperty());
+	    sortingLabel = sortingLabel == null ? "" : sortingLabel;
+	    RDFResource titleTerm = cm.getTerm(res, cm.getIcdTitleProperty());
+	    String title = (String) titleTerm.getPropertyValue(cm.getLabelProperty());
+	    title = title == null ? "" : title;
+	    return  sortingLabel + " " + title;
 	}
 
 }
