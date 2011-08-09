@@ -186,7 +186,7 @@ public class InitIsGroupings {
 	    String sortingLabel = (String) res.getPropertyValue(cm.getSortingLabelProperty());
 	    sortingLabel = sortingLabel == null ? "" : sortingLabel;
 	    RDFResource titleTerm = cm.getTerm(res, cm.getIcdTitleProperty());
-	    String title = (String) titleTerm.getPropertyValue(cm.getLabelProperty());
+	    String title = titleTerm == null ? "" : (String) titleTerm.getPropertyValue(cm.getLabelProperty());
 	    title = title == null ? "" : title;
 	    return  sortingLabel + " " + title;
 	}
