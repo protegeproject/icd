@@ -22,11 +22,11 @@
   <owl:Class rdf:ID="LeafCodedTerm">
     <rdfs:subClassOf>
       <owl:Restriction>
-        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >0</owl:cardinality>
         <owl:onProperty>
           <owl:TransitiveProperty rdf:ID="narrower"/>
         </owl:onProperty>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >0</owl:cardinality>
       </owl:Restriction>
     </rdfs:subClassOf>
     <rdfs:subClassOf>
@@ -247,10 +247,10 @@
     ></rdfs:comment>
     <rdfs:subClassOf>
       <owl:Restriction>
+        <owl:hasValue rdf:resource="#Synonym"/>
         <owl:onProperty>
           <owl:FunctionalProperty rdf:ID="indexTermType"/>
         </owl:onProperty>
-        <owl:hasValue rdf:resource="#Synonym"/>
       </owl:Restriction>
     </rdfs:subClassOf>
     <rdfs:subClassOf>
@@ -1754,8 +1754,12 @@ Mapping relationship: Mappings of the concept to different coding systems (e.g. 
     >Intended to be used for specifying the kind of category: chapter, block or single category.</rdfs:comment>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:ID="alternativeLabel">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Represents an alternative label for a given language term. 
+This is especially useful for representing different alternative transliterations using latin-based alphabets of language terms written with non-latin characters.
+For example, a Chinese title term having a label written with Chinese characters could get a pinyin transliteration as an alternative label, to allow easier pronounciation to wider audiences.</rdfs:comment>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:domain rdf:resource="#TitleTerm"/>
+    <rdfs:domain rdf:resource="#LanguageTerm"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:ID="DatatypeProperty_7"/>
   <owl:DatatypeProperty rdf:ID="citation">
@@ -2056,6 +2060,8 @@ Range is not correct, but we'll leave it this way in this version</rdfs:comment>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     <rdfs:domain rdf:resource="#LinearizationSpecification"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >True if a concept in a given linearization will become a grouping of codes.</rdfs:comment>
   </owl:FunctionalProperty>
   <owl:FunctionalProperty rdf:ID="editorialStatusLinearization">
     <rdfs:subPropertyOf>
