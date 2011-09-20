@@ -1,0 +1,1 @@
+Added isGrouping and alternativeLabel properties

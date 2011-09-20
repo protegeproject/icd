@@ -1,0 +1,1 @@
+Added the alternativeLabel property, and added rdfs:comment to the isGrouping property (which, itself, was added before the Jul 28, 2011 release, although was not documented)

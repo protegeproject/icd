@@ -3657,6 +3657,7 @@
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20379"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20406"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20531"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class70032"/>
 </kb:Ontology_Class>
 <kb:Composite_Change rdf:about="&kb;annotation_icd_content_model_Class20371"
 	 kb:action="Composite_Change"
@@ -9412,6 +9413,287 @@
 	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class54"/>
 	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class71"/>
 </kb:Property_Value>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class70000"
+	 kb:action="Property Value Changed"
+	 kb:author="csnyulas">
+	<kb:context>Property: rdfs:comment for instance: isGrouping set to: (Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:comment for instance: isGrouping set to: (Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class70001"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class70002"/>
+</kb:Property_Value>
+<kb:Ontology_Property rdf:about="&kb;annotation_icd_content_model_Class70001"
+	 kb:currentName="http://who.int/icd#isGrouping"
+	 rdfs:label="http://who.int/icd#isGrouping">
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class70000"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class70003"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class70005"/>
+</kb:Ontology_Property>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class70002"
+	 kb:date="09/19/2011 17:22:22 PDT"
+	 kb:sequence="0"
+	 rdfs:label="09/19/2011 17:22:22 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class70003"
+	 kb:action="Property Value Changed"
+	 kb:author="csnyulas">
+	<kb:context>Property: rdfs:comment for instance: isGrouping set to: (Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:comment for instance: isGrouping set to: (Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class70001"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class70004"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class70004"
+	 kb:date="09/19/2011 17:22:31 PDT"
+	 kb:sequence="1"
+	 rdfs:label="09/19/2011 17:22:31 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class70005"
+	 kb:action="Property Value Changed"
+	 kb:author="csnyulas">
+	<kb:context>Property: rdfs:comment for instance: isGrouping set to: True if a concept in a given linearization will become a grouping of codes.(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:comment for instance: isGrouping set to: True if a concept in a given linearization will become a grouping of codes.(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class70001"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class70006"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class70006"
+	 kb:date="09/19/2011 17:22:31 PDT"
+	 kb:sequence="2"
+	 rdfs:label="09/19/2011 17:22:31 PDT"/>
+<kb:Property_Created rdf:about="&kb;annotation_icd_content_model_Class70007"
+	 kb:action="Property_Created"
+	 kb:author="csnyulas"
+	 kb:context="Property Create: datatypeProperty_1"
+	 kb:creationName="http://who.int/icd#datatypeProperty_1"
+	 rdfs:label="Property Create: datatypeProperty_1">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class70008"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class70009"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class70014"/>
+</kb:Property_Created>
+<kb:Ontology_Property rdf:about="&kb;annotation_icd_content_model_Class70008"
+	 kb:currentName="http://who.int/icd#alternativeLabel"
+	 rdfs:label="http://who.int/icd#alternativeLabel">
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class70007"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class70010"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class70012"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class70014"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class70016"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class70018"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class70020"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class70022"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class70024"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class70026"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class70028"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class70030"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class70034"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class70036"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class70038"/>
+</kb:Ontology_Property>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class70009"
+	 kb:date="09/19/2011 17:23:16 PDT"
+	 kb:sequence="3"
+	 rdfs:label="09/19/2011 17:23:16 PDT"/>
+<kb:Individual_Added rdf:about="&kb;annotation_icd_content_model_Class70010"
+	 kb:action="Individual_Added"
+	 kb:author="csnyulas">
+	<kb:context>Instance Added: datatypeProperty_1 (instance of: owl:DatatypeProperty)</kb:context>
+	<rdfs:label>Instance Added: datatypeProperty_1 (instance of: owl:DatatypeProperty)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class70008"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class70011"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class70014"/>
+</kb:Individual_Added>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class70011"
+	 kb:date="09/19/2011 17:23:16 PDT"
+	 kb:sequence="4"
+	 rdfs:label="09/19/2011 17:23:16 PDT"/>
+<kb:DomainProperty_Added rdf:about="&kb;annotation_icd_content_model_Class70012"
+	 kb:action="DomainProperty_Added"
+	 kb:author="csnyulas">
+	<kb:context>Domain Property Added: datatypeProperty_1(added to: owl:Thing)</kb:context>
+	<rdfs:label>Domain Property Added: datatypeProperty_1(added to: owl:Thing)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class70008"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class70013"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class70014"/>
+</kb:DomainProperty_Added>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class70013"
+	 kb:date="09/19/2011 17:23:16 PDT"
+	 kb:sequence="5"
+	 rdfs:label="09/19/2011 17:23:16 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_icd_content_model_Class70014"
+	 kb:action="Composite_Change"
+	 kb:author="csnyulas">
+	<kb:context>Create datatype property datatypeProperty_1 -- Apply to: http://who.int/icd#datatypeProperty_1</kb:context>
+	<rdfs:label>Create datatype property datatypeProperty_1 -- Apply to: http://who.int/icd#datatypeProperty_1</rdfs:label>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class70007"/>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class70008"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class70010"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class70012"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class70015"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class70018"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class70015"
+	 kb:date="09/19/2011 17:23:16 PDT"
+	 kb:sequence="6"
+	 rdfs:label="09/19/2011 17:23:16 PDT"/>
+<kb:Name_Changed rdf:about="&kb;annotation_icd_content_model_Class70016"
+	 kb:action="Name_Changed"
+	 kb:author="csnyulas"
+	 kb:context="Name change from 'datatypeProperty_1' to 'alternativeLabel'"
+	 kb:newName="http://who.int/icd#alternativeLabel"
+	 kb:oldName="http://who.int/icd#datatypeProperty_1"
+	 rdfs:label="Name change from 'datatypeProperty_1' to 'alternativeLabel'">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class70008"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class70017"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class70018"/>
+</kb:Name_Changed>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class70017"
+	 kb:date="09/19/2011 17:23:22 PDT"
+	 kb:sequence="7"
+	 rdfs:label="09/19/2011 17:23:22 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_icd_content_model_Class70018"
+	 kb:action="Composite_Change"
+	 kb:author="csnyulas"
+	 kb:context="Create Property alternativeLabel"
+	 rdfs:label="Create Property alternativeLabel">
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class70008"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class70014"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class70016"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class70019"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class70019"
+	 kb:date="09/19/2011 17:23:22 PDT"
+	 kb:sequence="8"
+	 rdfs:label="09/19/2011 17:23:22 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class70020"
+	 kb:action="Property Value Changed"
+	 kb:author="csnyulas">
+	<kb:context>Property: rdfs:comment for instance: alternativeLabel set to: (Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:comment for instance: alternativeLabel set to: (Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class70008"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class70021"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class70021"
+	 kb:date="09/19/2011 17:23:42 PDT"
+	 kb:sequence="9"
+	 rdfs:label="09/19/2011 17:23:42 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class70022"
+	 kb:action="Property Value Changed"
+	 kb:author="csnyulas">
+	<kb:context>Property: rdfs:comment for instance: alternativeLabel set to: (Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:comment for instance: alternativeLabel set to: (Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class70008"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class70023"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class70023"
+	 kb:date="09/19/2011 17:23:45 PDT"
+	 kb:sequence="10"
+	 rdfs:label="09/19/2011 17:23:45 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class70024"
+	 kb:action="Property Value Changed"
+	 kb:author="csnyulas">
+	<kb:context>Property: rdfs:comment for instance: alternativeLabel set to: Represents an alternative label for a given language term. 
+This is especially useful for representing different alternative transliterations using latin-based alphabets of language terms written with non-latin characters.
+For example, a Chinese title term having a label written with Chinese characters could get a pinyin transliteration as an alternative label, to allow easier pronounciation to wider audiences.(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:comment for instance: alternativeLabel set to: Represents an alternative label for a given language term. 
+This is especially useful for representing different alternative transliterations using latin-based alphabets of language terms written with non-latin characters.
+For example, a Chinese title term having a label written with Chinese characters could get a pinyin transliteration as an alternative label, to allow easier pronounciation to wider audiences.(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class70008"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class70025"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class70025"
+	 kb:date="09/19/2011 17:23:45 PDT"
+	 kb:sequence="11"
+	 rdfs:label="09/19/2011 17:23:45 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class70026"
+	 kb:action="Property Value Changed"
+	 kb:author="csnyulas">
+	<kb:context>Property: rdfs:domain for instance: alternativeLabel set to: (Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:domain for instance: alternativeLabel set to: (Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class70008"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class70027"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class70036"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class70027"
+	 kb:date="09/19/2011 17:24:01 PDT"
+	 kb:sequence="12"
+	 rdfs:label="09/19/2011 17:24:01 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class70028"
+	 kb:action="Property Value Changed"
+	 kb:author="csnyulas">
+	<kb:context>Property: rdfs:domain for instance: alternativeLabel set to: LanguageTerm(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:domain for instance: alternativeLabel set to: LanguageTerm(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class70008"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class70029"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class70036"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class70029"
+	 kb:date="09/19/2011 17:24:01 PDT"
+	 kb:sequence="13"
+	 rdfs:label="09/19/2011 17:24:01 PDT"/>
+<kb:DomainProperty_Removed rdf:about="&kb;annotation_icd_content_model_Class70030"
+	 kb:action="DomainProperty_Removed"
+	 kb:author="csnyulas">
+	<kb:context>Domain Property Removed: alternativeLabel(removed from: owl:Thing)</kb:context>
+	<rdfs:label>Domain Property Removed: alternativeLabel(removed from: owl:Thing)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class70008"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class70031"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class70032"/>
+</kb:DomainProperty_Removed>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class70031"
+	 kb:date="09/19/2011 17:24:01 PDT"
+	 kb:sequence="14"
+	 rdfs:label="09/19/2011 17:24:01 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_icd_content_model_Class70032"
+	 kb:action="Composite_Change"
+	 kb:author="csnyulas">
+	<kb:context>Remove template slot from class DefaultOWLNamedClass(http://www.w3.org/2002/07/owl#Thing) -- Apply to: http://www.w3.org/2002/07/owl#Thing</kb:context>
+	<rdfs:label>Remove template slot from class DefaultOWLNamedClass(http://www.w3.org/2002/07/owl#Thing) -- Apply to: http://www.w3.org/2002/07/owl#Thing</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class20370"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class70030"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class70033"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class70036"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class70033"
+	 kb:date="09/19/2011 17:24:01 PDT"
+	 kb:sequence="15"
+	 rdfs:label="09/19/2011 17:24:01 PDT"/>
+<kb:DomainProperty_Added rdf:about="&kb;annotation_icd_content_model_Class70034"
+	 kb:action="DomainProperty_Added"
+	 kb:author="csnyulas">
+	<kb:context>Domain Property Added: alternativeLabel(added to: LanguageTerm)</kb:context>
+	<rdfs:label>Domain Property Added: alternativeLabel(added to: LanguageTerm)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class70008"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class70035"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class70036"/>
+</kb:DomainProperty_Added>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class70035"
+	 kb:date="09/19/2011 17:24:01 PDT"
+	 kb:sequence="16"
+	 rdfs:label="09/19/2011 17:24:01 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_icd_content_model_Class70036"
+	 kb:action="Composite_Change"
+	 kb:author="csnyulas">
+	<kb:context>Add LanguageTerm to the domain of alternativeLabel -- Apply to: http://who.int/icd#alternativeLabel</kb:context>
+	<rdfs:label>Add LanguageTerm to the domain of alternativeLabel -- Apply to: http://who.int/icd#alternativeLabel</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class70008"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class70026"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class70028"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class70032"/>
+	<kb:subChanges rdf:resource="&kb;annotation_icd_content_model_Class70034"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class70037"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class70037"
+	 kb:date="09/19/2011 17:24:01 PDT"
+	 kb:sequence="17"
+	 rdfs:label="09/19/2011 17:24:01 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class70038"
+	 kb:action="Property Value Changed"
+	 kb:author="csnyulas">
+	<kb:context>Property: rdfs:range for instance: alternativeLabel set to: string(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:range for instance: alternativeLabel set to: string(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class70008"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class70039"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class70039"
+	 kb:date="09/19/2011 17:24:06 PDT"
+	 kb:sequence="18"
+	 rdfs:label="09/19/2011 17:24:06 PDT"/>
 <kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class71"
 	 kb:date="06/03/2011 18:42:19 PDT"
 	 kb:sequence="33"
