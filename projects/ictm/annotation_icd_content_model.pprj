@@ -1,105 +1,105 @@
-; Mon Sep 19 17:25:23 PDT 2011
+; Mon Sep 19 16:50:16 PDT 2011
 ; 
 ;+ (version "3.4.7")
 ;+ (build "Build 620")
 
-([annotation_icd_content_model_ProjectKB_Class10] of  String
+([annotation_icd_content_model_ProjectKB_Class41] of  String
+
+	(name "AnnotationStatus")
+	(string_value "description"))
+
+([annotation_icd_content_model_ProjectKB_Class42] of  String
+
+	(name "Annotation")
+	(string_value "subject"))
+
+([annotation_icd_content_model_ProjectKB_Class43] of  String
+
+	(name "Timestamp")
+	(string_value "date"))
+
+([annotation_icd_content_model_ProjectKB_Class44] of  String
+
+	(name ":META-CLASS")
+	(string_value "%3ANAME"))
+
+([annotation_icd_content_model_ProjectKB_Class45] of  String
+
+	(name ":PAL-CONSTRAINT")
+	(string_value "%3APAL-NAME"))
+
+([annotation_icd_content_model_ProjectKB_Class46] of  String
 
 	(name "Vote")
 	(string_value "subject"))
 
-([annotation_icd_content_model_ProjectKB_Class11] of  String
+([annotation_icd_content_model_ProjectKB_Class47] of  String
 
 	(name "Change")
 	(string_value "context"))
 
-([annotation_icd_content_model_ProjectKB_Class12] of  String
+([annotation_icd_content_model_ProjectKB_Class48] of  String
 
 	(name "LinguisticEntity")
 	(string_value "label{+%28}language{%29}"))
 
-([annotation_icd_content_model_ProjectKB_Class13] of  String
+([annotation_icd_content_model_ProjectKB_Class49] of  String
 
 	(name ":INSTANCE-ANNOTATION")
 	(string_value "%3AANNOTATION-TEXT"))
 
-([annotation_icd_content_model_ProjectKB_Class14] of  String
+([annotation_icd_content_model_ProjectKB_Class50] of  String
 
 	(name "Ontology_Component")
 	(string_value "currentName"))
 
-([annotation_icd_content_model_ProjectKB_Class15] of  String
+([annotation_icd_content_model_ProjectKB_Class51] of  String
 
 	(name "ChangeStatus")
 	(string_value "description"))
 
-([annotation_icd_content_model_ProjectKB_Class16] of  String
+([annotation_icd_content_model_ProjectKB_Class52] of  String
 
 	(name "User")
 	(string_value "name"))
 
-([annotation_icd_content_model_ProjectKB_Class17] of  String
+([annotation_icd_content_model_ProjectKB_Class53] of  String
 
 	(name "Status")
 	(string_value "description"))
 
-([annotation_icd_content_model_ProjectKB_Class18] of  String
+([annotation_icd_content_model_ProjectKB_Class54] of  String
 
 	(name "Proposal")
 	(string_value "subject"))
 
-([annotation_icd_content_model_ProjectKB_Class19] of  Map_Entry
+([annotation_icd_content_model_ProjectKB_Class55] of  Map_Entry
 
 	(key "add_name_on_instance_form")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([annotation_icd_content_model_ProjectKB_Class20] of  Map_Entry
+([annotation_icd_content_model_ProjectKB_Class56] of  Map_Entry
 
 	(key "annotation_proj_exists")
 	(key_class "java.lang.String")
 	(value "yes")
 	(value_class "java.lang.String"))
 
-([annotation_icd_content_model_ProjectKB_Class21] of  Map_Entry
+([annotation_icd_content_model_ProjectKB_Class57] of  Map_Entry
 
 	(key "change_tracking_active")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([annotation_icd_content_model_ProjectKB_Class22] of  Map_Entry
+([annotation_icd_content_model_ProjectKB_Class58] of  Map_Entry
 
 	(key "suppress_instance_counting")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
-
-([annotation_icd_content_model_ProjectKB_Class5] of  String
-
-	(name "AnnotationStatus")
-	(string_value "description"))
-
-([annotation_icd_content_model_ProjectKB_Class6] of  String
-
-	(name "Annotation")
-	(string_value "subject"))
-
-([annotation_icd_content_model_ProjectKB_Class7] of  String
-
-	(name "Timestamp")
-	(string_value "date"))
-
-([annotation_icd_content_model_ProjectKB_Class8] of  String
-
-	(name ":META-CLASS")
-	(string_value "%3ANAME"))
-
-([annotation_icd_content_model_ProjectKB_Class9] of  String
-
-	(name ":PAL-CONSTRAINT")
-	(string_value "%3APAL-NAME"))
 
 ([annotation_ICD_ProjectKB_Class10112] of  Widget
 
@@ -185,20 +185,20 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[annotation_icd_content_model_ProjectKB_Class5]
-		[annotation_icd_content_model_ProjectKB_Class6]
-		[annotation_icd_content_model_ProjectKB_Class7]
-		[annotation_icd_content_model_ProjectKB_Class8]
-		[annotation_icd_content_model_ProjectKB_Class9]
-		[annotation_icd_content_model_ProjectKB_Class10]
-		[annotation_icd_content_model_ProjectKB_Class11]
-		[annotation_icd_content_model_ProjectKB_Class12]
-		[annotation_icd_content_model_ProjectKB_Class13]
-		[annotation_icd_content_model_ProjectKB_Class14]
-		[annotation_icd_content_model_ProjectKB_Class15]
-		[annotation_icd_content_model_ProjectKB_Class16]
-		[annotation_icd_content_model_ProjectKB_Class17]
-		[annotation_icd_content_model_ProjectKB_Class18]))
+		[annotation_icd_content_model_ProjectKB_Class41]
+		[annotation_icd_content_model_ProjectKB_Class42]
+		[annotation_icd_content_model_ProjectKB_Class43]
+		[annotation_icd_content_model_ProjectKB_Class44]
+		[annotation_icd_content_model_ProjectKB_Class45]
+		[annotation_icd_content_model_ProjectKB_Class46]
+		[annotation_icd_content_model_ProjectKB_Class47]
+		[annotation_icd_content_model_ProjectKB_Class48]
+		[annotation_icd_content_model_ProjectKB_Class49]
+		[annotation_icd_content_model_ProjectKB_Class50]
+		[annotation_icd_content_model_ProjectKB_Class51]
+		[annotation_icd_content_model_ProjectKB_Class52]
+		[annotation_icd_content_model_ProjectKB_Class53]
+		[annotation_icd_content_model_ProjectKB_Class54]))
 
 ([changes_ProjectKB_Class10] of  Property_List
 )
@@ -4079,10 +4079,10 @@
 ([changes_ProjectKB_Instance_10131] of  Map
 
 	(entries
-		[annotation_icd_content_model_ProjectKB_Class19]
-		[annotation_icd_content_model_ProjectKB_Class20]
-		[annotation_icd_content_model_ProjectKB_Class21]
-		[annotation_icd_content_model_ProjectKB_Class22]))
+		[annotation_icd_content_model_ProjectKB_Class55]
+		[annotation_icd_content_model_ProjectKB_Class56]
+		[annotation_icd_content_model_ProjectKB_Class57]
+		[annotation_icd_content_model_ProjectKB_Class58]))
 
 ([changes_ProjectKB_Instance_120] of  Property_List
 
@@ -6883,7 +6883,7 @@
 	(is_hidden FALSE)
 	(widget_class_name "edu.stanford.smi.protege.widget.InstancesTab"))
 
-([KB_493628_Class4] of  Map
+([KB_414621_Class4] of  Map
 )
 
 ([KB_690954_Instance_0] of  String
