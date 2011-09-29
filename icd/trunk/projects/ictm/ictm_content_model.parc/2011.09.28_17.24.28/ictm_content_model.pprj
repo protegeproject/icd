@@ -1,4 +1,4 @@
-; Wed Sep 28 17:23:06 PDT 2011
+; Wed Sep 28 17:24:28 PDT 2011
 ; 
 ;+ (version "3.4.7")
 ;+ (build "Build 620")
@@ -6,17 +6,17 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[ictm_content_model_ProjectKB_Class10036]
-		[ictm_content_model_ProjectKB_Class10037]
-		[ictm_content_model_ProjectKB_Class10038]
-		[ictm_content_model_ProjectKB_Class10039]
-		[ictm_content_model_ProjectKB_Class10040]
-		[ictm_content_model_ProjectKB_Class10041]
-		[ictm_content_model_ProjectKB_Class10042]
-		[ictm_content_model_ProjectKB_Class10043]
-		[ictm_content_model_ProjectKB_Class10044]
-		[ictm_content_model_ProjectKB_Class10045]
-		[ictm_content_model_ProjectKB_Class10046]))
+		[ictm_content_model_ProjectKB_Class10053]
+		[ictm_content_model_ProjectKB_Class10054]
+		[ictm_content_model_ProjectKB_Class10055]
+		[ictm_content_model_ProjectKB_Class10056]
+		[ictm_content_model_ProjectKB_Class10057]
+		[ictm_content_model_ProjectKB_Class10058]
+		[ictm_content_model_ProjectKB_Class10059]
+		[ictm_content_model_ProjectKB_Class10060]
+		[ictm_content_model_ProjectKB_Class10061]
+		[ictm_content_model_ProjectKB_Class10062]
+		[ictm_content_model_ProjectKB_Class10063]))
 
 ([CLSES_TAB] of  Widget
 
@@ -60,97 +60,97 @@
 ([ictm_content_model_ProjectKB_Class10008] of  Property_List
 )
 
-([ictm_content_model_ProjectKB_Class10036] of  String
+([ictm_content_model_ProjectKB_Class10053] of  String
 
 	(name ":INSTANCE-ANNOTATION")
 	(string_value "%3AANNOTATION-TEXT"))
 
-([ictm_content_model_ProjectKB_Class10037] of  String
+([ictm_content_model_ProjectKB_Class10054] of  String
 
 	(name "http://www.w3.org/2002/07/owl#Class")
 	(string_value "%3ANAME"))
 
-([ictm_content_model_ProjectKB_Class10038] of  String
+([ictm_content_model_ProjectKB_Class10055] of  String
 
 	(name ":PAL-CONSTRAINT")
 	(string_value "%3APAL-NAME"))
 
-([ictm_content_model_ProjectKB_Class10039] of  String
+([ictm_content_model_ProjectKB_Class10056] of  String
 
 	(name ":META-CLASS")
 	(string_value "%3ANAME"))
 
-([ictm_content_model_ProjectKB_Class10040] of  String
+([ictm_content_model_ProjectKB_Class10057] of  String
 
 	(name "http://who.int/icd#LinearizationSpecification")
 	(string_value "http%3A%2F%2Fwho.int%2Ficd%23linearizationView{%3A+}http%3A%2F%2Fwho.int%2Ficd%23isIncludedInLinearization"))
 
-([ictm_content_model_ProjectKB_Class10041] of  String
+([ictm_content_model_ProjectKB_Class10058] of  String
 
 	(name "http://www.w3.org/2002/07/owl#Thing")
 	(string_value "%3ANAME"))
 
-([ictm_content_model_ProjectKB_Class10042] of  String
+([ictm_content_model_ProjectKB_Class10059] of  String
 
 	(name "http://who.int/icd#TitleTerm")
 	(string_value "http%3A%2F%2Fwho.int%2Ficd%23label{+%28}http%3A%2F%2Fwho.int%2Ficd%23language{%29}"))
 
-([ictm_content_model_ProjectKB_Class10043] of  String
+([ictm_content_model_ProjectKB_Class10060] of  String
 
 	(name "http://who.int/icd#LinearizationView")
 	(string_value "http%3A%2F%2Fwho.int%2Ficd%23sortingCode{.+}http%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23label"))
 
-([ictm_content_model_ProjectKB_Class10044] of  String
+([ictm_content_model_ProjectKB_Class10061] of  String
 
 	(name "http://who.int/icd#IndexTerm")
 	(string_value "http%3A%2F%2Fwho.int%2Ficd%23label{+%28}http%3A%2F%2Fwho.int%2Ficd%23language{%29}"))
 
-([ictm_content_model_ProjectKB_Class10045] of  String
+([ictm_content_model_ProjectKB_Class10062] of  String
 
 	(name "http://who.int/icd#DefinitionSection")
 	(string_value "http%3A%2F%2Fwho.int%2Ficd%23icdTitle"))
 
-([ictm_content_model_ProjectKB_Class10046] of  String
+([ictm_content_model_ProjectKB_Class10063] of  String
 
 	(name "http://who.int/icd#LanguageTerm")
 	(string_value "http%3A%2F%2Fwho.int%2Ficd%23language{%3A+}http%3A%2F%2Fwho.int%2Ficd%23label"))
 
-([ictm_content_model_ProjectKB_Class10047] of  Map_Entry
+([ictm_content_model_ProjectKB_Class10064] of  Map_Entry
 
 	(key "show_collaboration_panel")
 	(key_class "java.lang.String")
 	(value "true")
 	(value_class "java.lang.Boolean"))
 
-([ictm_content_model_ProjectKB_Class10048] of  Map_Entry
+([ictm_content_model_ProjectKB_Class10065] of  Map_Entry
 
 	(key "add_name_on_instance_form")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([ictm_content_model_ProjectKB_Class10049] of  Map_Entry
+([ictm_content_model_ProjectKB_Class10066] of  Map_Entry
 
 	(key "chaoProject")
 	(key_class "java.lang.String")
 	(value "annotation_ictm_content_model.pprj")
 	(value_class "java.lang.String"))
 
-([ictm_content_model_ProjectKB_Class10050] of  Map_Entry
+([ictm_content_model_ProjectKB_Class10067] of  Map_Entry
 
 	(key "edu.stanford.smi.protege.collab.annotation.gui.panel.ChatPanel")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([ictm_content_model_ProjectKB_Class10051] of  Map_Entry
+([ictm_content_model_ProjectKB_Class10068] of  Map_Entry
 
 	(key "change_tracking_active")
 	(key_class "java.lang.String")
 	(value "true")
 	(value_class "java.lang.String"))
 
-([ictm_content_model_ProjectKB_Class10052] of  Map_Entry
+([ictm_content_model_ProjectKB_Class10069] of  Map_Entry
 
 	(key "suppress_instance_counting")
 	(key_class "java.lang.String")
@@ -1144,12 +1144,12 @@
 ([KB_325529_Class0] of  Map
 
 	(entries
-		[ictm_content_model_ProjectKB_Class10047]
-		[ictm_content_model_ProjectKB_Class10048]
-		[ictm_content_model_ProjectKB_Class10049]
-		[ictm_content_model_ProjectKB_Class10050]
-		[ictm_content_model_ProjectKB_Class10051]
-		[ictm_content_model_ProjectKB_Class10052]))
+		[ictm_content_model_ProjectKB_Class10064]
+		[ictm_content_model_ProjectKB_Class10065]
+		[ictm_content_model_ProjectKB_Class10066]
+		[ictm_content_model_ProjectKB_Class10067]
+		[ictm_content_model_ProjectKB_Class10068]
+		[ictm_content_model_ProjectKB_Class10069]))
 
 ([KB_325529_Class4] of  String
 

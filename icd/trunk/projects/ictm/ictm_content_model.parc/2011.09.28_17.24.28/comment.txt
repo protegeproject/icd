@@ -1,0 +1,1 @@
+Created new subclass of "LinearizationView" called "ICTMLinearizationView" and moved all the local LinearizationView instances in the new subclass.
