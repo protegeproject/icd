@@ -45,8 +45,14 @@ public class ICDContentModelConstants {
     public final static String TERM_BASE_INDEX_CLASS = NS + "BaseIndexTerm";
     public final static String TERM_BASE_INCLUSION_CLASS = NS + "BaseInclusionTerm";
     public final static String TERM_BASE_EXCLUSION_CLASS = NS + "BaseExclusionTerm";
+
+    /* Linearizations */
     public final static String LINEARIZATION_VIEW_CLASS = NS + "LinearizationView";
+    public final static String LINEARIZATION_ICD_11_VIEW_CLASS = NS + "ICD11LinearizationView";
+    public final static String LINEARIZATION_ICD_10_VIEW_CLASS = NS + "ICD10LinearizationView";
+    public final static String LINEARIZATION__ICD_10_TABULATION_VIEW_CLASS = NS + "ICD10TabulationListView";
     public final static String LINEARIZATION_SPECIFICATION_CLASS = NS + "LinearizationSpecification";
+    public final static String LINEARIZATION_HISTORIC_SPECIFICATION_CLASS = NS + "HistoricLinearizationSpecification";
 
     public final static String EXTERNAL_CAUSES_TOP_CLASS = NS + "XX";
 
@@ -96,7 +102,12 @@ public class ICDContentModelConstants {
     public final static String URL_PROP = NS + "url";
     public final static String TERM_ID_PROP = NS + "termId";
 
+    /* Linearizations */
     public final static String LINEARIZATION_PROP = NS + "linearization";
+    public final static String LINEARIZATION_HISTORIC_PROP = NS + "historicLinearization";
+    public final static String LINEARIZATION_ICD_10_PROP = NS + "icd10Linearization";
+    public final static String LINEARIZATION_ICD_10_TABULATION_PROP = NS + "icd10TabulationList";
+
     public final static String IS_INCLUDED_IN_LINEARIZATION_PROP = NS + "isIncludedInLinearization";
     public final static String IS_GROUPING_PROP = NS + "isGrouping";
     public final static String LINEARIZATION_PARENT_PROP = NS + "linearizationParent";
