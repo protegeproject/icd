@@ -44,6 +44,7 @@ public class ICDContentModel {
 
     private RDFSNamedClass linearizationViewClass;
     private RDFSNamedClass linearizationSpecificationClass;
+    private RDFSNamedClass linearizationHistoricSpecificationClass;
 
     private Collection<RDFSNamedClass> diseaseMetaclasses;
     private Collection<RDFSNamedClass> externalCausesMetaclasses;
@@ -114,6 +115,8 @@ public class ICDContentModel {
     private RDFProperty isGroupingProperty;
     private RDFProperty linearizationParentProperty;
     private RDFProperty linearizationViewProperty;
+    private RDFProperty linearizationICD10ViewProperty;
+    private RDFProperty linearizationICD10TabulationViewProperty;
     private RDFProperty linearizationSequenceNoProperty;
     private RDFProperty linearizationSortingLabelProperty;
 
@@ -389,6 +392,12 @@ public class ICDContentModel {
         return linearizationSpecificationClass;
     }
 
+    public RDFSNamedClass getLinearizationHistoricSpecificationClass() {
+        if (linearizationHistoricSpecificationClass == null) {
+            linearizationHistoricSpecificationClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.LINEARIZATION_HISTORIC_SPECIFICATION_CLASS);
+        }
+        return linearizationHistoricSpecificationClass;
+    }
 
     /*
     * Getters for properties
@@ -609,13 +618,27 @@ public class ICDContentModel {
         return linearizationProperty;
     }
 
+    public RDFProperty getLinearizationICD10Property() {
+        if (linearizationICD10ViewProperty == null) {
+            linearizationICD10ViewProperty = owlModel.getRDFProperty(ICDContentModelConstants.LINEARIZATION_ICD_10_PROP);
+        }
+        return linearizationICD10ViewProperty;
+    }
+
+    public RDFProperty getLinearizationICD10TabulationProperty() {
+        if (linearizationICD10TabulationViewProperty == null) {
+            linearizationICD10TabulationViewProperty = owlModel.getRDFProperty(ICDContentModelConstants.LINEARIZATION_ICD_10_TABULATION_PROP);
+        }
+        return linearizationICD10TabulationViewProperty;
+    }
+
     public RDFProperty getIsIncludedInLinearizationProperty() {
         if (isIncludedInLinearizationProperty == null) {
             isIncludedInLinearizationProperty = owlModel.getRDFProperty(ICDContentModelConstants.IS_INCLUDED_IN_LINEARIZATION_PROP);
         }
         return isIncludedInLinearizationProperty;
     }
-    
+
     public RDFProperty getIsGroupingProperty() {
     	if (isGroupingProperty == null) {
     		isGroupingProperty = owlModel.getRDFProperty(ICDContentModelConstants.IS_GROUPING_PROP);
@@ -777,27 +800,78 @@ public class ICDContentModel {
         }
 
         if (createICDSpecificEntities) {
-
-            //add linearization instances
-            for (RDFResource linView : getLinearizationValueSet()) {
-                RDFResource linSpec = getLinearizationSpecificationClass().createInstance(IDGenerator.getNextUniqueId());
-                linSpec.setPropertyValue(getLinearizationViewProperty(), linView);
-
-                cls.addPropertyValue(getLinearizationProperty(), linSpec);
-                //default for new properties: morbidity: included; mortality: not included
-                if (linView.getName().equals(ICDContentModelConstants.LINEARIZATION_VIEW_MORBIDITY)) {
-                    linSpec.setPropertyValue(getIsIncludedInLinearizationProperty(), Boolean.TRUE);
-                } else if (linView.getName().equals(ICDContentModelConstants.LINEARIZATION_VIEW_MORTALITY)) {
-                    linSpec.setPropertyValue(getIsIncludedInLinearizationProperty(), Boolean.FALSE);
-                }
-            }
-
-            //set biologicalSex not applicable
-            cls.addPropertyValue(getBiologicalSexProperty(), owlModel.getRDFResource(ICDContentModelConstants.BIOLOGICAL_SEX_NA));
+            createICDSpecificEntities(cls);
         }
 
         return cls;
     }
+
+    private void createICDSpecificEntities(RDFSNamedClass cls) {
+        /*
+         * Create the linearization instances for the newly created class. The linearization views are taken from the parents.
+         * They are created separately for the ICD-11 linearizzations, the ICD-10 linearizations, and ICD-10 tabulation lists
+         */
+        createLinearizationSpecifications(cls);
+
+        //set biologicalSex - default value: N/A (not applicable)
+        cls.addPropertyValue(getBiologicalSexProperty(), owlModel.getRDFResource(ICDContentModelConstants.BIOLOGICAL_SEX_NA));
+    }
+
+
+    private void createLinearizationSpecifications(RDFSNamedClass cls) {
+        //ICD-11 linearizations
+        createLinearizationSpecifications(cls, getLinearizationSpecificationClass(), getLinearizationProperty());
+        //ICD-10 linearizations
+        createLinearizationSpecifications(cls, getLinearizationHistoricSpecificationClass(), getLinearizationICD10Property());
+        //ICD-10 tabulation lists
+        createLinearizationSpecifications(cls, getLinearizationHistoricSpecificationClass(), getLinearizationICD10TabulationProperty());
+    }
+
+     private void createLinearizationSpecifications(RDFSNamedClass cls, RDFSNamedClass linSpecificationClass, RDFProperty linProp) {
+         for (RDFResource linView : getLinearizationViewsFromParents(cls, linProp)) {
+             RDFResource linSpec = linSpecificationClass.createInstance(IDGenerator.getNextUniqueId());
+             linSpec.setPropertyValue(getLinearizationViewProperty(), linView);
+
+             cls.addPropertyValue(linProp, linSpec);
+
+             //set default grouping to FALSE
+             cls.setPropertyValue(getIsGroupingProperty(), Boolean.FALSE);
+
+             /* These only apply to the ICD-11 linearizations, but it is easier to make them for all. It won't have any effect on the historic linearization specifications */
+             /* set the default for new categories: morbidity - included; mortality - not included */
+             if (linView.getName().equals(ICDContentModelConstants.LINEARIZATION_VIEW_MORBIDITY)) {
+                 linSpec.setPropertyValue(getIsIncludedInLinearizationProperty(), Boolean.TRUE);
+             } else if (linView.getName().equals(ICDContentModelConstants.LINEARIZATION_VIEW_MORTALITY)) {
+                 linSpec.setPropertyValue(getIsIncludedInLinearizationProperty(), Boolean.FALSE);
+             }
+         }
+     }
+
+     private Collection<RDFResource> getLinearizationViewsFromParents(RDFSNamedClass cls, RDFProperty linProp) {
+         Collection<RDFResource> linViews = new ArrayList<RDFResource>();
+
+         for (Object parent : cls.getSuperclasses(false)) {
+             if (parent instanceof RDFSNamedClass) {
+                 linViews.addAll(getLinearizationViewsFromCls((RDFSNamedClass) parent, linProp));
+             }
+        }
+         return linViews;
+     }
+
+     private Collection<RDFResource> getLinearizationViewsFromCls(RDFSNamedClass parentCls, RDFProperty linProp) {
+         Collection<RDFResource> linViews = new ArrayList<RDFResource>();
+         Collection<RDFResource> linearizationSpecs = getLinearizationSpecifications(parentCls);
+
+         for (RDFResource linearizationSpec : linearizationSpecs) {
+             RDFResource linearizationView = (RDFResource) linearizationSpec.getPropertyValue(linProp);
+             if (linearizationView != null) {
+                 linViews.add(linearizationView);
+             }
+         }
+
+         return linViews;
+     }
+
 
     /**
      * It gets or creates and ICDClass. If it creates, it will not add the metaclasses.
