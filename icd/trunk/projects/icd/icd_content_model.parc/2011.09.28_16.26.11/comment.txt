@@ -1,0 +1,9 @@
+- Added a subclass of LinearizationSpecification called HistoricLinearizationSpecification 
+- Added historicLinearization property and set its domain to LinearizationSection and its range to HistoricLinearizationSpecification.
+- Added sub-properties of the historicLinearization property (icd10Linearization and icd10TabulationList), to allow representation of linearizations that encode ICD-10 tabulation lists and ICD-10 (or ICD-9) national modifications.
+- Added more LinearizationView instances:
+    - 6 for the ICD-10 Special Tabulation Lists (M1, M2, M3, M4, Mb, and VA).
+    - 6 for historic ICD-10 linearizations (
+    - 2 new ICD11 linearizations by splitting the Primary Care linearizations into high and low resource settings
+- Added a functional boolean datatype property called "isObsolete", with the domain "DefinitionSection"
+

@@ -1,0 +1,1 @@
+Created 3 subclasses of "LinearizationView" ("ICD11LinearizationView", "ICD10LinearizationView", and "ICD10TabulationListView") and reorganized its instances into these subclasses. Removed class definition axiom from "LinearizationView".
