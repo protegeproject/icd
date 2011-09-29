@@ -1,4 +1,4 @@
-; Mon Sep 19 23:56:37 PDT 2011
+; Wed Sep 28 17:19:05 PDT 2011
 ; 
 ;+ (version "3.4.7")
 ;+ (build "Build 620")
@@ -7270,7 +7270,7 @@
 	(x 0)
 	(y 120))
 
-([KB_980362_Class4] of  Map
+([KB_965683_Class4] of  Map
 )
 
 ([KB_994297_Instance_0] of  String
@@ -7336,8 +7336,8 @@
 		[changes_ProjectKB_Class30260]
 		[STANDARD_CLASS_FORM_WIDGET]
 		[changes_ProjectKB_Instance_40056]
-		[changes_ProjectKB_Class30496]
 		[changes_ProjectKB_Class10086]
+		[changes_ProjectKB_Class30496]
 		[INSTANCE_ANNOTATION_FORM_WIDGET]
 		[changes_ProjectKB_Instance_51020]
 		[changes_ProjectKB_Instance_81267]
