@@ -56,6 +56,506 @@
 	 kb:date="02/01/2011 00:50:04 PST"
 	 kb:sequence="4"
 	 rdfs:label="02/01/2011 00:50:04 PST"/>
+<kb:Class_Created rdf:about="&kb;annotation_ictm_content_model_Class10000"
+	 kb:action="Class_Created"
+	 kb:author="csnyulas"
+	 kb:context="Class Create: Class_1"
+	 kb:creationName="http://who.int/ictm#Class_1"
+	 rdfs:label="Class Create: Class_1">
+	<kb:applyTo rdf:resource="&kb;annotation_ictm_content_model_Class10001"/>
+	<kb:timestamp rdf:resource="&kb;annotation_ictm_content_model_Class10002"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_ictm_content_model_Class10013"/>
+</kb:Class_Created>
+<kb:Ontology_Class rdf:about="&kb;annotation_ictm_content_model_Class10001"
+	 kb:currentName="http://who.int/ictm#ICTMLinearizationView"
+	 rdfs:label="http://who.int/ictm#ICTMLinearizationView">
+	<kb:changes rdf:resource="&kb;annotation_ictm_content_model_Class10000"/>
+	<kb:changes rdf:resource="&kb;annotation_ictm_content_model_Class10003"/>
+	<kb:changes rdf:resource="&kb;annotation_ictm_content_model_Class10005"/>
+	<kb:changes rdf:resource="&kb;annotation_ictm_content_model_Class10007"/>
+	<kb:changes rdf:resource="&kb;annotation_ictm_content_model_Class10009"/>
+	<kb:changes rdf:resource="&kb;annotation_ictm_content_model_Class10011"/>
+	<kb:changes rdf:resource="&kb;annotation_ictm_content_model_Class10013"/>
+	<kb:changes rdf:resource="&kb;annotation_ictm_content_model_Class10015"/>
+	<kb:changes rdf:resource="&kb;annotation_ictm_content_model_Class10017"/>
+</kb:Ontology_Class>
+<kb:Timestamp rdf:about="&kb;annotation_ictm_content_model_Class10002"
+	 kb:date="09/28/2011 17:21:09 PDT"
+	 kb:sequence="0"
+	 rdfs:label="09/28/2011 17:21:09 PDT"/>
+<kb:Individual_Added rdf:about="&kb;annotation_ictm_content_model_Class10003"
+	 kb:action="Individual_Added"
+	 kb:author="csnyulas"
+	 kb:context="Instance Added: Class_1 (instance of: owl:Class)"
+	 rdfs:label="Instance Added: Class_1 (instance of: owl:Class)">
+	<kb:applyTo rdf:resource="&kb;annotation_ictm_content_model_Class10001"/>
+	<kb:timestamp rdf:resource="&kb;annotation_ictm_content_model_Class10004"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_ictm_content_model_Class10013"/>
+</kb:Individual_Added>
+<kb:Timestamp rdf:about="&kb;annotation_ictm_content_model_Class10004"
+	 kb:date="09/28/2011 17:21:09 PDT"
+	 kb:sequence="1"
+	 rdfs:label="09/28/2011 17:21:09 PDT"/>
+<kb:Subclass_Added rdf:about="&kb;annotation_ictm_content_model_Class10005"
+	 kb:action="Subclass_Added"
+	 kb:author="csnyulas"
+	 kb:context="Subclass Added: Class_1 (added to: icd:LinearizationView)"
+	 rdfs:label="Subclass Added: Class_1 (added to: icd:LinearizationView)">
+	<kb:applyTo rdf:resource="&kb;annotation_ictm_content_model_Class10001"/>
+	<kb:timestamp rdf:resource="&kb;annotation_ictm_content_model_Class10006"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_ictm_content_model_Class10013"/>
+</kb:Subclass_Added>
+<kb:Timestamp rdf:about="&kb;annotation_ictm_content_model_Class10006"
+	 kb:date="09/28/2011 17:21:09 PDT"
+	 kb:sequence="2"
+	 rdfs:label="09/28/2011 17:21:09 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_ictm_content_model_Class10007"
+	 kb:action="Property Value Changed"
+	 kb:author="csnyulas">
+	<kb:context>Property: rdfs:subClassOf for instance: Class_1 set to: icd:LinearizationView(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:subClassOf for instance: Class_1 set to: icd:LinearizationView(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_ictm_content_model_Class10001"/>
+	<kb:timestamp rdf:resource="&kb;annotation_ictm_content_model_Class10008"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_ictm_content_model_Class10013"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_ictm_content_model_Class10008"
+	 kb:date="09/28/2011 17:21:09 PDT"
+	 kb:sequence="3"
+	 rdfs:label="09/28/2011 17:21:09 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_ictm_content_model_Class10009"
+	 kb:action="Property Value Changed"
+	 kb:author="csnyulas">
+	<kb:context>Property: rdfs:subClassOf for instance: Class_1 set to: icd:LinearizationView(Old values:icd:LinearizationView)</kb:context>
+	<rdfs:label>Property: rdfs:subClassOf for instance: Class_1 set to: icd:LinearizationView(Old values:icd:LinearizationView)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_ictm_content_model_Class10001"/>
+	<kb:timestamp rdf:resource="&kb;annotation_ictm_content_model_Class10010"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_ictm_content_model_Class10013"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_ictm_content_model_Class10010"
+	 kb:date="09/28/2011 17:21:09 PDT"
+	 kb:sequence="4"
+	 rdfs:label="09/28/2011 17:21:09 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_ictm_content_model_Class10011"
+	 kb:action="Property Value Changed"
+	 kb:author="csnyulas">
+	<kb:context>Property: rdfs:subClassOf for instance: Class_1 set to: icd:LinearizationView(Old values:icd:LinearizationView)</kb:context>
+	<rdfs:label>Property: rdfs:subClassOf for instance: Class_1 set to: icd:LinearizationView(Old values:icd:LinearizationView)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_ictm_content_model_Class10001"/>
+	<kb:timestamp rdf:resource="&kb;annotation_ictm_content_model_Class10012"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_ictm_content_model_Class10013"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_ictm_content_model_Class10012"
+	 kb:date="09/28/2011 17:21:09 PDT"
+	 kb:sequence="5"
+	 rdfs:label="09/28/2011 17:21:09 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_ictm_content_model_Class10013"
+	 kb:action="Composite_Change"
+	 kb:author="csnyulas">
+	<kb:context>Create class Class_1 as subclass of icd:LinearizationView -- Apply to: http://who.int/ictm#Class_1</kb:context>
+	<rdfs:label>Create class Class_1 as subclass of icd:LinearizationView -- Apply to: http://who.int/ictm#Class_1</rdfs:label>
+	<kb:subChanges rdf:resource="&kb;annotation_ictm_content_model_Class10000"/>
+	<kb:applyTo rdf:resource="&kb;annotation_ictm_content_model_Class10001"/>
+	<kb:subChanges rdf:resource="&kb;annotation_ictm_content_model_Class10003"/>
+	<kb:subChanges rdf:resource="&kb;annotation_ictm_content_model_Class10005"/>
+	<kb:subChanges rdf:resource="&kb;annotation_ictm_content_model_Class10007"/>
+	<kb:subChanges rdf:resource="&kb;annotation_ictm_content_model_Class10009"/>
+	<kb:subChanges rdf:resource="&kb;annotation_ictm_content_model_Class10011"/>
+	<kb:timestamp rdf:resource="&kb;annotation_ictm_content_model_Class10014"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_ictm_content_model_Class10017"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_ictm_content_model_Class10014"
+	 kb:date="09/28/2011 17:21:09 PDT"
+	 kb:sequence="6"
+	 rdfs:label="09/28/2011 17:21:09 PDT"/>
+<kb:Name_Changed rdf:about="&kb;annotation_ictm_content_model_Class10015"
+	 kb:action="Name_Changed"
+	 kb:author="csnyulas"
+	 kb:context="Name change from 'Class_1' to 'ICTMLinearizationView'"
+	 kb:newName="http://who.int/ictm#ICTMLinearizationView"
+	 kb:oldName="http://who.int/ictm#Class_1"
+	 rdfs:label="Name change from 'Class_1' to 'ICTMLinearizationView'">
+	<kb:applyTo rdf:resource="&kb;annotation_ictm_content_model_Class10001"/>
+	<kb:timestamp rdf:resource="&kb;annotation_ictm_content_model_Class10016"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_ictm_content_model_Class10017"/>
+</kb:Name_Changed>
+<kb:Timestamp rdf:about="&kb;annotation_ictm_content_model_Class10016"
+	 kb:date="09/28/2011 17:21:17 PDT"
+	 kb:sequence="7"
+	 rdfs:label="09/28/2011 17:21:17 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_ictm_content_model_Class10017"
+	 kb:action="Composite_Change"
+	 kb:author="csnyulas"
+	 kb:context="Create Class ICTMLinearizationView"
+	 rdfs:label="Create Class ICTMLinearizationView">
+	<kb:applyTo rdf:resource="&kb;annotation_ictm_content_model_Class10001"/>
+	<kb:subChanges rdf:resource="&kb;annotation_ictm_content_model_Class10013"/>
+	<kb:subChanges rdf:resource="&kb;annotation_ictm_content_model_Class10015"/>
+	<kb:timestamp rdf:resource="&kb;annotation_ictm_content_model_Class10018"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_ictm_content_model_Class10018"
+	 kb:date="09/28/2011 17:21:17 PDT"
+	 kb:sequence="8"
+	 rdfs:label="09/28/2011 17:21:17 PDT"/>
+<kb:Individual_Added rdf:about="&kb;annotation_ictm_content_model_Class10019"
+	 kb:action="Individual_Added"
+	 kb:author="csnyulas">
+	<kb:context>Instance Added: '03.a'. 'ICD-11 Chapter 23' (instance of: ICTMLinearizationView)</kb:context>
+	<rdfs:label>Instance Added: '03.a'. 'ICD-11 Chapter 23' (instance of: ICTMLinearizationView)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_ictm_content_model_Class10020"/>
+	<kb:timestamp rdf:resource="&kb;annotation_ictm_content_model_Class10021"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_ictm_content_model_Class10022"/>
+</kb:Individual_Added>
+<kb:Ontology_Individual rdf:about="&kb;annotation_ictm_content_model_Class10020"
+	 kb:currentName="http://who.int/ictm#ICDChapterTM"
+	 rdfs:label="http://who.int/ictm#ICDChapterTM">
+	<kb:changes rdf:resource="&kb;annotation_ictm_content_model_Class10019"/>
+	<kb:changes rdf:resource="&kb;annotation_ictm_content_model_Class10022"/>
+	<kb:changes rdf:resource="&kb;annotation_ictm_content_model_Class10024"/>
+	<kb:changes rdf:resource="&kb;annotation_ictm_content_model_Class10026"/>
+</kb:Ontology_Individual>
+<kb:Timestamp rdf:about="&kb;annotation_ictm_content_model_Class10021"
+	 kb:date="09/28/2011 17:21:36 PDT"
+	 kb:sequence="9"
+	 rdfs:label="09/28/2011 17:21:36 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_ictm_content_model_Class10022"
+	 kb:action="Composite_Change"
+	 kb:author="csnyulas">
+	<kb:context>Add to '03.a'. 'ICD-11 Chapter 23' direct type : ICTMLinearizationView -- Apply to: http://who.int/ictm#ICDChapterTM</kb:context>
+	<rdfs:label>Add to '03.a'. 'ICD-11 Chapter 23' direct type : ICTMLinearizationView -- Apply to: http://who.int/ictm#ICDChapterTM</rdfs:label>
+	<kb:subChanges rdf:resource="&kb;annotation_ictm_content_model_Class10019"/>
+	<kb:applyTo rdf:resource="&kb;annotation_ictm_content_model_Class10020"/>
+	<kb:timestamp rdf:resource="&kb;annotation_ictm_content_model_Class10023"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_ictm_content_model_Class10023"
+	 kb:date="09/28/2011 17:21:36 PDT"
+	 kb:sequence="10"
+	 rdfs:label="09/28/2011 17:21:36 PDT"/>
+<kb:Individual_Removed rdf:about="&kb;annotation_ictm_content_model_Class10024"
+	 kb:action="Individual_Removed"
+	 kb:author="csnyulas">
+	<kb:context>Instance Removed: ICDChapterTM (instance of: icd:LinearizationView)</kb:context>
+	<rdfs:label>Instance Removed: ICDChapterTM (instance of: icd:LinearizationView)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_ictm_content_model_Class10020"/>
+	<kb:timestamp rdf:resource="&kb;annotation_ictm_content_model_Class10025"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_ictm_content_model_Class10026"/>
+</kb:Individual_Removed>
+<kb:Timestamp rdf:about="&kb;annotation_ictm_content_model_Class10025"
+	 kb:date="09/28/2011 17:21:36 PDT"
+	 kb:sequence="11"
+	 rdfs:label="09/28/2011 17:21:36 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_ictm_content_model_Class10026"
+	 kb:action="Composite_Change"
+	 kb:author="csnyulas">
+	<kb:context>Remove from '03.a'. 'ICD-11 Chapter 23' direct type : icd:LinearizationView -- Apply to: http://who.int/ictm#ICDChapterTM</kb:context>
+	<rdfs:label>Remove from '03.a'. 'ICD-11 Chapter 23' direct type : icd:LinearizationView -- Apply to: http://who.int/ictm#ICDChapterTM</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_ictm_content_model_Class10020"/>
+	<kb:subChanges rdf:resource="&kb;annotation_ictm_content_model_Class10024"/>
+	<kb:timestamp rdf:resource="&kb;annotation_ictm_content_model_Class10027"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_ictm_content_model_Class10027"
+	 kb:date="09/28/2011 17:21:36 PDT"
+	 kb:sequence="12"
+	 rdfs:label="09/28/2011 17:21:36 PDT"/>
+<kb:Individual_Added rdf:about="&kb;annotation_ictm_content_model_Class10028"
+	 kb:action="Individual_Added"
+	 kb:author="csnyulas">
+	<kb:context>Instance Added: '03.b'. 'Chinese Modification' (instance of: ICTMLinearizationView)</kb:context>
+	<rdfs:label>Instance Added: '03.b'. 'Chinese Modification' (instance of: ICTMLinearizationView)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_ictm_content_model_Class10029"/>
+	<kb:timestamp rdf:resource="&kb;annotation_ictm_content_model_Class10030"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_ictm_content_model_Class10031"/>
+</kb:Individual_Added>
+<kb:Ontology_Individual rdf:about="&kb;annotation_ictm_content_model_Class10029"
+	 kb:currentName="http://who.int/ictm#ChineseModificationTM"
+	 rdfs:label="http://who.int/ictm#ChineseModificationTM">
+	<kb:changes rdf:resource="&kb;annotation_ictm_content_model_Class10028"/>
+	<kb:changes rdf:resource="&kb;annotation_ictm_content_model_Class10031"/>
+	<kb:changes rdf:resource="&kb;annotation_ictm_content_model_Class10033"/>
+	<kb:changes rdf:resource="&kb;annotation_ictm_content_model_Class10035"/>
+</kb:Ontology_Individual>
+<kb:Timestamp rdf:about="&kb;annotation_ictm_content_model_Class10030"
+	 kb:date="09/28/2011 17:21:36 PDT"
+	 kb:sequence="13"
+	 rdfs:label="09/28/2011 17:21:36 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_ictm_content_model_Class10031"
+	 kb:action="Composite_Change"
+	 kb:author="csnyulas">
+	<kb:context>Add to '03.b'. 'Chinese Modification' direct type : ICTMLinearizationView -- Apply to: http://who.int/ictm#ChineseModificationTM</kb:context>
+	<rdfs:label>Add to '03.b'. 'Chinese Modification' direct type : ICTMLinearizationView -- Apply to: http://who.int/ictm#ChineseModificationTM</rdfs:label>
+	<kb:subChanges rdf:resource="&kb;annotation_ictm_content_model_Class10028"/>
+	<kb:applyTo rdf:resource="&kb;annotation_ictm_content_model_Class10029"/>
+	<kb:timestamp rdf:resource="&kb;annotation_ictm_content_model_Class10032"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_ictm_content_model_Class10032"
+	 kb:date="09/28/2011 17:21:36 PDT"
+	 kb:sequence="14"
+	 rdfs:label="09/28/2011 17:21:36 PDT"/>
+<kb:Individual_Removed rdf:about="&kb;annotation_ictm_content_model_Class10033"
+	 kb:action="Individual_Removed"
+	 kb:author="csnyulas">
+	<kb:context>Instance Removed: ChineseModificationTM (instance of: icd:LinearizationView)</kb:context>
+	<rdfs:label>Instance Removed: ChineseModificationTM (instance of: icd:LinearizationView)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_ictm_content_model_Class10029"/>
+	<kb:timestamp rdf:resource="&kb;annotation_ictm_content_model_Class10034"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_ictm_content_model_Class10035"/>
+</kb:Individual_Removed>
+<kb:Timestamp rdf:about="&kb;annotation_ictm_content_model_Class10034"
+	 kb:date="09/28/2011 17:21:36 PDT"
+	 kb:sequence="15"
+	 rdfs:label="09/28/2011 17:21:36 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_ictm_content_model_Class10035"
+	 kb:action="Composite_Change"
+	 kb:author="csnyulas">
+	<kb:context>Remove from '03.b'. 'Chinese Modification' direct type : icd:LinearizationView -- Apply to: http://who.int/ictm#ChineseModificationTM</kb:context>
+	<rdfs:label>Remove from '03.b'. 'Chinese Modification' direct type : icd:LinearizationView -- Apply to: http://who.int/ictm#ChineseModificationTM</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_ictm_content_model_Class10029"/>
+	<kb:subChanges rdf:resource="&kb;annotation_ictm_content_model_Class10033"/>
+	<kb:timestamp rdf:resource="&kb;annotation_ictm_content_model_Class10036"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_ictm_content_model_Class10036"
+	 kb:date="09/28/2011 17:21:36 PDT"
+	 kb:sequence="16"
+	 rdfs:label="09/28/2011 17:21:36 PDT"/>
+<kb:Individual_Added rdf:about="&kb;annotation_ictm_content_model_Class10037"
+	 kb:action="Individual_Added"
+	 kb:author="csnyulas">
+	<kb:context>Instance Added: '03.c'. 'Japanese Modification' (instance of: ICTMLinearizationView)</kb:context>
+	<rdfs:label>Instance Added: '03.c'. 'Japanese Modification' (instance of: ICTMLinearizationView)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_ictm_content_model_Class10038"/>
+	<kb:timestamp rdf:resource="&kb;annotation_ictm_content_model_Class10039"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_ictm_content_model_Class10040"/>
+</kb:Individual_Added>
+<kb:Ontology_Individual rdf:about="&kb;annotation_ictm_content_model_Class10038"
+	 kb:currentName="http://who.int/ictm#JapaneseModificationTM"
+	 rdfs:label="http://who.int/ictm#JapaneseModificationTM">
+	<kb:changes rdf:resource="&kb;annotation_ictm_content_model_Class10037"/>
+	<kb:changes rdf:resource="&kb;annotation_ictm_content_model_Class10040"/>
+	<kb:changes rdf:resource="&kb;annotation_ictm_content_model_Class10042"/>
+	<kb:changes rdf:resource="&kb;annotation_ictm_content_model_Class10044"/>
+</kb:Ontology_Individual>
+<kb:Timestamp rdf:about="&kb;annotation_ictm_content_model_Class10039"
+	 kb:date="09/28/2011 17:21:36 PDT"
+	 kb:sequence="17"
+	 rdfs:label="09/28/2011 17:21:36 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_ictm_content_model_Class10040"
+	 kb:action="Composite_Change"
+	 kb:author="csnyulas">
+	<kb:context>Add to '03.c'. 'Japanese Modification' direct type : ICTMLinearizationView -- Apply to: http://who.int/ictm#JapaneseModificationTM</kb:context>
+	<rdfs:label>Add to '03.c'. 'Japanese Modification' direct type : ICTMLinearizationView -- Apply to: http://who.int/ictm#JapaneseModificationTM</rdfs:label>
+	<kb:subChanges rdf:resource="&kb;annotation_ictm_content_model_Class10037"/>
+	<kb:applyTo rdf:resource="&kb;annotation_ictm_content_model_Class10038"/>
+	<kb:timestamp rdf:resource="&kb;annotation_ictm_content_model_Class10041"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_ictm_content_model_Class10041"
+	 kb:date="09/28/2011 17:21:36 PDT"
+	 kb:sequence="18"
+	 rdfs:label="09/28/2011 17:21:36 PDT"/>
+<kb:Individual_Removed rdf:about="&kb;annotation_ictm_content_model_Class10042"
+	 kb:action="Individual_Removed"
+	 kb:author="csnyulas">
+	<kb:context>Instance Removed: JapaneseModificationTM (instance of: icd:LinearizationView)</kb:context>
+	<rdfs:label>Instance Removed: JapaneseModificationTM (instance of: icd:LinearizationView)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_ictm_content_model_Class10038"/>
+	<kb:timestamp rdf:resource="&kb;annotation_ictm_content_model_Class10043"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_ictm_content_model_Class10044"/>
+</kb:Individual_Removed>
+<kb:Timestamp rdf:about="&kb;annotation_ictm_content_model_Class10043"
+	 kb:date="09/28/2011 17:21:36 PDT"
+	 kb:sequence="19"
+	 rdfs:label="09/28/2011 17:21:36 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_ictm_content_model_Class10044"
+	 kb:action="Composite_Change"
+	 kb:author="csnyulas">
+	<kb:context>Remove from '03.c'. 'Japanese Modification' direct type : icd:LinearizationView -- Apply to: http://who.int/ictm#JapaneseModificationTM</kb:context>
+	<rdfs:label>Remove from '03.c'. 'Japanese Modification' direct type : icd:LinearizationView -- Apply to: http://who.int/ictm#JapaneseModificationTM</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_ictm_content_model_Class10038"/>
+	<kb:subChanges rdf:resource="&kb;annotation_ictm_content_model_Class10042"/>
+	<kb:timestamp rdf:resource="&kb;annotation_ictm_content_model_Class10045"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_ictm_content_model_Class10045"
+	 kb:date="09/28/2011 17:21:36 PDT"
+	 kb:sequence="20"
+	 rdfs:label="09/28/2011 17:21:36 PDT"/>
+<kb:Individual_Added rdf:about="&kb;annotation_ictm_content_model_Class10046"
+	 kb:action="Individual_Added"
+	 kb:author="csnyulas">
+	<kb:context>Instance Added: '03.d'. 'Korean Modification' (instance of: ICTMLinearizationView)</kb:context>
+	<rdfs:label>Instance Added: '03.d'. 'Korean Modification' (instance of: ICTMLinearizationView)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_ictm_content_model_Class10047"/>
+	<kb:timestamp rdf:resource="&kb;annotation_ictm_content_model_Class10048"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_ictm_content_model_Class10049"/>
+</kb:Individual_Added>
+<kb:Ontology_Individual rdf:about="&kb;annotation_ictm_content_model_Class10047"
+	 kb:currentName="http://who.int/ictm#KoreanModificationTM"
+	 rdfs:label="http://who.int/ictm#KoreanModificationTM">
+	<kb:changes rdf:resource="&kb;annotation_ictm_content_model_Class10046"/>
+	<kb:changes rdf:resource="&kb;annotation_ictm_content_model_Class10049"/>
+	<kb:changes rdf:resource="&kb;annotation_ictm_content_model_Class10051"/>
+	<kb:changes rdf:resource="&kb;annotation_ictm_content_model_Class10053"/>
+</kb:Ontology_Individual>
+<kb:Timestamp rdf:about="&kb;annotation_ictm_content_model_Class10048"
+	 kb:date="09/28/2011 17:21:36 PDT"
+	 kb:sequence="21"
+	 rdfs:label="09/28/2011 17:21:36 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_ictm_content_model_Class10049"
+	 kb:action="Composite_Change"
+	 kb:author="csnyulas">
+	<kb:context>Add to '03.d'. 'Korean Modification' direct type : ICTMLinearizationView -- Apply to: http://who.int/ictm#KoreanModificationTM</kb:context>
+	<rdfs:label>Add to '03.d'. 'Korean Modification' direct type : ICTMLinearizationView -- Apply to: http://who.int/ictm#KoreanModificationTM</rdfs:label>
+	<kb:subChanges rdf:resource="&kb;annotation_ictm_content_model_Class10046"/>
+	<kb:applyTo rdf:resource="&kb;annotation_ictm_content_model_Class10047"/>
+	<kb:timestamp rdf:resource="&kb;annotation_ictm_content_model_Class10050"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_ictm_content_model_Class10050"
+	 kb:date="09/28/2011 17:21:36 PDT"
+	 kb:sequence="22"
+	 rdfs:label="09/28/2011 17:21:36 PDT"/>
+<kb:Individual_Removed rdf:about="&kb;annotation_ictm_content_model_Class10051"
+	 kb:action="Individual_Removed"
+	 kb:author="csnyulas">
+	<kb:context>Instance Removed: KoreanModificationTM (instance of: icd:LinearizationView)</kb:context>
+	<rdfs:label>Instance Removed: KoreanModificationTM (instance of: icd:LinearizationView)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_ictm_content_model_Class10047"/>
+	<kb:timestamp rdf:resource="&kb;annotation_ictm_content_model_Class10052"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_ictm_content_model_Class10053"/>
+</kb:Individual_Removed>
+<kb:Timestamp rdf:about="&kb;annotation_ictm_content_model_Class10052"
+	 kb:date="09/28/2011 17:21:36 PDT"
+	 kb:sequence="23"
+	 rdfs:label="09/28/2011 17:21:36 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_ictm_content_model_Class10053"
+	 kb:action="Composite_Change"
+	 kb:author="csnyulas">
+	<kb:context>Remove from '03.d'. 'Korean Modification' direct type : icd:LinearizationView -- Apply to: http://who.int/ictm#KoreanModificationTM</kb:context>
+	<rdfs:label>Remove from '03.d'. 'Korean Modification' direct type : icd:LinearizationView -- Apply to: http://who.int/ictm#KoreanModificationTM</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_ictm_content_model_Class10047"/>
+	<kb:subChanges rdf:resource="&kb;annotation_ictm_content_model_Class10051"/>
+	<kb:timestamp rdf:resource="&kb;annotation_ictm_content_model_Class10054"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_ictm_content_model_Class10054"
+	 kb:date="09/28/2011 17:21:36 PDT"
+	 kb:sequence="24"
+	 rdfs:label="09/28/2011 17:21:36 PDT"/>
+<kb:Individual_Added rdf:about="&kb;annotation_ictm_content_model_Class10055"
+	 kb:action="Individual_Added"
+	 kb:author="csnyulas">
+	<kb:context>Instance Added: '03.e'. 'Australian Modification' (instance of: ICTMLinearizationView)</kb:context>
+	<rdfs:label>Instance Added: '03.e'. 'Australian Modification' (instance of: ICTMLinearizationView)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_ictm_content_model_Class10056"/>
+	<kb:timestamp rdf:resource="&kb;annotation_ictm_content_model_Class10057"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_ictm_content_model_Class10058"/>
+</kb:Individual_Added>
+<kb:Ontology_Individual rdf:about="&kb;annotation_ictm_content_model_Class10056"
+	 kb:currentName="http://who.int/ictm#AustralianModificationTM"
+	 rdfs:label="http://who.int/ictm#AustralianModificationTM">
+	<kb:changes rdf:resource="&kb;annotation_ictm_content_model_Class10055"/>
+	<kb:changes rdf:resource="&kb;annotation_ictm_content_model_Class10058"/>
+	<kb:changes rdf:resource="&kb;annotation_ictm_content_model_Class10060"/>
+	<kb:changes rdf:resource="&kb;annotation_ictm_content_model_Class10062"/>
+</kb:Ontology_Individual>
+<kb:Timestamp rdf:about="&kb;annotation_ictm_content_model_Class10057"
+	 kb:date="09/28/2011 17:21:36 PDT"
+	 kb:sequence="25"
+	 rdfs:label="09/28/2011 17:21:36 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_ictm_content_model_Class10058"
+	 kb:action="Composite_Change"
+	 kb:author="csnyulas">
+	<kb:context>Add to '03.e'. 'Australian Modification' direct type : ICTMLinearizationView -- Apply to: http://who.int/ictm#AustralianModificationTM</kb:context>
+	<rdfs:label>Add to '03.e'. 'Australian Modification' direct type : ICTMLinearizationView -- Apply to: http://who.int/ictm#AustralianModificationTM</rdfs:label>
+	<kb:subChanges rdf:resource="&kb;annotation_ictm_content_model_Class10055"/>
+	<kb:applyTo rdf:resource="&kb;annotation_ictm_content_model_Class10056"/>
+	<kb:timestamp rdf:resource="&kb;annotation_ictm_content_model_Class10059"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_ictm_content_model_Class10059"
+	 kb:date="09/28/2011 17:21:36 PDT"
+	 kb:sequence="26"
+	 rdfs:label="09/28/2011 17:21:36 PDT"/>
+<kb:Individual_Removed rdf:about="&kb;annotation_ictm_content_model_Class10060"
+	 kb:action="Individual_Removed"
+	 kb:author="csnyulas">
+	<kb:context>Instance Removed: AustralianModificationTM (instance of: icd:LinearizationView)</kb:context>
+	<rdfs:label>Instance Removed: AustralianModificationTM (instance of: icd:LinearizationView)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_ictm_content_model_Class10056"/>
+	<kb:timestamp rdf:resource="&kb;annotation_ictm_content_model_Class10061"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_ictm_content_model_Class10062"/>
+</kb:Individual_Removed>
+<kb:Timestamp rdf:about="&kb;annotation_ictm_content_model_Class10061"
+	 kb:date="09/28/2011 17:21:36 PDT"
+	 kb:sequence="27"
+	 rdfs:label="09/28/2011 17:21:36 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_ictm_content_model_Class10062"
+	 kb:action="Composite_Change"
+	 kb:author="csnyulas">
+	<kb:context>Remove from '03.e'. 'Australian Modification' direct type : icd:LinearizationView -- Apply to: http://who.int/ictm#AustralianModificationTM</kb:context>
+	<rdfs:label>Remove from '03.e'. 'Australian Modification' direct type : icd:LinearizationView -- Apply to: http://who.int/ictm#AustralianModificationTM</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_ictm_content_model_Class10056"/>
+	<kb:subChanges rdf:resource="&kb;annotation_ictm_content_model_Class10060"/>
+	<kb:timestamp rdf:resource="&kb;annotation_ictm_content_model_Class10063"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_ictm_content_model_Class10063"
+	 kb:date="09/28/2011 17:21:36 PDT"
+	 kb:sequence="28"
+	 rdfs:label="09/28/2011 17:21:36 PDT"/>
+<kb:Individual_Added rdf:about="&kb;annotation_ictm_content_model_Class10064"
+	 kb:action="Individual_Added"
+	 kb:author="csnyulas">
+	<kb:context>Instance Added: '03.f'. 'U.S.A. Modification' (instance of: ICTMLinearizationView)</kb:context>
+	<rdfs:label>Instance Added: '03.f'. 'U.S.A. Modification' (instance of: ICTMLinearizationView)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_ictm_content_model_Class10065"/>
+	<kb:timestamp rdf:resource="&kb;annotation_ictm_content_model_Class10066"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_ictm_content_model_Class10067"/>
+</kb:Individual_Added>
+<kb:Ontology_Individual rdf:about="&kb;annotation_ictm_content_model_Class10065"
+	 kb:currentName="http://who.int/ictm#USModificationTM"
+	 rdfs:label="http://who.int/ictm#USModificationTM">
+	<kb:changes rdf:resource="&kb;annotation_ictm_content_model_Class10064"/>
+	<kb:changes rdf:resource="&kb;annotation_ictm_content_model_Class10067"/>
+	<kb:changes rdf:resource="&kb;annotation_ictm_content_model_Class10069"/>
+	<kb:changes rdf:resource="&kb;annotation_ictm_content_model_Class10071"/>
+</kb:Ontology_Individual>
+<kb:Timestamp rdf:about="&kb;annotation_ictm_content_model_Class10066"
+	 kb:date="09/28/2011 17:21:36 PDT"
+	 kb:sequence="29"
+	 rdfs:label="09/28/2011 17:21:36 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_ictm_content_model_Class10067"
+	 kb:action="Composite_Change"
+	 kb:author="csnyulas">
+	<kb:context>Add to '03.f'. 'U.S.A. Modification' direct type : ICTMLinearizationView -- Apply to: http://who.int/ictm#USModificationTM</kb:context>
+	<rdfs:label>Add to '03.f'. 'U.S.A. Modification' direct type : ICTMLinearizationView -- Apply to: http://who.int/ictm#USModificationTM</rdfs:label>
+	<kb:subChanges rdf:resource="&kb;annotation_ictm_content_model_Class10064"/>
+	<kb:applyTo rdf:resource="&kb;annotation_ictm_content_model_Class10065"/>
+	<kb:timestamp rdf:resource="&kb;annotation_ictm_content_model_Class10068"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_ictm_content_model_Class10068"
+	 kb:date="09/28/2011 17:21:36 PDT"
+	 kb:sequence="30"
+	 rdfs:label="09/28/2011 17:21:36 PDT"/>
+<kb:Individual_Removed rdf:about="&kb;annotation_ictm_content_model_Class10069"
+	 kb:action="Individual_Removed"
+	 kb:author="csnyulas">
+	<kb:context>Instance Removed: USModificationTM (instance of: icd:LinearizationView)</kb:context>
+	<rdfs:label>Instance Removed: USModificationTM (instance of: icd:LinearizationView)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_ictm_content_model_Class10065"/>
+	<kb:timestamp rdf:resource="&kb;annotation_ictm_content_model_Class10070"/>
+	<kb:partOfCompositeChange rdf:resource="&kb;annotation_ictm_content_model_Class10071"/>
+</kb:Individual_Removed>
+<kb:Timestamp rdf:about="&kb;annotation_ictm_content_model_Class10070"
+	 kb:date="09/28/2011 17:21:36 PDT"
+	 kb:sequence="31"
+	 rdfs:label="09/28/2011 17:21:36 PDT"/>
+<kb:Composite_Change rdf:about="&kb;annotation_ictm_content_model_Class10071"
+	 kb:action="Composite_Change"
+	 kb:author="csnyulas">
+	<kb:context>Remove from '03.f'. 'U.S.A. Modification' direct type : icd:LinearizationView -- Apply to: http://who.int/ictm#USModificationTM</kb:context>
+	<rdfs:label>Remove from '03.f'. 'U.S.A. Modification' direct type : icd:LinearizationView -- Apply to: http://who.int/ictm#USModificationTM</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_ictm_content_model_Class10065"/>
+	<kb:subChanges rdf:resource="&kb;annotation_ictm_content_model_Class10069"/>
+	<kb:timestamp rdf:resource="&kb;annotation_ictm_content_model_Class10072"/>
+</kb:Composite_Change>
+<kb:Timestamp rdf:about="&kb;annotation_ictm_content_model_Class10072"
+	 kb:date="09/28/2011 17:21:36 PDT"
+	 kb:sequence="32"
+	 rdfs:label="09/28/2011 17:21:36 PDT"/>
 <kb:Composite_Change rdf:about="&kb;annotation_ictm_content_model_Class11"
 	 kb:action="Composite_Change"
 	 kb:author=""

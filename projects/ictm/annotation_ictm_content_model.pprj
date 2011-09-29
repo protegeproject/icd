@@ -1,7 +1,7 @@
-; Tue Feb 01 00:51:39 PST 2011
+; Wed Sep 28 17:23:06 PDT 2011
 ; 
-;+ (version "3.4.5")
-;+ (build "Build 593")
+;+ (version "3.4.7")
+;+ (build "Build 620")
 
 ([annotation_ICD_ProjectKB_Class10112] of  Widget
 
@@ -6883,6 +6883,9 @@
 	(is_hidden FALSE)
 	(widget_class_name "edu.stanford.smi.protege.widget.InstancesTab"))
 
+([KB_498214_Class4] of  Map
+)
+
 ([KB_690954_Instance_0] of  String
 
 	(name "renaming_namespaces"))
@@ -6891,9 +6894,6 @@
 
 	(name "namespaces")
 	(string_value "rdfs http://www.w3.org/2000/01/rdf-schema# rdf http://www.w3.org/1999/02/22-rdf-syntax-ns# "))
-
-([KB_714283_Class4] of  Map
-)
 
 ([KB_806078_Instance_0] of  Property_List
 
@@ -7336,8 +7336,8 @@
 		[changes_ProjectKB_Class30260]
 		[STANDARD_CLASS_FORM_WIDGET]
 		[changes_ProjectKB_Instance_40056]
-		[changes_ProjectKB_Class30496]
 		[changes_ProjectKB_Class10086]
+		[changes_ProjectKB_Class30496]
 		[INSTANCE_ANNOTATION_FORM_WIDGET]
 		[changes_ProjectKB_Instance_51020]
 		[changes_ProjectKB_Instance_81267]
