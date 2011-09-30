@@ -1,4 +1,4 @@
-; Thu Sep 29 17:06:25 PDT 2011
+; Thu Sep 29 17:06:20 PDT 2011
 ; 
 ;+ (version "3.4.7")
 ;+ (build "Build 620")
@@ -6,11 +6,11 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[icd_content_model_ProjectKB_Class10047]
-		[icd_content_model_ProjectKB_Class10048]
-		[icd_content_model_ProjectKB_Class10049]
-		[icd_content_model_ProjectKB_Class10050]
-		[icd_content_model_ProjectKB_Class10051]))
+		[icd_content_model_ProjectKB_Class10039]
+		[icd_content_model_ProjectKB_Class10040]
+		[icd_content_model_ProjectKB_Class10041]
+		[icd_content_model_ProjectKB_Class10042]
+		[icd_content_model_ProjectKB_Class10043]))
 
 ([CLSES_TAB] of  Widget
 
@@ -45,46 +45,46 @@
 ([icd_content_model_ProjectKB_Class10] of  Property_List
 )
 
-([icd_content_model_ProjectKB_Class10047] of  String
+([icd_content_model_ProjectKB_Class10039] of  String
 
 	(name ":INSTANCE-ANNOTATION")
 	(string_value "%3AANNOTATION-TEXT"))
 
-([icd_content_model_ProjectKB_Class10048] of  String
+([icd_content_model_ProjectKB_Class10040] of  String
 
 	(name "http://www.w3.org/2002/07/owl#Class")
 	(string_value "%3ANAME"))
 
-([icd_content_model_ProjectKB_Class10049] of  String
+([icd_content_model_ProjectKB_Class10041] of  String
 
 	(name ":PAL-CONSTRAINT")
 	(string_value "%3APAL-NAME"))
 
-([icd_content_model_ProjectKB_Class10050] of  String
+([icd_content_model_ProjectKB_Class10042] of  String
 
 	(name ":META-CLASS")
 	(string_value "%3ANAME"))
 
-([icd_content_model_ProjectKB_Class10051] of  String
+([icd_content_model_ProjectKB_Class10043] of  String
 
 	(name "http://www.w3.org/2002/07/owl#Thing")
 	(string_value "%3ANAME"))
 
-([icd_content_model_ProjectKB_Class10052] of  Map_Entry
+([icd_content_model_ProjectKB_Class10044] of  Map_Entry
 
 	(key "add_name_on_instance_form")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([icd_content_model_ProjectKB_Class10053] of  Map_Entry
+([icd_content_model_ProjectKB_Class10045] of  Map_Entry
 
 	(key "change_tracking_active")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([icd_content_model_ProjectKB_Class10054] of  Map_Entry
+([icd_content_model_ProjectKB_Class10046] of  Map_Entry
 
 	(key "suppress_instance_counting")
 	(key_class "java.lang.String")
@@ -1067,9 +1067,9 @@
 ([KB_325529_Class0] of  Map
 
 	(entries
-		[icd_content_model_ProjectKB_Class10052]
-		[icd_content_model_ProjectKB_Class10053]
-		[icd_content_model_ProjectKB_Class10054]))
+		[icd_content_model_ProjectKB_Class10044]
+		[icd_content_model_ProjectKB_Class10045]
+		[icd_content_model_ProjectKB_Class10046]))
 
 ([KB_325529_Class4] of  String
 
