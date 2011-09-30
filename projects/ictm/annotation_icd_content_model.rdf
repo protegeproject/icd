@@ -1835,6 +1835,8 @@
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class10266"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class10268"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class10270"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20000"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20002"/>
 </kb:Ontology_Individual>
 <kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class10249"
 	 kb:date="09/28/2011 17:03:23 PDT"
@@ -2006,6 +2008,8 @@
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class10291"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class10293"/>
 	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class10295"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20004"/>
+	<kb:changes rdf:resource="&kb;annotation_icd_content_model_Class20006"/>
 </kb:Ontology_Individual>
 <kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class10274"
 	 kb:date="09/28/2011 17:04:15 PDT"
@@ -16175,6 +16179,54 @@
 	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class21"/>
 	<kb:partOfCompositeChange rdf:resource="&kb;annotation_icd_content_model_Class24"/>
 </kb:Composite_Change>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class20000"
+	 kb:action="Property Value Changed"
+	 kb:author="csnyulas">
+	<kb:context>Property: rdfs:label for instance: Primary_Care_High_RS set to: (Old values:Primary Care - High Resource Settings)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: Primary_Care_High_RS set to: (Old values:Primary Care - High Resource Settings)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class10248"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20001"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20001"
+	 kb:date="09/29/2011 22:34:14 PDT"
+	 kb:sequence="0"
+	 rdfs:label="09/29/2011 22:34:14 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class20002"
+	 kb:action="Property Value Changed"
+	 kb:author="csnyulas">
+	<kb:context>Property: rdfs:label for instance: Primary_Care_High_RS set to: Primary Care - High Res. Set.(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: Primary_Care_High_RS set to: Primary Care - High Res. Set.(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class10248"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20003"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20003"
+	 kb:date="09/29/2011 22:34:14 PDT"
+	 kb:sequence="1"
+	 rdfs:label="09/29/2011 22:34:14 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class20004"
+	 kb:action="Property Value Changed"
+	 kb:author="csnyulas">
+	<kb:context>Property: rdfs:label for instance: Primary_Care_Low_RS set to: (Old values:Primary Care - Low Resource Settings)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: Primary_Care_Low_RS set to: (Old values:Primary Care - Low Resource Settings)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class10273"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20005"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20005"
+	 kb:date="09/29/2011 22:34:23 PDT"
+	 kb:sequence="2"
+	 rdfs:label="09/29/2011 22:34:23 PDT"/>
+<kb:Property_Value rdf:about="&kb;annotation_icd_content_model_Class20006"
+	 kb:action="Property Value Changed"
+	 kb:author="csnyulas">
+	<kb:context>Property: rdfs:label for instance: Primary_Care_Low_RS set to: Primary Care - Low Res. Set.(Old values:)</kb:context>
+	<rdfs:label>Property: rdfs:label for instance: Primary_Care_Low_RS set to: Primary Care - Low Res. Set.(Old values:)</rdfs:label>
+	<kb:applyTo rdf:resource="&kb;annotation_icd_content_model_Class10273"/>
+	<kb:timestamp rdf:resource="&kb;annotation_icd_content_model_Class20007"/>
+</kb:Property_Value>
+<kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class20007"
+	 kb:date="09/29/2011 22:34:23 PDT"
+	 kb:sequence="3"
+	 rdfs:label="09/29/2011 22:34:23 PDT"/>
 <kb:Timestamp rdf:about="&kb;annotation_icd_content_model_Class21"
 	 kb:date="09/19/2011 16:32:50 PDT"
 	 kb:sequence="9"
