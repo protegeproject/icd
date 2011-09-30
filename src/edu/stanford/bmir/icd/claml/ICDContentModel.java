@@ -839,11 +839,10 @@ public class ICDContentModel {
          for (RDFResource linView : getLinearizationViewsFromParents(cls, linProp)) {
              RDFResource linSpec = linSpecificationClass.createInstance(IDGenerator.getNextUniqueId());
              linSpec.setPropertyValue(getLinearizationViewProperty(), linView);
+             //set default grouping to FALSE
+             linSpec.setPropertyValue(getIsGroupingProperty(), Boolean.FALSE);
 
              cls.addPropertyValue(linProp, linSpec);
-
-             //set default grouping to FALSE
-             cls.setPropertyValue(getIsGroupingProperty(), Boolean.FALSE);
 
              /* These only apply to the ICD-11 linearizations, but it is easier to make them for all. It won't have any effect on the historic linearization specifications */
              /* set the default for new categories: morbidity - included; mortality - not included */
