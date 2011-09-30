@@ -127,6 +127,8 @@ public class ICDContentModel {
     private RDFProperty assignedSecondaryTagProperty;
     private RDFProperty displayStatusProperty;
 
+    private RDFProperty isObsoleteProperty;
+
     /*
      * Instances
      */
@@ -709,6 +711,12 @@ public class ICDContentModel {
     	return displayStatusProperty;
     }
 
+    public RDFProperty getIsObsoleteProperty() {
+        if (isObsoleteProperty == null) {
+            isObsoleteProperty = owlModel.getRDFProperty(ICDContentModelConstants.IS_OBSOLETE_PROP);
+        }
+        return isObsoleteProperty;
+    }
 
     /*
      * Getters for instances
@@ -860,10 +868,10 @@ public class ICDContentModel {
 
      private Collection<RDFResource> getLinearizationViewsFromCls(RDFSNamedClass parentCls, RDFProperty linProp) {
          Collection<RDFResource> linViews = new ArrayList<RDFResource>();
-         Collection<RDFResource> linearizationSpecs = getLinearizationSpecifications(parentCls);
+         Collection<RDFResource> linearizationSpecs = getLinearizationSpecificationsForProp(parentCls, linProp);
 
          for (RDFResource linearizationSpec : linearizationSpecs) {
-             RDFResource linearizationView = (RDFResource) linearizationSpec.getPropertyValue(linProp);
+             RDFResource linearizationView = (RDFResource) linearizationSpec.getPropertyValue(getLinearizationViewProperty());
              if (linearizationView != null) {
                  linViews.add(linearizationView);
              }
@@ -872,6 +880,9 @@ public class ICDContentModel {
          return linViews;
      }
 
+     private Collection<RDFResource> getLinearizationSpecificationsForProp(RDFSNamedClass parentCls, RDFProperty linProp) {
+         return parentCls.getPropertyValues(linProp);
+     }
 
     /**
      * It gets or creates and ICDClass. If it creates, it will not add the metaclasses.
