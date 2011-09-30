@@ -113,7 +113,7 @@ public class AddTabulationListLinearizations {
 
         owlModel.setGenerateEventsEnabled(false);
         //--------------------
-        System.out.println("Preparring mortality tabulation lists");
+        System.out.println("Preparing mortality tabulation lists");
         RDFSNamedClass tabListMtCls = icdContentModel.getICDCategory(CLASS_TABULATION_LIST_FOR_MORTALITY);
 
         if (tabListMtCls != null) {
@@ -125,7 +125,7 @@ public class AddTabulationListLinearizations {
         System.out.println("Time: " + (System.currentTimeMillis() - t0) /1000 + " sec");
 
         //--------------------
-        System.out.println("Preparring morbidity tabulation list");
+        System.out.println("Preparing morbidity tabulation list");
         RDFSNamedClass tabListMbCls = icdContentModel.getICDCategory(CLASS_TABULATION_LIST_FOR_MORBIDITY);
 
         if (tabListMbCls != null) {
@@ -137,7 +137,7 @@ public class AddTabulationListLinearizations {
         System.out.println("Time: " + (System.currentTimeMillis() - t0) /1000 + " sec");
 
         //--------------------
-        System.out.println("Preparring verbal autopsy tabulation list");
+        System.out.println("Preparing verbal autopsy tabulation list");
         RDFSNamedClass tabListVACls = icdContentModel.getICDCategory(CLASS_TABULATION_LIST_VERBAL_AUTOPSY);
 
         if (tabListVACls != null) {

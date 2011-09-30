@@ -176,10 +176,14 @@ public class AddMissingLinearizations {
 	        System.out.println("Retrieving all categories...");
 	        Collection<RDFSNamedClass> subclses = icdCatCls.getSubclasses(true);
 	        System.out.println("Done! (All categories have been retrieved in : " + (System.currentTimeMillis() - t0) /1000 + " secs)");
-	        int debugCntr = 0;
+	        int n = subclses.size();
+	        int i = 0;
 	        for (RDFSNamedClass subcls :subclses) {
-	        	//if (debugCntr++ <= 0) continue;	//activate for DEBUG mode
-	        	//if (debugCntr++ > 500) break;	//activate for DEBUG mode
+				if (++i % 500 == 0) {
+					System.out.println("" + (i) + "/" + n + " (" + i*100/n + "%)");
+				}
+	        	//if (i <= 0) continue;	//activate for DEBUG mode
+	        	//if (i > 500) break;	//activate for DEBUG mode
 	        	
 	            if (subcls instanceof RDFSNamedClass) {
 	                fixLinearization(subcls);
