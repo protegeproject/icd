@@ -1133,6 +1133,14 @@ public class ICDContentModel {
     public Collection<RDFResource> getLinearizationSpecifications(RDFSNamedClass icdClass) {
         return icdClass.getPropertyValues(getLinearizationProperty());
     }
+    
+    public Collection<RDFResource> getLinearizationICD10Specifications(RDFSNamedClass icdClass) {
+    	return icdClass.getPropertyValues(getLinearizationICD10Property());
+    }
+    
+    public Collection<RDFResource> getLinearizationICD10TabulationSpecifications(RDFSNamedClass icdClass) {
+    	return icdClass.getPropertyValues(getLinearizationICD10TabulationProperty());
+    }
 
     /*
      * TAG management methods
