@@ -1,0 +1,113 @@
+Summary: 
+
+Started @ Jul 15, 2011 9:18:10 PM
+Started removing sec. TAGs: ??? after 9:40:41 PM
+Starting writing to ChAO 
+	from: file:/C:/Users/csnyulas/workspace/ICD/scripts/import_TAGs_and_status/resources/projects/icd/annotation_ICD_db.pprj 
+	on Fri Jul 15 22:38:55 PDT 2011
+===== End import from Excel at Fri Jul 15 23:00:29 PDT 2011 =====
+
+VM args: -Xmx2048M
+Total Duration:   1h 42'19"
+Duration removing sec. TAGs: ??? less then ~1h
+Duration for writing in ChAO: 21'34"
+
+4635 lines logging "Removing secondary TAG"
+56   lines logging "Category could not be retrieved"
+2    lines logging "slow SQL query"
+
+
+Invalid TAG names:
+http://who.int/icd#Z46.6 has Prim.TAG: GRN
+http://who.int/icd#M85.4 has Prim.TAG: RDT
+
+-----------------------
+HBP ???
+id                      	PT	ST
+
+http://who.int/icd#C25.9	NPM	HBP
+http://who.int/icd#C25.8	NPM	HBP
+http://who.int/icd#C25.7	NPM	HBP
+http://who.int/icd#C25.4	NPM	HBP
+http://who.int/icd#C25.3	NPM	HBP
+http://who.int/icd#C25.2	NPM	HBP
+http://who.int/icd#C25.1	NPM	HBP
+http://who.int/icd#C25.0	NPM	HBP
+http://who.int/icd#C25	NPM	HBP
+http://who.int/icd#C24.9	NPM	HBP
+http://who.int/icd#C24.8	NPM	HBP
+http://who.int/icd#C24.1	NPM	HBP
+http://who.int/icd#C24.0	NPM	HBP
+http://who.int/icd#C24	NPM	HBP
+http://who.int/icd#C23	NPM	HBP
+http://who.int/icd#C22.9	NPM	HBP
+http://who.int/icd#C22.7	NPM	HBP
+http://who.int/icd#C22.4	NPM	HBP
+http://who.int/icd#C22.3	NPM	HBP
+http://who.int/icd#C22.1	NPM	HBP
+http://who.int/icd#C22.0	NPM	HBP
+http://who.int/icd#C22	NPM	HBP
+
+
+----------------
+Removing 4635 secondary TAGs
+
+----------------
+SEVERE: Category could not be retrieved for id: http://who.int/icd#O00-O08 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#O43.2 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#O98.7 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#Z22.6 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#I72.5 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#I98.2 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#I98.3 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#I84 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#I84.0 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#I84.1 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#I84.2 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#I84.3 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#I84.4 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#I84.5 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#I84.6 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#I84.7 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#I84.8 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#I84.9 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#I85 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#I85.0 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#I85.9 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#E10-E14 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#E10.0 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#E10.7 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#E11.1 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#E11.7 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#E12 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#E12.0 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#E12.1 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#E12.2 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#E12.3 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#E12.4 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#E12.5 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#E12.6 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#E12.7 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#E12.8 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#E12.9 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#E13.7 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#E14.7 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#K20-K31 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#K55-K63 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#J21.1 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#J45.0 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#J45.1 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#J45.8 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#M06 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#M06.0 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#M06.1 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#M06.2 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#M06.3 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#M06.4 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#M06.8 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#M06.9 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#M08.3 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#H36.0 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+SEVERE: Category could not be retrieved for id: http://who.int/icd#H36.8 -- ImportTAGsAndStatus.removeRedundantSecondaryTAGs()
+
+
