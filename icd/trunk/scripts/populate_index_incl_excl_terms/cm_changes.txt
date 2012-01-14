@@ -36,3 +36,4 @@ Changes for the WHO req. related to grouping of categories in linearizations, di
 - create datatype property "isGrouping" with domain: LinearizationSpecification, range: boolean, functional
 
 -----
+
