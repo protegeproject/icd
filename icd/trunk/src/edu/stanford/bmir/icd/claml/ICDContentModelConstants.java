@@ -74,6 +74,7 @@ public class ICDContentModelConstants {
     public final static String BASE_INDEX_PROP = NS + "baseIndex";
     public final static String BASE_INCLUSION_PROP = NS + "baseInclusion";
     public final static String INDEX_BASE_INCLUSION_PROP = NS + "indexBaseInclusion";
+    public final static String SUBCLASS_BASE_INCLUSION_PROP = NS + "subclassBaseInclusion";
     public final static String BASE_EXCLUSION_PROP = NS + "baseExclusion";
     public final static String SORTING_LABEL_PROP = NS + "sortingLabel";
 
