@@ -1,0 +1,49 @@
+from out2.txt:
+- line 22528:
+"stricture of a neovesico-urethral anastomosis (after radical cystectomy and orthotopic bladder replacement)"	http://who.int/icd#14982_b047675b_e7d6_403d_8ca9_f59ab5570ff4	http://who.int/icd#InclusionTerm_2639	0	1	0
+
+
+
+same index terms in following pairs M14.5x - M14.8x (such as M14.58 - M14.88)
+"skull", "trunk", etc. appears as an index term in many many concepts. This is not good!
+
+
+Takayasu arteritis:
+624: "Takayasu arteritis"	http://who.int/icd#M31.4	http://who.int/ind#SynonymTerm_1246	1	0	0
+629: "Takayasu arteritis"	http://who.int/icd#M31.4	http://who.int/icd#SynonymTerm_2899	1	0	0
+
+Hypersensitivity angiitis:
+641: "Hypersensitivity angiitis"	http://who.int/icd#2079_2985fd4a_87e8_4e76_ac83_2a5b74c14300	http://who.int/icd#SynonymTerm_3957	1	0	0
+675: "Hypersensitivity angiitis"	http://who.int/icd#2024_2985fd4a_87e8_4e76_ac83_2a5b74c14300	http://who.int/icd#SynonymTerm_4004	1	0	0
+
+
+
+Positive culture findings:
+10303: "Positive culture findings"	http://who.int/icd#R82.7	http://who.int/icd#InclusionTerm_39232	0	1	0
+10419: "Positive culture findings"	http://who.int/icd#R87.5	http://who.int/icd#InclusionTerm_39338	0	1	0
+10425: "Positive culture findings"	http://who.int/icd#R89.5	http://who.int/icd#InclusionTerm_39355	0	1	0
+10433: "Positive culture findings"	http://who.int/icd#R86.5	http://who.int/icd#InclusionTerm_39313	0	1	0
+10438: "Positive culture findings"	http://who.int/icd#R85.5	http://who.int/icd#InclusionTerm_39292	0	1	0
+10445: "Positive culture findings"	http://who.int/icd#R84.5	http://who.int/icd#InclusionTerm_39274	0	1	0
+10449: "Positive culture findings"	http://who.int/icd#R83.5	http://who.int/icd#InclusionTerm_39253	0	1	0
+
+
+Abnormal Papanicolaou smear:
+10421: "Abnormal Papanicolaou smear"	http://who.int/icd#R87.6	http://who.int/icd#InclusionTerm_39340	0	1	0
+10426: "Abnormal Papanicolaou smear"	http://who.int/icd#R89.6	http://who.int/icd#InclusionTerm_39357	0	1	0
+10432: "Abnormal Papanicolaou smear"	http://who.int/icd#R86.6	http://who.int/icd#InclusionTerm_39315	0	1	0
+10437: "Abnormal Papanicolaou smear"	http://who.int/icd#R85.6	http://who.int/icd#InclusionTerm_39294	0	1	0
+10446: "Abnormal Papanicolaou smear"	http://who.int/icd#R84.6	http://who.int/icd#InclusionTerm_39276	0	1	0
+10447: "Abnormal Papanicolaou smear"	http://who.int/icd#R83.6	http://who.int/icd#InclusionTerm_39255	0	1	0
+
+Abnormal chromosomal findings:
+10420: "Abnormal chromosomal findings"	http://who.int/icd#R87.8	http://who.int/icd#InclusionTerm_39343	0	1	0
+10427: "Abnormal chromosomal findings"	http://who.int/icd#R89.8	http://who.int/icd#InclusionTerm_39360	0	1	0
+10431: "Abnormal chromosomal findings"	http://who.int/icd#R86.8	http://who.int/icd#InclusionTerm_39318	0	1	0
+10436: "Abnormal chromosomal findings"	http://who.int/icd#R85.8	http://who.int/icd#InclusionTerm_39297	0	1	0
+10444: "Abnormal chromosomal findings"	http://who.int/icd#R84.8	http://who.int/icd#InclusionTerm_39279	0	1	0
+10448: "Abnormal chromosomal findings"	http://who.int/icd#R83.8	http://who.int/icd#InclusionTerm_39258	0	1	0
+
+Nocturia:
+10462: "Nocturia"	http://who.int/icd#R35	http://who.int/icd#InclusionTerm_38526	0	1	0
+10467: "Nocturia"	http://who.int/icd#15807_b047675b_e7d6_403d_8ca9_f59ab5570ff4	http://who.int/icd#InclusionTerm_2846	0	1	0
