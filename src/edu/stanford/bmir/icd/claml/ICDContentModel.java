@@ -88,6 +88,7 @@ public class ICDContentModel {
     private RDFProperty baseIndexProperty;
     private RDFProperty baseInclusionProperty;
     private RDFProperty indexBaseInclusionProperty;
+    private RDFProperty subclassBaseInclusionProperty;
     private RDFProperty baseExclusionProperty;
     private RDFProperty sortingLabelProperty;
 
@@ -490,6 +491,13 @@ public class ICDContentModel {
     	return indexBaseInclusionProperty;
     }
 
+    public RDFProperty getSubclassBaseInclusionProperty() {
+    	if (subclassBaseInclusionProperty == null) {
+    		subclassBaseInclusionProperty = owlModel.getRDFProperty(ICDContentModelConstants.SUBCLASS_BASE_INCLUSION_PROP);
+    	}
+    	return subclassBaseInclusionProperty;
+    }
+    
     public RDFProperty getBaseExclusionProperty() {
     	if (baseExclusionProperty == null) {
     		baseExclusionProperty = owlModel.getRDFProperty(ICDContentModelConstants.BASE_EXCLUSION_PROP);
@@ -931,7 +939,7 @@ public class ICDContentModel {
      * Terms
      */
 
-    protected RDFResource createTerm(RDFSNamedClass type) {
+    public RDFResource createTerm(RDFSNamedClass type) {
         RDFResource term = (RDFResource) owlModel.createInstance(IDGenerator.getNextUniqueId(), CollectionUtilities.createCollection(type));
         return term;
     }
@@ -991,18 +999,38 @@ public class ICDContentModel {
         addTermToClass(cls, getSynonymProperty(), term);
     }
 
+    public void addNarrowerTermToClass(RDFSNamedClass cls, RDFResource term) {
+    	addTermToClass(cls, getNarrowerProperty(), term);
+    }
+    
+    public void addBaseInclusionTermToClass(RDFSNamedClass cls, RDFResource term) {
+    	addTermToClass(cls, getIndexBaseInclusionProperty(), term);
+    }
+    
+    public void addSubclassInclusionTermToClass(RDFSNamedClass cls, RDFResource term) {
+    	addTermToClass(cls, getSubclassBaseInclusionProperty(), term);
+    }
+    
+    public void addBaseExclusionTermToClass(RDFSNamedClass cls, RDFResource term) {
+    	addTermToClass(cls, getBaseExclusionProperty(), term);
+    }
+    
+    @Deprecated
     public RDFResource createInclusionTerm() {
         return createTerm(getTermInclusionClass());
     }
 
+    @Deprecated
     public void addInclusionTermToClass(RDFSNamedClass cls, RDFResource term) {
         addTermToClass(cls, getInclusionProperty(), term);
     }
 
+    @Deprecated
     public RDFResource createExclusionTerm() {
         return createTerm(getTermExclusionClass());
     }
 
+    @Deprecated
     public void addExclusionTermToClass(RDFSNamedClass cls, RDFResource term) {
         addTermToClass(cls, getExclusionProperty(), term);
     }
@@ -1126,8 +1154,12 @@ public class ICDContentModel {
         return (RDFResource) icdClass.getPropertyValue(icdTermProp);
     }
 
+    public Collection<RDFResource> getTerms(RDFSNamedClass icdClass, RDFProperty icdTermProp, boolean includeSubproperties) {
+    	return (Collection<RDFResource>) icdClass.getPropertyValues(icdTermProp, includeSubproperties);
+    }
+    
     public Collection<RDFResource> getTerms(RDFSNamedClass icdClass, RDFProperty icdTermProp) {
-        return (Collection<RDFResource>) icdClass.getPropertyValue(icdTermProp);
+        return (Collection<RDFResource>) icdClass.getPropertyValues(icdTermProp);
     }
 
     public Collection<RDFResource> getLinearizationSpecifications(RDFSNamedClass icdClass) {
