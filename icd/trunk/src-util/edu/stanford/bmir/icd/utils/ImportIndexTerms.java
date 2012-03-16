@@ -236,6 +236,7 @@ public class ImportIndexTerms {
 
 	    ICDContentModel icdContentModel = new ICDContentModel(owlModel);
 
+	    int i = 0;
         for (CategoryInfo catInfo : categoryInfo) {
         	String id = catInfo.getId();
 			RDFSNamedClass category = icdContentModel.getICDCategory(id);
@@ -263,6 +264,10 @@ public class ImportIndexTerms {
 			
 			updateProperties(icdContentModel, category, term, catInfo);
 
+        	i++;
+        	if (i % 1000 == 0) {
+        		System.out.println(i);
+        	}
 		}
 
         logger.info("Done!");
@@ -284,6 +289,7 @@ public class ImportIndexTerms {
 			term = icdContentModel.createTerm(termClass);
 			catInfo.setChangeMsg("Added a new 'narrower' base index term.");
 		}
+		term.addPropertyValue(icdContentModel.getLabelProperty(), catInfo.getLabel());
 		
 		if (catInfo.isInclusion) {
 			termClass = icdContentModel.getTermBaseInclusionClass();
@@ -450,6 +456,9 @@ public class ImportIndexTerms {
 	    		
 	    		checkForICDCategoryPropertyValue(owlModel, exclusion);
 	    		i++;
+	        	if (i % 1000 == 0) {
+	        		System.out.println(i);
+	        	}
 	    	}
 	    }
         logger.info(i + "Exclusion terms have been migrated!");
@@ -490,6 +499,7 @@ public class ImportIndexTerms {
 		OntologyComponentFactory ocFactory = new OntologyComponentFactory(chaoKb);
 		PostProcessorManager changes_db = ChangesProject.getPostProcessorManager(owlModel);
 
+		int i = 0;
 		for (String label : categoryInfoMap.keySet()) {
 			String id = categoryInfoMap.get(label).getId();
 			Cls cls = owlModel.getCls(id);
@@ -500,6 +510,11 @@ public class ImportIndexTerms {
 			CategoryInfo catInfo = categoryInfoMap.get(id);
 			ServerChangesUtil.createChangeStd(changes_db, change, cls, "Automatic migration of synonyms, inclusions and exclusions to base index, base inclusions and base exclusions: " + catInfo.getChangeMsg());
 			change.setAuthor("WHO");
+			
+        	i++;
+        	if (i % 1000 == 0) {
+        		System.out.println(i);
+        	}
 		}
 
 	}
