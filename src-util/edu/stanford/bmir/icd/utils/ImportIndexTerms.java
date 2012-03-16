@@ -50,6 +50,7 @@ public class ImportIndexTerms {
 	private static File csvFileIndexTerms = new File(CSV_FILE_INDEX_TERMS);
 
 	private static final boolean TEST_RUN = false;
+	private static final boolean DEBUG = false;
 
 	private static final String SEPARATOR = "\t";
 	private static final String QUOTE = "\"";
@@ -97,12 +98,14 @@ public class ImportIndexTerms {
 		//print out content to be imported
 		List<CategoryInfo> catInfos = new ArrayList<CategoryInfo>(categoryInfoMap.values());
 		Collections.sort(catInfos);
-		for (CategoryInfo catInfo : catInfos) {
+		if (DEBUG) {
+		  for (CategoryInfo catInfo : catInfos) {
 //			if (! catInfo.getStatus().contains(CategoryInfo.ICD_NS)) {
 //				System.out.print(catInfo.getStatus() + ": ");
 				System.out.println(catInfo);
 //			}
 			//catIdSet.add(catInfo.getId());
+		  }
 		}
 		//checkForProblems(catInfos);
 
@@ -153,7 +156,7 @@ public class ImportIndexTerms {
         				processLine(line, res);
         			}
                 } catch (Exception e) {
-                    Log.getLogger().log(Level.WARNING, " Could not read line " + r + ":" + line, e);
+                    Log.getLogger().log(Level.WARNING, " Could not read line " + r + ": " + line, e);
                 }
             }
         }
@@ -169,7 +172,9 @@ public class ImportIndexTerms {
 
     private static void processLine(String line, Map<String, CategoryInfo> res) {
         try {
-            Log.getLogger().info(line);
+        	if (DEBUG) {
+        		Log.getLogger().info(line);
+        	}
             final String[] split = line.split(SEPARATOR);
             removeQuotes(split);
             String label = split[COLUMN_TEXT];
@@ -254,7 +259,7 @@ public class ImportIndexTerms {
 			else {
 				term = owlModel.getOWLIndividual(idTerm);
 				if (term == null) {
-					Log.getLogger().log(Level.WARNING, "Could not find old index term " + idTerm + " for entry:" + catInfo + " (a new term will be created)");
+					Log.getLogger().log(Level.WARNING, "Could not find old index term " + idTerm + " for entry: " + catInfo + " (a new term will be created)");
 					term = createTermIndividual(icdContentModel, catInfo);
 				}
 				else {
@@ -311,7 +316,7 @@ public class ImportIndexTerms {
 			termClass = icdContentModel.getTermSynonymClass();
 			if ( ! oldTypes.contains(termClass)) {
 				term.addRDFType(termClass);
-				catInfo.setChangeMsg("Changed the type of term" + term + " to a 'synonym' base index term.");
+				catInfo.setChangeMsg("Changed the type of term " + term + " to a 'synonym' base index term.");
 			}
 			else {
 				//we don't need to log this, because this could be valid type from before-migration
@@ -322,7 +327,7 @@ public class ImportIndexTerms {
 			termClass = icdContentModel.getTermNarrowerClass();
 			if ( ! oldTypes.contains(termClass)) {
 				term.addRDFType(termClass);
-				catInfo.setChangeMsg("Changed the type of term" + term + " to a 'narrower' base index term.");
+				catInfo.setChangeMsg("Changed the type of term " + term + " to a 'narrower' base index term.");
 			}
 			else {
 	            Log.getLogger().log(Level.WARNING, "Term " + term + " is already of type " + termClass);
@@ -430,7 +435,7 @@ public class ImportIndexTerms {
     	RDFSNamedClass clsBaseExclusion = icdContentModel.getTermBaseExclusionClass();
     	
 	    Collection<RDFSNamedClass> icdCategories = icdContentModel.getICDCategories();
-	    logger.info("" + icdCategories.size() + " categories have been loaded");
+	    logger.info(icdCategories.size() + " categories have been loaded");
 	    
 	    int i = 0;
 	    for (RDFSNamedClass category : icdCategories) {
@@ -452,7 +457,7 @@ public class ImportIndexTerms {
 	    		CategoryInfo catInfo = addNewCategoryInfoToMap(categoryInfoMap, label);
 	    		catInfo.setId(category.getName());
 	    		catInfo.setTermId(exclusion.getName());
-	    		catInfo.setChangeMsg("Changed the type of term" + exclusion + " to base exclusion term.");
+	    		catInfo.setChangeMsg("Changed the type of term " + exclusion + " to base exclusion term.");
 	    		
 	    		checkForICDCategoryPropertyValue(owlModel, exclusion);
 	    		i++;
@@ -461,7 +466,7 @@ public class ImportIndexTerms {
 	        	}
 	    	}
 	    }
-        logger.info(i + "Exclusion terms have been migrated!");
+        logger.info(i + " Exclusion terms have been migrated!");
 
         logger.info("Done!");
 	}
@@ -501,15 +506,17 @@ public class ImportIndexTerms {
 
 		int i = 0;
 		for (String label : categoryInfoMap.keySet()) {
-			String id = categoryInfoMap.get(label).getId();
+			CategoryInfo catInfo = categoryInfoMap.get(label);
+			String id = catInfo.getId();
 			Cls cls = owlModel.getCls(id);
 			if (cls == null) {
 				Log.getLogger().warning("Writing to ChAO: Could not find class " + id);
 			}
-			Change change = changeFactory.createComposite_Change(null);
-			CategoryInfo catInfo = categoryInfoMap.get(id);
-			ServerChangesUtil.createChangeStd(changes_db, change, cls, "Automatic migration of synonyms, inclusions and exclusions to base index, base inclusions and base exclusions: " + catInfo.getChangeMsg());
-			change.setAuthor("WHO");
+			else {
+				Change change = changeFactory.createComposite_Change(null);
+				ServerChangesUtil.createChangeStd(changes_db, change, cls, "Automatic migration of synonyms, inclusions and exclusions to base index, base inclusions and base exclusions: " + catInfo.getChangeMsg());
+				change.setAuthor("WHO");
+			}
 			
         	i++;
         	if (i % 1000 == 0) {
@@ -571,7 +578,7 @@ public class ImportIndexTerms {
 		}
 
 		public String getChangeMsg() {
-			return changeMsg;
+			return changeMsg == null ? "" : changeMsg;
 		}
 		public void setChangeMsg(String changeMsg) {
 			this.changeMsg = changeMsg;
@@ -582,9 +589,9 @@ public class ImportIndexTerms {
 
 
 		public int compareTo(CategoryInfo other) {
-			int res = compare(this.isSynonym, other.isSynonym);
+			int res = - compare(this.isSynonym, other.isSynonym);
 			if (res == 0) {
-				res = compare(this.isInclusion, other.isInclusion);
+				res = - compare(this.isInclusion, other.isInclusion);
 				if (res == 0) {
 					res = compare(this.termId, other.termId);
 					if (res == 0) {
