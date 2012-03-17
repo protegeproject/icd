@@ -49,6 +49,7 @@ public class ImportTAGsAndStatus {
 	private static File xlFileTAGsAndStatus = new File(EXCEL_FILE_TAGS_AND_STATUS);
 
 	private static final boolean TEST_RUN = false;
+	private static final boolean OVERWRITE_STATUS = false;
 	private static Set<String> catIdSet = new HashSet<String>();
 	private static Map<String, RDFResource> valueId2IndMap = new HashMap<String, RDFResource>();
 
@@ -186,9 +187,17 @@ public class ImportTAGsAndStatus {
 			Object oldStatus = category.getPropertyValue(propStatus);
 			RDFResource newStatus = getResource(owlModel, catInfo.getStatus());
 			if (oldStatus != null && (! oldStatus.equals(newStatus))) {
-				logger.warning("Overwriting status of " + id + ". Current value: " + oldStatus + ". New value: " + newStatus);
+				if (OVERWRITE_STATUS) {
+					logger.warning("Overwriting status of " + id + ". Current value: " + oldStatus + ". New value: " + newStatus);
+					category.setPropertyValue(propStatus, newStatus);
+				}
+				else {
+					logger.warning("Status of " + id + " is already set to: " + oldStatus + ". New value: " + newStatus + " will be ignored.");
+				}
 			}
-			category.setPropertyValue(propStatus, newStatus);
+			else {
+				category.setPropertyValue(propStatus, newStatus);
+			}
 
 			RDFResource oldPrimaryTag = icdContentModel.getAssignedPrimaryTag(category);
             RDFResource newPrimaryTag = getResource(owlModel, catInfo.getPrimaryTAG());
@@ -297,9 +306,11 @@ public class ImportTAGsAndStatus {
 			if (cls == null) {
 				Log.getLogger().warning("Writing to ChAO: Could not find class " + id);
 			}
-			Change change = changeFactory.createComposite_Change(null);
-			ServerChangesUtil.createChangeStd(changes_db, change, cls, "Automatic initial import of assigned TAGs and status");
-			change.setAuthor("WHO");
+			else {
+				Change change = changeFactory.createComposite_Change(null);
+				ServerChangesUtil.createChangeStd(changes_db, change, cls, "Automatic initial import of assigned TAGs and status");
+				change.setAuthor("WHO");
+			}
 		}
 
 	}

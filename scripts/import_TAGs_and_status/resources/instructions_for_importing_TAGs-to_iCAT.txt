@@ -16,7 +16,7 @@
 5. Update excel_import.properties
 	protege.home=/usr/local/protege
 	pprj.file=/usr/local/icat-files/projects/icd/icd_umbrella.pprj
-	xls.tags.file=resources/xls/TAGs_110717.xls
+	xls.tags.file=resources/xls/TAGs_120312.xls
 	
 6. ant run
 	
