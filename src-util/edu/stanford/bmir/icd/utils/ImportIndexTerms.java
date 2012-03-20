@@ -287,12 +287,12 @@ public class ImportIndexTerms {
 		if (catInfo.isSynonym) {
 			termClass = icdContentModel.getTermSynonymClass();
 			term = icdContentModel.createTerm(termClass);
-			catInfo.setChangeMsg("Added a new 'synonym' base index term.");
+			catInfo.setChangeMsg("Added a new 'synonym' base index term: '" + catInfo.getLabel() + "'.");
 		}
 		else {
 			termClass = icdContentModel.getTermNarrowerClass();
 			term = icdContentModel.createTerm(termClass);
-			catInfo.setChangeMsg("Added a new 'narrower' base index term.");
+			catInfo.setChangeMsg("Added a new 'narrower' base index term: '" + catInfo.getLabel() + "'.");
 		}
 		term.addPropertyValue(icdContentModel.getLabelProperty(), catInfo.getLabel());
 		
@@ -316,7 +316,7 @@ public class ImportIndexTerms {
 			termClass = icdContentModel.getTermSynonymClass();
 			if ( ! oldTypes.contains(termClass)) {
 				term.addRDFType(termClass);
-				catInfo.setChangeMsg("Changed the type of term " + term + " to a 'synonym' base index term.");
+				catInfo.setChangeMsg("Changed the type of term '" + catInfo.getLabel() + "' to a 'synonym' base index term.");
 			}
 			else {
 				//we don't need to log this, because this could be valid type from before-migration
@@ -327,10 +327,10 @@ public class ImportIndexTerms {
 			termClass = icdContentModel.getTermNarrowerClass();
 			if ( ! oldTypes.contains(termClass)) {
 				term.addRDFType(termClass);
-				catInfo.setChangeMsg("Changed the type of term " + term + " to a 'narrower' base index term.");
+				catInfo.setChangeMsg("Changed the type of term '" + catInfo.getLabel() + "' to a 'narrower' base index term.");
 			}
 			else {
-	            Log.getLogger().log(Level.WARNING, "Term " + term + " is already of type " + termClass);
+	            Log.getLogger().log(Level.WARNING, "Term " + term + " ('" + catInfo.getLabel() + "') is already of type " + termClass);
 			}
 			newTypes.add(termClass);
 		}
@@ -342,7 +342,7 @@ public class ImportIndexTerms {
 				catInfo.appendChangeMsg(" Also made this term a base inclusion term.");
 			}
 			else {
-	            Log.getLogger().log(Level.WARNING, "Term " + term + " is already of type " + termClass);
+	            Log.getLogger().log(Level.WARNING, "Term " + term + " ('" + catInfo.getLabel() + "') is already of type " + termClass);
 			}
 			newTypes.add(termClass);
 		}
@@ -457,7 +457,7 @@ public class ImportIndexTerms {
 	    		CategoryInfo catInfo = addNewCategoryInfoToMap(categoryInfoMap, label);
 	    		catInfo.setId(category.getName());
 	    		catInfo.setTermId(exclusion.getName());
-	    		catInfo.setChangeMsg("Changed the type of term " + exclusion + " to base exclusion term.");
+	    		catInfo.setChangeMsg("Changed the type of term '" + catInfo.getLabel() + "' to base exclusion term.");
 	    		
 	    		checkForICDCategoryPropertyValue(owlModel, exclusion);
 	    		i++;
@@ -504,17 +504,36 @@ public class ImportIndexTerms {
 		OntologyComponentFactory ocFactory = new OntologyComponentFactory(chaoKb);
 		PostProcessorManager changes_db = ChangesProject.getPostProcessorManager(owlModel);
 
+		HashMap<String, String> categoryToChangeLog = new HashMap<String, String>();
+		
 		int i = 0;
 		for (String label : categoryInfoMap.keySet()) {
 			CategoryInfo catInfo = categoryInfoMap.get(label);
-			String id = catInfo.getId();
-			Cls cls = owlModel.getCls(id);
+			String catId = catInfo.getId();
+
+			String catLog = categoryToChangeLog.get(catId);
+			if (catLog == null) {
+				catLog = "Automatic migration of synonyms, inclusions and exclusions to base index, base inclusions and base exclusions: ";
+			}
+			catLog += "\n\t" + catInfo.getChangeMsg();
+			categoryToChangeLog.put(catId, catLog);
+			
+        	i++;
+        	if (i % 1000 == 0) {
+        		System.out.println(i);
+        	}
+		}
+		System.out.println(" The total of " + categoryInfoMap.size() + " term changes were consolidate into single change log entries on " + i + " categories ");
+		
+		i = 0;
+		for (String catId : categoryToChangeLog.keySet()) {
+			Cls cls = owlModel.getCls(catId);
 			if (cls == null) {
-				Log.getLogger().warning("Writing to ChAO: Could not find class " + id);
+				Log.getLogger().warning("Writing to ChAO: Could not find class " + catId);
 			}
 			else {
 				Change change = changeFactory.createComposite_Change(null);
-				ServerChangesUtil.createChangeStd(changes_db, change, cls, "Automatic migration of synonyms, inclusions and exclusions to base index, base inclusions and base exclusions: " + catInfo.getChangeMsg());
+				ServerChangesUtil.createChangeStd(changes_db, change, cls, categoryToChangeLog.get(catId));
 				change.setAuthor("WHO");
 			}
 			
