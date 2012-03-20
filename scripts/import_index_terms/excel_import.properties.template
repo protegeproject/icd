@@ -4,8 +4,8 @@ protege.home=.
 <!-- The fully specified filename of the ICD umbrella PPRJ file, e.g., home/ttania/projects/icd_umbrella.pprj -->
 pprj.file=resources/projects/icd/icd_umbrella.pprj
 
-<!-- The Excel file containing the associated TAGs and status information -->
+<!-- The CSV file containing the index term migration information -->
 csv.intexTerms.file=resources/xls/index_terms_20120306.csv
 
 <!-- Maximum Java heap size --> 
-heap.size.max=500m
+heap.size.max=2500m
