@@ -178,11 +178,12 @@ public class ImportIndexTerms {
             final String[] split = line.split(SEPARATOR);
             removeQuotes(split);
             String label = split[COLUMN_TEXT];
+            String id = split[COLUMN_ID];
             
-			CategoryInfo catInfo = addNewCategoryInfoToMap(res, label);
+			CategoryInfo catInfo = addNewCategoryInfoToMap(res, id, label);
 
-			catInfo.setLabel(split[COLUMN_TEXT]);
-			catInfo.setId(split[COLUMN_ID]);
+//			catInfo.setLabel(split[COLUMN_TEXT]);
+//			catInfo.setId(split[COLUMN_ID]);
 			catInfo.setTermId(split[COLUMN_TERM_ID]);
 			String isSyn = split[COLUMN_IS_SYNONYM];
 			catInfo.setIsSynonym(isSyn == null || isSyn.isEmpty() ? null : Integer.parseInt(isSyn) == 0 ? false : Integer.parseInt(isSyn) == 1 ? true : null);
@@ -198,10 +199,10 @@ public class ImportIndexTerms {
 
 
 	private static CategoryInfo addNewCategoryInfoToMap(Map<String, CategoryInfo> categoryInfoMap,
-			String label) {
+			String id, String label) {
 		CategoryInfo catInfo = categoryInfoMap.get(label);
 		if (catInfo == null) {
-			catInfo = new CategoryInfo(label);
+			catInfo = new CategoryInfo(id, label);
 			categoryInfoMap.put(label, catInfo);
 		}
 		else {
@@ -215,7 +216,7 @@ public class ImportIndexTerms {
 				alt_label = label + " (" + i + ")";
 			}
 			
-			catInfo = new CategoryInfo(label);
+			catInfo = new CategoryInfo(id, label);
 			categoryInfoMap.put(alt_label, catInfo);
 		}
 		return catInfo;
@@ -339,7 +340,12 @@ public class ImportIndexTerms {
 			termClass = icdContentModel.getTermBaseInclusionClass();
 			if ( ! oldTypes.contains(termClass)) {
 				term.addRDFType(termClass);
-				catInfo.appendChangeMsg(" Also made this term a base inclusion term.");
+				if (catInfo.getChangeMsg().isEmpty()) {
+					catInfo.setChangeMsg("Made the 'synonym' base index term '" + catInfo.getLabel() + "' also a base inclusion term.");
+				}
+				else {
+					catInfo.appendChangeMsg(" Also made this term a base inclusion term.");
+				}
 			}
 			else {
 	            Log.getLogger().log(Level.WARNING, "Term " + term + " ('" + catInfo.getLabel() + "') is already of type " + termClass);
@@ -454,8 +460,8 @@ public class ImportIndexTerms {
 	    		category.removePropertyValue(propExclusion, exclusion);
 	    		
 	    		String label = (String)exclusion.getPropertyValue(propLabel);
-	    		CategoryInfo catInfo = addNewCategoryInfoToMap(categoryInfoMap, label);
-	    		catInfo.setId(category.getName());
+	    		String id = category.getName();
+	    		CategoryInfo catInfo = addNewCategoryInfoToMap(categoryInfoMap, id, label);
 	    		catInfo.setTermId(exclusion.getName());
 	    		catInfo.setChangeMsg("Changed the type of term '" + catInfo.getLabel() + "' to base exclusion term.");
 	    		
@@ -509,21 +515,23 @@ public class ImportIndexTerms {
 		int i = 0;
 		for (String label : categoryInfoMap.keySet()) {
 			CategoryInfo catInfo = categoryInfoMap.get(label);
-			String catId = catInfo.getId();
 
-			String catLog = categoryToChangeLog.get(catId);
-			if (catLog == null) {
-				catLog = "Automatic migration of synonyms, inclusions and exclusions to base index, base inclusions and base exclusions: ";
+			if (! catInfo.getChangeMsg().isEmpty()) {
+				String catId = catInfo.getId();
+				String catLog = categoryToChangeLog.get(catId);
+				if (catLog == null) {
+					catLog = "Automatic migration of synonyms, inclusions and exclusions to base index, base inclusions and base exclusions for %catBrText%: ";
+				}
+				catLog += "\n\t" + catInfo.getChangeMsg();
+				categoryToChangeLog.put(catId, catLog);
 			}
-			catLog += "\n\t" + catInfo.getChangeMsg();
-			categoryToChangeLog.put(catId, catLog);
 			
         	i++;
         	if (i % 1000 == 0) {
         		System.out.println(i);
         	}
 		}
-		System.out.println(" The total of " + categoryInfoMap.size() + " term changes were consolidate into single change log entries on " + i + " categories ");
+		System.out.println(" The total of " + categoryInfoMap.size() + " term changes were consolidate into single change log entries on " + categoryToChangeLog.size() + " categories ");
 		
 		i = 0;
 		for (String catId : categoryToChangeLog.keySet()) {
@@ -533,7 +541,7 @@ public class ImportIndexTerms {
 			}
 			else {
 				Change change = changeFactory.createComposite_Change(null);
-				ServerChangesUtil.createChangeStd(changes_db, change, cls, categoryToChangeLog.get(catId));
+				ServerChangesUtil.createChangeStd(changes_db, change, cls, categoryToChangeLog.get(catId).replaceFirst("%catBrText%", cls.getBrowserText()));
 				change.setAuthor("WHO");
 			}
 			
@@ -560,8 +568,9 @@ public class ImportIndexTerms {
 		
 		private String changeMsg = "";
 
-		public CategoryInfo(String id) {
+		public CategoryInfo(String id, String label) {
 			this.id = id;
+			this.label = label;
 		}
 
 
@@ -603,7 +612,7 @@ public class ImportIndexTerms {
 			this.changeMsg = changeMsg;
 		}
 		public void appendChangeMsg(String changeMsg) {
-			this.changeMsg += changeMsg;
+			this.changeMsg = getChangeMsg() + changeMsg;
 		}
 
 
