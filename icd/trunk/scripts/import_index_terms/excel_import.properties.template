@@ -5,7 +5,7 @@ protege.home=.
 pprj.file=resources/projects/icd/icd_umbrella.pprj
 
 <!-- The CSV file containing the index term migration information -->
-csv.intexTerms.file=resources/xls/index_terms_20120306.csv
+csv.intexTerms.file=resources/xls/index_terms_20120321.csv
 
 <!-- Maximum Java heap size --> 
 heap.size.max=2500m
