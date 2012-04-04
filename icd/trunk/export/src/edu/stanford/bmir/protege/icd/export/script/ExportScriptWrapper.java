@@ -1,13 +1,5 @@
 package edu.stanford.bmir.protege.icd.export.script;
 
-import edu.stanford.bmir.protege.icd.export.FileUtils;
-import edu.stanford.smi.protege.exception.ProtegeException;
-import edu.stanford.smi.protege.model.Project;
-import edu.stanford.smi.protege.util.Log;
-import org.apache.bsf.BSFException;
-import org.apache.bsf.BSFManager;
-import org.apache.bsf.engines.jython.JythonEngine;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -17,6 +9,15 @@ import java.text.MessageFormat;
 import java.util.Arrays;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import org.apache.bsf.BSFException;
+import org.apache.bsf.BSFManager;
+import org.apache.bsf.engines.jython.JythonEngine;
+
+import edu.stanford.bmir.protege.icd.export.FileUtils;
+import edu.stanford.smi.protege.exception.ProtegeException;
+import edu.stanford.smi.protege.model.Project;
+import edu.stanford.smi.protege.util.Log;
 
 /**
  * Wraps the actual script that we use for ICD export.
@@ -46,8 +47,11 @@ public class ExportScriptWrapper {
                 throw new ProtegeException("Could not create directory " + parentFile);
             }
         }
-        BSFManager manager = new BSFManager();
+        BSFManager manager = null;
+        ClassLoader originalClassLoader = Thread.currentThread().getContextClassLoader();
         try {
+            Thread.currentThread().setContextClassLoader(getClass().getClassLoader());
+            manager = new BSFManager();
             manager.declareBean("kb", project.getKnowledgeBase(), project.getKnowledgeBase().getClass());
             final String langFromFilename = BSFManager.getLangFromFilename(scriptFileLocation);
             final String script = loadScript(scriptFileLocation);
@@ -65,7 +69,10 @@ public class ExportScriptWrapper {
             }
             throw new ProtegeException("Error when using script at " + scriptFileLocation + " to export nodes " + Arrays.asList(topNodes) + " for project " + project.getName(), e);
         } finally {
-            manager.terminate();
+            if (manager != null) {
+                manager.terminate();
+            }
+            Thread.currentThread().setContextClassLoader(originalClassLoader);
         }
     }
 
