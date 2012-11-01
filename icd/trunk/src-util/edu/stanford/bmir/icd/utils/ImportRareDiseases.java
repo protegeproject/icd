@@ -88,7 +88,7 @@ public class ImportRareDiseases {
 							} else {
 
 								try {
-									owlModel.beginTransaction("Automatic import of Rare Disease definition", cls.getName());
+									owlModel.beginTransaction("Automatic import of Rare Disease definition: " + icdDefinition, cls.getName());
 
 									RDFResource term = null;
 									boolean registerAsAlternative = false;
@@ -122,6 +122,7 @@ public class ImportRareDiseases {
 
 										if (IMPORT_MODE.equals(DEF)) {
 											if (registerAsAlternative) {
+												term.addPropertyValue(cm.getIdProperty(), orphCode);
 												cm.addPrefilledDefinitionTermToClass(cls, term);
 											}
 											else {
