@@ -4,15 +4,16 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.logging.Level;
 
 import edu.stanford.bmir.icd.claml.ICDContentModel;
 import edu.stanford.smi.protege.model.Project;
+import edu.stanford.smi.protege.server.RemoteProjectManager;
 import edu.stanford.smi.protege.util.Log;
 import edu.stanford.smi.protegex.owl.model.OWLModel;
 import edu.stanford.smi.protegex.owl.model.RDFResource;
 import edu.stanford.smi.protegex.owl.model.RDFSNamedClass;
+import edu.stanford.smi.protegex.server_changes.ChangesProject;
 
 public class ImportRareDiseases {
 	//file = "/work/protege/projects/icd/content_model/icd_int/icd_mysql/icd_umbrella.pprj"
@@ -26,17 +27,27 @@ public class ImportRareDiseases {
 	private static final String ORPHANET = "orpha";
 
 	public static void main(String[] args) {
-		if (args.length != 2) {
-			System.out.println("Needs 2 params: ICD pprj file and CSV file");
+		if (args.length != 5) {
+			System.out.println("Needs 5 params: ICD pprj file, CSV file, server, username, pass");
 			return;
 		}
 
-		String fileName = args[0];
+		String fileName = args[0]; //not needed
 		String csvFile = args[1];
+		String server = args[2];
+		String user = args[3];
+		String pass = args[4];
 
-		Project prj = Project.loadProjectFromFile(fileName , new ArrayList());
+		//Project prj = Project.loadProjectFromFile(fileName , new ArrayList());
+		Project prj = RemoteProjectManager.getInstance().getProject(server, user, pass, "ICD", true);
 
+		Log.getLogger().info("Connected to remote project.");
+		
 		OWLModel owlModel = (OWLModel) prj.getKnowledgeBase();
+		
+		//enable change tracking; won't do anything, if this is a client running it
+		ChangesProject.initialize(prj);
+		
 		ICDContentModel cm = new ICDContentModel(owlModel);
 
 		//TODO - cols should be split by "|"

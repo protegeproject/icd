@@ -63,6 +63,9 @@
 		      	<classpath refid = "project.classpath"/>	        	
 	 		<arg value="${pprj.file}"/>
 			<arg value="${xls.defs.file}"/>
+	       	<arg value="${server.hostname}"/>
+	       	<arg value="${server.username}"/>
+	       	<arg value="${server.pass}"/>
 	        </java>
 	 </target>
 	
