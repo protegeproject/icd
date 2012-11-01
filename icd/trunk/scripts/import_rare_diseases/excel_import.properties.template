@@ -1,0 +1,11 @@
+<!-- protege.home = the Protege 3.x installation directory, e.g., /home/user/Protege_3.4  -->
+protege.home=.
+
+<!-- The fully specified filename of the ICD umbrella PPRJ file, e.g., home/ttania/projects/icd_umbrella.pprj -->
+pprj.file=resources/projects/icd/icd_umbrella.pprj
+
+<!-- The CSV file containing the rare diseases definitions -->
+xls.defs.file=resources/xls/Import_RD_definitions.txt
+
+<!-- Maximum Java heap size --> 
+heap.size.max=500m
