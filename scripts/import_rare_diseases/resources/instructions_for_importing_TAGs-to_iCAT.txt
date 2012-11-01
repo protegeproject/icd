@@ -1,0 +1,22 @@
+1.	Stop tomcat6
+	Stop protege
+
+2.	Install Protege 3.4.7
+	relink /usr/local/protege
+	chown -R root:icats /usr/local/Protege_3.4.7
+	copy form earlier version (3.4.6 ?) of Protege 
+		driver.jar, run_protege_server.sh and protege.properties
+		to Protege 3.4.7
+
+3. Update ICD CM
+	(make sure it has DisplayStatus DS_Blue)
+		
+4. Set PROTEGE_HOME directory, if it is not set yet
+
+5. Update excel_import.properties
+	protege.home=/usr/local/protege
+	pprj.file=/usr/local/icat-files/projects/icd/icd_umbrella.pprj
+	xls.tags.file=resources/xls/TAGs_120312.xls
+	
+6. ant run
+	
