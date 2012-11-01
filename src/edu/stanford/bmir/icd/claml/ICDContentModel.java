@@ -62,6 +62,7 @@ public class ICDContentModel {
     private RDFSNamedClass termExclusionClass;
     private RDFSNamedClass icd10NotesClass;
     private RDFSNamedClass termDefinitionClass;
+    private RDFSNamedClass termExternalDefinitionClass;
     private RDFSNamedClass termReferenceClass;
     private RDFSNamedClass termSynonymClass;
     private RDFSNamedClass termIndexClass;
@@ -290,6 +291,13 @@ public class ICDContentModel {
         return termDefinitionClass;
     }
 
+    public RDFSNamedClass getTermExternalDefinitionClass() {
+    	if (termExternalDefinitionClass == null) {
+    		termExternalDefinitionClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.TERM_EXTERNAL_DEFINITION_CLASS);
+    	}
+    	return termExternalDefinitionClass;
+    }
+    
     public RDFSNamedClass getTermReferenceClass() {
         if (termReferenceClass == null) {
             termReferenceClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.TERM_REFERENCE_CLASS);
@@ -971,6 +979,10 @@ public class ICDContentModel {
         return createTerm(getTermDefinitionClass());
     }
 
+    public RDFResource createExternalDefinitionTerm() {
+    	return createTerm(getTermExternalDefinitionClass());
+    }
+    
     public RDFResource createReferenceTerm() {
         return createTerm(getTermReferenceClass());
     }
