@@ -88,7 +88,7 @@ public class ImportRareDiseases {
 							} else {
 
 								try {
-									owlModel.beginTransaction("Automatic import of Rare Disease definition: " + icdDefinition, cls.getName());
+									owlModel.beginTransaction("Automatic import on behalf of Rare Disease TAG. Adding definition : " + icdDefinition, cls.getName());
 
 									RDFResource term = null;
 									boolean registerAsAlternative = false;
