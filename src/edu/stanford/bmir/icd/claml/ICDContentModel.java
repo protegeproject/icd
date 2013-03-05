@@ -130,6 +130,7 @@ public class ICDContentModel {
     private RDFProperty displayStatusProperty;
 
     private RDFProperty isObsoleteProperty;
+    private RDFProperty publicIdProperty;
 
     /*
      * Instances
@@ -158,8 +159,7 @@ public class ICDContentModel {
 
     public RDFSNamedClass getClinicalDescriptionMetaClass() {
         if (clincalDescriptionMetaClass == null) {
-            clincalDescriptionMetaClass = owlModel
-                    .getRDFSNamedClass(ICDContentModelConstants.ICD_CLINICAL_DESC_METACLASS);
+            clincalDescriptionMetaClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.ICD_CLINICAL_DESC_METACLASS);
         }
         return clincalDescriptionMetaClass;
     }
@@ -297,7 +297,7 @@ public class ICDContentModel {
     	}
     	return termExternalDefinitionClass;
     }
-    
+
     public RDFSNamedClass getTermReferenceClass() {
         if (termReferenceClass == null) {
             termReferenceClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.TERM_REFERENCE_CLASS);
@@ -505,7 +505,7 @@ public class ICDContentModel {
     	}
     	return subclassBaseInclusionProperty;
     }
-    
+
     public RDFProperty getBaseExclusionProperty() {
     	if (baseExclusionProperty == null) {
     		baseExclusionProperty = owlModel.getRDFProperty(ICDContentModelConstants.BASE_EXCLUSION_PROP);
@@ -733,6 +733,14 @@ public class ICDContentModel {
         }
         return isObsoleteProperty;
     }
+
+    public RDFProperty getPublicIdProperty() {
+        if (publicIdProperty == null) {
+            publicIdProperty = owlModel.getRDFProperty(ICDContentModelConstants.PUBLIC_ID_PROP);
+        }
+        return publicIdProperty;
+    }
+
 
     /*
      * Getters for instances
@@ -982,7 +990,7 @@ public class ICDContentModel {
     public RDFResource createExternalDefinitionTerm() {
     	return createTerm(getTermExternalDefinitionClass());
     }
-    
+
     public RDFResource createReferenceTerm() {
         return createTerm(getTermReferenceClass());
     }
@@ -1014,19 +1022,19 @@ public class ICDContentModel {
     public void addNarrowerTermToClass(RDFSNamedClass cls, RDFResource term) {
     	addTermToClass(cls, getNarrowerProperty(), term);
     }
-    
+
     public void addBaseInclusionTermToClass(RDFSNamedClass cls, RDFResource term) {
     	addTermToClass(cls, getIndexBaseInclusionProperty(), term);
     }
-    
+
     public void addSubclassInclusionTermToClass(RDFSNamedClass cls, RDFResource term) {
     	addTermToClass(cls, getSubclassBaseInclusionProperty(), term);
     }
-    
+
     public void addBaseExclusionTermToClass(RDFSNamedClass cls, RDFResource term) {
     	addTermToClass(cls, getBaseExclusionProperty(), term);
     }
-    
+
     @Deprecated
     public RDFResource createInclusionTerm() {
         return createTerm(getTermInclusionClass());
@@ -1162,26 +1170,87 @@ public class ICDContentModel {
         return owlModel.getRDFSNamedClass(id);
     }
 
+    /**
+     * Returns the public ID of the class, where the argument it the iCAT ID.
+     * @param id - the iCAT ID
+     * @return - the public ID of the class; returns null, if the ICD class does not exist, or it has no assigned public ID
+     */
+    public String getPublicId(String id) {
+       return getPublicId(getICDCategory(id));
+    }
+
+    /**
+     * Returns the public ID of the ICD class.
+     * @param icdClass - the ICD class as an RDFSNamedClass (returned from other calls of the API
+     * @return - the public ID of the class; returns null, if the ICD class does not have a public ID
+     */
+    public String getPublicId(RDFSNamedClass icdClass) {
+        if (icdClass == null) {
+            return null;
+        }
+        return (String) icdClass.getPropertyValue(getPublicIdProperty());
+    }
+
+    /**
+     * Returns the ICD entity (ICD category, ICD term, ICD property, etc.) with the given public ID.
+     * @param publicId - the public ID of the entity
+     * @return -  the ICD entity as a RDFResource; returns null, if an entity with this public ID does not exist;
+     * throws a runtime exception if more than one ICD entities have the same public ID (should never happen).
+     */
+    @SuppressWarnings("unchecked")
+    public RDFResource getICDEntityByPublicId(String publicId) {
+        Collection<RDFResource> matches = owlModel.getMatchingResources(getPublicIdProperty(), publicId, 1);
+        if (matches == null) {
+            return null;
+        }
+        if (matches.size() > 1) { //should never happen
+            throw new RuntimeException("More than one ICD classes found with the public ID: " + publicId + ". Classes: " + matches);
+        }
+        return CollectionUtilities.getFirstItem(matches);
+    }
+
+    /**
+     * Returns the ICD category with the given public ID.
+     * @param publicId
+     * @return - the ICD category as a RDFSNamedClass; returns null, if an ICD category with this ID does not exist;
+     * throws a runtime exception, if two ICD entities have the same public ID (should never happen), or if the returned entity is not a ICD category.
+     */
+    public RDFSNamedClass getICDCategoryByPublicId(String publicId) {
+        RDFResource resource = getICDEntityByPublicId(publicId);
+        if (resource == null) {
+            return null;
+        }
+        if (resource instanceof RDFSNamedClass) {
+            return (RDFSNamedClass) resource;
+        }
+        throw new RuntimeException("The ICD entity with publicId: " + publicId + " is not a ICD category. Entity: " + resource);
+    }
+
     public RDFResource getTerm(RDFSNamedClass icdClass, RDFProperty icdTermProp) {
         return (RDFResource) icdClass.getPropertyValue(icdTermProp);
     }
 
+    @SuppressWarnings("unchecked")
     public Collection<RDFResource> getTerms(RDFSNamedClass icdClass, RDFProperty icdTermProp, boolean includeSubproperties) {
-    	return (Collection<RDFResource>) icdClass.getPropertyValues(icdTermProp, includeSubproperties);
-    }
-    
-    public Collection<RDFResource> getTerms(RDFSNamedClass icdClass, RDFProperty icdTermProp) {
-        return (Collection<RDFResource>) icdClass.getPropertyValues(icdTermProp);
+    	return icdClass.getPropertyValues(icdTermProp, includeSubproperties);
     }
 
+    @SuppressWarnings("unchecked")
+    public Collection<RDFResource> getTerms(RDFSNamedClass icdClass, RDFProperty icdTermProp) {
+        return icdClass.getPropertyValues(icdTermProp);
+    }
+
+    @SuppressWarnings("unchecked")
     public Collection<RDFResource> getLinearizationSpecifications(RDFSNamedClass icdClass) {
         return icdClass.getPropertyValues(getLinearizationProperty());
     }
-    
+
+    @SuppressWarnings("unchecked")
     public Collection<RDFResource> getLinearizationICD10Specifications(RDFSNamedClass icdClass) {
     	return icdClass.getPropertyValues(getLinearizationICD10Property());
     }
-    
+
+    @SuppressWarnings("unchecked")
     public Collection<RDFResource> getLinearizationICD10TabulationSpecifications(RDFSNamedClass icdClass) {
     	return icdClass.getPropertyValues(getLinearizationICD10TabulationProperty());
     }
@@ -1197,6 +1266,7 @@ public class ICDContentModel {
      * @param icdClass - the ICD class
      * @return a collection of RDFResources (instances of TAG)
      */
+    @SuppressWarnings("unchecked")
     public Collection<RDFResource> getAssignedTags(RDFSNamedClass icdClass) {
         return icdClass.getPropertyValues(getAssignedTagProperty());
     }
@@ -1217,6 +1287,7 @@ public class ICDContentModel {
      * @param icdClass - the ICD class
      * @return a collection of RDFResources (instances of TAG)
      */
+    @SuppressWarnings("unchecked")
     public Collection<RDFResource> getAssignedSecondaryTags(RDFSNamedClass icdClass) {
         return icdClass.getPropertyValues(getAssignedSecondaryTagProperty());
     }
