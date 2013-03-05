@@ -103,6 +103,7 @@ public class ICDContentModelConstants {
 
     public final static String URL_PROP = NS + "url";
     public final static String TERM_ID_PROP = NS + "termId";
+    public final static String PUBLIC_ID_PROP = NS+ "publicId";
 
     /* Linearizations */
     public final static String LINEARIZATION_PROP = NS + "linearization";
@@ -130,7 +131,6 @@ public class ICDContentModelConstants {
 	public final static String DISPLAY_STATUS_PROP = NS + "displayStatus";
 
 	public final static String IS_OBSOLETE_PROP = NS+ "isObsolete";
-
 
 
     /*
