@@ -56,7 +56,7 @@
 	        <java 
 			fork="true" 
 	        	dir="." 
-	            	classname="edu.stanford.bmir.icd.utils.ImportChapterXX_April2011"
+	            	classname="edu.stanford.bmir.icd.utils.publicId.AddPublicId"
                         maxmemory="${heap.size.max}">
 		      	<classpath refid = "project.classpath"/>	        	
 	 		<arg value="${pprj.file}"/>			
