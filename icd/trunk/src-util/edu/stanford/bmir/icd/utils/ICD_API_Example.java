@@ -7,6 +7,7 @@ import java.util.Map;
 
 import edu.stanford.bmir.icd.claml.ICDContentModel;
 import edu.stanford.smi.protege.model.Project;
+import edu.stanford.smi.protege.ui.ProjectManager;
 import edu.stanford.smi.protegex.owl.model.OWLModel;
 import edu.stanford.smi.protegex.owl.model.RDFResource;
 import edu.stanford.smi.protegex.owl.model.RDFSNamedClass;
@@ -17,7 +18,25 @@ public class ICD_API_Example {
     private static ICDContentModel icdContentModel;
 
     public static void main(String[] args) {
-        Project prj = Project.loadProjectFromFile("/work/protege/projects/icd/content_model/icd_int/icd_mysql/icd_umbrella.pprj", new ArrayList());
+        if (args.length != 1) {
+           System.out.println("Argument missing: pprj file name");
+            return;
+        }
+
+        Collection errors = new ArrayList();
+        Project prj = Project.loadProjectFromFile(args[0], errors);
+
+        if (errors != null) {
+            ProjectManager.getProjectManager().displayErrors("Errors", errors);
+        }
+
+        owlModel = (OWLModel) prj.getKnowledgeBase();
+
+        if (owlModel == null) {
+            System.out.println("Failed to load the ICD project from this location: " + args[0]);
+            return;
+        }
+
         owlModel = (OWLModel) prj.getKnowledgeBase();
         icdContentModel = new ICDContentModel(owlModel);
 
@@ -27,6 +46,7 @@ public class ICD_API_Example {
         getClamlRef();
         getLinearizationInfo();
         getDisplayStatusAndTagResponsability();
+        getPublicId();
     }
 
     public static void getICDcategories() {
@@ -114,6 +134,20 @@ public class ICD_API_Example {
         for (RDFResource tag : involvedTAGs.keySet()) {
             System.out.println("TAG: " + tag.getBrowserText() + " ---  inherited from: " + involvedTAGs.get(tag));
         }
+    }
+
+    public static void getPublicId() {
+        String icatId = "http://who.int/icd#V";
+        RDFSNamedClass category = icdContentModel.getICDCategory(icatId);
+        String publicId1 = icdContentModel.getPublicId(category);
+        System.out.println("Public ID of " + category.getBrowserText() + " (iCAT id=" + category.getName() + ") --- retrieved by category reference --- is: " + publicId1);
+
+        String publicId2 = icdContentModel.getPublicId(icatId);
+        System.out.println("Public ID of iCAT category with id=" + icatId + " --- retrieved by category iCAT ID --- is: " + publicId2);
+
+       String publicId = "http://id.who.int/icd/entity/334423054";
+       RDFSNamedClass icdCategory = icdContentModel.getICDCategoryByPublicId(publicId); //This is a slow method
+       System.out.println("Get the ICD category with public ID: " + publicId +". Result: " + icdCategory.getBrowserText() + ", iCAT ID:" + icdCategory.getName());
     }
 
 
