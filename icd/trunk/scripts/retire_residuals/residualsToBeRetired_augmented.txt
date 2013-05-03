@@ -1,0 +1,866 @@
+Id	Internal ID	Title	IsInICD10	MigrateContentToParent	Parent	Internal ID Parent
+http://id.who.int/icd/entity/2001715483	http://who.int/icd#M02.8	Other reactive arthropathies	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1725055510	http://who.int/icd#M11.8	Other specified crystal arthropathies	IsInICD10	FALSE		
+http://id.who.int/icd/entity/174875394	http://who.int/icd#M60.8	Other myositis	IsInICD10	FALSE		
+http://id.who.int/icd/entity/803249838	http://who.int/icd#M84.8	Other disorders of continuity of bone	IsInICD10	FALSE		
+http://id.who.int/icd/entity/75746525	http://who.int/icd#M93.8	Other specified osteochondropathies	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1812006558	http://who.int/icd#M99.8	Other biomechanical lesions	IsInICD10	FALSE		
+http://id.who.int/icd/entity/587363612	http://who.int/icd#M95.8	Other specified acquired deformities of musculoskeletal system	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1493828789	http://who.int/icd#R29.8	Other and unspecified symptoms and signs involving the nervous and musculoskeletal systems	IsInICD10	FALSE		
+http://id.who.int/icd/entity/369719095	http://who.int/icd#R25.8	Other and unspecified abnormal involuntary movements	IsInICD10	FALSE		
+http://id.who.int/icd/entity/192290696	http://who.int/icd#R27.8	Other and unspecified lack of coordination	IsInICD10	FALSE		
+http://id.who.int/icd/entity/619240781	http://who.int/icd#G13.8	Systemic atrophy primarily affecting central nervous system in other diseases classified elsewhere	IsInICD10	FALSE		
+http://id.who.int/icd/entity/272312492	http://who.int/icd#R00.8	Other and unspecified abnormalities of heart beat	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1763992038	http://who.int/icd#R19.8	Other specified symptoms and signs involving the digestive system and abdomen	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1789752594	http://who.int/icd#R44.8	Other and unspecified symptoms and signs involving general sensations and perceptions	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1286302959	http://who.int/icd#R41.8	Other and unspecified symptoms and signs involving cognitive functions and awareness	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1797969198	http://who.int/icd#R47.8	Other and unspecified speech disturbances	IsInICD10	FALSE		
+http://id.who.int/icd/entity/93995250	http://who.int/icd#R68.8	Other specified general symptoms and signs	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1910522418	http://who.int/icd#R63.8	Other symptoms and signs concerning food and fluid intake	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1225795460	http://who.int/icd#R39.8	Other and unspecified symptoms and signs involving the urinary system	IsInICD10	FALSE		
+http://id.who.int/icd/entity/831049462	http://who.int/icd#R23.8	Other and unspecified skin changes	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1527033981	http://who.int/icd#R77.8	Other specified abnormalities of plasma proteins	IsInICD10	FALSE		
+http://id.who.int/icd/entity/342955356	http://who.int/icd#A42.8	Other forms of actinomycosis	IsInICD10	FALSE		
+http://id.who.int/icd/entity/481236415	http://who.int/icd#A28.8	"Other specified zoonotic bacterial diseases, not elsewhere classified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/753340147	http://who.int/icd#P37.8	Other specified congenital infectious and parasitic diseases	IsInICD10	FALSE		
+http://id.who.int/icd/entity/807388786	http://who.int/icd#P36.8	Other bacterial sepsis of newborn	IsInICD10	FALSE		
+http://id.who.int/icd/entity/936359785	http://who.int/icd#A83.8	Other mosquito-borne viral encephalitis	IsInICD10	FALSE		
+http://id.who.int/icd/entity/2138844051	http://who.int/icd#J12.8	Other viral pneumonia	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1141201619	http://who.int/icd#J15.8	Other bacterial pneumonia	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1166211821	http://who.int/icd#J16.8	Pneumonia due to other specified infectious organisms	IsInICD10	FALSE		
+http://id.who.int/icd/entity/402579922	http://who.int/icd#J18.8	"Other pneumonia, organism unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1436080606	http://who.int/icd#J06.8	Other acute upper respiratory infections of multiple sites	IsInICD10	FALSE		
+http://id.who.int/icd/entity/724725555	http://who.int/icd#J39.8	Other specified diseases of upper respiratory tract	IsInICD10	FALSE		
+http://id.who.int/icd/entity/480904550	http://who.int/icd#J93.8	Other pneumothorax	IsInICD10	FALSE		
+http://id.who.int/icd/entity/188678334	http://who.int/icd#Q96.8	Other variants of Turner syndrome	IsInICD10	FALSE		
+http://id.who.int/icd/entity/954972007	http://who.int/icd#I79.8	Other disorders of arteries and arterioles in diseases classified elsewhere	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1623149179	http://who.int/icd#G94.8	Other specified disorders of brain in diseases classified elsewhere	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1186550660	http://who.int/icd#G91.8	Other hydrocephalus	IsInICD10	FALSE		
+http://id.who.int/icd/entity/2109743814	http://who.int/icd#G96.8	Other specified disorders of central nervous system	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1514248965	http://who.int/icd#G90.8	Other disorders of autonomic nervous system	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1350161822	http://who.int/icd#K65.8	Other peritonitis	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1375630754	http://who.int/icd#K66.8	Other specified disorders of peritoneum	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1884132348	http://who.int/icd#K45.8	Other specified abdominal hernia without obstruction or gangrene	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1710164737	http://who.int/icd#K91.8	"Other postprocedural disorders of digestive system, not elsewhere classified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1684581183	http://who.int/icd#K92.8	Other specified diseases of digestive system	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1939349599	http://who.int/icd#A04.8	Other specified bacterial intestinal infections	IsInICD10	FALSE		
+http://id.who.int/icd/entity/2106580366	http://who.int/icd#O20.8	Other haemorrhage in early pregnancy	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1626387763	http://who.int/icd#O22.8	Other venous complications in pregnancy	IsInICD10	FALSE		
+http://id.who.int/icd/entity/344635377	http://who.int/icd#O29.8	Other complications of anaesthesia during pregnancy	IsInICD10	FALSE		
+http://id.who.int/icd/entity/141721458	http://who.int/icd#O28.8	Other abnormal findings on antenatal screening of mother	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1072305447	http://who.int/icd#O82.8	Other single delivery by caesarean section	IsInICD10	FALSE		
+http://id.who.int/icd/entity/588438952	http://who.int/icd#O83.8	Other specified assisted single delivery	IsInICD10	FALSE		
+http://id.who.int/icd/entity/580222360	http://who.int/icd#O80.8	Other single spontaneous delivery	IsInICD10	FALSE		
+http://id.who.int/icd/entity/546847223	http://who.int/icd#O62.8	Other abnormalities of forces of labour	IsInICD10	FALSE		
+http://id.who.int/icd/entity/555719113	http://who.int/icd#O61.8	Other failed induction of labour	IsInICD10	FALSE		
+http://id.who.int/icd/entity/201026438	http://who.int/icd#O75.8	Other specified complications of labour and delivery	IsInICD10	FALSE		
+http://id.who.int/icd/entity/822459128	http://who.int/icd#O71.8	Other specified obstetric trauma	IsInICD10	FALSE		
+http://id.who.int/icd/entity/386114311	http://who.int/icd#O74.8	Other complications of anaesthesia during labour and delivery	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1198718037	http://who.int/icd#O98.8	"Other maternal infectious and parasitic diseases complicating pregnancy, childbirth and the puerperium"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/19652523	http://who.int/icd#O41.8	Other specified disorders of amniotic fluid and membranes	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1003818709	http://who.int/icd#O45.8	Other premature separation of placenta	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1242843006	http://who.int/icd#O36.8	Maternal care for other specified fetal problems	IsInICD10	FALSE		
+http://id.who.int/icd/entity/978497259	http://who.int/icd#O46.8	Other antepartum haemorrhage	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1813143171	http://who.int/icd#O33.8	Maternal care for disproportion of other origin	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1902982716	http://who.int/icd#O31.8	Other complications specific to multiple gestation	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1894422020	http://who.int/icd#O32.8	Maternal care for other malpresentation of fetus	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1838546621	http://who.int/icd#O30.8	Other multiple gestation	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1267734501	http://who.int/icd#O89.8	Other complications of anaesthesia during the puerperium	IsInICD10	FALSE		
+http://id.who.int/icd/entity/85247065	http://who.int/icd#O86.8	Other specified puerperal infections	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1915050283	http://who.int/icd#Z34.8	Supervision of normal pregnancy other than first pregnancy	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1226127199	http://who.int/icd#Y82.8	"Other and unspecified medical devices associated with adverse incidents : miscellaneous devices, not elsewhere classified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1798059348	http://who.int/icd#Y40.8	Other systemic antibiotics	IsInICD10	FALSE		
+http://id.who.int/icd/entity/36265775	http://who.int/icd#Y49.8	"Other psychotropic drugs, not elsewhere classified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1294609581	http://who.int/icd#Y45.8	Other analgesics and antipyretics	IsInICD10	FALSE		
+http://id.who.int/icd/entity/2067142243	http://who.int/icd#Y50.8	Other central nervous system stimulants	IsInICD10	FALSE		
+http://id.who.int/icd/entity/2058466909	http://who.int/icd#Y53.8	Other agents primarily affecting the gastrointestinal system	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1078945571	http://who.int/icd#Y57.8	Other drugs and medicaments	IsInICD10	FALSE		
+http://id.who.int/icd/entity/305363998	http://who.int/icd#Y59.8	Other specified vaccines and biological substances	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1474345905	http://who.int/icd#Y61.8	During other surgical and medical care	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1259893554	http://who.int/icd#Y60.8	During other surgical and medical care	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1251988238	http://who.int/icd#Y63.8	Failure in dosage during other surgical and medical care	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1449597839	http://who.int/icd#Y62.8	During other surgical and medical care	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1830709967	http://who.int/icd#Y65.8	Other specified misadventures during surgical and medical care	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1910940240	http://who.int/icd#Y64.8	Contaminated medical or biological substance administered by other means	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1855229598	http://who.int/icd#Y84.8	Other medical procedures	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1441660896	http://who.int/icd#Y83.8	Other surgical procedures	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1371843820	http://who.int/icd#P55.8	Other haemolytic diseases of fetus and newborn	IsInICD10	FALSE		
+http://id.who.int/icd/entity/225999139	http://who.int/icd#B36.8	Other specified superficial dermatomycosis	IsInICD10	FALSE		
+http://id.who.int/icd/entity/2079812994	http://who.int/icd#L08.8	Other specified infection of skin	IsInICD10	FALSE		
+http://id.who.int/icd/entity/348149858	http://who.int/icd#L24.8	Irritant contact dermatitis due to other specified agent or mechanism	IsInICD10	FALSE		
+http://id.who.int/icd/entity/800663844	http://who.int/icd#L23.8	Allergic contact dermatitis due to other specified allergens not elsewhere classifiable	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1876010472	http://who.int/icd#L63.8	Other alopecia areata	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1213209639	http://who.int/icd#L65.8	Other specified nonscarring hair loss	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1238875161	http://who.int/icd#L66.8	Other specified scarring alopecia	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1656024682	http://who.int/icd#L71.8	Other rosacea	IsInICD10	FALSE		
+http://id.who.int/icd/entity/48768208	http://who.int/icd#L11.8	Other specified acantholytic disorder	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1152579479	http://who.int/icd#L74.8	Other specified disorder of eccrine sweating	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1212200093	http://who.int/icd#N73.8	Other specified female pelvic inflammatory diseases	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1933166045	http://who.int/icd#N74.8	Female pelvic inflammatory disorders in other diseases classified elsewhere	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1850125668	http://who.int/icd#N76.8	Other specified inflammation of vagina	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1816914189	http://who.int/icd#N94.8	Other specified conditions associated with female genital organs and menstrual cycle	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1890787726	http://who.int/icd#N95.8	Other specified menopausal and perimenopausal disorders	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1842104627	http://who.int/icd#N97.8	Female infertility of other origin	IsInICD10	FALSE		
+http://id.who.int/icd/entity/358043878	http://who.int/icd#N31.8	Other neuromuscular dysfunction of bladder	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1621815834	http://who.int/icd#N39.8	Other specified disorders of urinary system	IsInICD10	FALSE		
+http://id.who.int/icd/entity/309320523	http://who.int/icd#S45.8	Injury of other blood vessels at shoulder and upper arm level	IsInICD10	FALSE		
+http://id.who.int/icd/entity/244782028	http://who.int/icd#S44.8	Injury of other nerves at shoulder and upper arm level	IsInICD10	FALSE		
+http://id.who.int/icd/entity/334003061	http://who.int/icd#S46.8	Injury of other muscles and tendons at shoulder and upper arm level	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1567402185	http://who.int/icd#S49.8	Other specified injuries of shoulder and upper arm	IsInICD10	FALSE		
+http://id.who.int/icd/entity/879346358	http://who.int/icd#S40.8	Other superficial injuries of shoulder and upper arm	IsInICD10	FALSE		
+http://id.who.int/icd/entity/680593973	http://who.int/icd#S41.8	Open wound of other and unspecified parts of shoulder girdle	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1299614712	http://who.int/icd#S59.8	Other specified injuries of forearm	IsInICD10	FALSE		
+http://id.who.int/icd/entity/520786117	http://who.int/icd#S57.8	Crushing injury of other parts of forearm	IsInICD10	FALSE		
+http://id.who.int/icd/entity/66213958	http://who.int/icd#S56.8	Injury of other and unspecified muscles and tendons at forearm level	IsInICD10	FALSE		
+http://id.who.int/icd/entity/41285754	http://who.int/icd#S55.8	Injury of other blood vessels at forearm level	IsInICD10	FALSE		
+http://id.who.int/icd/entity/512569595	http://who.int/icd#S54.8	Injury of other nerves at forearm level	IsInICD10	FALSE		
+http://id.who.int/icd/entity/611574149	http://who.int/icd#S50.8	Other superficial injuries of forearm	IsInICD10	FALSE		
+http://id.who.int/icd/entity/948644100	http://who.int/icd#S51.8	Open wound of other parts of forearm	IsInICD10	FALSE		
+http://id.who.int/icd/entity/2109015240	http://who.int/icd#T13.8	"Other specified injuries of leg, level unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1187804550	http://who.int/icd#T14.8	Other injuries of unspecified body region	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1623878777	http://who.int/icd#T11.8	"Other specified injuries of arm, level unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/86896054	http://who.int/icd#T09.8	"Other specified injuries of trunk, level unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1221443731	http://who.int/icd#S21.8	Open wound of other parts of thorax	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1026581103	http://who.int/icd#S29.8	Other specified injuries of thorax	IsInICD10	FALSE		
+http://id.who.int/icd/entity/2102980267	http://who.int/icd#S69.8	Other specified injuries of wrist and hand	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1637885484	http://who.int/icd#S68.8	Traumatic amputation of other parts of wrist and hand	IsInICD10	FALSE		
+http://id.who.int/icd/entity/844864809	http://who.int/icd#S65.8	Injury of other blood vessels at wrist and hand level	IsInICD10	FALSE		
+http://id.who.int/icd/entity/782456234	http://who.int/icd#S64.8	Injury of other nerves at wrist and hand level	IsInICD10	FALSE		
+http://id.who.int/icd/entity/790951318	http://who.int/icd#S67.8	Crushing injury of other and unspecified parts of wrist and hand	IsInICD10	FALSE		
+http://id.who.int/icd/entity/870071575	http://who.int/icd#S66.8	Injury of other muscles and tendons at wrist and hand level	IsInICD10	FALSE		
+http://id.who.int/icd/entity/341673176	http://who.int/icd#S60.8	Other superficial injuries of wrist and hand	IsInICD10	FALSE		
+http://id.who.int/icd/entity/145050711	http://who.int/icd#S61.8	Open wound of other parts of wrist and hand	IsInICD10	FALSE		
+http://id.who.int/icd/entity/501861986	http://who.int/icd#T73.8	Other effects of deprivation	IsInICD10	FALSE		
+http://id.who.int/icd/entity/923614255	http://who.int/icd#T67.8	Other effects of heat and light	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1701914388	http://who.int/icd#T69.8	Other specified effects of reduced temperature	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1771293858	http://who.int/icd#T78.8	"Other adverse effects, not elsewhere classified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1679519041	http://who.int/icd#S10.8	Superficial injury of other parts of neck	IsInICD10	FALSE		
+http://id.who.int/icd/entity/2028185024	http://who.int/icd#S11.8	Open wound of other parts of neck	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1109226686	http://who.int/icd#S15.8	Injury of other blood vessels at neck level	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1600265217	http://who.int/icd#S17.8	Crushing injury of other parts of neck	IsInICD10	FALSE		
+http://id.who.int/icd/entity/220071740	http://who.int/icd#S19.8	Other specified injuries of neck	IsInICD10	FALSE		
+http://id.who.int/icd/entity/749605319	http://who.int/icd#S86.8	Injury of other muscles and tendons at lower leg level	IsInICD10	FALSE		
+http://id.who.int/icd/entity/810998088	http://who.int/icd#S87.8	Crushing injury of other and unspecified parts of lower leg	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1646969467	http://who.int/icd#S89.8	Other specified injuries of lower leg	IsInICD10	FALSE		
+http://id.who.int/icd/entity/399990919	http://who.int/icd#S81.8	Open wound of other parts of lower leg	IsInICD10	FALSE		
+http://id.who.int/icd/entity/187672582	http://who.int/icd#S80.8	Other superficial injuries of lower leg	IsInICD10	FALSE		
+http://id.who.int/icd/entity/757707257	http://who.int/icd#S85.8	Injury of other blood vessels at lower leg level	IsInICD10	FALSE		
+http://id.who.int/icd/entity/835811704	http://who.int/icd#S84.8	Injury of other nerves at lower leg level	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1969947683	http://who.int/icd#T79.8	Other early complications of trauma	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1814595529	http://who.int/icd#T00.8	Superficial injuries involving other combinations of body regions	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1456887479	http://who.int/icd#T04.8	Crushing injuries involving other combinations of body regions	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1840195575	http://who.int/icd#T03.8	"Dislocations, sprains and strains involving other combinations of body regions"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1892699978	http://who.int/icd#T01.8	Open wounds involving other combinations of body regions	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1269382664	http://who.int/icd#T06.8	Other specified injuries involving multiple body regions	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1727775555	http://who.int/icd#T88.8	"Other specified complications of surgical and medical care, not elsewhere classified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/319185343	http://who.int/icd#T80.8	"Other complications following infusion, transfusion and therapeutic injection"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/712135826	http://who.int/icd#T65.8	Toxic effect: Toxic effect of other specified substances	IsInICD10	FALSE		
+http://id.who.int/icd/entity/277644784	http://who.int/icd#T61.8	Toxic effect: Toxic effect of other seafoods	IsInICD10	FALSE		
+http://id.who.int/icd/entity/285943248	http://who.int/icd#T62.8	Toxic effect: Other specified noxious substances eaten as food	IsInICD10	FALSE		
+http://id.who.int/icd/entity/208948591	http://who.int/icd#T60.8	Toxic effect: Other pesticides	IsInICD10	FALSE		
+http://id.who.int/icd/entity/556089475	http://who.int/icd#T52.8	Toxic effect: Other organic solvents	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1432306241	http://who.int/icd#T59.8	"Toxic effect: Other specified gases, fumes and vapours"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/119757182	http://who.int/icd#T57.8	Toxic effect: Other specified inorganic substances	IsInICD10	FALSE		
+http://id.who.int/icd/entity/547545277	http://who.int/icd#T51.8	Toxic effect: Other alcohols	IsInICD10	FALSE		
+http://id.who.int/icd/entity/889424103	http://who.int/icd#T39.8	"Poisoning: Other nonopioid analgesics and antipyretics, not elsewhere classified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/2072468315	http://who.int/icd#T36.8	Poisoning: Other systemic antibiotics	IsInICD10	FALSE		
+http://id.who.int/icd/entity/768060211	http://who.int/icd#T43.8	"Poisoning: Other psychotropic drugs, not elsewhere classified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/389642829	http://who.int/icd#T47.8	Poisoning: Other agents primarily affecting the gastrointestinal system	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1946242674	http://who.int/icd#S00.8	Superficial injury of other parts of head	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1761183473	http://who.int/icd#S01.8	Open wound of other parts of head	IsInICD10	FALSE		
+http://id.who.int/icd/entity/33352846	http://who.int/icd#S08.8	Traumatic amputation of other parts of head	IsInICD10	FALSE		
+http://id.who.int/icd/entity/486810637	http://who.int/icd#S09.8	Other specified injuries of head	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1333280560	http://who.int/icd#S07.8	Crushing injury of other parts of head	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1143941923	http://who.int/icd#S30.8	"Other superficial injuries of abdomen, lower back and pelvis"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/2127690333	http://who.int/icd#S34.8	"Injury of other and unspecified nerves at abdomen, lower back and pelvis level"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/757743966	http://who.int/icd#S39.8	"Other specified injuries of abdomen, lower back and pelvis"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1915806028	http://who.int/icd#S99.8	Other specified injuries of ankle and foot	IsInICD10	FALSE		
+http://id.who.int/icd/entity/456493879	http://who.int/icd#S90.8	Other superficial injuries of ankle and foot	IsInICD10	FALSE		
+http://id.who.int/icd/entity/566975049	http://who.int/icd#S94.8	Injury of other nerves at ankle and foot level	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1018442486	http://who.int/icd#S96.8	Injury of other muscles and tendons at ankle and foot level	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1026790090	http://who.int/icd#S95.8	Injury of other blood vessels at ankle and foot level	IsInICD10	FALSE		
+http://id.who.int/icd/entity/574733848	http://who.int/icd#S75.8	Injury of other blood vessels at hip and thigh level	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1833094554	http://who.int/icd#S79.8	Other specified injuries of hip and thigh	IsInICD10	FALSE		
+http://id.who.int/icd/entity/415199078	http://who.int/icd#S71.8	Open wound of other and unspecified parts of pelvic girdle	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1052341913	http://who.int/icd#S74.8	Injury of other nerves at hip and thigh level	IsInICD10	FALSE		
+http://id.who.int/icd/entity/71804903	http://who.int/icd#S70.8	Other superficial injuries of hip and thigh	IsInICD10	FALSE		
+http://id.who.int/icd/entity/164562436	http://who.int/icd#T18.8	Foreign body in other and multiple parts of alimentary tract	IsInICD10	FALSE		
+http://id.who.int/icd/entity/355978885	http://who.int/icd#T19.8	Foreign body in other and multiple parts of genitourinary tract	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1805482090	http://who.int/icd#T26.8	Chemical burn of other parts of eye and adnexa	IsInICD10	FALSE		
+http://id.who.int/icd/entity/933902801	http://who.int/icd#P10.8	Other intracranial lacerations and haemorrhages due to birth injury	IsInICD10	FALSE		
+http://id.who.int/icd/entity/908958191	http://who.int/icd#P13.8	Birth injuries to other parts of skeleton	IsInICD10	FALSE		
+http://id.who.int/icd/entity/223668399	http://who.int/icd#P14.8	Birth injuries to other parts of peripheral nervous system	IsInICD10	FALSE		
+http://id.who.int/icd/entity/491703198	http://who.int/icd#P04.8	Fetus and newborn affected by other maternal noxious influences	IsInICD10	FALSE		
+http://id.who.int/icd/entity/986673759	http://who.int/icd#P02.8	Fetus and newborn affected by other abnormalities of membranes	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1259224056	http://who.int/icd#P71.8	Other transitory neonatal disorders of calcium and magnesium metabolism	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1475801975	http://who.int/icd#P70.8	Other transitory disorders of carbohydrate metabolism of fetus and newborn	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1250532296	http://who.int/icd#P72.8	Other specified transitory neonatal endocrine disorders	IsInICD10	FALSE		
+http://id.who.int/icd/entity/537257283	http://who.int/icd#P26.8	Other pulmonary haemorrhages originating in the perinatal period	IsInICD10	FALSE		
+http://id.who.int/icd/entity/562185597	http://who.int/icd#P25.8	Other airleak syndromes (conditions) related to interstitial emphysema originating in the perinatal period	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1031441916	http://who.int/icd#P24.8	Other neonatal aspiration syndromes	IsInICD10	FALSE		
+http://id.who.int/icd/entity/100924606	http://who.int/icd#P23.8	Congenital pneumonia due to other organisms	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1147548695	http://who.int/icd#P81.8	Other specified disturbances of temperature regulation of newborn	IsInICD10	FALSE		
+http://id.who.int/icd/entity/37689321	http://who.int/icd#P58.8	Neonatal jaundice due to other specified excessive haemolysis	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1790827946	http://who.int/icd#P52.8	Other intracranial (nontraumatic) haemorrhages of fetus and newborn	IsInICD10	FALSE		
+http://id.who.int/icd/entity/2009249045	http://who.int/icd#P50.8	Other fetal blood loss	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1442559770	http://who.int/icd#P92.8	Other feeding problems of newborn	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1920601817	http://who.int/icd#P94.8	Other disorders of muscle tone of newborn	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1879538799	http://who.int/icd#H48.8	Other disorders of optic nerve and visual pathways in diseases classified elsewhere	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1972782838	http://who.int/icd#Q15.8	Other specified congenital malformations of eye	IsInICD10	FALSE		
+http://id.who.int/icd/entity/603768686	http://who.int/icd#H45.8	Other disorders of vitreous body and globe in diseases classified elsewhere	IsInICD10	FALSE		
+http://id.who.int/icd/entity/2027519114	http://who.int/icd#H22.8	Other disorders of iris and ciliary body in diseases classified elsewhere	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1913243815	http://who.int/icd#H16.8	Other keratitis	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1410322778	http://who.int/icd#H13.8	Other disorders of conjunctiva in diseases classified elsewhere	IsInICD10	FALSE		
+http://id.who.int/icd/entity/332571199	http://who.int/icd#H75.8	Other specified disorders of middle ear and mastoid in diseases classified elsewhere	IsInICD10	FALSE		
+http://id.who.int/icd/entity/951185486	http://who.int/icd#H62.8	Other disorders of external ear in diseases classified elsewhere	IsInICD10	FALSE		
+http://id.who.int/icd/entity/274220656	http://who.int/icd#H94.8	Other specified disorders of ear in diseases classified elsewhere	IsInICD10	FALSE		
+http://id.who.int/icd/entity/605191915	http://who.int/icd#28270_b047675b_e7d6_403d_8ca9_f59ab5570ff4	"Spinal disorders, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1108762025	http://who.int/icd#28446_b047675b_e7d6_403d_8ca9_f59ab5570ff4	Spinal cord tumor unspecified	NewInICD11	FALSE		
+http://id.who.int/icd/entity/908987889	http://who.int/icd#96_712a6f06_71f2_48d0_919c_2b3cb8b7172d	"Infective spondyloarthritis, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1841327871	http://who.int/icd#24552_b047675b_e7d6_403d_8ca9_f59ab5570ff4	Neck pain unspecified	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1311836421	http://who.int/icd#24574_b047675b_e7d6_403d_8ca9_f59ab5570ff4	Thoracic pain unspecified	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1275704552	http://who.int/icd#26345_b047675b_e7d6_403d_8ca9_f59ab5570ff4	Low back pain unspecified	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1056502370	http://who.int/icd#2136_712a6f06_71f2_48d0_919c_2b3cb8b7172d	"Postinfective and reactive arthropathies, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/288265749	http://who.int/icd#4830_dd0250d2_e8cd_4c48_a93f_7997cc1c8b07	Femoroacetabular impingement unspecified	NewInICD11	FALSE		
+http://id.who.int/icd/entity/421239208	http://who.int/icd#4356_599a597b_6a33_44a6_bf97_915e75834e46	"Rheumatoid vasculitis, rheumatoid factor positive, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/277066120	http://who.int/icd#4284_599a597b_6a33_44a6_bf97_915e75834e46	"Rheumatoid vasculitis, anti-citrullinated protein antibody positive, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/559223500	http://who.int/icd#4320_599a597b_6a33_44a6_bf97_915e75834e46	"Rheumatoid vasculitis, both rheumatoid factor and anti-citrullinated protein antibody positive, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1073169844	http://who.int/icd#4392_599a597b_6a33_44a6_bf97_915e75834e46	"Rheumatoid vasculitis, serology negative, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/450557641	http://who.int/icd#4428_599a597b_6a33_44a6_bf97_915e75834e46	"Rheumatoid vasculitis, serology not specified, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/799780201	http://who.int/icd#4176_599a597b_6a33_44a6_bf97_915e75834e46	"Rheumatoid lung disease, rheumatoid factor positive, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/743949569	http://who.int/icd#4104_599a597b_6a33_44a6_bf97_915e75834e46	"Rheumatoid lung disease, anti-citrullinated protein antibody positive, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/483446001	http://who.int/icd#4140_599a597b_6a33_44a6_bf97_915e75834e46	"Rheumatoid lung disease, both rheumatoid factor and anti-citrullinated protein antibody positive, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/805957773	http://who.int/icd#4212_599a597b_6a33_44a6_bf97_915e75834e46	"Rheumatoid lung disease, serology negative, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1091218328	http://who.int/icd#4248_599a597b_6a33_44a6_bf97_915e75834e46	"Rheumatoid lung disease, serololgy not specified, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/621861392	http://who.int/icd#648_8984f767_a0e4_4b83_87af_9c52b2e15291	"Rheumatoid arthritis with splenomegaly and leukopenia, rheumatoid factor positive, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/429523743	http://who.int/icd#3960_599a597b_6a33_44a6_bf97_915e75834e46	"Rheumatoid arthritis with splenomegaly and leukopenia, anti-citrullinated protein antibody positive, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/935288209	http://who.int/icd#3996_599a597b_6a33_44a6_bf97_915e75834e46	"Rheumatoid arthritis with splenomegaly and leukopenia, both rheumatoid factor and anti-citrullinated protein antibody positive, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/112837700	http://who.int/icd#4032_599a597b_6a33_44a6_bf97_915e75834e46	"Rheumatoid arthritis with splenomegaly and leukopenia, serology negative, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/2008719191	http://who.int/icd#4068_599a597b_6a33_44a6_bf97_915e75834e46	"Rheumatoid arthritis with splenomegaly and leukopenia, serology not specified, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1810774776	http://who.int/icd#5268_599a597b_6a33_44a6_bf97_915e75834e46	"Rheumatoid arthritis, unspecified, rheumatoid factor positive, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/403768095	http://who.int/icd#5196_599a597b_6a33_44a6_bf97_915e75834e46	"Rheumatoid arthritis, unspecified, anti-citrullinated protein antiobody positive, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/451764717	http://who.int/icd#5232_599a597b_6a33_44a6_bf97_915e75834e46	"Rheumatoid arthritis, unspecified, both rheumatoid factor and anti-citrullinated protein antibody positive, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/805527726	http://who.int/icd#5304_599a597b_6a33_44a6_bf97_915e75834e46	"Rheumatoid arthritis, unspecified, serology negative, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/8677726	http://who.int/icd#5340_599a597b_6a33_44a6_bf97_915e75834e46	"Rheumatoid arthritis, unspecified, serology not specified, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1406408993	http://who.int/icd#4908_599a597b_6a33_44a6_bf97_915e75834e46	"Rheumatoid nodule, rheumatoid factor positive, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/241163878	http://who.int/icd#4836_599a597b_6a33_44a6_bf97_915e75834e46	"Rheumatoid nodule, anti-citrullinated protein antibody positive, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1054398358	http://who.int/icd#4872_599a597b_6a33_44a6_bf97_915e75834e46	"Rheumatoid nodule, both rheumatoid factor and anti-citrullinated protein antibody positive, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/339138261	http://who.int/icd#4944_599a597b_6a33_44a6_bf97_915e75834e46	"Rheumatoid nodule, serology negative, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/853150401	http://who.int/icd#4980_599a597b_6a33_44a6_bf97_915e75834e46	"Rheumatoid nodule, serology not specified, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/811947940	http://who.int/icd#4728_599a597b_6a33_44a6_bf97_915e75834e46	"Rheumatoid bursitis, rheumatoid factor positive, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1725659665	http://who.int/icd#4656_599a597b_6a33_44a6_bf97_915e75834e46	"Rheumatoid bursitis, anti-citrullinated protein antibody positive, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1077388805	http://who.int/icd#4692_599a597b_6a33_44a6_bf97_915e75834e46	"Rheumatoid bursitis, both rheumatoid factor and anti-citrullinated protein antibody positive, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/2005375056	http://who.int/icd#4764_599a597b_6a33_44a6_bf97_915e75834e46	"Rheumatoid bursitis, serology negative, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1025818624	http://who.int/icd#4800_599a597b_6a33_44a6_bf97_915e75834e46	"Rheumatoid bursitis, serology not specified, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/232819097	http://who.int/icd#4548_599a597b_6a33_44a6_bf97_915e75834e46	"Rheumatoid arthritis without extra-articular involvement, rheumatoid factor positive, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1349209824	http://who.int/icd#4476_599a597b_6a33_44a6_bf97_915e75834e46	"Rheumatoid arthritis without extra-articular involvement, anti-citrullinated protein antibody positive, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/2095305358	http://who.int/icd#4512_599a597b_6a33_44a6_bf97_915e75834e46	"Rheumatoid arthritis without extra-articular involvement, both rheumatoid factor and anit-citrullinated protein antibody positive, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1550422921	http://who.int/icd#4584_599a597b_6a33_44a6_bf97_915e75834e46	"Rheumatoid arthritis without extra-articular involvement, serology negative, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1586884987	http://who.int/icd#4620_599a597b_6a33_44a6_bf97_915e75834e46	"Rheumatoid arthritis without extra-articular involvement, serology not specified, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1965730941	http://who.int/icd#M13.0	"Polyarthritis, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1664739246	http://who.int/icd#M13
+http://id.who.int/icd/entity/1944020503	http://who.int/icd#M61.9	"Calcification and ossification of muscle, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/898361090	http://who.int/icd#1815_07368d94_d861_421b_b2a0_264c49b96108
+http://id.who.int/icd/entity/757594167	http://who.int/icd#180_712a6f06_71f2_48d0_919c_2b3cb8b7172d	"Infective myositis, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1813131763	http://who.int/icd#M79.2	"Neuralgia and neuritis, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1471564294	http://who.int/icd#M79
+http://id.who.int/icd/entity/586639296	http://who.int/icd#2016_712a6f06_71f2_48d0_919c_2b3cb8b7172d	"Infection of bursa, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1864871576	http://who.int/icd#M60.9	"Myositis, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1770344316	http://who.int/icd#748_99aed0e6_3707_4241_bb2b_12b1df36e984
+http://id.who.int/icd/entity/2113186970	http://who.int/icd#M79.0	"Rheumatism, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1770344316	http://who.int/icd#748_99aed0e6_3707_4241_bb2b_12b1df36e984
+http://id.who.int/icd/entity/1954892598	http://who.int/icd#M90.79	Fracture of bone in neoplastic disease C00-D48 : site unspecified	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1132821860	http://who.int/icd#M01.19	Tuberculous arthritis A18.0 : site unspecified	IsInICD10	FALSE		
+http://id.who.int/icd/entity/553012772	http://who.int/icd#M49.09	Tuberculosis of spine A18.0 : site unspecified	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1252741944	http://who.int/icd#M84.9	"Disorder of continuity of bone, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1800702420	http://who.int/icd#M84
+http://id.who.int/icd/entity/1640497481	http://who.int/icd#M93.9	"Osteochondropathy, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1333744217	http://who.int/icd#M93
+http://id.who.int/icd/entity/2100349384	http://who.int/icd#M92.9	"Juvenile osteochondrosis, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/708091853	http://who.int/icd#M92
+http://id.who.int/icd/entity/1339240520	http://who.int/icd#16395_588c79f3_df65_43e0_903d_add110bf20de	Unspecified	NewInICD11	FALSE		
+http://id.who.int/icd/entity/95146013	http://who.int/icd#M34.9	"Systemic sclerosis, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1084365812	http://who.int/icd#M34
+http://id.who.int/icd/entity/573204958	http://who.int/icd#M32.9	"Systemic lupus erythematosus, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/749596428	http://who.int/icd#M32.1
+http://id.who.int/icd/entity/337877781	http://who.int/icd#7847_1c662c6b_68f9_42a4_b7d3_90798bfc2caa	"Lupus erythematosus, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/857383093	http://who.int/icd#627_99aed0e6_3707_4241_bb2b_12b1df36e984	"Idiopathic inflammatory myopathy, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/991792637	http://who.int/icd#336_712a6f06_71f2_48d0_919c_2b3cb8b7172d	"Juvenile dermatomyositis, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/810887051	http://who.int/icd#M33.1	"Dermatomyositis, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/739030149	http://who.int/icd#Class_1758
+http://id.who.int/icd/entity/1895669600	http://who.int/icd#288_712a6f06_71f2_48d0_919c_2b3cb8b7172d	"Adult dermatomyositis, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1010993336	http://who.int/icd#5368_f9f63c92_5923_40a4_94f9_47474a47b1c7	"Systemic lupus erythematosus with endocarditis, valve unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/598591970	http://who.int/icd#M31.9	"Necrotizing vasculopathy, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1251830801	http://who.int/icd#555_81655b5c_debe_4590_b8ad_ea6448685723
+http://id.who.int/icd/entity/155896588	http://who.int/icd#M99.9	"Biomechanical lesion, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1344162278	http://who.int/icd#M99
+http://id.who.int/icd/entity/1179236490	http://who.int/icd#M95.9	"Acquired deformity of musculoskeletal system, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1507462233	http://who.int/icd#M95
+http://id.who.int/icd/entity/1204689078	http://who.int/icd#M96.9	"Postprocedural musculoskeletal disorder, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/762797224	http://who.int/icd#M96
+http://id.who.int/icd/entity/2110078069	http://who.int/icd#R25.1	"Tremor, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/682424259	http://who.int/icd#R25
+http://id.who.int/icd/entity/99719518	http://who.int/icd#R27.0	"Ataxia, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/961178280	http://who.int/icd#R27
+http://id.who.int/icd/entity/515681918	http://who.int/icd#R00.0	"Tachycardia, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/449943282	http://who.int/icd#R00
+http://id.who.int/icd/entity/2079810536	http://who.int/icd#R00.1	"Bradycardia, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/449943282	http://who.int/icd#R00
+http://id.who.int/icd/entity/1729080169	http://who.int/icd#R01.1	"Cardiac murmur, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/2140822372	http://who.int/icd#R01
+http://id.who.int/icd/entity/1334719552	http://who.int/icd#R04.9	"Haemorrhage from respiratory passages, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/496129435	http://who.int/icd#R04
+http://id.who.int/icd/entity/579214423	http://who.int/icd#R07.4	"Chest pain, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1765737830	http://who.int/icd#R07
+http://id.who.int/icd/entity/277324601	http://who.int/icd#R44.3	"Hallucinations, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1711901760	http://who.int/icd#R44
+http://id.who.int/icd/entity/188524755	http://who.int/icd#R45.7	"State of emotional shock and stress, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/54673878	http://who.int/icd#R45
+http://id.who.int/icd/entity/1110239801	http://who.int/icd#R41.0	"Disorientation, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/67207871	http://who.int/icd#R41
+http://id.who.int/icd/entity/858404455	http://who.int/icd#R65.9	"Systemic Inflammatory Response Syndrome, unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/511392651	http://who.int/icd#R57.9	"Shock, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1164022950	http://who.int/icd#R57
+http://id.who.int/icd/entity/1275535544	http://who.int/icd#R59.9	"Enlarged lymph nodes, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1564691570	http://who.int/icd#R59
+http://id.who.int/icd/entity/355217304	http://who.int/icd#R60.9	"Oedema, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/826220775	http://who.int/icd#R60
+http://id.who.int/icd/entity/139675431	http://who.int/icd#R62.9	"Lack of expected normal physiological development, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/551140748	http://who.int/icd#R62
+http://id.who.int/icd/entity/620907211	http://who.int/icd#R50.9	"Fever, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/915343154	http://who.int/icd#R50
+http://id.who.int/icd/entity/947724916	http://who.int/icd#R52.9	"Pain, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/661232217	http://who.int/icd#R52
+http://id.who.int/icd/entity/1163821165	http://who.int/icd#R30.9	"Painful micturition, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/492941605	http://who.int/icd#R30
+http://id.who.int/icd/entity/1789687834	http://who.int/icd#15488_b047675b_e7d6_403d_8ca9_f59ab5570ff4	"Azoospermia, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/78752919	http://who.int/icd#R73.9	"Hyperglycaemia, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/307705857	http://who.int/icd#R73
+http://id.who.int/icd/entity/1815307990	http://who.int/icd#R79.9	"Abnormal finding of blood chemistry, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/221651900	http://who.int/icd#R79
+http://id.who.int/icd/entity/582464872	http://who.int/icd#R76.9	"Abnormal immunological finding in serum, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1885288190	http://who.int/icd#R76
+http://id.who.int/icd/entity/1045396969	http://who.int/icd#R77.9	"Abnormality of plasma protein, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/353696620	http://who.int/icd#R77
+http://id.who.int/icd/entity/790143954	http://who.int/icd#A19.2	"Acute miliary tuberculosis, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/861638547	http://who.int/icd#A19
+http://id.who.int/icd/entity/998432807	http://who.int/icd#A36.9	"Diphtheria, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/508032285	http://who.int/icd#A36
+http://id.who.int/icd/entity/428456882	http://who.int/icd#A39.4	"Meningococcaemia, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1664016479	http://who.int/icd#A39
+http://id.who.int/icd/entity/1899681998	http://who.int/icd#A42.9	"Actinomycosis, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1697630330	http://who.int/icd#A42
+http://id.who.int/icd/entity/569703592	http://who.int/icd#A56.2	"Chlamydial infection of genitourinary tract, unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1211522028	http://who.int/icd#B67.4	"Echinococcus granulosus infection, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1456802165	http://who.int/icd#B67
+http://id.who.int/icd/entity/1016793877	http://who.int/icd#B67.7	"Echinococcus multilocularis infection, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1456802165	http://who.int/icd#B67
+http://id.who.int/icd/entity/706700074	http://who.int/icd#A25.9	"Rat-bite fever, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1026551291	http://who.int/icd#A25
+http://id.who.int/icd/entity/2045040683	http://who.int/icd#A28.9	"Zoonotic bacterial disease, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1369466322	http://who.int/icd#A28
+http://id.who.int/icd/entity/1423158232	http://who.int/icd#P35.9	"Congenital viral disease, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1645664101	http://who.int/icd#P35
+http://id.who.int/icd/entity/1236058983	http://who.int/icd#P37.9	"Congenital infectious and parasitic disease, unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1431571432	http://who.int/icd#P36.9	"Bacterial sepsis of newborn, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/381388700	http://who.int/icd#P36
+http://id.who.int/icd/entity/1778191293	http://who.int/icd#A84.9	"Tick-borne viral encephalitis, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/609745494	http://who.int/icd#A84
+http://id.who.int/icd/entity/1384413949	http://who.int/icd#A83.9	"Mosquito-borne viral encephalitis, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1471769026	http://who.int/icd#A83
+http://id.who.int/icd/entity/1365294971	http://who.int/icd#Class_1301	"Resistance to betalactam antibiotics, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1470627321	http://who.int/icd#U04.9	"Severe acute respiratory syndrome, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/652944603	http://who.int/icd#U04
+http://id.who.int/icd/entity/929491947	http://who.int/icd#J20.9	"Acute bronchitis, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/727572936	http://who.int/icd#J20
+http://id.who.int/icd/entity/731784044	http://who.int/icd#J21.9	"Acute bronchiolitis, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1310075986	http://who.int/icd#J21
+http://id.who.int/icd/entity/439870983	http://who.int/icd#J12.9	"Viral pneumonia, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1024154490	http://who.int/icd#J12
+http://id.who.int/icd/entity/558798663	http://who.int/icd#J15.9	"Bacterial pneumonia, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1323682030	http://who.int/icd#J15
+http://id.who.int/icd/entity/1797166248	http://who.int/icd#4104_98ae51f9_6af8_41ef_b732_06c5fb864693	"Pneumonia (due to)(in) whooping cough, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1924475972	http://who.int/icd#J18.9	"Pneumonia, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/577388741	http://who.int/icd#J18
+http://id.who.int/icd/entity/144702061	http://who.int/icd#J18.2	"Hypostatic pneumonia, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/577388741	http://who.int/icd#J18
+http://id.who.int/icd/entity/2083695250	http://who.int/icd#J18.1	"Lobar pneumonia, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/577388741	http://who.int/icd#J18
+http://id.who.int/icd/entity/427386632	http://who.int/icd#J18.0	"Bronchopneumonia, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/577388741	http://who.int/icd#J18
+http://id.who.int/icd/entity/1455260019	http://who.int/icd#J43.9	"Emphysema, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1948124976	http://who.int/icd#J43
+http://id.who.int/icd/entity/78336450	http://who.int/icd#J44.99	"Chronic obstructive pulmonary disease, unspecified, FEV1 unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/686679093	http://who.int/icd#J44.19	"Chronic obstructive pulmonary disease with acute exacerbation, unspecified, FEV1 unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/2133371948	http://who.int/icd#J44.09	"Chronic obstructive pulmonary disease with acute lower respiratory infection, FEV1 unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1242291114	http://who.int/icd#14971_07368d94_d861_421b_b2a0_264c49b96108	"Cystic fibrosis of pancreas, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1583378737	http://who.int/icd#J95.9	"Postprocedural respiratory disorder, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1654881561	http://who.int/icd#J95
+http://id.who.int/icd/entity/228313652	http://who.int/icd#J98.9	"Respiratory disorder, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/237827378	http://who.int/icd#J98
+http://id.who.int/icd/entity/819139656	http://who.int/icd#J06.9	"Acute upper respiratory infection, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1838010380	http://who.int/icd#J06
+http://id.who.int/icd/entity/383061431	http://who.int/icd#J03.9	"Acute tonsillitis, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/260431605	http://who.int/icd#J03
+http://id.who.int/icd/entity/170771766	http://who.int/icd#J02.9	"Acute pharyngitis, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1791890273	http://who.int/icd#J02
+http://id.who.int/icd/entity/195716362	http://who.int/icd#J01.9	"Acute sinusitis, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/509821856	http://who.int/icd#J01
+http://id.who.int/icd/entity/1274233075	http://who.int/icd#J30.4	"Allergic rhinitis, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/2090379743	http://who.int/icd#J30
+http://id.who.int/icd/entity/973316197	http://who.int/icd#J32.9	"Chronic sinusitis, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1836987572	http://who.int/icd#J32
+http://id.who.int/icd/entity/24826149	http://who.int/icd#J35.9	"Chronic disease of tonsils and adenoids, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/512796448	http://who.int/icd#J35
+http://id.who.int/icd/entity/1316594343	http://who.int/icd#J39.9	"Disease of upper respiratory tract, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/391439005	http://who.int/icd#J39
+http://id.who.int/icd/entity/1360574746	http://who.int/icd#J39.3	"Upper respiratory tract hypersensitivity reaction, site unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/654010598	http://who.int/icd#J33.9	"Nasal polyp, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/137754914	http://who.int/icd#J33
+http://id.who.int/icd/entity/2044840176	http://who.int/icd#J93.9	"Pneumothorax, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1946559257	http://who.int/icd#J93
+http://id.who.int/icd/entity/1117305266	http://who.int/icd#J94.9	"Pleural condition, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/132690061	http://who.int/icd#J94
+http://id.who.int/icd/entity/194759735	http://who.int/icd#J70.4	"Drug-induced interstitial lung disorders, unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/2145720009	http://who.int/icd#Class_1224	"Acute respiratory failure, Type unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1540279620	http://who.int/icd#Class_1233	"Chronic respiratory failure, Type unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1152374521	http://who.int/icd#Class_1239	"Respiratory failure, unspecified, Type unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/2022609528	http://who.int/icd#F51.9	"Nonorganic sleep disorder, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/2101256670	http://who.int/icd#F51
+http://id.who.int/icd/entity/543740667	http://who.int/icd#E66.9	"Obesity, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/149403041	http://who.int/icd#E66
+http://id.who.int/icd/entity/661062300	http://who.int/icd#3120_712a6f06_71f2_48d0_919c_2b3cb8b7172d	Obesity due to excess calories with Body-Mass-Index unspecified	NewInICD11	FALSE		
+http://id.who.int/icd/entity/302181619	http://who.int/icd#F05.9	"Delirium, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1445196663	http://who.int/icd#F05
+http://id.who.int/icd/entity/1240823017	http://who.int/icd#Q90.9	"Down syndrome, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1624623908	http://who.int/icd#Q90
+http://id.who.int/icd/entity/1294951614	http://who.int/icd#Q91.7	"Patau syndrome, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1435958084	http://who.int/icd#15840_b047675b_e7d6_403d_8ca9_f59ab5570ff4
+http://id.who.int/icd/entity/1248634837	http://who.int/icd#Q91.3	"Edwards syndrome, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1505179968	http://who.int/icd#15851_b047675b_e7d6_403d_8ca9_f59ab5570ff4
+http://id.who.int/icd/entity/1853148456	http://who.int/icd#Q96.9	"Turner syndrome, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1987089698	http://who.int/icd#Q96
+http://id.who.int/icd/entity/1351048766	http://who.int/icd#Q98.4	"Klinefelter syndrome, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1937385304	http://who.int/icd#15884_b047675b_e7d6_403d_8ca9_f59ab5570ff4
+http://id.who.int/icd/entity/148753894	http://who.int/icd#Q84.0	"Congenital alopecia, sporadic or unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1616902772	http://who.int/icd#3864_890e173e_8bc7_44a1_9345_a738531fdd8e	"Pyruvate dehydrogenase complex deficiency, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1835459864	http://who.int/icd#E88.9	"Metabolic disorder, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/393047701	http://who.int/icd#E88
+http://id.who.int/icd/entity/1837408405	http://who.int/icd#5588_07368d94_d861_421b_b2a0_264c49b96108	"Progressive familial intrahepatic cholestasis, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/28191127	http://who.int/icd#10547_378b7cb7_5b17_422d_b68b_e793f5e48664	"Bile acid synthesis defect, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/376760373	http://who.int/icd#E73.9	"Lactose intolerance, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1026224967	http://who.int/icd#E73
+http://id.who.int/icd/entity/1818843558	http://who.int/icd#5940_e9c55f4e_825c_45d7_ba2c_0fdc673d688a	"Constitutional megaloblastic anaemia due to vitamin B12 metabolism disorder, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1450708115	http://who.int/icd#15708_b047675b_e7d6_403d_8ca9_f59ab5570ff4	"Fluid overload, unspecified"	NewInICD11	TRUE	http://id.who.int/icd/entity/1002499710	http://who.int/icd#E87.7
+http://id.who.int/icd/entity/1635838740	http://who.int/icd#9559_07368d94_d861_421b_b2a0_264c49b96108	Metabolic acidosis unspecified	NewInICD11	FALSE		
+http://id.who.int/icd/entity/180987807	http://who.int/icd#9592_07368d94_d861_421b_b2a0_264c49b96108	Respiratory acidosis unspecified	NewInICD11	FALSE		
+http://id.who.int/icd/entity/137741677	http://who.int/icd#9636_07368d94_d861_421b_b2a0_264c49b96108	"Metabolic alkalosis, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1580185956	http://who.int/icd#9669_07368d94_d861_421b_b2a0_264c49b96108	"Respiratory alkalosis, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/801281556	http://who.int/icd#3600_98ae51f9_6af8_41ef_b732_06c5fb864693	"Cardiac heredofamilial amyloidosis, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/193169630	http://who.int/icd#3756_98ae51f9_6af8_41ef_b732_06c5fb864693	"Cerebral heredofamilial amyloidosis angiopathy, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/315948052	http://who.int/icd#4344_712a6f06_71f2_48d0_919c_2b3cb8b7172d	"Glomerular disorders in heredofamilial amyloidosis, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/23576374	http://who.int/icd#E01.2	"Iodine-deficiency-related (endemic) goitre, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1357352994	http://who.int/icd#E01
+http://id.who.int/icd/entity/1714553252	http://who.int/icd#E03.9	"Hypothyroidism, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1090587977	http://who.int/icd#E03
+http://id.who.int/icd/entity/1565225186	http://who.int/icd#E04.9	"Nontoxic goitre, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/854564573	http://who.int/icd#E04
+http://id.who.int/icd/entity/1077155933	http://who.int/icd#E06.9	"Thyroiditis, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/587793334	http://who.int/icd#E06
+http://id.who.int/icd/entity/1556926686	http://who.int/icd#E07.9	"Disorder of thyroid, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1178783268	http://who.int/icd#E07
+http://id.who.int/icd/entity/1739956636	http://who.int/icd#E00.9	"Congenital iodine-deficiency syndrome, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/900488632	http://who.int/icd#E00
+http://id.who.int/icd/entity/1715820899	http://who.int/icd#1320_588c79f3_df65_43e0_903d_add110bf20de	Unspecified diabetes mellitus with coma unspecified	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1532124591	http://who.int/icd#600_588c79f3_df65_43e0_903d_add110bf20de	"Type 2 diabetes mellitus with coma, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/632400809	http://who.int/icd#135_588c79f3_df65_43e0_903d_add110bf20de	"Immune-related Type 1 diabetes mellitus with coma, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/377279335	http://who.int/icd#45_588c79f3_df65_43e0_903d_add110bf20de	"Idiopathic Type 1 diabetes mellitus with coma, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1029429979	http://who.int/icd#O24.3	"Diabetes mellitus in pregnancy: Pre-existing diabetes mellitus, unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/704965957	http://who.int/icd#E16.2	"Hypoglycaemia, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1959545775	http://who.int/icd#E16
+http://id.who.int/icd/entity/1345207148	http://who.int/icd#E16.9	"Disorder of pancreatic internal secretion, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1959545775	http://who.int/icd#E16
+http://id.who.int/icd/entity/1142437058	http://who.int/icd#E21.3	"Hyperparathyroidism, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/9633776	http://who.int/icd#E21
+http://id.who.int/icd/entity/1579458326	http://who.int/icd#E23.7	"Disorder of pituitary gland, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/292840069	http://who.int/icd#E23
+http://id.who.int/icd/entity/1636302337	http://who.int/icd#E25.9	"Adrenogenital disorder, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/131153029	http://who.int/icd#E25
+http://id.who.int/icd/entity/1645144823	http://who.int/icd#E78.9	"Disorder of lipoprotein metabolism, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1191191920	http://who.int/icd#E78
+http://id.who.int/icd/entity/1808445258	http://who.int/icd#E78.5	"Hyperlipidaemia, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/2023062398	http://who.int/icd#6160_6bc3f235_b24a_493e_a8a3_60cb9fb52dbd
+http://id.who.int/icd/entity/454140859	http://who.int/icd#E61.9	"Deficiency of nutrient element, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/2064197173	http://who.int/icd#E61
+http://id.who.int/icd/entity/935792233	http://who.int/icd#E50.9	"Vitamin A deficiency, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/435342452	http://who.int/icd#E50
+http://id.who.int/icd/entity/1191587871	http://who.int/icd#E1A.40	"Diabetes mellitus due to underlying condition with diabetic neuropathy, unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1999131980	http://who.int/icd#E1B.40	"Drug or chemical induced diabetes mellitus with neurological complications with diabetic neuropathy, unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/783069291	http://who.int/icd#E11.40	"Type 2 diabetes mellitus with diabetic neuropathy, unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1052152666	http://who.int/icd#E10.40	"Type 1 diabetes mellitus with diabetic neuropathy, unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/2128486302	http://who.int/icd#E14.40	"Unspecified diabetes mellitus with diabetic neuropathy, unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/141139565	http://who.int/icd#I51.9	"Heart disease, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/867856996	http://who.int/icd#I51
+http://id.who.int/icd/entity/1962969903	http://who.int/icd#I51.6	"Cardiovascular disease, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/867856996	http://who.int/icd#I51
+http://id.who.int/icd/entity/1959631948	http://who.int/icd#I30.9	"Acute pericarditis, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/2099186145	http://who.int/icd#I30
+http://id.who.int/icd/entity/1748325579	http://who.int/icd#I31.9	"Disease of pericardium, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/408208501	http://who.int/icd#I31
+http://id.who.int/icd/entity/1967799412	http://who.int/icd#I33.9	"Acute endocarditis, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/162683166	http://who.int/icd#I33
+http://id.who.int/icd/entity/587910174	http://who.int/icd#I46.9	"Cardiac arrest, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/395422191	http://who.int/icd#I46
+http://id.who.int/icd/entity/435428708	http://who.int/icd#I42.9	"Cardiomyopathy, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/282225286	http://who.int/icd#I42
+http://id.who.int/icd/entity/1388868884	http://who.int/icd#I89.9	"Noninfective disorder of lymphatic vessels and lymph nodes, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1025888387	http://who.int/icd#I89
+http://id.who.int/icd/entity/1311817107	http://who.int/icd#I88.9	"Nonspecific lymphadenitis, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1483611415	http://who.int/icd#I88
+http://id.who.int/icd/entity/1478177176	http://who.int/icd#I01.9	"Acute rheumatic heart disease, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/535094176	http://who.int/icd#I01
+http://id.who.int/icd/entity/593565106	http://who.int/icd#I09.1	"Rheumatic diseases of endocardium, valve unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/291726710	http://who.int/icd#I09
+http://id.who.int/icd/entity/770085732	http://who.int/icd#I09.9	"Rheumatic heart disease, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/291726710	http://who.int/icd#I09
+http://id.who.int/icd/entity/2094073160	http://who.int/icd#6900_712a6f06_71f2_48d0_919c_2b3cb8b7172d	"Polyneuropathy in disorders of parathyroid gland, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1002213182	http://who.int/icd#3990_588c79f3_df65_43e0_903d_add110bf20de	Encephalitis unspecified	NewInICD11	FALSE		
+http://id.who.int/icd/entity/50405864	http://who.int/icd#4005_588c79f3_df65_43e0_903d_add110bf20de	Myelitis unspecified	NewInICD11	FALSE		
+http://id.who.int/icd/entity/562230157	http://who.int/icd#4020_588c79f3_df65_43e0_903d_add110bf20de	Encephalomyelitis unspecified	NewInICD11	FALSE		
+http://id.who.int/icd/entity/227933248	http://who.int/icd#G06.2	"Intramedullary, extradural and subdural abscess, granuloma, or cyst unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1047948041	http://who.int/icd#G06
+http://id.who.int/icd/entity/911214317	http://who.int/icd#G45.9	"Transient cerebral ischaemic attack, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/826335789	http://who.int/icd#G45
+http://id.who.int/icd/entity/1016300973	http://who.int/icd#G91.3	"Post-traumatic hydrocephalus, unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/603102738	http://who.int/icd#G91.9	"Hydrocephalus, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/907740529	http://who.int/icd#G91
+http://id.who.int/icd/entity/1375895174	http://who.int/icd#G93.4	"Encephalopathy, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/670930970	http://who.int/icd#G93
+http://id.who.int/icd/entity/1049491119	http://who.int/icd#G93.9	"Disorder of brain, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/670930970	http://who.int/icd#G93
+http://id.who.int/icd/entity/1663473991	http://who.int/icd#G95.2	"Cord compression, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/827901468	http://who.int/icd#G95
+http://id.who.int/icd/entity/420237168	http://who.int/icd#G95.9	"Disease of spinal cord, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/827901468	http://who.int/icd#G95
+http://id.who.int/icd/entity/411823952	http://who.int/icd#G96.9	"Disorder of central nervous system, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1173722853	http://who.int/icd#G96
+http://id.who.int/icd/entity/74655697	http://who.int/icd#G97.9	"Postprocedural disorder of nervous system, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/549346161	http://who.int/icd#G97
+http://id.who.int/icd/entity/2095595012	http://who.int/icd#G31.9	"Degenerative disease of nervous system, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1244192586	http://who.int/icd#G31
+http://id.who.int/icd/entity/1611724421	http://who.int/icd#G30.9	"Alzheimer disease, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/795022044	http://who.int/icd#G30
+http://id.who.int/icd/entity/1533642693	http://who.int/icd#G37.9	"Demyelinating disease of central nervous system, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1552777544	http://who.int/icd#G37
+http://id.who.int/icd/entity/489903262	http://who.int/icd#G52.9	"Cranial nerve disorder, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/359348642	http://who.int/icd#G52
+http://id.who.int/icd/entity/481621154	http://who.int/icd#G51.9	"Disorder of facial nerve, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1640393055	http://who.int/icd#G51
+http://id.who.int/icd/entity/4996131	http://who.int/icd#G50.9	"Disorder of trigeminal nerve, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/76391627	http://who.int/icd#G50
+http://id.who.int/icd/entity/706365916	http://who.int/icd#30888_b047675b_e7d6_403d_8ca9_f59ab5570ff4	"Secondary trigeminal neuralgia, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/667780580	http://who.int/icd#G56.9	"Mononeuropathy of upper limb, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/304675531	http://who.int/icd#G56
+http://id.who.int/icd/entity/1974574815	http://who.int/icd#G58.9	"Mononeuropathies, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/168436253	http://who.int/icd#G58
+http://id.who.int/icd/entity/993348963	http://who.int/icd#G57.9	"Mononeuropathy of lower limb, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/2002990943	http://who.int/icd#G57
+http://id.who.int/icd/entity/1212533558	http://who.int/icd#G82.2	"Paraplegia, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/359865751	http://who.int/icd#G82
+http://id.who.int/icd/entity/1001085090	http://who.int/icd#G82.5	"Tetraplegia, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/359865751	http://who.int/icd#G82
+http://id.who.int/icd/entity/781702560	http://who.int/icd#G83.9	"Paralytic syndrome, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1882771459	http://who.int/icd#G83
+http://id.who.int/icd/entity/838258211	http://who.int/icd#G83.3	"Monoplegia, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1882771459	http://who.int/icd#G83
+http://id.who.int/icd/entity/66832083	http://who.int/icd#31218_b047675b_e7d6_403d_8ca9_f59ab5570ff4	Headache unspecified	NewInICD11	FALSE		
+http://id.who.int/icd/entity/96433762	http://who.int/icd#14745_fba2e671_3f12_4bbe_b446_34f816e9708a	"Neoplasms of uncertain behaviour of brain, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1899251639	http://who.int/icd#14805_fba2e671_3f12_4bbe_b446_34f816e9708a	"Neoplasms of uncertain behaviour of central nervous system, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/686530098	http://who.int/icd#15615_fba2e671_3f12_4bbe_b446_34f816e9708a	"Neoplasms of unknown behaviour of brain, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/642023867	http://who.int/icd#15675_fba2e671_3f12_4bbe_b446_34f816e9708a	"Neoplasms of unknown behaviour of central nervous system, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/643120404	http://who.int/icd#6210_fba2e671_3f12_4bbe_b446_34f816e9708a	"Malignant neuroepitheliomatous neoplasms of peripheral nerves of trunk, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1787473211	http://who.int/icd#D09.9	"Carcinoma in situ, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1117314677	http://who.int/icd#D09
+http://id.who.int/icd/entity/629792441	http://who.int/icd#D05.9	"Carcinoma in situ of breast, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1264360394	http://who.int/icd#D05
+http://id.who.int/icd/entity/604929671	http://who.int/icd#D06.9	"Carcinoma in situ of cervix uteri, cervix, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1072810807	http://who.int/icd#D06
+http://id.who.int/icd/entity/527896519	http://who.int/icd#D01.9	"Carcinoma in situ of digestive organ, unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1754132805	http://who.int/icd#3000_fba2e671_3f12_4bbe_b446_34f816e9708a	"Osseous sarcomas of overlapping lesion of bone and articular cartilage, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/856126209	http://who.int/icd#S06.519	Chronic epidural haemorrhage : coma duration unspecified	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1690450714	http://who.int/icd#S06.509	Acute epidural haemorrhage : coma duration unspecified	IsInICD10	FALSE		
+http://id.who.int/icd/entity/847303487	http://who.int/icd#S06.619	Chronic subdural haemorrhage (traumatic) : coma duration unspecified	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1699060518	http://who.int/icd#S06.609	Acute subdural haemorrhage (traumatic) : coma duration unspecified	IsInICD10	FALSE		
+http://id.who.int/icd/entity/789607840	http://who.int/icd#G80.9	"Cerebral palsy, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/76906748	http://who.int/icd#G80
+http://id.who.int/icd/entity/1057642129	http://who.int/icd#G90.9	"Disorder of autonomic nervous system, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1397803237	http://who.int/icd#G90
+http://id.who.int/icd/entity/892475404	http://who.int/icd#K65.9	"Peritonitis, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/775356003	http://who.int/icd#K65
+http://id.who.int/icd/entity/884324404	http://who.int/icd#K66.9	"Disorder of peritoneum, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1520152220	http://who.int/icd#K66
+http://id.who.int/icd/entity/1405780454	http://who.int/icd#4180_07368d94_d861_421b_b2a0_264c49b96108	"Fibrosis and cirrhosis of liver, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/534178373	http://who.int/icd#K71.9	"Drug-induced and toxic liver disease, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/2125493521	http://who.int/icd#K71
+http://id.who.int/icd/entity/623393595	http://who.int/icd#K75.9	"Inflammatory liver disease, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/2046015098	http://who.int/icd#K75
+http://id.who.int/icd/entity/508643963	http://who.int/icd#K72.9	"Hepatic failure, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/2046015098	http://who.int/icd#K75
+http://id.who.int/icd/entity/745688437	http://who.int/icd#5643_07368d94_d861_421b_b2a0_264c49b96108	"Acute and subacute hepatic failure, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/437268615	http://who.int/icd#33143_b047675b_e7d6_403d_8ca9_f59ab5570ff4	"Portal hypertension, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/615488261	http://who.int/icd#K76.9	"Liver disease, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/224323205	http://who.int/icd#K76
+http://id.who.int/icd/entity/1806161469	http://who.int/icd#2222_07368d94_d861_421b_b2a0_264c49b96108	"Neonatal intrahepatic cholestasis, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/12164924	http://who.int/icd#E80.7	"Disorder of bilirubin metabolism and excretion, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/574814968	http://who.int/icd#1309_2985fd4a_87e8_4e76_ac83_2a5b74c14300
+http://id.who.int/icd/entity/654579961	http://who.int/icd#5568_599a597b_6a33_44a6_bf97_915e75834e46	"Metabolic liver disease, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1683485238	http://who.int/icd#1320_8984f767_a0e4_4b83_87af_9c52b2e15291	"Metabolic and transporter liver disease, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1458840865	http://who.int/icd#4081_07368d94_d861_421b_b2a0_264c49b96108	"Infectious disease of liver, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/476599288	http://who.int/icd#420_890e173e_8bc7_44a1_9345_a738531fdd8e	"Primary midline abdominal wall hernia, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/918228220	http://who.int/icd#K38.9	"Disease of appendix, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1860691848	http://who.int/icd#K38
+http://id.who.int/icd/entity/10798741	http://who.int/icd#K91.9	"Postprocedural disorder of digestive system, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/2031646451	http://who.int/icd#K91
+http://id.who.int/icd/entity/1668474978	http://who.int/icd#K10.9	"Disease of jaws, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/806686356	http://who.int/icd#K10
+http://id.who.int/icd/entity/1424585362	http://who.int/icd#K06.9	"Disorder of gingival and edentulous alveolar ridge, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1903499403	http://who.int/icd#K06
+http://id.who.int/icd/entity/1209121299	http://who.int/icd#K07.9	"Dentofacial anomaly, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/339662111	http://who.int/icd#K07
+http://id.who.int/icd/entity/614347322	http://who.int/icd#K07.4	"Malocclusion, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/339662111	http://who.int/icd#K07
+http://id.who.int/icd/entity/610739820	http://who.int/icd#K07.09	"Anomaly of jaw size, unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/110455215	http://who.int/icd#K08.9	"Disorder of teeth and supporting structures, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1767358557	http://who.int/icd#K08
+http://id.who.int/icd/entity/443392304	http://who.int/icd#K09.9	"Cyst of oral and facial-neck region, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/203165129	http://who.int/icd#K09
+http://id.who.int/icd/entity/1936247635	http://who.int/icd#K00.9	"Disorder of tooth development, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1741702795	http://who.int/icd#K00
+http://id.who.int/icd/entity/671598576	http://who.int/icd#K05.6	"Periodontal disease, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/98060404	http://who.int/icd#K05
+http://id.who.int/icd/entity/1847043052	http://who.int/icd#K02.9	"Dental caries, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1983306720	http://who.int/icd#K02
+http://id.who.int/icd/entity/2064232580	http://who.int/icd#K92.2	"Gastrointestinal haemorrhage, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/2004620471	http://who.int/icd#5698_b047675b_e7d6_403d_8ca9_f59ab5570ff4
+http://id.who.int/icd/entity/513063531	http://who.int/icd#2556_2780462e_2372_4ebc_a671_bf8ffd1008f6	"Fungal enteritis, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1802210959	http://who.int/icd#4994_b047675b_e7d6_403d_8ca9_f59ab5570ff4	"Infectious enteritis, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1108907302	http://who.int/icd#15049_378b7cb7_5b17_422d_b68b_e793f5e48664	"Protozoal enteritis, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/147294204	http://who.int/icd#23320_b047675b_e7d6_403d_8ca9_f59ab5570ff4	"Crohn disease of large intestine, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1195416607	http://who.int/icd#P78.9	"Perinatal digestive system disorder, unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/356288292	http://who.int/icd#P76.9	"Intestinal obstruction of newborn, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1830837825	http://who.int/icd#P76
+http://id.who.int/icd/entity/475794966	http://who.int/icd#K90.9	"Intestinal malabsorption, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1526938195	http://who.int/icd#720_d4765700_5765_4591_9aab_337c39ce9c2a
+http://id.who.int/icd/entity/1720891428	http://who.int/icd#1020_599a597b_6a33_44a6_bf97_915e75834e46	"Divertiuclar disease, site unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1300560966	http://who.int/icd#435_378b7cb7_5b17_422d_b68b_e793f5e48664	"Bacterial colonic infection, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1107883644	http://who.int/icd#660_378b7cb7_5b17_422d_b68b_e793f5e48664	"Viral colitis, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1317889470	http://who.int/icd#750_378b7cb7_5b17_422d_b68b_e793f5e48664	"Fungal colitis, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/402555205	http://who.int/icd#15064_378b7cb7_5b17_422d_b68b_e793f5e48664	"Protozoal colitis, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1071819815	http://who.int/icd#K51.9	"Ulcerative colitis, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/784669405	http://who.int/icd#K51
+http://id.who.int/icd/entity/2118225716	http://who.int/icd#C18.9	"Neoplasm: Colon, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/287779128	http://who.int/icd#2244_599a597b_6a33_44a6_bf97_915e75834e46
+http://id.who.int/icd/entity/436048175	http://who.int/icd#24409_b047675b_e7d6_403d_8ca9_f59ab5570ff4	"Polyp of large intestine, histology unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1285999456	http://who.int/icd#C21.0	"Neoplasm: Anus, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1287670106	http://who.int/icd#2640_599a597b_6a33_44a6_bf97_915e75834e46
+http://id.who.int/icd/entity/1763629020	http://who.int/icd#K60.2	"Anal fissure, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/801035247	http://who.int/icd#18755_b047675b_e7d6_403d_8ca9_f59ab5570ff4
+http://id.who.int/icd/entity/239823178	http://who.int/icd#K62.9	"Haemorrhoids, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1574465015	http://who.int/icd#K62
+http://id.who.int/icd/entity/2126043423	http://who.int/icd#96_2780462e_2372_4ebc_a671_bf8ffd1008f6	"Vascular disease of anus and anal canal, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/782888802	http://who.int/icd#12177_6bc3f235_b24a_493e_a8a3_60cb9fb52dbd	"Oesophageal varices, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1007547172	http://who.int/icd#3586_f9f63c92_5923_40a4_94f9_47474a47b1c7	"Intrahepatic cholangitis, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1430772669	http://who.int/icd#6216_599a597b_6a33_44a6_bf97_915e75834e46	"Malignant neoplasm of gallbladder and bile ducts, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/415502360	http://who.int/icd#O20.9	"Haemorrhage in early pregnancy, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/224131129	http://who.int/icd#O20
+http://id.who.int/icd/entity/96172199	http://who.int/icd#O22.9	"Venous complication in pregnancy, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/482174292	http://who.int/icd#O22
+http://id.who.int/icd/entity/1908505189	http://who.int/icd#O29.9	"Complication of anaesthesia during pregnancy, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1721217915	http://who.int/icd#O29
+http://id.who.int/icd/entity/2099274100	http://who.int/icd#O84.9	"Multiple delivery, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1982587243	http://who.int/icd#O84
+http://id.who.int/icd/entity/1520556211	http://who.int/icd#O82.9	"Delivery by caesarean section, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1619967851	http://who.int/icd#O82
+http://id.who.int/icd/entity/1180241970	http://who.int/icd#O83.9	"Assisted single delivery, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/96826111	http://who.int/icd#O83
+http://id.who.int/icd/entity/1205776398	http://who.int/icd#O80.9	"Single spontaneous delivery, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1902649856	http://who.int/icd#O80
+http://id.who.int/icd/entity/303342645	http://who.int/icd#O14.9	"Pre-eclampsia, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/229121159	http://who.int/icd#O14
+http://id.who.int/icd/entity/1674964382	http://who.int/icd#O67.9	"Intrapartum haemorrhage, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/86946424	http://who.int/icd#O67
+http://id.who.int/icd/entity/1397235725	http://who.int/icd#8496_712a6f06_71f2_48d0_919c_2b3cb8b7172d	Postpartum hemorrhage unspecified	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1085866130	http://who.int/icd#8436_712a6f06_71f2_48d0_919c_2b3cb8b7172d	Postpartum hemorrhage unspecified	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1496005860	http://who.int/icd#O63.9	"Long labour, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/40726813	http://who.int/icd#O63
+http://id.who.int/icd/entity/1171518563	http://who.int/icd#O62.9	"Abnormality of forces of labour, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1730591881	http://who.int/icd#O62
+http://id.who.int/icd/entity/1146377309	http://who.int/icd#O61.9	"Failed induction of labour, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/327937142	http://who.int/icd#O61
+http://id.who.int/icd/entity/1857070612	http://who.int/icd#O75.9	"Complication of labour and delivery, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1124951812	http://who.int/icd#O75
+http://id.who.int/icd/entity/1414428526	http://who.int/icd#O71.9	"Obstetric trauma, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1146004591	http://who.int/icd#O71
+http://id.who.int/icd/entity/1917349523	http://who.int/icd#O74.9	"Complication of anaesthesia during labour and delivery, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/642165394	http://who.int/icd#O74
+http://id.who.int/icd/entity/833222305	http://who.int/icd#O69.9	"Labour and delivery complicated by cord complication, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/487352992	http://who.int/icd#O69
+http://id.who.int/icd/entity/1824383613	http://who.int/icd#O97.9	"Death from sequelae of obstetric cause, unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/955274874	http://who.int/icd#O00.9	"Ectopic pregnancy, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1563334645	http://who.int/icd#O00
+http://id.who.int/icd/entity/604544763	http://who.int/icd#O01.9	"Hydatidiform mole, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/946166369	http://who.int/icd#O01
+http://id.who.int/icd/entity/630144709	http://who.int/icd#O02.9	"Abnormal product of conception, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1288178334	http://who.int/icd#O02
+http://id.who.int/icd/entity/1684017727	http://who.int/icd#O41.9	"Disorder of amniotic fluid and membranes, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1140753340	http://who.int/icd#O41
+http://id.who.int/icd/entity/1587462977	http://who.int/icd#O45.9	"Premature separation of placenta, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1153253585	http://who.int/icd#O45
+http://id.who.int/icd/entity/1709683201	http://who.int/icd#O42.9	"Premature rupture of membranes, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/928240453	http://who.int/icd#O42
+http://id.who.int/icd/entity/785918680	http://who.int/icd#O35.9	"Maternal care for (suspected) fetal abnormality and damage, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/949403359	http://who.int/icd#O35
+http://id.who.int/icd/entity/1595499391	http://who.int/icd#O46.9	"Antepartum haemorrhage, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/806359088	http://who.int/icd#O46
+http://id.who.int/icd/entity/1138863104	http://who.int/icd#O47.9	"False labour, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1432083898	http://who.int/icd#O47
+http://id.who.int/icd/entity/156865303	http://who.int/icd#O33.9	"Maternal care for disproportion, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/775151839	http://who.int/icd#O33
+http://id.who.int/icd/entity/841015895	http://who.int/icd#O34.9	"Maternal care for abnormality of pelvic organ, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1574794059	http://who.int/icd#O34
+http://id.who.int/icd/entity/362896278	http://who.int/icd#O32.9	"Maternal care for malpresentation of fetus, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1266167115	http://who.int/icd#O32
+http://id.who.int/icd/entity/148779817	http://who.int/icd#O30.9	"Multiple gestation, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1520349216	http://who.int/icd#O30
+http://id.who.int/icd/entity/2091368780	http://who.int/icd#O87.9	"Venous complication in the puerperium, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/42381716	http://who.int/icd#O87
+http://id.who.int/icd/entity/1472500541	http://who.int/icd#O90.9	"Complication of the puerperium, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/648899097	http://who.int/icd#O90
+http://id.who.int/icd/entity/1694355083	http://who.int/icd#P05.9	"Slow fetal growth, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1705439408	http://who.int/icd#P05
+http://id.who.int/icd/entity/899092106	http://who.int/icd#2003_984d1092_4b56_4a7c_89ea_b16a49816573	"Unintentional Causes: Contact with person, animal or plant: Struck, kicked, bumped: Unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/407779436	http://who.int/icd#2087_984d1092_4b56_4a7c_89ea_b16a49816573	"Unintentional Causes: Contact with person, animal or plant: Crushed, stepped on: Unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/980007861	http://who.int/icd#2183_984d1092_4b56_4a7c_89ea_b16a49816573	"Unintentional Causes: Contact with person, animal or plant: Bitten, scratched or stung (non-venomous):Unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/866137013	http://who.int/icd#2267_984d1092_4b56_4a7c_89ea_b16a49816573	"Unintentional Causes: Contact with person, animal or plant: Envenomation: Unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1785966143	http://who.int/icd#5795_984d1092_4b56_4a7c_89ea_b16a49816573	"Intentional Self Harm: Contact with person, animal or plant: Struck, kicked, bumped: Unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1105107569	http://who.int/icd#5879_984d1092_4b56_4a7c_89ea_b16a49816573	"Intentional Self Harm: Contact with person, animal or plant: Crushed, stepped on: Unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/345825198	http://who.int/icd#5975_984d1092_4b56_4a7c_89ea_b16a49816573	"Intentional Self Harm: Contact with person, animal or plant: Bitten, scratched or stung (non-venomous):Unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/110246405	http://who.int/icd#6059_984d1092_4b56_4a7c_89ea_b16a49816573	"Intentional Self Harm: Contact with person, animal or plant: Envenomation: Unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1380519040	http://who.int/icd#9515_984d1092_4b56_4a7c_89ea_b16a49816573	"Assault: Contact with person, animal or plant: Struck, kicked, bumped: Unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/150338658	http://who.int/icd#9599_984d1092_4b56_4a7c_89ea_b16a49816573	"Assault: Contact with person, animal or plant: Crushed, stepped on: Unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1855813641	http://who.int/icd#9695_984d1092_4b56_4a7c_89ea_b16a49816573	"Assault: Contact with person, animal or plant: Bitten, scratched or stung (non-venomous):Unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/589035451	http://who.int/icd#9779_984d1092_4b56_4a7c_89ea_b16a49816573	"Assault: Contact with person, animal or plant: Envenomation: Unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/617112004	http://who.int/icd#13235_984d1092_4b56_4a7c_89ea_b16a49816573	"Undetermined intent: Contact with person, animal or plant: Struck, kicked, bumped: Unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1947259232	http://who.int/icd#13319_984d1092_4b56_4a7c_89ea_b16a49816573	"Undetermined intent: Contact with person, animal or plant: Crushed, stepped on: Unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1949161063	http://who.int/icd#13415_984d1092_4b56_4a7c_89ea_b16a49816573	"Undetermined intent: Contact with person, animal or plant: Bitten, scratched or stung (non-venomous): Unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/781264517	http://who.int/icd#13499_984d1092_4b56_4a7c_89ea_b16a49816573	"Undetermined intent: Contact with person, animal or plant: Envenomation: Unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1746254184	http://who.int/icd#16943_984d1092_4b56_4a7c_89ea_b16a49816573	"Legal/War: Contact with person, animal or plant: Struck, kicked, bumped: Unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1488435211	http://who.int/icd#17027_984d1092_4b56_4a7c_89ea_b16a49816573	"Legal/War: Contact with person, animal or plant: Crushed, stepped on: Unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/2056272850	http://who.int/icd#17123_984d1092_4b56_4a7c_89ea_b16a49816573	"Legal/War: Contact with person, animal or plant: Bitten, scratched or stung (non-venomous): Unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1845988548	http://who.int/icd#17207_984d1092_4b56_4a7c_89ea_b16a49816573	"Legal/War: Contact with person, animal or plant: Envenomation: Unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/690485075	http://who.int/icd#20639_984d1092_4b56_4a7c_89ea_b16a49816573	"Intent pending: Contact with person, animal or plant: Struck, kicked, bumped: Unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1250174575	http://who.int/icd#20723_984d1092_4b56_4a7c_89ea_b16a49816573	"Intent pending: Contact with person, animal or plant: Crushed, stepped on: Unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1251391958	http://who.int/icd#20819_984d1092_4b56_4a7c_89ea_b16a49816573	"Intent pending: Contact with person, animal or plant: Bitten, scratched or stung (non-venomous): Unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/691366124	http://who.int/icd#20903_984d1092_4b56_4a7c_89ea_b16a49816573	"Intent pending: Contact with person, animal or plant: Envenomation: Unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/28992002	http://who.int/icd#17089_378b7cb7_5b17_422d_b68b_e793f5e48664	"Surgical procedure, type unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1360531959	http://who.int/icd#9334_1c662c6b_68f9_42a4_b7d3_90798bfc2caa	Complementary & Traditional Medicines unspecified	NewInICD11	FALSE		
+http://id.who.int/icd/entity/312422471	http://who.int/icd#Y41.9	"Systemic anti-infective and antiparasitic, unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/241694918	http://who.int/icd#Y40.9	"Systemic antibiotic, unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/266361082	http://who.int/icd#Y43.9	"Primarily systemic agent, unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1734513339	http://who.int/icd#Y49.9	"Psychotropic drug, unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/387306003	http://who.int/icd#Y48.4	"Anaesthetic, unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/677503289	http://who.int/icd#Y45.9	"Analgesic, antipyretic and anti-inflammatory drug, unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/891193736	http://who.int/icd#Y47.9	"Sedative, hypnotic and antianxiety drug, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1725881981	http://who.int/icd#Y47
+http://id.who.int/icd/entity/511564791	http://who.int/icd#Y50.9	"Central nervous system stimulant, unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/536509385	http://who.int/icd#Y53.9	"Agent primarily affecting the gastrointestinal system, unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/621062839	http://who.int/icd#Y57.9	"Drug or medicament, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/823891558	http://who.int/icd#Y57
+http://id.who.int/icd/entity/972841526	http://who.int/icd#Y56.9	"Topical agent, unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/2004398476	http://who.int/icd#Y59.9	"Vaccine or biological substance, unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/199181068	http://who.int/icd#Y84.9	"Medical procedure, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1169089198	http://who.int/icd#Y84
+http://id.who.int/icd/entity/816198218	http://who.int/icd#Y83.9	"Surgical procedure, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/910192954	http://who.int/icd#Y83
+http://id.who.int/icd/entity/2130715202	http://who.int/icd#22931_984d1092_4b56_4a7c_89ea_b16a49816573	Intended result unspecified	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1616505265	http://who.int/icd#D81.9	"Combined immunodeficiency, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1616506198	http://who.int/icd#D81
+http://id.who.int/icd/entity/1409116339	http://who.int/icd#D50.9	"Iron deficiency anaemia, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1302819487	http://who.int/icd#7577_1c662c6b_68f9_42a4_b7d3_90798bfc2caa
+http://id.who.int/icd/entity/1325768756	http://who.int/icd#D51.9	"Vitamin B12 deficiency anaemia, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/2006111634	http://who.int/icd#7667_1c662c6b_68f9_42a4_b7d3_90798bfc2caa
+http://id.who.int/icd/entity/1317142540	http://who.int/icd#D52.9	"Folate deficiency anaemia, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/351050142	http://who.int/icd#D52
+http://id.who.int/icd/entity/1383778445	http://who.int/icd#D53.9	"Nutritional anaemia, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/940529403	http://who.int/icd#7802_1c662c6b_68f9_42a4_b7d3_90798bfc2caa
+http://id.who.int/icd/entity/989332176	http://who.int/icd#D59.9	"Acquired haemolytic anaemia, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1858490295	http://who.int/icd#D59
+http://id.who.int/icd/entity/881811838	http://who.int/icd#P55.9	"Haemolytic disease of fetus and newborn, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1241014644	http://who.int/icd#P55
+http://id.who.int/icd/entity/1979412814	http://who.int/icd#D55.9	"Haemolytic anaemia due to enzyme disorder, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/916474226	http://who.int/icd#7862_1c662c6b_68f9_42a4_b7d3_90798bfc2caa
+http://id.who.int/icd/entity/1954337138	http://who.int/icd#D56.9	"Thalassaemia, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/330259189	http://who.int/icd#D56
+http://id.who.int/icd/entity/94904506	http://who.int/icd#M88.9	"Paget disease of bone, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/74436573	http://who.int/icd#7380_98ae51f9_6af8_41ef_b732_06c5fb864693
+http://id.who.int/icd/entity/137105079	http://who.int/icd#7967_1c662c6b_68f9_42a4_b7d3_90798bfc2caa	"Sickle-cell disorders, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1228406703	http://who.int/icd#D74.9	"Methaemoglobinaemia, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/72291782	http://who.int/icd#6699_e9c55f4e_825c_45d7_ba2c_0fdc673d688a
+http://id.who.int/icd/entity/1797727963	http://who.int/icd#8132_1c662c6b_68f9_42a4_b7d3_90798bfc2caa	"Hereditary haemolytic anaemias due to membrane defects, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1674776032	http://who.int/icd#D60.9	"Acquired pure red cell aplasia, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/45753120	http://who.int/icd#D60
+http://id.who.int/icd/entity/2133575009	http://who.int/icd#D61.9	"Aplastic anaemia, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/502834133	http://who.int/icd#8522_1c662c6b_68f9_42a4_b7d3_90798bfc2caa
+http://id.who.int/icd/entity/1496177822	http://who.int/icd#D64.9	"Anaemia, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/145468382	http://who.int/icd#D60-D64
+http://id.who.int/icd/entity/523365357	http://who.int/icd#6516_712a6f06_71f2_48d0_919c_2b3cb8b7172d	"Transient neonatal thrombocytopenia, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1584806391	http://who.int/icd#C84.9	"Mature T/NK-cell lymphoma, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/958960361	http://who.int/icd#C84
+http://id.who.int/icd/entity/64837151	http://who.int/icd#C82.2	"Follicular lymphoma grade 3, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/797822185	http://who.int/icd#C82
+http://id.who.int/icd/entity/2020614154	http://who.int/icd#C81.9	"Hodgkin lymphoma, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1528863768	http://who.int/icd#C81
+http://id.who.int/icd/entity/149518956	http://who.int/icd#D46.4	"Refractory anaemia, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1147802348	http://who.int/icd#D46
+http://id.who.int/icd/entity/1964338056	http://who.int/icd#C93.9	"Monocytic leukaemia, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/486754660	http://who.int/icd#C93
+http://id.who.int/icd/entity/292899445	http://who.int/icd#C88.9	"Malignant immunoproliferative disease, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/820827988	http://who.int/icd#C88
+http://id.who.int/icd/entity/1116664184	http://who.int/icd#C85.9	"Non-Hodgkin lymphoma, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1550016381	http://who.int/icd#C85
+http://id.who.int/icd/entity/1695500471	http://who.int/icd#C83.9	"Non-follicular (diffuse) lymphoma, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1254490493	http://who.int/icd#C83
+http://id.who.int/icd/entity/1751778105	http://who.int/icd#C91.9	"Lymphoid leukaemia, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/216388623	http://who.int/icd#C91
+http://id.who.int/icd/entity/1777181447	http://who.int/icd#C92.9	"Myeloid leukaemia, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/2018018546	http://who.int/icd#C92
+http://id.who.int/icd/entity/1917751023	http://who.int/icd#D73.9	"Disease of spleen, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/567425990	http://who.int/icd#D73
+http://id.who.int/icd/entity/1570563531	http://who.int/icd#5907_e9c55f4e_825c_45d7_ba2c_0fdc673d688a	"Constitutional anaemias due to iron metabolism disorder, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/723909072	http://who.int/icd#6160_e9c55f4e_825c_45d7_ba2c_0fdc673d688a	"Constitutional megaloblastic anaemia, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1560104539	http://who.int/icd#D53.1	"Megaloblastic anaemia, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/93181941	http://who.int/icd#5819_e9c55f4e_825c_45d7_ba2c_0fdc673d688a
+http://id.who.int/icd/entity/889935361	http://who.int/icd#550_8e8fddc4_a502_4bf4_b128_ebfca1d73928	"Constitutional anaemia, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/588397794	http://who.int/icd#605_8e8fddc4_a502_4bf4_b128_ebfca1d73928	"Acquired anaemia, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1335794940	http://who.int/icd#P12.9	"Birth injury to scalp, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1099770685	http://who.int/icd#P12
+http://id.who.int/icd/entity/1076411239	http://who.int/icd#132_8e8fddc4_a502_4bf4_b128_ebfca1d73928	"Parasitic infestation of eyelid in leishmaniasis, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/200638492	http://who.int/icd#225_0b613046_a993_48cb_b59c_d8118caee0b7	"Squamous cell carcinoma of penis, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1071229460	http://who.int/icd#1560_81655b5c_debe_4590_b8ad_ea6448685723	Depth of burn unspecified	NewInICD11	FALSE		
+http://id.who.int/icd/entity/479687773	http://who.int/icd#9285_2494a080_32f2_4041_86cd_e358ae853fc5	"Infantile haemangioma, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/107490168	http://who.int/icd#N64.9	"Disorder of breast, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1836788232	http://who.int/icd#N64
+http://id.who.int/icd/entity/1526439834	http://who.int/icd#N99.9	"Postprocedural disorder of genitourinary system, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1369041370	http://who.int/icd#N99
+http://id.who.int/icd/entity/1823296199	http://who.int/icd#M81.9	"Osteoporosis, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1942770042	http://who.int/icd#M81.3
+http://id.who.int/icd/entity/1402181248	http://who.int/icd#N81.4	"Uterovaginal prolapse, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/148580117	http://who.int/icd#N81
+http://id.who.int/icd/entity/1058807383	http://who.int/icd#N81.9	"Female genital prolapse, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/148580117	http://who.int/icd#N81
+http://id.who.int/icd/entity/1717076572	http://who.int/icd#13249_85f9e494_34d2_4e3f_b182_f005b6f4e5a4	Familial glomerular disease associated with proteinuria or nephrotic syndrome; unspecified	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1526230845	http://who.int/icd#N25.9	"Disorder associated with impaired kidney function, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1940602439	http://who.int/icd#N25
+http://id.who.int/icd/entity/2143638305	http://who.int/icd#4026_07368d94_d861_421b_b2a0_264c49b96108	"Renal tubular acidosis, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/812913080	http://who.int/icd#N71.9	"Inflammatory disease of uterus, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1488350448	http://who.int/icd#N71
+http://id.who.int/icd/entity/755726601	http://who.int/icd#N73.9	"Female pelvic inflammatory disease, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/2001345950	http://who.int/icd#3132_890e173e_8bc7_44a1_9345_a738531fdd8e
+http://id.who.int/icd/entity/617561270	http://who.int/icd#N73.5	"Female pelvic peritonitis, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/2001345950	http://who.int/icd#3132_890e173e_8bc7_44a1_9345_a738531fdd8e
+http://id.who.int/icd/entity/6873273	http://who.int/icd#14641_b047675b_e7d6_403d_8ca9_f59ab5570ff4	"Calculus of kidney, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/2097051330	http://who.int/icd#N20.9	"Urinary calculus of upper urinary tract, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/295907514	http://who.int/icd#N20
+http://id.who.int/icd/entity/602199768	http://who.int/icd#N80.9	"Endometriosis, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1838213761	http://who.int/icd#N80
+http://id.who.int/icd/entity/1256307883	http://who.int/icd#N89.9	"Noninflammatory disorder of vagina, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/106734019	http://who.int/icd#N89
+http://id.who.int/icd/entity/1444508716	http://who.int/icd#N88.9	"Noninflammatory disorder of cervix uteri, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1662479447	http://who.int/icd#N88
+http://id.who.int/icd/entity/98750249	http://who.int/icd#N85.9	"Noninflammatory disorder of uterus, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/261678206	http://who.int/icd#N85
+http://id.who.int/icd/entity/576943848	http://who.int/icd#N83.9	"Noninflammatory disorder of ovary, fallopian tube and broad ligament, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/423475840	http://who.int/icd#N83
+http://id.who.int/icd/entity/872347111	http://who.int/icd#N90.9	"Noninflammatory disorder of vulva and perineum, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/978690714	http://who.int/icd#N90
+http://id.who.int/icd/entity/445864317	http://who.int/icd#5832_599a597b_6a33_44a6_bf97_915e75834e46	"Amenorrhea, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/846812633	http://who.int/icd#N93.9	"Abnormal uterine and vaginal bleeding, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/147967528	http://who.int/icd#2712_890e173e_8bc7_44a1_9345_a738531fdd8e
+http://id.who.int/icd/entity/1174624027	http://who.int/icd#N98.9	"Complication associated with medically assisted reproduction, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/886187088	http://who.int/icd#N98
+http://id.who.int/icd/entity/1953051099	http://who.int/icd#N94.6	"Dysmenorrhoea, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1024877043	http://who.int/icd#N94
+http://id.who.int/icd/entity/368634904	http://who.int/icd#N95.9	"Menopausal and perimenopausal disorder, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1482533991	http://who.int/icd#N95
+http://id.who.int/icd/entity/143099047	http://who.int/icd#N97.9	"Female infertility, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1237004558	http://who.int/icd#N97
+http://id.who.int/icd/entity/333573890	http://who.int/icd#15422_b047675b_e7d6_403d_8ca9_f59ab5570ff4	"Ejaculation disorders, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1541639653	http://who.int/icd#15301_b047675b_e7d6_403d_8ca9_f59ab5570ff4	"Torsion of testis, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/38012903	http://who.int/icd#N43.3	"Hydrocele, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1323357778	http://who.int/icd#N43
+http://id.who.int/icd/entity/31315163	http://who.int/icd#N42.9	"Disorder of prostate, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/732634052	http://who.int/icd#N42
+http://id.who.int/icd/entity/5928165	http://who.int/icd#N41.9	"Inflammatory disease of prostate, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1594247995	http://who.int/icd#N41
+http://id.who.int/icd/entity/213426005	http://who.int/icd#N50.9	"Disorder of male genital organs, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1837682360	http://who.int/icd#N50
+http://id.who.int/icd/entity/1767841432	http://who.int/icd#N48.9	"Disorder of penis, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/885653625	http://who.int/icd#N48
+http://id.who.int/icd/entity/227890885	http://who.int/icd#15664_b047675b_e7d6_403d_8ca9_f59ab5570ff4	"Erectile dysfunction, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/712605771	http://who.int/icd#15576_b047675b_e7d6_403d_8ca9_f59ab5570ff4	"Priapism, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1880923508	http://who.int/icd#N31.9	"Neuromuscular dysfunction of bladder, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/590198069	http://who.int/icd#N31
+http://id.who.int/icd/entity/1826903539	http://who.int/icd#N30.9	"Infectious cystitis, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1460844182	http://who.int/icd#14927_b047675b_e7d6_403d_8ca9_f59ab5570ff4
+http://id.who.int/icd/entity/1864494151	http://who.int/icd#31240_b047675b_e7d6_403d_8ca9_f59ab5570ff4	"Non-infectious cystitis, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1256344590	http://who.int/icd#N35.9	"Urethral stricture, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/611219038	http://who.int/icd#N35
+http://id.who.int/icd/entity/1232838450	http://who.int/icd#N34.3	"Urethral syndrome, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1092991948	http://who.int/icd#N34
+http://id.who.int/icd/entity/98647952	http://who.int/icd#N39.9	"Disorder of urinary system, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/766129123	http://who.int/icd#N39
+http://id.who.int/icd/entity/414753497	http://who.int/icd#15158_b047675b_e7d6_403d_8ca9_f59ab5570ff4	"Urethral fistula, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1050394217	http://who.int/icd#N82.9	"Female genital tract fistula, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/2088138730	http://who.int/icd#N82
+http://id.who.int/icd/entity/1485818432	http://who.int/icd#31559_b047675b_e7d6_403d_8ca9_f59ab5570ff4	"Fistula of the urogenital tract, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1905999180	http://who.int/icd#N32.9	"Bladder disorder, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/4407978	http://who.int/icd#N30-N39
+http://id.who.int/icd/entity/920337757	http://who.int/icd#31570_b047675b_e7d6_403d_8ca9_f59ab5570ff4	"Acute kidney injury, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/549607356	http://who.int/icd#31625_b047675b_e7d6_403d_8ca9_f59ab5570ff4	"Acute kidney disease, unspecified"	NewInICD11	TRUE	http://id.who.int/icd/entity/1711113465	http://who.int/icd#N17
+http://id.who.int/icd/entity/959295853	http://who.int/icd#N18.9	"Chronic kidney disease, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/412389819	http://who.int/icd#N18
+http://id.who.int/icd/entity/1007515933	http://who.int/icd#3773_07368d94_d861_421b_b2a0_264c49b96108	"Renal osteodystrophy, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1323357657	http://who.int/icd#3861_07368d94_d861_421b_b2a0_264c49b96108	"Calcification, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/618638812	http://who.int/icd#S48.9	"Traumatic amputation of shoulder and upper arm, level unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1932853630	http://who.int/icd#S48
+http://id.who.int/icd/entity/1361186592	http://who.int/icd#S40.9	"Superficial injury of shoulder and upper arm, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/2108852140	http://who.int/icd#S40
+http://id.who.int/icd/entity/885362413	http://who.int/icd#S58.9	"Traumatic amputation of forearm, level unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/619727205	http://who.int/icd#S58
+http://id.who.int/icd/entity/2051104081	http://who.int/icd#S57.9	"Crushing injury of forearm, part unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1503222823	http://who.int/icd#S57
+http://id.who.int/icd/entity/1312295673	http://who.int/icd#S53.1	"Dislocation of elbow, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1591385934	http://who.int/icd#S53
+http://id.who.int/icd/entity/1094200337	http://who.int/icd#S50.9	"Superficial injury of forearm, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/712495027	http://who.int/icd#S50
+http://id.who.int/icd/entity/1572922514	http://who.int/icd#S51.9	"Open wound of forearm, part unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1329332775	http://who.int/icd#S51
+http://id.who.int/icd/entity/419350866	http://who.int/icd#T13.9	"Unspecified injury of leg, level unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/507000791	http://who.int/icd#T13
+http://id.who.int/icd/entity/289049839	http://who.int/icd#T13.5	"Injury of unspecified muscle and tendon of leg, level unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/507000791	http://who.int/icd#T13
+http://id.who.int/icd/entity/1704451088	http://who.int/icd#T13.6	"Traumatic amputation of leg, level unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/507000791	http://who.int/icd#T13
+http://id.who.int/icd/entity/377048964	http://who.int/icd#T13.1	"Open wound of leg, level unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/507000791	http://who.int/icd#T13
+http://id.who.int/icd/entity/1658068859	http://who.int/icd#T13.2	"Dislocation, sprain and strain of unspecified joint and ligament of leg, level unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/507000791	http://who.int/icd#T13
+http://id.who.int/icd/entity/127914735	http://who.int/icd#T13.3	"Injury of unspecified nerve of leg, level unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/507000791	http://who.int/icd#T13
+http://id.who.int/icd/entity/1953579387	http://who.int/icd#T13.4	"Injury of unspecified blood vessel of leg, level unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/507000791	http://who.int/icd#T13
+http://id.who.int/icd/entity/1932689938	http://who.int/icd#T13.0	"Superficial injury of leg, level unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/507000791	http://who.int/icd#T13
+http://id.who.int/icd/entity/596097044	http://who.int/icd#T14.9	"Injury, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1842783299	http://who.int/icd#T14
+http://id.who.int/icd/entity/1762535878	http://who.int/icd#T11.4	"Injury of unspecified blood vessel of arm, level unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/266250940	http://who.int/icd#T11
+http://id.who.int/icd/entity/450935378	http://who.int/icd#T11.3	"Injury of unspecified nerve of arm, level unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/266250940	http://who.int/icd#T11
+http://id.who.int/icd/entity/2028516527	http://who.int/icd#T11.6	"Traumatic amputation of arm, level unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/266250940	http://who.int/icd#T11
+http://id.who.int/icd/entity/205907024	http://who.int/icd#T11.5	"Injury of unspecified muscle and tendon of arm, level unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/266250940	http://who.int/icd#T11
+http://id.who.int/icd/entity/92381677	http://who.int/icd#T11.9	"Unspecified injury of arm, level unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/266250940	http://who.int/icd#T11
+http://id.who.int/icd/entity/1850600111	http://who.int/icd#T11.0	"Superficial injury of arm, level unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/266250940	http://who.int/icd#T11
+http://id.who.int/icd/entity/2141943748	http://who.int/icd#T11.2	"Dislocation, sprain and strain of unspecified joint and ligament of arm, level unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/266250940	http://who.int/icd#T11
+http://id.who.int/icd/entity/184952635	http://who.int/icd#T11.1	"Open wound of arm, level unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/266250940	http://who.int/icd#T11
+http://id.who.int/icd/entity/1860282102	http://who.int/icd#T09.1	"Open wound of trunk, level unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/195717988	http://who.int/icd#T09.0	"Superficial injury of trunk, level unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1453089907	http://who.int/icd#T09
+http://id.who.int/icd/entity/2131180445	http://who.int/icd#T09.3	"Injury of spinal cord, level unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1453089907	http://who.int/icd#T09
+http://id.who.int/icd/entity/487535970	http://who.int/icd#T09.6	"Traumatic amputation of trunk, level unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1617305632	http://who.int/icd#T09.9	"Unspecified injury of trunk, level unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1453089907	http://who.int/icd#T09
+http://id.who.int/icd/entity/763759879	http://who.int/icd#S21.9	"Open wound of thorax, part unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/857209897	http://who.int/icd#S21
+http://id.who.int/icd/entity/82570174	http://who.int/icd#S68.9	"Traumatic amputation of wrist and hand, level unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/591425200	http://who.int/icd#S68
+http://id.who.int/icd/entity/1897285954	http://who.int/icd#S60.9	"Superficial injury of wrist and hand, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/768075878	http://who.int/icd#S60
+http://id.who.int/icd/entity/1844347331	http://who.int/icd#S61.9	"Open wound of wrist and hand, part unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1217144308	http://who.int/icd#S61
+http://id.who.int/icd/entity/253661935	http://who.int/icd#M90.39	Osteonecrosis in caisson disease T70.3 : site unspecified	IsInICD10	FALSE		
+http://id.who.int/icd/entity/2032509900	http://who.int/icd#T70.9	"Effect of air pressure and water pressure, unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/2023883764	http://who.int/icd#T73.9	"Effect of deprivation, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/903250370	http://who.int/icd#T73
+http://id.who.int/icd/entity/1380381115	http://who.int/icd#T67.9	"Effect of heat and light, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1699744436	http://who.int/icd#T67
+http://id.who.int/icd/entity/1535292422	http://who.int/icd#T67.5	"Heat exhaustion, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1699744436	http://who.int/icd#T67
+http://id.who.int/icd/entity/3861126	http://who.int/icd#T69.9	"Effect of reduced temperature, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/2104676964	http://who.int/icd#T69
+http://id.who.int/icd/entity/1995626271	http://who.int/icd#T78.2	"Anaphylactic shock, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1341937641	http://who.int/icd#T78
+http://id.who.int/icd/entity/1616349471	http://who.int/icd#T78.4	"Allergy, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1341937641	http://who.int/icd#T78
+http://id.who.int/icd/entity/215482680	http://who.int/icd#T78.9	"Adverse effect, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1341937641	http://who.int/icd#T78
+http://id.who.int/icd/entity/1138455222	http://who.int/icd#T74.9	"Maltreatment syndrome, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1178079830	http://who.int/icd#T74
+http://id.who.int/icd/entity/22061269	http://who.int/icd#S10.9	"Superficial injury of neck, part unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1374426728	http://who.int/icd#S10
+http://id.who.int/icd/entity/497576022	http://who.int/icd#S11.9	"Open wound of neck, part unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/883416062	http://who.int/icd#S11
+http://id.who.int/icd/entity/975819157	http://who.int/icd#S17.9	"Crushing injury of neck, part unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/570590716	http://who.int/icd#S17
+http://id.who.int/icd/entity/463062896	http://who.int/icd#S88.9	"Traumatic amputation of lower leg, level unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/619212116	http://who.int/icd#S88
+http://id.who.int/icd/entity/1922870547	http://who.int/icd#S81.9	"Open wound of lower leg, part unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1327769104	http://who.int/icd#S81
+http://id.who.int/icd/entity/1852073364	http://who.int/icd#S80.9	"Superficial injury of lower leg, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/711977862	http://who.int/icd#S80
+http://id.who.int/icd/entity/157502045	http://who.int/icd#T00.9	"Multiple superficial injuries, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1028665137	http://who.int/icd#T00
+http://id.who.int/icd/entity/865966883	http://who.int/icd#T04.9	"Multiple crushing injuries, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/974384220	http://who.int/icd#T04
+http://id.who.int/icd/entity/149219939	http://who.int/icd#T03.9	"Multiple dislocations, sprains and strains, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1241350096	http://who.int/icd#T03
+http://id.who.int/icd/entity/362513116	http://who.int/icd#T01.9	"Multiple open wounds, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1478222501	http://who.int/icd#T01
+http://id.who.int/icd/entity/795169698	http://who.int/icd#T05.9	"Multiple traumatic amputations, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1599611342	http://who.int/icd#T05
+http://id.who.int/icd/entity/61869783	http://who.int/icd#T88.9	"Complication of surgical and medical care, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/529603602	http://who.int/icd#T88
+http://id.who.int/icd/entity/1950410822	http://who.int/icd#T62.9	"Toxic effect: Noxious substance eaten as food, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/123208781	http://who.int/icd#T62
+http://id.who.int/icd/entity/1765769467	http://who.int/icd#T60.9	"Toxic effect: Pesticide, unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1676621016	http://who.int/icd#T54.9	"Toxic effect: Corrosive substance, unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1486243222	http://who.int/icd#T53.9	"Toxic effect: Halogen derivative of aliphatic and aromatic hydrocarbons, unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1148095767	http://who.int/icd#T52.9	"Toxic effect: Organic solvent, unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/806653909	http://who.int/icd#T59.9	"Toxic effect: Gases, fumes and vapours, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/2059597233	http://who.int/icd#T59
+http://id.who.int/icd/entity/1651021032	http://who.int/icd#T57.9	"Toxic effect: Inorganic substance, unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/2123390057	http://who.int/icd#T56.9	"Toxic effect: Metal, unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1172909353	http://who.int/icd#T51.9	"Toxic effect: Alcohol, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1950708583	http://who.int/icd#T51
+http://id.who.int/icd/entity/1346913651	http://who.int/icd#T39.9	"Poisoning: Nonopioid analgesic, antipyretic and antirheumatic, unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/516724431	http://who.int/icd#T36.9	"Poisoning: Systemic antibiotic, unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/36986446	http://who.int/icd#T37.9	"Poisoning: Systemic anti-infective and antiparasitic, unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/537832676	http://who.int/icd#T49.9	"Poisoning: Topical agent, unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1217160871	http://who.int/icd#T43.9	"Poisoning: Psychotropic drug, unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/964462129	http://who.int/icd#T41.4	"Poisoning: Anaesthetic, unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1280734960	http://who.int/icd#T42.7	"Poisoning: Antiepileptic and sedative-hypnotic drugs, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1462594433	http://who.int/icd#T42
+http://id.who.int/icd/entity/1920120793	http://who.int/icd#T47.9	"Poisoning: Agent primarily affecting the gastrointestinal system, unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1863180134	http://who.int/icd#T45.9	"Poisoning: Primarily systemic and haematological agent, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/616822805	http://who.int/icd#T45
+http://id.who.int/icd/entity/927767067	http://who.int/icd#S05.9	"Injury of eye and orbit, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1679904912	http://who.int/icd#S05
+http://id.who.int/icd/entity/204860251	http://who.int/icd#S02.9	"Fracture of skull and facial bones, part unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/399491868	http://who.int/icd#S02
+http://id.who.int/icd/entity/290096100	http://who.int/icd#S00.9	"Superficial injury of head, part unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/103374449	http://who.int/icd#S00
+http://id.who.int/icd/entity/229788517	http://who.int/icd#S01.9	"Open wound of head, part unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1667404773	http://who.int/icd#S01
+http://id.who.int/icd/entity/531713679	http://who.int/icd#S06.39	Diffuse brain injury : coma duration unspecified	IsInICD10	FALSE		
+http://id.who.int/icd/entity/402745690	http://who.int/icd#S06.09	Concussion : coma duration unspecified	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1671082113	http://who.int/icd#S06.49	Brain crushing injury : coma duration unspecified	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1215563416	http://who.int/icd#S06.29	Brain contusion : coma duration unspecified	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1338253635	http://who.int/icd#S06.19	Traumatic cerebral oedema : coma duration unspecified	IsInICD10	FALSE		
+http://id.who.int/icd/entity/877124783	http://who.int/icd#S06.89	Traumatic intracerebral haemorrhage : coma duration unspecified	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1680512852	http://who.int/icd#S06.79	Traumatic subarachnoid haemorrhage : coma duration unspecified	IsInICD10	FALSE		
+http://id.who.int/icd/entity/708047526	http://who.int/icd#S07.9	"Crushing injury of head, part unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1976028645	http://who.int/icd#S07
+http://id.who.int/icd/entity/560260791	http://who.int/icd#S30.9	"Superficial injury of abdomen, lower back and pelvis, part unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/26835366	http://who.int/icd#S30
+http://id.who.int/icd/entity/1728867446	http://who.int/icd#S98.4	"Traumatic amputation of foot, level unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1932338507	http://who.int/icd#S98
+http://id.who.int/icd/entity/2122204835	http://who.int/icd#S90.9	"Superficial injury of ankle and foot, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/2108335005	http://who.int/icd#S90
+http://id.who.int/icd/entity/351389839	http://who.int/icd#S78.9	"Traumatic amputation of hip and thigh, level unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1954883241	http://who.int/icd#S78
+http://id.who.int/icd/entity/1628203635	http://who.int/icd#S70.9	"Superficial injury of hip and thigh, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/2046992511	http://who.int/icd#S70
+http://id.who.int/icd/entity/570431532	http://who.int/icd#T17.9	"Foreign body in respiratory tract, part unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/427553982	http://who.int/icd#T17
+http://id.who.int/icd/entity/1820642194	http://who.int/icd#T18.9	"Foreign body in alimentary tract, part unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1678959104	http://who.int/icd#T18
+http://id.who.int/icd/entity/1887175441	http://who.int/icd#T19.9	"Foreign body in genitourinary tract, part unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1065316499	http://who.int/icd#T15.9	"Foreign body on external eye, part unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/223307460	http://who.int/icd#T27.3	"Burn of respiratory tract, part unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/516674409	http://who.int/icd#T27
+http://id.who.int/icd/entity/168601001	http://who.int/icd#T27.7	"Chemical burn of respiratory tract, part unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/516674409	http://who.int/icd#T27
+http://id.who.int/icd/entity/248952320	http://who.int/icd#T26.9	"Chemical burn of eye and adnexa, part unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/2071994109	http://who.int/icd#T26
+http://id.who.int/icd/entity/1187608368	http://who.int/icd#5445_81655b5c_debe_4590_b8ad_ea6448685723	less than 10% or unspecified	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1399215227	http://who.int/icd#P13.9	"Birth injury to skeleton, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/617014953	http://who.int/icd#P13
+http://id.who.int/icd/entity/1961356730	http://who.int/icd#P15.9	"Birth injury, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/845396137	http://who.int/icd#P15
+http://id.who.int/icd/entity/1746871611	http://who.int/icd#P14.9	"Birth injury to peripheral nervous system, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1462269245	http://who.int/icd#P14
+http://id.who.int/icd/entity/1531177818	http://who.int/icd#6012_712a6f06_71f2_48d0_919c_2b3cb8b7172d	"Birth injury to brachial plexus, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/776336994	http://who.int/icd#P71.9	"Transitory neonatal disorder of calcium and magnesium metabolism, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/516869589	http://who.int/icd#P71
+http://id.who.int/icd/entity/801265246	http://who.int/icd#P72.9	"Transitory neonatal endocrine disorder, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1784913194	http://who.int/icd#P72
+http://id.who.int/icd/entity/1657770264	http://who.int/icd#P20.9	"Intrauterine hypoxia, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1474007427	http://who.int/icd#P20
+http://id.who.int/icd/entity/2117556631	http://who.int/icd#P21.9	"Birth asphyxia, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/848321559	http://who.int/icd#P21
+http://id.who.int/icd/entity/2142304681	http://who.int/icd#P22.9	"Respiratory distress of newborn, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1178406122	http://who.int/icd#P22
+http://id.who.int/icd/entity/1479622762	http://who.int/icd#P24.9	"Neonatal aspiration syndrome, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1352159976	http://who.int/icd#P24
+http://id.who.int/icd/entity/1665675560	http://who.int/icd#P23.9	"Congenital pneumonia, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1853562700	http://who.int/icd#7956_712a6f06_71f2_48d0_919c_2b3cb8b7172d
+http://id.who.int/icd/entity/769222928	http://who.int/icd#8076_712a6f06_71f2_48d0_919c_2b3cb8b7172d	"Early-onset pneumonia, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/459890113	http://who.int/icd#8256_712a6f06_71f2_48d0_919c_2b3cb8b7172d	"Late-onset pneumonia, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/197852011	http://who.int/icd#P29.9	"Cardiovascular disorder originating in the perinatal period, unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/389166060	http://who.int/icd#P28.9	"Respiratory condition of newborn, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1499207509	http://who.int/icd#P28
+http://id.who.int/icd/entity/556661123	http://who.int/icd#P81.9	"Disturbance of temperature regulation of newborn, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1319339568	http://who.int/icd#P81
+http://id.who.int/icd/entity/1037381890	http://who.int/icd#P80.9	"Hypothermia of newborn, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/736644026	http://who.int/icd#P80
+http://id.who.int/icd/entity/2072777468	http://who.int/icd#P59.9	"Neonatal jaundice, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1077683407	http://who.int/icd#P59
+http://id.who.int/icd/entity/703596993	http://who.int/icd#P57.9	"Kernicterus, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1478425625	http://who.int/icd#P57
+http://id.who.int/icd/entity/1046467923	http://who.int/icd#P61.9	"Perinatal haematological disorder, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1225491916	http://who.int/icd#P61
+http://id.who.int/icd/entity/678930943	http://who.int/icd#P54.9	"Neonatal haemorrhage, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/749972710	http://who.int/icd#P54
+http://id.who.int/icd/entity/1193335251	http://who.int/icd#6408_712a6f06_71f2_48d0_919c_2b3cb8b7172d	"Neonatal petechiae, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/267784256	http://who.int/icd#P52.9	"Intracranial (nontraumatic) haemorrhage of fetus and newborn, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/974582504	http://who.int/icd#P52
+http://id.who.int/icd/entity/310999169	http://who.int/icd#P50.9	"Fetal blood loss, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/737177485	http://who.int/icd#P50
+http://id.who.int/icd/entity/242331648	http://who.int/icd#P51.9	"Umbilical haemorrhage of newborn, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1320919577	http://who.int/icd#P51
+http://id.who.int/icd/entity/172927986	http://who.int/icd#P96.9	"Condition originating in the perinatal period, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1787321763	http://who.int/icd#P96
+http://id.who.int/icd/entity/1198093927	http://who.int/icd#7812_712a6f06_71f2_48d0_919c_2b3cb8b7172d	"Reactions and intoxications due to drugs, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/816872076	http://who.int/icd#P92.9	"Feeding problem of newborn, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1842061002	http://who.int/icd#P92
+http://id.who.int/icd/entity/825744052	http://who.int/icd#P91.9	"Disturbance of cerebral status of newborn, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/426167863	http://who.int/icd#P91
+http://id.who.int/icd/entity/648172084	http://who.int/icd#4875_2494a080_32f2_4041_86cd_e358ae853fc5	"Eyeball deformity, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1785559210	http://who.int/icd#5655_2494a080_32f2_4041_86cd_e358ae853fc5	"Contracted Socket, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1223600845	http://who.int/icd#5670_2494a080_32f2_4041_86cd_e358ae853fc5	"Soft Tissue Deformity of orbit, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/447377498	http://who.int/icd#552_98ae51f9_6af8_41ef_b732_06c5fb864693	"Exophthalmos due to thyrotoxicosis, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1481450407	http://who.int/icd#4695_2494a080_32f2_4041_86cd_e358ae853fc5	"Proptosis, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1796562198	http://who.int/icd#4740_2494a080_32f2_4041_86cd_e358ae853fc5	"Displacement of eyeball, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/646700348	http://who.int/icd#5880_2494a080_32f2_4041_86cd_e358ae853fc5	"Nonspecific Orbital Inflammation, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/237816107	http://who.int/icd#2775_1c662c6b_68f9_42a4_b7d3_90798bfc2caa	"Secondary non-arteritic ischemic optic neuropathy, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/4935092	http://who.int/icd#6962_1c662c6b_68f9_42a4_b7d3_90798bfc2caa	"Opsoclonus, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1105902037	http://who.int/icd#5807_1c662c6b_68f9_42a4_b7d3_90798bfc2caa	"Intermittent upward gaze deviation, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/2116331172	http://who.int/icd#H50.60	"Mechanical strabismus, unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1890267192	http://who.int/icd#H50.9	"Strabismus, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1242134391	http://who.int/icd#H50
+http://id.who.int/icd/entity/282954592	http://who.int/icd#Q15.9	"Congenital malformation of eye, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1981704094	http://who.int/icd#385_1e4c5207_b1e3_4959_ac0c_d4ff2b8506c1
+http://id.who.int/icd/entity/196791730	http://who.int/icd#H17.9	"Corneal scar and opacity, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1115438392	http://who.int/icd#H17
+http://id.who.int/icd/entity/1161698832	http://who.int/icd#H18.9	"Disorder of cornea, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1058351226	http://who.int/icd#H18
+http://id.who.int/icd/entity/344854472	http://who.int/icd#8880_2494a080_32f2_4041_86cd_e358ae853fc5	"Scleritis and episcleritis in diseases classified elsewhere, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1097141289	http://who.int/icd#H59.40	"Inflammation (infection) of postprocedural bleb, unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/740804082	http://who.int/icd#7560_2494a080_32f2_4041_86cd_e358ae853fc5	"Disorders of conjunctiva in diseases classified elsewhere, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/799188815	http://who.int/icd#H10.3	"Acute conjunctivitis, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/831696556	http://who.int/icd#H10
+http://id.who.int/icd/entity/382051597	http://who.int/icd#H15.9	"Disorder of sclera, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/2045650987	http://who.int/icd#1254_ea0b2e17_d398_4474_8ed0_c2b2ced85d96
+http://id.who.int/icd/entity/1773597483	http://who.int/icd#H31.20	"Hereditary choroidal dystrophy, unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1519857136	http://who.int/icd#H53.149	"Visual discomfort, unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/1045178984	http://who.int/icd#H54.60	"Unqualified visual loss, one eye, unspecified"	IsInICD10	FALSE		
+http://id.who.int/icd/entity/193684621	http://who.int/icd#H66.4	"Suppurative otitis media, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1528565412	http://who.int/icd#H66
+http://id.who.int/icd/entity/1315633852	http://who.int/icd#H93.9	"Disorder of ear, unspecified"	IsInICD10	TRUE	http://id.who.int/icd/entity/1769556904	http://who.int/icd#H93
+http://id.who.int/icd/entity/373090810	http://who.int/icd#14430_fba2e671_3f12_4bbe_b446_34f816e9708a	"Neoplasms of uncertain behaviour of respiratory organ, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1833298565	http://who.int/icd#14325_fba2e671_3f12_4bbe_b446_34f816e9708a	"Neoplasms of uncertain behaviour of digestive organ, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1033919782	http://who.int/icd#14505_fba2e671_3f12_4bbe_b446_34f816e9708a	"Neoplasms of uncertain behaviour of female genital organ, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/856638125	http://who.int/icd#14565_fba2e671_3f12_4bbe_b446_34f816e9708a	"Neoplasms of uncertain behaviour of male genital organ, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/774095550	http://who.int/icd#14670_fba2e671_3f12_4bbe_b446_34f816e9708a	"Neoplasms of uncertain behaviour of urinary organ, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1919576533	http://who.int/icd#15195_fba2e671_3f12_4bbe_b446_34f816e9708a	"Neoplasms of unknown behaviour of digestive organ, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1622695161	http://who.int/icd#15300_fba2e671_3f12_4bbe_b446_34f816e9708a	"Neoplasms of unknown behaviour of respiratory organ, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1501848078	http://who.int/icd#15375_fba2e671_3f12_4bbe_b446_34f816e9708a	"Neoplasms of unknown behaviour of female genital organ, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/509324031	http://who.int/icd#15435_fba2e671_3f12_4bbe_b446_34f816e9708a	"Neoplasms of unknown behaviour of male genital organ, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1056109777	http://who.int/icd#15540_fba2e671_3f12_4bbe_b446_34f816e9708a	"Neoplasms of unknown behaviour of urinary organ, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/220229622	http://who.int/icd#9270_ce88e999_ba9e_41b4_8d8a_b63046b652da	"Adenocarcinomas, primary site unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/141534273	http://who.int/icd#645_fba2e671_3f12_4bbe_b446_34f816e9708a	"Adenocarcinoma of biliary tract, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/494884700	http://who.int/icd#675_fba2e671_3f12_4bbe_b446_34f816e9708a	"Unspecified malignant epithelial neoplasm of biliary tract, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/292036203	http://who.int/icd#1005_fba2e671_3f12_4bbe_b446_34f816e9708a	"Adenocarcinomas of intestinal tract, part unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/768529895	http://who.int/icd#1050_fba2e671_3f12_4bbe_b446_34f816e9708a	"Unspecified malignant epithelial neoplasms of intestinal tract, part unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1527789503	http://who.int/icd#405_0b613046_a993_48cb_b59c_d8118caee0b7	"Squamous cell carcinomas of male genital organ, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/124785630	http://who.int/icd#315_0b613046_a993_48cb_b59c_d8118caee0b7	"Melanoma of penis, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/431570294	http://who.int/icd#2640_fba2e671_3f12_4bbe_b446_34f816e9708a	"Squamous cell carcinomas of upper respiratory tract, part unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/603858302	http://who.int/icd#2685_fba2e671_3f12_4bbe_b446_34f816e9708a	"Unspecified malignant epithelial neoplasms of upper respiratory tract, part unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/503923782	http://who.int/icd#2730_fba2e671_3f12_4bbe_b446_34f816e9708a	"Adenocarcinomas of upper respiratory tract, part unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/372586320	http://who.int/icd#2415_fba2e671_3f12_4bbe_b446_34f816e9708a	"Malignant germ cell neoplasms of mediastinum, part unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/522867191	http://who.int/icd#2505_fba2e671_3f12_4bbe_b446_34f816e9708a	"Malignant neuroepitheliomatous neoplasms of mediastinum, part unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1872727171	http://who.int/icd#9345_fba2e671_3f12_4bbe_b446_34f816e9708a	"Cystic, mucinous and serous carcinomas of uterine adnexa, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/350654462	http://who.int/icd#9450_fba2e671_3f12_4bbe_b446_34f816e9708a	"Squamous cell carcinomas of uterine adnexa, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/711641147	http://who.int/icd#9555_fba2e671_3f12_4bbe_b446_34f816e9708a	"Complex mixed and stromal malignant neoplasms of uterine adnexa, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/561125826	http://who.int/icd#19110_588c79f3_df65_43e0_903d_add110bf20de	"Complex mixed and stromal malignant neoplasms of uterus, part unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1291036146	http://who.int/icd#7920_ce88e999_ba9e_41b4_8d8a_b63046b652da	"Squamous cell carcinomas of external lip, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/381989739	http://who.int/icd#8100_ce88e999_ba9e_41b4_8d8a_b63046b652da	"Squamous cell carcinomas of anterior two-thirds of tongue, part unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/683688373	http://who.int/icd#90_0b613046_a993_48cb_b59c_d8118caee0b7	"Chondromatous sarcomas of overlapping lesion of bone and articular cartilage, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/106104429	http://who.int/icd#120_0b613046_a993_48cb_b59c_d8118caee0b7	Extraskeletal myxoid chondrosarcoma of uterus corpus and uterus unspecified	NewInICD11	FALSE		
+http://id.who.int/icd/entity/51652930	http://who.int/icd#6090_fba2e671_3f12_4bbe_b446_34f816e9708a	"Malignant nerve sheath tumours of peripheral nerves of trunk, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/432767601	http://who.int/icd#2595_fba2e671_3f12_4bbe_b446_34f816e9708a	"Unspecified soft tissue tumours and sarcomas of mediastinum, part unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1706460355	http://who.int/icd#22290_588c79f3_df65_43e0_903d_add110bf20de	"Malignant germ cell tumour with pluriglandular involvement, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/309345082	http://who.int/icd#12705_fba2e671_3f12_4bbe_b446_34f816e9708a	"Unspecified malignant epithelial neoplasms with puriglandular involvement, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1516093793	http://who.int/icd#12810_fba2e671_3f12_4bbe_b446_34f816e9708a	"Adenocarcinomas with puriglandular involvement, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1399304005	http://who.int/icd#13020_fba2e671_3f12_4bbe_b446_34f816e9708a	"Malignant paragangliomas and glomus tumours with pluirglandular involvement, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1844177028	http://who.int/icd#13125_fba2e671_3f12_4bbe_b446_34f816e9708a	"Malignant gliomas with pluriglandular involvement, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/1691453096	http://who.int/icd#12915_fba2e671_3f12_4bbe_b446_34f816e9708a	"Malignant miscellaneous tumours with pluriglandular involvement, unspecified"	NewInICD11	FALSE		
+http://id.who.int/icd/entity/591397677	http://who.int/icd#M90.69	Osteitis deformans in neoplastic disease C00-D48 : site unspecified	IsInICD10	FALSE		
