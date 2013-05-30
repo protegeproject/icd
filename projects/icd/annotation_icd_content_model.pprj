@@ -1,7 +1,7 @@
-; Mon Apr 15 17:07:54 PDT 2013
+; Wed May 29 18:21:54 PDT 2013
 ; 
 ;+ (version "3.5")
-;+ (build "Build 649")
+;+ (build "Build 663")
 
 ([annotation_icd_content_model_ProjectKB_Class10] of  String
 
@@ -30,18 +30,18 @@
 
 ([annotation_icd_content_model_ProjectKB_Class15] of  String
 
-	(name "ChangeStatus")
+	(name "Status")
 	(string_value "description"))
 
 ([annotation_icd_content_model_ProjectKB_Class16] of  String
 
-	(name "User")
-	(string_value "name"))
+	(name "ChangeStatus")
+	(string_value "description"))
 
 ([annotation_icd_content_model_ProjectKB_Class17] of  String
 
-	(name "Status")
-	(string_value "description"))
+	(name "User")
+	(string_value "name"))
 
 ([annotation_icd_content_model_ProjectKB_Class18] of  String
 
@@ -6883,6 +6883,9 @@
 	(is_hidden FALSE)
 	(widget_class_name "edu.stanford.smi.protege.widget.InstancesTab"))
 
+([KB_005095_Class4] of  Map
+)
+
 ([KB_690954_Instance_0] of  String
 
 	(name "renaming_namespaces"))
@@ -7270,9 +7273,6 @@
 	(x 0)
 	(y 120))
 
-([KB_985789_Class4] of  Map
-)
-
 ([KB_994297_Instance_0] of  String
 
 	(name "factory_class_name")
@@ -7336,8 +7336,8 @@
 		[changes_ProjectKB_Class30260]
 		[STANDARD_CLASS_FORM_WIDGET]
 		[changes_ProjectKB_Instance_40056]
-		[changes_ProjectKB_Class10086]
 		[changes_ProjectKB_Class30496]
+		[changes_ProjectKB_Class10086]
 		[INSTANCE_ANNOTATION_FORM_WIDGET]
 		[changes_ProjectKB_Instance_51020]
 		[changes_ProjectKB_Instance_81267]
