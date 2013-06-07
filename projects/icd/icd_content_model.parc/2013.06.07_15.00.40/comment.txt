@@ -1,0 +1,2 @@
+Renamed patternActivityClinicalStatus property to temporalPatternAndOnset, and
+PatternActivityClinicalStatusReferenceTerm class to TemporalPatternAndOnsetReferenceTerm.
