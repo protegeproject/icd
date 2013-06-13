@@ -1,5 +1,8 @@
 package edu.stanford.bmir.icd.claml;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class ICDContentModelConstants {
 
     //TODO- what should we do with the default NS?
@@ -55,6 +58,9 @@ public class ICDContentModelConstants {
     public final static String LINEARIZATION_SPECIFICATION_CLASS = NS + "LinearizationSpecification";
     public final static String LINEARIZATION_HISTORIC_SPECIFICATION_CLASS = NS + "HistoricLinearizationSpecification";
 
+	/* Post-Coordination */
+    public final static String POSTCOORDINATION_AXES_SPECIFICATION_CLASS = NS + "PostcoordinationAxesSpecification";
+    
     public final static String EXTERNAL_CAUSES_TOP_CLASS = NS + "XX";
 
 
@@ -129,9 +135,43 @@ public class ICDContentModelConstants {
     public final static String ASSIGNED_PRIMARY_TAG_PROP = NS + "assignedPrimaryTAG";
     public final static String ASSIGNED_SECONDARY_TAG_PROP = NS + "assignedSecondaryTAG";
 	public final static String DISPLAY_STATUS_PROP = NS + "displayStatus";
+	
+	public final static String ALLOWED_POSTCOORDINATION_AXES_PROP = NS + "allowedPostcoordinationAxes";
+	public final static String ALLOWED_POSTCOORDINATION_AXIS_PROPERTY_PROP = NS + "allowedPostcoordinationAxisProperty";
+	public final static String REQUIRED_POSTCOORDINATION_AXIS_PROPERTY_PROP = NS + "requiredPostcoordinationAxisProperty";
 
-	public final static String IS_OBSOLETE_PROP = NS+ "isObsolete";
+	public final static String IS_OBSOLETE_PROP = NS + "isObsolete";
 
+	/* Post-Coordination Axis Properties */
+	
+	public final static String PC_AXIS_SPECIFIC_ANATOMY = NS + "specificAnatomy";
+	public final static String PC_AXIS_TOPOLOGY_DISTRIBUTION = NS + "distribution";
+	public final static String PC_AXIS_TOPOLOGY_EXTERNAL_OR_INTERNAL = NS + "externalOrInternal";
+	public final static String PC_AXIS_TOPOLOGY_LATERALITY = NS + "laterality";
+	public final static String PC_AXIS_TOPOLOGY_SUPERFICIAL_OR_DEEP = NS + "superficialOrDeep";
+	public final static String PC_AXIS_BIOLOGICAL_INDICATOR_GENOMIC_AND_CHOMOSOMAL_ANOMALY = NS + "genomicAndChomosomalAnomaly";
+	public final static String PC_AXIS_BIOLOGICAL_INDICATOR_SEROTYPE = NS + "serotype";
+	public final static String PC_AXIS_DIAGNOSIS_CONFIRMED_BY = NS + "diagnosisConfirmedBy";
+	public final static String PC_AXIS_ETIOLOGY_CAUSALITY = NS + "causality";
+	public final static String PC_AXIS_ETIOLOGY_CHEMICAL_AGENT = NS + "chemicalAgent";
+	public final static String PC_AXIS_ETIOLOGY_INFECTIOUS_AGENT = NS + "infectiousAgent";
+	public final static String PC_AXIS_ETIOLOGY_MEDICATION = NS + "medication";
+	public final static String PC_AXIS_HAS_SEVERITY = NS + "hasSeverity";
+	public final static String PC_AXIS_HISTOPATHOLOGY = NS + "histopathology";
+	public final static String PC_AXIS_LEVEL_OF_CONSCIOUSNESS = NS + "levelOfConsciousness";
+	public final static String PC_AXIS_TEMPORALITY_COURSE = NS + "course";
+	public final static String PC_AXIS_TEMPORALITY_PATTERN_AND_ONSET = NS + "temporalPatternAndOnset";
+	public final static String PC_AXIS_TEMPORALITY_TIME_IN_LIFE = NS + "timeInLife";
+    //TODO continue list
+//	public final static String[] PC_AXES_PROPERTIES = {PC_AXIS_SEVERITY, PC_AXIS_TEMPORALITY_COURSE, 
+//		PC_AXIS_TEMPORALITY_PATTERN_AND_ONSET, PC_AXIS_ETIOLOGY_CAUSALITY, PC_AXIS_ETIOLOGY_INFECTIOUS_AGENT};
+	public final static List<String> PC_AXES_PROPERTIES_LIST = Arrays.asList(
+			PC_AXIS_SPECIFIC_ANATOMY, PC_AXIS_TOPOLOGY_DISTRIBUTION, PC_AXIS_TOPOLOGY_EXTERNAL_OR_INTERNAL, 
+			PC_AXIS_TOPOLOGY_LATERALITY, PC_AXIS_TOPOLOGY_SUPERFICIAL_OR_DEEP, PC_AXIS_BIOLOGICAL_INDICATOR_GENOMIC_AND_CHOMOSOMAL_ANOMALY, 
+			PC_AXIS_BIOLOGICAL_INDICATOR_SEROTYPE, PC_AXIS_DIAGNOSIS_CONFIRMED_BY, PC_AXIS_ETIOLOGY_CAUSALITY, 
+			PC_AXIS_ETIOLOGY_CHEMICAL_AGENT, PC_AXIS_ETIOLOGY_INFECTIOUS_AGENT, PC_AXIS_ETIOLOGY_MEDICATION, 
+			PC_AXIS_HAS_SEVERITY, PC_AXIS_HISTOPATHOLOGY, PC_AXIS_LEVEL_OF_CONSCIOUSNESS, 
+			PC_AXIS_TEMPORALITY_COURSE, PC_AXIS_TEMPORALITY_PATTERN_AND_ONSET, PC_AXIS_TEMPORALITY_TIME_IN_LIFE);
 
     /*
      * Instances
