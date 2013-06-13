@@ -1383,33 +1383,5 @@ public class ICDContentModel {
     public RDFResource getDisplayStatus(RDFSNamedClass icdClass) {
         return (RDFResource) icdClass.getPropertyValue(getDisplayStatusProperty());
     }
-    
-    /**
-     * Gets the list of properties representing the valid post-coordination axes of this ICD class.
-     * The returned property names must be one of the constants defined in {@link ICDContentModelConstants}, such as:
-     * <ul>
-     * <li>"http://who.int/icd#severity" (browser text: Severity)
-     * <li>"http://who.int/icd#course" (browser text: Temporality - Course)
-     * <li>"http://who.int/icd#specific_anatomy" (browser text: Specific Anatomy)
-     * <li>etc.
-     * </ul>
-     * @param the ICD category
-     * @return list of post-coordination axis properties
-     */
-    @SuppressWarnings("unchecked")
-    public Collection<RDFResource> getValidPostCoordinationAxes(RDFSNamedClass icdClass) {
-    	//TODO this method does not do what the javadoc says it would do, but
-    	//rather return a list of PostCoordinationSpecification instances which
-    	//besides the linearization specification individual also specifies the
-    	//list of allowed and required post-coordination axes (in the manner described in the javadoc).
-    	//
-    	//In order to implement the functionality described in the javadoc, 
-    	//the method would need an additional parameter identifying the linearization
-    	//and there should be ways to identify which one of the results is 
-    	//an allowed post-coordination axis, and which one is a required one.
-    	//Possibly there could be 2 separate method to retrieve these two types
-    	//of valid post-coordination axes.
-    	return icdClass.getPropertyValues(getAllowedPostcoordinationAxesProperty());
-    }
 
 }
