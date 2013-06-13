@@ -46,6 +46,8 @@ public class ICDContentModel {
     private RDFSNamedClass linearizationSpecificationClass;
     private RDFSNamedClass linearizationHistoricSpecificationClass;
 
+    private RDFSNamedClass postcoordinationAxesSpecificationClass;
+    
     private Collection<RDFSNamedClass> diseaseMetaclasses;
     private Collection<RDFSNamedClass> externalCausesMetaclasses;
 
@@ -128,6 +130,10 @@ public class ICDContentModel {
     private RDFProperty assignedPrimaryTagProperty;
     private RDFProperty assignedSecondaryTagProperty;
     private RDFProperty displayStatusProperty;
+    
+    private RDFProperty allowedPostcoordinationAxesProperty;
+    private RDFProperty allowedPostcoordinationAxisPropertyProperty;
+    private RDFProperty requiredPostcoordinationAxisPropertyProperty;
 
     private RDFProperty isObsoleteProperty;
     private RDFProperty publicIdProperty;
@@ -408,6 +414,13 @@ public class ICDContentModel {
             linearizationHistoricSpecificationClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.LINEARIZATION_HISTORIC_SPECIFICATION_CLASS);
         }
         return linearizationHistoricSpecificationClass;
+    }
+    
+    public RDFSNamedClass getPostcoordinationAxesSpecificationClass() {
+    	if (postcoordinationAxesSpecificationClass == null) {
+    		postcoordinationAxesSpecificationClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.POSTCOORDINATION_AXES_SPECIFICATION_CLASS);
+    	}
+    	return postcoordinationAxesSpecificationClass;
     }
 
     /*
@@ -726,7 +739,28 @@ public class ICDContentModel {
     	}
     	return displayStatusProperty;
     }
+    
+    public RDFProperty getAllowedPostcoordinationAxesProperty() {
+    	if (allowedPostcoordinationAxesProperty == null) {
+    		allowedPostcoordinationAxesProperty = owlModel.getRDFProperty(ICDContentModelConstants.ALLOWED_POSTCOORDINATION_AXES_PROP);
+    	}
+    	return allowedPostcoordinationAxesProperty;
+    }
 
+    public RDFProperty getAllowedPostcoordinationAxisPropertyProperty() {
+    	if (allowedPostcoordinationAxisPropertyProperty == null) {
+    		allowedPostcoordinationAxisPropertyProperty = owlModel.getRDFProperty(ICDContentModelConstants.ALLOWED_POSTCOORDINATION_AXIS_PROPERTY_PROP);
+    	}
+    	return allowedPostcoordinationAxisPropertyProperty;
+    }
+
+    public RDFProperty getRequiredPostcoordinationAxisPropertyProperty() {
+    	if (requiredPostcoordinationAxisPropertyProperty == null) {
+    		requiredPostcoordinationAxisPropertyProperty = owlModel.getRDFProperty(ICDContentModelConstants.REQUIRED_POSTCOORDINATION_AXIS_PROPERTY_PROP);
+    	}
+    	return requiredPostcoordinationAxisPropertyProperty;
+    }
+    
     public RDFProperty getIsObsoleteProperty() {
         if (isObsoleteProperty == null) {
             isObsoleteProperty = owlModel.getRDFProperty(ICDContentModelConstants.IS_OBSOLETE_PROP);
@@ -845,6 +879,12 @@ public class ICDContentModel {
          */
         createLinearizationSpecifications(cls);
 
+        /*
+         * Create the post-coordination instances for the newly created class. The linearization views are taken from the parents.
+         * They are created separately for the ICD-11 linearizzations, the ICD-10 linearizations, and ICD-10 tabulation lists
+         */
+        createPostcoordinationSpecifications(cls);
+        
         //set biologicalSex - default value: N/A (not applicable)
         cls.addPropertyValue(getBiologicalSexProperty(), owlModel.getRDFResource(ICDContentModelConstants.BIOLOGICAL_SEX_NA));
     }
@@ -906,6 +946,23 @@ public class ICDContentModel {
      private Collection<RDFResource> getLinearizationSpecificationsForProp(RDFSNamedClass parentCls, RDFProperty linProp) {
          return parentCls.getPropertyValues(linProp);
      }
+
+
+     private void createPostcoordinationSpecifications(RDFSNamedClass cls) {
+         //allowedPostcoordinationAxes
+         createPostcoordinationSpecifications(cls, getPostcoordinationAxesSpecificationClass(), getAllowedPostcoordinationAxesProperty());
+     }
+
+      private void createPostcoordinationSpecifications(RDFSNamedClass cls, RDFSNamedClass pcAxesSpecificationClass, RDFProperty pcAxesProp) {
+          for (RDFResource linView : getLinearizationViewsFromParents(cls, pcAxesProp)) {
+              RDFResource linSpec = pcAxesSpecificationClass.createInstance(IDGenerator.getNextUniqueId());
+              linSpec.setPropertyValue(getLinearizationViewProperty(), linView);
+
+              cls.addPropertyValue(pcAxesProp, linSpec);
+
+              /* See if we need to do some default initialization similarly to the linearization specifications */
+          }
+      }
 
     /**
      * It gets or creates and ICDClass. If it creates, it will not add the metaclasses.
@@ -1314,15 +1371,45 @@ public class ICDContentModel {
 
     /**
      * Gets the display status as one of the instances defined in {@link ICDContentModelConstants} :
-     * "http://who.int/icd#DS_Blue" (browser text: Blue)
-     * "http://who.int/icd#DS_Yellow" (browser text: Yellow)
-     * "http://who.int/icd#DS_Red";
-     *
+     * <ul>
+     * <li>"http://who.int/icd#DS_Blue" (browser text: Blue)
+     * <li>"http://who.int/icd#DS_Yellow" (browser text: Yellow)
+     * <li>"http://who.int/icd#DS_Red";
+     * </ul>
+     * 
      * @param the ICD category
      * @return one of the DisplayStatus instances
      */
     public RDFResource getDisplayStatus(RDFSNamedClass icdClass) {
         return (RDFResource) icdClass.getPropertyValue(getDisplayStatusProperty());
+    }
+    
+    /**
+     * Gets the list of properties representing the valid post-coordination axes of this ICD class.
+     * The returned property names must be one of the constants defined in {@link ICDContentModelConstants}, such as:
+     * <ul>
+     * <li>"http://who.int/icd#severity" (browser text: Severity)
+     * <li>"http://who.int/icd#course" (browser text: Temporality - Course)
+     * <li>"http://who.int/icd#specific_anatomy" (browser text: Specific Anatomy)
+     * <li>etc.
+     * </ul>
+     * @param the ICD category
+     * @return list of post-coordination axis properties
+     */
+    @SuppressWarnings("unchecked")
+    public Collection<RDFResource> getValidPostCoordinationAxes(RDFSNamedClass icdClass) {
+    	//TODO this method does not do what the javadoc says it would do, but
+    	//rather return a list of PostCoordinationSpecification instances which
+    	//besides the linearization specification individual also specifies the
+    	//list of allowed and required post-coordination axes (in the manner described in the javadoc).
+    	//
+    	//In order to implement the functionality described in the javadoc, 
+    	//the method would need an additional parameter identifying the linearization
+    	//and there should be ways to identify which one of the results is 
+    	//an allowed post-coordination axis, and which one is a required one.
+    	//Possibly there could be 2 separate method to retrieve these two types
+    	//of valid post-coordination axes.
+    	return icdClass.getPropertyValues(getAllowedPostcoordinationAxesProperty());
     }
 
 }
