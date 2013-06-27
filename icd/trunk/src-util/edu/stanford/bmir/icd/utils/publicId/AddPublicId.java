@@ -53,7 +53,7 @@ public class AddPublicId {
 
         Collection<RDFSNamedClass> cats = icdContentModel.getICDCategories();
         System.out.println(cats.size());
-        //addPublicId();
+        addPublicId();
     }
 
 
@@ -65,27 +65,32 @@ public class AddPublicId {
         int i = 0;
 
         for (RDFSNamedClass cat : cats) {
-            try {
-                String publicId = ICDIDUtil.getPublicId(cat.getName());
-                if (publicId == null) {
-                    Log.getLogger().warning("Could not get public ID for newly created class: " + cat.getName());
-                } else {
-                    cat.setPropertyValue(publicIDProp, publicId);
+            addPublicIdToClass(cat);
 
-                }
-            } catch (Exception e) {
-                log.log(Level.WARNING, "Exception at adding public ID for class: " + cat, e);
-            }
-
-            i++;
+           i++;
 
             if (i % 1000 == 0) {
                 log.info("Processed " + i + " classes on " + new Date());
             }
-
         }
 
         log.info("All done with " + i + " classes at " + new Date());
+    }
+
+    private static void addPublicIdToClass(RDFSNamedClass cat) {
+        try {
+            if (icdContentModel.getPublicId(cat) == null) {
+                String publicId = ICDIDUtil.getPublicId(cat.getName());
+                if (publicId == null) {
+                    Log.getLogger().warning("Could not get public ID for class: " + cat.getName());
+                } else {
+                    cat.setPropertyValue(publicIDProp, publicId);
+                    Log.getLogger().info("Adding public id to class: " + cat.getName() + " publicId: " + publicId);
+                }
+            }
+        } catch (Exception e) {
+            log.log(Level.WARNING, "Exception at adding public ID for class: " + cat, e);
+        }
     }
 
 
