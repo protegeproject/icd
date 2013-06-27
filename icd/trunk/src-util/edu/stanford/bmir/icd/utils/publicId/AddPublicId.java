@@ -63,9 +63,12 @@ public class AddPublicId {
         log.info("End get ICD cats at: " + new Date());
 
         int i = 0;
+        int addedPublicIdCount = 0;
 
         for (RDFSNamedClass cat : cats) {
-            addPublicIdToClass(cat);
+            if (addPublicIdToClass(cat) == true) {
+                addedPublicIdCount ++;
+            }
 
            i++;
 
@@ -74,23 +77,26 @@ public class AddPublicId {
             }
         }
 
-        log.info("All done with " + i + " classes at " + new Date());
+        log.info("All done with " + i + " classes. Added the publicId to " + addedPublicIdCount + " classes. Done at " + new Date());
     }
 
-    private static void addPublicIdToClass(RDFSNamedClass cat) {
+    private static boolean addPublicIdToClass(RDFSNamedClass cat) {
+        if (icdContentModel.getPublicId(cat) != null) {
+            return false;
+        }
         try {
-            if (icdContentModel.getPublicId(cat) == null) {
                 String publicId = ICDIDUtil.getPublicId(cat.getName());
                 if (publicId == null) {
-                    Log.getLogger().warning("Could not get public ID for class: " + cat.getName());
+                    Log.getLogger().warning("Could not get public ID from ID server for class: " + cat.getName());
                 } else {
                     cat.setPropertyValue(publicIDProp, publicId);
                     Log.getLogger().info("Adding public id to class: " + cat.getName() + " publicId: " + publicId);
+                    return true;
                 }
-            }
         } catch (Exception e) {
             log.log(Level.WARNING, "Exception at adding public ID for class: " + cat, e);
         }
+        return false;
     }
 
 
