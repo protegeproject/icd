@@ -12,8 +12,15 @@ public class ICDIDUtil {
 
     private static String WHO_SERVICE_APIKEY = "who.service.apikey";
 
+    private static String WHO_SERVICE_SYSTEM_NAME="who.service.system.name";
+    private static String WHO_SERVICE_SYSTEM_NAME_DEFAULT="iCat";
+
+
     public static String getPublicId(String iCATId) {
-        String url = getWHOServiceNewIdURL() + "?" + "type=entity&apikey=" + getWHOServiceAPIKey() + "&seed=" + URLUtil.encode(iCATId);
+        String url = getWHOServiceNewIdURL() + "?" +
+                            "type=entity&apikey=" + getWHOServiceAPIKey() +
+                            "&seed=" + URLUtil.encode(iCATId) +
+                            "&callerSystemName=" + getWHOServiceSystemName();
         String jSonText = URLUtil.getURLContent(url);
 
         if (jSonText == null) { return null;}
@@ -23,12 +30,17 @@ public class ICDIDUtil {
         return publicId == null ? null : publicId.getUri();
     }
 
+
     private static String getWHOServiceNewIdURL() {
         return ApplicationProperties.getString(WHO_SERVICE_NEW_ID_URL_PROP, WHO_SERVICE_NEW_ID_URL_DEFAULT);
     }
 
     private static String getWHOServiceAPIKey() {
         return ApplicationProperties.getString(WHO_SERVICE_APIKEY);
+    }
+
+    private static String getWHOServiceSystemName() {
+        return ApplicationProperties.getString(WHO_SERVICE_SYSTEM_NAME, WHO_SERVICE_SYSTEM_NAME_DEFAULT);
     }
 
     public static void main (String[] args) throws Exception{
