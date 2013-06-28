@@ -50,6 +50,8 @@ public class AddLinearization {
             return;
         }
 
+        icdContentModel = new ICDContentModel(owlModel);
+
         linearizationViewInst = owlModel.getRDFIndividual(args[1]);
         if (linearizationViewInst == null) {
             log.severe("Abort. Failed to find linearization view: " + linearizationViewInst);
