@@ -50,7 +50,6 @@ public class AddLinearization {
             return;
         }
 
-        icdContentModel = new ICDContentModel(owlModel);
 
         linearizationViewInst = owlModel.getRDFIndividual(args[1]);
         if (linearizationViewInst == null) {
@@ -73,12 +72,11 @@ public class AddLinearization {
     }
 
     private static void init() {
+        icdContentModel = new ICDContentModel(owlModel);
+
         linearizationSpecificationClass = (OWLNamedClass) icdContentModel.getLinearizationSpecificationClass();
         linearizationProp = icdContentModel.getLinearizationProperty();
         linearizationViewProp = icdContentModel.getLinearizationViewProperty();
-
-        icdContentModel = new ICDContentModel(owlModel);
-
     }
 
     private static void addLinearization(Collection<RDFSNamedClass> cats) {
