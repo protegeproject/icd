@@ -1,0 +1,4 @@
+- Created PostcoordinationCourseScaleTerm and PostcoordinationTemporalPatternAndOnsetScaleTerm subclasses of PostcoordinationScaleTerm.
+- Changed class expression 
+"hasScaleValue only SeverityReferenceTerm" to "hasScaleValue some SeverityReferenceTerm"
+in the definition of PostcoordinationSeverityScaleTerm.
