@@ -1,4 +1,4 @@
-; Fri Jun 07 15:00:23 PDT 2013
+; Mon Aug 12 17:48:10 PDT 2013
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -30,17 +30,17 @@
 
 ([annotation_icd_content_model_ProjectKB_Class15] of  String
 
-	(name "ChangeStatus")
-	(string_value "description"))
-
-([annotation_icd_content_model_ProjectKB_Class16] of  String
-
 	(name "User")
 	(string_value "name"))
 
-([annotation_icd_content_model_ProjectKB_Class17] of  String
+([annotation_icd_content_model_ProjectKB_Class16] of  String
 
 	(name "Status")
+	(string_value "description"))
+
+([annotation_icd_content_model_ProjectKB_Class17] of  String
+
+	(name "ChangeStatus")
 	(string_value "description"))
 
 ([annotation_icd_content_model_ProjectKB_Class18] of  String
@@ -6883,7 +6883,7 @@
 	(is_hidden FALSE)
 	(widget_class_name "edu.stanford.smi.protege.widget.InstancesTab"))
 
-([KB_571280_Class4] of  Map
+([KB_297344_Class4] of  Map
 )
 
 ([KB_690954_Instance_0] of  String
