@@ -47,7 +47,7 @@ public class ICDContentModel {
     private RDFSNamedClass linearizationHistoricSpecificationClass;
 
     private RDFSNamedClass postcoordinationAxesSpecificationClass;
-    
+
     private Collection<RDFSNamedClass> diseaseMetaclasses;
     private Collection<RDFSNamedClass> externalCausesMetaclasses;
 
@@ -75,6 +75,7 @@ public class ICDContentModel {
     private RDFSNamedClass termBaseExclusionClass;
 
     private RDFSNamedClass externalCausesTopClass;
+    private RDFSNamedClass childOrderClass;
 
     /*
      * Properties
@@ -130,13 +131,17 @@ public class ICDContentModel {
     private RDFProperty assignedPrimaryTagProperty;
     private RDFProperty assignedSecondaryTagProperty;
     private RDFProperty displayStatusProperty;
-    
+
     private RDFProperty allowedPostcoordinationAxesProperty;
     private RDFProperty allowedPostcoordinationAxisPropertyProperty;
     private RDFProperty requiredPostcoordinationAxisPropertyProperty;
 
     private RDFProperty isObsoleteProperty;
     private RDFProperty publicIdProperty;
+
+    private RDFProperty childrenOrderProperty;
+    private RDFProperty orderedChildIndexProperty;
+    private RDFProperty orderedChildProperty;
 
     /*
      * Instances
@@ -298,10 +303,10 @@ public class ICDContentModel {
     }
 
     public RDFSNamedClass getTermExternalDefinitionClass() {
-    	if (termExternalDefinitionClass == null) {
-    		termExternalDefinitionClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.TERM_EXTERNAL_DEFINITION_CLASS);
-    	}
-    	return termExternalDefinitionClass;
+        if (termExternalDefinitionClass == null) {
+            termExternalDefinitionClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.TERM_EXTERNAL_DEFINITION_CLASS);
+        }
+        return termExternalDefinitionClass;
     }
 
     public RDFSNamedClass getTermReferenceClass() {
@@ -415,17 +420,24 @@ public class ICDContentModel {
         }
         return linearizationHistoricSpecificationClass;
     }
-    
+
     public RDFSNamedClass getPostcoordinationAxesSpecificationClass() {
-    	if (postcoordinationAxesSpecificationClass == null) {
-    		postcoordinationAxesSpecificationClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.POSTCOORDINATION_AXES_SPECIFICATION_CLASS);
-    	}
-    	return postcoordinationAxesSpecificationClass;
+        if (postcoordinationAxesSpecificationClass == null) {
+            postcoordinationAxesSpecificationClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.POSTCOORDINATION_AXES_SPECIFICATION_CLASS);
+        }
+        return postcoordinationAxesSpecificationClass;
+    }
+
+    public RDFSNamedClass getChildOrderClass() {
+        if (childOrderClass == null) {
+            childOrderClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.CHILD_ORDER_CLASS);
+        }
+        return childOrderClass;
     }
 
     /*
-    * Getters for properties
-    */
+     * Getters for properties
+     */
 
     public RDFProperty getIcdTitleProperty() {
         if (icdTitleProperty == null) {
@@ -485,10 +497,10 @@ public class ICDContentModel {
     }
 
     public RDFProperty getNarrowerProperty() {
-    	if (narrowerProperty == null) {
-    		narrowerProperty = owlModel.getRDFProperty(ICDContentModelConstants.NARROWER_PROP);
-    	}
-    	return narrowerProperty;
+        if (narrowerProperty == null) {
+            narrowerProperty = owlModel.getRDFProperty(ICDContentModelConstants.NARROWER_PROP);
+        }
+        return narrowerProperty;
     }
 
     public RDFProperty getBaseIndexProperty() {
@@ -499,31 +511,31 @@ public class ICDContentModel {
     }
 
     public RDFProperty getBaseInclusionProperty() {
-    	if (baseInclusionProperty == null) {
-    		baseInclusionProperty = owlModel.getRDFProperty(ICDContentModelConstants.BASE_INCLUSION_PROP);
-    	}
-    	return baseInclusionProperty;
+        if (baseInclusionProperty == null) {
+            baseInclusionProperty = owlModel.getRDFProperty(ICDContentModelConstants.BASE_INCLUSION_PROP);
+        }
+        return baseInclusionProperty;
     }
 
     public RDFProperty getIndexBaseInclusionProperty() {
-    	if (indexBaseInclusionProperty == null) {
-    		indexBaseInclusionProperty = owlModel.getRDFProperty(ICDContentModelConstants.INDEX_BASE_INCLUSION_PROP);
-    	}
-    	return indexBaseInclusionProperty;
+        if (indexBaseInclusionProperty == null) {
+            indexBaseInclusionProperty = owlModel.getRDFProperty(ICDContentModelConstants.INDEX_BASE_INCLUSION_PROP);
+        }
+        return indexBaseInclusionProperty;
     }
 
     public RDFProperty getSubclassBaseInclusionProperty() {
-    	if (subclassBaseInclusionProperty == null) {
-    		subclassBaseInclusionProperty = owlModel.getRDFProperty(ICDContentModelConstants.SUBCLASS_BASE_INCLUSION_PROP);
-    	}
-    	return subclassBaseInclusionProperty;
+        if (subclassBaseInclusionProperty == null) {
+            subclassBaseInclusionProperty = owlModel.getRDFProperty(ICDContentModelConstants.SUBCLASS_BASE_INCLUSION_PROP);
+        }
+        return subclassBaseInclusionProperty;
     }
 
     public RDFProperty getBaseExclusionProperty() {
-    	if (baseExclusionProperty == null) {
-    		baseExclusionProperty = owlModel.getRDFProperty(ICDContentModelConstants.BASE_EXCLUSION_PROP);
-    	}
-    	return baseExclusionProperty;
+        if (baseExclusionProperty == null) {
+            baseExclusionProperty = owlModel.getRDFProperty(ICDContentModelConstants.BASE_EXCLUSION_PROP);
+        }
+        return baseExclusionProperty;
     }
 
 
@@ -671,10 +683,10 @@ public class ICDContentModel {
     }
 
     public RDFProperty getIsGroupingProperty() {
-    	if (isGroupingProperty == null) {
-    		isGroupingProperty = owlModel.getRDFProperty(ICDContentModelConstants.IS_GROUPING_PROP);
-    	}
-    	return isGroupingProperty;
+        if (isGroupingProperty == null) {
+            isGroupingProperty = owlModel.getRDFProperty(ICDContentModelConstants.IS_GROUPING_PROP);
+        }
+        return isGroupingProperty;
     }
 
     public RDFProperty getLinearizationParentProperty() {
@@ -734,33 +746,33 @@ public class ICDContentModel {
     }
 
     public RDFProperty getDisplayStatusProperty() {
-    	if (displayStatusProperty == null) {
-    		displayStatusProperty = owlModel.getRDFProperty(ICDContentModelConstants.DISPLAY_STATUS_PROP);
-    	}
-    	return displayStatusProperty;
+        if (displayStatusProperty == null) {
+            displayStatusProperty = owlModel.getRDFProperty(ICDContentModelConstants.DISPLAY_STATUS_PROP);
+        }
+        return displayStatusProperty;
     }
-    
+
     public RDFProperty getAllowedPostcoordinationAxesProperty() {
-    	if (allowedPostcoordinationAxesProperty == null) {
-    		allowedPostcoordinationAxesProperty = owlModel.getRDFProperty(ICDContentModelConstants.ALLOWED_POSTCOORDINATION_AXES_PROP);
-    	}
-    	return allowedPostcoordinationAxesProperty;
+        if (allowedPostcoordinationAxesProperty == null) {
+            allowedPostcoordinationAxesProperty = owlModel.getRDFProperty(ICDContentModelConstants.ALLOWED_POSTCOORDINATION_AXES_PROP);
+        }
+        return allowedPostcoordinationAxesProperty;
     }
 
     public RDFProperty getAllowedPostcoordinationAxisPropertyProperty() {
-    	if (allowedPostcoordinationAxisPropertyProperty == null) {
-    		allowedPostcoordinationAxisPropertyProperty = owlModel.getRDFProperty(ICDContentModelConstants.ALLOWED_POSTCOORDINATION_AXIS_PROPERTY_PROP);
-    	}
-    	return allowedPostcoordinationAxisPropertyProperty;
+        if (allowedPostcoordinationAxisPropertyProperty == null) {
+            allowedPostcoordinationAxisPropertyProperty = owlModel.getRDFProperty(ICDContentModelConstants.ALLOWED_POSTCOORDINATION_AXIS_PROPERTY_PROP);
+        }
+        return allowedPostcoordinationAxisPropertyProperty;
     }
 
     public RDFProperty getRequiredPostcoordinationAxisPropertyProperty() {
-    	if (requiredPostcoordinationAxisPropertyProperty == null) {
-    		requiredPostcoordinationAxisPropertyProperty = owlModel.getRDFProperty(ICDContentModelConstants.REQUIRED_POSTCOORDINATION_AXIS_PROPERTY_PROP);
-    	}
-    	return requiredPostcoordinationAxisPropertyProperty;
+        if (requiredPostcoordinationAxisPropertyProperty == null) {
+            requiredPostcoordinationAxisPropertyProperty = owlModel.getRDFProperty(ICDContentModelConstants.REQUIRED_POSTCOORDINATION_AXIS_PROPERTY_PROP);
+        }
+        return requiredPostcoordinationAxisPropertyProperty;
     }
-    
+
     public RDFProperty getIsObsoleteProperty() {
         if (isObsoleteProperty == null) {
             isObsoleteProperty = owlModel.getRDFProperty(ICDContentModelConstants.IS_OBSOLETE_PROP);
@@ -775,6 +787,27 @@ public class ICDContentModel {
         return publicIdProperty;
     }
 
+
+    public RDFProperty getChildrenOrderProperty() {
+        if (childrenOrderProperty == null) {
+            childrenOrderProperty = owlModel.getRDFProperty(ICDContentModelConstants.CHILDREN_ORDER_PROP);
+        }
+        return childrenOrderProperty;
+    }
+
+    public RDFProperty getOrderedChildIndexProperty() {
+        if (orderedChildIndexProperty == null) {
+            orderedChildIndexProperty = owlModel.getRDFProperty(ICDContentModelConstants.ORDERED_CHILD_INDEX_PROP);
+        }
+        return orderedChildIndexProperty;
+    }
+
+    public RDFProperty getOrderedChildProperty() {
+        if (orderedChildProperty == null) {
+            orderedChildProperty = owlModel.getRDFProperty(ICDContentModelConstants.ORDERED_CHILD_PROP);
+        }
+        return orderedChildProperty;
+    }
 
     /*
      * Getters for instances
@@ -884,7 +917,7 @@ public class ICDContentModel {
          * They are created separately for the ICD-11 linearizzations, the ICD-10 linearizations, and ICD-10 tabulation lists
          */
         createPostcoordinationSpecifications(cls);
-        
+
         //set biologicalSex - default value: N/A (not applicable)
         cls.addPropertyValue(getBiologicalSexProperty(), owlModel.getRDFResource(ICDContentModelConstants.BIOLOGICAL_SEX_NA));
     }
@@ -899,70 +932,70 @@ public class ICDContentModel {
         createLinearizationSpecifications(cls, getLinearizationHistoricSpecificationClass(), getLinearizationICD10TabulationProperty());
     }
 
-     private void createLinearizationSpecifications(RDFSNamedClass cls, RDFSNamedClass linSpecificationClass, RDFProperty linProp) {
-         for (RDFResource linView : getLinearizationViewsFromParents(cls, linProp)) {
-             RDFResource linSpec = linSpecificationClass.createInstance(IDGenerator.getNextUniqueId());
-             linSpec.setPropertyValue(getLinearizationViewProperty(), linView);
-             //set default grouping to FALSE
-             linSpec.setPropertyValue(getIsGroupingProperty(), Boolean.FALSE);
+    private void createLinearizationSpecifications(RDFSNamedClass cls, RDFSNamedClass linSpecificationClass, RDFProperty linProp) {
+        for (RDFResource linView : getLinearizationViewsFromParents(cls, linProp)) {
+            RDFResource linSpec = linSpecificationClass.createInstance(IDGenerator.getNextUniqueId());
+            linSpec.setPropertyValue(getLinearizationViewProperty(), linView);
+            //set default grouping to FALSE
+            linSpec.setPropertyValue(getIsGroupingProperty(), Boolean.FALSE);
 
-             cls.addPropertyValue(linProp, linSpec);
+            cls.addPropertyValue(linProp, linSpec);
 
-             /* These only apply to the ICD-11 linearizations, but it is easier to make them for all. It won't have any effect on the historic linearization specifications */
-             /* set the default for new categories: morbidity - included; mortality - not included */
-             if (linView.getName().equals(ICDContentModelConstants.LINEARIZATION_VIEW_MORBIDITY)) {
-                 linSpec.setPropertyValue(getIsIncludedInLinearizationProperty(), Boolean.TRUE);
-             } else if (linView.getName().equals(ICDContentModelConstants.LINEARIZATION_VIEW_MORTALITY)) {
-                 linSpec.setPropertyValue(getIsIncludedInLinearizationProperty(), Boolean.FALSE);
-             }
-         }
-     }
-
-     private Collection<RDFResource> getLinearizationViewsFromParents(RDFSNamedClass cls, RDFProperty linProp) {
-         Collection<RDFResource> linViews = new ArrayList<RDFResource>();
-
-         for (Object parent : cls.getSuperclasses(false)) {
-             if (parent instanceof RDFSNamedClass) {
-                 linViews.addAll(getLinearizationViewsFromCls((RDFSNamedClass) parent, linProp));
-             }
+            /* These only apply to the ICD-11 linearizations, but it is easier to make them for all. It won't have any effect on the historic linearization specifications */
+            /* set the default for new categories: morbidity - included; mortality - not included */
+            if (linView.getName().equals(ICDContentModelConstants.LINEARIZATION_VIEW_MORBIDITY)) {
+                linSpec.setPropertyValue(getIsIncludedInLinearizationProperty(), Boolean.TRUE);
+            } else if (linView.getName().equals(ICDContentModelConstants.LINEARIZATION_VIEW_MORTALITY)) {
+                linSpec.setPropertyValue(getIsIncludedInLinearizationProperty(), Boolean.FALSE);
+            }
         }
-         return linViews;
-     }
+    }
 
-     private Collection<RDFResource> getLinearizationViewsFromCls(RDFSNamedClass parentCls, RDFProperty linProp) {
-         Collection<RDFResource> linViews = new ArrayList<RDFResource>();
-         Collection<RDFResource> linearizationSpecs = getLinearizationSpecificationsForProp(parentCls, linProp);
+    private Collection<RDFResource> getLinearizationViewsFromParents(RDFSNamedClass cls, RDFProperty linProp) {
+        Collection<RDFResource> linViews = new ArrayList<RDFResource>();
 
-         for (RDFResource linearizationSpec : linearizationSpecs) {
-             RDFResource linearizationView = (RDFResource) linearizationSpec.getPropertyValue(getLinearizationViewProperty());
-             if (linearizationView != null) {
-                 linViews.add(linearizationView);
-             }
-         }
+        for (Object parent : cls.getSuperclasses(false)) {
+            if (parent instanceof RDFSNamedClass) {
+                linViews.addAll(getLinearizationViewsFromCls((RDFSNamedClass) parent, linProp));
+            }
+        }
+        return linViews;
+    }
 
-         return linViews;
-     }
+    private Collection<RDFResource> getLinearizationViewsFromCls(RDFSNamedClass parentCls, RDFProperty linProp) {
+        Collection<RDFResource> linViews = new ArrayList<RDFResource>();
+        Collection<RDFResource> linearizationSpecs = getLinearizationSpecificationsForProp(parentCls, linProp);
 
-     private Collection<RDFResource> getLinearizationSpecificationsForProp(RDFSNamedClass parentCls, RDFProperty linProp) {
-         return parentCls.getPropertyValues(linProp);
-     }
+        for (RDFResource linearizationSpec : linearizationSpecs) {
+            RDFResource linearizationView = (RDFResource) linearizationSpec.getPropertyValue(getLinearizationViewProperty());
+            if (linearizationView != null) {
+                linViews.add(linearizationView);
+            }
+        }
+
+        return linViews;
+    }
+
+    private Collection<RDFResource> getLinearizationSpecificationsForProp(RDFSNamedClass parentCls, RDFProperty linProp) {
+        return parentCls.getPropertyValues(linProp);
+    }
 
 
-     private void createPostcoordinationSpecifications(RDFSNamedClass cls) {
-         //allowedPostcoordinationAxes
-         createPostcoordinationSpecifications(cls, getPostcoordinationAxesSpecificationClass(), getAllowedPostcoordinationAxesProperty());
-     }
+    private void createPostcoordinationSpecifications(RDFSNamedClass cls) {
+        //allowedPostcoordinationAxes
+        createPostcoordinationSpecifications(cls, getPostcoordinationAxesSpecificationClass(), getAllowedPostcoordinationAxesProperty());
+    }
 
-      private void createPostcoordinationSpecifications(RDFSNamedClass cls, RDFSNamedClass pcAxesSpecificationClass, RDFProperty pcAxesProp) {
-          for (RDFResource linView : getLinearizationViewsFromParents(cls, pcAxesProp)) {
-              RDFResource linSpec = pcAxesSpecificationClass.createInstance(IDGenerator.getNextUniqueId());
-              linSpec.setPropertyValue(getLinearizationViewProperty(), linView);
+    private void createPostcoordinationSpecifications(RDFSNamedClass cls, RDFSNamedClass pcAxesSpecificationClass, RDFProperty pcAxesProp) {
+        for (RDFResource linView : getLinearizationViewsFromParents(cls, pcAxesProp)) {
+            RDFResource linSpec = pcAxesSpecificationClass.createInstance(IDGenerator.getNextUniqueId());
+            linSpec.setPropertyValue(getLinearizationViewProperty(), linView);
 
-              cls.addPropertyValue(pcAxesProp, linSpec);
+            cls.addPropertyValue(pcAxesProp, linSpec);
 
-              /* See if we need to do some default initialization similarly to the linearization specifications */
-          }
-      }
+            /* See if we need to do some default initialization similarly to the linearization specifications */
+        }
+    }
 
     /**
      * It gets or creates and ICDClass. If it creates, it will not add the metaclasses.
@@ -1045,7 +1078,7 @@ public class ICDContentModel {
     }
 
     public RDFResource createExternalDefinitionTerm() {
-    	return createTerm(getTermExternalDefinitionClass());
+        return createTerm(getTermExternalDefinitionClass());
     }
 
     public RDFResource createReferenceTerm() {
@@ -1077,19 +1110,19 @@ public class ICDContentModel {
     }
 
     public void addNarrowerTermToClass(RDFSNamedClass cls, RDFResource term) {
-    	addTermToClass(cls, getNarrowerProperty(), term);
+        addTermToClass(cls, getNarrowerProperty(), term);
     }
 
     public void addBaseInclusionTermToClass(RDFSNamedClass cls, RDFResource term) {
-    	addTermToClass(cls, getIndexBaseInclusionProperty(), term);
+        addTermToClass(cls, getIndexBaseInclusionProperty(), term);
     }
 
     public void addSubclassInclusionTermToClass(RDFSNamedClass cls, RDFResource term) {
-    	addTermToClass(cls, getSubclassBaseInclusionProperty(), term);
+        addTermToClass(cls, getSubclassBaseInclusionProperty(), term);
     }
 
     public void addBaseExclusionTermToClass(RDFSNamedClass cls, RDFResource term) {
-    	addTermToClass(cls, getBaseExclusionProperty(), term);
+        addTermToClass(cls, getBaseExclusionProperty(), term);
     }
 
     @Deprecated
@@ -1180,11 +1213,26 @@ public class ICDContentModel {
      */
 
     @SuppressWarnings("unchecked")
-    private Collection<RDFSNamedClass> getRDFSNamedClassCollection(Collection someColl) {
+    public Collection<RDFSNamedClass> getRDFSNamedClassCollection(Collection someColl) {
         if (someColl == null) {
             return null;
         }
         Set<RDFSNamedClass> coll = new LinkedHashSet<RDFSNamedClass>();
+        for (Iterator iterator = someColl.iterator(); iterator.hasNext();) {
+            Object cls = iterator.next();
+            if (cls instanceof RDFSNamedClass) {
+                coll.add((RDFSNamedClass) cls);
+            }
+        }
+        return coll;
+    }
+
+    @SuppressWarnings("unchecked")
+    public  List<RDFSNamedClass> getRDFSNamedClassList(Collection someColl) {
+        if (someColl == null) {
+            return null;
+        }
+        List<RDFSNamedClass> coll = new ArrayList<RDFSNamedClass>();
         for (Iterator iterator = someColl.iterator(); iterator.hasNext();) {
             Object cls = iterator.next();
             if (cls instanceof RDFSNamedClass) {
@@ -1233,7 +1281,7 @@ public class ICDContentModel {
      * @return - the public ID of the class; returns null, if the ICD class does not exist, or it has no assigned public ID
      */
     public String getPublicId(String id) {
-       return getPublicId(getICDCategory(id));
+        return getPublicId(getICDCategory(id));
     }
 
     /**
@@ -1289,7 +1337,7 @@ public class ICDContentModel {
 
     @SuppressWarnings("unchecked")
     public Collection<RDFResource> getTerms(RDFSNamedClass icdClass, RDFProperty icdTermProp, boolean includeSubproperties) {
-    	return icdClass.getPropertyValues(icdTermProp, includeSubproperties);
+        return icdClass.getPropertyValues(icdTermProp, includeSubproperties);
     }
 
     @SuppressWarnings("unchecked")
@@ -1304,12 +1352,12 @@ public class ICDContentModel {
 
     @SuppressWarnings("unchecked")
     public Collection<RDFResource> getLinearizationICD10Specifications(RDFSNamedClass icdClass) {
-    	return icdClass.getPropertyValues(getLinearizationICD10Property());
+        return icdClass.getPropertyValues(getLinearizationICD10Property());
     }
 
     @SuppressWarnings("unchecked")
     public Collection<RDFResource> getLinearizationICD10TabulationSpecifications(RDFSNamedClass icdClass) {
-    	return icdClass.getPropertyValues(getLinearizationICD10TabulationProperty());
+        return icdClass.getPropertyValues(getLinearizationICD10TabulationProperty());
     }
 
     /*
@@ -1376,12 +1424,35 @@ public class ICDContentModel {
      * <li>"http://who.int/icd#DS_Yellow" (browser text: Yellow)
      * <li>"http://who.int/icd#DS_Red";
      * </ul>
-     * 
+     *
      * @param the ICD category
      * @return one of the DisplayStatus instances
      */
     public RDFResource getDisplayStatus(RDFSNamedClass icdClass) {
         return (RDFResource) icdClass.getPropertyValue(getDisplayStatusProperty());
+    }
+
+    /**
+     * Retrieves the children of a parent ordered by an index.
+     * The index is stored as instances of the ChildOrder class, and accessed through the
+     * childrenOrder property. Each such instance has two properties: orderedChild (the class) and
+     * orderedChildIndex (an int index for the class under this parent)
+     *
+     * This operation will take into account that the index might be corrupted and it will not
+     * attempt to fix it. This method should not have side effects (no changes should happen
+     * in the ontology as a result of this call).
+     *
+     *
+     * @param parent - the parent class
+     * @return - an ordered list of the children according to an index
+     */
+    public List<RDFSNamedClass> getOrderedChildren(RDFSNamedClass parent) {
+        return new SiblingReordering(this).getOrderedChildren(parent);
+    }
+
+    public boolean reorderSibling(RDFSNamedClass movedCls, RDFSNamedClass targetCls, boolean isBelow,
+            RDFSNamedClass parent, String user) {
+        return new SiblingReordering(this).reorderSibling(movedCls, targetCls, isBelow, parent, user);
     }
 
 }
