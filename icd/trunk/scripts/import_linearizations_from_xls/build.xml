@@ -1,6 +1,6 @@
 <?xml version = "1.0" encoding = "utf-8"?>
 <project name = "Fill in Values from Excel sheets" default = "run">    
-   <property file="excel_import.properties"/>  
+   <property file="update_linearizations_test.properties"/>  
    <property name = "owl.path"         value = "edu.stanford.smi.protegex.owl"/>
    <property name = "owl.plugin.path"  value = "${protege.home}/plugins/${owl.path}"/>
 
@@ -31,9 +31,9 @@
       <path id = "project.classpath">    
         <pathelement location = "${protege.lib}"/>
         <pathelement location = "${protege.home}/driver.jar"/>
-        <pathelement location = "../lib/jxl.jar"/>
+        <pathelement location = "../../lib/jxl.jar"/>
         <fileset dir="${owl.plugin.path}"/>
-      	<pathelement location = "excel_import.jar"/>
+      	<pathelement location = "update_linearizations.jar"/>
       </path>
 
     </target>
@@ -54,12 +54,15 @@
 	        <java 
 			fork="true" 
 	        	dir="." 
-	            	classname="edu.stanford.bmir.icd.utils.ImportLinearizationsAndBiologicalSex"
+	            	classname="edu.stanford.bmir.icd.utils.UpdateLinearizations"
                         maxmemory="${heap.size.max}">
 		      	<classpath refid = "project.classpath"/>	        	
 	 		<arg value="${pprj.file}"/>
-			<arg value="${xls.b-sex.file}"/>
-	 		<arg value="${xls.no-mortality.file}"/>
+			<arg value="${xls.icd-entities.file}"/>
+		 	<arg value="${opt.mortality-lin}"/>
+		 	<arg value="${opt.morbidity-lin}"/>
+		 	<arg value="${opt.isgrouping}"/>
+		 	<arg value="${opt.parent}"/>
 	        </java>
 	 </target>
 	
