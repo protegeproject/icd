@@ -66,6 +66,8 @@ public class AddLinearization {
 
         log.info("Got " + cats.size() + " ICD categories at: " + new Date() + " in " + (System.currentTimeMillis() -  t0)/1000 + " secs.");
 
+        cats.add(icdContentModel.getICDCategoryClass());
+
         addLinearization(cats);
 
         log.info("Finished at: " + new Date());
