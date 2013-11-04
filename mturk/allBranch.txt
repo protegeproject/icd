@@ -1,0 +1,135 @@
+Disorders of hair and the hair follicle:Nasal septum!Body Regions
+    Rosacea and related disorders:Nasal septum!Body Regions
+        Acne agminata:Nasal septum!Body Regions
+        Phymatous rosacea:Nasal septum!Body Regions
+            Rhinophyma:Nasal septum!Body Regions
+        Papulopustular rosacea:Nasal septum!Body Regions
+        Rosacea fulminans:Nasal septum!Body Regions
+        Granulomatous rosacea:Nasal septum!Body Regions
+        Rosacea...:Nasal septum!Body Regions
+        Ocular rosacea:Nasal septum!Body Regions
+            Posterior blepharitis (Rosacea):null
+        Lymphoedematous rosacea:Nasal septum!Body Regions
+        Erythematotelangiectatic rosacea:Nasal septum!Body Regions
+        Perioral dermatitis:Nasal septum!Body Regions
+            Perioral dermatitis due to potent topical corticosteroid:
+            Periocular dermatitis:Nasal septum!Body Regions
+    Acne and related disorders:Nasal septum!Body Regions
+        Nodular acne:Nasal septum!Body Regions
+        Acne and acneiform reactions to drugs and poisons:Nasal septum!Body Regions
+            Acne due to exposure to halogenated aromatic hydrocarbons [chloracne]:Nasal septum!Body Regions
+                Occupational halogen acne [chloracne]:Nasal septum!Body Regions
+            Corticosteroid-induced acne:Nasal septum!Body Regions
+            Drug-induced acneiform eruption:Nasal septum!Body Regions
+        Acne-like inflammatory follicular disorders:Nasal septum!Body Regions
+            Necrotizing lymphocytic folliculitis:Nasal septum!Body Regions
+            Scalp folliculitis:Nasal septum!Body Regions
+        Acne...:Nasal septum!Body Regions
+        Conglobate acne:Nasal septum!Body Regions
+        Superficial acne without nodules:Nasal septum!Body Regions
+            Superficial mixed comedonal and papulopustular acne:Nasal septum!Body Regions
+            Comedonal acne:Nasal septum!Body Regions
+            Papulopustular acne:null
+            Superficial acne...:Nasal septum!Body Regions
+        Special forms of acne:Nasal septum!Body Regions
+            Infantile acne:Nasal septum!Body Regions
+            Neonatal acne:Nasal septum!Body Regions
+            Occupational acne:Nasal septum!Body Regions
+            Tropical acne:Nasal septum!Body Regions
+        Acne scarring:Nasal septum!Body Regions
+            Acne scars:null
+            Atrophic acne scars:Nasal septum!Body Regions
+            Keloidal acne:Nasal septum!Body Regions
+            Hypertrophic acne scars:Nasal septum!Body Regions
+        Acne fulminans:Nasal septum!Body Regions
+    Pseudofolliculitis barbae:Nasal septum!Body Regions
+    Trichostasis spinulosa:Epidermis!Dermis!Skin!Hair follicle
+    Disorders involving the apocrine follicular unit:Nasal septum!Body Regions
+        Apocrine sweat disorders:
+            Apocrine miliaria:
+            Chromhidrosis:
+            Bromhidrosis:
+        Hidradenitis suppurativa:Nasal septum!Body Regions
+            Hidradenitis suppurativa of multiple sites:Nasal septum!Body Regions
+            Hidradenitis suppurativa of axillae:Nasal septum!Body Regions
+            Hidradenitis suppurativa of anogenital region:Nasal septum!Body Regions
+            Hidradenitis suppurativa: atypical forms:Nasal septum!Body Regions
+    Disorders of the sebaceous gland:Nasal septum!Body Regions
+        Heterotopic sebaceous glands:Intestinal Wall!Cell wall!Orbital roof!Digestive system
+            Heterotopic sebaceous glands of penis:null
+            Heterotopic sebaceous glands of lips:null
+            Heterotopic sebaceous glands of oral mucosa:null
+            Heterotopic sebaceous glands of vulva:null
+        Sebaceous gland hyperplasia:Nasal septum!Body Regions
+        Seborrhoea:Nasal septum!Body Regions
+    Disorders of hair:Nasal septum!Body Regions
+        Alopecia...:
+        Lipoedematous alopecia:
+        Alopecia areata:
+            Alopecia areata of eyelashes:null
+            Alopecia areata...:
+            Alopecia totalis:
+            Ophiasis:
+            Patchy alopecia areata of scalp:
+            Alopecia areata of the nails:
+            Diffuse alopecia areata:
+            Alopecia areata of eyebrows:
+            Alopecia universalis:
+            Alopecia areata of beard:
+        Acquired disorders of the hair shaft:Nasal septum!Body Regions
+            Pili bifurcati:Nasal septum!Body Regions
+            Weathered hair:
+            Acquired changes in hair colour:
+                Drug-induced hair colour change:null
+            Trichorrhexis nodosa:null
+        Drug-induced hair abnormalities:Nasal septum!Body Regions
+            Drug-induced alopecia:Nasal septum!Body Regions
+            Drug-induced hirsutism:Nasal septum!Body Regions
+        Scarring alopecia:Nasal septum!Body Regions
+            Scarring alopecia due to infection:null
+            Scarring alopecia...:Nasal septum!Body Regions
+            Scarring alopecia due to malignant infiltration:null
+                Alopecia mucinosa in association with mycosis fungoides:null
+            Scarring alopecia due to inflammatory disorders:Nasal septum!Body Regions
+                Dissecting cellulitis:Nasal septum!Body Regions
+                    Follicular occlusion syndrome:null
+                Folliculitis decalvans:null
+                Central centrifugal scarring alopecia:null
+                Folliculitis keloidalis nuchae:Nasal septum!Body Regions
+                Folliculitis ulerythematosa reticulata:Nasal septum!Body Regions
+                Pseudopelade:null
+            Scarring alopecia due to trauma:Nasal septum!Body Regions
+                Traction alopecia:null
+                Hot comb alopecia:null
+        Telogen effluvium and telogen hair loss:Nasal septum!Body Regions
+            Chronic telogen hair shedding secondary to specified cause:null
+                Alopecia secondary to deficient nutrition:null
+                Drug-induced telogen hair loss:null
+                Alopecia secondary to thyroid disorder:null
+                Alopecia secondary to iron deficiency:null
+            Post-partum telogen effluvium:Nasal septum!Body Regions
+            Chronic idiopathic telogen effluvium:null
+            Acute telogen effluvium:Nasal septum!Body Regions
+        Anagen effluvium:Nasal septum!Body Regions
+            Anagen effluvium due to toxins and poisons:
+            Drug-induced anagen effluvium:
+        Miscellaneous disorders of hair:Nasal septum!Body Regions
+            Madarosis of eyelid and periocular area:null
+                Superciliary madarosis:null
+                Ciliary madarosis:null
+        Hirsutism and syndromes with hirsutism:
+            Hirsutism:
+        Hypertrichosis:Nasal septum!Body Regions
+            Localized hypertrichosis:Nasal septum!Body Regions
+            Hypertrichosis...:Nasal septum!Body Regions
+            Drug-induced hypertrichosis:Nasal septum!Body Regions
+            Acquired hypertrichosis lanuginosa:Nasal septum!Body Regions
+            Hypertrichosis of eyelid:
+                Hypertrichosis of upper eyelid:null
+                Hypertrichosis of lower eyelid:null
+        Male & female pattern hair loss:Nasal septum!Body Regions
+            Male pattern hair loss:
+            Female pattern hair loss (non-androgenetic):Nasal septum!Body Regions
+            Female pattern hair loss (androgenetic):
+    Certain specified follicular disorders:Nasal septum!Body Regions
+done

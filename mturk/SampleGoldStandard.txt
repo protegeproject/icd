@@ -1,0 +1,969 @@
+Dermatoses of the head, neck and oral cavity
+head and neck
+
+Dermatoses of the scalp
+scalp
+
+Irritant contact dermatitis of scalp
+scalp
+
+Dermatophytosis of scalp
+scalp
+
+Seborrhoeic dermatitis of the scalp
+scalp
+
+Scalp psoriasis
+scalp
+
+Lichen planopilaris of scalp
+scalp
+
+Chronic cutaneous lupus erythematosus of scalp
+scalp
+
+Hereditary hypotrichosis of scalp
+scalp
+
+Scalp pruritus
+scalp
+
+Aplasia cutis congenita of scalp
+scalp
+
+Cutis verticis gyrata
+scalp
+
+Primary cutis verticis gyrata
+scalp
+
+Primary essential cutis verticis gyrata
+scalp
+
+Cutis verticis gyrata - intellectual deficit
+scalp
+
+Cutis verticis gyrata - retinitis pigmentosa - sensorineural deafness
+scalp
+
+Secondary cutis verticis gyrata
+scalp
+
+Lipoedema of the scalp
+scalp
+
+Lipoedematous alopecia
+scalp
+
+Erosive pustular dermatosis of scalp
+scalp
+
+Allergic contact dermatitis of scalp
+scalp
+
+Contact dermatitis of scalp...
+scalp
+
+Birth injury to scalp
+scalp
+
+Cephalhaematoma due to birth injury
+scalp
+
+Chignon due to birth injury
+scalp
+
+Subgaleal Epicranial Subaponeurotic haemorrhage due to birth injury
+scalp
+
+Bruising of scalp due to birth injury
+scalp
+
+Monitoring injury of scalp of newborn
+scalp
+
+Injury to scalp of newborn due to sampling incision
+scalp
+
+Injury to scalp of newborn due to scalp clip (electrode)
+scalp
+
+Scalp abrasions due to birth injury
+scalp
+
+Scalp lacerations due to birth injury
+scalp
+
+Caput Succedaneum due to birth injury
+scalp
+
+Ischaemic alopecia due to birth injury
+scalp
+
+Other birth injuries to scalp
+scalp
+
+Birth injury to scalp, unspecified
+scalp
+
+Dermatoses of the external ear
+outer ear
+
+Infective disorders of the external ear
+outer ear
+
+Herpes simplex infection of external ear
+outer ear
+
+Otomycosis
+outer ear
+
+Otomycosis due to Candida
+outer ear
+
+Aspergillus otomycosis
+outer ear
+
+Abscess of external ear
+outer ear
+
+Cellulitis of external ear
+outer ear
+
+Malignant otitis externa
+outer ear
+
+Other infective otitis externa
+outer ear
+
+acute bacterial inflammation of external ear
+outer ear
+
+acute bacterial otitis externa
+outer ear
+
+acute diffuse otitis externa
+outer ear
+
+acute infective otitis externa
+outer ear
+
+acute swimmer's ear
+outer ear
+
+beach ear
+outer ear
+
+diffuse otitis externa
+outer ear
+
+haemorrhagic otitis externa
+outer ear
+
+infection of external ear
+outer ear
+
+swimmer's ear
+outer ear
+
+tank ear
+outer ear
+
+Perichondritis of external ear
+outer ear
+
+Erysipelas of external ear
+outer ear
+
+Inflammatory disorders of the external ear
+outer ear
+
+Seborrhoeic otitis externa
+outer ear
+
+Acute seborrhoeic otitis externa
+outer ear
+
+Chronic seborrhoeic otitis externa
+outer ear
+
+Contact dermatitis of external ear
+outer ear
+
+Irritant contact dermatitis of external ear
+outer ear
+
+Allergic contact dermatitis of external ear
+outer ear
+
+Contact dermatitis of external ear...
+outer ear
+
+Acute otitis externa
+outer ear
+
+Chronic otitis externa
+outer ear
+
+Otitis externa, unspecified
+outer ear
+
+Certain specified disorders of external ear
+outer ear
+
+Noninfective disorders of pinna
+outer ear
+
+Impacted cerumen
+outer ear
+
+Acquired stenosis of external ear canal
+outer ear
+
+Exostosis of external canal
+outer ear
+
+acquired auditory canal deformity
+outer ear
+
+ear fistula
+outer ear
+
+Disorder of external ear, unspecified
+outer ear
+
+Ear-lobe keloid
+outer ear
+
+Chondrodermatitis nodularis
+outer ear
+
+Acanthoma fissuratum
+outer ear
+
+Juvenile spring eruption
+outer ear
+
+Dermatoses of the eye, eyelids and eyebrows
+
+
+Infectious disorders of eyelid
+eyelid
+
+Trachoma
+eyelid
+
+Initial stage of trachoma
+eyelid
+
+Active stage of trachoma
+eyelid
+
+Trachoma, unspecified
+eyelid
+
+Preseptal cellulitis
+eyelid
+
+Abscess of eyelid
+eyelid
+
+Abscess of upper eyelid
+eyelid
+
+Abscess of lower eyelid
+eyelid
+
+Hordeolum
+eyelid
+
+Hordeolum externum
+eyelid
+
+Hordeolum externum upper eyelid
+eyelid
+
+Hordeolum externum lower eyelid
+eyelid
+
+Hordeolum internum
+eyelid
+
+Hordeolum internum upper eyelid
+eyelid
+
+Hordeolum internum lower eyelid
+eyelid
+
+Staphylococcal blepharitis
+eyelid
+
+Parasitic infestation of eyelid in diseases classified elsewhere
+eyelid
+
+Demodex infestation of eyelid
+eyelid
+
+Phthiriasis of eyelashes
+eyelid
+
+Parasitic infestation of eyelid in loiasis
+eyelid
+
+Molluscum contagiosum of eyelid
+eyelid
+
+Herpes simplex infection of eyelid
+eyelid
+
+Involvement of eyelid in tuberculosis
+eyelid
+
+Involvement of eyelid in yaws
+eyelid
+
+Herpes zoster blepharitis
+eyelid
+
+Involvement of eyelid in leprosy
+eyelid
+
+Inflammatory disorders of eyelid
+eyelid
+
+Chalazion
+eyelid
+
+Posterior blepharitis (Rosacea)
+eyelid
+
+Ligneous conjunctivitis
+eyelid
+
+Ocular cicatricial pemphigoid
+eyelid
+
+Meibomian Gland Dysfunction
+eyelid
+
+Blepharochalasis
+eyelid
+
+Blepharochalasis upper eyelid
+eyelid
+
+Blepharochalasis lower eyelid
+eyelid
+
+Atopic eczema of eyelids
+eyelid
+
+Seborrhoeic dermatitis of eyelids
+eyelid
+
+Acquired disorders of eyelashes
+eyelashes
+
+Trichiasis without entropion
+eyelashes
+
+Trichiasis without entropion upper eyelid
+eyelashes
+
+Trichiasis without entropion lower eyelid
+eyelashes
+
+Madarosis of eyelid and periocular area
+periocular area
+
+Superciliary madarosis
+periocular area
+
+Ulerythema ophryogenes
+periocular area
+
+Alopecia areata of eyebrows
+periocular area
+
+Ciliary madarosis
+eyelashes
+
+Alopecia areata of eyelashes
+eyelashes
+
+Hypertrichosis of eyelid
+eyelid
+
+Hypertrichosis of upper eyelid
+eyelid
+
+Hypertrichosis of lower eyelid
+eyelid
+
+Certain specified disorders of eyelid
+eyelid
+
+Vitiligo of eyelid and periocular area
+eyelid
+
+Vitiligo of upper eyelid and periocular area
+eyelid
+
+Vitiligo of lower eyelid and periocular area
+eyelid
+
+Symblepharon
+eyelid
+
+Traumatic scar of eyelid
+eyelid
+
+Xanthelasma of eyelid
+eyelid
+
+Xanthelasma of upper eyelid
+eyelid
+
+Xanthelasma of lower eyelid
+eyelid
+
+Tear Trough Deformity
+eyelid
+
+Sunken Sulcus Deformity
+eyelid
+
+Dermatitis and eczema of eyelids
+eyelid
+
+Atopic eczema of eyelids
+eyelid
+
+Seborrhoeic dermatitis of eyelids
+eyelid
+
+Allergic contact dermatitis of eyelids
+eyelid
+
+Irritant contact dermatitis of eyelids
+eyelid
+
+Contact dermatitis of eyelids...
+eyelid
+
+Dermatoses of the lips and oral cavity
+head and neck
+
+Disorders of lips
+lip
+
+Cheilitis
+lip
+
+Atopic cheilitis
+lip
+
+Contact cheilitis
+lip
+
+Irritant contact cheilitis
+lip
+
+Irritant contact cheilitis due to lip-licking
+lip
+
+Allergic contact cheilitis
+lip
+
+Contact cheilitis...
+lip
+
+Eczematous cheilitis...
+lip
+
+Angular cheilitis
+lip
+
+Angular cheilitis due to bacterial infection
+lip
+
+Angular cheilitis exacerbated by mechanical factors
+lip
+
+Angular cheilitis exacerbated by nutritional deficiency
+lip
+
+Angular cheilitis due to candidosis
+lip
+
+Chapping of the lips
+lip
+
+Exfoliative cheilitis
+lip
+
+Idiopathic exfoliative cheilitis
+lip
+
+Factitious cheilitis
+lip
+
+Drug-induced cheilitis
+lip
+
+Plasma cell cheilitis
+lip
+
+Granulomatous cheilitis
+lip
+
+Melkersson syndrome
+lip
+
+Glandular cheilitis
+lip
+
+Cheilitis...
+lip
+
+Actinic cheilitis
+lip
+
+Self-induced lip trauma
+lip
+
+Factitious cheilitis
+lip
+
+Lip-biting
+lip
+
+Pigmentary abnormalities of lips
+lip
+
+Labial melanin incontinence
+lip
+
+Labial melanotic macule
+lip
+
+Lip fissure
+lip
+
+Lichen planus of lips
+lip
+
+Disorders of oral mucosa
+oral mucosa
+
+Disturbances of oral epithelium
+oral mucosa
+
+Leukoplakia
+oral mucosa
+
+Homogeneous leukoplakia
+oral mucosa
+
+Non-homogeneous leukoplakia
+oral mucosa
+
+Speckled leukoplakia
+oral mucosa
+
+Nodular leukoplakia
+oral mucosa
+
+Verrucous leukoplakia
+oral mucosa
+
+Hairy leukoplakia
+oral mucosa
+
+Erythroplakia of oral mucosa
+oral mucosa
+
+Smoker's keratosis
+oral mucosa
+
+Cheek-biting
+oral mucosa
+
+Leukoedema of oral mucosa
+oral mucosa
+
+Lichen planus and lichenoid reactions of oral mucosa
+oral mucosa
+
+Non-erosive lichen planus of oral mucosa
+oral mucosa
+
+Reticular oral lichen planus
+oral mucosa
+
+Papular oral lichen planus
+oral mucosa
+
+Annular oral lichen planus
+oral mucosa
+
+Hypertrophic oral lichen planus
+oral mucosa
+
+Erosive oral lichen planus
+oral mucosa
+
+Vulvovaginal gingival syndrome
+oral mucosa
+
+Oral lichen planus...
+oral mucosa
+
+Drug-induced oral lichenoid reaction
+oral mucosa
+
+Amalgam-associated oral lichenoid reaction
+oral mucosa
+
+Lichenoid mucositis
+oral mucosa
+
+Non-infective erosive and ulcerative disorders of oral mucosa
+oral mucosa
+
+Oral aphthae and aphtha-like ulceration
+oral mucosa
+
+Recurrent aphthous stomatitis
+oral mucosa
+
+Major recurrent aphthous stomatitis
+oral mucosa
+
+Minor recurrent aphthous stomatitis
+oral mucosa
+
+Herpetiform recurrent aphthous stomatitis
+oral mucosa
+
+Periodic fever - aphthous stomatitis - pharyngitis - adenopathy [PFAPA]
+oral mucosa
+
+Oral aphthae...
+oral mucosa
+
+Oropharyngeal ulceration due to Behçet disease
+oral mucosa
+
+Oral mucositis (ulcerative)
+oral mucosa
+
+Oral mucositis due to radiotherapy
+oral mucosa
+
+Oral mucositis due to cancer chemotherapy
+oral mucosa
+
+Oral mucositis due to graft-versus-host disease
+oral mucosa
+
+Oral mucositis due to other specified cause
+oral mucosa
+
+Oral ulceration due to immunobullous disease
+oral mucosa
+
+Oral mucosal involvement by immunobullous disorder classified elsewhere
+oral mucosa
+
+Oral pemphigus
+oral mucosa
+
+Mucous membrane pemphigoid with oral or oesophageal involvement
+oral mucosa
+
+Erythema multiforme  with oral ulceration
+oral mucosa
+
+Lupus erythematosus of oral mucosa
+oral mucosa
+
+Chronic ulcerative stomatitis
+oral mucosa
+
+Drug-induced oral ulcer
+oral mucosa
+
+Oral ulceration due to physical injury
+oral mucosa
+
+Mechanical oral ulceration
+oral mucosa
+
+Thermal oral ulceration
+oral mucosa
+
+Cold burn of oral mucosa
+oral mucosa
+
+Heat burn of oral mucosa
+oral mucosa
+
+Radiation burn of oral mucosa
+oral mucosa
+
+Chemical burn of oral mucosa
+oral mucosa
+
+Mouth ulcers...
+oral mucosa
+
+Miscellaneous inflammatory disorders of oral mucosa
+oral mucosa
+
+Oral submucous fibrosis
+oral mucosa
+
+Stomatitis of other specified or unspecified nature
+oral mucosa
+
+Allergic contact gingivostomatitis
+oral mucosa
+
+Oral allergy syndrome
+oral mucosa
+
+Contact ginigivostomatitis...
+oral mucosa
+
+Pigmentary disturbances of oral mucosa
+oral mucosa
+
+Oral melanin incontinence
+oral mucosa
+
+Melanotic macule of oral mucosa
+oral mucosa
+
+Laugier-Hunziker melanosis
+oral mucosa
+
+Granuloma and granuloma-like lesions of oral mucosa
+oral mucosa
+
+Pyogenic granuloma of oral mucosa
+oral mucosa
+
+Traumatic ulcerative granuloma with stromal eosinophilia [TUGSE]
+oral mucosa
+
+Verruciform xanthoma of oral mucosa
+oral mucosa
+
+Other and unspecified disorders of oral mucosa
+oral mucosa
+
+Oral erythema migrans
+oral mucosa
+
+Irritative hyperplasia of oral mucosa
+oral mucosa
+
+Papillary hyperplasia of oral mucosa
+oral mucosa
+
+Denture hyperplasia
+oral mucosa
+
+Oral fibroepithelial polyp
+oral mucosa
+
+Angina bullosa haemorrhagica
+oral mucosa
+
+Certain specified disorders of lips and oral mucosa
+
+
+Genetic and developmental disorders involving lips and oral mucosa
+
+
+White sponge naevus
+
+
+Hereditary benign intraepithelial dyskeratosis
+
+
+Hereditary mucoepithelial dysplasia
+
+
+Oral mucosal fragility and ulceration due to epidermolysis bullosa classified elsewhere
+
+
+Genetic or developmental disorder classified elsewhere involving lips and oral mucosa
+
+
+Chronic mucocutaneous candidosis
+
+
+Peutz-Jeghers syndrome
+
+
+Hereditary haemorrhagic telangiectasia [Rendu-Osler-Weber disease]
+
+
+Pachyonychia congenita
+
+
+Pachyonychia congenita 1 [Jadassohn-Lewandowsky]
+
+
+Pachyonychia congenita 2 [Jackson-Lawler]
+
+
+Cowden syndrome
+
+
+Dyskeratosis congenita
+
+
+Autosomal dominant dyskeratosis congenita
+
+
+Autosomal recessive dyskeratosis congenita
+
+
+Hoyeraal-Hreidarsson syndrome
+
+
+Heterotopic sebaceous glands of lips
+
+
+Heterotopic sebaceous glands of oral mucosa
+
+
+Xerostomia
+
+
+Xerostomia due to disturbance of salivary secretion
+
+
+Autoimmune xerostomia
+
+
+Drug-induced xerostomia
+
+
+Xerostomia due to other specified salivary gland disorder
+
+
+Radiotherapy-induced xerostomia
+
+
+Xerostomia due to mouth-breathing
+
+
+Xerostomia secondary to dehydration
+
+
+Dry mouth...
+
+
+Granulomatous disorders of the lips and oral mucosa
+
+
+Orofacial granulomatosis
+
+
+Granulomatous cheilitis
+lip
+
+Melkersson syndrome
+lip
+
+Sarcoidosis of oral cavity
+
+
+Crohn disease of oral cavity
+
+
+Infections of lips and oral mucosa
+
+
+Herpes simplex labialis
+
+
+Herpes simplex gingivostomatitis
+
+
+Herpes simplex pharyngotonsillitis
+
+
+Warts of lips and oral cavity
+
+
+Enteroviral vesicular stomatitis
+
+
+Enteroviral vesicular pharyngitis
+
+
+Candidosis of lips and oral mucous membranes
+
+
+Angular cheilitis due to candidosis
+lip
+
+Acute erythematous oral candidosis
+
+
+Acute pseudomembranous oral candidosis
+
+
+Chronic erythematous oral candidosis
+
+
+Chronic hyperplastic oral candidosis
+
+
+Chronic multifocal oral candidosis
+
+
+Diseases of tongue
+
+
+Glossitis
+
+
+Geographic tongue
+
+
+Wandering rash of the mouth
+
+
+Atrophy of tongue papillae
+
+
+Median rhomboid glossitis
+
+
+Hypertrophy of tongue papillae
+
+
+Certain specified diseases of tongue
+
+
+Macroglossia due to primary (systemic) amyloidosis
+
+
+Unspecified disease of tongue
+
+
+Sublingual varices
+
+
+Other conditions specific to the face and neck which may present with skin signs
+
+
+Periapical abscess with sinus
+
+

@@ -1,0 +1,37 @@
+Dermatophytosis!Tendons of the body!270HPCGJ2D21LTWS48RJZPSI3CSA4F!binary	0.5
+
+Dermatophytosis!Tendons of the body!2ZSA2SEIUUU0XEQ7R1VISS8S3MZQQN!binary	0.3
+
+Dermatophytosis!Muscles!2F84J3NAB6BFJ5FB5P9TBTJFE8CFS8!binary	0.1
+
+Dermatophytosis!Bones!2JV5NQYN5F3QX9GS0PDNMWYB52H8CW!binary	0.1
+
+Dermatophytosis!Blood Vessels!2SKYU98JHSTL8TLNM2A9SOBJFCTDPL!binary	0.0
+
+Dermatophytosis!Walls in the Body!204JUNU8LZ6R4QGSY0ZDIJ3VF0YJ3T!binary	0.5
+
+Dermatophytosis!Body Tissues!26OAUC26DG67ARXQ2R6KACOK3CFC5X!binary	0.6
+
+Dermatophytosis!Body Tissues!2E2O2L92HECW7WXQ5F3CP0CP6DYHGT!binary	0.6
+
+Dermatophytosis!Body Tissues!29DQ8H88MQU6IVOY23911XX4BBKS9Y!binary	0.6
+
+Dermatophytosis!Synovium!2JV5NQYN5F3QX9GS0PDNMWYB52I8CX!binary	0.2
+
+Dermatophytosis!Developmental tissue!2TFKNQY2RCJK3TZILU8RAKUIBJC3SU!binary	0.3
+
+Dermatophytosis!Mesentery!29UGW40SPW1IKCH35HVJDNAB74JD0G!binary	0.5
+
+Dermatophytosis!Mesentery!2WLQ0JG5TYMN9MYYB0692SSHYU6KG4!binary	0.5
+
+Dermatophytosis!Mesentery!2TATMOFXRDS4F21154EXTFM1238VSM!binary	0.2
+
+Dermatophytosis!Mesothelium!2RT6BFMFFOYYFJ1GQ64GOSC0SQ2YLK!binary	0.4
+
+Dermatophytosis!Mesothelium!24VWIOV1S7SN03T31SUYNZ8N9K2ZKA!binary	0.3
+
+Dermatophytosis!Lymphocytic tissue!28RZJMJUNU8LWWRU77WRJ8D8KW40GI!binary	0.7
+
+Dermatophytosis!Bone Marrow!2RKSEIUUU00ONAKXB99SIS2U3Z1SS1!binary	
+
+0.7 + 0.9 + 0.9 + 1 + 0.6 + 0.8 + 0.7 + 0.8 + 0.7 +0.7

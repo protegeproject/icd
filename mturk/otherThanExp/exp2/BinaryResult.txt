@@ -1,0 +1,51 @@
+disease:Dermatomyositis
+{Synovium=5, Connective tissue=5, Muscle tissue=9, Epithelium=7, Nervous Tissue=3}
+total number of responses:10
+1-(5+5+1+3+3)/50=66%
+
+disease:Dermatomyositis
+{Mesentery=1, Mesothelium=5, Developmental tissue=3, Fascia=9, Lymphocytic tissue=6}
+total number of responses:10
+1-(1+5+3+1+4)/50 = 72%
+
+disease:Dermatomyositis
+{Bones=0, Blood Vessels=3, Muscles=10, Body Tissues=9, Nerve=0, Body Regions=9}
+total number of responses:10
+1-(3+1+1)/60=91.7%
+
+
+disease:Sclerodactyly
+{Inguinal canal=1, Thigh=1, foot=5, ankle=1, knee=1}
+total number of responses:10
+1-(1+1+5+1+1)/50=82%
+
+disease:Sclerodactyly
+{hand=10, forearm=2, elbow=2, shoulder=2, arm=3}
+total number of responses:10
+1-(2+2+2+3)/50=82%
+
+disease:Sclerodactyly
+{Lower Extremity=6, Trunk=2, Upper Extremity=8, Head and Neck=2, Pelvis and Perineum=2}
+total number of responses:10
+1-(4+2+2+2+2)/50 = 76%
+
+disease:Sclerodactyly
+{Nervous system=1, Musculoskeletal system=4, Genitourinary System=1, Respiratory system=1}
+total number of responses:10
+1-(1+4+1+1)/40 = 82.5%
+
+
+disease:Lichen planopilaris
+{Bones=0, Blood Vessels=2, Muscles=0, Nerve=1, Body Regions=8}
+total number of responses:10
+1-(2+1+2)/50=90%
+
+disease:Lichen planopilaris
+{Nervous system=0, Musculoskeletal system=0, Genitourinary System=2, Respiratory system=0}
+total number of responses:10
+1-(2)/40=95%
+
+disease:Lichen planopilaris
+{hand=8, forearm=4, elbow=3, shoulder=6, arm=8}
+total number of responses:10
+1-(2+6+7+4+2)/50 = 58%

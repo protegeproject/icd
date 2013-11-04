@@ -1,0 +1,282 @@
+ala nasi
+side wall of ala nasi!alar groove
+
+upper back
+scapular area!interscapular area
+
+eyelid
+eyelid margin!canthus!upper eyelid!lower eyelid
+
+skin of upper lip
+philtrum
+
+foot
+lateral border of foot!heel!forefoot!sole of foot!medial border of foot!midfoot!dorsum of foot
+
+canthus
+lateral canthus!medial canthus
+
+mid back
+paraspinal area
+
+axilla
+anterior axillary fold!posterior axillary fold
+
+front of neck
+anterior triangle of neck!vee of neck
+
+central forehead
+glabella
+
+lower lip
+vermilion of lower lip!skin of lower lip!vermilion border of lower lip!labial mucosa of lower lip
+
+conjunctival fornix
+superior conjunctival fornix!inferior conjunctival fornix
+
+forefoot
+dorsal surface of forefoot!plantar surface of forefoot!interdigital web space of foot
+
+medial surface of thigh
+upper medial surface of thigh
+
+penis
+prepuce!dorsal surface of penis!ventral surface of penis!root of penis!body of penis!glans penis
+
+lower leg
+shin!distal lower leg!calf!proximal lower leg
+
+external auditory canal
+external auditory meatus!tympanic membrane
+
+helix of pinna
+spine of helix!tail of helix!crus of helix
+
+fingernail
+little fingernail!middle fingernail!ring fingernail!index fingernail
+
+lower extremity
+toe!foot!buttock!lower leg!hip!thigh!ankle!knee
+
+head
+face!outer ear!scalp margin!scalp
+
+knee
+popliteal fossa!medial surface of knee!patellar region!lateral surface of knee
+
+pelvis and perineum
+vulva!anogenital region!scrotum!penis
+
+lower back
+lower paraspinal area!lumbar area!sacral area
+
+tongue
+tip of tongue!base of tongue!body of tongue!ventral surface of tongue!dorsal surface of tongue!lateral margin of tongue
+
+volar surface of thumb
+tip of thumb
+
+mouth
+gingiva!superior labial sulcus!tongue!inferolateral buccal sulcus!buccal pouch!tonsillar fossa!anterior tonsillar pillar!posterior tonsillar pillar!floor of mouth!oral mucosa!palate!inferior labial sulcus!oropharynx!tonsil!superolateral buccal sulcus
+
+forehead
+lateral forehead!central forehead
+
+heel
+medial border of heel!lateral border of heel!plantar surface of heel!back of heel
+
+plantar surface of forefoot
+ball of foot
+
+periorbital area
+infraorbital area!supraorbital area!eyelid!cornea!conjunctiva!sclera
+
+conjunctiva
+bulbar conjunctiva!palpebral conjunctiva!conjunctival fornix
+
+upper eyelid
+upper eyelid margin!superior palpebral sulcus
+
+finger
+ring finger!middle finger!index finger!little finger
+
+index finger
+proximal phalanx of index finger!middle phalanx of index finger!distal phalanx of index finger
+
+middle finger
+proximal phalanx of middle finger!middle phalanx of middle finger!distal phalanx of middle finger
+
+ring finger
+proximal phalanx of ring finger!middle phalanx of ring finger!distal phalanx of ring finger
+
+little finger
+proximal phalanx of little finger!middle phalanx of little finger!distal phalanx of little finger
+
+dorsal surface of tongue
+dorsal surface of base of tongue!dorsal surface of body of tongue
+
+cheek
+angle of jaw!paranasal area!preauricular area!upper cheek!central cheek!lower cheek!mandibular area
+
+chest wall
+posterior chest wall!lateral chest wall!anterior chest wall
+
+breast
+areola!lower outer quadrant of breast!upper outer quadrant of breast!nipple!lower inner quadrant of breast!upper inner quadrant of breast!axillary tail of breast!inframammary flexure
+
+upper lip
+skin of upper lip!vermilion border of upper lip!labial mucosa of upper lip!vermilion of upper lip
+
+trunk
+flank!back!abdominal wall!chest wall
+
+oral mucosa
+buccal mucosa!palatal mucosa!mucosa of floor of mouth
+
+deltoid area
+apex of shoulder
+
+ventral surface of tongue
+lingual frenulum
+
+palate
+uvula!soft palate!hard palate
+
+side of neck
+posterior triangle of neck
+
+dorsum of hand
+knuckles
+
+thumb
+dorsum of thumb!volar surface of thumb!proximal phalanx of thumb!distal phalanx of thumb
+
+forearm
+ulnar border of forearm!distal forearm!volar surface of forearm!radial border of forearm!dorsal surface of forearm!proximal forearm
+
+gingiva
+gingiva of maxilla!gingiva of mandible
+
+face
+temple!lip!mouth!chin!forehead!periorbital area!perioral area!nose!cheek
+
+toe
+third toe!fifth toe!fourth toe!great toe!second toe
+
+nail
+thumbnail!toenail!fingernail
+
+neck
+supraclavicular area!front of neck!side of neck!nape of neck
+
+calf
+medial surface of calf!posterior surface of calf!lateral surface of calf
+
+anterior chest wall
+breast!lower anterior chest wall!upper anterior chest wall
+
+wrist
+volar surface of wrist!ulnar border of wrist!dorsal surface of wrist!radial border of wrist
+
+thigh
+anterior surface of thigh!posterior surface of thigh!medial surface of thigh!lateral surface of thigh
+
+abdominal wall
+lateral abdominal wall!anterior abdominal wall
+
+body regions
+pelvis and perineum!extremity!upper extremity!trunk!neck!lower extremity!head
+
+body organs
+nail!hair
+
+hand
+palm of hand!finger!dorsum of hand!thumb
+
+upper extremity
+hand!forearm!elbow!upper arm!shoulder!wrist!axilla!arm
+
+anterior abdominal wall
+iliac fossa!hypochondrium!epigastrium!periumbilical region!suprapubic area
+
+interdigital web space of foot
+first interdigital web space of foot!second interdigital web space of foot!lateral interdigital web space of foot!third interdigital web space of foot
+
+distal phalanx of thumb
+proximal nailfold of thumb!paronychium of thumb!lateral nailfold of thumb
+
+scalp margin
+temporal scalp margin!frontal scalp margin!parietal scalp margin!occipital scalp margin
+
+hair
+pubic hair!eyelashes!body hair!beard hair!eyebrow hairs!scalp hair
+
+scalp
+temporal scalp!frontal scalp!parietal scalp!occipital scalp!vertex of scalp
+
+nostril
+sill of nostril!columella
+
+prepuce
+inner surface of prepuce!coronal sulcus of penis
+
+anogenital region
+anus!inguinocrural fold!intergluteal cleft!perineum!gluteal fold
+
+lip
+upper lip!labial commissure!lower lip
+
+palm of hand
+central palm!proximal palm!distal palm
+
+antihelix of pinna
+crura of antihelix
+
+outer ear
+external auditory canal!pinna
+
+back
+lower back!upper back!mid back
+
+ankle
+lateral surface of ankle!medial surface of ankle!dorsum of ankle
+
+lower eyelid
+lower eyelid margin!lacrimal punctum
+
+vulva
+labium minus!labium majus!clitoral hood!vaginal introitus!fourchette
+
+proximal palm
+hypothenar eminence!thenar eminence
+
+cornea
+limbus
+
+elbow
+elbow tip!lateral condylar surface of elbow!antecubital fossa!medial condylar surface of elbow
+
+upper arm
+anterior surface of upper arm!extensor surface of upper arm!posterior surface of upper arm!flexor surface of upper arm
+
+lateral chest wall
+upper lateral chest wall!lower lateral chest wall
+
+shoulder
+posterior surface of shoulder!deltoid area!anterior surface of shoulder
+
+toenail
+fifth toenail!third toenail!second toenail!great toenail!fourth toenail
+
+midfoot
+instep of foot
+
+glans penis
+penile urethral meatus!frenulum of penis
+
+nose
+nostril!ala nasi!infratip lobule of nose!lateral side wall of nose!supratip of nose!dorsum of nose!root of nose!tip of nose
+
+pinna
+tragus of pinna!retroauricular sulcus!lobule of pinna!antihelix of pinna!scaphoid fossa of pinna!helix of pinna!triangular fossa of pinna!antitragus of pinna!obverse of pinna!conchal bowl of pinna!intertragic notch of pinna!apex of pinna
+

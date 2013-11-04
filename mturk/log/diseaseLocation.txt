@@ -1,0 +1,13 @@
+http://who.int/icd#B35
+11
+Bones!0
+Tendons of the body!0
+Blood Vessels!0
+Muscles!0
+Body Tissues!1
+Walls in the Body!0
+Synovium!0
+Developmental tissue!0
+Mesentery!0
+Mesothelium!0
+Lymphocytic tissue!1

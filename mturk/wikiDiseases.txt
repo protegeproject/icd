@@ -1,0 +1,4455 @@
+Adult atopic eczema: prurigo pattern!0
+ear fistula!0
+Tuberculous ulceration of vulva!0
+Filiform palmoplantar keratoderma!0
+Lymphomatoid granulomatosis!1
+Ehlers-Danlos syndrome, classic-like type!0
+Genetic hamartoneoplastic syndromes affecting the skin!0
+Superficial partial thickness burn, chemical!0
+Congenital hypertrophy of the lateral fold of the hallux!0
+Ichthyosis as component of other specified genetic syndrome!0
+Seborrhoeic dermatitis and related conditions!0
+Sunburn erythema!0
+Livedoid vasculopathy!1
+Phakomatosis spilorosea!0
+Complete cryptophthalmia, unilateral!0
+Irritant contact dermatitis due to plants and other vegetable matter!0
+Occupationally-acquired dermatosis (classified elsewhere) due to exposure to cold!0
+Neonatal necrotizing fasciitis due to other specified or unknown organism!0
+Vaginal warts!0
+Dermal melanocytosis!1
+Erdheim-Chester disease!1
+Acute graft-versus-host disease stage 3!0
+Complete cryptophthalmia!0
+Hidrotic ectodermal dysplasia, Halal type!0
+Nipple eczema!1
+Non-organ-specific autoinflammatory disorders!0
+Contact cheilitis!0
+Episodic angioedema with eosinophilia!1
+Scorpion stings!1
+Malignant infiltration of skin...!0
+Pigmented skin lesion, head!0
+Marfan syndrome type 1!0
+Inflammatory disorders of eyelid!0
+Linear morphoea!1
+Stiff skin syndrome!1
+Junctional epidermolysis bullosa with pyloric atresia (JEB-PA)!0
+Nail hypertrophy!0
+Urticaria and erythema!0
+Alopecia areata of the nails!0
+16p13.3 deletion!0
+Metastatic tuberculous abscess!1
+Nail involvement in miscellaneous specified disorders!0
+Unspecified frostbite of arm!0
+Cervicofacial lymphangioma!0
+Leukaemic infiltration of skin!1
+Anetoderma!1
+Acute febrile neutrophilic dermatosis [Sweet] : classical type!0
+Developmental venous malformations involving the skin!0
+Disseminated dermatophytosis!1
+Paroxysmal haematoma of the finger!0
+Malignant neoplasm: Skin of ear and external auricular canal!0
+Bruising of scalp due to birth injury!0
+Allergic contact sensitization to proteins!0
+Amyopathic juvenile dermatomyositis!0
+Nodular prurigo!1
+Primary cutaneous CD30+ anaplastic large cell lymphoma!0
+Neonatal toxic erythema!0
+Benign neoplasm: Skin of eyelid, including canthus!0
+Cellulocutaneous plague!0
+Speckled and lentiginous melanocytic naevus!0
+Keratitis – ichthyosis – deafness [KID syndrome]!0
+Loricrin palmoplantar keratoderma with ichthyosis!0
+Benign familial hypobetalipoproteinaemia!0
+Dermal elastolysis!0
+Major recurrent aphthous stomatitis!0
+Food-dependent exercise-induced anaphylaxis!0
+Exacerbation of constitutional dermatitis due to occupation!0
+Fluid overload with localized oedema!0
+Erythema chronicum migrans!1
+Inherited deformities of nails!0
+Familial multiple keratoacanthomas [Ferguson-Smith]!0
+Adult atopic eczema: nummular pattern!0
+Hermansky-Pudlak syndrome type 7!0
+Hermansky-Pudlak syndrome type 8!0
+Hermansky-Pudlak syndrome type 9!0
+Sporadic multisystem autoinflammatory disorders affecting the skin!0
+Other acantholytic disorders!0
+Familial partial lipodystrophy, Dunnigan type!0
+Skin infiltration by nodal or non-cutaneous extranodal lymphoma!0
+Pili annulati!1
+Juvenile hyaline fibromatosis!1
+Chronic radiodermatitis following radiotherapy!0
+Angular cheilitis!1
+Skin lesion, trunk!0
+follicular cysts of skin and subcutaneous tissue!0
+Haemorrhagic disease of fetus and newborn!0
+Dry mouth...!0
+Genetic defects of nails and nail growth!0
+Chronic papular onchodermatitis!0
+Other pruritus!0
+Latent yaws!0
+Extragenital anogenital warts!0
+Contact dermatitis due to occupational skin injury from friction and micro-trauma!0
+Chemical burn due to occupational skin contact with corrosive substance!0
+Mosaicism, 45,X/other cell line(s) with abnormal sex chromosome!0
+Tropical phagedaenic ulcer!0
+Trachyonychia!1
+Atrophoderma vermiculatum!1
+Pityriasis rubra pilaris: adult!0
+Disorders of epidermal keratinization!0
+Epibulbar choristoma, bilateral!0
+Secondary syphilitic synovitis or tenosynovitis!0
+Deep partial thickness burn, chemical!0
+Lichenoid mucositis!0
+Metabolic and nutritional disorders affecting the skin!0
+Localized lipoatrophy due to injected corticosteroid!0
+Onycholysis!1
+Disseminated Herpes zoster!0
+Drug-induced acquired ichthyosis!0
+Tricho-odonto-onychial ectodermal dysplasia!0
+Chronic graft-versus-host disease!0
+Complex/combined developmental vascular malformations involving the skin!0
+Ectodermal dysplasia – skin fragility (plakophilin 1 deficiency)!0
+Erythropoietic coproporphyria!1
+Adult dermatomyositis with overlap to non-organ specfiic systemic autoimmune disorders!0
+Early syphilis!1
+Photo-allergic contact dermatitis!1
+Subcutaneous granuloma annulare!1
+Verruga peruana!1
+Allergic contact dermatitis due to chromate!0
+Bullous pemphigoid!1
+Melanoma in situ...!0
+Dermatophytosis due to Trichophyton gourvilii!0
+Unclassifiable benign cutaneous melanocytic proliferation!0
+Dermatoses precipitated by drug therapy!0
+Exfoliative cheilitis!1
+Molluscum contagiosum of eyelid!0
+Primary localized cutaneous amyloidosis!0
+Syndromic genetically-determined hypermelanosis and lentiginosis!0
+Excess and redundant skin!0
+Dowling-Degos disease!1
+Actinic keratosis and other discrete epidermal dysplasias!0
+Lichen planus of genital skin and mucous membranes!0
+Adverse cutaneous reactions to medication!0
+Hordeolum externum!1
+Miscellaneous disorders of epidermal integrity!0
+Balanoposthitis...!0
+Acne varioliformis!1
+Cryptotia!1
+Camptodactyly and streblodactyly!0
+Lichen planopilaris of vulva!0
+Urachal sinus!0
+Ehlers-Danlos syndrome, classical type!1
+Exacerbation of constitutional dermatitis due to non-occupational exposure to skin irritants!0
+Scabies!1
+Annular oral lichen planus!0
+Superficial frostbite of ankle and foot!0
+Papular urticaria!1
+Preauricular tag or pit!0
+Sand-fly bites!0
+Autosomal ichthyosis syndromes with neurological manifestations!0
+Hyperkeratotic dermatitis of hands and feet!0
+Noninfective disorders of pinna!0
+Secondary Sjögren disease!0
+Allergic contact dermatitis due to photographic chemicals!0
+Ehlers-Danlos syndrome, dermatosparaxis type!0
+Other mosquito-borne viral fevers!0
+Skin involvement in other specified fungal infection!0
+Other acute skin changes due to ultraviolet radiation!0
+Skin injury...!0
+Infantile onset panniculitis with uveitis and systemic granulomatosis!0
+Antiphospholipid syndrome!1
+Lymphocytic cutaneous vasculitis!0
+Infantile pedal papules!0
+Rat-bite fevers!1
+Other specified erythematous conditions!0
+Abnormalities of dermal elastin!0
+Dermatoses of genital and perianal regions!0
+Oral-facial-digital syndrome!1
+Non-HFE-related hereditary haemochromatosis, Type 3!0
+Non-HFE-related hereditary haemochromatosis, Type 4!0
+Ectodermal dysplasia - blindness!0
+Lichen planopilaris of scalp!0
+Ehlers-Danlos syndrome, kyphoscoliotic type!0
+Yellow nail syndrome!1
+Drug-induced xerostomia!0
+Citrullinaemia!1
+Distichiasis!1
+Erythropoietic protoporphyria!1
+Retired carcinoma in situ concepts!0
+Genetic syndromes with abnormalities of the hair shaft!0
+Pure ocular mucous membrane pemphigoid!0
+Granulomatous cheilitis!1
+Lichen simplex and lichenification!0
+Congenital eyelid retraction, bilateral!0
+Scarring and sclerosing inflammatory dermatoses!0
+Schnitzler syndrome!1
+Truncated form of apolipoprotein B-100!0
+Diffuse cutaneous mastocytosis!1
+Paraneoplastic acquired ichthyosis!0
+Sunburn...!0
+Amyopathic dermatomyositis!0
+Skin ulceration or abscess secondary to systemic bacterial infection!0
+Postnatal iatrogenic skin injury!0
+Clothing purpura!0
+Malignant neoplasms of vulva!0
+Allergic contact dermatitis due in part to occupational exposure to allergen!0
+Miscellaneous specified forms of lichen planus!0
+Post-traumatic eczema!0
+Anogenital ulcer of uncertain nature!0
+Callosity...!0
+Neonatal infective mastitis!0
+Conductive deafness - ptosis - skeletal anomalies!0
+Hashimoto-Pritzker syndrome!1
+Anogenital warts!1
+Epidermal thickening, unspecified!0
+Cutaneous abscess, furuncle and carbuncle of other sites!0
+Cutis marmorata telangiectatica congenita!1
+Condylomata lata!1
+Neonatal sclerosing cholangitis – ichthyosis – hypotrichosis syndrome!0
+Noma neonatorum!1
+Late chronic graft-versus-host disease!0
+Unilateral naevoid telangiectasia!0
+Disseminated infantile seborrhoeic dermatitis!0
+Cri-du-chat syndrome [5p deletion]!0
+Giant cell arteritis with polymyalgia rheumatica!0
+Callosities of hands and fingers!0
+Camptodactyly of fingers, bilateral!0
+Dubowitz syndrome!1
+Ulcerated skin lesion, lower limb!0
+Oral mucositis (ulcerative)!0
+Inherited nail deformity...!0
+Hypocomplementaemic urticarial vasculitis!0
+Odonto-onycho-dermal dysplasia!0
+Hereditary anonychia!0
+Erythrasma!1
+Contact cheilitis...!0
+Erythropoietic protoporphyria due to gain of function of erythroid-specific aminolevulinic acid synthase 2!0
+Amelo-onycho-hypohidrotic syndrome!0
+Abnormality of nail surface!0
+Hidradenitis suppurativa - pyoderma gangrenosum complex!0
+Localized African histoplasmosis!0
+Cicatricial pemphigoid!1
+Drug-induced nail abnormalities!0
+Acute HIV infection syndrome!1
+Cryopyrin-associated periodic syndromes!0
+Lipomatosis dolorosa [Dercum]!0
+Cutaneous abscess, furuncle and carbuncle of limb!0
+Photo-allergic contact dermatitis due to other systemic medications!0
+Predominantly tropical and subtropical bacterial infections affecting skin!0
+Dermatophytosis due to Trichophyton concentricum (Tinea imbricata)!0
+Psoriatic nail dystrophy...!0
+Premature ageing syndromes!0
+Skin lesion of uncertain nature, trunk!0
+Transepidermal elimination disorders!1
+BCG-induced regional lymphadenopathy!0
+Drug-induced alopecia!1
+Unspecified diabetes mellitus with diabetic foot!0
+Lichen sclerosus of penis!0
+Kaposi varicelliform eruption due to vaccinia!0
+Pyoderma gangrenosum linked to certain specified identified trigger!0
+Perianal warts!0
+Genetic syndromes affecting nails!0
+Bowel-associated dermatosis-arthritis syndrome!0
+Adenoid seborrhoeic keratosis!0
+AREDYLD syndrome!1
+Neuropathic hypohidrosis!0
+Benign adipocytic neoplasms of skin and soft tissue!0
+Pruritus due to other specified drug!0
+Developmental defects of the nail plate!0
+Contact ginigivostomatitis...!0
+Lacrimo-auriculo-dento-digital syndrome!0
+Occupational phototoxic reaction to skin contact with certain specified photoactive agent!0
+Turner syndrome!1
+Acquired angioedema!0
+Ichthyosis vulgaris!1
+Erythropoietic protoporphyria due to ferrochelatase deficiency!0
+Dehiscence of surgical wound of skin!0
+Tanning due to exposure to artificial sources of ultraviolet radiation!0
+Cutaneous reactions to caterpillars!0
+Factitious cheilitis!0
+Infantile perianal streptococcal cellulitis!0
+Irritant contact dermatitis due to topical medicaments and antimicrobials!0
+Pyoderma gangrenosum without identifiable trigger!0
+Acquired changes in hair colour!0
+Cellulitis of external ear!0
+Candidosis of nail and paronychium!0
+Familial mediterranean fever!1
+Rhinosporidiosis!1
+tank ear!0
+Melanotic macule of oral mucosa!0
+Malignant neoplasm of vulva without mention of type!0
+Varicella without complication!0
+Keratolytic winter erythema!1
+Hordeolum internum upper eyelid!0
+Björnstad syndrome!0
+Complete trisomy 21, translocation!0
+Steatocystoma multiplex!1
+Irritant contact dermatitis due substantially to occupational exposure to foods!0
+Drug-induced urticaria!1
+Xanthelasma of the eyelid!0
+Acquired melanotic macules and lentigines!0
+Acute urticaria of undetermined aetiology!0
+Pyoderma gangrenosum linked to haematological disorder!0
+Contact dermatitis of feet...!0
+Blastic plasmacytoid dendritic cell neoplasm!0
+Paraneoplastic pruritus!0
+Plasma cell vulvitis!1
+Ingrowing nail!1
+Subcutaneous lipomatosis!0
+Primary cutaneous mantle cell lymphoma!0
+Neonatal vitamin K deficiency!0
+Certain specified disorders of the anus and perianal skin!0
+Pseudoporphyria!1
+Arthropod-borne viral fevers and viral haemorrhagic fevers!0
+Radiation-induced dermatosis...!0
+Chronic disseminated histoplasmosis!0
+Congenital entropion!0
+Granulomatosis with polyangiitis!1
+Ectodermal dysplasia with natal teeth, Turnpenny type!0
+Albinism and certain specified genetically-determined hypomelanotic disorders!0
+Penicilliosis due to Penicillium marneffii!0
+Cutaneous markers of endocrine disorders!0
+Phototoxic drug reaction!1
+Early-onset sarcoidosis!0
+Prurigo...!0
+Mandibuloacral dysplasia with type A lipodystrophy!0
+Allergic contact dermatitis of eyelids!0
+Serum sickness vasculitis!0
+Rhinophyma!1
+acute bacterial inflammation of external ear!0
+Keratosis linearis – ichthyosis congenita – keratoderma [KLICK syndrome]!0
+Vaccinia!1
+Cholestatic pruritus!1
+Facial hemiatrophy!1
+Allergic contact dermatitis!1
+Sturge-Weber syndrome!1
+Autosomal dominant dystrophic epidermolysis bullosa!0
+Drug eruption...!0
+Woolly hair – hypotrichosis – everted lower lip – outstanding ears [Salamon syndrome]!0
+Epidermal fragility!0
+Ciliary and superciliary hypotrichosis!0
+Other conditions specific to the face and neck which may present with skin signs!0
+Homogeneous leukoplakia!0
+Subacute cutaneous lupus erythematosus!1
+Allergic contact dermatitis of external ear!0
+Angular cheilitis exacerbated by nutritional deficiency!0
+Penicillamine-induced acquired pseudoxanthoma elasticum!0
+Certain specified skin changes due to chronic exposure to ultraviolet radiation!0
+Exercise-induced anaphylaxis!1
+Flexural and intertriginous candidosis!0
+Perforating dermatoses!0
+Other specified developmental defect of hair and hair growth!0
+Dermatoses resulting from anticoagulant therapy!0
+Lesch-Nyhan syndrome!1
+Bullous impetigo!1
+Congenital malformations of the external ears!0
+Brachioradial pruritus!1
+Angioedema...!0
+Ectodermal dysplasia - intellectual deficit - central nervous system malformation!0
+Complete trisomy 13, meiotic non-disjunction!0
+Thiamine-responsive maple-syrup-urine disease!0
+Thrombotic thrombocytopenic purpura!1
+Mucolipidosis type 2!0
+Skin condition resolved!0
+Squamous cell carcinoma of glans penis!0
+Acrodermatitis chronica atrophicans!1
+Infantile acne!1
+Skin injury resulting from physical abuse!0
+Pediculosis capitis!1
+Skin lesion, neck!0
+Skin and soft tissue injury due to exposure to cold!0
+Cold panniculitis of the newborn!0
+Primary cutaneous actinomycosis!0
+Irritant contact dermatitis of lower leg!0
+Hand/arm vibration syndrome!0
+Classical scabies!0
+Allergic contact sensitization to metals and metal salts!0
+Genetic defects of hair and hair growth!0
+Malignant neoplasms involving the skin!0
+Immersion hand and foot!0
+Ichthyosis – prematurity syndrome!0
+Mucopolysaccharidoses with prominent cutaneous features!0
+Deep partial thickness burn, thermal!0
+Irritant contact dermatitis due to cosmetics and emollients!0
+Gorlin-Chaudhry-Moss syndrome!0
+Erythema induratum of Bazin!0
+Neuropathic skin ulceration due to leprosy!0
+Late syphilitic posterior uveitis!0
+Miscellaneous specified granulomatous disorders of skin!0
+Miscellaneous dermatoses due to therapy!0
+Metageria!1
+Other arenaviral haemorrhagic fevers!0
+Mycetoma due to unspecified or unknown infective agent!0
+Sclerema neonatorum!1
+Calcific panniculitis!0
+Candida onychomycosis!0
+Endogenous ochronosis!0
+Staphylococcal toxin-mediated reactions involving skin!0
+Dermatitis and eczema of male genitalia!0
+Recombinant chromosome 8 syndrome!0
+Tuberculids!1
+Bromhidrosis!1
+Syphilitic peritonitis!0
+Nail dystrophy...!0
+Autosomal recessive cutis laxa, type 3 [De Barsy syndrome]!0
+Paraneoplastic acanthosis nigricans!0
+hypertrichosis!0
+Occupational allergic contact dermatitis!0
+Punctate palmoplantar keratoderma, type 2 [Mantoux]!0
+Cheilitis!1
+Lucidolytic (junctional) epidermolysis bullosa!0
+Oculocerebral syndrome with hypopigmentation!0
+Non-allergic contact urticaria!0
+Mild plaque psoriasis!0
+Cutaneous sequelae of poisoning or self-harm!0
+Non-syndromic ichthyoses!0
+Lichenified onchodermatitis!0
+Furuncular myiasis!0
+Subacute nodular migratory panniculitis!1
+Suprabasal epidermolysis bullosa!0
+Acrokeratosis verruciformis of Darier!0
+Alopecia – psychomotor epilepsy – periodontal pyorrhoea – mental subnormality (Shokeir) syndrome!0
+Genetic disorders of keratinization!0
+Hidradenitis suppurativa!1
+Vulvar intraepithelial neoplasia grade II (VIN II)!0
+Vesicular dermatitis of hands and feet!0
+Genetically-determined hypertrichosis!0
+Poikiloderma vasculare atrophicans!1
+CATCH 22 phenotype [22q11.2 deletion]!0
+Congenital erosive and vesicular dermatosis healing with reticulated supple scarring!0
+Mevalonate kinase [MVK] deficiency with recurrent fever, with or without hyperIgD!0
+Tuberous sclerosis!1
+Skin lesion of uncertain nature, lower limb!0
+Acneiform and pustular eruptions due to drug!0
+Hereditary onychodysplasia!1
+Skin peeling!1
+Other specified malignant neoplasm of skin!0
+Superficial subcutaneous lipoma of limbs!0
+Disorders of hair!0
+Seborrhoea!1
+Varicose veins with non-truncal reflux!0
+Toxin-mediated cutaneous reactions to distant or systemic bacterial infection!0
+Tyrosinase-positive oculocutaneous albinism!0
+Scar sarcoidosis!1
+Cutaneous sarcoidosis!1
+Presence of incompletely specified disorder of skin!0
+Oral mucosal involvement by immunobullous disorder classified elsewhere!0
+Irritant contact dermatitis due to non-occupational contact with other specified agent!0
+Xanthoma...!0
+Hypertrophic disorders of skin!0
+Foreign body reaction to inorganic matter in the skin!0
+Atopic eczema: photoaggravated!0
+Irritant contact dermatitis due in part to occupational exposure to topical medicaments and antimicrobials!0
+Congenital sucking blisters!0
+Ecthyma gangrenosum!1
+Skin cancer (classified elsewhere) due to occupational exposure to polycyclic hydrocarbons!0
+Autosomal recessive congenital ichthyosis!0
+Cold urticaria!1
+Bite injury of skin!0
+Generalized excess and redundant skin!0
+Parasitic infestations affecting the skin!0
+Infective dermatitis!1
+Multiple papillomata and wet crab yaws!0
+Superficial bacterial folliculitis!0
+Angiokeratoma circumscriptum!1
+Juvenile dermatomyositis with calcinosis!0
+Junctional epidermolysis bullosa, non-Herlitz, generalized (JEB-nH gen)!0
+Plane seborrhoeic keratosis!0
+Drug-induced angioedema!1
+Papulosquamous disorder, unspecified!0
+Acute skin eruption of uncertain or unspecified nature!0
+Frostbite with tissue necrosis of ankle and foot!0
+Eccrine angiomatous hamartoma!1
+rhytidosis facialis!0
+Bullous lichen planus!1
+Congenital syphilis...!0
+Basal cell carcinoma of vulva!0
+Unspecified contact dermatitis!0
+Photo-allergic contact dermatitis due to non-occupational exposure to photo-allergen!0
+Complete trisomy 18, translocation!0
+Infantile seborrhoeic dermatitis!1
+PUVA keratoses!1
+Infections due to Dracunculus medinensis!0
+Retired melanoma in situ concepts!0
+Drug-induced flushing!0
+Frostbite with tissue necrosis of hip and thigh!0
+Certain specified self-inflicted skin-damaging disorder!0
+Ergotism!1
+Xanthelasma of eyelid!0
+Dermatophytosis due to Trichophyton megninii!0
+Squamous cell carcinoma of skin...!0
+Multiple carboxylase deficiency due to holocarboxylase synthetase deficiency!0
+Cutaneous reactions to marine Mollusca!0
+Langerhans cell histiocytosis involving the skin!0
+Malignant neoplasm: Melanoma of arm, including shoulder!0
+Ulcer of anogenital skin!0
+Drug-induced anagen effluvium!0
+Hyperkeratotic seborrhoeic keratosis!0
+Other disorders of the skin and subcutaneous tissue!0
+Parasitic infestation of conjunctiva in filariasis due to Wuchereria bancrofti!0
+Malignant otitis externa!1
+Miscellaneous specified cutaneous eruption due to drug!0
+Keratoacanthoma!1
+Tumour necrosis factor [TNF] receptor 1 associated periodic syndrome [TRAPS]!0
+Childhood atopic eczema: chronic lichenified!0
+Childhood atopic eczema: prurigo pattern!0
+Multisystem autoinflammatory disorders!0
+Pemphigus...!0
+Leprosy!1
+Chronic cutaneous lupus erythematosus!0
+Other bullous disorders!0
+Occupationally-acquired parasitic infestation (classified elsewhere) affecting the skin!0
+Irritated melanocytic naevus!0
+Irritant contact dermatitis due to food in contact with skin!0
+Juvenile dermatomyositis with overlap to non-organ specific systemic autoimmune disorders!0
+Familial camptodactyly!0
+Cellulitis of face!1
+Oligodontia - cancer predisposition syndrome!0
+Allergic contact gingivostomatitis!0
+Intradermal haematoma!0
+Propionic aciduria!1
+Lymphatic filariasis!1
+Hypermelanosis due to other specified cause!0
+Certain specified developmental anomalies affecting the skin!0
+Erythema marginatum rheumaticum!0
+Syndromic nummular and linear palmoplantar keratodermas!0
+Disorders involving the apocrine follicular unit!0
+Arthritis due to leprosy!0
+Skin disorders of non-specific, unexplained or unspecified nature!0
+Glossodynia!1
+Varioliform atrophy of facial skin!0
+Hereditary sclerosing poikiloderma, Weary type!0
+Occupational allergic contact urticaria!0
+Asymptomatic vulvovaginal candidosis!0
+Distichiasis, bilateral!0
+Generalized pustular psoriasis of pregnancy!0
+Allergic contact dermatitis due to dental materials!0
+Haemodialysis-associated pruritus!0
+Woolly hair naevus!1
+Carcinoma in situ: Skin of other and unspecified parts of face!0
+Retired melanoma concepts!0
+Congenital eyelid retraction, unilateral!0
+Benign cutaneous neoplasms with eccrine differentiation!0
+Pityriasis rubra pilaris: HIV-associated!0
+Neonatal pyogenic skin infections!0
+Malignant melanoma of skin not elsewhere classified!0
+Type 2 diabetes mellitus with diabetic foot!0
+Dermatophytide!0
+Reticular erythematous mucinosis!1
+Foreign body reaction to organic matter in the skin!0
+Dermatophytosis due to Trichophyton interdigitale!0
+Bullous cutaneous mastocytosis!0
+Pityriasis rotunda!1
+Irritant contact dermatitis due substantially to occupational exposure to topical medicaments and antimicrobials!0
+Prolidase deficiency!1
+Psychological and psychiatric conditions affecting the skin!0
+Dermatoses associated with haemodialysis!0
+Complete deficiency of methylmalonyl-CoA mutase!0
+Maple-syrup-urine disease!1
+Hermansky-Pudlak syndrome with pulmonary fibrosis!0
+Jellyfish (Cubozoa) sting!0
+Sea-urchin granuloma!0
+Iatrogenic neonatal dystrophic calcification!0
+Spitz naevus!1
+Haematoma of surgical wound of skin!0
+Papulonecrotic tuberculid!1
+Bromoderma!1
+Allergic contact dermatitis due to food in contact with skin!0
+Xeroderma pigmentosum/Cockayne syndrome complex!0
+Periocular dermatitis!1
+Actinic elastosis!1
+Basidiobolomycosis!1
+Lymphoedema secondary to other specified cause!0
+Erythema ab igne!1
+Blau syndrome!1
+Fabry disease; autosomal recessive!0
+Traumatized seborrhoeic keratosis!0
+Squamous cell carcinoma of prepuce of penis!0
+Chylomicron retention disease!1
+Infestation by Demodex!0
+Toxic epidermal necrolysis!1
+Fish sting!0
+Paraneoplastic vasculitis!0
+beach ear!0
+Generalized pruritus!0
+Stern-Lubinsky-Durrie syndrome!0
+Soft corn!0
+Capillaritis!1
+Palpebral cleft/coloboma!0
+Early congenital syphilis, symptomatic!0
+Disorders of cutaneous connective tissue!0
+Scarlet fever!1
+Xanthoma in association with primary hypercholesterolaemia!0
+Anal warts!1
+Keloids and hypertrophic scars!0
+Miscellaneous specified burn from exposure to ultraviolet radiation!0
+Pseudoporphyria due to excessive exposure to UV radiation!0
+Simple dermographism!0
+Allergic contact dermatitis of feet!0
+Non-pyogenic bacterial infections of the skin!0
+Scleromyxoedema!1
+Acne fulminans!1
+Other specified papulosquamous disorders!0
+Trichodental syndrome!0
+Metastatic carcinoma involving skin!0
+Urticaria pigmentosa: classical form!0
+Basaloid follicular hamartoma!1
+Occupationally-acquired dermatosis (classified elsewhere) due to heat!0
+Infections due to Trichinella spiralis!0
+Draft for ICD-10 Revision update!0
+Sporadic porphyria cutanea tarda!1
+Deafness - lymphoedema - leukaemia syndrome [Emberger syndrome]!0
+Radiotherapy-induced skin malignancy!0
+Hidradenitis suppurativa: atypical forms!0
+Parastomal Crohn disease!0
+Oleogranuloma!1
+Occupational tattoo!0
+Miscellaneous specified reactive inflammatory disorder of skin!0
+Endemic pemphigus foliaceus!1
+Superficial basal cell carcinoma!1
+Cellulitis of toe!0
+Streptococcal necrotizing fasciitis!0
+Disseminated gonococcal infection!1
+Alopecia areata...!0
+Drug-induced telangiectasia!0
+HIV-associated seborrhoeic dermatitis!0
+Congenital melanocytic naevus!0
+Obesity-related stretch marks!0
+Nummular dermatitis!1
+Dermatoses resulting from vascular insufficiency!0
+Thick large plaque psoriasis!0
+Erythema nodosum and related conditions!0
+Diffuse alopecia areata!1
+Scarring alopecia due to malignant infiltration!0
+Contact dermatitis due in part to occupational skin injury from friction and micro-trauma!0
+Dermatitis and eczema of perianal area!0
+Paediatric-onset mixed connective tissue disease!0
+Superficial subcutaneous lipomatous neoplasm!0
+Certain specified adverse cutaneous sequela of medication or treatment!0
+Irritant contact dermatitis of face and neck!0
+Autosomal recessive dystrophic epidermolysis bullosa!0
+Childhood polyarteritis!0
+Gummatous syphilis!0
+PUVA burn!0
+Cutaneous sarcoidosis...!0
+Streptococcal ecthyma!0
+Melanocytic proliferations of uncertain malignant potential!0
+Lichen striatus!1
+Photo-allergic contact dermatitis due in part to occupational exposure to photo-allergen!0
+Pretibial pemphigoid!0
+Acral melanocytic naevus!0
+Fibrous hamartoma of infancy!1
+Ichthyoses!1
+Skin damage resulting from acquired neuropathy!0
+Secondary syphilitic hepatitis!0
+Erythema multiforme provoked by systemic fungal infection!0
+Allergic contact sensitization to plastics, glues and resin systems!0
+Pyoderma gangrenosum : pustular!0
+Pediculosis corporis!1
+Familial progressive hyperpigmentation!1
+Lipoedema!1
+Other papulosquamous disorders!0
+Genitocrural dermatophytosis!0
+Verrucous lupus erythematosus!1
+Anagen effluvium!1
+Demodex folliculitis!0
+Perinatal Herpes simplex infection!0
+Dermatophytosis due to Trichophyton equinum!0
+Ancylostomiasis!1
+Hypohidrosis...!0
+Oral pemphigus!0
+Diabetic skin lesions, unspecified!0
+Melanoma in situ of conjunctiva!0
+Infections of the napkin area!0
+Camptodactyly of toes!0
+Protein contact dermatitis due to animal protein!0
+Congenital rubella syndrome!1
+Acute cutaneous distension syndrome!0
+Other specified disorders of skin and subcutaneous tissue related to radiation!0
+Acquired generalized lipodystrophy!1
+Gastrocutaneous syndrome!1
+To be retired - Diseases of the skin!0
+Papillary hyperplasia of oral mucosa!0
+Otomycosis due to Candida!0
+Generalized seborrhoeic dermatitis!0
+Hypotrichosis – acro-osteolysis – onychogryphosis – palmoplantar keratoderma – periodontitis (HOPP) syndrome!0
+Cobb syndrome!1
+Melanoma in situ of other sites!0
+Neonatal intrahepatic cholestasis caused by citrin deficiency!0
+Self-inflicted hair disorders!0
+Skin lesions due to drug overdose!0
+Phthiriasis of eyelashes!0
+Infestation of the skin by ectoparasites!0
+Neonatal streptococcal pyoderma!0
+Neonatal haemochromatosis!1
+Atrophic disorders of skin!0
+Cutaneous myiasis!0
+Allergic contact dermatitis due to topical medicaments!0
+Late congenital syphilitic oculopathy!1
+Genetic defects of the the hair shaft with increased fragility!0
+Cutaneous microvascular disturbances due to hyperglobulinaemia!0
+Autosomal recessive cutis laxa, type 2B!0
+Generalized disturbances of skin sensation!0
+Other specified arthropod-borne viral fevers!0
+Diffuse systemic sclerosis!0
+Hordeolum/Stye!0
+Acquired ichthyosis!1
+Skin disorder resulting from Munchhausen syndrome by proxy!0
+Lower limb venous hypertension!0
+Williams-Beuren syndrome [7q11.23 deletion]!0
+Flushing!1
+Trigeminal trophic syndrome!1
+Irritant contact dermatitis due substantially to occupational contact with plants and other vegetable matter!0
+Epidermal burn, chemical!0
+Ataxia-telangiectasia-like disorder!0
+Cutaneous reactions to zoonotic mites!0
+Frostbite with tissue necrosis of wrist and hand!0
+Chemical burn of oral mucosa!0
+Kerion!1
+Encephalocraniocutaneous lipomatosis!0
+Pigmented skin lesion of uncertain nature, lower limb!0
+Melanoma in situ of scalp and neck!0
+Longitudinal ridging of nails!0
+Genital melanocytic naevi!0
+Chronic lichenified skin disorder!0
+Autosomal recessive cutis laxa, type 2A!0
+Hereditary trachyonychia!0
+Gas gangrene due to Clostridium perfringens!0
+Multisystem autoimmune disorders affecting the skin!0
+Vesicular dermatitis of feet!0
+Severe combined immunodeficiency [SCID] with hypereosinophilia!0
+Other and unspecified skin changes!0
+Human papilloma virus infection of skin and mucous membrane!0
+Nested seborrhoeic keratosis!0
+Dermatoses due to ionizing radiation!0
+Solitary papular angiokeratoma!0
+Spider bites!1
+Cutaneous abscess, furuncle and carbuncle of trunk!0
+Congenital epulis!1
+Amelo-cerebro-hypohidrotic syndrome!0
+Morphoea and related conditions!0
+Perforating periumbilical calcific elastosis!0
+Uncombable hair syndrome!1
+Professional tattoo!0
+Drug-induced hypertrichosis!0
+Raynaud phenomenon!1
+Ehlers-Danlos syndrome with periventricular heterotopia!0
+Annular sarcoidosis!1
+Other specified disorders of skin pigmentation!0
+acute diffuse otitis externa!0
+Actinic reticuloid!1
+Bazex-Dupré-Christol syndrome!0
+Haemosiderin pigmentation of skin!0
+Drug-induced hirsutism!0
+Melanocytic naevi of leg, including hip!0
+Contact dermatitis of external ear...!0
+Vitiligo of upper eyelid and periocular area!0
+Solitary median maxillary central incisor syndrome!0
+Nail involvement in other specified genetic disease!0
+Occupational halogen acne [chloracne]!0
+Vitamin B12 responsive methylmalonic aciduria type cbl mut-!0
+Gouty tophi!0
+Autosomal recessive basal epidermolysis bullosa!0
+Benign acantholytic dermatosis of vulva!0
+Cutaneous Mycobacterium avium-intracellulare infection!0
+Congenital ptosis, unilateral!0
+Urethral candidosis!0
+Urban yellow fever!0
+Sunburn of third degree!0
+Plasma cell balanitis!1
+Hydroa vacciniforme!1
+Euryblepharon!0
+Localized lipoatrophy of undetermined cause!0
+Irritant contact dermatitis due to foods!0
+Acne-like inflammatory follicular disorders!0
+Hypertrichosis of upper eyelid!0
+Intravascular large B-cell cutaneous lymphoma!0
+Subcutaneous fat necrosis due to birth injury!0
+Adult dermatomyositis, unspecified!0
+Macular syphilide!1
+Cutaneous abscess, furuncle and carbuncle of buttock!0
+Scarring alopecia secondary to lepromatous leprosy!0
+Cutaneous Mycobacterium kansasii infection!0
+Stoma-related chronic papillomatous dermatitis!0
+Irritant contact dermatitis due substantially to occupational contact with other specified agent!0
+Infantile atopic eczema!0
+Cutaneous abscess, furuncle and carbuncle of neck!0
+Tricho-odonto-onychial dysplasia with bone deficiency in fronto-parietal region!0
+Melanocytic naevi, unspecified!0
+Occupational phototoxic reactions to skin contact with exogenous photoactive agents!0
+Presence of unspecified condition of the skin!0
+swimmer's ear!0
+Bowenoid papulosis of the penis!0
+Anti-synthetase syndrome with dermatomyositis!0
+Neuropathic skin ulceration!0
+Infantile perianal warts!0
+Tessier number 5 facial cleft!0
+Skin disorders provoked by external factors!0
+Benign cutaneous neoplasms of neural and nerve sheath origin!0
+Congenital toxoplasmosis!1
+Pseudopelade!1
+Intrinsic ageing of the skin!0
+Impairment of normal functioning resulting from skin disease!0
+GAPO syndrome!1
+Unspecified contact dermatitis, unspecified cause!0
+Generalized bullous fixed drug eruption!1
+Epidermolysis bullosa acquisita!1
+Autosomal recessive epidermolytic ichthyosis!0
+Cimicosis!1
+Disseminated gonococcaemia!0
+Glomerular disease associated with Fabry disease!0
+Ehlers-Danlos syndrome!1
+Dermatophytosis due to Trichophyton tonsurans!0
+Perineural lipomatosis!0
+Benign summer eruption!0
+Hereditary sclerosing poikiloderma with tendon and pulmonary involvement!0
+Repetitive excoriation!0
+Benign cephalic histiocytosis!1
+Juvenile xanthogranuloma!1
+Primary cutis verticis gyrata!0
+Pyogenic granuloma!1
+Lipo-lymphoedema!0
+Anogenital psoriasis!0
+Cutaneous microvascular occlusion due to mixed cryoglobulins!0
+Oral allergy syndrome!1
+Xanthous oculocutaneous albinism!0
+Mucocutaneous early congenital syphilis!0
+Oculocutaneous albinism!1
+Otomycosis!1
+Adult seborrhoeic dermatitis!0
+acute swimmer's ear!0
+Exacerbation of constitutional dermatitis due to exposure to skin irritants!0
+Chrysiasis!1
+Surgical wound of skin!0
+Genetically-determined epidermolysis bullosa!0
+Idiopathic guttate hypomelanosis!1
+Exacerbation of constitutional dermatitis due to occupational exposure to contact allergens!0
+Adult atopic eczema: flexural!0
+Non-occupational non-allergic contact urticaria!0
+Purpura and bruising secondary to disorders of coagulation!0
+Irritant contact dermatitis related to stoma or fistula!0
+Seborrhoeic (Malassezia) folliculitis!0
+Malignant neoplasm: Skin of arm, including shoulder!0
+Hypertrichosis cubiti - short stature!0
+Viral exanthems!0
+Cytophagic histiocytic panniculitis!1
+Skin changes due to chronic exposure to nonionizing radiation, unspecified!0
+Secondary erythromelalgia!0
+Hypertrophic lichen planus of vulva!0
+Hair pulling disorder (trichotillomania)!0
+Dermatoses due to malnutrition or malabsorption!0
+Late lesions of pinta (dyschromia and achromia)!0
+Cutaneous complications of medical interventions!0
+Perianal lichen simplex!0
+SCARF syndrome!1
+Xeroderma pigmentosum G (XPG)!0
+Multifocal and unisystemic Langerhans-cell histiocytosis!0
+Induratio penis plastica!1
+Ectrodactyly - ectodermal dysplasia - cleft lip/palate!0
+Initial lesions of yaws!0
+Erythema in other diseases classified elsewhere!0
+Dermatoses resulting from defective nutrition!0
+Classical phenylketonuria, phenylalanine hydroxylase total deficiency!0
+Molluscum contagiosum!1
+Hypertrophic acne scars!0
+Discrete acquired superficial venous and capillary ectasias!0
+Ocular late syphilis!0
+Vulval warts!0
+Pustular miliaria!0
+Hyperkeratosis of yaws!1
+Atherosclerosis of arteries of extremities with ischaemic ulceration!0
+Disorders of essential minerals or their metabolism affecting the skin!0
+Pyoderma!1
+Bloom syndrome!1
+Phthiriasis!1
+Postmastectomy lymphoedema syndrome!0
+Miscellaneous dermatoses of male genitalia!0
+Insect bites and stings...!0
+Anaphylaxis due to radiocontrast media!0
+Other forms of systemic sclerosis!0
+Bullous erythema multiforme!1
+Pyogenic abscess of the skin!0
+Viral exanthem due to other specified virus!0
+Acute purpuric skin eruption!0
+Other specified non-syndromic ichthyoses!0
+Acquired lipodystrophy!0
+Histiocytic-granulomatous disorders of the skin!0
+Exogenous ochronosis!0
+Allergic contact sensitization to industrial biocides, cutting oils and disinfectants!0
+Skin infection classified elsewhere due to Panton-Valentine leucocidin [PVL] producing Staphylococcus aureus!0
+Granuloma annulare!1
+Napkin (diaper) dermatosis...!0
+Speckled leukoplakia!0
+Misshapen ear!0
+Periorificial tuberculosis!0
+Hepatic porphyrias affecting the skin!0
+Dermatoses of the external ear!0
+Curly hair – acral keratoderma – caries (CHACS) syndrome!0
+Superficial acne...!0
+Verruciform xanthoma of oral mucosa!0
+Complete trisomy 13, translocation!0
+Cutaneous reactions to Cnidaria!0
+Superficial frostbite of arm!0
+Acrogeria!1
+Irritant contact dermatitis due to other chemical products!0
+Pityriasis rubra pilaris type III: classical juvenile!0
+Pigmented skin lesion of uncertain nature, trunk!0
+Dermatophytosis due to Trichophyton mentagrophytes!0
+Malignant neoplasm: Labium minus!0
+Certain specified form of cutaneous sarcoidosis!0
+Ebola virus disease!1
+Stucco keratosis!1
+Acute skin injury due to skin contact with corrosive substance!0
+Pyoderma gangrenosum!1
+Ectodermal dysplasia - sensorineural deafness!0
+Hypoparathyroidism - deafness - renal disease!0
+Congenital anomalies of skin development!0
+Generalized excess and redundant skin following bariatric surgery!0
+Hydroid coral sting!0
+Anogenital ulceration due to Behçet disease!0
+Miliaria...!0
+IBIDS syndrome!1
+Zunich-Kaye syndrome!1
+Autosomal dominant palmoplantar keratoderma and congenital alopecia [Stevanovi?]!0
+Genetic lipodystrophy!0
+Lop/cup ear anomaly!0
+Malignant neoplasm: Overlapping malignant melanoma of skin!0
+Chemical burn of skin categorized by depth of injury!0
+Cold burn of oral mucosa!0
+Eczema of male genitalia!0
+Acanthosis nigricans!1
+Secondary anetoderma!1
+Sunburn with blisters or exudation!0
+Johanson-Blizzard syndrome!1
+Rapp-Hodgkin syndrome!1
+Other dermatitis!0
+Chronic excoriation of skin!0
+Syphilitic alopecia!1
+Relapsing polychondritis!1
+Subcutaneous lipomatosis of other specified or unspecified type!0
+Genetic, chromosomal and developmental disorders affecting the skin!0
+Herpes simplex infection of vulva!0
+Acquired leukonychia!0
+Juvenile dermatomyositis!1
+Ainhum!1
+Ectodermal dysplasia, ''pure'' hair-nail type!0
+Connective tissue hamartoma!0
+Ophiasis!1
+Lymphoedema!1
+Foreign body reaction to cactus spines!0
+Contact dermatitis of female genitalia...!0
+Burning of skin!0
+Purpura and bruising!0
+Wandering rash of the mouth!0
+Drug-induced hyperhidrosis!0
+Plaque morphoea!0
+Allergic contact dermatitis due to industrial biocides, cutting oils and disinfectants!0
+Infective disorders of the external ear!0
+Immunosuppressive therapy as contributor to malignant skin neoplasm classified elsewhere!0
+Small plaque parapsoriasis!1
+Morphoea...!0
+Other specified viral haemorrhagic fevers!0
+Atopic cheilitis!0
+Thin large plaque psoriasis!0
+Dermatoses resulting from disturbed metabolic processes!0
+Heterotopic sebaceous glands of oral mucosa!0
+Borderline leprosy!1
+Apocrine sweat disorders!0
+Generalized excess and redundant skin due to intentional calorie restriction!0
+Chronic blistering skin disorder!0
+Inflammatory dermatoses of the vulva!0
+Atypical fibroxanthoma!1
+Occupational phototoxic reactions!0
+Acute erythematous oral candidosis!0
+Lumbosacral dermal melanocytosis!0
+Melanocytic naevus...!0
+Lip fissure!1
+Hereditary coproporphyria!1
+Multiple mononeuropathy vasculitis!0
+Neonatal acne!1
+Latent late syphilis!0
+benign lymphocytoma cutis!0
+Pubertal stretch marks!0
+Photo-allergic contact dermatitis due to certain specified medicaments!0
+Ehlers-Danlos syndrome, vascular-like type!0
+Occupational contact dermatitis…!0
+Hyperhidrosis secondary to other specified disorder classified elsewhere!0
+Epidermolytic verrucous epidermal naevus!0
+Cataract - alopecia - sclerodactyly!0
+Cellulite!1
+Erythrocyanosis!1
+Onychomycosis due to non-dermatophyte mould!0
+Skin manifestation of other specified neonatal vitamin deficiency!0
+Skin cancer (classified elsewhere) attributable to occupation…!0
+Mucous membrane pemphigoid...!0
+Unspecified frostbite of head and neck!0
+Familial spinal neurofibromatosis!0
+Female pattern hair loss (non-androgenetic)!0
+Odonto-onycho-hypohidrotic dysplasia - midline scalp defects!0
+Drug-induced gingival hyperplasia!0
+Localized vulval pemphigoid!0
+Pigmented spindle cell naevus of Reed!0
+Systemic bacterial infection affecting skin!0
+Actinic granuloma!1
+Familial hypoalphalipoproteinaemia!0
+Senile purpura!1
+Genetic defects of the hair shaft!0
+Traumatic wound of skin!0
+Cutaneous microvascular disturbances due to myeloproliferative disorder-associated platelet plugs!0
+Lichen sclerosus of vulva!0
+Lichen sclerosus...!0
+Multiple minute digitate hyperkeratoses!0
+Birth injury to scalp!0
+Subcutaneous swelling, mass or lump, upper limb!0
+Dermatoses of the anus, perianal area and perineum!0
+Photodistributed telangiectasia!0
+Auricular pit!0
+Graft-versus-host disease!1
+Craniofacial hyperhidrosis!0
+Pityriasis rubra pilaris!1
+Ulcerative sarcoidosis!1
+Acute irritant contact dermatitis of hands...!0
+Compound melanocytic naevus!0
+Lichen planus!1
+Extragenital lichen sclerosus!0
+Physiological cutis marmorata!0
+Argininosuccinic aciduria!1
+Folliculitis decalvans!1
+Sacrococcygeal pilonidal disease!0
+Decorative tattoo!0
+Enteroviral vesicular pharyngitis!0
+PIBIDS syndrome!1
+Cutis verticis gyrata - intellectual deficit!0
+Keloid scar!1
+Premalignant and malignant disorders of the penis and scrotum!0
+Ectodermal dysplasia - ectrodactyly - macular dystrophy!0
+Hereditary generalized hypotrichosis!0
+Plaque psoriasis!1
+Subcutaneous swelling, mass or lump, lower limb!0
+Cutaneous reactions to food mites!0
+Glandular cheilitis!1
+Citrullinaemia type 1!0
+Citrullinaemia type 2!0
+HIV-associated eosinophilic folliculitis!0
+Familial partial lipodystrophy associated with PPARG mutations!0
+Genetic disorders of porphyrin metabolism affecting the skin!0
+Peyronie disease!1
+Severe T-cell immunodeficiency [SCID] - congenital alopecia - nail dystrophy!0
+Chronic peripheral venous insufficiency!0
+Non-melanin pigmentation due to exogenous substances!0
+Epidermolysis bullosa simplex, other specified autosomal recessive (EBS-new subtype)!0
+Generalized non-inflammatory peeling skin syndrome!0
+Neonatal ecthyma gangrenosum!0
+Allergic contact sensitization to allergens from clothing and footwear!0
+Hypertrichosis!1
+Giant cell arteritis without polymyalgia rheumatica!0
+Cholestatic pruritus due to liver disorder!0
+Pulmonary late syphilis!0
+Congenital or hereditary poikiloderma of uncertain or unspecified type!0
+Occupationally-acquired skin infections and infestations!0
+Drug-induced annular erythema!0
+Leukoderma acquisitum centrifugum!1
+Chylocele of tunica vaginalis in filariasis due to Brugia timori!0
+Paraesthesia of skin!0
+Lethal acantholytic epidermolysis bullosa!1
+Vulval melanotic macule!0
+Tuberculoid leprosy!1
+Other specified acute skin changes due to ultraviolet radiation!0
+Orf!1
+Miscellaneous neurological conditions affecting the skin!0
+Localized pruritus!0
+Koilonychia!1
+Angiokeratoma of the scrotum!1
+Complex primary lymphoedema!0
+Other zoonotic poxvirus infections!0
+Complete cryptophthalmia, bilateral!0
+Occupational acne!1
+Vitiligo of eyelid and periocular area!0
+Cutaneous reactions to venomous or noxious marine invertebrates!0
+West Nile virus infection!1
+Dermographism!1
+Subcutaneous swelling, mass or lump of multiple sites!0
+Anal intraepithelial neoplasia!1
+Pressure ulcer grade III+ [at least full thickness skin loss but true depth not known]!0
+Systemic sclerosis, unspecified!0
+Inherited patterned lentiginosis!0
+Pruritus due to antimalarials!0
+Cutaneous microvascular disturbances due to dysproteinaemia!0
+Blastic NK-cell lymphoma!1
+Simple primary lymphoedema!0
+Adnexal (appendageal) carcinoma of vulva!0
+Rothmund-Thomson syndrome type 1!0
+Rothmund-Thomson syndrome type 2!0
+Accessory tragus!1
+Ehlers-Danlos syndrome, hypermobile type!0
+Chromhidrosis!1
+Klinefelter syndrome, male with more than two X chromosomes!0
+Acute sarcoidosis with erythema nodosum!0
+Lichen planus of the nails!1
+Vasculitis limited to skin, not elsewhere classified!0
+Normal hair!0
+Granulomatous slack skin!1
+Dermatoses due to arterial and arteriolar disease!0
+Deafness –  enamel hypoplasia – nail defects [Heimler syndrome]!0
+Dystrophic calcification of the skin secondary to inflammatory disease!0
+Gummata and ulcers of yaws!0
+Cellulitis of umbilicus!0
+Irritative hyperplasia of oral mucosa!0
+Congenital non-bullous ichthyosiform erythroderma!0
+Antineutrophil cytoplasmic antibodies [ANCA] associated vasculitis!0
+Primary irritant napkin (diaper) dermatitis!0
+Focal cutaneous mucinosis!1
+X-linked cutis laxa!0
+Insect bites and stings!1
+Childhood atopic eczema: flexural!0
+Alopecia - contractures - dwarfism - intellectual deficit!0
+Bamforth-Lazarus syndrome!1
+Beaded nails!0
+Ulcer of skin of uncertain nature, lower limb!0
+Dermatophytosis due to Trichophyton yaoundei!0
+Chronic erythematous skin disorder!0
+Venous lake!1
+Subcorneal pustular dermatosis-type IgA pemphigus!0
+Aquagenic urticaria!1
+Papulo-erosive napkin dermatitis!0
+Muckle-Wells syndrome!1
+9q34 deletion!0
+Bacterial toxin-mediated acral and perineal exanthem!0
+Plague involving skin!0
+Wart virus proliferation in immune-deficient states!0
+Carcinoma in situ of penis!0
+Bee stings!0
+Cellulitis of other parts of limb!0
+Hypertrichosis of eyelid!0
+Hirsutism!1
+Melanocytic naevi of eyelid, including canthus!0
+Transient neonatal pustular melanosis!1
+Abscess of lower eyelid!0
+Colloid milium!1
+Solar urticaria!1
+Berardinelli-Seip congenital lipodystrophy!0
+Pruritus due to endocrine or metabolic disorder!0
+Itching purpura!1
+Vulval Paget disease!0
+Skin disorders due to phototherapy!0
+Disorders of the skin of uncertain or unpredictable malignant potential!0
+Pruritic xerosis cutis!0
+Hereditary symmetrical dyschromatosis!0
+Abscess of external ear!0
+Miscellaneous specific cutaneous signs of internal malignancy!0
+Subcutaneous swelling, mass or lump of uncertain or unspecified nature!0
+Superficial epidermolytic ichthyosis!0
+Sinus histiocytosis with massive lymphadenopathy!0
+Pressure ulcer...!0
+Nodular melanoma!1
+Frostbite with tissue necrosis of thorax!0
+Chylocele of tunica vaginalis in loiasis!0
+Blepharochalasis upper eyelid!0
+Traumatic balanoposthitis!0
+De Grouchy syndrome [18p deletion]!0
+Acute urticaria due to other specified mechanism!0
+Involvement of vulva by other specified dermatosis!0
+Pseudoxanthoma elasticum!1
+Familial cutaneous collagenoma!0
+Anogenital Herpes simplex infection...!0
+Allergic contact dermatitis of lower leg!0
+Seborrhoeic keratosis!1
+Acute papular skin eruption!0
+1q21.1 deletion!0
+Contact dermatitis of scalp...!0
+Conidiobolomycosis!1
+Neurofibromatoses!1
+Pigmented skin lesion of multiple sites!0
+Lower limb venous telangiectases!0
+Disorders of skin appendages!0
+Simple lentigo!1
+Unspecified contact dermatitis due to food in contact with skin!0
+Neonatal extravasation injury!0
+Merkel cell carcinoma of skin!0
+Other specified malignant neoplasms of vulva, labium majus!0
+Euryblepharon, unilateral!0
+Ulcer of skin of uncertain nature, neck!0
+Genetic defects of the the hair shaft without increased fragility!0
+Lymphoedema secondary to venous insufficiency!0
+Congenital symblepharon, unilateral!0
+Occupational acne and folliculitis due to exposure to mineral oils!0
+Disseminated superficial porokeratosis!1
+Mucocutaneous lymph node syndrome [Kawasaki]!0
+Early congenital syphilis!1
+Drug-induced capillaritis!0
+Miscellaneous specified (Class IIb) non-Langerhans cell histiocytoses involving the skin!0
+Elastosis perforans serpiginosa!1
+Guttate psoriasis!1
+Skin manifestations of work-related poisoning!0
+Induced pemphigus!0
+Non-epidermolytic verrucous epidermal naevus!0
+Lichenoid keratosis!1
+Pemphigus!1
+Neonatal staphylococcal necrotizing fasciitis!0
+Intrauterine epidermal necrosis!1
+Neonatal streptococcal necrotizing fasciitis!0
+Autoimmune dermatomyositis!0
+Eccrine sweat disorder, unspecified!0
+Sarcoidosis of oral cavity!0
+Genetic syndromes with poikiloderma!0
+Pyogenic bacterial infections of the skin and subcutaneous tissues!0
+Ischaemic ulceration of skin!0
+X-linked hypohidrotic ectodermal dysplasia!0
+Diffuse palmoplantar keratoderma [Vörner-Thost]!0
+Camptodactyly of toes, unilateral!0
+Pyoderma gangrenosum classified by aetiological associations!0
+Keratinopathic ichthyoses!0
+Syndromic epidermolysis bullosa!0
+Immunobullous systemic lupus erythematosus!0
+Acquired thrombotic thrombocytopenic purpura due to anti-ADAMTS 13 antibodies!0
+Diabetic necrobiosis lipoidica!1
+Sebaceous gland hyperplasia!0
+Chondrodermatitis nodularis!0
+Dermatitis herpetiformis!1
+Fungal infections affecting the skin!0
+Infections due to Dirofilaria!0
+Seborrhoeic dermatitis of the flexures!0
+Odonto-onycho dysplasia - alopecia!0
+Acquired keratosis follicularis!1
+Herpes simplex vulvovaginitis!0
+Coumarin necrosis!1
+Chapping of the lips!0
+Lupus panniculitis!1
+Contact dermatitis of face and neck...!0
+Dominant dystrophic epidermolysis bullosa, generalized (DDEB-gen)!0
+Arachnid bites and stings!0
+Relapsing fevers!1
+Mucocutaneous perinatal varicella!0
+Occupational phototoxic reaction to skin contact with tar or tar derivatives!0
+Junctional epidermolysis bullosa inversa (JEB-I)!0
+Contact dermatitis...!0
+Solar vasculitis!0
+Congenital thrombotic thrombocytopenic purpura due to ADAMTS-13 deficiency!0
+Candidiasis of skin and nail!0
+Pigmented hairy epidermal naevus [Becker]!0
+Pseudolymphomatous drug hypersensitivity syndrome!0
+Pruritus due to certain specified systemic disorder!0
+Allergic contact sensitization to systemic medicaments!0
+Drug-induced oral lichenoid reaction!0
+Nail-biting!1
+Zoonotic bacterial infections involving the skin!0
+Ulcer of skin of uncertain nature, trunk!0
+Photo-allergic contact dermatitis due to topical medicaments!0
+Adult dermatomyositis with calcinosis!0
+Perianal streptococcal cellulitis of childhood!0
+Melanoma in situ of arm, including shoulder!0
+Polyneuropathy due to leprosy!0
+Dyskeratosis congenita!1
+Keratosis pilaris!1
+DNA instability syndromes affecting the skin!0
+Irritant contact dermatitis due in part to occupational exposure to foods!0
+Ehlers-Danlos syndrome of undetermined or unspecified type!0
+Scarring alopecia due to inflammatory disorders!0
+Miscellaneous nutritional disorders affecting the skin!0
+Vulval intraepithelial neoplasia, classical (usual)!0
+Eccrine naevus!1
+Other disorders of skin and subcutaneous tissue related to radiation!0
+Erythromelalgia!1
+Thromboangiitis obliterans [Buerger]!0
+Adult T-cell leukaemia/lymphoma, skin!0
+Malignant neoplasm: Melanoma of lip!0
+Cheek-biting!0
+Anogenital Herpes simplex infection!0
+Dermatophytosis due to Epidermophyton floccosum!0
+Other atopic dermatitis!0
+Allergic contact dermatitis organized by site!0
+Unilateral circumscribed hyperhidrosis!0
+Acne vulgaris!1
+Poikiloderma with neutropenia!0
+Allergic contact dermatitis due to food flavours and additives!0
+Hereditary koilonychia!0
+Histidinaemia!0
+Primary hypercholesterolaemia!0
+Apocrine hamartoma!0
+Other specified diabetes mellitus due to genetic defects of beta cell function with diabetic foot!0
+Cutaneous markers of neuroendocrine disorders!0
+Minimal pigment oculocutaneous albinism!0
+Pyoderma gangrenosum linked to inflammatory polyarthropathy!0
+Localized cutaneous vasculitis!0
+Classical phenylketonuria, phenylalanine hydroxylase partial deficency!0
+Primary essential cutis verticis gyrata!0
+Malignant neoplasm: Scrotum!0
+Skin fragility!0
+Familial partial lipodystrophy associated with PLIN1 mutations!0
+Axillary hyperhidrosis!1
+Ulcer of skin, head!0
+Disorders of hair and the hair follicle!0
+Mucosulfatidosis!1
+Hypoaesthesia of skin!0
+Primary cutaneous diffuse large B-cell lymphoma, certain specified!0
+Inflammatory dermatoses affecting male genitalia!0
+SIBIDS syndrome!0
+Crohn disease of anal region!0
+Hypertrophic disorder of skin, unspecified!0
+Carcinoma cuniculatum!1
+Hepatoerythropoietic porphyria!1
+Overlap and undifferentiated non-organ specific systemic autoimmune disease!0
+Other disorders of pigmentation!0
+Dermatitis due to ingested food!0
+Hereditary ichthyoses!0
+Late syphilitic bursitis!0
+Psychological disturbance resulting in falsely perceived or actual skin damage or disorder in others!0
+Drug-induced androgenic alopecia!0
+Erysipelas of face!0
+Neurocutaneous melanocytosis!0
+Granulomatous rosacea!1
+Eczematous drug eruption!0
+Carcinoma in situ of skin!1
+Irritant contact dermatitis due substantially to occupational exposure to irritant!0
+Follicular occlusion syndrome!0
+Fabry disease; autosomal dominant!0
+Primary cutaneous aggressive epidermotropic CD8+ T-cell lymphoma!0
+Iatrogenic skin injury resulting from antenatal interventions!0
+Vitamin B12 responsive methylmalonic aciduria type cbl A!0
+Vitamin B12 responsive methylmalonic aciduria type cbl B!0
+Onchocercoma!0
+15q26.3 deletion!0
+Miscellaneous genetically-determined metabolic syndromes with skin involvement!0
+Irritant contact dermatitis organized by site!0
+Erythema infectiosum!1
+Skin cancer (classified elsewhere) due to occupational exposure to ionizing radiation!0
+Yaws...!0
+Penile intraepithelial neoplasia!0
+Pediculosis!1
+Trichiasis without entropion upper eyelid!0
+Miscellaneous occupationally-acquired skin disorders!0
+Allergy to substances in contact with the skin!0
+Cutaneous larva migrans!1
+Acantholytic dyskeratotic epidermal naevus [Darier]!0
+Mucopolysaccharidosis type 1H/S!0
+Pruritus due to systemic disorder!0
+Xeroderma pigmentosum B (XPB)!0
+Full thickness burn, thermal!0
+Angiokeratoma of Fordyce!1
+Methylmalonic aciduria, vitamin B12 responsive!0
+Lymphoedema secondary to chronic inflammation!0
+Disturbances of skin sensation of unspecified aetiology!0
+Lymphoedema-distichiasis syndrome!0
+Pyoderma gangrenosum : parastomal!0
+Chylocele of tunica vaginalis in filariasis due to Wuchereria bancrofti!0
+Foreign body granuloma of skin!0
+Skin picking and related skin-damaging disorders!0
+Skin rash or eruption of uncertain or unspecified nature!0
+Clostridial gas gangrene!0
+Secondary syphilitic periostitis!0
+Hypomelanosis due to exposure to chemicals!0
+Asymptomatic neurosyphilis!1
+Subcutaneous swelling, mass or lump, head!0
+Purpura due to paroxysmal coughing or vomiting!0
+Localized hyperhidrosis!0
+Purpura and bruising due to increased intravascular pressure!0
+Occupational melanosis!0
+Alopecia secondary to iron deficiency!0
+Relapsing fever...!0
+Physiological hypermelanosis!0
+Superficial mixed comedonal and papulopustular acne!0
+Basal cell carcinoma of vulva, clitoris!0
+Mosquito-borne viral fever, unspecified!0
+Tinea nigra!1
+Other acariasis!0
+Focal primary (metabolic) cutaneous mucinosis!0
+Erythema multiforme...!0
+Palmoplantar keratodermas!1
+Dermatoses of the scalp!0
+Primary cutaneous marginal zone B-cell lymphoma!0
+Other and unspecified syphilis!0
+Irritant contact dermatitis due substantially to occupational exposure to solvents!0
+Diabetic cheiroarthropathy!1
+Hypohidrosis!1
+Fibroepithelial basal cell carcinoma!0
+Traumatic scar of skin!0
+Ehlers-Danlos syndrome, vascular type!1
+Hyperhidrosis...!0
+External hirudiniasis!1
+Cutaneous markers of disorders of the kidney/urinary tract!0
+Cervical hypertrichosis – peripheral sensory and motor neuropathy!0
+Pinta!1
+Frostbite with tissue necrosis of arm!0
+Multifocal and multisystemic (disseminated) Langerhans-cell histiocytosis [Letterer-Siwe disease]!0
+Other delusions directed at the skin!0
+Non-occupational irritant contact dermatitis!0
+Hyperkeratotic fissured palmar dermatitis!0
+Acne and acneiform reactions to drugs and poisons!0
+Cellulitis of back [any part except buttock]!0
+Dermatoses provoked by cold!0
+Dermatoses of infancy!0
+Naxos disease!1
+Flexural intertriginous candidosis!0
+Lymphoedema secondary to lymphatic filariasis classified elsewhere!0
+Necrolytic migratory erythema [glucagonoma syndrome]!0
+Adverse cutaneous sequelae of diagnostic procedures!0
+Gas gangrene due to other Clostridria spp.!0
+Certain specified disorders of external ear!0
+Active stage of trachoma!0
+Patent urachus!0
+Junctional epidermolysis bullosa, Herlitz (JEB-H)!0
+Autoimmune xerostomia!0
+Melanocytic naevi of lip!0
+Other specified localized connective tissue disorders!0
+Basal cell carcinoma of skin!0
+Penoscrotal pruritus!0
+Localized lipoatrophy and lipodystrophy!0
+Post-herpetic pruritus!0
+degeneration of skin!0
+Classical maple-syrup-urine disease!0
+Tuberculous chancre!1
+Vasculitis affecting medium/large cutaneous blood vessels!0
+Drug-associated immune complex vasculitis!0
+Blepharochalasis lower eyelid!0
+Piebaldism!1
+Pigmented skin lesion of uncertain nature, upper limb!0
+Unspecified contact dermatitis due to dyes!0
+Capillaritis [Schamberg]!0
+Certain specified viral haemorrhagic fevers!0
+Infections of the anus and perianal skin!0
+Localized porokeratosis!0
+Phymatous rosacea!1
+Lipoedema of the scalp!0
+Calcific uraemic arteriolopathy [calciphylaxis]!0
+Mucopolysaccharidosis type 1!0
+Lichen simplex chronicus and prurigo!0
+Multiple benign melanocytic naevi!0
+Developmental capillary vascular malformations of the skin!0
+Mucopolysaccharidosis type 7!0
+Unspecified frostbite involving multiple body regions!0
+Mucopolysaccharidosis type 6!1
+Candida balanoposthitis!0
+Mucopolysaccharidosis type 2!0
+Basal epidermolysis bullosa!0
+Dermatophytosis due to Microsporum persicolor!0
+IgG4 related disease!0
+Cutaneous microvascular occlusion by platelet plugs!0
+Muir-Torre syndrome!1
+Vasculitis associated with probable aetiology!0
+Cellulitis of trunk, unspecified!0
+Secondary (catabolic) cutaneous mucinosis!0
+Tessier number 6 facial cleft!0
+Contact dermatitis due to non-occupational skin injury from friction and micro-trauma!0
+Melanoma in situ of ear and external auricular canal!0
+Miscellaneous specified eczematous dermatoses!0
+Late congenital cardiovascular syphilis!0
+Subcutaneous swelling, mass or lump, neck!0
+Classical phenylketonuria!0
+Localized anaesthesia!0
+Syndromic multisystem autoimmune disease due to ITCH deficiency!0
+Mucous membrane pemphigoid with ocular involvement!0
+Limited systemic sclerosis!1
+Allergic contact dermatitis due to other specified metal or metal salt!0
+Primary lesions of pinta!0
+Secondary syphilis of skin and mucous membranes!0
+Malignant neoplasm: Body of penis!0
+Late syphilis!1
+Papillon-Lefèvre syndrome!0
+Lupus vulgaris!1
+Subcutaneous nodular sarcoidosis!1
+Acquired disorders of the hair shaft!0
+Spontaneous ecchymoses!1
+Dystrophic calcification of the skin secondary to localized skin injury!0
+Elastoderma!0
+Klinefelter syndrome, unspecified!0
+Trichorrhexis nodosa (Pollitt) syndrome!0
+Kaposi sarcoma of skin!0
+Adult dermatomyositis!0
+Black-fly bites!0
+Superficial frostbite of other and unspecified sites!0
+Scorbutic purpura!0
+Herpes simplex infection of skin and mucous membrane!0
+Drug-induced telogen hair loss!0
+Toxic effect: Scombroid fish poisoning!0
+Localized connective tissue disorder, unspecified!0
+Allergic contact sensitization!0
+Melanocytic naevi of scalp and neck!0
+Tattoo granuloma!0
+Superficial fibromatoses!0
+Periapical abscess with sinus!1
+Disseminated superficial actinic porokeratosis!0
+Irritant contact dermatitis due to oils and greases!0
+Congenital reticular ichthyosiform erythroderma!0
+Nail disorder...!0
+Syphilis and other treponematoses!0
+Neonatal staphylococcal omphalitis!0
+Neonatal scurvy!0
+Cumulative irritant contact dermatitis of hands...!0
+Primary antiphospholipid syndrome!0
+Junctional melanocytic naevus!0
+Other cutaneous MTNKCL, skin primary site!0
+Skin injury due to occupational exposure to corrosive substances!0
+Pityriasiform drug eruption!0
+Atrichia with keratin cysts!0
+Refsum disease!1
+Syphilitic myocarditis!0
+Angina bullosa haemorrhagica!1
+Adnexal carcinoma of skin!0
+Benign neoplasm: Skin of other and unspecified parts of face!0
+Dominant dystrophic epidermolysis bullosa, pretibial (DDEB-Pt)!0
+Drug-induced pruritus!1
+Chylocele of tunica vaginalis in mansonelliasis!0
+Cutaneous microvascular disturbances due to cryoglobulins!0
+Allergic contact sensitization to other specified allergens not elsewhere classifiable!0
+Juvenile macular degeneration - hypotrichosis!0
+Miscellaneous specified allergic reactions to substances in contact with skin and mucous membranes!0
+Naevus of Ota!1
+Tingling of skin!1
+Malignant neoplasm: Melanoma of trunk!0
+Congenital blepharophimosis, unilateral!0
+Familial hypercholesterolaemia - homozygous!0
+Retiform parapsoriasis!1
+Poikiloderma!1
+Neonatal gestational pemphigoid!0
+Flexural and intertriginous psoriasis!0
+Primary cutaneous follicle centre lymphoma!0
+Raynaud phenomenon caused or exacerbated by occupation!0
+Folliculotropic mycosis fungoides!0
+Mucocutaneous erythema multiforme!0
+Bullous insect bite reaction!0
+Dermatophytosis due to Trichophyton rubrum!0
+Atopic dermatitis...!0
+Localised adverse cutaneous reactions to administration of drug!0
+Granulomatous disorders of the lips and oral mucosa!0
+Midline cervical cleft!1
+Blepharo-cheilo-odontic syndrome!0
+Xanthoma!1
+Tuberculosis of male urethra and penis!0
+Ocular cicatricial pemphigoid!0
+Irritant contact dermatitis of perianal skin!0
+Irritant contact dermatitis due to non-occupational exposure to solvents!0
+Dermatoses due to poisons!0
+Naevoid melanoma!0
+Flea bites!1
+Heparin-induced thrombocytopenia!1
+Behçet arthritis!0
+Melanoma arising from melanocytic naevus!0
+Normocomplementaemic urticarial vasculitis!0
+Candida paronychia!0
+Schwannoma!1
+Familial multiple café-au-lait macules!0
+Other birth injuries to scalp!0
+Acute guttate psoriasis!0
+Other transepidermal elimination disorders!0
+Hyperkeratotic fissured plantar dermatitis!0
+Symblepharon!1
+Parapsoriasis, unspecified!0
+Marfan syndrome type 2 [Loeys-Dietz syndrome type 2]!0
+Aspergillus otomycosis!0
+Xanthoma disseminatum!1
+Ablepharon-macrostomia syndrome!1
+Non-melanin pigmentation due to drug!0
+Glomerular disease associated with systemic autoimmune and immunological diseases!0
+Preauricular pit!1
+Allergic contact dermatitis due to cosmetics and fragrances!0
+Polytrichia!1
+Karyotype 45,X!1
+Limb-mammary syndrome!1
+Miscellaneous specified forms of psoriasis!0
+Immune complex-mediated urticarial reactions!0
+Funnel-web spider bites!0
+Mosquito bites!1
+Skin lesion of multiple sites!0
+Proteus syndrome!1
+Infantile myofibroma and myofibromatosis!0
+Superficial frostbite!1
+Pyoderma gangrenosum : bullous!0
+Skin lesion of unspecified site!0
+Congenital fissure of tongue!0
+Acne scarring!1
+Non-infective enteritis and ulcer due to graft-versus-host disease!0
+Epidermolysis bullosa simplex, migratory circinate (EBS-migr)!0
+Other specified Ehlers-Danlos syndrome variant!0
+Staphylococcal scalded skin syndrome!1
+Normal skin!0
+Erythema multiforme due to certain specified cause!0
+Anonychia or onychodystrophy – hypoplasia or absence of distal phalanges [Cooks syndrome]!0
+Pityriasis versicolor!1
+Lichen myxoedematosus!1
+Irritant contact dermatitis due to wet work!0
+Hypomelanotic pigmentary mosaicism!0
+Anogenital streptococcal cellulitis of infancy and childhood!0
+Methylmalonyl-CoA epimerase deficiency with sepiapterin reductase deficiency!0
+Other atrophic disorders of skin!0
+Photo-allergic contact dermatitis…!0
+Angio-osteohypertrophic syndrome!0
+Ischaemic alopecia due to birth injury!0
+Erythrokeratoderma variabilis et progressiva!0
+Adverse reactions to parenteral administration of proteins!0
+Pressure ulcer grade I [non-blanchable erythema]!0
+Ectodermal dysplasia - acanthosis nigricans!0
+Cutaneous markers of disorders of the haemopoietic and immune systems!0
+Localized vitiligo!0
+Porphyria and pseudoporphyria affecting the skin!0
+Melanoma in situ of lip!0
+Circumscribed lymphatic malformation!0
+Juvenile plantar dermatosis!1
+Asymptomatic xerosis cutis!0
+Genetic syndromes affecting cutaneous vasculature!0
+Frostbite with tissue necrosis of other and unspecified sites!0
+Body dysmorphic disorder!1
+Chronic mucocutaneous candidosis!1
+Hereditary alopecia and hypotrichosis!0
+Squamous cell carcinoma of body of penis!0
+Molluscum contagiosum of the napkin area!0
+Nephrogenic systemic fibrosis!1
+Acute bacterial paronychia!1
+Cutaneous infection due to other specified non-tuberculous mycobacteria!0
+Nail pitting!0
+Basal cell carcinoma of overlapping lesion of vulva!0
+Oral mucositis due to graft-versus-host disease!0
+BCG-induced scrofuloderma!0
+HIV-associated papular pruritic eruption!0
+Late congenital syphilitic arthropathy!0
+Werner syndrome!1
+Primary irritant napkin dermatitis!0
+Benign acanthosis nigricans!1
+Miliaria!1
+Dermatitis and eczema of eyelids!0
+Dengue with warning signs!0
+Familial hypobetalipoproteinaemia!0
+Other specified disorder of eccrine sweating!0
+Cutis rhomboidalis nuchae!1
+Deep full thickness or "complex" burn, chemical!0
+Disorders of the sebaceous gland!0
+Dermatitis due to exogenous factors!0
+Recessive dystrophic epidermolysis bullosa, pretibial (RDEB-Pt)!0
+Zlotogora-Ogur syndrome!1
+Compulsive scratching behaviour!0
+Snake bite!1
+White piedra!1
+17q21.31 deletion!0
+Granulomatous arthritis of childhood!0
+Dermatoses which may be associated with internal malignancy!0
+Focal vascular tumour of infancy and childhood, undefined type!0
+Cutaneous reactions to systemic exposure to contact allergens!0
+Systemic lupus erythematosus with skin involvement!0
+Atrophic lichen planus!1
+Anogenital verrucous carcinoma of Buschke and Löwenstein!0
+Acute miliary cutaneous tuberculosis!0
+Segmental infantile haemangioma!0
+Mandibuloacral dysplasia!1
+Autosomal dominant hypodontia with nail dysplasia [Witkop]!0
+Infections due to Gnathostoma!0
+Irritant contact dermatitis due to occupational contact with plants and other vegetable matter!0
+Pityriasis rubra pilaris: juvenile!0
+Staphylococcal toxic shock syndrome!1
+Congenital generalized hypertrichosis [Ambras]!0
+Genetic syndromes with alopecia or hypotrichosis!0
+Pilar smooth muscle hamartoma!0
+Pyogenic granuloma of oral mucosa!0
+Neonatal streptococcal mastitis!0
+Other specified isolated inherited deformity of nails!0
+Arterial dissection - lentiginosis!0
+Severe plaque psoriasis!0
+Post-infectious scleredema!0
+Syndromes with urticarial reactions or angioedema!0
+Ichthyosis – hypotrichosis syndrome!0
+Ehlers-Danlos syndrome, spondylocheirodysplastic type!0
+Apoplipoprotein A-I deficiency!0
+Acute radiodermatitis!1
+Atopic eczema: special forms!0
+Guttate flare of plaque psoriasis!0
+Hereditary palmoplantar keratodermas!0
+Small congenital melanocytic naevus!0
+Oedema secondary to impaired or obstructed venous return!0
+Neonatal pressure ulcer!0
+Eccrine hamartoma!0
+Irritant contact dermatitis due to exposure to acids, alkalis or certain specified chemical irritants!0
+Other erythematous conditions!0
+Arthropathy in haemochromatosis!0
+Late syphilis of skin and mucous membranes!0
+Follicular digitate keratoses!0
+Phototoxic reactions to skin contact with photoactive agents!0
+Penile melanotic macule!0
+Irritant balanitis!1
+Impetigo!1
+Pigmentary abnormalities of skin due to drug!0
+Irritant contact dermatitis due to dribbling/teething!0
+Scleredema and miscellaneous scleroderma-like conditions!0
+Purpura due to disorders of platelets!0
+Annular epidermolytic ichthyosis!0
+Syphilitic leukoderma!0
+Leukoplakia!1
+Hypomelanosis of Ito!1
+Hirsutism and syndromes with hirsutism!0
+Hereditary progressive mucinous histiocytosis!0
+Lichenified eczema...!0
+Acute urticaria due to pseudoallergy!0
+Genetic disorders of adipose tissue and lipid metabolism affecting the skin!0
+Abetalipoproteinaemia!1
+Other specified viral infection of the skin!0
+Drug-induced hair colour change!0
+LEOPARD syndrome!1
+Drug eruptions!1
+Patau syndrome, unspecified!0
+Acute urticaria!1
+Oblique facial cleft!0
+Subungual hyperkeratosis!1
+Pigmented skin lesion of unspecified site!0
+Hereditary sclerosing poikiloderma with cardiac anomalies!0
+Secondary antiphospholipid syndrome!0
+Hereditary haemorrhagic telangiectasia [Rendu-Osler-Weber disease]!0
+Drug-induced palmoplantar pustulosis!0
+Skin lesion of uncertain nature, neck!0
+Dominant dystrophic epidermolysis bullosa pruriginosa (DDEB-Pr)!0
+Bites and stings due to other specified insects!0
+Trichoteiromania!0
+Smoker's keratosis!1
+Gummatous late congenital syphilis!0
+Chalazion!1
+Autosomal recessive palmoplantar keratoderma and congenital alopecia [Wallis]!0
+Miscellaneous disorders of subcutaneous fat!0
+Junctional epidermolysis bullosa, non-Herlitz, localized (JEB-nH loc)!0
+Erythema multiforme provoked by Herpes simplex!0
+Cutaneous reactions to Echinoidea!0
+Mycobacterial infections affecting the skin!0
+Otitis externa, unspecified!0
+Bowenoid papulosis of the vulva!0
+Disorder of skin and subcutaneous tissue related to radiation, unspecified!0
+Granuloma inguinale!1
+Ulcer of skin of uncertain nature of unspecified site!0
+Certain specified inherited disorders of keratinization!0
+Netherton syndrome!1
+Cowden syndrome!1
+Erythematous condition, unspecified!0
+Pallor!1
+Complications of BCG immunisation!0
+Atopic eczema!1
+Cutis verticis gyrata!1
+Ulcer of skin of uncertain nature, upper limb!0
+Dermatoses due to disorders of vitamins or their metabolism!0
+Mixed connective tissue disease!1
+Transient neonatal epidermolysis bullosa acquisita!0
+Heat burn of oral mucosa!0
+Mycobacterium ulcerans infection!0
+Neonatal vitamin deficiency affecting the skin!0
+Cellulitis of finger!0
+Acute eruptive lichen planus!0
+Onycholysis...!0
+Mosaicism, 45,X/46,XX or XY!0
+Neuropathic skin ulceration due to diabetes mellitus!0
+Atopic eczema of eyelids!0
+Inclusion body fibromatosis [infantile digital fibroma]!0
+Corticosteroid-induced skin atrophy!0
+Severity grading of psoriasis classified elsewhere!0
+Fanconi-ichthyosis-dysmorphism syndrome!0
+Irritant contact dermatitis of female genitalia!0
+Cerebro-oculo-facio-skeletal syndrome [COFS]!0
+Melanoma in situ!1
+Other specified forms of pemphigoid!0
+Familial porphyria cutanea tarda!1
+Perforating granuloma annulare!1
+Miscellaneous inflammatory disorders of oral mucosa!0
+Acute effects of ultraviolet radiation on normal skin!0
+Post-partum telogen effluvium!0
+Nodular and plaque sarcoidosis!0
+Unspecified viral haemorrhagic fever!0
+Keratosis circumscripta!0
+Generalized congenital lipodystrophy with myopathy!0
+Cutaneous microvascular disturbances due to vascular coagulopathies!0
+Perianal eczema!1
+Delusional disorders directed at the skin!0
+Common warts...!0
+Cutaneous non-tuberculous mycobacterial infection!0
+Parkes-Weber syndrome!1
+Lateral facial cleft!0
+Wilson disease!1
+Dermatophytosis due to Microsporum audouinii!0
+Ehlers-Danlos syndrome type 5!0
+Atypical melanocytic naevus!0
+Ehlers-Danlos syndrome type 2!0
+Skin pigmentation due to transfusional haemosiderosis!0
+Ehlers-Danlos syndrome type 1!0
+Familial poliosis!0
+Genetic abnormalities of hair colour!0
+Late congenital syphilitic interstitial keratitis!0
+Secondary cutis verticis gyrata!0
+Developmental hamartomata of the epidermis and appendages!0
+Adverse cutaneous reaction to radiotherapy...!0
+Palmar fascial fibromatosis [Dupuytren]!0
+Infantile acropustulosis!1
+Bone and joint lesions of yaws!0
+Localized hyperhidrosis of other specified site!0
+Acanthoma fissuratum!1
+Acral persistent papular mucinosis!1
+Palmoplantar pustulosis!1
+Skin disorder (classified elsewhere) resulting from occupational exposure to poison!0
+Lobomycosis!1
+Neonatal infections involving the skin!0
+Skin lesion of uncertain or unspecified nature!0
+Geroderma osteodysplasticum!1
+Structural developmental anomalies of mouth and tongue!0
+Other specified epidermal thickening!0
+Epidermolysis bullosa simplex with limb-girdle muscular dystrophy (EBS-MD)!0
+Recurrent venous leg ulcer!0
+Tricho-dento-osseous syndrome!0
+Genetic and developmental disorders involving lips and oral mucosa!0
+Cryptophthalmia/ankyloblepharon!0
+Drug-induced pseudoporphyria!0
+Xeroderma pigmentosum!1
+Familial partial lipodystrophy!1
+Dermatoses which may presage cutaneous lymphoma!0
+Cutaneous mucinosis!1
+Sea anemone dermatitis!1
+Delusions of malodour!0
+Primary cutaneous B-cell lymphoma...!0
+Calcification of skin and subcutaneous tissue!0
+Other symptomatic late syphilis!0
+Complete trisomy 21!0
+Benign neoplasm: Skin of arm, including shoulder!0
+Furuncle!1
+Segmental neurofibromatosis 1!0
+Erythema multiforme provoked by certain specified bacterial infection!0
+Creeping myiasis!1
+Erysipelas of external ear!0
+Secondary hypoalphalipoproteinaemia!0
+Acute haemorrhagic oedema of infancy!0
+Needing a decision to be made!0
+Tricho-odonto-onycho-dermal syndrome!0
+Scabietic papules and nodules!0
+Photo-aggravated skin disease!0
+Angiosarcoma of skin!0
+Pigmentary disturbances of oral mucosa!0
+Napkin candidosis!0
+Johnson neuroectodermal syndrome!0
+Allergic contact dermatitis of female genitalia!0
+Primary (systemic) amyloidosis affecting skin and oral cavity!0
+Skin lesion of uncertain nature, upper limb!0
+Dermal cellular melanocytic naevus!0
+Sunken Sulcus Deformity!0
+Benign proliferations and neoplasms of cutaneous blood vessels!0
+Neonatal mineral deficiency affecting the skin!0
+Complete trisomy 18!0
+Papulosquamous dermatoses!0
+Acquired angioedema type I!0
+Staphylococcal ecthyma!0
+Infections due to Mansonella!0
+Photo-allergic contact dermatitis due to preservatives and biocides!0
+Hereditary benign telangiectasia!0
+Eczema secondary to disorder classified elsewhere!0
+Complete trisomy 13!0
+Localized dysaesthesia!0
+Syphilitic aortitis!1
+Allergic contact urticaria!0
+Oropouche virus disease!1
+Dermatoses due to foreign bodies!0
+Seborrhoeic dermatitis of face!0
+Squamous cell carcinoma of skin!0
+Other disorders of skin and subcutaneous tissue in diseases classified elsewhere!0
+Complications of early syphilis!0
+22q13 deletion!0
+Other human herpes virus infections of the skin!0
+Hypobetalipoproteinaemia!0
+Neonatal oral mucosal inclusion cyst!0
+Benign keratinocytic acanthomas!0
+Fixed cutaneous sporotrichosis!0
+Purpura and bruising secondary to pruritus!0
+Retinoid dermatitis!0
+Ectrodactyly - ectodermal dysplasia without clefting!0
+Lichen spinulosus!1
+Certain specified cutaneous reaction to stoma or fistula!0
+Chronic seborrhoeic otitis externa!0
+Necrolytic migratory erythema!1
+Benign neoplasm: Skin of trunk!0
+Neurological complications of Behçet disease!0
+Euryblepharon, bilateral!0
+Thermal oral ulceration!0
+Gingival fibromatosis - hypertrichosis!0
+Multiple mononeuropathy vasculitis with perinuclear antineutrophil cytoplasmic associated antibody- associated vasculitis!0
+Aplasia cutis congenita of scalp!0
+ASTERISK CODES!0
+Late syphilitic acoustic neuritis!0
+Cardiovascular late syphilis!0
+Cerebral dysgenesis – neuropathy – ichthyosis – keratoderma (CEDNIK) syndrome!0
+Xanthoma associated with secondary hyperlipidaemia!0
+Secondary lymphoedema!1
+Schöpf-Schulz-Passarge syndrome!0
+Carcinoid syndrome!1
+Changes in skin texture!0
+Stomatitis of other specified or unspecified nature!0
+Erythema in diseases classified elsewhere!0
+Contact dermatitis of external ear!0
+Hennekam lymphangiectasia-lymphoedema syndrome!0
+Cutis laxa with severe pulmonary, gastrointestinal and urinary anomalies!0
+Multiple carboxylase deficiency!1
+Penile warts!0
+Varicose veins with small saphenous reflux!0
+Abnormal reactivity to cold!0
+Phototoxic reaction to skin contact with plant matter!0
+Submammary intertrigo!0
+Lymphoedema, microcephaly and chorioretinopathy syndrome!0
+Autosomal recessive hypercholesterolaemia!0
+Macroglossia due to primary (systemic) amyloidosis!0
+Adverse cutaneous reaction to herbal & alternative medical therapies!0
+miscellaneous specified diseases of tongue!0
+Organoid naevus!0
+Methylmalonyl-CoA epimerase deficiency!0
+Lichen simplex!1
+Cholestatic pruritus of pregnancy!0
+Cercarial dermatitis!1
+Psoriatic onycholysis!0
+Stevens-Johnson syndrome and toxic epidermal necrolysis!0
+Cholinergic urticaria and related conditions!0
+Delayed acute graft-versus-host disease!0
+Certain specified genetic photosensitivity syndromes with DNA instability!0
+Acquired abnormalities of nail colour!0
+Keratosis follicularis spinulosa decalvans!0
+Skin fragility of prematurity!0
+Subcutaneous vitelline cyst and/or remnants!0
+Oculotrichodysplasia!0
+Glutaric aciduria type 1!1
+Cellulitis of other sites!1
+Vulvovaginal candidosis!0
+Eczematous cheilitis...!0
+Idiopathic exfoliative cheilitis!0
+Psoriasiform napkin dermatitis!0
+Haemorrhagic fever with renal syndrome!0
+Herpes simplex infection of penis!0
+Disseminated dermatophytosis due to immunodeficiency!0
+Malignant neoplasm: Skin of scalp and neck!0
+Mal de Meleda!1
+Miscellaneous skin disorders resulting from viral infection!0
+Dermatophytosis of face!0
+Allergic contact dermatitis of hands!0
+Lichenoid drug reaction!1
+Drug-induced thrombocytopenic purpura!1
+Large plaque parapsoriasis!1
+Folliculitis ulerythematosa reticulata!1
+Inflammatory disorders of the external ear!0
+Iatrogenic tattoo!0
+Mycosis fungoides!1
+Early chronic graft-versus-host disease!0
+Annular lichen planus!1
+Erosive lichen planus of vulva and vagina!0
+Cutaneous mastocytosis!1
+Bockenheimer syndrome!0
+Inflammatory linear verrucous epidermal naevus [ILVEN]!0
+Hereditary angioedema type II!0
+Submammary intertriginous candidosis!0
+Psoriasis...!0
+Dermatophytosis organized by site of involvement!0
+Hereditary distal onycholysis!0
+Allergic contact dermatitis due to preservatives and biocides!0
+Mixed lesions of pinta!0
+Chancroid!1
+Childhood atopic eczema: impetiginized!0
+Interdigital pilonidal sinus!0
+Juvenile hereditary haemochromatosis, Type 2!0
+Cryoglobulinaemic vasculitis!0
+Certain specified zoonotic bacterial infection involving skin!0
+Cutaneous abscess, furuncle and carbuncle, unspecified!0
+Benign tumours of cutaneous smooth muscle!0
+Thin small plaque psoriasis!0
+Late congenital syphilitic osteochondropathy!0
+Cutaneous reactions to Bryozoa!0
+Trichomegaly - retina pigmentary degeneration - dwarfism!0
+Familial progressive hyper- and hypopigmentation!0
+Occupational allergic contact urticaria: disseminated!0
+Balanitis and balanoposthitis!0
+Pili torti!1
+Porokeratoses!0
+Lichen nitidus!1
+Darier disease!1
+Partial deficiency of methylmalonyl-CoA mutase!0
+Miscellaneous and unspecified cutaneous eruptions due to bacterial toxins!0
+Neonatal bullous impetigo!0
+Involvement of eyelid in yaws!0
+Ectodermal syndromes including ectodermal dysplasias!0
+Generalized epidermolysis bullosa simplex, Dowling-Meara (EBS-DM)!0
+Chronic relapsing vesiculosquamous dermatitis of hands!0
+Insulin-induced localized fat hypertrophy!0
+Intermittent maple-syrup-urine disease!0
+2q32q33 deletion!0
+Drug-induced ichthyosis!0
+Disorders of the skin not elsewhere classified!0
+Cutaneous microvascular disturbances due to monoclonal cryoglobulins!0
+Ulcerative disorders of the penis and scrotum!0
+Partial albinism [Griscelli]!0
+Melanocytic naevus with eczematous halo!0
+Tags, cysts and fissures/fistulae of the face and neck!0
+Macrocystic lymphatic malformation!1
+Certain specified follicular disorders!0
+Delayed pressure urticaria!1
+Alopecia areata of eyelashes!0
+Other specified neonatal bacterial infection involving the skin!0
+Glomuvenous malformation!0
+Exaggerated physiological flushing!0
+Anogenital molluscum contagiosum!0
+Urticaria pigmentosa!1
+Papular elastorrhexis!0
+Pustular vasculitis of undetermined cause!0
+Kindler syndrome!1
+Pityriasis rubra pilaris type V: atypical juvenile!0
+Corns and callosities!0
+1q41q42 deletion!0
+Cholinergic erythema!0
+Oral lichen planus...!0
+Late syphilis involving the musculoskeletal system!0
+Cutaneous markers of certain specified internal disorders!0
+Hypertrophic scar!1
+Verrucous squamous cell carcinoma of skin!0
+Polymicrobial necrotizing fasciitis!0
+Focal dermal hypoplasia!1
+Self-healing collodion baby!0
+Chronic cutaneous lupus erythematosus...!0
+Superficial subcutaneous lipoma of multiple sites!0
+Pancreatic enzyme panniculitis!0
+Chronic otitis externa!1
+Lichen planus pemphigoides!1
+Pregnancy dermatoses!0
+Hypertrophy of tongue papillae!0
+Occupational irritant contact dermatitis!0
+Erythema annulare centrifugum!1
+EDA-ID syndrome!0
+O'nyong-nyong fever!1
+Linear lichen planus!1
+Photoaging of the skin!0
+Transepidermal elimination disorder, unspecified!0
+Neonatal pseudomonas skin infection!0
+Drug-induced nail fragility!0
+Birth injury attributable to obstetric vacuum extraction!0
+Acquired stenosis of external ear canal!0
+Generalized pustular psoriasis!1
+Atopic eruption of pregnancy!0
+Pemphigus herpetiformis!1
+Disabling pansclerotic morphoea of childhood!0
+Dermatitis and eczema of female genitalia!0
+Alopecia secondary to thyroid disorder!0
+Panniculitis!1
+Spontaneous urticaria!0
+Renal late syphilis!0
+Menopausal hyperhidrosis!0
+Leukocytoclastic vasculitis!1
+Multiple keratoacanthomas!1
+Burning mouth syndrome!1
+acquired auditory canal deformity!0
+Secondary syphilitic gastritis!0
+Pityriasis rosea!1
+Deafness – onychodystrophy!0
+Benign neoplasm: Skin of leg, including hip!0
+Ulceration of scrotum and penis due to Behçet disease!0
+Wrinkly skin syndrome!1
+X-linked dominant congenital generalized hypertrichosis [Macias-Flores]!0
+Pili bifurcati!1
+Hypertrophic surgical scar!0
+Congenital adhesion of tongue!0
+Oral submucous fibrosis!1
+Asymptomatic colonization of the skin by virulent or therapy-resistant bacteria!0
+Hereditary hypotrichosis of scalp!0
+Complications of leprosy!0
+Genital granuloma inguinale!0
+Jellyfish (Scyphozoa) sting!0
+Angiolupoid sarcoidosis!0
+Secondary Raynaud phenomenon!0
+Xanthoma in association with primary hypertriglyceridaemia!0
+Contact dermatitis of lower leg...!0
+Other benign neoplasms of skin (retired)!0
+Congenital ectropion, bilateral!0
+Allergic contact dermatitis...!0
+Symptomatic early neurosyphilis!0
+Macrotia!1
+Psoriasis with seronegative arthritis!0
+Dermatoses resulting from exposure to water!0
+Hereditary follicular keratosis!0
+Febrile ulceronecrotic Mucha-Habermann disease!0
+Congenital ectropion!0
+Acute bacterial lymphangitis!0
+Latrodectism!1
+Primary Sjögren disease!0
+photodermatitis!0
+Iododerma!1
+Disorder of external ear, unspecified!0
+Kyasanur Forest disease!1
+Candidosis of skin and mucous membranes!0
+Ankyloglossia!1
+Allergic contact dermatitis of hands...!0
+Micaceous and keratotic pseudoepitheliomatous balanitis!0
+Macrocephaly – alopecia  – cutis laxa  – scoliosis (MACS) syndrome!0
+Other hair colour and hair shaft abnormalities!0
+Dermatoses due to therapeutic ionizing irradiation!0
+Pemphigus foliaceus!1
+Structural developmental anomalies of eyelids!0
+Median facial cleft!0
+Cerebellar ataxia - ectodermal dysplasia!0
+Chronic effects of ionizing radiation on the skin!0
+Atrichia congenita!1
+Hyperhidrosis!1
+Facial clefts!0
+Zlotogora-Martinez syndrome!0
+Black heel!1
+Cutaneous leishmaniasis!1
+Pachyonychia congenita!1
+Pachyonychia congenita 2 [Jackson-Lawler]!0
+Trichorrhexis nodosa!1
+Herpes zoster blepharitis!0
+Nagashima-type palmoplantar keratoderma!0
+Syndromic ichthyoses!0
+Nail dystrophy resulting from epidermolysis bullosa classified elsewhere!0
+Superficial venous varicosities!0
+Primary anal syphilis!0
+HIV-modified psoriasis!0
+Herpes simplex pharyngotonsillitis!0
+Allergic contact urticaria due to non-occupational exposure to allergen!0
+Immunobullous diseases of the skin!0
+Nodular syphilide!1
+Temperature-sensitive oculocutaneous albinism!0
+Psoriasis!1
+Skiin injury due to bite by mammal!0
+Leptospirosis...!0
+Scarring alopecia following radiotherapy!0
+Actinomycetoma!1
+Diffuse actinic dysplasia!0
+Subcutaneous mycoses!0
+Roseola infantum!1
+Monilethrix!1
+Certain specified disorders of lips and oral mucosa!0
+Erythroplakia of oral mucosa!0
+Other specified superficial dermatomycosis!0
+Tessier number 4 facial cleft!0
+HAIR-AN syndrome!1
+Sneddon syndrome!1
+Cellulitis of finger and toe!0
+Penicilliosis!1
+Malignant neoplasm: Skin of lip!0
+Evans syndrome!1
+Allergic contact sensitization due to non-occupational exposure to allergen!0
+Cutaneous complications of stomas and fistulas!0
+Pityriasis lichenoides et varioliformis acuta!0
+Chronic papular skin disorder!0
+Follicular psoriasis!0
+Acantholytic disorder, unspecified!0
+Linear IgA bullous dermatosis!1
+Cellulitis of perineum!0
+Tricho-oculo-dermo-vertebral syndrome!0
+Unstable psoriasis!0
+Cardiovascular complications of Behçet disease!0
+Dermatophytosis of hand!1
+Acute radiodermatitis following radiotherapy!0
+Neonatal mucocutaneous candidosis!0
+Low-set ear!0
+Oral aphthae and aphtha-like ulceration!0
+Pigmented skin lesion of uncertain nature, neck!0
+Irritant contact dermatitis due to saliva!0
+Localized lipoatrophy due to injected drug!0
+Pityriasis rubra pilaris type I: classical adult!0
+Melanoma in situ of other and unspecified parts of face!0
+Exostosis of external canal!0
+Other specified neonatal viral infection involving the skin!0
+Occupational leukoderma!0
+Dermatoses arising through work or occupation!0
+Superficial frostbite of hip and thigh!0
+Developmental anomalies of cutaneous vasculature!0
+Eczéma craquelé due to acute distension of the skin!0
+Congenital blepharophimosis, bilateral!0
+Ciliary madarosis!0
+Mikulicz disease!1
+Syphilitic endocarditis!0
+Dermatoses resulting from immunosuppressive therapy!0
+Ackerman syndrome!1
+Pediculosis...!0
+Occupational photo-allergic contact dermatitis!0
+Amalgam-associated oral lichenoid reaction!0
+Ectodermal dysplasia, Berlin type!0
+Type II leprosy reaction!0
+Cutaneous reactions to Porifera!0
+Deep full thickness or "complex" burn, thermal!0
+Sunburn and other burns due to ultraviolet radiation!0
+Subungual haematoma!1
+Disseminated secondary eczema!0
+Extramammary Paget disease of skin!0
+Urticaria...!0
+Palmoplantar hyperhidrosis!1
+Vitiligo!1
+Eumycetoma!1
+Dermatoses resulting from distant or systemic fungal infection!0
+Other apocrine sweat disorders!0
+Mucocutaneous leishmaniasis!1
+Fluid overload with oedema!0
+Dermatoses provoked by light or UV radiation!0
+Irritant contact dermatitis due to occupational exposure to solvents!0
+Adult atopic eczema: generalized erythematous!0
+Giant congenital melanocytic naevus!0
+Persistent insect bite reaction!0
+Erysipelas of lower limb!1
+Ehlers-Danlos syndrome due to tenascin-X deficiency!0
+Marie Unna congenital hypotrichosis!0
+Phakomatosis caesiomarmorata!0
+Neonatal vitamin A toxicity!0
+Naegeli-Franceschetti-Jadassohn syndrome!1
+Chronic idiopathic telogen effluvium!0
+Female pattern hair loss (androgenetic)!0
+Vulval ulcer of uncertain nature!0
+Purpura and bruising due to friction and trauma!0
+Complications of graft-versus-host disease!0
+Recessive dystrophic epidermolysis bullosa, generalized other (RDEB-O)!0
+Unspecified frostbite of unspecified site!0
+Down syndrome, unspecified!0
+Oral mucositis due to radiotherapy!0
+Skin damage resulting from congenital/hereditary neuropathy!0
+Fish-eye disease!1
+Occupational callosities!0
+Iatrogenic injuries involving the skin of the neonate!0
+Nodular actinic elastosis with cysts and comedones!0
+Skin lesion of uncertain nature!0
+Verrucous squamous cell carcinoma of penis!0
+BCG-induced tuberculid!0
+Telangiectasia macularis eruptiva perstans!0
+Peripubertal primary lymphoedema!0
+Drug-induced anaphylaxis!0
+Trichobezoar!1
+Verrucous leukoplakia!0
+Allergic contact dermatitis due to other specified allergens not elsewhere classifiable!0
+Mucous membrane pemphigoid of vulval mucosa!0
+Contact dermatitis of male genitalia...!0
+Traumatic ulceration of skin!0
+Intermediate-sized congenital melanocytic naevus!0
+Facial ectodermal dysplasia!0
+Painful bruising syndrome!1
+Tear Trough Deformity!0
+Patchy alopecia areata of scalp!0
+Latent syphilis, unspecified as early or late!0
+Hidrotic ectodermal dysplasia, Christianson-Fourie type!0
+Chilblains!1
+Pemphigoid!1
+Lentigo maligna melanoma!1
+Seborrhoeic otitis externa!0
+Pilomatrixoma!1
+Acquired pseudoxanthoma elasticum!0
+Involvement of napkin area by other specified disease!0
+Dermatoses of male genitalia!0
+Extrafacial congenital infiltrating lipomatosis!0
+Sea-bather's eruption!0
+Tick bites!1
+Neonatal milia!0
+Dermatitis and eczema of other specified sites!0
+Other and unspecified disturbances of skin sensation!0
+Warts of lips and oral cavity!0
+Urticaria pigmentosa: nodular form!0
+Disseminated intravascular coagulation!1
+Sea-urchin injury!0
+Skin lesions in drug addicts!0
+CHAND syndrome!0
+Congenital hypotrichosis milia!0
+Photoallergic drug reaction!0
+Sporadic late-onset primary lymphoedema!0
+Epidermal burn, thermal!0
+Non-follicular punctate and digitate keratoses!0
+Erythema nodosum!1
+Hamartomata derived from dermal connective tissue!0
+Gardner syndrome!1
+Cutaneous amyloidosis!0
+Cheyletiellosis!1
+Neonatal skin infection!0
+Talar callosity!0
+Arenaviral haemorrhagic fever!1
+Melasma!1
+Autosomal dominant cutis laxa!0
+Lymphoedema secondary to recurrent infection!0
+Vulval ulcer...!0
+Xanthomata due to disorders of lipid metabolism!0
+Deep bacterial folliculitis and pyogenic abscess of the skin!0
+Genital melanosis!0
+Superficial acne without nodules!0
+Cellulitis of groin!0
+Polygenic hypercholesterolaemia!1
+Purpura!1
+Skin infection classified elsewhere due to community-acquired meticillin-resistant Staphylococcus aureus [MRSA]!0
+Adult atopic eczema: impetiginized!0
+Chronic effects of ultraviolet radiation on the skin!0
+Trichomegaly - cataract - hereditary spherocytosis!0
+Other variants of Turner syndrome!0
+Malignant neoplasm: Clitoris!0
+ADULT syndrome!0
+Anogenital intraepithelial neoplasia!0
+Acute cutaneous lupus erythematosus!1
+Neutrophilic dermatoses!0
+Nodular basal cell carcinoma!1
+Other nonscarring hair loss!0
+Primary cutaneous CD30+ lymphoproliferative disorder...!0
+Cockayne syndrome!1
+Eosinophilic granulomatosis with polyangiitis [Churg-Strauss]!0
+Multiple mononeuropathy vasculitis with Churg-Strauss syndrome!0
+Sacrococcygeal pilonidal abscess!0
+Dermatitis of hands!0
+Certain specified genetic syndromes affecting the skin!0
+Hypohidrotic ectodermal dysplasia - hypothyroidism - ciliary dyskinesia!0
+Familial premature canities!0
+Keloidal surgical scar!0
+Talc granuloma!0
+Asteatotic eczema!1
+Dominant dystrophic epidermolysis bullosa, acral (DDEB-ac)!0
+Cockayne syndrome type 1!1
+Cockayne syndrome type 3!1
+Cockayne syndrome type 2!1
+Carcinoma in situ of skin...!0
+Segmental lentiginosis!1
+Oral mucosal fragility and ulceration due to epidermolysis bullosa classified elsewhere!0
+Malignant neoplasm: Labium majus!0
+Sparse hair - short stature - skin anomalies!0
+Lichen planus pigmentosus!1
+Xeroderma pigmentosum C (XPC)!0
+Ectodermal dysplasia - cutaneous syndactyly syndrome!0
+Unsatisfactory surgical wound of skin!0
+Paraprotein-associated scleredema!0
+Primary cutaneous diffuse large B-cell lymphoma, leg type!0
+Asymptomatic skin colonization by community-acquired meticillin-resistant Staphylococcus aureus [MRSA]!0
+Cutaneous vasculitis...!0
+Lobular defects!0
+Asteatosis cutis!0
+Syndromic diffuse palmoplantar keratodermas!0
+Scarring alopecia!1
+Benign cutaneous neoplasms with apocrine differentiation!0
+Cutaneous microvascular disturbances due to cold agglutinins!0
+Salmon patch!1
+Retired concepts melanocytic naevi!0
+Phakomatosis pigmentovascularis!1
+Benign dermal lymphocytic infiltrations and proliferations!0
+Langerhans cell histiocytosis!1
+Palmoplantar sarcoidosis!0
+Lichen simplex of vulva!0
+Stretch marks!1
+Infections and infestations affecting the skin!0
+Heterotopic sebaceous glands of penis!0
+Exfoliative dermatitis!1
+Subgaleal Epicranial Subaponeurotic haemorrhage due to birth injury!0
+Anetoderma of Jadassohn-Pellizzari!1
+Hereditary benign intraepithelial dyskeratosis!0
+Herpes simplex infection of eyelid!0
+Blue rubber bleb naevus syndrome!0
+Traumatic scar of eyelid!0
+Benign neoplasm: Skin of scalp and neck!0
+Superciliary madarosis!0
+Brown oculocutaneous albinism!0
+Necrobiosis lipoidica...!0
+Indeterminate cell histiocytosis!1
+Phototoxic reaction to skin contact with certain specified photoactive agent!0
+Unspecified contact dermatitis due to other chemical products!0
+Photo-allergic contact dermatitis due to fragrances!0
+Radiation burn of oral mucosa!0
+Chilblain lupus erythematosus!1
+Protruding ear!0
+Acute febrile neutrophilic dermatosis [Sweet] : drug-induced!0
+Lower limb haemosiderosis secondary to venous insufficiency!0
+Atrophoderma of Pasini and Pierini!1
+Lucio type diffuse lepromatous leprosy!0
+Viral exanthem, unspecified, suspected or presumed!0
+Sublingual varices!0
+Vulval pemphigus!0
+Ulcer of skin of uncertain nature of multiple sites!0
+Miscellaneous skin conditions arising predominantly in infancy!0
+Non-syndromic genetically-determined hypermelanosis and lentiginosis!0
+Herpes zoster of skin and mucous membranes!0
+Superficial subcutaneous lipoma of head, face and neck!0
+cutaneous fistula!0
+Autosomal ichthyosis syndromes with hair abnormalities!0
+Contact allergy to other chemical compounds!0
+Occupational skin cancer!0
+Trichotemnomania!0
+Sclerodactyly!1
+Multifocal infantile haemangioma!0
+Skin fragility-woolly hair syndrome!0
+Primary genital syphilis!0
+Linear and whorled naevoid hypermelanosis!0
+Physical urticaria and angioedema!0
+Involvement of eyelid in tuberculosis!0
+Other manifestations of yaws!0
+Ankyloblepharon filiforme adnatum!0
+Cutaneous markers of disorders of the heart!0
+Incontinentia pigmenti!1
+Irritant contact dermatitis due to other specified agent or mechanism!0
+Symptoms and signs involving the skin and subcutaneous tissue!0
+Cutaneous listeriosis!0
+Median cleft of the upper lip and maxilla!0
+Malignant melanoma of skin...!0
+Other acne!0
+Generalized essential telangiectasia!1
+Allergic contact sensitization to food flavours and additives!0
+Neonatal essential fatty acid deficiency!0
+Urachal diverticulum!0
+Cholestasis - lymphoedema syndrome!0
+Alopecia totalis!1
+Oedema secondary to disturbed vasomotor control!0
+Early syphilis involving the eye!0
+Benign proliferations, neoplasms and cysts of the skin!0
+Split hand - split foot!0
+Allergic contact sensitization to rubber chemicals!0
+Acute disseminated histoplasmosis!0
+Machupo haemorrhagic fever!1
+Alopecia secondary to deficient nutrition!0
+Xeroderma and xerosis!0
+Chronic meningococcaemia!0
+Pigmented skin lesion, trunk!0
+Tabes dorsalis!1
+Congenital alopecia, sporadic or unspecified!0
+Oedema secondary to fluid overload!0
+Asymptomatic skin colonization by hospital-acquired meticillin-resistant Staphylococcus aureus [MRSA]!0
+Rat-bite fever, unspecified!0
+Formication!1
+Cutaneous reactions to arthropods!0
+Late syphilitic episcleritis!0
+Generalized granuloma annulare!1
+Ulcer of skin of uncertain nature, head!0
+Complete trisomy 18, meiotic non-disjunction!0
+Melanoma of vulva!0
+SAPHO syndrome!1
+Acute exudative skin eruption!0
+Mandibuloacral dysplasia with type B lipodystrophy!0
+Dermatophytosis!1
+Hidradenitis suppurativa of anogenital region!0
+Median rhomboid glossitis!1
+Disorders of cutaneous blood and lymphatic vessels!0
+Choroidal atrophy - alopecia!0
+Erythema!1
+Infections due to Loa Loa!0
+Psoriasis with associated seronegative arthritis classified elsewhere!0
+Allergic contact urticaria: localized!0
+Stinging of skin!0
+Angular cheilitis due to bacterial infection!0
+Xeroderma pigmentosum A (XPA)!0
+Childhood atopic eczema: generalized erythematous!0
+Angular cheilitis due to candidosis!0
+Cutaneous complications of secondary syphilis!0
+Genetic or developmental disorder classified elsewhere involving lips and oral mucosa!0
+Birth injury to skin and soft tissues of other sites!0
+Erysipelas!1
+Primary cutaneous T-cell and NK-cell lymphoproliferative disorders!0
+Syphilitic osteopathy or osteochondropathy!0
+Familial defective apolipoprotein B-100!1
+Sporadic camptodactyly!0
+Dermatophytosis of foot!0
+Cutaneous erysipeloid!0
+Intermediate lesions of pinta!0
+Ichthyosis follicularis – atrichia – photophobia [IFAP syndrome]!0
+Traumatic onycholysis!0
+Pigmented skin lesion, lower limb!0
+Zinc deficiency syndromes!0
+Irritant contact dermatitis of male genitalia!0
+Other specified forms of epidermolysis bullosa!0
+Chronic urticaria due to pseudoallergy!0
+Unsatisfactory surgical scar!0
+Toxic shock syndrome!1
+Phakomatosis pigmentovascularis, unclassifiable!0
+Necrobiosis lipoidica!1
+Flegel disease!1
+Griscelli syndrome type 1!1
+Griscelli syndrome type 2!1
+Griscelli syndrome type 3!1
+Cutaneous abscess, furuncle and carbuncle of face!0
+Mechanical oral ulceration!0
+Junctional epidermolysis bullosa, LOC  (JEB-LOC)!0
+Multiple atypical melanocytic naevi!0
+Non-erosive lichen planus of oral mucosa!0
+Plane warts!1
+Hermansky-Pudlak syndrome with neutropenia!0
+Certain specified immunobullous disorder!0
+Lipoedematous alopecia!0
+Centrifugal lipodystrophy!1
+Pruritus of unknown cause!0
+Congenital infiltrating lipomatosis of the face!0
+Skin disorders related to HIV and other retroviruses!0
+Localized lipoatrophy due to specified cause not elsewhere classified!0
+Erythema nodosum leprosum!1
+Nodular acne!0
+Miscellaneous dermatoses of female genitalia!0
+Subcutaneous swelling, mass or lump, trunk!0
+Disorders of amino acid metabolism affecting the skin!0
+Subacute and chronic melioidosis!0
+Rift Valley fever!1
+Skin lesion of unspecified nature!0
+Drug-induced erythroderma!0
+Ulcer of penis of uncertain nature!0
+Hypomyopathic dermatomyositis!1
+Skin cancer (classified elsewhere) due to occupational exposure to ultraviolet radiation!0
+Allergic contact dermatitis due to rubber chemicals!0
+Primary Raynaud disease!0
+Xeroderma pigmentosum D (XPD)!0
+Irritant contact dermatitis due to incontinence!0
+Nodular leukoplakia!0
+Lichen simplex of male genitalia!0
+Mucocutaneous venous malformations!0
+Ocular juvenile xanthogranuloma!0
+Melanoma in situ, unspecified!0
+Hermansky-Pudlak syndrome without pulmonary fibrosis!0
+Pemphigoid nodularis!1
+Foreign body reactions to hair!0
+Flexural lichen planus!0
+Immunosuppressive therapy as contributor to dermatosis classified elsewhere!0
+Melanoma in situ of trunk!0
+Neonatal staphylococcal pyoderma!0
+Viral warts due to iatrogenic immunosuppression!0
+Organoid naevus syndrome!0
+Pressure ulcers!1
+Immune-related Type 1 diabetes mellitus with diabetic foot!0
+Cholinergic urticaria!1
+Pachyonychia!1
+DRESS syndrome (drug rash with eosinophilia and systemic symptoms)!0
+Epidermolytic epidermolysis bullosa!0
+Palpebral cleft/coloboma, unilateral!0
+Paramedian nasal cleft!0
+Cutaneous botryomycosis!0
+Aphthosis of penis and scrotum!0
+Partial cryptophthalmia!0
+Contact dermatitis of hands...!0
+Atopic xeroderma!0
+Cone shell envenomation!0
+Parasitic infestation of conjunctiva in mansonelliasis!0
+Erythema multiforme classified by aetiology!0
+Melanoma in situ of eyelid, including canthus!0
+Familial hypercholesterolaemia!1
+Shagreen patch!1
+Phrynoderma!1
+Ectodermal dysplasia syndromes!0
+Sphingolipidoses with skin manifestations!0
+Spirillosis!0
+Bruise/contusion!0
+Protein contact dermatitis due to plant protein!0
+Viral infections affecting the skin!0
+Non-melanin pigmentation due to ingested/injected substance!0
+Carcinoma in situ: Skin of leg, including hip!0
+Animal scabies!1
+Other disorders of eyelid!0
+Diffuse primary (metabolic) cutaneous mucinosis!0
+Primary cutaneous blastomycosis!0
+Hypertrichosis...!0
+Cutis laxa - Marfanoid syndrome!0
+Tropical acne!1
+Ehlers-Danlos syndrome, arthrochalasic type!0
+Chronic infantile neurological, cutaneous and articular syndrome [CINCA]!0
+Adult atopic eczema: chronic lichenified!0
+Pseudoxanthomatous nodular cutaneous mastocytosis!0
+Venous varix!1
+Other specified basal cell carcinoma!0
+Pilodental dysplasia - refractive errors!0
+Papular oral lichen planus!0
+Ehlers-Danlos/osteogenesis imperfecta syndrome!0
+Lipoatrophy and lipodystrophy!0
+Dermatoses resulting from cytotoxic and cancer chemotherapy!0
+Staphylococcus aureus superficial folliculitis!0
+Rothmund-Thomson syndrome!1
+Lymphoedema secondary to surgery and/or radiotherapy!0
+Other seborrhoeic dermatitis!0
+Trachoma!1
+Acute erythematous skin eruption!0
+Actinic lentigo!0
+Onychogryphosis!1
+Congenital anonychia!0
+Ulcer of penis...!0
+Striate palmoplantar keratoderma!1
+Other disorders involving the hair follicle!0
+Erythematotelangiectatic rosacea!1
+Non-homogeneous leukoplakia!0
+Hypoalphalipoproteinaemia!1
+Elastoma!1
+Dermatophytosis due to Trichophyton violaceum!0
+Congenital syphilis!1
+Latent early syphilis!0
+Emotional flushing!0
+Infantile papular acrodermatitis!1
+Infected surgical wound of skin!0
+Lower limb varicose veins!0
+Bullous disorders!0
+Neutrophilic dermatosis of the hands [acral Sweet syndrome]!0
+Bacterial cellulitis!0
+Preauricular tag!1
+Hard corn!0
+Melanocytic naevi of arm, including shoulder!0
+Parasitic infestation of conjunctiva in dirofilariasis!0
+Generalized morphoea!0
+Lymphocytoma cutis!1
+Intercellular IgA dermatosis!0
+Acquired perforating dermatosis!1
+Other specified malignant neoplasms of overlapping lesion of vulva!0
+Disorders of uric acid metabolism affecting the skin!0
+Ecthyma!1
+Gestational pemphigoid!1
+Certain specified urticarial  and related conditions!0
+Conglobate acne!0
+Focal palmoplantar keratodermas!0
+Primary cutaneous peripheral T-cell lymphoma...!0
+Neonatal staphylococcal mastitis!0
+Allergic contact dermatitis due to allergenic haptens derived from plants and organic matter!0
+Monitoring injury of scalp of newborn!0
+Anonychia with bizarre flexural pigmentation!0
+Delusions of infestation!0
+Neuropathic skin damage!0
+Ear-lobe keloid!0
+Idiopathic Type 1 diabetes mellitus with diabetic skin lesions!0
+Bannayan-Riley-Ruvalcaba syndrome!1
+Carcinoma in situ: Skin of ear and external auricular canal!0
+Miliaria rubra!1
+Central centrifugal scarring alopecia!0
+Epidermal naevus...!0
+Irritant contact dermatitis due to non-occupational contact with plants and other vegetable matter!0
+Diffuse lymphatic malformation!0
+Cellulitis of abdominal wall!0
+Epibulbar choristoma, unilateral!0
+Drug-induced acneiform eruption!0
+Non-melanin pigmentation due to substance encountered at work!0
+Xanthoma in association with lipid storage diseases!0
+Photo-allergic contact dermatitis due to non-steroidal anti-inflammatory drugs (NSAIDs)!0
+Epidermolysis bullosa simplex, Ogna (EBS-Og)!0
+Carcinoma-induced vasculitis!0
+Ulcer of skin of multiple sites!0
+Other androgenic alopecia!0
+Chronic hyperplastic oral candidosis!0
+Pruritus due to psychogenic disorder!0
+Diabetic scleredema!0
+Congenital malformation of skin...!0
+Pigmented skin lesion of uncertain nature of unspecified site!0
+Dermatophytosis due to Microsporum gallinae!0
+Lobulated tongue!0
+Pustular vasculitis...!0
+Amniotic bands!1
+Kaposi varicelliform eruption!1
+Macular amyloidosis!1
+Gastrointestinal complications of Behçet disease!0
+Angiokeratoma of the vulva!0
+Cutaneous lymphangiectasia!0
+Hidradenitis suppurativa affecting other specified sites!0
+Scalp psoriasis!0
+Superficial subcutaneous lipoma of trunk!0
+Exanthematic drug eruption!0
+Macrocephaly - capillary malformations!0
+Irritant contact dermatitis due to solvents and industrial skin irritants!0
+Congenital erythroderma of uncertain nature!0
+Down syndrome leukaemoid reaction-associated transient neonatal pustulosis!0
+Pityriasis rubra pilaris type IV: circumscribed juvenile!0
+Disorders of skin colour!0
+Congenital hemidysplasia with ichthyosiform erythroderma and limbs defects [CHILD]!0
+Abscess of upper eyelid!0
+Ankyloblepharon filiforme adnatum, unilateral!0
+Chronic cutaneous lupus erythematosus of scalp!0
+Cutaneous Mycobacterium fortuitum infection!0
+Superficial frostbite of neck!0
+Chikungunya virus disease!1
+Dermolytic (dystrophic) epidermolysis bullosa!0
+Adult pulmonary Langerhans cell histiocytosis!0
+Xanthoma is association with primary chylomicronaemia!0
+Halogen eruption!0
+Alfi syndrome [9p22p24 deletion]!0
+Irritant contact dermatitis due to non-occupational wet work!0
+Non-dermatophyte superficial dermatomycoses!0
+Dermatophytosis of beard!0
+Actinomycetoma...!0
+Dermatophytosis due to Microsporum praecox!0
+Trichothiodystrophy!1
+Short ear!0
+Acquired palmoplantar keratodermas!0
+Marburg virus disease!1
+Histiocytoses of uncertain malignant potential!0
+Syphilis!1
+Paraneoplastic dermatomyositis!0
+Skin manifestation of other specified neonatal micronutrient excess or toxicity classified elsewhere!0
+Photo-allergic drug reaction!1
+Pruritus of multifactorial aetiology!0
+ICD-10 chapter XII concepts for possible deletion or removal to other chapter!0
+Mulvihill-Smith progeroid syndrome!0
+Absence of skin condition!0
+Primary venous leg ulcer!0
+Irritant contact gingivostomatitis!0
+Hair follicle naevus!0
+Developmental defects of hair and hair growth!0
+Late congenital syphilitic optic atrophy!0
+Fabry disease; X-linked!0
+Tyrosinaemia type 2!0
+Abnormal skin pigmentation...!0
+Allergic contact dermatitis due to hairdressing products!0
+Herpes simplex labialis!1
+Herpetiform recurrent aphthous stomatitis!0
+Omphalitis of newborn!0
+Irritant contact dermatitis due in part to occupational contact with plants and other vegetable matter!0
+Certain specified ectoparasitic infestations of the skin!0
+Neonatal miliaria!0
+Chronic ulcer of skin of unspecified nature!0
+Certain specified reaction to foreign body in the skin!0
+Childhood atopic eczema: nummular pattern!0
+Post-inflammatory hypomelanosis!0
+Alopecia mucinosa in association with mycosis fungoides!0
+Lichen planus of vulva!0
+Antisynthetase syndrome!0
+Papular xanthoma!1
+Allergic contact sensitization to preservatives and biocides!0
+Neonatal (disseminated) listeriosis!0
+Cutaneous suture granuloma!0
+Neonatal disorders of the oral mucosa!0
+Infantile pustular psoriasis!0
+Retired non-melanoma skin cancer concepts!0
+Subcutaneous swelling, mass or lump!0
+Gestational oedema!0
+Multicentric reticulohistiocytosis!1
+Recessive dystrophic epidermolysis bullosa pruriginosa (RDEB-Pt)!0
+Urachal cyst!1
+Generalized vitiligo!0
+Chronic ulcerative stomatitis!0
+Orthostatic purpura!1
+Allergic contact sensitization organized by allergen class!0
+Neonatal nutritional zinc deficiency!0
+Thrombophlebitis migrans!1
+Dermatophytosis due to Trichophyton schoenleinii (Favus)!0
+Autosomal dominant dyskeratosis congenita!0
+Other neonatal bacterial infections involving the skin!0
+Systemic sclerosis!1
+Deafness – onychodystrophy, autosomal dominant!0
+Beare-Stevenson cutis gyrata syndrome!0
+Amateur tattoo!0
+Syphilis...!0
+Lichen planus of penis!0
+Atrophy of tongue papillae!0
+Lupus pernio!1
+Cutaneous microvascular disturbances due to paroxysmal nocturnal haemoglobinuria-associated platelet plugs!0
+Klinefelter syndrome with karyotype 47,XXY, regular!0
+Childhood linear IgA bullous dermatosis!0
+Lip-biting!0
+multicentric reticulohistiocytosis!0
+Birth injury to external genitalia!0
+Congenital enterovirus infection!0
+Other rosacea!0
+Lymphoedema secondary to malignant infiltration!0
+Fingertip dermatitis!0
+Xerosis cutis and asteatosis!0
+Louse-borne relapsing fever!1
+Cholesterol atheroembolism to skin!0
+Dermatitis of feet...!0
+Infection-associated immune complex vasculitis!0
+Intra-anal warts!0
+Syndromic acquired hypomelanosis!0
+Alopecia areata of beard!0
+Psychological, psychiatric, sensory and neurological disorders affecting the skin!0
+Crohn disease of oral cavity!0
+Hand dermatitis...!0
+Herpes simplex infection of skin...!0
+Disseminated juvenile xanthogranuloma!0
+Other chronic figurate erythema!0
+Telangiectasia secondary to inflammatory skin disease!0
+Lichenoid dermatoses!0
+Papular syphilide!1
+Waardenburg syndrome!1
+Infected epidermoid cyst!0
+Dermatitis and eczema of hands and feet!0
+Abnormality of nail shape!0
+Other specified disorders of skin and subcutaneous tissue in diseases classified elsewhere!0
+Pressure ulcer grade II [partial thickness skin loss]!0
+Gangosa!1
+Neutrophilic eccrine hidradenitis!1
+Staphylococcal scarlatina!0
+Drug-induced onycholysis!0
+Acquired malformations of cutaneous blood vessels!0
+Disseminated blastomycosis!0
+Traumatic tattoo!0
+Malignant melanoma of skin!0
+Other specified neonatal fungal infection involving the skin!0
+Acné excoriée!0
+Hidradenitis suppurativa of multiple sites!0
+Irritant contact dermatitis...!0
+Cutaneous leucocytoclastic vasculitis...!0
+Seborrhoeic dermatitis of the scalp!0
+Florid cutaneous papillomatosis!1
+Umbilical vitelline cyst and/or remnants!0
+Photosensitivity due to drug!0
+Linear basal cell naevus!0
+Panniculitis...!0
+Phototherapy burn!0
+Crusted scabies!1
+Cellulitis of lower limb!0
+Atopic eczema of the hands!0
+Pulmonary dirofilariasis!0
+Injury to scalp of newborn due to sampling incision!0
+Malformations involving cutaneous blood vessels!0
+Ichthyosis Curth-Macklin!0
+Familial hypercholesterolaemia - heterozygous!0
+Gaucher disease type 1!1
+Blue naevus!1
+Gaucher disease type 2!1
+Carbuncle!1
+Type 2 diabetes mellitus with diabetic skin lesions!0
+Cutaneous horn!1
+Familial lecithin-cholesterol acyltransferase deficiency!0
+Café-au-lait macule!0
+Congenital symblepharon, bilateral!0
+Pressure ulcer grade III+ suspected [full thickness skin loss anticipated]!0
+Superficial frostbite of thorax!0
+Transient neonatal Behçet disease!0
+Cutaneous onchocerciasis!0
+Involvement of eyelid in impetigo [any organism] [any site]!0
+Dermatitis and eczema of anogenital region!0
+Dermal nerve sheath myxoma!0
+Disorder of skin and subcutaneous tissue, unspecified!0
+Subcorneal pustular dermatosis!1
+Pilosebaceous hamartoma!0
+Familial partial lipodystrophy due to lamin-A mutations!0
+Congenital eyelid retraction!0
+Chronic phototoxic reaction to fragrance!0
+Injury to scalp of newborn due to scalp clip (electrode)!0
+Seborrhoeic dermatitis...!0
+Irritant contact dermatitis from external agents organized by irritant class!0
+Bowenoid actinic keratosis!0
+Frostbite with tissue necrosis!1
+Oral fibroepithelial polyp!0
+Ocular Behçet disease!0
+Bullous impetigo of the napkin area!0
+haemorrhagic otitis externa!0
+Xanthelasma of upper eyelid!0
+Argyria!1
+Apocrine miliaria!1
+Other erythema multiforme!0
+Corticosteroid-induced purpura!0
+Pityriasis alba!1
+Syphilitic Argyll Robertson phenomenon or pupil!0
+Protein contact dermatitis!1
+Superficial thrombophlebitis resulting from infusion or injection of drug!0
+Acquired mixed hyper- and hypomelanotic disorders of skin pigmentation!0
+Parasitic infestation of eyelid in diseases classified elsewhere!0
+Freckles!1
+Cutaneous cryptococcosis!1
+Dermatophytosis due to zoophilic dermatophytes!0
+Hot comb alopecia!1
+Irritant contact dermatitis due to non-occupational exposure to topical medicaments and antimicrobials!0
+Hoyeraal-Hreidarsson syndrome!0
+Alopecia mucinosa!1
+Haemoglobinopathy-associated acquired pseudoxanthoma elasticum!0
+Non-pustular psoriasis of the palms and soles!0
+Cutaneous cysts!0
+Berloque dermatitis!1
+Disturbances of cutaneous sensation!0
+Dermatoses associated with other specific medications!0
+Taurodontia - absent teeth - sparse hair!0
+Ehlers-Danlos syndrome, progeroid type!0
+Streptococcal toxin-mediated reactions involving skin!0
+Necrotizing fasciitis!1
+Herpes virus infection of skin and mucous membrane!0
+Melanocytic naevi of trunk!0
+Vibratory angioedema!1
+Plantar warts!1
+Primary anetoderma!1
+Pseudoporphyria associated with renal dialysis!0
+Cheilodynia!0
+Primary ulcer of small intestine in Behçet disease!0
+HIV-associated pruritus!1
+Universal vitiligo!0
+Woolly hair – palmoplantar keratoderma – dilated cardiomyopathy!0
+Cellulitis of buttock!0
+Gottron papules!1
+Erosive oral lichen planus!0
+Chronic papillomatous dermatitis due to incontinence!0
+Lues maligna!0
+Suntan!1
+Vasculitis and inflammatory purpura involving the skin!0
+Cutaneous markers of disorders of the digestive system!0
+Xanthelasma of lower eyelid!0
+Eczematous nail dystrophy!0
+Dermal melanocyte hamartoma!1
+Burn from exposure to therapeutic ultraviolet radiation!0
+Infantile eosinophilic pustular folliculitis!0
+Malignant neoplasm: Glans penis!0
+Plasma cell cheilitis!1
+Beau lines!1
+Cronkhite-Canada syndrome!1
+Cellulitis of trunk!1
+Caput Succedaneum due to birth injury!0
+Exacerbation of constitutional dermatitis due to occupational exposure to skin irritants!0
+BIDS syndrome!1
+Palmoplantar keratoderma  – oral leukokeratosis  – oesophageal carcinoma!0
+Citrin deficiency!0
+Sporotrichosis!1
+Junin haemorrhagic fever!0
+Paraneoplastic hypermelanosis!0
+Acanthotic seborrhoeic keratosis!0
+Vulval intraepithelial neoplasia, differentiated!0
+Carcinoma in situ: Skin of scalp and neck!0
+Pigmented seborrhoeic keratosis!0
+Scalp pruritus!1
+Vulval haematoma due to birth injury!0
+Plaque psoriasis with pustules!0
+Fibrous and myofibroblastic proliferations in infants and children!0
+Acute excoriation of skin!0
+Oral mucositis due to other specified cause!0
+Ectodermal dysplasia - absent dermatoglyphs!0
+Diffuse epidermal hyperkeratosis and acanthosis!0
+acute infective otitis externa!0
+Genetic disorders affecting dermal collagen, elastin and other matrix proteins!0
+Melanocytic naevi of ear and external auricular canal!0
+Neonatal scald injury!0
+Congenital ablepharon!0
+Xerosis cutis due to leprosy!0
+Drug-induced photo-onycholysis!0
+Polymorphic light eruption!1
+Irritant contact cheilitis due to lip-licking!0
+Wiedemann-Rautenstrauch progeroid syndrome!0
+Colorado tick fever!1
+Pigmented skin lesion of uncertain nature!0
+Special types of melanocytic naevus!0
+Cutis laxa...!0
+Fibromatoses and keloids!0
+Giant cell arteritis!1
+Granulomatous disorders of skin and subcutaneous tissue!0
+Skin disorders associated with prematurity!0
+Preseptal cellulitis!1
+Fetal varicella syndrome!0
+Multiple carboxylase deficiency due to biotinidase deficiency!0
+Cutaneous complications of surgical, laser and other interventional procedures!0
+Thermal keratosis!1
+Neonatal viral infections involving the skin!0
+Nakajo-Nishimura syndrome!0
+Syphilitic parkinsonism!0
+Coffin-Siris syndrome!1
+Hereditary haemochromatosis!1
+Other specified mosquito-borne viral fevers!0
+Malignant neoplasm: Skin of trunk!0
+Methylmalonic aciduria!1
+Other pyogenic bacterial infections of the skin!0
+Syphilitic aneurysm of aorta!0
+Other infective otitis externa!0
+Sandfly fever!1
+Dermatoses from distant or systemic viral infection!0
+Acquired angioedema type II!0
+Recessive bullous dermolysis of the newborn (RDEB-BDN)!0
+Autosomal recessive cutis laxa, type 1!0
+Full thickness burn, chemical!0
+Localized skin eruption due to drugs and medicaments!0
+PHACE syndrome!1
+Autoinflammatory syndromes with immunodeficiency!0
+Polymicrobial neonatal omphalitis!0
+Actinic lichen planus!1
+Superficial folliculitis associated with normal skin flora!0
+Nummular palmoplantar keratoderma!0
+Median cleft lip/mandible!0
+Disseminated cutaneous candidosis!1
+Epidermodysplasia verruciformis!1
+Skin lesion of uncertain nature of multiple sites!0
+Ulerythema ophryogenes!1
+Other specified infections affecting the skin!0
+Purpura and bruising due to dysproteinaemia!0
+Arsenical keratosis!1
+Annular erythema!0
+Bites and envenomation by other specified spiders!0
+Aquagenic pruritus!1
+Tick-borne relapsing fever!0
+Myeloproliferative disorder associated vasculitis!0
+Benign cutaneous neoplasms with follicular differentiation!0
+Knuckle pads!1
+Chromosomal disorders affecting the skin!0
+McCune-Albright syndrome!1
+Chronic telogen hair shedding secondary to specified cause!0
+Turner syndrome, unspecified!0
+Neurosyphilis!1
+Infantile haemangioma, unspecified!0
+Primary erythromelalgia!0
+Hallermann-Streiff-François syndrome!0
+Friction blister!1
+Immune thrombocytopenic purpura!1
+Cutaneous leiomyosarcoma!0
+Ulcer of skin of unspecified nature!0
+Squamous cell carcinoma of penis!0
+Benign neoplasm: Skin of ear and external auricular canal!0
+Acute urticaria due to IgE-mediated allergy!0
+Pemphigus vegetans!1
+Other manifestations of early syphilis!0
+Dermatitis due to substances taken internally!0
+Opioid-induced pruritus!0
+Basal cell carcinoma of vulva, labium minus!0
+Generalized epidermolysis bullosa simplex, non-Dowling-Meara (EBS, gen-nDM)!0
+Complex epidermal hamartoma!0
+Basal cell carcinoma...!0
+Hydroxyethyl starch-induced pruritus!1
+Perioral dermatitis!1
+Other specified malignant neoplasms of vulva, clitoris!0
+Meibomian Gland Dysfunction!0
+Certain specified benign neoplasms of the skin!0
+Benign cutaneous neoplasms with sebaceous differentation!0
+Sacrococcygeal pilonidal cyst!0
+Benign cutaneous neoplasm...!0
+Paramedian facial cleft!0
+Ulcer of skin, lower limb!0
+Sensory disturbance of the vulva!0
+Dermatoses associated with specific classes of medication!0
+Toxic erythema!1
+Disorders of the dermis and subcutis!0
+Allergic contact dermatitis of perianal skin!0
+Vulval pruritus!0
+Chronic skin disorder of uncertain or unspecified nature!0
+Contact dermatitis of unspecified type organized by site!0
+Malassezia folliculitis!0
+Primary syphilis of other sites!0
+Menopausal hot flush!0
+Multibacillary leprosy!0
+Certain specified skin injury due to repetitive friction and mechanical trauma!0
+Telogen effluvium and telogen hair loss!0
+Anaesthesia of skin!0
+Surgical scar of skin!0
+Chronic multifocal oral candidosis!0
+Infantile napkin dermatoses!0
+Diffuse acquired telangiectasia!0
+Lipodystrophy in HIV-infected patients!0
+Anal pruritus!0
+Dermatofibrosarcoma protuberans!1
+Ulcer of skin of uncertain nature!0
+Acquired cutis laxa!0
+Neonatal cephalic pustulosis!1
+Infections due to Dengue virus!0
+Lipodystrophy due to peptidic growth factors deficiency!0
+Autosomal recessive dyskeratosis congenita!0
+Umbilical sinus!0
+Irritant contact dermatitis due substantially to occupational exposure to acids, alkalis or other chemical irritants!0
+Leukoedema of oral mucosa!0
+Heparin skin necrosis due to immune heparin-induced thrombocytopenia!0
+Oropharyngeal ulceration due to Behçet disease!0
+Acute pseudomembranous oral candidosis!0
+Perianal theadworm dermatosis!0
+Oral melanin incontinence!0
+Drug-induced nail pigmentation!0
+Acute effects of ionizing radiation on the skin!0
+Glossitis!1
+Chronic urticaria due to underlying infection or infestation!0
+Irritant contact dermatitis of scalp!0
+Irritant contact dermatitis of hands!0
+Unspecified diabetes mellitus with diabetic skin lesions!0
+Tricho-retino-dento-digital syndrome!0
+Acute seborrhoeic otitis externa!0
+Neonatal dermatoses due to maternal antibodies!0
+Corticosteroid-induced acne!1
+Melkersson syndrome!0
+Trichophagia!1
+Palisaded encapsulated neuroma!1
+Genitocrural intertrigo!0
+Gorlin syndrome!1
+Punctate keratoderma of the palmar creases!0
+Candidosis of lips and oral mucous membranes!0
+Langer-Giedion syndrome [8q24.1 deletion syndrome]!0
+Photo-allergic contact dermatitis organized by photo-allergen class!0
+Dermatitis and eczema of external ear!0
+Oedema of skin and soft tissues!0
+Dermatoses provoked by friction and mechanical stress!0
+Pemphigus vulgaris!1
+Lipschütz ulcer of vulva!0
+Intertriginous dermatitis!0
+Molluscum contagiosum...!0
+Keratosis pilaris atrophicans!0
+Rosselli-Gulienetti syndrome!1
+Hereditary disseminated and invasive dermatophytosis [Maladie dermatophytique]!0
+Malignant neoplasm: Prepuce!0
+Heterotopic sebaceous glands of vulva!0
+Familial Reactive perforating collagenosis!0
+Other specified forms of dermographism!0
+Chronic radiodermatitis!1
+Naevoid epidermolytic ichthyosis!0
+Burns of skin and soft tissue resulting from thermal or electrical injury!0
+Platinum oculocutaneous albinism!0
+Adult linear IgA bullous dermatosis!0
+Multifocal vascular tumour of infancy and childhood, undefined type!0
+IgG pemphigus herpetiformis!0
+Opitz BBB/G syndrome!0
+Unspecified frostbite of thorax, abdomen, lower back and pelvis!0
+Epidermoid cyst!1
+Ectodermal dysplasia – skin fragility syndrome!0
+Viral warts...!0
+Microstomia!1
+Epidermolytic ichthyosis!0
+Normal nails!0
+Capillaritis [Majocchi]!0
+Familial generalized lentiginosis!0
+Sclerodactyly resulting from disease classified elsewhere!0
+Cardio-facio-cutaneous syndrome!1
+Atrophic acne scars!0
+Skin lesion, lower limb!0
+Drug-induced oral ulcer!0
+Pythiosis!1
+De Sanctis-Cacchione syndrome!1
+Physalia sting!0
+Disorders of the epidermis and epidermal appendages!0
+Geographic tongue!1
+Neonatal graft-versus-host disease!0
+Hereditary leukonychia!0
+Frostbite with tissue necrosis of knee and lower leg!0
+Nummular dermatitis: exudative type!0
+Filariasis due to Wuchereria bancrofti!0
+Contact dermatitis due substantially to occupational skin injury from friction and micro-trauma!0
+Tanapox!1
+Non-occupational allergic contact dermatitis!0
+Moderate plaque psoriasis!0
+Dermatophytosis of trunk and limbs!0
+Dermatitis due to other substances taken internally!0
+Irritant contact dermatitis due to occupational exposure to topical medicaments and antimicrobials!0
+Drug-induced erythromelalgia!0
+Finger-wrinkling!0
+Miscellaneous specified forms of cutaneous sarcoidosis!0
+Other specified acantholytic disorder!0
+Photo-allergic contact dermatitis due to other chemical compounds!0
+Vesicular dermatitis of hands!0
+Acral self-healing collodion baby!0
+Genetically-determined cutis laxa!0
+Gustatory hyperhidrosis!1
+Other localized connective tissue disorders!0
+Xeroderma pigmentosum F (XPF)!0
+Trichodermodysplasia - dental alterations!0
+Congenital entropion, bilateral!0
+Ehlers-Danlos syndrome type 7B!0
+Ehlers-Danlos syndrome type 7A!0
+Lichen ruber moniliformis!1
+Malformations involving cutaneous lymphatic vessels!0
+Malignant neoplasm: Melanoma of eyelid, including canthus!0
+Ulceration of vulva due to Behçet disease!0
+Erythrodermic psoriasis!1
+Parasitic infestation of conjunctiva in loiasis!0
+Staphylococcal cellulitis!0
+Blistering dermatoses precipitated by drug therapy!0
+Corticosteroid-modified dermatophytosis!0
+Allergic contact dermatitis of male genitalia!0
+Reynolds syndrome!1
+Idiopathic follicular mucinosis!0
+Photo-onycholysis!1
+Stretch marks of pregnancy!0
+Mucous membrane pemphigoid!1
+Leprosy...!0
+Prepubertal vulval lichen sclerosus!0
+Tungiasis!1
+Ehlers-Danlos syndrome type 6B!0
+Primary cutaneous CD4+ small/medium sized pleomorphic T-cell lymphoma!0
+Ehlers-Danlos syndrome type 6A!0
+Papular palmoplantar keratodermas!0
+Erythema multiforme provoked by orf!0
+BCG-induced lupus vulgaris!0
+Infantile systemic hyalinosis!1
+Pyogenic arthritis - pyoderma gangrenosum - acne!0
+Congenital erythropoietic porphyria!1
+Penile psoriasis!0
+Atypical Werner syndrome!1
+Odonto-tricho-ungual-digito-palmar syndrome!0
+Comedonal acne!1
+Lichen planus and lichenoid reactions of oral mucosa!0
+Congenital Herpes simplex infection!0
+Hordeolum internum!0
+Cutaneous gamma/delta T-cell lymphoma!0
+Secondary syphilis...!0
+Epidermolysis bullosa acquisita: Brunsting-Perry type!0
+Immunosuppressive therapy as contributor to skin infection classified elsewhere!0
+Lymphoedema secondary to obesity!0
+Unspecified contact dermatitis due to plants, except food!0
+Irritant contact dermatitis due to solvents!0
+Neurological conditions affecting the skin!0
+Disturbances of oral epithelium!0
+Cutaneous collagenous vasculopathy!0
+Trichoepithelioma!1
+Minimal psoriasis/psoriasis in remission!0
+Hypermelanotic pigmentary mosaicism!0
+Octopus bite!0
+Yellow oculocutaneous albinism!0
+Cutaneous markers of disorder of the respiratory system!0
+Seborrhoeic psoriasis!0
+Curly hair – ankyloblepharon – nail dysplasia (CHAND) syndrome!0
+Tuberculosis of anal canal!0
+Other arthropod-borne viral fevers, not elsewhere classified!0
+Psoriatic nail hypertrophy!0
+Late syphilitic retrobulbar neuritis!0
+Dermatitis of feet!0
+Candidosis of urethra and genitalia!0
+Fixed drug eruption!1
+Autosomal ichthyoses with fatal disease course!0
+Metastatic cutaneous Crohn disease!0
+Progressive nodular histiocytosis!1
+Chronic autoimmune urticaria!0
+Lymphoproliferative disorder associated vasculitis!0
+Raynaud phenomenon secondary to other specified disorder!0
+Certain specified cutaneous reaction to internal contact allergen!0
+Miscellaneous conditions affecting dermal connective tissue!0
+Oedema secondary to increased capillary pressure!0
+Pseudomonas folliculitis!1
+Purpura fulminans!1
+Pityriasis rubra pilaris type II: atypical adult!0
+Pigmented skin lesion of unspecified nature!0
+Pustulo-psoriatic hyperostotic spondylarthritis!0
+Dermatoses provoked by heat or electricity!0
+Acute discoid or annular skin eruption!0
+Adult atopic eczema!0
+Birth injury attributable to obstetric forceps!0
+Barber-Say syndrome!0
+Burn from exposure to ultraviolet tanning device!0
+Herpes simplex infection of vagina!0
+Severe Dengue!0
+Acquired deformities of the nail plate!0
+Annular and circinate pustular psoriasis!0
+Oculocutaneous albinism type 4!0
+Warty tuberculosis!1
+Oculocutaneous albinism type 2!1
+Oculocutaneous albinism type 3!1
+Malignant neoplasm: Malignant neoplasm of skin, unspecified!0
+Malignant neoplasm: Skin of other and unspecified parts of face!0
+Skin lesion of uncertain nature, head!0
+Cat-eye syndrome [chromosome 22 inversion/duplication]!0
+Acute phototoxic reaction to fragrance!0
+Spinal cord defect affecting the skin!0
+Palmoplantar keratoderma with scleroatrophy of the extremities (Huriez)!0
+Reactive dermatoses due to distant bacterial infection!0
+Late congenital syphilitic sensorineural deafness!0
+Lucio phenomenon!1
+Inflammatory dermatoses!0
+Congenital entropion, unilateral!0
+Streptobacillosis!0
+Contact urticaria!1
+Junctional epidermolysis bullosa, late onset (JEB-Lo)!0
+Posterior blepharitis (Rosacea)!0
+Ligneous conjunctivitis!0
+Karyotype 46,X iso (Xq)!0
+Postinflammatory hypermelanosis!1
+Progeria!1
+Acute skin change due to ultraviolet radiation, unspecified!0
+Disseminated perinatal varicella!0
+19q13.11 deletion!0
+Nonbullous erythema multiforme!1
+Lichen planus of lips!0
+Sarcoid dactylitis!0
+Skin cancer (classified elsewhere) due to occupational exposure to other chemical carcinogens!0
+Non-syndromic nummular and linear palmoplantar keratodermas!0
+Lower limb venous eczema!0
+Papulopustular rosacea!1
+Non-specific cutaneous vascular signs!0
+Secondary malignant neoplasm of skin!0
+Compulsive self-biting behaviour!0
+Clear cell acanthoma!1
+Psoriatic nail pitting!0
+Keloid...!0
+Plantar fascial fibromatosis!0
+Acute febrile neutrophilic dermatosis [Sweet] : paraneoplastic!0
+Commissural facial cleft!0
+Glanders!1
+Ehlers-Danlos syndrome, rare variants!0
+Nail psoriasis!1
+Impetigo...!0
+Neonatal pemphigus!0
+Hypermelanosis of unspecified aetiology!0
+Other and unspecified disorders of oral mucosa!0
+Pyoderma gangrenosum : ulcerative!0
+Lethal restrictive dermopathy!0
+Disseminated intravascular coagulation of fetus and newborn!0
+Non-syndromic diffuse palmoplantar keratodermas!0
+Infection of skin, unspecified!0
+Papular, micropapular and lichenoid sarcoidosis!0
+Angioedema due to disordered complement activation and kinin metabolism!0
+Benign dermal fibrous and fibrohistiocytic neoplasms!0
+Occupational non-allergic contact urticaria!0
+Actinic cheilitis!1
+Allergic contact dermatitis due to systemic medicaments!0
+Syndromes with premature ageing appearance as a major feature!0
+Irritant contact dermatitis due in part to occupational exposure to acids, alkalis or other chemical irritants!0
+IgA vasculitis!1
+Segmental vitiligo!1
+Contractures - ectodermal dysplasia - cleft lip/palate!0
+Alopecia...!0
+Oral ulceration due to physical injury!0
+Infections of the nail and paronychium!0
+Menkes disease!1
+White sponge naevus!0
+Rubinstein-Taybi syndrome!1
+Early congenital syphilitic condylomata lata!0
+Congenital extramedullary dermal haematopoiesis!0
+Trichotillomania!1
+Dermatoses of the eye, eyelids and eyebrows!0
+Irritant contact dermatitis due in part to occupational wet work!0
+Herpes simplex infection of external ear!0
+Neonatal micronutrient excess affecting the skin!0
+Purpura and bruising due to vascular fragility!0
+Localized granuloma annulare!1
+Irritant contact dermatitis due to occupational contact with other specified agent!0
+Nail involvement in systemic disorder classified elsewhere!0
+Allergic contact urticaria: disseminated!0
+Lichen planopilaris!1
+Cutaneous and lymphocutaneous sporotrichosis!0
+Extragenital lichen sclerosus with morphoea!0
+Localized lipodystrophy secondary to panniculitis!0
+Mucosal melanosis!0
+Other specified disorder of skin not elsewhere classified!0
+Juvenile spring eruption!1
+Autosomal recessive hypohidrotic ectodermal dysplasia!0
+Poikiloderma following radiotherapy!0
+HFE-related hereditary haemochromatosis, Type 1!0
+Anti-laminin 5 mucous membrane pemphigoid!0
+Symptomatic late neurosyphilis!0
+Skin picking!1
+Other skin changes!0
+Cervicofacial actinomycosis!0
+Cellulitis of upper limb!0
+Ulcerative and erosive disorders of the vulva!0
+Syphilitic aortic incompetence!1
+Intrahepatic cholestasis of pregnancy!1
+Fire sponge dermatitis!0
+Lichen scrofulosorum!1
+Irritant contact dermatitis due to friction, sweating and contact with body fluids!0
+Trichodynia!1
+Allergic contact sensitization to cosmetics and fragrances!0
+Complete trisomy 21, meiotic non-disjunction!0
+Bubonic plague!1
+Late syphilis...!0
+Erythromelanosis follicularis faciei!0
+Other specified nonscarring hair loss!0
+Non-infective erosive and ulcerative disorders of oral mucosa!0
+Anagen effluvium due to toxins and poisons!0
+Periodic fever - aphthous stomatitis - pharyngitis - adenopathy [PFAPA]!0
+Other specified forms of pemphigus!0
+Eczema herpeticum!1
+Varicella zoster infection of skin!0
+Torg-Winchester syndrome!0
+Diabetic foot!1
+Dermatophytosis due to Microsporum nanum!0
+Hypostatic haemosiderosis!0
+Lymphocytic vasculitis due to other specified cause!0
+Tietz hypomelanosis – deafness syndrome!0
+Hereditary angioedema type III!0
+Superficial frostbite of wrist and hand!0
+Scrofuloderma!1
+Allergic contact dermatitis due to nickel!0
+SHORT syndrome!1
+Majeed syndrome!1
+Occupationally-acquired disorders of skin pigmentation!0
+Subcutaneous panniculitis-like T-cell lymphoma!0
+Congenital nail hypertrophy!0
+Infantile atopic eczema: impetiginized!0
+Allergic contact dermatitis organized by allergen class!0
+Streblodactyly!0
+Allergic contact dermatitis due to metals and metal salts!0
+Exacerbation of constitutional dermatitis due to non-occupational exposure to contact allergens!0
+Keratolysis exfoliativa!1
+Acne agminata!0
+Contact dermatitis of perianal skin...!0
+Sabinas brittle hair syndrome!1
+Böök syndrome!0
+Neonatal necrotizing fasciitis!0
+Connexin palmoplantar keratoderma with sensorineural deafness!0
+Chronic radiation keratosis!1
+Cote-Katsantoni syndrome!0
+Trichilemmal cyst!1
+Sclerosing basal cell carcinoma!1
+Benign neoplasms of epidermal appendages!0
+Allergic contact sensitization to dental materials!0
+Mouth ulcers...!0
+Bullous disorders in diseases classified elsewhere!0
+Venezuelan equine fever!1
+Noonan syndrome!1
+Oculo-osteo-cutaneous syndrome!0
+Benign cutaneous melanocytic neoplasms!0
+Chylocele of tunica vaginalis in filariasis due to Brugia malayi!0
+Age-related skin fragility!0
+Chronic scaling/hyperkeratotic skin disorder!0
+Infestation by mites!0
+Congenital cytomegalovirus infection!1
+Nummular dermatitis of hands!0
+Parasitic infestation of conjunctiva in filariasis due to Brugia timori!0
+Pruritus due to nerve damage or compression!0
+Neonatal mastitis...!0
+Small plaque psoriasis!0
+Dermatitis due to unspecified substance taken internally!0
+Acquired partial lipodystrophy!1
+Vitiligo of lower eyelid and periocular area!0
+Granulomatous vasculitis!1
+Prenatally acquired infections with neonatal skin manifestations!0
+Minor recurrent aphthous stomatitis!0
+Miliaria crystallina!1
+Epibulbar choristoma!0
+Hyperaesthesia!1
+Classical homocystinuria!0
+Cutaneous cyst!0
+Genetic syndromes affecting the skin!0
+Palpebral cleft/coloboma, bilateral!0
+Cataract – hypertrichosis – intellectual deficit!0
+Certain specified complication of tattoo!0
+Punctate palmoplantar keratoderma, type 1 [Brauer-Buschke-Fischer]!0
+Acquired hypomelanotic disorders!0
+Analphalipoproteinaemia!0
+Acute otitis externa!1
+Adverse reaction to BCG immunization...!0
+Pincer nail deformity!0
+anterior uveitis due to Vogt Koyanagi Harada syndrome!0
+Nummular dermatitis: dry type!0
+Sacrococcygeal pilonidal sinus!0
+Cephalhaematoma due to birth injury!0
+Late syphilitic polyneuropathy!0
+Traumatic purpura!1
+Rubella without complication!0
+Pruritus...!0
+IgA pemphigus herpetiformis!0
+Atopic eczema...!0
+Congenital primary lymphoedema!0
+Alopecia universalis!1
+Neonatal macronutrient deficiency affecting the skin!0
+Dermatophytosis due to geophilic dermatophytes!0
+Hartnup syndrome!1
+Benign vascular neoplasms of infancy and childhood!0
+Exacerbation of skin condition classified elsewhere during pregnancy!0
+Median nail dystrophy!1
+Relapsing linear acantholytic epidermal naevus [Hailey-Hailey]!0
+Deep subfascial lipomatous neoplasm!0
+Klippel-Trenaunay syndrome!1
+Haemodialysis-associated pseudoporphyria!0
+Dermatophytosis due to Trichophyton verrucosum!0
+Granulomatous disorder of skin and subcutaneous tissue, unspecified!0
+Adverse cutaneous sequelae of medication and treatment!0
+Dilated pore naevus!0
+Perianal dermatitis of the newborn!0
+Cutaneous actinomycosis!1
+Irritant contact dermatitis due to non-occupational exposure to foods!0
+Chondroectodermal dysplasia!1
+Oral mucosal secondary syphilis!0
+Candidosis...!0
+Early congenital syphilis, latent!0
+Lymphoedematous rosacea!0
+Miscellaneous dermatoses with suspected viral aetiology!0
+Oral mucositis due to cancer chemotherapy!0
+Dermatophytosis due to Microsporum ferrugineum!0
+Naevoid hypertrichosis!0
+Inflammmatory bowel disease vasculitis!0
+Labial melanin incontinence!0
+Ichthyosis - alopecia - eclabion - ectropion - intellectual deficit!0
+Other infiltrative disorders of skin and subcutaneous tissue!0
+Scleredema!1
+Lupus erythematosus tumidus!1
+PUVA lentiginosis!0
+Herpes simplex infection of perianal skin and rectum!0
+Occupational contact dermatitis of hands...!0
+Vulval aphthosis!0
+Multiple mononeuropathy vasculitis with Wegener granulomatosis!0
+Cutaneous microvascular occlusion by emboli!0
+Idiopathic Type 1 diabetes mellitus with diabetic foot!0
+Non-melanin pigmentation due to topical medicament!0
+Benign lymphocytic infiltration of the skin [Jessner]!0
+X-linked ichthyosis!1
+Knuckle-biting!0
+Verrucous epidermal naevus!1
+Ulcer of skin of unspecified site!0
+Pruritus of pregnancy!0
+Pigmentary abnormalities of lips!0
+Notalgia paraesthetica!0
+Autosomal dominant basal epidermolysis bullosa!0
+Centrofacial lentiginosis!1
+Dermatoses provoked by physical or environmental factors!0
+Epiblepharon, bilateral!0
+Acquired disorders of eyelashes!0
+Cicatrizing palmoplantar keratoderma with hearing loss (Vohwinkel)!0
+Fire coral (Millepora) sting!0
+Hypertrophic lichen planus!1
+Depth of burn unspecified, chemical!0
+Ankyloblepharon - ectodermal defects - cleft lip/palate!0
+Venous leg ulcer!1
+Erythema multiforme provoked by certain specified viral infection!0
+Subcutaneous fat necrosis of the newborn!1
+Pox virus infections of the skin!0
+Allergic contact urticaria…!0
+Lymphatic filariasis...!0
+Extragenital granuloma inguinale!0
+Mucous membrane pemphigoid with oral or oesophageal involvement!0
+Acute generalized pustular psoriasis of von Zumbusch!0
+Familial cold autoinflammatory syndrome!1
+Initial stage of trachoma!0
+Neonatal fungal infections involving the skin!0
+Trichodysplasia spinulosa!1
+Cutis verticis gyrata - retinitis pigmentosa - sensorineural deafness!0
+Trichorhinophalangeal syndrome type 1 and 3!0
+Ulcer of skin, trunk!0
+Dengue without warning signs!0
+Temporal triangular alopecia!1
+Panatrophy!0
+Other specified primary cutaneous B-cell lymphoma!0
+Ant bites and stings!0
+Chylocele of tunica vaginalis in dirofilariasis!0
+Napkin dermatitis!1
+Melanoma in situ of leg, including hip!0
+Hereditary brachyonychia!0
+Symptomatic vulvovaginal candidosis!0
+PUVA-associated pseudoporphyria!0
+Syphilitic pulmonary regurgitation!0
+Herpes simplex oesophagitis!0
+Frostbite involving multiple body regions and unspecified frostbite!0
+Circinate balanitis!1
+Dermo-odontodysplasia!0
+Secondary syphilitic proctocolitis!0
+Chronic discoid or annular skin disorder!0
+Cutaneous manifestations of Behçet disease!0
+Parasitic infestation of conjunctiva in filariasis due to Brugia malayi!0
+Asymptomatic skin colonization by Panton-Valentine leucocidin [PVL] producing Staphylococcus aureus!0
+Hand-Schüller-Christian disease!0
+Köbner psoriasis!0
+Carcinoma in situ: Skin of trunk!0
+Cholinergic pruritus!0
+Dysplastic melanocytic naevus!0
+Hypoglossia/aglossia!0
+Recurrent aphthous stomatitis!1
+Erythema nodosum provoked by systemic fungal infection!0
+Waardenburg syndrome type 2!1
+Waardenburg syndrome type 1!1
+Tattoos and tattoo reactions!0
+Wolf-Hirschhorn syndrome [4p16.3 deletion]!0
+Waardenburg syndrome type 3!1
+Apocrine sweat disorder, unspecified!0
+Scarring alopecia due to infection!0
+Cartilage-hair hypoplasia!1
+Non-bullous impetigo!1
+Scytalidium dermatomycosis!0
+Mental retardation – enteropathy – deafness – neuropathy – ichthyosis – keratoderma (MEDNIK) syndrome!0
+Dissecting cellulitis!0
+Acne...!0
+Cutaneous capillary vascular malformation ...!0
+Early syphilis involving the musculoskeletal system!0
+Atrophic scarring of the skin!0
+Drug-induced acute generalized exanthematous pustulosis (AGEP)!0
+Ectodermal dysplasia - arthrogryposis - diabetes mellitus!0
+Common acquired melanocytic naevus!0
+Sitosterolaemia!0
+Eosinophilic cellulitis!1
+Alkaptonuria!1
+Klinefelter syndrome with karyotype 47,XXY, mosaicism!0
+Pyoderma gangrenosum linked to inflammatory bowel disease!0
+Diffuse plane xanthomatosis!0
+Margarita island ectodermal dysplasia!0
+Localized bullous pemphigoid!0
+Laceration of skin!0
+Cutaneous markers of locomotor disorders!0
+Lepromatous leprosy!1
+Subcutaneous dissecting haematoma!0
+Disseminated paracoccidioidomycosis!0
+Drug-induced Stevens-Johnson syndrome!0
+Diffuse palmoplantar keratodermas!0
+Papular purpuric gloves and socks syndrome!0
+Miscellaneous disorders affecting the nails and paronychium!0
+Endemic non-venereal syphilis!1
+Lichen aureus!1
+Scalp abrasions due to birth injury!0
+Papulosquamous disorders!1
+Late congenital syphilitic encephalitis!0
+Primary cutaneous diffuse large B-cell lymphoma...!0
+Dahlberg-Borer-Newcomer syndrome!0
+Dermatitis, unspecified!0
+Leptospira infection of liver!0
+Carcinoma in situ of vulva!0
+Uraemic pruritus!1
+Other specified scarring alopecia!0
+Pachydermoperiostosis!1
+Lipoedema of the lower limbs!0
+Generalized eruptive histiocytosis!1
+Focal infantile haemangioma!0
+Autoinflammatory disease due to interleukin-1 receptor antagonist deficiency [DIRA]!0
+Drug-induced urticaria, angioedema and anaphylaxis!0
+Folliculitis keloidalis nuchae!0
+Phthiriasis pubis!1
+Epiblepharon!1
+Combined melanocytic naevus!0
+Cutaneous reactions to venomous or noxious vertebrates!0
+Pseudofolliculitis barbae!1
+Developmental anomalies of skin pigmentation!0
+Papular prurigo!0
+Neonatal disorders of subcutaneous fat!0
+Oral ulceration due to immunobullous disease!0
+Dermatitis and eczema!0
+Hyperhidrosis due to autonomic dysregulation!0
+Malignant neoplasm: Overlapping lesion of skin!0
+Hypertrophic oral lichen planus!1
+Drug-induced hypermelanosis!0
+No significant skin abnormality found!0
+Minor anomalies of pinnae!0
+Neu-Laxova syndrome!0
+Irritant contact dermatitis due to occupational exposure to foods!0
+Onycho-tricho-dysplasia – neutropenia (ONMR) syndrome!0
+Xerostomia due to other specified salivary gland disorder!0
+Other specified diabetes mellitus due to genetic defects of beta cell function with diabetic skin lesions!0
+Distichiasis, unilateral!0
+Filariasis due to Brugia timori!0
+Allergic contact dermatitis due to plastics, glues and resin systems!0
+Xeroderma pigmentosum E (XPE)!0
+Superficial spreading melanoma!1
+Occupational allergic contact urticaria: localized!0
+Congenital palmoplantar and perioral keratoderma (Olmsted)!0
+Chronic meningococcal bacteraemia!0
+Occupational acne and folliculitis due to exposure to pitch and tar!0
+Pachydermodactyly!1
+Hair colour and hair shaft abnormality, unspecified!0
+Irritant contact dermatitis in part to occupational contact with other specified agent!0
+Pigmented skin lesion, upper limb!0
+Pagetoid reticulosis!1
+Other specified cyst of skin!0
+Congenital symblepharon!0
+Skin rash secondary to distant or systemic bacterial infection not elsewhere classified!0
+Epidermolysis bullosa simplex with mottled pigmentation (EBS-MP)!0
+Syphilitic cerebral arteritis!0
+Melanoma of overlapping lesion ofvulva!0
+Cradle cap!1
+Chronic actinic dermatitis!1
+Other specified malignant neoplasms of vulva!0
+BCG ulcer!0
+Neonatal staphylococcal scalded skin syndrome!0
+Glomerular disorders in thrombotic thrombocytopenic purpura!0
+Frostbite!1
+Epiblepharon, unilateral!0
+Halo melanocytic naevus!0
+Pigmented skin lesion of uncertain nature of multiple sites!0
+Photo-allergic contact dermatitis due to sunscreens!0
+Dermatosis papulosa nigra!1
+Frostbite with tissue necrosis of head!0
+Crimean-Congo haemorrhagic fever!1
+Atrophie blanche!1
+Contact dermatitis of unspecified type!0
+Dermatoosteolysis, Kirghizian type!0
+Erosive pustular dermatosis of scalp!0
+Acquired hypermelanosis!0
+Scalp lacerations due to birth injury!0
+Congenital blepharophimosis!0
+Paucibacillary leprosy!0
+Cutaneous Crohn disease!0
+Microscopic polyangiitis!1
+Staphylococcal toxin-mediated recalcitrant erythema and desquamation!0
+Lipodermatosclerosis!1
+Papulopustular acne!1
+Endogenous non-melanin pigmentation!0
+Xerostomia due to mouth-breathing!0
+Miliaria profunda!1
+Weathered hair!0
+Dermatofibroma!1
+Calcinosis cutis due to systemic sclerosis!0
+Hordeolum externum lower eyelid!0
+Spider telangiectasis!1
+Neurofibromatosis 1!1
+Drug-exacerbated psoriasis!0
+Neurofibromatosis 2!1
+Necrosis/ulceration due to extravasation of drug into the skin!0
+Gram-negative folliculitis!1
+Multiple mononeuropathy vasculitis with mixed cryoglobulinemia!0
+Superficial frostbite involving multiple body regions!0
+Methylmalonic aciduria, vitamin B12 unresponsive!0
+Annular elastolytic giant cell granuloma!1
+Dorfman-Chanarin disease!1
+Herpes simplex gingivostomatitis!1
+Lymphocutaneous sporotrichosis!0
+Vasoconstriction of extremities!0
+Occupational acne and folliculitis!0
+Toriello-Lacassie-Droste syndrome!0
+Disorders of subcutaneous fat!0
+Perioral irritant contact dermatitis due to lip-licking!0
+Oedema due to dependency and immobility!0
+Steatocystoma simplex!1
+Pruritus due to myeloproliferative or lymphoproliferative disorder!0
+cutaneous lymphoid hyperplasia!0
+Anthozoa coral injury!0
+Melanonychia!1
+Eosinophilic granuloma!1
+Congenital onychodysplasia of the index fingers (COIF)!0
+Genetic syndromes with hypertrichosis!0
+Granuloma faciale!1
+Naevus anaemicus!0
+Oral-facial-digital syndrome type 12!0
+Oral-facial-digital syndrome type 13!0
+Oral-facial-digital syndrome type 10!0
+Acquired zinc deficiency syndrome!0
+Oral-facial-digital syndrome type 11!0
+Post-infective hypomelanosis!0
+Plane xanthoma!1
+Palmoplantar keratoderma – digital clubbing – acro-osteolysis (Bureau-Barrière-Thomas)!0
+Autosomal dominant hypercholesterolaemia!0
+Skin disorder of uncertain or unspecified nature!0
+Drug-induced anal ulceration!0
+Pruritus!1
+Drug-induced nail dystrophy...!0
+Vasodilatation of extremities!0
+Arthrogryposis - renal dysfunction - cholestasis!0
+Perioral dermatitis due to potent topical corticosteroid!0
+Drug-induced nail hypertrophy!0
+Hyperhidrosis secondary to cerebrovascular disease!0
+Edwards syndrome, unspecified!0
+Neurofibromatosis 3!0
+Mycobacterium marinum infection!0
+Immunobullous dermatosis classified elsewhere precipitated by drug!0
+Allergic contact sensitization due to occupational exposure to allergen!0
+Bronze baby syndrome!1
+Disorders of eccrine sweat glands and sweating!0
+Erythema elevatum diutinum!1
+Late congenital syphilis!1
+Special forms of acne!0
+Radiotherapy-induced xerostomia!0
+Malignant atrophic papulosis!1
+Ehlers-Danlos syndrome, periodontitis type!0
+Niemann-Pick disease type A!0
+Miscellaneous disorders of hair!0
+Birth injury to face!0
+Skin injury resulting from sexual abuse!0
+Seborrhoeic keratosis...!0
+Congenital ptosis!0
+Allergic contact cheilitis!1
+Acral skin peeling syndrome!0
+Anogenital pruritus!1
+Pili torti - onychodysplasia!0
+Certain specified disturbances of cutaneous sensation!0
+Cutaneous tuberculosis!1
+Phototoxic reaction to fragrance and cosmetics!0
+Heterotopic sebaceous glands!0
+Insulin-induced localized lipoatrophy!0
+Scalp folliculitis!0
+Microcystic lymphatic malformation!1
+Chemical burn due to skin contact with corrosive substance!0
+Disseminated phthiriasis!0
+Nodular vasculitis!1
+Primary generalized hyperhidrosis!0
+Bacterial cellulitis, erysipelas and lymphangitis!0
+Male pattern hair loss!0
+Urticarial vasculitis!1
+Acute papular onchodermatitis!0
+Paraneoplastic syndromes involving skin!0
+Cutaneous reactions to moths and butterflies!0
+Lymphatic malformations!0
+Partial cryptophthalmia, bilateral!0
+Primary cutaneous lymphoma!0
+Karyotype 46,X with abnormal sex chromosome, except iso (Xq)!0
+Xeroderma pigmentosum variant!0
+Generalized inflammatory peeling skin syndrome!0
+Achromic naevus!0
+Other alopecia areata!0
+Malignant neoplasm: Melanoma of leg, including hip!0
+Fibrous harmartoma of infancy!0
+Impacted cerumen!0
+Neonatal disorders involving the skin!0
+Inflammatory dermatoses of the perianal area!0
+Infections of the skin and subcutaneous tissue!0
+Burning scrotum!0
+Persistent melanocytic naevus!0
+Genetic disorders of the immune system affecting the skin!0
+Plantar cerebriform collagenoma!0
+Scarring alopecia...!0
+Dermatophytosis...!0
+Trichorrhexis invaginata (Netherton)!0
+BCG granuloma!0
+Anogenital warts..!0
+Mucocutaneous Behçet disease!0
+Irritant contact dermatitis of external ear!0
+Cutaneous mastocytoma!0
+Streptococcal toxic shock syndrome!1
+Forefoot callosities!0
+Vulval eczema!0
+Digital fibrokeratoma!0
+Exacerbation of constitutional dermatitis due to exposure to contact allergens!0
+Pseudomonas infection of nail!0
+Acral lentiginous melanoma!1
+Rheumatoid neutrophilic dermatosis!1
+Disorders of the nail and paronychium!0
+Photo-allergic contact dermatitis due to certain specified low molecular weight photoallergens!0
+Melanocytic naevi of other and unspecified parts of face!0
+Self-healing juvenile cutaneous mucinosis!1
+Trachoma, unspecified!0
+Intermediate maple-syrup-urine disease!0
+Special forms of dermatophytosis!0
+Atrophoderma!1
+Sponge dermatitis!0
+Sjögren syndrome vasculitis!0
+Photo-allergic contact dermatitis due substantially to occupational exposure to allergen!0
+Localized hypertrichosis!1
+Blepharochalasis!1
+Pressure ulcer grade III [full thickness skin loss]!0
+Lichen planus...!0
+Congenital ectropion, unilateral!0
+Transient acantholytic dermatosis!1
+Fabry disease!1
+Fluid overload with generalised oedema!0
+Dermatoses of the head, neck and oral cavity!0
+Papular amyloidosis (Lichen amyloidosus)!0
+Chronic erythematous oral candidosis!0
+Drug-induced cheilitis!0
+Subacute lichen planus!1
+Acrocyanosis!1
+Dermatophytosis due to Microsporum canis!0
+Labial melanotic macule!0
+Epidermolysis bullosa acquisita: mechanobullous type/phase!0
+Early syphilis...!0
+Cutaneous mucoromycosis!0
+Irritant contact dermatitis of feet!0
+Undifferentiated non-organ specific systemic autoimmune diseases, unspecifed!0
+Vulval intraepithelial neoplasia!1
+Erythema multiforme provoked by Mycoplasma pneumoniae!0
+Hermansky-Pudlak syndrome!1
+Dermochondrocorneal dystrophy!0
+Localized cutaneous erysipeloid!0
+Klinefelter syndrome!1
+Linear porokeratosis!1
+Dermatomycosis...!0
+Cutaneous markers of internal malignancy!0
+Limited fixed drug eruption!0
+Late syphilitic encephalitis!0
+Protothecosis!1
+3q29 deletion!0
+Leptospirosis!1
+Hereditary ichthyosis...!0
+Pustular vasculitic reactions!0
+Erythema gyratum repens!1
+Disseminated cutaneous Herpes simplex infection complicating skin disease!0
+Nail-patella syndrome!1
+Gustatory flushing!0
+Infectious disorders of eyelid!0
+Porokeratotic eccrine ostial and dermal duct naevus!0
+Hereditary angioedema type I!0
+Lumbosacral naevoid hypertrichosis!0
+Lichenoid tattoo reaction!0
+Unspecified disease of tongue!0
+Familial partial lipodystrophy due to AKT2 mutations!0
+Radionecrosis of skin due to therapeutic ionizing irradiation!0
+Superficial frostbite of knee and lower leg!0
+Primary lymphoedema!0
+Irritant contact dermatitis due to drugs in contact with skin!0
+Other disorders of skin and subcutaneous tissue, not elsewhere classified!0
+Functional vascular disorders of the skin!0
+Frostbite with tissue necrosis of abdominal wall, lower back and pelvis!0
+Drug-induced hair abnormalities!0
+Common warts!1
+Angioedema due to angiotensin receptor antagonists!0
+Juvenile dermatomyositis, unspecified!0
+Pemphigoid...!0
+Spitzoid tumour of uncertain malignant potential!0
+Palmoplantar pustulosis and related conditions!0
+Allergic contact dermatitis due to clothing and footwear!0
+Scar conditions and fibrosis of skin!0
+Localized epidermolysis bullosa simplex (EBS-loc)!0
+Bathing suit ichthyosis!0
+Chronic recurrent multifocal osteomyelitis!0
+Acute urticarial skin eruption!0
+Mucous membrane pemphigoid of penile mucosa!0
+Dermatitis and eczema of lower legs!0
+Dermatoses attributable to hyperviscosity and microvascular occlusion!0
+Epidermolysis bullosa acquisita: inflammatory type/phase!0
+Oral aphthae...!0
+Epidermolysis bullosa simplex with pyloric atresia (EBS-PA)!0
+Acantholytic dermatoses!0
+Alopecia areata of eyebrows!0
+Staphylococcal blepharitis!0
+Stevens-Johnson syndrome!1
+Legius syndrome!1
+Contact dermatitis due to skin injury from friction and micro-trauma!0
+Recessive dystrophic epidermolysis bullosa centripetalis (RDEB-Ce)!0
+Chlamydial lymphogranuloma (venereum)!0
+Irritant contact dermatitis!1
+Tendinous xanthoma!1
+Enteroviral vesicular stomatitis with exanthem!0
+Ehlers-Danlos syndrome, fibronectinaemic type!0
+Piezogenic pedal papules!1
+Vulval psoriasis!0
+PUVA-associated malignancy classified elsewhere!0
+Oculo-dento-digital dysplasia!0
+Tuberous xanthoma!1
+Calcific arteriolopathy [calciphylaxis]!0
+Ramon syndrome!0
+Systemic contact dermatitis due to implanted allergen!0
+Paraneoplastic pemphigus!1
+Acrokeratosis verruciformis of Hopf!1
+Testicular haematoma due to birth injury!0
+Allergic contact dermatitis due to adhesives!0
+Genetically-determined mixed hyper- and hypomelanotic disorders of skin pigmentation!0
+Langerhans cell histiocytosis involving the napkin area!0
+Rosacea...!0
+Semicircular lipoatrophy!1
+Radionecrosis of skin attributable to diagnostic procedure!0
+Monkeypox!1
+Angioma serpiginosum!1
+Sézary syndrome!0
+Nodular amyloidosis!1
+Demodex infestation of eyelid!0
+Klinefelter syndrome with karyotype 48,XXYY!0
+Borderline tuberculoid leprosy!1
+Giant keratoacanthoma!1
+Occupational contact urticaria!0
+Unspecified contact dermatitis due to drugs in contact with skin!0
+Irritant contact dermatitis due in part to occupational exposure to irritant!0
+Actinic telangiectasia!0
+Pinna fistula or cyst!0
+Scurvy!1
+Recessive dystrophic epidermolysis bullosa inversa (RDEB-I)!0
+Acrokeratosis paraneoplastica [Bazex]!0
+Traumatic ulcerative granuloma with stromal eosinophilia [TUGSE]!0
+Streptococcal cellulitis!0
+Photochemotherapy-induced keratosis!0
+Erythema multiforme!1
+2p15p16.1 deletion!0
+Hairy leukoplakia!1
+Borderline lepromatous leprosy!1
+Acneiform drug eruption!0
+Mucosal vitiligo!0
+Neonatal phototherapy burn!0
+Chronic urticaria!1
+Xeroderma - talipes - enamel defects!0
+Pitted keratolysis!1
+Certain specified disorders of the subcutis!0
+Certain specified primary cutaneous peripheral T-cell lymphoma!0
+Necrotizing fasciitis of the scrotum and perineum!0
+Viral warts due to immunodeficiency!0
+Immune-related Type 1 diabetes mellitus with diabetic skin lesions!0
+Acquired hypertrichosis lanuginosa!1
+Nail involvement in other specified dermatosis!0
+Auricular tag!0
+Verrucous squamous cell carcinoma of vulva!0
+Other specified form of acquired hypomelanosis!0
+Cutaneous juvenile xanthogranuloma!0
+Parasitic infestation of eyelid in leishmaniasis, unspecified!0
+Epidermolysis bullosa simplex superficialis (EBSS)!0
+Allergic contact dermatitis due to dyes!0
+Squamous cell carcinoma of penis, unspecified!0
+Behçet disease!0
+Chronic urticaria due to other specified mechanism!0
+Genetic disorders of amino acid metabolism and transport affecting the skin!0
+Angiokeratoma of Mibelli!1
+Compensatory hyperhidrosis!1
+Pigmented skin lesion, neck!0
+Lentigo maligna!1
+Rosacea fulminans!1
+Neonatal perianal streptococcal infection!0
+Benign neoplasm: Skin of lip!0
+Parapsoriasis!1
+Filariasis due to Brugia malayi!0
+Heat contact urticaria!0
+Premature ageing of the skin!0
+Type I leprosy reaction!0
+Primary cutaneous gamma-delta T-cell lymphoma!0
+Diffuse inflammatory erythemas!0
+Other specified manifestation of cutaneous onchocerciasis!0
+Cutaneous amoebiasis!1
+Dermatoses attributable to corticosteroid therapy!0
+Hereditary acantholytic dermatoses!0
+Desmoplastic melanoma!1
+Sea mat dermatitis!0
+Hypertrichosis lanuginosa congenita!1
+Malignant neoplasm: Melanoma of ear and external auricular canal!0
+Unspecified frostbite of leg!0
+Omsk haemorrhagic fever!1
+Cutaneous abscess, furuncle and carbuncle!0
+Neonatal iron overload!0
+Malignant infiltration of skin by other specified malignant neoplasm!0
+Xerostomia!1
+Infective dermatitis of the forefeet!0
+Cutaneous markers of internal disorders!0
+Candidosis of other sites!0
+Epidermolysis bullosa...!0
+Syndromic cutis laxa!0
+Occupational skin disorder...!0
+Abscess of eyelid!0
+Other specified infection of skin!0
+Ablepharon, unilateral!0
+Symptomatic dermographism!0
+Otitis externa in impetigo!0
+Metastatic melanoma involving skin!0
+Telangiectasia following radiotherapy!0
+Unspecified contact dermatitis due to other agents!0
+Ulcer of skin, upper limb!0
+Erysipelas of other specified site!0
+Circumscribed café-au-lait hypermelanosis!0
+Autoinflammatory syndromes!1
+Cellulitis!1
+Certain specified postnatal iatrogenic skin injury!0
+Orofacial granulomatosis!1
+Hordeolum externum upper eyelid!0
+Acute maculopapular skin eruption!0
+Occupational protein contact dermatitis!0
+Cranioectodermal dysplasia [Sensenbrenner syndrome]!0
+Factitious panniculitis!0
+Lichenoid drug eruption!1
+Other predominantly sexually transmitted bacterial infections affecting skin!0
+Unspecified contact dermatitis due to cosmetics!0
+Yellow fever, unspecified!0
+Developmental anomalies of the umbilicus!0
+Lichen sclerosus and related conditions!0
+Burn, depth unspecified, thermal!0
+Keloidal acne!0
+Lamellar ichthyosis!1
+Body dysmorphic disorder by proxy!0
+Occupationally-acquired dermatoses due to exposure to cold or heat!0
+Lupus erythematosus of oral mucosa!0
+Calcification of skin and subcutis secondary to metabolic disturbance!0
+Cutaneous vascular disorders caused or exacerbated by occupation!0
+Other elsewhere classified cutaneous complication of diagnostic procedure!0
+Neonatal cold injury syndrome!0
+Ehlers-Danlos syndrome, X-linked!0
+Sylvatic yellow fever!0
+Disseminated cutaneous erysipeloid!0
+Frontal fibrosing alopecia!1
+Neonatal nutritional disorders affecting the skin!0
+Pruritus due to central nervous system injury or degeneration!0
+Inflammatory erythemas and other reactive inflammatory dermatoses!0
+Genitocrural seborrhoeic dermatitis!0
+diffuse otitis externa!0
+Non-occupational contact dermatitis!0
+Hydrozoa envenomation!0
+Infantile gluteal granulomata!0
+Involvement of eyelid in leprosy!0
+Ataxia – telangiectasia!0
+Acrodermatitis enteropathica!1
+Tinea barbae and tinea capitis!0
+Iron salt tattoo!1
+Polymorphic eruption of pregnancy!1
+Papillomatoverrucous palmoplantar keratoderma – dysplastic dentition!0
+Subcutaneous haematoma!0
+Sclerotic fibroma!1
+Perianal psoriasis!0
+Dermatophytosis due to Microsporum gypseum!0
+Neonatal streptococcal omphalitis!0
+Mucocutaneous pain syndromes!0
+Early syphilis involving the digestive tract!0
+Spindle cell melanocytic naevus!0
+Cutaneous manifestation of other specified disorder of essential minerals!0
+Adverse effects of UVB phototherapy!0
+Other late congenital syphilis, symptomatic!0
+Oedema of skin and soft tissues...!0
+Deletions of the short arm of chromosome 4!0
+Angiokeratoma!1
+Polyarteritis nodosa involving the skin!0
+Dermatophytosis due to Trichophyton soudanense!0
+Genetically-determined hypohidrosis!0
+Secondary hypobetalipoproteinaemia!0
+Lymphoedema - atrial septal defects - facial changes!0
+Paronychial Herpes simplex infection!0
+Allergic contact dermatitis due substantially to occupational exposure to allergen!0
+Diabetic dermopathy!1
+Pressure ulcer grade IV [full thickness skin and subcutaneous tisue loss with exposure of deep tissues]!0
+Ankyloblepharon filiforme adnatum, bilateral!0
+Allergic contact sensitization to hairdressing products!0
+Xanthoma in association with primary combined hyperlipidaemia!0
+Marfan syndrome!1
+Yaws and pinta!0
+Acute oedema blisters!0
+Skin infection classified elsewhere due to meticillin-resistant Staphylococcus aureus [MRSA]!0
+Flushing and blushing!0
+Alopecia areata!1
+Developmental defects of hair and nails!0
+Postthrombotic syndrome!1
+Porphyria cutanea tarda!1
+pseudolymphoma of spiegler-fendt!0
+Generalized hyperhidrosis!1
+Chediak-Higashi syndrome!1
+Sjögren disease!0
+Acute telogen effluvium!0
+Juvenile elastoma!0
+Acne scars!1
+Marginal papular palmoplantar keratoderma!0
+Coumadin necrosis!1
+Occupational phototoxic reaction to skin contact with plant matter!0
+Knuckle pads – leukonychia – sensorineural deafness!0
+Vasculitis affecting small cutaneous blood vessels!0
+Nodular panniculitis!0
+Squamous cell carcinoma of overlapping lesion of penis!0
+Pyogenic infection of skin...!0
+Systemic contact dermatitis due to ingested allergen!0
+Irritant contact dermatitis due to non-occupational exposure to acids, alkalis or other chemical irritants!0
+Familial multiple lipomata!0
+Rosacea and related disorders!0
+Urticaria pigmentosa: plaque form!0
+Drug-induced toxic epidermal necrolysis!0
+Malignant neoplasm: Melanoma of scalp and neck!0
+Cutaneous wounds, injuries and scars!0
+Mucopolysaccharidosis type 1H!0
+Calcifying aponeurotic fibroma!1
+Reticular oral lichen planus!0
+Dermatoses provoked by contact with irritant or noxious substance!0
+Contact dermatitis of eyelids...!0
+Mucopolysaccharidosis type 1S!0
+Pseudomonilethrix!0
+Leprosy reactions!0
+Apocrine gland hamartoma!0
+Traction alopecia!1
+Lysosomal diseases with dermal mucin deposition!0
+Radiation-related disorders of the skin and subcutaneous tissue!0
+Wasp stings!0
+Phylloid hypomelanosis!1
+Aspartylglucosaminuria!1
+Ablepharon, bilateral!0
+Late congenital syphilis, latent!0
+Factitious skin disease!0
+Herpes simplex infection of external genitalia!0
+Parasitic infestation of eyelid in loiasis!0
+Lichenoid capillaritis [Gougerot and Blum]!0
+Late acute graft-versus-host disease!0
+Autosomal dominant hypohidrotic ectodermal dysplasia!0
+Wiskott-Aldrich syndrome!1
+Hyperphosphataemic familial tumoral calcinosis!0
+Carcinoma in situ: Skin of lip!0
+Disorders of lips!0
+Mucopolysaccharidosis type 2B!0
+Involvement of perianal area by specified inflammatory dermatosis classified elsewhere!0
+Oto-onycho-peroneal syndrome!0
+Mucopolysaccharidosis type 2A!0
+Hereditary skin peeling!0
+Congenital lymphatic malformations!0
+Congenital macroglossia!1
+Keratinocytic epidermal hamartoma!0
+Basal cell carcinoma of vulva, labium majus!0
+Skin infection classified elsewhere due to hospital-acquired meticillin-resistant Staphylococcus aureus [MRSA]!0
+Oedema secondary to increased peripheral blood flow!0
+Punctate palmoplantar keratoderma!1
+Parrot-beak nail!0
+Adverse effects of psoralen photochemotherapy (PUVA)!0
+Localized pruritus...!0
+Cheilitis...!0
+Hereditary angioedema!1
+Bifid tongue!0
+Drug-induced lupus erythematosus!1
+Melanoma of vulva, labium majus!0
+Onychomycosis!1
+Allergic contact sensitization to plants and certain specified organic matter!0
+Cutaneous infection due to unspecified non-tuberculous mycobacteria!0
+Diabetic bullae!1
+Adverse reaction to substance applied to neonatal skin!0
+Follicular lichen planus!1
+Dermatosis!1
+Peutz-Jeghers syndrome!1
+Pyoderma gangrenosum : superficial vegetating!0
+Buffalopox!1
+Malignant neoplasm: Skin of leg, including hip!0
+Cutis laxa!1
+Lichen simplex of nape of neck!0
+Trichostasis spinulosa!1
+Symmetrical drug-related intertriginous and flexural erythema!0
+Crumpled ear!0
+infection of external ear!0
+Late syphilitic optic atrophy!0
+X-linked ichthyosis syndromes!0
+Schinzel-Giedion midface retraction syndrome!0
+Actinomycetoma due to Actinomycetes species!0
+Other forms of leptospirosis!0
+Frostbite with tissue necrosis of neck!0
+Bruising of skin!0
+Anogenital warts affecting other sites!0
+Cutaneous sarcoma!0
+Trichodysplasia - amelogenesis imperfecta!0
+2q37 deletion!0
+Premalignant and malignant disorders of the vulva!0
+Pruritus due to neurological disorder!0
+Phototoxic reaction to skin contact with tar or tar derivatives!0
+Inflammatory dermatoses of the newborn!0
+Scarring alopecia due to trauma!0
+Skin manifestation of other specified neonatal mineral deficiency!0
+Indeterminate leprosy!1
+Neonatal alloimmune thrombocytopenic purpura!0
+Cutaneous strongyloidiasis!0
+Stasis dermatitis of the lower legs!0
+Non-uraemic calcific arteriolopathy [calciphylaxis]!0
+benign cutaneous lymphoid hyperplasia!0
+Collagenoma!1
+Sjögren-Larsson syndrome!0
+Variegate porphyria!1
+Lymphoedema secondary to dependency and immobility!0
+Cutaneous lupus erythematosus!1
+Actinic keratosis!1
+Chronic urticaria of undetermined aetiology!0
+Dermatophytosis due to anthropophilic dermatophytes!0
+Ulcerative lichen planus!1
+Early congenital syphilitic osteochondropathy!0
+Miscellaneous skin disorders in the neonate!0
+Deafness – onychodystrophy, autosomal recessive [DOOR syndrome]!0
+Disorders due to atrophy and degeneration of dermal and subcutaneous connective tissue!0
+Childhood atopic eczema!0
+Purpura and bruising due to genetically-determined skin fragility!0
+Pinta...!0
+Eruptive xanthoma!1
+Vulvovaginal gingival syndrome!1
+Genetically-determined skin fragility!0
+Erythema marginatum!1
+Acne and related disorders!0
+Urticaria, angioedema and other urticarial disorders!0
+Hailey-Hailey disease!1
+Bacterial infections affecting the skin!0
+Certain specified inflammatory papulosquamous dermatosis!0
+Oral-facial-digital syndrome type 9!0
+Oral-facial-digital syndrome type 8!0
+Oral-facial-digital syndrome type 6!0
+Oral-facial-digital syndrome type 5!0
+Irritant contact dermatitis due to occupational exposure to acids, alkalis or other chemical irritants!0
+Miscellaneous cutaneous reactions to mechanical trauma!0
+Oral-facial-digital syndrome type 4!0
+Infantile stiff skin syndromes!0
+Oral-facial-digital syndrome type 3!1
+Acute blistering skin eruption!0
+Oral-facial-digital syndrome type 2!0
+Oral-facial-digital syndrome type 1!0
+Phototoxic reaction to topical psoralen therapy!0
+Marshall syndrome!1
+Cherry angioma!1
+Certain specified dermatitis!0
+Heterotopic sebaceous glands of lips!0
+Cone-rod type amaurosis congenita – congenital hypertrichosis!0
+Lymphomatoid papulosis!1
+Juvenile hereditary haemochromatosis, Type 2B!0
+Juvenile hereditary haemochromatosis, Type 2A!0
+Dermatophytosis of nail!0
+Acute graft-versus-host disease!0
+Fanconi anaemia!1
+Infection of skin...!0
+Carcinoma in situ: Skin of other sites!0
+Ulcer of skin, neck!0
+Actinic prurigo!1
+Angiokeratoma corporis diffusum!1
+Gravitational oedema secondary to venous insufficiency!0
+Allergic contact dermatitis due to other chemical products!0
+Primary cutaneous diffuse large B-cell lymphoma!0
+Dermatoses of the lips and oral cavity!0
+Digital and periungual warts!0
+Diffuse (eosinophilic) fasciitis!1
+Disorders of dermal mast cells!0
+Drug-induced Stevens-Johnson/toxic epidermal necrolysis overlap syndrome!0
+Dermatomyositis!1
+Hidrotic ectodermal dysplasia, Clouston type!0
+Laugier-Hunziker melanosis!0
+Tubero-eruptive xanthoma!1
+Concurrent acute and chronic graft-versus-host disease!0
+Miscellaneous specified adverse cutaneous reactions to medication!0
+Other early skin lesions of yaws!0
+Carotenoderma!1
+Watson syndrome!1
+Impetiginization of other dermatoses!1
+Warty dyskeratoma!1
+photosensitivity!0
+Acropustulosis of Hallopeau!0
+Cutaneous microvascular occlusion due to cardiac emboli!0
+Flexural psoriasis!1
+Chignon due to birth injury!0
+Cellulitis of chest wall!0
+Other specified bullous disorders!0
+Xerostomia due to disturbance of salivary secretion!0
+Acne due to exposure to halogenated aromatic hydrocarbons [chloracne]!0
+Self-inflicted skin disorders!0
+Malignant neoplasm: Melanoma of other and unspecified parts of face!0
+Crush injury of skin!0
+Poikiloderma of Civatte!1
+Dermatophytosis due to Microsporum equinum!0
+Benign symmetrical lipomatosis [Madelung]!0
+Cutaneous neurofibroma!0
+Malignant neoplasm: Overlapping lesion of vulva!0
+Superficial frostbite of abdominal wall, lower back and pelvis!0
+Alpha-1 antitrypsin deficiency panniculitis!0
+Irritant contact dermatitis due to cosmetics!0
+Radiation keratosis following radiotherapy!0
+Pachyonychia congenita 1 [Jadassohn-Lewandowsky]!0
+Familial partial lipodystrophy, Köbberling type!0
+Black piedra!1
+Horse-fly bites!0
+Allergic contact sensitization to photographic chemicals!0
+Erythema multiforme  with oral ulceration!0
+Pili torti and nerve deafness (Björnstad)!0
+Dermatophytosis due to Trichophyton simii!0
+Intraepidermal squamous cell carcinoma of skin!0
+Drug-induced oral conditions!0
+Actinic lentiginosis!0
+Oedema secondary to hypoproteinaemia!0
+Hidradenitis suppurativa of axillae!0
+Guttate lichen sclerosus!0
+Perichondritis of external ear!1
+Certain specified congenital malformation of nails!0
+Raynaud phenomenon secondary to non-organ specific systemic autoimmune disorder!0
+Late syphilitic female pelvic inflammatory disease!0
+Dominant bullous dermolysis of the newborn (DDEB-BDN)!0
+Post-inflammatory atrophic scarring of the skin!0
+Genetic disorders of skin pigmentation!0
+Frostbite with tissue necrosis involving multiple body regions!0
+Cutaneous coccidioidomycosis!1
+Melanoma of vulva, clitoris!0
+Hyperhidrosis secondary to endocrine disorder!0
+Alezzandrini syndrome!1
+Pleomorphic fibroma!1
+Dominant dystrophic epidermolysis bullosa, nails only (DDEB-na)!0
+Foreign body reaction to certain specified inorganic matter in the skin!0
+Allergic contact dermatitis of face and neck!0
+Prurigo!1
+Malignant atrophic papulosis [Degos]!0
+Miscellaneous fungal infections involving skin!0
+Confluent and reticulate papillomatosis!1
+Yaws!1
+Chondrodysplasia punctata, X-linked dominant!0
+Herpes simplex infection of prostate!0
+Disseminated histoplasmosis!0
+Autoimmune and other photodermatoses!0
+Pustular psoriasis!1
+Midge bites!0
+Loxoscelism!1
+Necrobiotic xanthogranuloma!1
+Atopic prurigo!0
+Perianal seborrhoeic dermatitis!0
+Generalized eruptive keratoacanthomas [Grzybowski]!0
+Charcot's arthropathy!0
+Skin lesion, upper limb!0
+Erythrodermas of infancy!0
+Ocular rosacea!1
+Male & female pattern hair loss!0
+Birth injury to scalp, unspecified!0
+Inverted follicular seborrhoeic keratosis!0
+Pityriasis lichenoides chronica!1
+Actinomycetoma due to Nocardia species!0
+Self-induced lip trauma!0
+Focal facial dermal dysplasia!0
+Superficial frostbite of head!0
+Neonatal lupus erythematosus!1
+Cutaneous microvascular occlusion due to systemic coagulopathies!0
+Cutaneous nocardiosis!1
+Calcinosis cutis secondary to certain specified specified inflammatory process!0
+Carney complex!1
+Other specified malignant neoplasms of vulva, labium minus!0
+Cyanosis!1
+Miscellaneous specified dermatoses provoked by pressure!0
+Vitiligo-associated autoimmune disease!0
+Unspecified arthropod-borne viral fever!0
+Cutaneous reactions to beetles!0
+Ehlers-Danlos syndrome, cardiac valvular type!0
+Carcinoma in situ: Skin of arm, including shoulder!0
+Other parapsoriasis!0
+Asymptomatic skin colonization by meticillin-resistant Staphylococcus aureus [MRSA]!0
+Herpes simplex Kaposi varicelliform eruption complicating other dermatosis!0
+Madarosis of eyelid and periocular area!0
+Hereditary universal dyschromatosis!0
+Thick small plaque psoriasis!0
+Congenital malalignment of the great toenails!0
+Late congenital neurosyphilis!0
+Hypertrichosis of lower eyelid!0
+Secondary lichenification!0
+Keratoderma climactericum!1
+Congenital ptosis, bilateral!0
+Certain specified non-organ specific systemic autoimmune disease!0
+Other hypertrophic disorders of skin!0
+Dermatoses due to filamentous bacteria!0
+Disorders of oral mucosa!0
+Genitocrural intertriginous candidosis!0
+Syringocystadenoma papilliferum!1
+Calcinosis cutis...!0
+Skin lesion, head!0
+Adult-onset citrullinaemia type 1!0
+Pseudoporphyria...!0
+Dermatomyofibroma!0
+Urticaria due to cold and heat!1
+Port-wine stain!1
+Woolly hair!1
+Large plaque psoriasis!0
+Odontotrichomelic syndrome!0
+Neonatal kwashiorkor!0
+Neonatal marasmus due to fetal malnutrition!0
+Oral erythema migrans!0
+Pruritus of scrotum!0
+Dyschromatosis due to chronic arsenic toxicity!0
+Cellulitis, unspecified!0
+Follicular disorder, unspecified!0
+Loricrin keratoderma!0
+Cutaneous Lyme borreliosis!0
+Recessive dystrophic epidermolysis bullosa, generalized severe (RDEB-GS)!0
+Scalp-ear-nipple syndrome!1
+Infections of lips and oral mucosa!0
+Pure oral mucous membrane pemphigoid!0
+Lassa fever!1
+Cutaneous reactions to venomous or noxious animals!0
+Abrasion of skin!0
+Dermatomyositis, unspecified!0
+Xerosis cutis...!0
+Papulosquamous disorders in diseases classified elsewhere!0
+Photo-allergic contact dermatitis due to plants and vegetable matter!0
+acute bacterial otitis externa!0
+Photoaggravated psoriasis!0
+Pityriasis lichenoides!1
+Yellow fever!1
+Harlequin ichthyosis!1
+Varicose veins with great saphenous reflux!0
+Herpes simplex infection of epididymis!0
+Primary cutaneous B-cell lymphomas!0
+Inflamed seborrhoeic keratosis!0
+Camptodactyly of fingers!0
+Stevens-Johnson syndrome and toxic epidermal necrolysis due to drug!0
+Dermatoses associated with diabetes mellitus!0
+Other disorders of diminished melanin formation!0
+Immunobullous disorder of undefined type!0
+Naevus of Ito!1
+Callosities of other sites!0
+Malingering and simulation involving the skin!0
+Vulvodynia!1
+Acute desquamating skin eruption!0
+Acute febrile neutrophilic dermatosis [Sweet]!0
+Systemic mycoses affecting skin!0
+Trichiasis without entropion lower eyelid!0
+Pyoderma gangrenosum classified by clinical type!0
+Meningovascular syphilis!1
+Skin injury due to exposure to corrosive substances!0
+Necrotizing lymphocytic folliculitis!0
+Silica granuloma!1
+Cutaneous microvascular disturbances due to cryofibrinogens!0
+Hyperhidrosis secondary to malignancy!0
+Camptodactyly of fingers, unilateral!0
+Ichthyosis - oral and digital anomalies!0
+Comedo naevus!0
+Xerostomia secondary to dehydration!0
+Oculocutaneous albinism type 1A!0
+Other epidermal thickening!0
+Oculocutaneous albinism type 1B!0
+Certain specified forms of cutaneous vasculitis!0
+Squamous cell carcinoma of vulva!0
+Arenaviral haemorrhagic fever, unspecified!0
+Furunculosis!1
+Pruritus secondary to skin disorder!0
+Androgenic alopecia...!0
+Dermatoses exacerbated by cold!0
+Hereditary mucoepithelial dysplasia!1
+Seborrhoeic dermatitis of eyelids!0
+Cutaneous reactions to centipedes and millipedes!0
+Hereditary sclerosing poikiloderma!1
+Partial cryptophthalmia, unilateral!0
+Dermal dendrocyte (Class IIa) histiocytoses!0
+Other specified or unclassifiable non-syndromic ichthyosis!0
+Drug-induced hypomelanosis!0
+Late congenital syphilitic polyneuropathy!0
+Macrostomia!1
+Anetoderma of Schweninger-Buzzi!1
+Pemphigus erythematosus!1
+Itching of skin!0
+Measles without complication!0
+Perinatal birth injuries involving the skin and soft tissues!0
+Erythropoietic porphyrias!1
+Irritant contact cheilitis!0
+Occupational contact dermatitis, contact urticaria and allergy!0
+Neonatal micronutrient deficiency affecting the skin!0
+Hypermelanosis due to endocrine disorder!0
+Toxic porphyria cutanea tarda!0
+Psoriasis of specified site or distribution!0
+Denture hyperplasia!0
+Dermatophytosis of toenail!0
+Antiphospholipid syndrome in pregnancy!0
+Loose anagen syndrome!1
+Pretibial myxoedema!1
+Pigmented skin lesion of uncertain nature, head!0
+Granuloma and granuloma-like lesions of oral mucosa!0
+Allantoic duct (urachus) remnants and cysts!0
+Cutaneous disorders attributable to acquired and iatrogenic immunodeficiency!0
+Acute neonatal citrullinaemia type 1!0
+Mucocutaneous paracoccidioidomycosis!0
+Ectodermal dysplasia - syndactyly syndrome!0
+Hindfoot callosities!0
+Irritant contact dermatitis of eyelids!0
+Localized excess and redundant skin!0
+Buschke-Ollendorff syndrome!1
+Skin infection classified elsewhere due to abnormally virulent or therapy-resistant bacteria!0
+Stevens-Johnson/toxic epidermal necrolysis overlap syndrome!0
+Autosomal recessive cutis laxa!0
+Angular cheilitis exacerbated by mechanical factors!0
+Wound myiasis!1
+Bullous pemphigoid variants!0
+Cutaneous anthrax!1
+NALP12-associated hereditary periodic fever syndrome!0
+OL-EDA-ID syndrome!0
+Occupationally-acquired infection (classified elsewhere) affecting the skin!0
+Atrophic disorder of skin, unspecified!0
+Skin injury due to maltreatment or assault!0
+Secondary syphilitic anterior uveitis!0
+Allergic contact dermatitis of scalp!0
+Diseases of tongue!0
+Primary cutaneous CD-30 positive T-cell lymphoproliferative disorders!0
+Phakomatosis caesioflammea!0
+Corticosteroid-induced stretch marks!0
+Tricho-odonto-onychodysplasia - dominant syndactyly!0
+Other autosomal ichthyosis syndromes!0
+Hypohidrotic ectodermal dysplasia!1
+Mycosis fungoides...!0
+Dermatophytosis of scalp!0
+Acute urticaria due to underlying infection or infestation!0
+Melanoma of vulva, labium minus!0
+Epidermolysis bullosa simplex, autosomal recessive (EBS-AR)!0
+Hordeolum internum lower eyelid!0
+Dermatoses of female genitalia!0
+Other cutaneous reactions to arthropods!0
+Generalized excess and redundant skin due to disease or malnutrition!0
+Allergic contact sensitization to topical medicaments!0
+Dermatoses of pregnancy and of the newborn and infant!0
+Camptodactyly of toes, bilateral!0
+Localized disturbances of skin sensation!0
+Sclerodactyly...!0
+Cutaneous erythema multiforme!0
+Fat hypertrophy!0
+Trichiasis without entropion!0
+Dermatophytosis of fingernail!0
