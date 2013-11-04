@@ -1,0 +1,19 @@
+Dermatophytosis
+[Cardiovascular system, Immune system, Hematopoietic system, Endocrine system, Digestive system]
+2BLK4F0OHOVRYUIKRFTLJ2HEDVF325
+{Cardiovascular system=0, Immune system=0, Hematopoietic system=0, Endocrine system=0, Digestive system=0}
+
+Dermatophytosis
+[Lower Extremity, Trunk, Upper Extremity, Head and Neck, Pelvis and Perineum]
+283PHIT3HVWASAIT9EAQC17208DKC5
+{Lower Extremity=1, Trunk=1, Upper Extremity=1, Head and Neck=1, Pelvis and Perineum=1}
+
+Dermatophytosis
+[Nervous system, Musculoskeletal system, Integumentary system, Genitourinary System, Respiratory system]
+2M998D8J3VE7TISGUP3GDMCK99XXHG
+{Nervous system=0, Musculoskeletal system=0, Integumentary system=1, Genitourinary System=0, Respiratory system=0}
+
+Urticaria
+[Lower Extremity, Trunk, Upper Extremity, Head and Neck, Pelvis and Perineum]
+2CIFK0COK2JEYC7CRB0L1W6O08BKR4
+{Lower Extremity=1, Trunk=1, Upper Extremity=1, Head and Neck=1, Pelvis and Perineum=1}

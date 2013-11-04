@@ -1,0 +1,215 @@
+Temporal triangular alopecia
+hair
+
+Naevoid hypertrichosis
+hair
+
+Lumbosacral naevoid hypertrichosis
+hair!lower back
+
+Developmental defects of hair and hair growth
+hair
+
+Genetic defects of hair and hair growth
+hair
+
+Genetic defects of the hair shaft
+hair
+
+Genetic defects of the the hair shaft with increased fragility
+hair
+
+Monilethrix
+hair
+
+Pili torti
+hair
+
+Trichorrhexis invaginata (Netherton)
+hair
+
+Loose anagen syndrome
+hair
+
+Genetic defects of the the hair shaft without increased fragility
+hair
+
+Uncombable hair syndrome
+hair
+
+Woolly hair
+hair
+
+Woolly hair naevus
+hair
+
+Pseudomonilethrix
+hair
+
+Pili annulati
+hair
+
+Genetic abnormalities of hair colour
+hair
+
+Familial premature canities
+hair
+
+Familial poliosis
+hair
+
+Genetic syndromes with abnormalities of the hair shaft
+hair
+
+Björnstad syndrome
+hair
+
+Bamforth-Lazarus syndrome
+hair
+
+Cartilage-hair hypoplasia
+hair
+
+Netherton syndrome
+hair!body regions
+
+Trichorrhexis invaginata (Netherton)
+hair
+
+Woolly hair – palmoplantar keratoderma – dilated cardiomyopathy
+hair!hand!foot
+
+Woolly hair – hypotrichosis – everted lower lip – outstanding ears [Salamon syndrome]
+hair
+
+Trichothiodystrophy
+hair!scalp
+
+BIDS syndrome
+hair!scalp
+
+IBIDS syndrome
+hair!scalp
+
+PIBIDS syndrome
+hair!scalp
+
+SIBIDS syndrome
+hair!scalp
+
+Sabinas brittle hair syndrome
+hair!scalp
+
+Onycho-tricho-dysplasia – neutropenia (ONMR) syndrome
+hair!scalp!nail
+
+Trichorrhexis nodosa (Pollitt) syndrome
+hair!scalp
+
+Skin fragility-woolly hair syndrome
+hair
+
+Curly hair – ankyloblepharon – nail dysplasia (CHAND) syndrome
+hair!eyelid!nail!scalp
+
+Menkes disease
+hair
+
+Hereditary alopecia and hypotrichosis
+hair
+
+Atrichia congenita
+hair
+
+Atrichia with keratin cysts
+hair
+
+Hereditary generalized hypotrichosis
+hair!body regions
+
+Hereditary hypotrichosis of scalp
+hair!scalp
+
+Marie Unna congenital hypotrichosis
+hair
+
+Ciliary and superciliary hypotrichosis
+hair!eyelid!eyebrow
+
+Genetic syndromes with alopecia or hypotrichosis
+hair
+
+Argininosuccinic aciduria
+hair
+
+Severe T-cell immunodeficiency [SCID] - congenital alopecia - nail dystrophy
+hair!nail
+
+Ichthyosis – hypotrichosis syndrome
+hair!body regions
+
+Neonatal sclerosing cholangitis – ichthyosis – hypotrichosis syndrome
+hair!body regions
+
+Hidrotic ectodermal dysplasia, Clouston type
+hair!body regions
+
+Odonto-onycho-dermal dysplasia
+hair!nail
+
+Woolly hair – hypotrichosis – everted lower lip – outstanding ears [Salamon syndrome]
+hair!scalp!lip
+
+Autosomal dominant palmoplantar keratoderma and congenital alopecia [Stevanovič]
+hair
+
+Autosomal recessive palmoplantar keratoderma and congenital alopecia [Wallis]
+hair
+
+Alopecia - contractures - dwarfism - intellectual deficit
+hair
+
+Alopecia – psychomotor epilepsy – periodontal pyorrhoea – mental subnormality (Shokeir) syndrome
+hair
+
+Cataract - alopecia - sclerodactyly
+hair!finger!toe
+
+Odonto-onycho dysplasia - alopecia
+hair!nail
+
+Schöpf-Schulz-Passarge syndrome
+hair
+
+Macrocephaly – alopecia  – cutis laxa  – scoliosis (MACS) syndrome
+hair!body regions
+
+Genetically-determined hypertrichosis
+hair
+
+Hypertrichosis lanuginosa congenita
+hair!body regions
+
+Congenital generalized hypertrichosis [Ambras]
+hair!body regions
+
+X-linked dominant congenital generalized hypertrichosis [Macias-Flores]
+hair!body regions
+
+Genetic syndromes with hypertrichosis
+hair
+
+Barber-Say syndrome
+hair
+
+Cataract – hypertrichosis – intellectual deficit
+hair
+
+Cervical hypertrichosis – peripheral sensory and motor neuropathy
+hair!neck
+
+Cone-rod type amaurosis congenita – congenital hypertrichosis
+hair
+
+Ramon syndrome
+hair

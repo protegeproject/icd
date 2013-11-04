@@ -1,0 +1,768 @@
+Dermatoses of the head, neck and oral cavity
+Dermatoses specific to the scalp; external ear; the eyes, eyelids and eyebrows; the lips and oral cavity; and to dermatoses specific to the skin of the head and neck
+none
+
+Dermatoses of the eye, eyelids and eyebrows
+DefinitionTerm_8029 has no label
+none
+
+Other conditions specific to the face and neck which may present with skin signs
+none
+none
+
+Dermatoses of the scalp
+Skin disorders affecting preferentially or exclusively the scalp.
+none
+
+Dermatoses of the lips and oral cavity
+none
+none
+
+Dermatoses of the external ear
+Skin disorders affecting preferentially or exclusively the external ear.
+none
+
+Acquired disorders of eyelashes
+none
+none
+
+Infectious disorders of eyelid
+none
+none
+
+Other disorders of eyelid
+none
+none
+
+Inflammatory disorders of eyelid
+none
+none
+
+Periapical abscess with sinus
+none
+http://en.wikipedia.org/wiki/Periapical_abscess_with_sinus
+
+Erosive pustular dermatosis of scalp
+none
+none
+
+Birth injury to scalp
+none
+none
+
+Diseases of tongue
+Any pathological process effecting the structural tissues of the tongue with or without interference of its normal functions.
+none
+
+Certain specified disorders of lips and oral mucosa
+Any other condition affecting the lip and/or oral mucosa
+none
+
+Disorders of lips
+Any condition effecting the lips
+none
+
+Disorders of oral mucosa
+Inflammation of the soft tissues of the mouth, such as mucosa; palate; gingiva; and / or lip, as well as any associated any pathological or traumatic discontinuity of tissue
+none
+
+Inflammatory disorders of the external ear
+none
+none
+
+Certain specified disorders of external ear
+This refers to other disorders of the external portion of the ear, which consists of the pinna and external auditory meatus.
+none
+
+Infective disorders of the external ear
+none
+none
+
+Trichoepithelioma
+none
+http://en.wikipedia.org/wiki/Trichoepithelioma
+
+Trichiasis without entropion
+none
+none
+
+Herpes zoster blepharitis
+This is a viral disease characterized by a painful skin rash with blisters in a limited area on one side of the body, often in a stripe. This diagnosis is with an eye condition characterized by chronic inflammation of the eyelid, the severity and time course of which can vary.
+none
+
+Hordeolum/Stye
+Purulent infection of one of the sebaceous glands of Zeis along the eyelid margin (external) or of the meibomian gland on the conjunctival side of the eyelid (internal).
+none
+
+Parasitic infestation of eyelid in diseases classified elsewhere
+none
+none
+
+Involvement of eyelid in tuberculosis
+This is a common, and in many cases lethal, infectious disease caused by various strains of mycobacteria, usually Mycobacterium tuberculosis. This diagnosis is with involvement of the eyelid.
+none
+
+Abscess of eyelid
+none
+none
+
+Preseptal cellulitis
+none
+http://en.wikipedia.org/wiki/Preseptal_cellulitis
+
+Herpes simplex infection of eyelid
+This is a viral disease from the herpesviridae family caused by both Herpes simplex virus type 1 (HSV-1) and type 2 (HSV-2). Infection with the herpes virus is categorized into one of several distinct disorders based on the site of infection. This diagnosis is of the eyelid.
+none
+
+Staphylococcal blepharitis
+Inflammation of the eyelids.
+none
+
+Trachoma
+A chlamydial conjunctivitis of insidious or abrupt onset; the infection may persist for a few years if untreated, but the characteristic lifetime duration of active disease in hyperendemic areas is the result of frequent reinfection. The disease is characterized by the presence of lymphoid follicles and diffuse conjunctival inflammation (papillary hypertrophy), particularly on the tarsal conjunctiva lining the upper eyelid. The inflammation produces superficial vascularization of the cornea (pannus) and scarring of the conjunctiva, which increases with the severity and duration of the inflammatory disease.
+http://en.wikipedia.org/wiki/Trachoma
+
+Sunken Sulcus Deformity
+none
+none
+
+Traumatic scar of eyelid
+none
+none
+
+Xanthelasma of eyelid
+none
+none
+
+Tear Trough Deformity
+none
+none
+
+Dermatosis
+none
+http://en.wikipedia.org/wiki/Dermatosis
+
+Symblepharon
+none
+http://en.wikipedia.org/wiki/Symblepharon
+
+Chalazion
+A chalazion is a small cyst on the eyelid caused by a blockage of a the meibomian glands.
+http://en.wikipedia.org/wiki/Chalazion
+
+Meibomian Gland Dysfunction
+none
+none
+
+Ocular cicatricial pemphigoid
+none
+none
+
+Ligneous conjunctivitis
+Ligneous conjunctivitis (LC) is a rare form of chronic conjunctivitis characterised by the recurrent formation of pseudomembranous lesions most commonly on the palpebral surfaces. It is most frequently reported as a clinical manifestation of severe homozygous or compound-heterozygous hypoplasminogenemia.  Most cases involve infants and children.
+none
+
+Subgaleal Epicranial Subaponeurotic haemorrhage due to birth injury
+Subgaleal haemorrhage is a collection of blood in the space between the epicranialaponeurosis of the scalp and the periosteum of the skull.
+none
+
+Other birth injuries to scalp
+Birth injuries of scalp other than those specified
+none
+
+Chignon due to birth injury
+Chignon is a temporary swelling (oedema of the scalp) secondary to the placement of a ventouse suction cup used in assisted vacuum deliveries. It usually disappears after several hours
+none
+
+Scalp lacerations due to birth injury
+Accidental lacerations, such as those  inflicted with a scalpel during caesarean section
+none
+
+Monitoring injury of scalp of newborn
+Injuries to the scalp from use of intrapartum fetal monitoring devices including injury following fetal blood sampling.
+none
+
+Ischaemic alopecia due to birth injury
+none
+none
+
+Scalp abrasions due to birth injury
+AAbrasions of the scalp from injury due to dystocia (prolonged second stage) or use of instrument assisted delivery
+none
+
+Cephalhaematoma due to birth injury
+Cephalhaematoma is a subperiosteal collection of blood caused by rupture of vessels beneath the periosteum and does not extend across the suture lines.
+none
+
+Birth injury to scalp, unspecified
+none
+none
+
+Caput Succedaneum due to birth injury
+Caput succedaneum is a serosanguiunous fluid collection above the periosteum, over that portion of the scalp that was the presenting part during a vertex delivery. This collection is not limited by suture lines.
+none
+
+Bruising of scalp due to birth injury
+Erythema of the scalp occuring usually as a result of dystocia or application of forceps
+none
+
+Hypertrophy of tongue papillae
+This is the increase in the volume of an organ or tissue due to the enlargement of its component cells in the tongue papillae.
+none
+
+Glossitis
+Inflammation of the tongue
+http://en.wikipedia.org/wiki/Glossitis
+
+Sublingual varices
+The Varix is an enlarged and tortuous vein, artery, or lymphatic vessel located in sublingual area.
+none
+
+miscellaneous specified diseases of tongue
+none
+none
+
+Unspecified disease of tongue
+none
+none
+
+Median rhomboid glossitis
+A congenital disorder of the tongue characterized by a rhomboid or ovoid, sometimes elevated red area in the dorsal midline, just anterior to the vallate papillae, , that lacks lingual papillae.
+http://en.wikipedia.org/wiki/Median_rhomboid_glossitis
+
+Atrophy of tongue papillae
+This is the partial or complete wasting away of tongue papillae.
+none
+
+Wandering rash of the mouth
+none
+none
+
+Geographic tongue
+It's an inflammatory condition of the tongue.
+http://en.wikipedia.org/wiki/Geographic_tongue
+
+Genetic and developmental disorders involving lips and oral mucosa
+none
+none
+
+Granulomatous disorders of the lips and oral mucosa
+This is a diverse group of hereditary diseases in which certain cells of the immune system have difficulty forming the reactive oxygen compounds (most importantly, the superoxide radical) used to kill certain ingested pathogens, of the lips and oral mucosa.
+none
+
+Xerostomia
+Dry mouth.  This may result from many causes including dehydration, salivary gland dysfunction, suppression of saliva production by drugs (e.g. anticholiergics) or habitual mouth-breathing.
+http://en.wikipedia.org/wiki/Xerostomia
+
+Infections of lips and oral mucosa
+none
+none
+
+Pigmentary abnormalities of lips
+This is an abnormality in the material that changes the color of reflected or transmitted light as the result of wavelength-selective absorption, of the lips.
+none
+
+Cheilitis
+This is a condition involving inflammation of the lip.
+http://en.wikipedia.org/wiki/Cheilitis
+
+Lip fissure
+This is a medical condition involving inflammation of the lip.
+http://en.wikipedia.org/wiki/Lip_fissure
+
+Self-induced lip trauma
+This is a self-induced trauma to the lip.
+none
+
+Non-infective erosive and ulcerative disorders of oral mucosa
+none
+none
+
+Disturbances of oral epithelium
+This is disturbances of the mucous membrane epithelium (and lamina propria) of the mouth.
+none
+
+Other and unspecified disorders of oral mucosa
+This is other and unspecified disorders of the mucous membrane epithelium (and lamina propria) of the mouth.
+none
+
+Granuloma and granuloma-like lesions of oral mucosa
+none
+none
+
+Miscellaneous inflammatory disorders of oral mucosa
+none
+none
+
+Pigmentary disturbances of oral mucosa
+This is a disturbance in the material that changes the color of reflected or transmitted light as the result of wavelength-selective absorption, of the oral mucosa.
+none
+
+Acute otitis externa
+Rapid onset  of inflammation of the outer ear, including the external ear canal, cartilages of the auricle, and the tympanic membrane
+http://en.wikipedia.org/wiki/Acute_otitis_externa
+
+Chronic otitis externa
+This is a chronic inflammation of the outer ear and ear canal. Along with otitis media, external otitis is one of the two human conditions commonly called "earache".
+http://en.wikipedia.org/wiki/Chronic_otitis_externa
+
+Contact dermatitis of external ear
+none
+none
+
+Otitis externa, unspecified
+Inflammation of the outer ear, including the external ear canal, cartilages of the auricle, and the tympanic membrane, due to an unspecified cause.
+none
+
+Disorder of external ear, unspecified
+none
+none
+
+acquired auditory canal deformity
+none
+none
+
+ear fistula
+none
+none
+
+Juvenile spring eruption
+none
+http://en.wikipedia.org/wiki/Juvenile_spring_eruption
+
+Acanthoma fissuratum
+A distinctive discrete flesh-coloured papule or plaque arising in the retroauricular sulcus or on the side of the nose as a result of pressure and friction from ill-fitting spectacles.  The lesion is often centrally grooved where it is in contact with the spectacle frame.  It is often painful.
+http://en.wikipedia.org/wiki/Acanthoma_fissuratum
+
+Chondrodermatitis nodularis
+This is a small, nodular, tender, chronic inflammatory lesion occurring on the helix of the ear, occurring most often in men.
+none
+
+Exostosis of external canal
+none
+none
+
+Malignant otitis externa
+Malignant otitis externa caused by the spread of otitis externa(also called swimmer's ear) is a disorder involving inflammation and damage of the bones and cartilage at the base of the skull.  It is an uncommon complication of both acute and chronic ostitis externa. Risks for this condition include chemotherapy, diabetes, weakened immune system.
+http://en.wikipedia.org/wiki/Malignant_otitis_externa
+
+Other infective otitis externa
+This is an infective inflammation of the outer ear and ear canal. Along with otitis media, external otitis is one of the two human conditions commonly called "earache".
+none
+
+Abscess of external ear
+This is a collection of pus (neutrophils) that has accumulated within a tissue because of an inflammatory process in response to either an infectious process (usually caused by bacteria or parasites) or other foreign materials (e.g., splinters, bullet wounds, or injecting needles). It is a defensive reaction of the tissue to prevent the spread of infectious materials to other parts of the body, of the external ear.
+none
+
+Perichondritis of external ear
+Perichondritis is an infection of the skin and tissue surrounding the cartilage of the outer ear such as perichondrium. Perichondritis is usually caused by injury to the ear due to ear surgery, ear piercing (especially piercing of the cartilage), or contact sports. Perichondritis can cause severe damage to the ear structure if it becomes chondritis. The most common bacteria that causes perichondritis infection is Pseudomonas aeruginosa.
+http://en.wikipedia.org/wiki/Perichondritis_of_external_ear
+
+Cellulitis of external ear
+This is a localized or diffuse inflammation of connective tissue with severe inflammation of dermal and subcutaneous layers of the skin. Cellulitis can be caused by normal skin flora or by exogenous bacteria, and often occurs where the skin has previously been broken: cracks in the skin, cuts, blisters, burns, insect bites, surgical wounds, intravenous drug injection or sites of intravenous catheter insertion, of the external ear.
+none
+
+Trichiasis without entropion upper eyelid
+none
+none
+
+Trichiasis without entropion lower eyelid
+none
+none
+
+Hordeolum internum
+none
+none
+
+Hordeolum externum
+none
+http://en.wikipedia.org/wiki/Hordeolum_externum
+
+Parasitic infestation of eyelid in leishmaniasis, unspecified
+none
+none
+
+Abscess of upper eyelid
+none
+none
+
+Abscess of lower eyelid
+none
+none
+
+Trachoma, unspecified
+none
+none
+
+Active stage of trachoma
+This refers to the active stage of an infectious disease caused by the Chlamydia trachomatis bacterium which produces a characteristic roughening of the inner surface of the eyelids.
+none
+
+Initial stage of trachoma
+This refers to the initial stage of an infectious disease caused by the Chlamydia trachomatis bacterium which produces a characteristic roughening of the inner surface of the eyelids.
+none
+
+Xanthelasma of lower eyelid
+none
+none
+
+Xanthelasma of upper eyelid
+none
+none
+
+Injury to scalp of newborn due to sampling incision
+none
+none
+
+Injury to scalp of newborn due to scalp clip (electrode)
+none
+none
+
+Hereditary mucoepithelial dysplasia
+This is a rare autosomal dominant multiepithelial disorder causing systemic maldevelopment of the epithelia and mucus membranes that line the surface of tissues and structures throughout the body, particularly affecting systems affiliated with mucosa, which includes the respiratory, digestive, urinary, reproductive and immune systems.
+http://en.wikipedia.org/wiki/Hereditary_mucoepithelial_dysplasia
+
+Genetic or developmental disorder classified elsewhere involving lips and oral mucosa
+Congenital deformity by abnormal facial development that occurs in uterus after conception.
+none
+
+Oral mucosal fragility and ulceration due to epidermolysis bullosa classified elsewhere
+none
+none
+
+Hereditary benign intraepithelial dyskeratosis
+none
+none
+
+White sponge naevus
+This is an autosomal dominant skin condition and although congenital in most cases, it can first occur in childhood or adolescence.
+none
+
+Orofacial granulomatosis
+This is a condition characterized by a sudden onset and progressive course terminating in chronic enlargement of the lips.
+http://en.wikipedia.org/wiki/Orofacial_granulomatosis
+
+Sarcoidosis of oral cavity
+This is a syndrome involving abnormal collections of chronic inflammatory cells (granulomas) that can form as nodules in the oral cavity.
+none
+
+Xerostomia secondary to dehydration
+This is the subjective complaint of dry mouth which may or may not be associated with a lack of saliva, due to mouth breathing, secondary to dehydration.
+none
+
+Xerostomia due to mouth-breathing
+This is the subjective complaint of dry mouth which may or may not be associated with a lack of saliva, due to mouth breathing.
+none
+
+Dry mouth...
+Dry mouth without further specification.
+none
+
+Xerostomia due to disturbance of salivary secretion
+Xerostomia resulting from hyposalivation caused by salivary gland dysfunction rather than suppression.  This may be due to surgery, radiotherapy or inflammation (Sjögren disease or sicca syndrome).
+none
+
+Enteroviral vesicular pharyngitis
+This refers to an enteroviral vesicular inflammation of the throat.
+none
+
+Glandular cheilitis
+This is a form of cheilitis which is the counterpart of actinic keratosis of the skin and can develop into squamous cell carcinoma.
+http://en.wikipedia.org/wiki/Glandular_cheilitis
+
+Actinic cheilitis
+Actinic cheilitis results from chronic exposure of the lower lip vermilion to ultraviolet solar radiation. Outdoor workers with fair skin who live in tropical or subtropical areas are most at risk.    The condition presents as diffuse or circumscribed scaling and variable thickening of the epithelium, which is poorly protected from the harmful effects of UV radiation.  Progression to invasive squamous cell carcinoma may occur.
+http://en.wikipedia.org/wiki/Actinic_cheilitis
+
+Drug-induced cheilitis
+Severe cheilitis may be caused by medication, in particular systemic retinoids, which interfere with the normal epithelial barrier to transepithelial water loss.
+none
+
+Contact cheilitis
+Cheilitis due to contact with irritants or allergens
+none
+
+Angular cheilitis
+Angular cheilitis is an acute or chronic inflammation of the skin and contiguous labial mucous membrane at the angles of the mouth.  It is most commonly due to infection with Staphylococcus aureus, Candida or both.
+http://en.wikipedia.org/wiki/Angular_cheilitis
+
+Plasma cell cheilitis
+Plasma cell cheilitis is an idiopathic benign inflammatory condition characterized by dense plasma cell infiltrates in the lips.  It presents as circumscribed flat or elevated erythematous patches, usually on the lower lip.
+http://en.wikipedia.org/wiki/Plasma_cell_cheilitis
+
+Chapping of the lips
+Chapping of the lips occurs as a result of exposure to adverse environmental conditions, particularly freezing cold or hot dry winds.   Desiccation of the vermilion results in soreness, cracking and scaling.
+none
+
+Cheilitis...
+Cheilitis of unspecified nature or cause
+none
+
+Exfoliative cheilitis
+Exfoliative cheilitis is a chronic superficial inflammatory disorder of the vermilion border of the lips characterized by persistent scaling. It is most commonly attributed to self-inflicted injury from chewing, sucking or picking.
+http://en.wikipedia.org/wiki/Exfoliative_cheilitis
+
+Oral ulceration due to immunobullous disease
+This is an ulcer that occurs on the mucous membrane of the oral cavity, due to immunobullous disease.
+none
+
+Drug-induced oral ulcer
+This refers to a drug-induced break in a bodily membrane that impedes the oral area of which that membrane is a part from continuing its normal functions.
+none
+
+Oral aphthae and aphtha-like ulceration
+1. Frequent small, shallow, painful ulcerations in the oral mucosa. 2. Recurrent oral ulceration that clinically resembles recurrent aphthous stomatitis but presents atypically, including commencement after adolescence, with fever, with a strong family history, or failing to resolve with age
+none
+
+Oral ulceration due to physical injury
+This is an ulcer that occurs on the mucous membrane of the oral cavity, due to physical injury.
+none
+
+Oral mucositis (ulcerative)
+Ulcerative mucositis typically appears in the non-keratinized surfaces of the oral cavity, for instance the inner surfaces of the cheeks and lips, the floor of the mouth and bottom surfaces of the tongue, and the soft palate. Some studies have also reported a distribution of these lesions on keratinized surfaces such as the hard palate and upper surface of the tongue. If ulcerations are noted in these areas, cultures and/or biopsies should be taken from the lesions to rule out viral infections or other causes. Redness and/or ulcerations, ranging from a few millimetres to a few centimetres long, can appear. Bleeding from the ulcerations is common; however, bleeding often reflects a severe reduction in a patient's platelet count, a condition called thrombocytopenia.
+none
+
+Mouth ulcers...
+Oral ulceration of other specified or unspecified type.
+none
+
+Chronic ulcerative stomatitis
+Chronic ulcerative stomatitis (CUS) is a rare disease which presents with chronic oral mucosal erosions and ulceration resembling erosive lichen planus but refractory to standard therapies. It typically occurs in older women.  Diagnosis requires the demonstration of speckled granular perinuclear IgG deposits in the basal and parabasal layers of oral epithelium (stratified epithelium-specific antinuclear or SES-ANA pattern).  There is increasing evidence that CUS is an autoimmune disease provoked by circulating IgG antibodies directed against ?Np63?, an isoform of the p53 family of nuclear transcription factors which is present around the nuclei of normal oral epithelial basal keratinocytes.  CUS normally responds to treatment with hydroxychloroquine.
+none
+
+Lupus erythematosus of oral mucosa
+Lupus erythematosus affecting oral mucosa.   This may be associated with either cutaneous or systemic lupus erythematosus and presents most commonly as mucosal ulceration.   Histologically there is a lichenoid mucositis.
+none
+
+Erythroplakia of oral mucosa
+This is a flat red patch or lesion in the mouth that cannot be attributed to any other pathology.
+none
+
+Leukoplakia
+A condition where patches of keratosis appear as adherent white patches on the mucous membranes of the oral cavity, including the tongue, but also other areas of the gastro-intestinal tract, urinary tract and the genitals.
+http://en.wikipedia.org/wiki/Leukoplakia
+
+Leukoedema of oral mucosa
+leukoedema a variant condition of the buccal mucosa, consisting of an increase in thickness of the epithelium and intracellular edema of the stratum spinosum or stratum germinativum
+none
+
+Smoker's keratosis
+This is an oral pathological condition that appears in the hard palate of the mouth as a white lesion and is not considered to be premalignant and results from tobacco smoking (especially pipes or cigars) or long-term drinking of very hot beverages.
+http://en.wikipedia.org/wiki/Smoker's_keratosis
+
+Irritative hyperplasia of oral mucosa
+This is an irritative increase in number of cells/proliferation of cells of the oral mucosa.
+none
+
+Oral erythema migrans
+This refers to the rash often (though not always) seen in the early stage of Lyme disease, in the oral region.
+none
+
+Verruciform xanthoma of oral mucosa
+This is an uncommon benign lesion that has a verruciform (wart-like) appearance, but it may appear polypoid, papillomatous, or sessile, on the oral mucosa.
+none
+
+Pyogenic granuloma of oral mucosa
+This is a primarily oral disease which appears as an overgrowth of tissue due to irritation, physical trauma or hormonal factors.
+none
+
+Traumatic ulcerative granuloma with stromal eosinophilia [TUGSE]
+none
+none
+
+Stomatitis of other specified or unspecified nature
+This is an inflammation of the mucous lining of any of the structures in the mouth, which may involve the cheeks, gums, tongue, lips, throat, and roof or floor of the mouth, of other specified or unspecified nature.
+none
+
+Oral submucous fibrosis
+A pre-cancerous condition characterized by juxta-epithelial inflammatory reaction and progressive fibrosis of the submucosal tissues.
+http://en.wikipedia.org/wiki/Oral_submucous_fibrosis
+
+acute bacterial inflammation of external ear
+none
+none
+
+tank ear
+none
+none
+
+acute diffuse otitis externa
+none
+none
+
+acute infective otitis externa
+none
+none
+
+acute swimmer's ear
+none
+none
+
+haemorrhagic otitis externa
+none
+none
+
+beach ear
+none
+none
+
+swimmer's ear
+none
+none
+
+acute bacterial otitis externa
+none
+none
+
+infection of external ear
+none
+none
+
+diffuse otitis externa
+none
+none
+
+Hordeolum internum lower eyelid
+none
+none
+
+Hordeolum internum upper eyelid
+none
+none
+
+Hordeolum externum upper eyelid
+none
+none
+
+Hordeolum externum lower eyelid
+none
+none
+
+Autoimmune xerostomia
+Xerostomia associated with sicca syndromes (Sjögren and Mikukicz) or associated with other non-organ-specific systemic autoimmune disorders.
+none
+
+Drug-induced xerostomia
+Xerostomia due to drug-induced suppression of saliva production (e.g. from anticholinergic drugs).
+none
+
+Radiotherapy-induced xerostomia
+none
+none
+
+Xerostomia due to other specified salivary gland disorder
+Xerostomia attributable to abnormalities of salivary glands other than from automimmune disease or radiation damage.
+none
+
+Angular cheilitis exacerbated by mechanical factors
+Angular cheilitis resulting from factors, principally loss of dentition, which reduce the vertical height between the underside of the mandible and the maxilla.  Maceration of the resultant oblique folds of redundant skin at the corners of the mouth results from constant contamination with saliva.
+none
+
+Angular cheilitis exacerbated by nutritional deficiency
+Angular cheilitis which results from nutritional deficiency, particularly of riboflavin, folate or iron.
+none
+
+Angular cheilitis due to bacterial infection
+Angular cheilitis associated with bacterial infection, most commonly Staphylococcus aureus but also beta-haemolytic streptococci.  Bacterial infection is at least as important a cause of angular cheilitis as candidosis, though co-infection is not uncommon.
+none
+
+Idiopathic exfoliative cheilitis
+This is an inflammatory condition of the lips, in which they may be covered with crusts.
+none
+
+Oral mucosal involvement by immunobullous disorder classified elsewhere
+none
+none
+
+Oral aphthae...
+This is an ulcer that occurs on the mucous membrane of the oral cavity.
+none
+
+Recurrent aphthous stomatitis
+This is a recurrent type of mouth ulcer that presents as a painful open sore inside the mouth or upper throat characterized by a break in the mucous membrane.
+http://en.wikipedia.org/wiki/Recurrent_aphthous_stomatitis
+
+Chemical burn of oral mucosa
+This is a chemical burn of the mucous membrane epithelium (and lamina propria) of the mouth.
+none
+
+Radiation burn of oral mucosa
+This is damage to the oral mucosa or other biological tissue caused by exposure to radiation.
+none
+
+Thermal oral ulceration
+This refers to a thermal ulcer that occurs on the mucous membrane of the oral cavity.
+none
+
+Mechanical oral ulceration
+This is a mechanical ulcer that occurs on the mucous membrane of the oral cavity.
+none
+
+Oral mucositis due to radiotherapy
+This is the painful inflammation and ulceration of the mucous membranes lining the digestive tract, usually as an adverse effect of chemotherapy and radiotherapy treatment for cancer, due to the use of ionizing radiation, generally as part of cancer treatment to control or kill malignant cells.
+none
+
+Oral mucositis due to other specified cause
+This is the painful inflammation and ulceration of the mucous membranes lining the digestive tract, usually as an adverse effect of chemotherapy and radiotherapy treatment for cancer, due to other specified cause.
+none
+
+Oral mucositis due to graft-versus-host disease
+This is the painful inflammation and ulceration of the mucous membranes lining the digestive tract, usually as an adverse effect of chemotherapy and radiotherapy treatment for cancer, due to a common complication following an allogeneic tissue transplant.
+none
+
+Oral mucositis due to cancer chemotherapy
+This is the painful inflammation and ulceration of the mucous membranes lining the digestive tract, usually as an adverse effect of chemotherapy and radiotherapy treatment for cancer.
+none
+
+Homogeneous leukoplakia
+Homogeneous – refers to homogeneous uniform colour AND texture - uniform white colour - uniform flat, thin appearance The surface may become leathery – smooth, wrinkled, corrugated or with shallow cracks. This form is usually asymptomatic.
+none
+
+Non-homogeneous leukoplakia
+Non-homogeneous – refers to irregularity of either the colour OR the texture - predominantly white or white-red (erythroleukoplakia) - irregular texture which can be flat, nodular, exophytic, warty Variants of the non-homogeneous form have been described including nodular, verrucous (including proliferative verrucous) and speckled. This form may be associated with mild discomfort or localized pain.
+none
+
+Oral fibroepithelial polyp
+This is a small benign tumor that forms primarily in areas where the skin forms creases, the the oral region.
+none
+
+Denture hyperplasia
+This means increase in number of cells/proliferation of cells, which may result in the gross enlargement of a denture.
+none
+
+Papillary hyperplasia of oral mucosa
+This is an oral pathologic condition that appears in the mouth as an overgrowth of tissue usually beneath a denture and is associated with poor denture hygiene, denture overuse, and ill-fitting dentures.
+none
+
+Minor recurrent aphthous stomatitis
+This is a minor recurrent type of mouth ulcer that presents as a painful open sore inside the mouth or upper throat characterized by a break in the mucous membrane.
+none
+
+Major recurrent aphthous stomatitis
+This is a major recurrent type of mouth ulcer that presents as a painful open sore inside the mouth or upper throat characterized by a break in the mucous membrane.
+none
+
+Herpetiform recurrent aphthous stomatitis
+This is a recurrent type of mouth ulcer that presents as a painful open sore inside the mouth or upper throat characterized by a break in the mucous membrane.
+none
+
+Cold burn of oral mucosa
+This is a cold burn of the mucous membrane epithelium (and lamina propria) of the mouth.
+none
+
+Heat burn of oral mucosa
+This is a heat burn of the mucous membrane epithelium (and lamina propria) of the mouth.
+none
+
+Verrucous leukoplakia
+This refers to a slowly progressive condition characterized by thickened and enlarged sites of oral mucous membrane.
+none
+
+Speckled leukoplakia
+This is a condition where patches of keratosis appear as adherent white patches on the mucous membranes of the oral cavity, including the tongue, but also other areas of the gastro-intestinal tract, urinary tract and the genitals.
+none
+
+Nodular leukoplakia
+This is a small aggregation of cells where patches of keratosis appear as adherent white patches on the mucous membranes of the oral cavity, including the tongue, but also other areas of the gastro-intestinal tract, urinary tract and the genitals.
+none
+

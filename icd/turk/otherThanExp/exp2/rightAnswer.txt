@@ -1,0 +1,31 @@
+disease:Dermatomyositis
+{Synovium=1, Connective tissue=1, Muscle tissue=1, Epithelium=1, Nervous Tissue=0}none:0
+
+disease:Dermatomyositis
+{Mesentery=0, Mesothelium=0, Developmental tissue=0, Fascia=1, Lymphocytic tissue=1}none:0
+
+disease:Dermatomyositis
+{Bones=0, Blood Vessels=0, Muscles=1, Body Tissues=1, Nerve=0, Body Regions=1}none:0
+
+disease:Sclerodactyly
+{Inguinal canal=0, Thigh=0, foot=1, ankle=0, knee=0}none:0
+
+disease:Sclerodactyly
+{hand=1, forearm=0, elbow=0, shoulder=0, arm=0}none:0
+
+disease:Sclerodactyly
+{Lower Extremity=1, Trunk=0, Upper Extremity=1, Head and Neck=0, Pelvis and Perineum=0}none:1
+
+disease:Sclerodactyly
+{Nervous system=0, Musculoskeletal system=0, Genitourinary System=0, Respiratory system=0}none:1
+
+disease:Lichen planopilaris
+{Bones=0, Blood Vessels=0, Muscles=0, Nerve=0, Body Regions=1}none:0
+
+disease:Lichen planopilaris
+{Nervous system=0, Musculoskeletal system=0, Genitourinary System=0, Respiratory system=0}none:1
+
+disease:Lichen planopilaris
+{hand=1, forearm=1, elbow=1, shoulder=1, arm=1}none:0
+
+
