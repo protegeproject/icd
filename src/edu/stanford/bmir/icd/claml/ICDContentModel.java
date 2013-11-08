@@ -125,6 +125,11 @@ public class ICDContentModel {
     private RDFProperty linearizationSequenceNoProperty;
     private RDFProperty linearizationSortingLabelProperty;
 
+    private RDFProperty suppressOtherSpecifiedResidualsProperty;
+    private RDFProperty suppressUnspecifiedResidualsProperty;
+    private RDFProperty otherSpecifiedResidualTitleProperty;
+    private RDFProperty unspecifiedResidualTitleProperty;
+    
     private RDFProperty biologicalSexProperty;
 
     private RDFProperty assignedTagProperty;
@@ -715,6 +720,38 @@ public class ICDContentModel {
             linearizationSortingLabelProperty = owlModel.getRDFProperty(ICDContentModelConstants.LINEARIZATION_SORTING_LABEL_PROP);
         }
         return linearizationSortingLabelProperty;
+    }
+    
+    public RDFProperty getSuppressOtherSpecifiedResidualsProperty() {
+    	if (suppressOtherSpecifiedResidualsProperty == null) {
+    		suppressOtherSpecifiedResidualsProperty = owlModel.getRDFProperty(ICDContentModelConstants.SUPPRESS_OTHER_SPECIFIED_RESIDUALS);
+    		
+    	}
+    	return suppressOtherSpecifiedResidualsProperty;
+    }
+    
+    public RDFProperty getSuppressUnspecifiedResidualsProperty() {
+    	if (suppressUnspecifiedResidualsProperty == null) {
+    		suppressUnspecifiedResidualsProperty = owlModel.getRDFProperty(ICDContentModelConstants.SUPPRESS_UNSPECIFIED_RESIDUALS);
+    		
+    	}
+    	return suppressUnspecifiedResidualsProperty;
+    }
+    
+    public RDFProperty getOtherSpecifiedResidualTitleProperty() {
+    	if (otherSpecifiedResidualTitleProperty == null) {
+    		otherSpecifiedResidualTitleProperty = owlModel.getRDFProperty(ICDContentModelConstants.OTHER_SPECIFIED_RESIDUAL_TITLE);
+    		
+    	}
+    	return otherSpecifiedResidualTitleProperty;
+    }
+    
+    public RDFProperty getUnspecifiedResidualTitleProperty() {
+    	if (unspecifiedResidualTitleProperty == null) {
+    		unspecifiedResidualTitleProperty = owlModel.getRDFProperty(ICDContentModelConstants.UNSPECIFIED_RESIDUAL_TITLE);
+    		
+    	}
+    	return unspecifiedResidualTitleProperty;
     }
 
     public RDFProperty getBiologicalSexProperty() {

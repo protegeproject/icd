@@ -1,0 +1,1 @@
+Added support for generation and suppression of the generation of residual classes.

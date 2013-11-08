@@ -1,0 +1,87 @@
+; Fri Nov 01 17:11:52 PDT 2013
+; 
+;+ (version "3.5")
+;+ (build "Build 663")
+
+
+(defclass %3ACLIPS_TOP_LEVEL_SLOT_CLASS "Fake class to save top-level slot information"
+	(is-a USER)
+	(role abstract)
+	(single-slot type_of_call
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot object_two
+;+		(type ANY)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot object_one
+;+		(type ANY)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot accept_instance
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot accept_slot
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot accept_facet
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot refers_frame
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot class_one
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot class_two
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass AcceptChanges
+	(is-a USER)
+	(role concrete)
+	(single-slot accept_instance
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot class_one
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot accept_facet
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot accept_slot
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot class_two
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot type_of_call
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot object_two
+;+		(type ANY)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot object_one
+;+		(type ANY)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot refers_frame
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))

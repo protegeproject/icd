@@ -1,0 +1,1 @@
+Changed label of "Specialty Adaptation ..." to "Specialty Linearization ..." and added to specialty linearizations, for Environmental Health and Rare Diseases.
