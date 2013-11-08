@@ -116,6 +116,23 @@ public class ICD_API_Example {
        }
     }
 
+    public static void getResidualGenerationInfo() {
+    	RDFSNamedClass category = icdContentModel.getICDCategory("http://who.int/icd#I");
+        System.out.println("\n" + category.getBrowserText());
+        
+        Boolean suppOtherSpecResGeneration = (Boolean) category.getPropertyValue(icdContentModel.getSuppressOtherSpecifiedResidualsProperty());
+        System.out.println("suppress 'Other Specified' residual generation: " + (suppOtherSpecResGeneration == null ? "(not set)" : suppOtherSpecResGeneration));
+        
+        Boolean suppUnspecResGeneration = (Boolean) category.getPropertyValue(icdContentModel.getSuppressUnspecifiedResidualsProperty());
+        System.out.println("suppress 'Other Specified' residual generation: " + (suppUnspecResGeneration == null ? "(not set)" : suppUnspecResGeneration));
+        
+        RDFResource otherSpecResTitle = (RDFResource) category.getPropertyValue(icdContentModel.getOtherSpecifiedResidualTitleProperty());
+        System.out.println("'Other Specified' residual title: " + (otherSpecResTitle == null ? "(not set)" : otherSpecResTitle.getPropertyValue(icdContentModel.getLabelProperty())));
+        
+        RDFResource unspecResTitle = (RDFResource) category.getPropertyValue(icdContentModel.getUnspecifiedResidualTitleProperty());
+        System.out.println("'Unspecified' residual title: " + (unspecResTitle == null ? "(not set)" : unspecResTitle.getPropertyValue(icdContentModel.getLabelProperty())));
+    }
+
     public static void getDisplayStatusAndTagResponsability() {
         RDFSNamedClass category = icdContentModel.getICDCategory("http://who.int/icd#I");
         System.out.println("\n Category: " + category.getBrowserText());

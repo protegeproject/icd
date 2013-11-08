@@ -1,4 +1,4 @@
-; Mon Aug 12 17:48:10 PDT 2013
+; Fri Nov 01 18:04:23 PDT 2013
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -30,18 +30,18 @@
 
 ([annotation_icd_content_model_ProjectKB_Class15] of  String
 
-	(name "User")
-	(string_value "name"))
+	(name "Status")
+	(string_value "description"))
 
 ([annotation_icd_content_model_ProjectKB_Class16] of  String
 
-	(name "Status")
+	(name "ChangeStatus")
 	(string_value "description"))
 
 ([annotation_icd_content_model_ProjectKB_Class17] of  String
 
-	(name "ChangeStatus")
-	(string_value "description"))
+	(name "User")
+	(string_value "name"))
 
 ([annotation_icd_content_model_ProjectKB_Class18] of  String
 
@@ -6883,9 +6883,6 @@
 	(is_hidden FALSE)
 	(widget_class_name "edu.stanford.smi.protege.widget.InstancesTab"))
 
-([KB_297344_Class4] of  Map
-)
-
 ([KB_690954_Instance_0] of  String
 
 	(name "renaming_namespaces"))
@@ -6894,6 +6891,9 @@
 
 	(name "namespaces")
 	(string_value "rdfs http://www.w3.org/2000/01/rdf-schema# rdf http://www.w3.org/1999/02/22-rdf-syntax-ns# "))
+
+([KB_707646_Class4] of  Map
+)
 
 ([KB_806078_Instance_0] of  Property_List
 
