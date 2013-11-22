@@ -12,6 +12,26 @@ import edu.stanford.smi.protegex.owl.model.RDFResource;
 import edu.stanford.smi.protegex.owl.model.RDFSNamedClass;
 
 
+/**
+ * This class provides methods to retrieve the sorted children of a class.
+ * The ordering information is kept in an index per parent,
+ * as instances of the class ChildOrder, which has two properties:
+ * orderedChild (which points to the child) and orderedChildIndex
+ * that keeps the index of the ordered child for this particular parent.
+ *
+ * These instances contain redundant information (the children of a class)
+ * and need to be updated for operations that affect the children and/or parent
+ * (e.g. create class, move in hierarchy, add new parent, reorder siblings in the UI, etc.)
+ * These index information can potentially become corrupted.
+ *
+ * The requirement is that a read operation, e.g, {@link #getOrderedChildren(RDFSNamedClass)}
+ * will not modify the ontology, hence the index will also not be changed. This means that in case of an index corruption
+ * we need to work around it and only fix the index when a set or reordering operation happens.
+ *
+ *
+ * @author ttania
+ *
+ */
 public class SiblingReordering {
 
     private static int CHILD_INDEX_INCREMENT = 1000000;
@@ -45,7 +65,7 @@ public class SiblingReordering {
 
         List<RDFSNamedClass> unorderedChildren = cm.getRDFSNamedClassList(parent.getSubclasses(false));
 
-        //all this pain is because of the no side effect requirement...
+        //all this pain is because of the no side effect requirement for reads...
         List<RDFSNamedClass> unindexedChildren = new ArrayList<RDFSNamedClass>();
 
         for (RDFResource childIndex : childrenIndex) {
@@ -98,6 +118,8 @@ public class SiblingReordering {
         //TODO: reorder the soft map; if index is valid, reorder in place, only change the value for the int index for the moved
         // class (this will happen in most cases); if index is invalid, reorder the soft list, and then wipe out existing index and
         // write out a completely new index
+
+        //orderedChildrenMap.
 
 
         return false;
