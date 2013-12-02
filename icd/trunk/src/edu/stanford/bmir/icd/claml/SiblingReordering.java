@@ -8,6 +8,7 @@ import java.util.TreeMap;
 
 import edu.stanford.smi.protege.model.Frame;
 import edu.stanford.smi.protege.ui.FrameComparator;
+import edu.stanford.smi.protege.util.Log;
 import edu.stanford.smi.protegex.owl.model.RDFResource;
 import edu.stanford.smi.protegex.owl.model.RDFSNamedClass;
 
@@ -46,11 +47,30 @@ public class SiblingReordering {
 
     public List<RDFSNamedClass> getOrderedChildren(RDFSNamedClass parent) {
         SortedMap<Integer, RDFSNamedClass> orderedChildrenMap = new TreeMap<Integer, RDFSNamedClass>();
-        computeOrderedChildrenSortedMap(parent, orderedChildrenMap);
         return (List<RDFSNamedClass>) orderedChildrenMap.values();
     }
 
 
+    /**
+     * This method has to assume that the index is somehow corrupted,
+     * but it is not allowed to fix the index (because reads should not trigger
+     * writes). So, it has to work around this issue, and the method gets
+     * complicated.
+     *
+     * <p>
+     * Types of index corruption:
+     * <ul>
+     *  <li>null -> child</li>
+     *  <li>index -> null</li>
+     *  <li>index -> child that is not a child</li>
+     *  <li>missing index for an existing child</li>
+     *  </ul>
+     *  </p>
+     *
+     * @param parent
+     * @param orderedChildrenMap - will be filled by this call
+     * @return
+     */
     @SuppressWarnings("unchecked")
     private boolean computeOrderedChildrenSortedMap(RDFSNamedClass parent, SortedMap<Integer, RDFSNamedClass> orderedChildrenMap) {
 
@@ -60,17 +80,21 @@ public class SiblingReordering {
 
         if (childrenIndex == null) {
             orderedChildrenMap = createOrderedChildrenMap(parent);
+            // no need to log this, it is the initial case
             return false;
         }
 
+        //FIXME:just check if index is valid, if not, regenerated everything
+
+        // all the children which should be indexed
         List<RDFSNamedClass> unorderedChildren = cm.getRDFSNamedClassList(parent.getSubclasses(false));
 
-        //all this pain is because of the no side effect requirement for reads...
+        // children that have a corrupted index entry, e.g., index = null
         List<RDFSNamedClass> unindexedChildren = new ArrayList<RDFSNamedClass>();
 
-        for (RDFResource childIndex : childrenIndex) {
-            Integer index = (Integer) childIndex.getPropertyValue(cm.getOrderedChildIndexProperty());
-            RDFSNamedClass child = (RDFSNamedClass) childIndex.getPropertyValue(cm.getOrderedChildProperty());
+        for (RDFResource childIndexInstance : childrenIndex) {
+            Integer index = (Integer) childIndexInstance.getPropertyValue(cm.getOrderedChildIndexProperty());
+            RDFSNamedClass child = (RDFSNamedClass) childIndexInstance.getPropertyValue(cm.getOrderedChildProperty());
 
             //corrupted index, ignore this index instance for now, it will be fixed next time a reindex will occur (e.g., ordering sibling, move, create)
             if (index == null) {
@@ -104,6 +128,10 @@ public class SiblingReordering {
         for (RDFSNamedClass child : unorderedChildren) {
             orderedChildrenMap.put(lastIndex, child);
             lastIndex = lastIndex + CHILD_INDEX_INCREMENT;
+        }
+
+        if (isValidIndex == false) {
+            Log.getLogger().warning("Invalid sibling index for class: " + parent.getName() + " Browser text: " + parent.getBrowserText());
         }
 
         return isValidIndex;
