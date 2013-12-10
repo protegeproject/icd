@@ -1,5 +1,6 @@
 package edu.stanford.bmir.icd.claml;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
@@ -48,7 +49,7 @@ public class SiblingReordering {
     public List<RDFSNamedClass> getOrderedChildren(RDFSNamedClass parent) {
         SortedMap<Integer, RDFSNamedClass> orderedChildrenMap = new TreeMap<Integer, RDFSNamedClass>();
         computeOrderedChildrenSortedMap(parent, orderedChildrenMap);
-        return (List<RDFSNamedClass>) orderedChildrenMap.values();
+        return new ArrayList<RDFSNamedClass>(orderedChildrenMap.values());
     }
 
 
@@ -79,16 +80,16 @@ public class SiblingReordering {
      * @return
      */
     @SuppressWarnings("unchecked")
-    private boolean computeOrderedChildrenSortedMap(RDFSNamedClass parent, SortedMap<Integer, RDFSNamedClass> orderedChildrenMap) {
+    private IndexState computeOrderedChildrenSortedMap(RDFSNamedClass parent, SortedMap<Integer, RDFSNamedClass> orderedChildrenMap) {
 
         boolean isValidIndex = true;
 
         List<RDFResource> childrenIndex = ((List<RDFResource>) parent.getPropertyValues(cm.getChildrenOrderProperty()));
 
-        if (childrenIndex == null) {
-            orderedChildrenMap = createOrderedChildrenMap(parent);
+        if (childrenIndex == null || childrenIndex.size() == 0) {
+            createOrderedChildrenMap(parent, orderedChildrenMap);
             // no need to log this, it is the initial case
-            return false;
+            return IndexState.NEW;
         }
 
         isValidIndex = fillOrderedMap(childrenIndex, orderedChildrenMap);
@@ -113,7 +114,7 @@ public class SiblingReordering {
             Log.getLogger().warning("Invalid sibling index for class: " + parent.getName() + " Browser text: " + parent.getBrowserText());
         }
 
-        return isValidIndex;
+        return isValidIndex == true ? IndexState.VALID : IndexState.INVALID;
     }
 
 
@@ -140,13 +141,13 @@ public class SiblingReordering {
 
         int lastIndex = orderedChildrenMap.lastKey();
         //round it to the next million
-        lastIndex = ((lastIndex - 1) / CHILD_INDEX_INCREMENT + 1) * CHILD_INDEX_INCREMENT; //check for out of range
+        lastIndex = ((lastIndex - 1) / CHILD_INDEX_INCREMENT + 1) * CHILD_INDEX_INCREMENT; //FIXME: check for out of range
 
         //add the unordered children to the index
         for (RDFSNamedClass child : childrenToAdd) {
             orderedChildrenMap.put(lastIndex, child);
             lastIndex = lastIndex + CHILD_INDEX_INCREMENT;
-            //TODO: check for negative numbers!!!!
+            //FIXME: check for negative numbers!!!!
         }
     }
 
@@ -154,54 +155,46 @@ public class SiblingReordering {
             RDFSNamedClass parent, String user) {
 
         SortedMap<Integer, RDFSNamedClass> orderedChildrenMap = new TreeMap<Integer, RDFSNamedClass>();
-        boolean isValidIndex = computeOrderedChildrenSortedMap(parent, orderedChildrenMap);
+        IndexState indexState = computeOrderedChildrenSortedMap(parent, orderedChildrenMap);
 
-        //TODO: reorder the soft map; if index is valid, reorder in place, only change the value for the int index for the moved
-        // class (this will happen in most cases); if index is invalid, reorder the soft list, and then wipe out existing index and
-        // write out a completely new index
+        if (indexState == IndexState.VALID) { //write only one; hopefully most cases
 
-        //orderedChildrenMap.
+        } else { //invalid or new - write out the entire index
 
+        }
 
-        return false;
+        return indexState == IndexState.VALID ? true : false; //FIXME: not sure what to return
     }
 
-    private SortedMap<Integer, RDFSNamedClass> createOrderedChildrenMap(RDFSNamedClass parent) {
+
+    private void reoderSiblingValidIndex(RDFSNamedClass movedCls, RDFSNamedClass targetCls, boolean isBelow,
+            RDFSNamedClass parent, String user) {
+
+    }
+
+    private void reoderSiblingInvalidIndex(RDFSNamedClass movedCls, RDFSNamedClass targetCls, boolean isBelow,
+            RDFSNamedClass parent, String user) {
+
+    }
+
+
+
+    private void createOrderedChildrenMap(RDFSNamedClass parent, SortedMap<Integer, RDFSNamedClass> orderedChildrenMap) {
         List<RDFSNamedClass> unorderedChildren = cm.getRDFSNamedClassList(parent.getSubclasses(false));
         Collections.sort(unorderedChildren, new FrameComparator<Frame>());
 
-        SortedMap<Integer, RDFSNamedClass> orderedChildrenMap = new TreeMap<Integer, RDFSNamedClass>();
         int index = CHILD_INDEX_INCREMENT;
         for (RDFSNamedClass child : unorderedChildren) {
             orderedChildrenMap.put(index, child);
             index = index + CHILD_INDEX_INCREMENT;
         }
-
-        return orderedChildrenMap;
     }
 
 
-    private boolean isChildrenIndexValid(RDFSNamedClass parent) {
-        List<RDFSNamedClass> unorderedChildren = cm.getRDFSNamedClassList(parent.getSubclasses(false));
-        List<RDFResource> childrenIndex = (List<RDFResource>) parent.getPropertyValues(cm.getChildrenOrderProperty());
-        if (childrenIndex == null) {
-            return false;
-        }
+}
 
-        for (RDFResource childIndex : childrenIndex) {
-            Integer index = (Integer) childIndex.getPropertyValue(cm.getOrderedChildIndexProperty());
-            //corrupted index
-            if (index == null) {
-                return false;
-            }
-            RDFSNamedClass child = (RDFSNamedClass) childIndex.getPropertyValue(cm.getOrderedChildProperty());
-            if (unorderedChildren.contains(child) == false) {
-                return false;
-            }
-        }
-
-        return true;
-    }
-
-
+enum IndexState {
+    VALID, // index is in a valid state
+    INVALID,  // index is invalid
+    NEW; // index does not exist in the ontology
 }
