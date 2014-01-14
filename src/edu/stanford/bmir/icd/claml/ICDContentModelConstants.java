@@ -185,6 +185,10 @@ public class ICDContentModelConstants {
 			PC_AXIS_HAS_SEVERITY, PC_AXIS_HISTOPATHOLOGY, PC_AXIS_LEVEL_OF_CONSCIOUSNESS,
 			PC_AXIS_TEMPORALITY_COURSE, PC_AXIS_TEMPORALITY_PATTERN_AND_ONSET, PC_AXIS_TEMPORALITY_TIME_IN_LIFE);
 
+	public final static String PC_SCALE_SEVERITY = NS + "hasSeverityScale";
+	public final static String PC_SCALE_COURSE = NS + "hasCourseScale";
+	public final static String PC_SCALE_PATTERN_AND_ONSET = NS + "hasPatternActivityClinicalStatusScale";
+
     /*
      * Instances
      */
