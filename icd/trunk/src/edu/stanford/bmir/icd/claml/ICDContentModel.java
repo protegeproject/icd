@@ -129,7 +129,7 @@ public class ICDContentModel {
     private RDFProperty suppressUnspecifiedResidualsProperty;
     private RDFProperty otherSpecifiedResidualTitleProperty;
     private RDFProperty unspecifiedResidualTitleProperty;
-    
+
     private RDFProperty biologicalSexProperty;
 
     private RDFProperty assignedTagProperty;
@@ -721,35 +721,35 @@ public class ICDContentModel {
         }
         return linearizationSortingLabelProperty;
     }
-    
+
     public RDFProperty getSuppressOtherSpecifiedResidualsProperty() {
     	if (suppressOtherSpecifiedResidualsProperty == null) {
     		suppressOtherSpecifiedResidualsProperty = owlModel.getRDFProperty(ICDContentModelConstants.SUPPRESS_OTHER_SPECIFIED_RESIDUALS);
-    		
+
     	}
     	return suppressOtherSpecifiedResidualsProperty;
     }
-    
+
     public RDFProperty getSuppressUnspecifiedResidualsProperty() {
     	if (suppressUnspecifiedResidualsProperty == null) {
     		suppressUnspecifiedResidualsProperty = owlModel.getRDFProperty(ICDContentModelConstants.SUPPRESS_UNSPECIFIED_RESIDUALS);
-    		
+
     	}
     	return suppressUnspecifiedResidualsProperty;
     }
-    
+
     public RDFProperty getOtherSpecifiedResidualTitleProperty() {
     	if (otherSpecifiedResidualTitleProperty == null) {
     		otherSpecifiedResidualTitleProperty = owlModel.getRDFProperty(ICDContentModelConstants.OTHER_SPECIFIED_RESIDUAL_TITLE);
-    		
+
     	}
     	return otherSpecifiedResidualTitleProperty;
     }
-    
+
     public RDFProperty getUnspecifiedResidualTitleProperty() {
     	if (unspecifiedResidualTitleProperty == null) {
     		unspecifiedResidualTitleProperty = owlModel.getRDFProperty(ICDContentModelConstants.UNSPECIFIED_RESIDUAL_TITLE);
-    		
+
     	}
     	return unspecifiedResidualTitleProperty;
     }
@@ -1245,6 +1245,14 @@ public class ICDContentModel {
     }
 
 
+    public RDFResource createOrderedChildIndex(RDFSNamedClass child, int index) {
+        RDFResource indexInst = getChildOrderClass().createRDFIndividual(IDGenerator.getNextUniqueId());
+        indexInst.setPropertyValue(getOrderedChildProperty(), child);
+        indexInst.setPropertyValue(getOrderedChildIndexProperty(), index);
+        return indexInst;
+    }
+
+
     /*
      * Getters
      */
@@ -1490,6 +1498,18 @@ public class ICDContentModel {
     public boolean reorderSibling(RDFSNamedClass movedCls, RDFSNamedClass targetCls, boolean isBelow,
             RDFSNamedClass parent, String user) {
         return new SiblingReordering(this).reorderSibling(movedCls, targetCls, isBelow, parent, user);
+    }
+
+    public boolean checkIndexAndRecreate(RDFSNamedClass parent, boolean recreateIndex) {
+        return new SiblingReordering(this).checkIndexAndRecreate(parent, recreateIndex);
+    }
+
+    public boolean addChildToIndex(RDFSNamedClass parent, RDFSNamedClass cls, boolean isSiblingIndexValid) {
+        return new SiblingReordering(this).addChildToParentIndex(parent, cls, isSiblingIndexValid);
+    }
+
+    public boolean removeChildFromIndex(RDFSNamedClass parent, RDFSNamedClass cls, boolean isSiblingIndexValid) {
+        return new SiblingReordering(this).removeChildFromIndex(parent, cls, isSiblingIndexValid);
     }
 
 }

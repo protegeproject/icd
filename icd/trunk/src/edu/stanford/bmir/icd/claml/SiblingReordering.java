@@ -3,13 +3,17 @@ package edu.stanford.bmir.icd.claml;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 import java.util.SortedMap;
 import java.util.TreeMap;
+import java.util.logging.Level;
 
 import edu.stanford.smi.protege.model.Frame;
 import edu.stanford.smi.protege.ui.FrameComparator;
 import edu.stanford.smi.protege.util.Log;
+import edu.stanford.smi.protegex.owl.model.OWLModel;
+import edu.stanford.smi.protegex.owl.model.RDFProperty;
 import edu.stanford.smi.protegex.owl.model.RDFResource;
 import edu.stanford.smi.protegex.owl.model.RDFSNamedClass;
 
@@ -24,7 +28,7 @@ import edu.stanford.smi.protegex.owl.model.RDFSNamedClass;
  * These instances contain redundant information (the children of a class)
  * and need to be updated for operations that affect the children and/or parent
  * (e.g. create class, move in hierarchy, add new parent, reorder siblings in the UI, etc.)
- * These index information can potentially become corrupted.
+ * This index information can potentially become corrupted.
  *
  * The requirement is that a read operation, e.g, {@link #getOrderedChildren(RDFSNamedClass)}
  * will not modify the ontology, hence the index will also not be changed. This means that in case of an index corruption
@@ -50,6 +54,58 @@ public class SiblingReordering {
         SortedMap<Integer, RDFSNamedClass> orderedChildrenMap = new TreeMap<Integer, RDFSNamedClass>();
         computeOrderedChildrenSortedMap(parent, orderedChildrenMap);
         return new ArrayList<RDFSNamedClass>(orderedChildrenMap.values());
+    }
+
+
+    public boolean checkIndexAndRecreate(RDFSNamedClass parent, boolean recreateIndex) {
+        SortedMap<Integer, RDFSNamedClass> orderedChildrenMap = new TreeMap<Integer, RDFSNamedClass>();
+        IndexState state = computeOrderedChildrenSortedMap(parent, orderedChildrenMap);
+
+        if (state == IndexState.VALID) {
+            return true;
+        }
+
+        if (recreateIndex == true) {
+            recreateIndex(parent, orderedChildrenMap);
+        }
+        return false;
+    }
+
+
+
+    /**
+     * Writes out completely the index for parent using the sorted map.
+     * Removes the entire old index.
+     * This method write to the KB.
+     *
+     * @param parent
+     * @param orderedChildrenMap
+     */
+    private void recreateIndex(RDFSNamedClass parent, SortedMap<Integer, RDFSNamedClass> orderedChildrenMap) {
+
+        Log.getLogger().warning("Writing to the KB a new index for parent: " + parent);
+
+        OWLModel owlModel = parent.getOWLModel();
+        boolean eventsEnabled = owlModel.setGenerateEventsEnabled(false);
+
+        try {
+            parent.setPropertyValue(cm.getChildrenOrderProperty(), null);
+
+            RDFProperty childrenOrderProp = cm.getChildrenOrderProperty();
+
+            int index = CHILD_INDEX_INCREMENT;
+            for (RDFSNamedClass child : orderedChildrenMap.values()) {
+                RDFResource indexInst = cm.createOrderedChildIndex(child, index);
+                parent.addPropertyValue(childrenOrderProp, indexInst);
+                index = index + CHILD_INDEX_INCREMENT;
+            }
+
+        } catch (Exception e) {
+            Log.getLogger().log(Level.WARNING,"There was a problem at writing child order index for parent: " + parent,  e);
+            throw new RuntimeException("Problem at writing child order index for parent: " + parent, e);
+        } finally {
+            owlModel.setGenerateEventsEnabled(eventsEnabled);
+        }
     }
 
 
@@ -99,7 +155,7 @@ public class SiblingReordering {
 
         // the values are backed by the map, any operation on this will affect the map
         Collection<RDFSNamedClass> backedChildrenInIndex = orderedChildrenMap.values();
-        isValidIndex = backedChildrenInIndex.retainAll(realChildren) && isValidIndex; //keep in the index only the children that are real
+        isValidIndex = !backedChildrenInIndex.retainAll(realChildren) && isValidIndex; //keep in the index only the children that are real
 
         //likely never true, if we assume that index corruption rarely happens
         if (backedChildrenInIndex.size() != realChildren.size()) {
@@ -116,7 +172,6 @@ public class SiblingReordering {
 
         return isValidIndex == true ? IndexState.VALID : IndexState.INVALID;
     }
-
 
     private boolean fillOrderedMap(List<RDFResource> childrenIndex, SortedMap<Integer, RDFSNamedClass> orderedChildrenMap) {
         boolean isValidIndex = true;
@@ -140,44 +195,136 @@ public class SiblingReordering {
         Collections.sort(childrenToAdd, new FrameComparator<Frame>());
 
         int lastIndex = orderedChildrenMap.lastKey();
+
+        //check for out of range for adding the new children
+        if (lastIndex + childrenToAdd.size() * CHILD_INDEX_INCREMENT < 0) {
+            //redo all the virtual index for the entire map
+
+            ArrayList<RDFSNamedClass> childrenInIndex = new ArrayList<RDFSNamedClass>(orderedChildrenMap.values());
+            childrenInIndex.addAll(childrenToAdd);
+
+            orderedChildrenMap.clear();
+
+            int index = CHILD_INDEX_INCREMENT;
+            for (RDFSNamedClass child : childrenInIndex) {
+                orderedChildrenMap.put(index, child);
+            }
+
+            return;
+        }
+
+        // if not out of range:
         //round it to the next million
-        lastIndex = ((lastIndex - 1) / CHILD_INDEX_INCREMENT + 1) * CHILD_INDEX_INCREMENT; //FIXME: check for out of range
+        lastIndex = ((lastIndex - 1) / CHILD_INDEX_INCREMENT + 1) * CHILD_INDEX_INCREMENT;
 
         //add the unordered children to the index
         for (RDFSNamedClass child : childrenToAdd) {
-            orderedChildrenMap.put(lastIndex, child);
             lastIndex = lastIndex + CHILD_INDEX_INCREMENT;
-            //FIXME: check for negative numbers!!!!
+            orderedChildrenMap.put(lastIndex, child);
         }
     }
 
+    // callers of this method should embed it in a transaction
     public boolean reorderSibling(RDFSNamedClass movedCls, RDFSNamedClass targetCls, boolean isBelow,
             RDFSNamedClass parent, String user) {
 
         SortedMap<Integer, RDFSNamedClass> orderedChildrenMap = new TreeMap<Integer, RDFSNamedClass>();
         IndexState indexState = computeOrderedChildrenSortedMap(parent, orderedChildrenMap);
 
-        if (indexState == IndexState.VALID) { //write only one; hopefully most cases
+        int positionToInsert = getPositionToInsert(orderedChildrenMap, movedCls, targetCls, isBelow, parent);
 
+        if (indexState == IndexState.VALID && positionToInsert > -1) { //write only one; hopefully most cases
+            reorderSiblingValidIndex(movedCls, positionToInsert, parent);
         } else { //invalid or new - write out the entire index
-
+           reorderSiblingInvalidIndex(orderedChildrenMap, movedCls, targetCls, isBelow, parent);
         }
 
-        return indexState == IndexState.VALID ? true : false; //FIXME: not sure what to return
+        return true; //FIXME: return if operation succeeded
     }
 
 
-    private void reoderSiblingValidIndex(RDFSNamedClass movedCls, RDFSNamedClass targetCls, boolean isBelow,
-            RDFSNamedClass parent, String user) {
+    private void reorderSiblingValidIndex(RDFSNamedClass movedCls, int positionToInsert, RDFSNamedClass parent) {
+
+        // System.out.println("Changing index for child: " + movedCls.getBrowserText());
+
+        List<RDFResource> childrenIndex = ((List<RDFResource>) parent.getPropertyValues(cm.getChildrenOrderProperty()));
+
+        for (RDFResource childIndex : childrenIndex) {
+            RDFResource child = (RDFResource) childIndex.getPropertyValue(cm.getOrderedChildProperty());
+            if (movedCls.equals(child)) {
+                childIndex.setPropertyValue(cm.getOrderedChildIndexProperty(), positionToInsert);
+                return;
+            }
+        }
+
+        Log.getLogger().warning("Something went wrong with the changing the order index for child " + movedCls + " of parent " + parent);
+    }
+
+    //FIXME: disable instance creation events..; when many instance creation events are generated, the UI
+    //gets very slow at processing them. It is not clear that we need to disable events, as the index will be
+    //pre-populated and we don't expect too many creation events, except when something goes very wrong with
+    //the index. Fix later, if needed
+    private void reorderSiblingInvalidIndex(SortedMap<Integer, RDFSNamedClass> orderedChildrenMap, RDFSNamedClass movedCls,
+            RDFSNamedClass targetCls, boolean isBelow, RDFSNamedClass parent) {
+
+        // System.out.println("Recreating new child index for: " + parent.getBrowserText());
+
+        List<RDFSNamedClass> orderedChildren = new ArrayList<RDFSNamedClass>(orderedChildrenMap.values());
+        orderedChildren.remove(movedCls);
+
+        int targetIndex = orderedChildren.indexOf(targetCls);
+        if (targetIndex == -1) {
+            Log.getLogger().warning("Problem at creating a new children index for " + parent +". Target class: " + targetCls + " does not exist in virtual index.");
+            orderedChildren.add(movedCls);
+        } else {
+            if (isBelow == true) { // insert below
+                if (targetIndex == orderedChildren.size() - 1) {
+                    orderedChildren.add(movedCls);
+                } else {
+                    orderedChildren.add(targetIndex + 1, movedCls);
+                }
+            } else { // insert above
+                orderedChildren.add(targetIndex, movedCls);
+            }
+        }
+
+        // write new index
+        recreateIndex(parent, orderedChildrenMap);
 
     }
 
-    private void reoderSiblingInvalidIndex(RDFSNamedClass movedCls, RDFSNamedClass targetCls, boolean isBelow,
-            RDFSNamedClass parent, String user) {
 
+    private int getPositionToInsert(SortedMap<Integer, RDFSNamedClass> orderedChildrenMap, RDFSNamedClass movedCls,
+            RDFSNamedClass targetCls, boolean isBelow, RDFSNamedClass parent) {
+
+        int childBefore = 0;
+        int childAfter = -1; //this means there is an error
+
+        for (Iterator<Integer> iterator = orderedChildrenMap.keySet().iterator(); iterator.hasNext();) {
+            int index = iterator.next();
+            if (orderedChildrenMap.get(index).equals(targetCls)) {
+
+                if (isBelow == true) { // insert below
+                    childBefore = index;
+                    if (iterator.hasNext()) {
+                        childAfter = iterator.next();
+                        int pos = (childBefore + childAfter) / 2;
+                        return pos == childBefore ? -1 : pos;
+                    } else { //insert after last one in list
+                        int pos = childBefore + CHILD_INDEX_INCREMENT;
+                        return pos < 0 ? -1 : pos;
+                    }
+                }
+                   else { // insert above - it happens with the first child, if inserting above it, otherwise the below event is triggered
+                    //there might be other cases, but we'll not treat until necessary
+                       int pos = (index + childBefore) / 2;
+                       return pos == childBefore ? -1 : pos;
+                }
+            }
+            childBefore = index;
+        }
+        return -1;
     }
-
-
 
     private void createOrderedChildrenMap(RDFSNamedClass parent, SortedMap<Integer, RDFSNamedClass> orderedChildrenMap) {
         List<RDFSNamedClass> unorderedChildren = cm.getRDFSNamedClassList(parent.getSubclasses(false));
@@ -191,10 +338,68 @@ public class SiblingReordering {
     }
 
 
-}
+    /**
+     * Adds the child to the index of this parent at the end of the list. If isSiblingIndex == true, it
+     * will not recompute the index, it will assume it is valid, and it will only add the new value
+     * at the end.
+     * @param parent
+     * @param cls
+     * @param isSiblingIndexValid - usually coming from a previous computation. If true, it will force
+     * a recreation of the index
+     * @return - true if the index is not recreated, or false - otherwise
+     */
+    public boolean addChildToParentIndex(RDFSNamedClass parent, RDFSNamedClass cls, boolean isSiblingIndexValid) {
+        SortedMap<Integer, RDFSNamedClass> orderedChildrenMap = new TreeMap<Integer, RDFSNamedClass>();
+        computeOrderedChildrenSortedMap(parent, orderedChildrenMap);
 
-enum IndexState {
-    VALID, // index is in a valid state
-    INVALID,  // index is invalid
-    NEW; // index does not exist in the ontology
+        if (isSiblingIndexValid == false) {
+            //TODO - there is a small problem here: if the index did not exist, the new class will not be added last, but by
+            //alphabetical order and the UI will show the child as the last.
+            recreateIndex(parent, orderedChildrenMap);
+            return false;
+        }
+
+        // The last index is the child added the last (the child to be added).
+        // No other children have been added meanwhile, because this runs in a transaction.
+        // So, it is pretty safe to assume that the index of the last child is the last index.
+        // TT: documented this, in case there will be bugs later
+         int index = orderedChildrenMap.lastKey();
+
+        // index is valid, add the child at the end
+        ICDContentModel cm = new ICDContentModel(parent.getOWLModel());
+        RDFResource inst = cm.createOrderedChildIndex(cls, index);
+        parent.addPropertyValue(cm.getChildrenOrderProperty(), inst);
+
+        return true;
+    }
+
+
+    public boolean removeChildFromIndex(RDFSNamedClass parent, RDFSNamedClass cls, boolean isSiblingIndexValid) {
+        SortedMap<Integer, RDFSNamedClass> orderedChildrenMap = new TreeMap<Integer, RDFSNamedClass>();
+        computeOrderedChildrenSortedMap(parent, orderedChildrenMap);
+
+        if (isSiblingIndexValid == false) {
+            recreateIndex(parent, orderedChildrenMap);
+            return false;
+        }
+
+        RDFProperty orderedChildProp = cm.getOrderedChildProperty();
+        RDFResource indexInstToRemove = null;
+
+        List<RDFResource> childrenIndex = ((List<RDFResource>) parent.getPropertyValues(cm.getChildrenOrderProperty()));
+        for (RDFResource index : childrenIndex) {
+            if (cls.equals(index.getPropertyValue(orderedChildProp))) {
+                indexInstToRemove = index;
+                break;
+            }
+        }
+
+        if (indexInstToRemove != null) {
+            parent.removePropertyValue(orderedChildProp, indexInstToRemove);
+            indexInstToRemove.delete();
+        }
+
+        return true;
+    }
+
 }
