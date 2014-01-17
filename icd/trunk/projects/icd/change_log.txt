@@ -1,8 +1,0 @@
-===== 2011.06.03 =====
-
-- Created class: TAG under ValueSet
-- Created instances of TAG using Sara's list, added full name in rdfs:label, set display property to rdfs:label
-- Created obj prop: assignedTAG, and subproperties: assignedPrimaryTAG (single card) and assignedSecondaryTAG, domain: ICDSection, range:TAG
-- Created class DisplayStatusValueSet under ValueSet, and created 3 instances: green, yellow, red and added rdfs:label
-- Created obj property displayStatus with domain ICDSection and range DisplayStatusValueSet
-
