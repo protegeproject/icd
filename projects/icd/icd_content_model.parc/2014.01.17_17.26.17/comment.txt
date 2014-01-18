@@ -1,0 +1,1 @@
+Added support for children (i.e. subclass) ordering. Added: ChildOrder, childrenOrder, orderedChild, and orderedChildIndex.
