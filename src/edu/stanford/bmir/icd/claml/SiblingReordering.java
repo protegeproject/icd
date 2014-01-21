@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.SortedMap;
 import java.util.TreeMap;
 import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import edu.stanford.smi.protege.model.Frame;
 import edu.stanford.smi.protege.ui.FrameComparator;
@@ -39,6 +40,8 @@ import edu.stanford.smi.protegex.owl.model.RDFSNamedClass;
  *
  */
 public class SiblingReordering {
+
+    private static transient Logger log = Log.getLogger(SiblingReordering.class);
 
     private static int CHILD_INDEX_INCREMENT = 1000000;
 
@@ -83,7 +86,7 @@ public class SiblingReordering {
      */
     private void recreateIndex(RDFSNamedClass parent, SortedMap<Integer, RDFSNamedClass> orderedChildrenMap) {
 
-        Log.getLogger().warning("Writing to the KB a new index for parent: " + parent);
+        log.warning("Writing to the KB a new index for parent: " + parent);
 
         OWLModel owlModel = parent.getOWLModel();
         boolean eventsEnabled = owlModel.setGenerateEventsEnabled(false);
@@ -101,7 +104,7 @@ public class SiblingReordering {
             }
 
         } catch (Exception e) {
-            Log.getLogger().log(Level.WARNING,"There was a problem at writing child order index for parent: " + parent,  e);
+            log.log(Level.WARNING,"There was a problem at writing child order index for parent: " + parent,  e);
             throw new RuntimeException("Problem at writing child order index for parent: " + parent, e);
         } finally {
             owlModel.setGenerateEventsEnabled(eventsEnabled);
@@ -167,8 +170,8 @@ public class SiblingReordering {
         }
 
         if (isValidIndex == false) {
-            if (Log.getLogger().getLevel().equals(Level.FINE)) {
-                Log.getLogger().fine("Invalid sibling index for class: " + parent.getName() + " Browser text: " + parent.getBrowserText());
+            if (log.getLevel().equals(Level.FINE)) {
+                log.fine("Invalid sibling index for class: " + parent.getName() + " Browser text: " + parent.getBrowserText());
             }
         }
 
@@ -259,7 +262,7 @@ public class SiblingReordering {
             }
         }
 
-        Log.getLogger().warning("Something went wrong with the changing the order index for child " + movedCls + " of parent " + parent);
+        log.warning("Something went wrong with the changing the order index for child " + movedCls + " of parent " + parent);
     }
 
     //FIXME: disable instance creation events..; when many instance creation events are generated, the UI
@@ -276,7 +279,7 @@ public class SiblingReordering {
 
         int targetIndex = orderedChildren.indexOf(targetCls);
         if (targetIndex == -1) {
-            Log.getLogger().warning("Problem at creating a new children index for " + parent +". Target class: " + targetCls + " does not exist in virtual index.");
+            log.warning("Problem at creating a new children index for " + parent +". Target class: " + targetCls + " does not exist in virtual index.");
             orderedChildren.add(movedCls);
         } else {
             if (isBelow == true) { // insert below
