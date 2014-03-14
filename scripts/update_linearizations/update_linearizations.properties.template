@@ -8,7 +8,7 @@ pprj.file=resources/projects/icd/icd_umbrella.pprj
 xls.icd-entities.file=resources/xls/icd_entities.xls
 
 <!-- The options that specify whether the entities should be marked as 'part of' or 'not part of' given linearizations
-such as, mortality or morbidity. The options can be any of ('-mt' OR '-nomt') and/or ('-mb' OR '-nomb'). -->
+such as, mortality or morbidity. The options can be any of ('-mt' OR '-nomt') and/or ('-mb' OR '-nomb') and/or  ('-opht' OR '-noopht'). -->
 opt.mortality-lin=-mt
 opt.morbidity-lin=-mb
 opt.ophthalmology-lin=-opht
