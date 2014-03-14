@@ -129,6 +129,7 @@ public class ICDContentModelConstants {
     public final static String LINEARIZATION_VIEW_MORBIDITY = NS + "Morbidity";
     public final static String LINEARIZATION_VIEW_MORTALITY = NS + "Mortality";
     public final static String LINEARIZATION_VIEW_PRIMARY_CARE = NS + "PrimaryCare";
+    public final static String LINEARIZATION_VIEW_OPHTHALMOLOGY = NS + "Specialty_Adaptation_Ophthalmology";
     
     public final static String SUPPRESS_OTHER_SPECIFIED_RESIDUALS = NS + "suppressOtherSpecifiedResiduals";
     public final static String SUPPRESS_UNSPECIFIED_RESIDUALS = NS + "suppressUnspecifiedResiduals";
