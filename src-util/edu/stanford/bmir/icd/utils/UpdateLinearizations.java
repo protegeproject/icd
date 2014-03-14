@@ -27,6 +27,8 @@ public class UpdateLinearizations {
 	private static final String OPTION_NO_MORTALITY = "-nomt";
 	private static final String OPTION_MORBIDITY = "-mb";
 	private static final String OPTION_NO_MORBIDITY = "-nomb";
+	private static final String OPTION_OPHTHALMOLOGY = "-opht";
+	private static final String OPTION_NO_OPHTHALMOLOGY = "-noopht";
 	private static final String OPTION_GROUPING = "-gr";
 	private static final String OPTION_NO_GROUPING = "-nogr";
 	private static final String OPTION_LIN_PARENT = "-parent";
@@ -39,12 +41,14 @@ public class UpdateLinearizations {
 	private static final String PROPERTY_IS_GROUPING = ICDContentModelConstants.IS_GROUPING_PROP;
 	private static final String PROPERTY_VALUE_MORTALITY = ICDContentModelConstants.LINEARIZATION_VIEW_MORTALITY;
 	private static final String PROPERTY_VALUE_MORBIDITY = ICDContentModelConstants.LINEARIZATION_VIEW_MORBIDITY;
+	private static final String PROPERTY_VALUE_OPHTHALMOLOGY = ICDContentModelConstants.LINEARIZATION_VIEW_OPHTHALMOLOGY;
 	
 	
 	private static URI pprjFileUri = new File(PPRJ_FILE_URI).toURI();
 	private static File xlFileIcdEntities = new File(EXCEL_FILE_ICD_ENTITIES);
 	private static Boolean includedInMortality;
 	private static Boolean includedInMorbidity;
+	private static Boolean includedInOphthalmology;
 	private static Boolean isGrouping;
 	
 	public static void main(String args[]) {
@@ -64,6 +68,7 @@ public class UpdateLinearizations {
 			
 			includedInMortality = getAlternativeOptionValue(optionArgs, OPTION_MORTALITY, OPTION_NO_MORTALITY);
 			includedInMorbidity = getAlternativeOptionValue(optionArgs, OPTION_MORBIDITY, OPTION_NO_MORBIDITY);
+			includedInOphthalmology = getAlternativeOptionValue(optionArgs, OPTION_OPHTHALMOLOGY, OPTION_NO_OPHTHALMOLOGY);
 			isGrouping = getAlternativeOptionValue(optionArgs, OPTION_GROUPING, OPTION_NO_GROUPING);
 			if (optionArgs.contains(OPTION_LIN_PARENT)) {
 				Log.getLogger().warning("The '" + OPTION_LIN_PARENT + "' option is not supported at the moment. This option will be ignored");
@@ -78,6 +83,7 @@ public class UpdateLinearizations {
 		Log.getLogger().info("=== Excel file ICD entities: " + xlFileIcdEntities);
 		if (includedInMortality != null) {Log.getLogger().info("=== Include in Mortality: " + includedInMortality);}
 		if (includedInMorbidity != null) {Log.getLogger().info("=== Include in Morbidity: " + includedInMorbidity);}
+		if (includedInOphthalmology != null) {Log.getLogger().info("=== Include in Ophthalmology: " + includedInOphthalmology);}
 		if (isGrouping != null) {Log.getLogger().info("=== Is Grouping: " + isGrouping);}
 		
 		//open owl model
@@ -93,7 +99,7 @@ public class UpdateLinearizations {
 
 	private static void usage() {
 		Log.getLogger().info("Usage: " +
-		"UpdateLinearizations [-mt|-nomt] [-mb|-nomb] [-gr|nogr] [-parent] pprjFile xlFileICDEntities" +
+		"UpdateLinearizations [-mt|-nomt] [-mb|-nomb] [-opht|-noopht] [-gr|nogr] [-parent] pprjFile xlFileICDEntities" +
 		"\n" +
 		"\nNote: at least one of the options is required");
 	}
@@ -148,6 +154,7 @@ public class UpdateLinearizations {
 		RDFProperty propIsGrouping = owlModel.getRDFProperty(PROPERTY_IS_GROUPING);
 		RDFResource mortality = owlModel.getRDFResource(PROPERTY_VALUE_MORTALITY);
 		RDFResource morbidity = owlModel.getRDFResource(PROPERTY_VALUE_MORBIDITY);
+		RDFResource ophthalmology = owlModel.getRDFResource(PROPERTY_VALUE_OPHTHALMOLOGY);
 		
 		try {
 			Workbook wb = jxl.Workbook.getWorkbook(excelFile);
@@ -171,6 +178,9 @@ public class UpdateLinearizations {
 					if (includedInMorbidity != null) {
 						linearizationsToUpdate.add(morbidity);
 					}
+					if (includedInOphthalmology != null) {
+						linearizationsToUpdate.add(ophthalmology);
+					}
 					
 					List<RDFResource> linearizationsToBeFound = new ArrayList<RDFResource>(linearizationsToUpdate);
 					if (linearizationsToBeFound.size() > 0) {
@@ -188,6 +198,9 @@ public class UpdateLinearizations {
 								}
 								else if (linearizationView.equals(morbidity)) {
 									linInstance.setPropertyValue(propIsIncludedInLinearization, includedInMorbidity);
+								}
+								else if (linearizationView.equals(ophthalmology)) {
+									linInstance.setPropertyValue(propIsIncludedInLinearization, includedInOphthalmology);
 								}
 								
 								if (isGrouping != null) {
