@@ -2,6 +2,7 @@ package edu.stanford.bmir.icd.claml;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
@@ -11,8 +12,10 @@ import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import edu.stanford.smi.protege.model.Frame;
 import edu.stanford.smi.protege.model.Instance;
 import edu.stanford.smi.protege.model.ModelUtilities;
+import edu.stanford.smi.protege.ui.FrameComparator;
 import edu.stanford.smi.protege.util.CollectionUtilities;
 import edu.stanford.smi.protege.util.IDGenerator;
 import edu.stanford.smi.protege.util.Log;
@@ -1492,7 +1495,15 @@ public class ICDContentModel {
      * @return - an ordered list of the children according to an index
      */
     public List<RDFSNamedClass> getOrderedChildren(RDFSNamedClass parent) {
-        return new SiblingReordering(this).getOrderedChildren(parent);
+        return isOrderedSiblingsSupported() == true ?
+                new SiblingReordering(this).getOrderedChildren(parent) : getOrderedChildrenNoSiblingSupport(parent);
+    }
+
+    @SuppressWarnings("unchecked")
+    private List<RDFSNamedClass> getOrderedChildrenNoSiblingSupport(RDFSNamedClass parent) {
+        ArrayList<RDFSNamedClass> subclasses = new ArrayList<RDFSNamedClass>(parent.getVisibleDirectSubclasses());
+        Collections.sort(subclasses, new FrameComparator<Frame>());
+        return subclasses;
     }
 
     public boolean reorderSibling(RDFSNamedClass movedCls, RDFSNamedClass targetCls, boolean isBelow,
@@ -1510,6 +1521,10 @@ public class ICDContentModel {
 
     public boolean removeChildFromIndex(RDFSNamedClass parent, RDFSNamedClass cls, boolean isSiblingIndexValid) {
         return new SiblingReordering(this).removeChildFromIndex(parent, cls, isSiblingIndexValid);
+    }
+
+    public boolean isOrderedSiblingsSupported() {
+        return getChildrenOrderProperty() != null;
     }
 
 }
