@@ -4,7 +4,8 @@
    <property name="protege.home" value="${env.PROTEGE_HOME}"/>
    <property name = "owl.path"         value = "edu.stanford.smi.protegex.owl"/>
    <property name = "owl.plugin.path"  value = "${protege.home}/plugins/${owl.path}"/>
-	<property name = "lib"             location = "./lib"/>
+   <property name = "chao.path"         value = "${protege.home}/plugins/edu.stanford.smi.protegex.changes"/>
+   <property name = "lib"             location = "./lib"/>
 
    <!-- 
      #  ********** Finding Protege Libraries. *************
@@ -35,6 +36,7 @@
         <pathelement location = "${protege.home}/driver.jar"/>
         <pathelement location = "${protege.home}/plugins/edu.stanford.bmir.icd.misc/icd.jar"/>        
         <fileset dir="${owl.plugin.path}"/>
+      	<fileset dir="${chao.path}"/>
       	<fileset dir="./lib" />
       </path>
 
