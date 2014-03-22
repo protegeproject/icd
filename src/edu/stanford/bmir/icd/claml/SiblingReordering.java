@@ -171,7 +171,7 @@ public class SiblingReordering {
         }
 
         if (isValidIndex == false) {
-            if (Level.FINE.equals(log.getLevel())) {
+            if (log.isLoggable(Level.FINE)) {
                 log.fine("Invalid sibling index for class: " + parent.getName() + " Browser text: " + parent.getBrowserText());
             }
         }
