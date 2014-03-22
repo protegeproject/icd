@@ -86,8 +86,7 @@ public class SiblingReordering {
      */
     private void recreateIndex(RDFSNamedClass parent, SortedMap<Integer, RDFSNamedClass> orderedChildrenMap) {
 
-        //TT: commenting out only until we run scripts
-        //log.warning("Writing to the KB a new index for parent: " + parent);
+        log.warning("Writing to the KB a new index for parent: " + parent);
 
         OWLModel owlModel = parent.getOWLModel();
         boolean eventsEnabled = owlModel.setGenerateEventsEnabled(false);
