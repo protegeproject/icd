@@ -61,10 +61,8 @@
 		      	<classpath refid = "project.classpath"/>	        	
 	        	<arg value="-f"/>
 	        	<arg value="-nt=Reference"/>
-	 		    <!--arg value="/usr/local/icat-files/projects/icd/icd_umbrella.pprj"/-->
-	 		    <arg value="/home/csnyulas/workspace/ICD/projects/icd/icd_umbrella.pprj"/>
-	        	<!--arg value="npldeffill_2.csv"/-->
-			    <arg value="/home/csnyulas/work/WHO/batch processing/npldeffill_2_demo.csv"/>
+	 		    <arg value="/usr/local/icat-files/projects/icd/icd_umbrella.pprj"/>
+	        	<arg value="npldeffill_2.csv"/>
 	        </java>
 	 </target>
 	
