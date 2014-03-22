@@ -12,6 +12,8 @@ import edu.stanford.bmir.protegex.chao.ChAOKbManager;
 import edu.stanford.bmir.protegex.chao.annotation.api.Annotation;
 import edu.stanford.bmir.protegex.chao.annotation.api.AnnotationFactory;
 import edu.stanford.bmir.protegex.chao.annotation.api.impl.DefaultAnnotation;
+import edu.stanford.bmir.protegex.chao.change.api.Change;
+import edu.stanford.bmir.protegex.chao.change.api.ChangeFactory;
 import edu.stanford.bmir.protegex.chao.ontologycomp.api.OntologyComponentFactory;
 import edu.stanford.bmir.protegex.chao.ontologycomp.api.Ontology_Component;
 import edu.stanford.bmir.protegex.chao.ontologycomp.api.impl.DefaultTimestamp;
@@ -25,6 +27,7 @@ import edu.stanford.smi.protegex.owl.model.OWLModel;
 import edu.stanford.smi.protegex.owl.model.RDFResource;
 import edu.stanford.smi.protegex.owl.model.RDFSNamedClass;
 import edu.stanford.smi.protegex.server_changes.ChangesProject;
+import edu.stanford.smi.protegex.server_changes.PostProcessorManager;
 import edu.stanford.smi.protegex.server_changes.ServerChangesUtil;
 
 /**
@@ -76,6 +79,9 @@ public class ImportDefinitions {
             return;
         }
 
+        Log.getLogger().info("Running import definitions script with the following options:\n" + 
+        		formatArguments(args));
+        
         Project prj = Project.loadProjectFromFile(fileName , new ArrayList<String>());
 
         //------ init chao -------
@@ -92,10 +98,10 @@ public class ImportDefinitions {
 
 		ChangesProject.initialize(owlModel.getProject());
 
-		//ChangeFactory changeFactory = new ChangeFactory(chaoKb);
 		OntologyComponentFactory ocFactory = new OntologyComponentFactory(chaoKb);
-		//PostProcessorManager changes_db = ChangesProject.getPostProcessorManager(owlModel);
 		GenericAnnotationFactory annFactory = new GenericAnnotationFactory(chaoKb);
+		ChangeFactory changeFactory = new ChangeFactory(chaoKb);
+		PostProcessorManager changes_db = ChangesProject.getPostProcessorManager(owlModel);
         //------ end init chao -------
 
         
@@ -124,6 +130,7 @@ public class ImportDefinitions {
                                 Log.getLogger().info("***& " + clsName + " not found");
                             } else {
                                 RDFResource term = null;
+                            	String changeDesc = null;
                                 RDFResource existingDefTerm = (RDFResource) cls.getPropertyValue(cm.getDefinitionProperty());
                                 if (existingDefTerm != null) {
                                     String existingDef = (String) existingDefTerm.getPropertyValue(cm.getLabelProperty());
@@ -133,9 +140,11 @@ public class ImportDefinitions {
                                         term = cm.createDefinitionTerm();
                                     } else {
                                         Log.getLogger().warning(" +++ Existing definition: " + cls);
-                                        if (isForceOptionSet) {
+                                        if (isForceOptionSet && !existingDef.equals(value)) {
                                         	Log.getLogger().info("Replacing definition:\n" +
                                         			existingDef +"\nwith\n" + value);
+                                        	changeDesc = "Replacing definition. Old value: '" + 
+                                        			existingDef + "'. New value: '" + value + "'";
                                         	existingDefTerm.setPropertyValue(cm.getLabelProperty(), value);
                                         	term = existingDefTerm;
                                         }
@@ -148,9 +157,10 @@ public class ImportDefinitions {
                                 	if (term != existingDefTerm) {
 	                                    cm.fillTerm(term, null, value, "en", null);
 	                                    cm.addDefinitionTermToClass(cls, term);
+	                                    changeDesc = "Added new definition: " + value;
                                 	}
 
-                                	addNote(chaoKb, ocFactory, annFactory, term, comment);
+									addNote(chaoKb, ocFactory, annFactory, changeFactory, changes_db, changeDesc, cls, term, comment);
                                 } else {
                                     Log.getLogger().info("*** Did not create term for " + clsName);
                                 }
@@ -214,9 +224,17 @@ public class ImportDefinitions {
 	}
 
 	private static void usage() {
-		Log.getLogger().info("Usage: ImportDefinitions [-f] [-note=Comment|Explanation|SeeAlso|] ICD_pprj_file CSV_file" +
+		Log.getLogger().info("Usage: ImportDefinitions [-f] [-nt=Comment|Explanation|SeeAlso|Reference|etc] ICD_pprj_file CSV_file" +
 		"\n" +
 		"\nNote: If option -f is specified, existing definition will be overwritten.");
+	}
+
+	private static String formatArguments(String[] args) {
+		String res = "";
+		for (String arg : args) {
+			res += arg + "\n";
+		}
+		return res;
 	}
     
 
@@ -234,26 +252,28 @@ public class ImportDefinitions {
 		return ret.trim();
 	}
 
-	private static void addNote(KnowledgeBase chaoKb, OntologyComponentFactory ocF, GenericAnnotationFactory annFactory, RDFResource term, String comment) {
-        Ontology_Component oc = ServerChangesUtil.getOntologyComponentFromChao(chaoKb, term.getName());
-        if (oc == null) {
-            oc = ocF.createOntology_Individual(null);
-            oc.setCurrentName(term.getName());
-        }
-/*
-        Comment c = annFactory.createComment(null);
-        c.setAuthor("Automatic import");
-        c.setBody("Added new defintion: " + def);
-        c.setSubject("New defintion");
-        c.setCreated(DefaultTimestamp.getTimestamp(chaoKb));
-        c.setAnnotates(CollectionUtilities.createCollection(oc));
-*/
-        Annotation ann = annFactory.createAnnotation(null, noteType);
-        ann.setAuthor("Automatic import");
-        //ann.setBody("Added new defintion: " + def);
-        ann.setSubject(comment);
-        ann.setCreated(DefaultTimestamp.getTimestamp(chaoKb));
-        ann.setAnnotates(CollectionUtilities.createCollection(oc));
+	private static void addNote(KnowledgeBase chaoKb, OntologyComponentFactory ocFactory, 
+			GenericAnnotationFactory annFactory, ChangeFactory changeFactory,
+			PostProcessorManager changes_db, String changeDesc, RDFResource cls, RDFResource term, String comment) {
+		if (changeDesc != null) {
+	        Ontology_Component oc = ServerChangesUtil.getOntologyComponentFromChao(chaoKb, term.getName());
+	        if (oc == null) {
+	            oc = ocFactory.createOntology_Individual(null);
+	            oc.setCurrentName(term.getName());
+	        }
+
+	        Annotation ann = annFactory.createAnnotation(null, noteType);
+	        ann.setAuthor("Automatic import");
+	        ann.setBody(comment);
+	        ann.setSubject(noteType); //Can we set a more appropriate value for the subject?
+	        ann.setCreated(DefaultTimestamp.getTimestamp(chaoKb));
+	        ann.setAnnotates(CollectionUtilities.createCollection(oc));
+	        
+			Change change = changeFactory.createComposite_Change(null);
+			ServerChangesUtil.createChangeStd(changes_db, change, cls, "Automatic import: " + changeDesc);
+			change.setAuthor("WHO");
+
+		}
 	}
 	
 	
