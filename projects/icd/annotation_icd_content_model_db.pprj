@@ -1,7 +1,7 @@
-; Thu Sep 29 19:11:45 PDT 2011
+; Thu May 01 01:00:43 PDT 2014
 ; 
-;+ (version "3.4.7")
-;+ (build "Build 620")
+;+ (version "3.5")
+;+ (build "Build 663")
 
 ([annotation_icd_content_model_db_ProjectKB_Class10] of  String
 
@@ -6883,7 +6883,7 @@
 	(is_hidden FALSE)
 	(widget_class_name "edu.stanford.smi.protege.widget.InstancesTab"))
 
-([KB_649278_Class4] of  Map
+([KB_590820_Class4] of  Map
 )
 
 ([KB_690954_Instance_0] of  String
