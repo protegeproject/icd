@@ -1,0 +1,1 @@
+Created subclasses of TopologyReferenceTerm (DistributionReferenceTerm, LateralityReferenceTerm, SuperficialOrDeepReferenceTerm, etc.) and set the range of the subproperties of "topology" property (distribution, laterality, etc.) to be the apropriate reference term class.
