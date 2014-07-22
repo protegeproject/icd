@@ -15,13 +15,22 @@ import java.util.logging.Logger;
 import edu.stanford.smi.protege.model.Frame;
 import edu.stanford.smi.protege.model.Instance;
 import edu.stanford.smi.protege.model.ModelUtilities;
+import edu.stanford.smi.protege.model.ValueType;
 import edu.stanford.smi.protege.ui.FrameComparator;
 import edu.stanford.smi.protege.util.CollectionUtilities;
 import edu.stanford.smi.protege.util.IDGenerator;
 import edu.stanford.smi.protege.util.Log;
+import edu.stanford.smi.protegex.owl.model.OWLClass;
+import edu.stanford.smi.protegex.owl.model.OWLExistentialRestriction;
+import edu.stanford.smi.protegex.owl.model.OWLHasValue;
+import edu.stanford.smi.protegex.owl.model.OWLIntersectionClass;
 import edu.stanford.smi.protegex.owl.model.OWLModel;
+import edu.stanford.smi.protegex.owl.model.OWLNamedClass;
+import edu.stanford.smi.protegex.owl.model.OWLRestriction;
+import edu.stanford.smi.protegex.owl.model.OWLSomeValuesFrom;
 import edu.stanford.smi.protegex.owl.model.RDFProperty;
 import edu.stanford.smi.protegex.owl.model.RDFResource;
+import edu.stanford.smi.protegex.owl.model.RDFSClass;
 import edu.stanford.smi.protegex.owl.model.RDFSNamedClass;
 
 public class ICDContentModel {
@@ -143,6 +152,7 @@ public class ICDContentModel {
     private RDFProperty allowedPostcoordinationAxesProperty;
     private RDFProperty allowedPostcoordinationAxisPropertyProperty;
     private RDFProperty requiredPostcoordinationAxisPropertyProperty;
+    private RDFProperty precoordinationSuperclassProperty;
 
     private RDFProperty isObsoleteProperty;
     private RDFProperty publicIdProperty;
@@ -813,6 +823,13 @@ public class ICDContentModel {
         return requiredPostcoordinationAxisPropertyProperty;
     }
 
+    public RDFProperty getPrecoordinationSuperclassProperty() {
+    	if (precoordinationSuperclassProperty == null) {
+    		precoordinationSuperclassProperty = owlModel.getRDFProperty(ICDContentModelConstants.PRECOORDINATION_SUPERCLASS_PROP);
+    	}
+    	return precoordinationSuperclassProperty;
+    }
+    
     public RDFProperty getIsObsoleteProperty() {
         if (isObsoleteProperty == null) {
             isObsoleteProperty = owlModel.getRDFProperty(ICDContentModelConstants.IS_OBSOLETE_PROP);
@@ -1527,4 +1544,504 @@ public class ICDContentModel {
         return getChildrenOrderProperty() != null;
     }
 
+    
+    /*
+     * Equivalent class definitions
+     */
+    
+    public RDFSNamedClass getPreecoordinationSuperclass(String clsName) {
+    	RDFSNamedClass cls = getICDClass(clsName);
+    	return getPreecoordinationSuperclass(cls);
+    }
+    
+    public RDFSNamedClass getPreecoordinationSuperclass(RDFSNamedClass cls) {
+       	RDFProperty precoordSuperclassProp = getPrecoordinationSuperclassProperty();
+    	return (RDFSNamedClass) cls.getPropertyValue(precoordSuperclassProp);
+    }
+    
+    public void setPrecoordinationSuperclass(String clsName, String superclsName) {
+    	RDFSNamedClass cls = getICDClass(clsName);
+    	RDFSNamedClass supercls = getICDClass(superclsName);
+    	
+    	RDFProperty precoordSuperclassProp = getPrecoordinationSuperclassProperty();
+
+    	//TODO see if we need transactions or if we need this method at all
+    	cls.setPropertyValue(precoordSuperclassProp, supercls);
+    	
+    	//TODO do we need to do something special here?
+    }
+
+    public void removePrecoordinationSuperclass(String clsName) {
+    	//TODO
+    	
+    }
+    
+    
+    public OWLIntersectionClass getEquivalentPrecoordinationClassExpression(RDFSNamedClass cls) {
+    	RDFSNamedClass precoordSuperclass = getPreecoordinationSuperclass(cls);
+    	if (precoordSuperclass == null) {
+    		//precoordinationSuperclass is not set, so 
+    		//there can't be any equivalent class expression that involve that superclass 
+    		return null;
+    	}
+    	
+    	Collection<?> equivalentClasses = cls.getEquivalentClasses();
+    	if (equivalentClasses == null || equivalentClasses.isEmpty()) {
+    		return null;
+    	}
+    	for (Iterator<?> it = equivalentClasses.iterator(); it.hasNext(); ) {
+    		OWLClass nextEqClass = (OWLClass)it.next();
+    		if (isValidPrecoordinationDefinitionClassExpression(nextEqClass, precoordSuperclass)) {
+    			return (OWLIntersectionClass) nextEqClass;
+    		}
+    	}
+    	
+    	return null;
+    }
+    
+    public OWLIntersectionClass getNecessaryPrecoordinationClassExpression(RDFSNamedClass cls) {
+    	RDFSNamedClass precoordSuperclass = getPreecoordinationSuperclass(cls);
+    	if (precoordSuperclass == null) {
+    		//precoordinationSuperclass is not set, so 
+    		//there can't be any equivalent class expression that involve that superclass 
+    		return null;
+    	}
+    	
+    	Collection<?> superclasses = cls.getSuperclasses(false);
+    	if (superclasses == null || superclasses.isEmpty()) {
+    		return null;
+    	}
+    	for (Iterator<?> it = superclasses.iterator(); it.hasNext(); ) {
+    		OWLClass nextSuperclass = (OWLClass)it.next();
+    		if ( (! cls.hasEquivalentClass(nextSuperclass)) &&
+    				isValidPrecoordinationDefinitionClassExpression(nextSuperclass, precoordSuperclass)) {
+    			return (OWLIntersectionClass) nextSuperclass;
+    		}
+    	}
+    	
+    	return null;
+    }
+    
+    /**
+     * If this method returns true, then the classExpr can be casted to OWLIntersectionClass.
+     * 
+     * @param classExpr a class expression that is part of a class definition, either as a necessary
+     * 		condition or as necessary &amp; sufficient condition
+     * @param precoordSuperclass the selected precoordination superclass, which needs to be part of a
+     * 		valid precoordination definition class expression.
+     * @return
+     */
+    public boolean isValidPrecoordinationDefinitionClassExpression(OWLClass classExpr, RDFSNamedClass precoordSuperclass) {
+    	if (classExpr instanceof OWLIntersectionClass) {
+    		OWLIntersectionClass intClassExpr = (OWLIntersectionClass) classExpr;
+    		Collection<RDFSClass> operands = intClassExpr.getOperands();
+    		Iterator<RDFSClass> it = operands.iterator();
+    		while (it.hasNext()) {
+    			RDFSClass op = it.next();
+    			if (precoordSuperclass.equals(op)) {
+    				return true;
+    			}
+    		}
+    		return false;
+    	}
+    	else {
+    		return false;
+    	}
+    }
+    
+    /**
+     * Return the names of the properties that are involved in the precoordination definition
+     * of the class <code>cls</code>. If the second <code>definitional</code> is true,
+     * the method returns the list of properties involved in the equivalent class expression.
+     * In case it is false, it returns the properties involves in the necessary conditions.
+     * @param cls
+     * @param definitional
+     * @return
+     */
+    public Collection<String> getPropertiesInPrecoordinationDefinition(RDFSNamedClass cls, boolean definitional) {
+    	OWLIntersectionClass classExpression;
+    	if (definitional) {
+    		classExpression = getEquivalentPrecoordinationClassExpression(cls);
+    	}
+    	else {
+    		classExpression = getNecessaryPrecoordinationClassExpression(cls);
+    	}
+    	
+    	return getPropertiesFromClassExpression(classExpression);
+    }
+
+	public Collection<String> getPropertiesFromClassExpression(
+			OWLIntersectionClass classExpression) {
+		if (classExpression == null) {
+    		return new ArrayList<String>();
+    	}
+
+    	ArrayList<String> res = new ArrayList<String>();
+    	Collection<RDFSClass> operands = classExpression.getOperands();
+    	for (Iterator<RDFSClass> it = operands.iterator(); it.hasNext();) {
+    		RDFSClass operand = it.next();
+    		if (operand instanceof RDFSNamedClass) {
+    			//ignore
+    		}
+    		else {
+    			if (operand instanceof OWLExistentialRestriction) {
+    				OWLExistentialRestriction exRestr = (OWLExistentialRestriction) operand;
+    				RDFProperty property = exRestr.getOnProperty();
+    				res.add(property.getName());
+    			}
+    		}
+    	}
+    	return res;
+	}
+	
+	public Collection<PrecoordinationDefinitionComponent> getPrecoordinationPropertyValues(RDFSNamedClass cls, Collection<String> properties) {
+		OWLIntersectionClass eqClassExpression = getEquivalentPrecoordinationClassExpression(cls);
+		OWLIntersectionClass necClassExpression = getNecessaryPrecoordinationClassExpression(cls);
+		Collection<String> defProps = getPropertiesFromClassExpression(eqClassExpression);
+		Collection<String> necProps = getPropertiesFromClassExpression(necClassExpression);
+
+		Collection<PrecoordinationDefinitionComponent> res = new ArrayList<PrecoordinationDefinitionComponent>();
+		for (Iterator<String> it = properties.iterator(); it.hasNext();) {
+			String property = (String) it.next();
+			PrecoordinationDefinitionComponent value;
+			if (defProps.contains(property)) {
+				value = getPropertyValueFromClassExpression(eqClassExpression, property, true);
+			}
+			else if (necProps.contains(property)){
+				value = getPropertyValueFromClassExpression(necClassExpression, property, false);
+			}
+			else {
+				value = new PrecoordinationDefinitionComponent(property, null, null, false);
+			}
+			res.add(value);
+		}
+		return res;
+	}
+	
+	private PrecoordinationDefinitionComponent getPropertyValueFromClassExpression(
+			OWLIntersectionClass classExpression, String property, boolean isDefinitional) {
+    	Collection<RDFSClass> operands = classExpression.getOperands();
+		for (Iterator<RDFSClass> it = operands.iterator(); it.hasNext();) {
+    		RDFSClass operand = it.next();
+    		if (operand instanceof RDFSNamedClass) {
+    			//ignore
+    		}
+    		else {
+    			if (operand instanceof OWLHasValue) {
+    				OWLHasValue exRestr = (OWLHasValue) operand;
+    				if (exRestr.getOnProperty().getName().equals(property)) {
+    					return new PrecoordinationDefinitionComponent(property, 
+    							((RDFResource)exRestr.getHasValue()).getName(), ValueType.INSTANCE, isDefinitional);
+    				}
+    			}
+    			if (operand instanceof OWLSomeValuesFrom) {
+    				OWLSomeValuesFrom exRestr = (OWLSomeValuesFrom) operand;
+    				if (exRestr.getOnProperty().getName().equals(property)) {
+    					return new PrecoordinationDefinitionComponent(property, 
+    							exRestr.getSomeValuesFrom().getName(), ValueType.CLS, isDefinitional);
+    				}
+    			}
+    		}
+    	}
+		return null;
+	}
+
+	public class PrecoordinationDefinitionComponent {
+		private String property;
+		private String value;
+		private ValueType valueType;
+		private boolean isDefinitional;
+		
+		public PrecoordinationDefinitionComponent(String property,
+				String value, ValueType valueType, boolean isDefinitional) {
+			this.property = property;
+			this.value = value;
+			this.valueType = valueType;
+			this.isDefinitional = isDefinitional;
+		}
+		
+		public String getProperty() {
+			return property;
+		}
+
+		public String getValue() {
+			return value;
+		}
+
+		public boolean isDefinitional() {
+			return isDefinitional;
+		}
+
+		public ValueType getValueType() {
+			return valueType;
+		}
+		
+
+		@Override
+		public String toString() {
+			return "PrecoordinationClassExpressionData(" +
+					property + ", " +
+					value + ", " + 
+					valueType + ", " + 
+					isDefinitional + ")";
+		}
+
+	}
+
+	public boolean setPrecoordinationDefinitionPropertyValue(
+			RDFSNamedClass cls, String property,
+			String oldValue, String newValue) {
+		OWLIntersectionClass eqClassExpression = getEquivalentPrecoordinationClassExpression(cls);
+		OWLIntersectionClass necClassExpression = getNecessaryPrecoordinationClassExpression(cls);
+		Collection<String> defProps = getPropertiesFromClassExpression(eqClassExpression);
+		Collection<String> necProps = getPropertiesFromClassExpression(necClassExpression);
+
+		if (eqClassExpression == null && necClassExpression == null && newValue != null) {
+			necClassExpression = createPrecoordinationClassExpressionDraft(cls, false);
+			addPropertyRestrictionToClassExpression(necClassExpression, property, newValue);
+			return true;
+		}
+		
+		if (newValue == null) {
+			boolean changed = false;
+			if (defProps.contains(property)) {
+				if (defProps.size() == 1) {	//this is the only (i.e. the last) property in this class expression
+					removeEquivalentClass(cls, eqClassExpression);
+				}
+				else {
+					removePropertyRestrictionFromClassExpression(eqClassExpression, property);
+				}
+				changed = true;
+			}
+			if (necProps.contains(property)) {
+				if (necProps.size() == 1) {	//this is the only (i.e. the last) property in this class expression
+					((OWLNamedClass)cls).removeSuperclass(necClassExpression);
+				}
+				else {
+					removePropertyRestrictionFromClassExpression(necClassExpression, property);
+				}
+				changed = true;
+			}
+			return changed;
+		}
+		
+		// here we want to add or replace an old value with a (non-null) new value 
+		if (oldValue == null) {
+			if (necProps.contains(property)) {
+				//this must be an error
+				Log.getLogger().warning("Possible error while changing value of property " + property + " in precoordination definition." +
+						" Although oldValue is null, " + property + " appears in necessary condition: " + necClassExpression.getBrowserText());
+				removePropertyRestrictionFromClassExpression(necClassExpression, property);
+			}
+			if (defProps.contains(property)) {
+				//this must be an error
+				Log.getLogger().warning("Possible error while changing value of property " + property + " in precoordination definition." +
+						" Although oldValue is null, " + property + " appears in necessary & sufficient condition: " + eqClassExpression.getBrowserText());
+				removePropertyRestrictionFromClassExpression(eqClassExpression, property);
+			}
+			//TODO see if there are cases when we need to add it to the eq. class expr. 
+			if (necClassExpression == null) {
+				necClassExpression = createPrecoordinationClassExpressionDraft(cls, false);
+			}
+			addPropertyRestrictionToClassExpression(necClassExpression, property, newValue);
+			return true;
+		}
+		else {
+			if (necProps.contains(property)) {
+				OWLRestriction restr = getPropertyRestrictionFromClassExpression(necClassExpression, property);
+				if (restr instanceof OWLHasValue) {
+					((OWLHasValue)restr).setHasValue(owlModel.getRDFResource(newValue));
+				}
+				else if (restr instanceof OWLSomeValuesFrom) {
+					((OWLSomeValuesFrom)restr).setSomeValuesFrom(owlModel.getRDFResource(newValue));
+				}
+				else {
+					//this must be an error
+					Log.getLogger().severe("Error while changing value of property " + property + " in precoordination definition." +
+						" Old value was not set as neither a hasValue nor a someValueFrom restriction");
+					//remove old restriction & create a new restriction of the appropriate type
+					removePropertyRestrictionFromClassExpression(necClassExpression, property);
+					addPropertyRestrictionToClassExpression(necClassExpression, property, newValue);
+				}
+				return true;
+			}
+			else if (defProps.contains(property)) {
+				OWLRestriction restr = getPropertyRestrictionFromClassExpression(eqClassExpression, property);
+				if (restr instanceof OWLHasValue) {
+					((OWLHasValue)restr).setHasValue(owlModel.getRDFResource(newValue));
+				}
+				else if (restr instanceof OWLSomeValuesFrom) {
+					((OWLSomeValuesFrom)restr).setSomeValuesFrom(owlModel.getRDFResource(newValue));
+				}
+				else {
+					//this must be an error
+					Log.getLogger().severe("Error while changing value of property " + property + " in precoordination definition." +
+						" Old value was not set as neither a hasValue nor a someValueFrom restriction");
+					//remove old restriction & create a new restriction of the appropriate type
+					removePropertyRestrictionFromClassExpression(eqClassExpression, property);
+					addPropertyRestrictionToClassExpression(eqClassExpression, property, newValue);
+				}
+				return true;
+			}
+			else {
+				//this must be an error
+				Log.getLogger().warning("Possible error while changing value of property " + property + " in precoordination definition." +
+						" Although oldValue is not null, " + property + " does not appears in necessary or necessary & sufficient conditions: ");
+				return false;
+			}
+		}
+	}
+
+	private OWLIntersectionClass createPrecoordinationClassExpressionDraft(RDFSNamedClass cls, boolean equivalentClass) {
+		OWLIntersectionClass precoordClassExpression;
+		precoordClassExpression = owlModel.createOWLIntersectionClass();
+		precoordClassExpression.addOperand(getPreecoordinationSuperclass(cls));
+		if (equivalentClass) {
+			((OWLNamedClass)cls).addEquivalentClass(precoordClassExpression);
+		}
+		else {
+			cls.addSuperclass(precoordClassExpression);
+		}
+		return precoordClassExpression;
+	}
+
+	private void addPropertyRestrictionToClassExpression(
+			OWLIntersectionClass classExpression, String property, String newValue) {
+		//TODO Do we need additional information to know whether we should create a hasValue or
+		//or a someValueOf property restriction
+		RDFResource value = owlModel.getRDFResource(newValue);
+		if (value instanceof OWLClass) {
+			OWLSomeValuesFrom someValuesFromRestr = owlModel.createOWLSomeValuesFrom();
+			someValuesFromRestr.setOnProperty(owlModel.getOWLProperty(property));
+			someValuesFromRestr.setSomeValuesFrom(value);
+			classExpression.addOperand(someValuesFromRestr);
+		}
+		else {
+			OWLHasValue hasValueRestr = owlModel.createOWLHasValue();
+			hasValueRestr.setOnProperty(owlModel.getOWLProperty(property));
+			hasValueRestr.setHasValue(value);
+			classExpression.addOperand(hasValueRestr);
+		}
+	}
+
+	public boolean changeIsDefinitionalFlag(RDFSNamedClass cls,
+			String property, boolean isDefinitionalFlag) {
+		OWLIntersectionClass eqClassExpression = getEquivalentPrecoordinationClassExpression(cls);
+		OWLIntersectionClass necClassExpression = getNecessaryPrecoordinationClassExpression(cls);
+		Collection<String> defProps = getPropertiesFromClassExpression(eqClassExpression);
+		Collection<String> necProps = getPropertiesFromClassExpression(necClassExpression);
+
+		if (isDefinitionalFlag) {
+			if (necProps.contains(property)) {
+				OWLRestriction restr = removePropertyRestrictionFromClassExpression(necClassExpression, property);
+				if (eqClassExpression == null) {
+					eqClassExpression = createPrecoordinationClassExpressionDraft(cls, true);
+					//((OWLNamedClass)cls).addEquivalentClass(eqClassExpression);
+				}
+				eqClassExpression.addOperand(restr);
+				
+				if (necProps.size() == 1) {
+					((OWLNamedClass)cls).removeSuperclass(necClassExpression);
+				}
+				//TODO
+			}
+			else {
+				return false;
+			}
+		}
+		else {
+			if (defProps.contains(property)) {
+				OWLRestriction restr = removePropertyRestrictionFromClassExpression(eqClassExpression, property);
+				if (necClassExpression == null) {
+					necClassExpression = createPrecoordinationClassExpressionDraft(cls, false);
+					//((OWLNamedClass)cls).addSuperclass(necClassExpression);
+				}
+				necClassExpression.addOperand(restr);
+				
+				if (defProps.size() == 1) {
+					removeEquivalentClass(cls, eqClassExpression);
+				}
+			}
+			else {
+				return false;
+			}
+		}
+		// TODO Decide what should be returned
+		return true;
+	}
+
+	private void removeEquivalentClass(RDFSNamedClass cls,
+			OWLIntersectionClass eqClassExpression) {
+		Collection<OWLNamedClass> namedSuperclasses = new ArrayList<OWLNamedClass>();
+		Collection directSuperclasses = cls.getSuperclasses(false);
+		for (RDFSClass eqClassExpComp : eqClassExpression.getOperands()) {
+			if (eqClassExpComp instanceof OWLNamedClass &&
+					directSuperclasses.contains(eqClassExpComp)) {
+				namedSuperclasses.add((OWLNamedClass) eqClassExpComp);				
+			}
+		}
+		
+		boolean generateEvents = owlModel.getGenerateEventsEnabled();
+		try {
+			owlModel.setGenerateEventsEnabled(false);
+			
+			((OWLNamedClass)cls).removeEquivalentClass(eqClassExpression);
+			
+			//this is necessary because removeEquivalentClass removes also the named superclass
+			for (OWLNamedClass superclass : namedSuperclasses) {
+				cls.addSuperclass(superclass);
+			}
+		}
+		catch (Exception e) {
+			Log.getLogger().log(Level.WARNING, "removeEquivalentClass operation failed", e);
+		}
+		finally {
+			owlModel.setGenerateEventsEnabled(generateEvents);
+		}
+	}
+
+	private OWLRestriction getPropertyRestrictionFromClassExpression(
+			OWLIntersectionClass classExpression, String property) {
+		Collection<RDFSClass> operands = classExpression.getOperands();
+		for (RDFSClass operand : operands) {
+			if (operand instanceof OWLRestriction) {
+				OWLRestriction restr = (OWLRestriction) operand;
+				if (restr.getOnProperty().getName().equals(property)) {
+					return restr;
+				}
+			}
+		}
+		return null;
+	}
+	
+	private OWLRestriction removePropertyRestrictionFromClassExpression(
+			OWLIntersectionClass classExpression, String property) {
+		OWLRestriction restr = getPropertyRestrictionFromClassExpression(classExpression, property);
+		if (restr == null) {
+			return null;
+		}
+		
+		//OWLRestriction cloneRestr = (OWLRestriction) restr.createClone();  //very slow
+		OWLRestriction cloneRestr = cloneOWLRestriction(restr);
+		classExpression.removeOperand(restr);
+		if (classExpression.getOperands().size() == 1) {
+			//TODO see if we need to remove existing class expression
+		}
+		return cloneRestr;
+	}
+
+	private OWLRestriction cloneOWLRestriction(OWLRestriction restr) {
+		if (restr instanceof OWLSomeValuesFrom) {
+			OWLSomeValuesFrom someRestr = (OWLSomeValuesFrom) restr;
+			OWLSomeValuesFrom clone = owlModel.createOWLSomeValuesFrom(someRestr.getOnProperty(), someRestr.getSomeValuesFrom());
+			return clone;
+		}
+		if (restr instanceof OWLHasValue) {
+			OWLHasValue valueRestr = (OWLHasValue) restr;
+			OWLHasValue clone = owlModel.createOWLHasValue(valueRestr.getOnProperty(), valueRestr.getHasValue());
+			return clone;
+		}
+		//we don't deal with other type of restrictions
+		return null;
+	}
 }

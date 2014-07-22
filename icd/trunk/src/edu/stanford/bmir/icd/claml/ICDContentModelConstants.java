@@ -147,6 +147,7 @@ public class ICDContentModelConstants {
 	public final static String ALLOWED_POSTCOORDINATION_AXES_PROP = NS + "allowedPostcoordinationAxes";
 	public final static String ALLOWED_POSTCOORDINATION_AXIS_PROPERTY_PROP = NS + "allowedPostcoordinationAxisProperty";
 	public final static String REQUIRED_POSTCOORDINATION_AXIS_PROPERTY_PROP = NS + "requiredPostcoordinationAxisProperty";
+	public final static String PRECOORDINATION_SUPERCLASS_PROP = NS + "precoordinationSuperclass";
 
 	public final static String IS_OBSOLETE_PROP = NS + "isObsolete";
 
