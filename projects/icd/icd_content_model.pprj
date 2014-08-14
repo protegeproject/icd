@@ -1,4 +1,4 @@
-; Wed May 28 18:10:25 PDT 2014
+; Wed Aug 13 17:44:47 PDT 2014
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -6,19 +6,19 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[icd_content_model_ProjectKB_Class20053]
-		[icd_content_model_ProjectKB_Class20054]
-		[icd_content_model_ProjectKB_Class20055]
-		[icd_content_model_ProjectKB_Class20056]
-		[icd_content_model_ProjectKB_Class20057]
-		[icd_content_model_ProjectKB_Class20058]
-		[icd_content_model_ProjectKB_Class20059]
-		[icd_content_model_ProjectKB_Class20060]
-		[icd_content_model_ProjectKB_Class20061]
-		[icd_content_model_ProjectKB_Class20062]
-		[icd_content_model_ProjectKB_Class20063]
-		[icd_content_model_ProjectKB_Class20064]
-		[icd_content_model_ProjectKB_Class20065]))
+		[icd_content_model_ProjectKB_Class31474]
+		[icd_content_model_ProjectKB_Class31475]
+		[icd_content_model_ProjectKB_Class31476]
+		[icd_content_model_ProjectKB_Class31477]
+		[icd_content_model_ProjectKB_Class31478]
+		[icd_content_model_ProjectKB_Class31479]
+		[icd_content_model_ProjectKB_Class31480]
+		[icd_content_model_ProjectKB_Class31481]
+		[icd_content_model_ProjectKB_Class31482]
+		[icd_content_model_ProjectKB_Class31483]
+		[icd_content_model_ProjectKB_Class31484]
+		[icd_content_model_ProjectKB_Class31485]
+		[icd_content_model_ProjectKB_Class31486]))
 
 ([CLSES_TAB] of  Widget
 
@@ -119,113 +119,6 @@
 ([icd_content_model_ProjectKB_Class20] of  Property_List
 )
 
-([icd_content_model_ProjectKB_Class20053] of  String
-
-	(name ":PAL-CONSTRAINT")
-	(string_value "%3APAL-NAME"))
-
-([icd_content_model_ProjectKB_Class20054] of  String
-
-	(name ":META-CLASS")
-	(string_value "%3ANAME"))
-
-([icd_content_model_ProjectKB_Class20055] of  String
-
-	(name "http://www.w3.org/2002/07/owl#DatatypeProperty")
-	(string_value "%3ANAME"))
-
-([icd_content_model_ProjectKB_Class20056] of  String
-
-	(name "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property")
-	(string_value "%3ANAME"))
-
-([icd_content_model_ProjectKB_Class20057] of  String
-
-	(name "http://www.w3.org/2000/01/rdf-schema#Class")
-	(string_value "%3ANAME"))
-
-([icd_content_model_ProjectKB_Class20058] of  String
-
-	(name ":INSTANCE-ANNOTATION")
-	(string_value "%3AANNOTATION-TEXT"))
-
-([icd_content_model_ProjectKB_Class20059] of  String
-
-	(name "http://www.w3.org/2002/07/owl#Class")
-	(string_value "%3ANAME"))
-
-([icd_content_model_ProjectKB_Class20060] of  String
-
-	(name "http://www.w3.org/2002/07/owl#FunctionalProperty")
-	(string_value "%3ANAME"))
-
-([icd_content_model_ProjectKB_Class20061] of  String
-
-	(name "http://www.w3.org/2002/07/owl#AnnotationProperty")
-	(string_value "%3ANAME"))
-
-([icd_content_model_ProjectKB_Class20062] of  String
-
-	(name "http://www.w3.org/2002/07/owl#DeprecatedProperty")
-	(string_value "%3ANAME"))
-
-([icd_content_model_ProjectKB_Class20063] of  String
-
-	(name "http://www.w3.org/2002/07/owl#ObjectProperty")
-	(string_value "%3ANAME"))
-
-([icd_content_model_ProjectKB_Class20064] of  String
-
-	(name "http://www.w3.org/2000/01/rdf-schema#Datatype")
-	(string_value "%3ANAME"))
-
-([icd_content_model_ProjectKB_Class20065] of  String
-
-	(name "http://www.w3.org/2002/07/owl#Thing")
-	(string_value "%3ANAME"))
-
-([icd_content_model_ProjectKB_Class20066] of  Map_Entry
-
-	(key "collab.hide.archived")
-	(key_class "java.lang.String")
-	(value "false")
-	(value_class "java.lang.String"))
-
-([icd_content_model_ProjectKB_Class20067] of  Map_Entry
-
-	(key "show_collaboration_panel")
-	(key_class "java.lang.String")
-	(value "true")
-	(value_class "java.lang.Boolean"))
-
-([icd_content_model_ProjectKB_Class20068] of  Map_Entry
-
-	(key "add_name_on_instance_form")
-	(key_class "java.lang.String")
-	(value "false")
-	(value_class "java.lang.String"))
-
-([icd_content_model_ProjectKB_Class20069] of  Map_Entry
-
-	(key "edu.stanford.smi.protege.collab.annotation.gui.panel.ChatPanel")
-	(key_class "java.lang.String")
-	(value "false")
-	(value_class "java.lang.String"))
-
-([icd_content_model_ProjectKB_Class20070] of  Map_Entry
-
-	(key "change_tracking_active")
-	(key_class "java.lang.String")
-	(value "false")
-	(value_class "java.lang.String"))
-
-([icd_content_model_ProjectKB_Class20071] of  Map_Entry
-
-	(key "suppress_instance_counting")
-	(key_class "java.lang.String")
-	(value "false")
-	(value_class "java.lang.String"))
-
 ([icd_content_model_ProjectKB_Class21] of  Widget
 
 	(is_hidden TRUE)
@@ -267,6 +160,113 @@
 
 ([icd_content_model_ProjectKB_Class30] of  Property_List
 )
+
+([icd_content_model_ProjectKB_Class31474] of  String
+
+	(name ":PAL-CONSTRAINT")
+	(string_value "%3APAL-NAME"))
+
+([icd_content_model_ProjectKB_Class31475] of  String
+
+	(name ":META-CLASS")
+	(string_value "%3ANAME"))
+
+([icd_content_model_ProjectKB_Class31476] of  String
+
+	(name "http://www.w3.org/2002/07/owl#DatatypeProperty")
+	(string_value "%3ANAME"))
+
+([icd_content_model_ProjectKB_Class31477] of  String
+
+	(name "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property")
+	(string_value "%3ANAME"))
+
+([icd_content_model_ProjectKB_Class31478] of  String
+
+	(name "http://www.w3.org/2000/01/rdf-schema#Class")
+	(string_value "%3ANAME"))
+
+([icd_content_model_ProjectKB_Class31479] of  String
+
+	(name ":INSTANCE-ANNOTATION")
+	(string_value "%3AANNOTATION-TEXT"))
+
+([icd_content_model_ProjectKB_Class31480] of  String
+
+	(name "http://www.w3.org/2002/07/owl#Class")
+	(string_value "%3ANAME"))
+
+([icd_content_model_ProjectKB_Class31481] of  String
+
+	(name "http://www.w3.org/2002/07/owl#FunctionalProperty")
+	(string_value "%3ANAME"))
+
+([icd_content_model_ProjectKB_Class31482] of  String
+
+	(name "http://www.w3.org/2002/07/owl#AnnotationProperty")
+	(string_value "%3ANAME"))
+
+([icd_content_model_ProjectKB_Class31483] of  String
+
+	(name "http://www.w3.org/2002/07/owl#DeprecatedProperty")
+	(string_value "%3ANAME"))
+
+([icd_content_model_ProjectKB_Class31484] of  String
+
+	(name "http://www.w3.org/2000/01/rdf-schema#Datatype")
+	(string_value "%3ANAME"))
+
+([icd_content_model_ProjectKB_Class31485] of  String
+
+	(name "http://www.w3.org/2002/07/owl#ObjectProperty")
+	(string_value "%3ANAME"))
+
+([icd_content_model_ProjectKB_Class31486] of  String
+
+	(name "http://www.w3.org/2002/07/owl#Thing")
+	(string_value "%3ANAME"))
+
+([icd_content_model_ProjectKB_Class31487] of  Map_Entry
+
+	(key "collab.hide.archived")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
+
+([icd_content_model_ProjectKB_Class31488] of  Map_Entry
+
+	(key "show_collaboration_panel")
+	(key_class "java.lang.String")
+	(value "true")
+	(value_class "java.lang.Boolean"))
+
+([icd_content_model_ProjectKB_Class31489] of  Map_Entry
+
+	(key "add_name_on_instance_form")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
+
+([icd_content_model_ProjectKB_Class31490] of  Map_Entry
+
+	(key "edu.stanford.smi.protege.collab.annotation.gui.panel.ChatPanel")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
+
+([icd_content_model_ProjectKB_Class31491] of  Map_Entry
+
+	(key "change_tracking_active")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
+
+([icd_content_model_ProjectKB_Class31492] of  Map_Entry
+
+	(key "suppress_instance_counting")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
 
 ([icd_content_model_ProjectKB_Class33] of  Widget
 
@@ -651,6 +651,9 @@
 	(y 0))
 
 ([KB_024013_Instance_5] of  Property_List
+)
+
+([KB_066693_Class6] of  Map
 )
 
 ([KB_100699_Instance_0] of  Widget
@@ -1133,12 +1136,12 @@
 ([KB_325529_Class0] of  Map
 
 	(entries
-		[icd_content_model_ProjectKB_Class20066]
-		[icd_content_model_ProjectKB_Class20067]
-		[icd_content_model_ProjectKB_Class20068]
-		[icd_content_model_ProjectKB_Class20069]
-		[icd_content_model_ProjectKB_Class20070]
-		[icd_content_model_ProjectKB_Class20071]))
+		[icd_content_model_ProjectKB_Class31487]
+		[icd_content_model_ProjectKB_Class31488]
+		[icd_content_model_ProjectKB_Class31489]
+		[icd_content_model_ProjectKB_Class31490]
+		[icd_content_model_ProjectKB_Class31491]
+		[icd_content_model_ProjectKB_Class31492]))
 
 ([KB_325529_Class4] of  String
 
@@ -1148,7 +1151,7 @@
 ([KB_444675_Instance_0] of  String
 
 	(name "SwitchableClassDefinitionType")
-	(string_value "edu.stanford.smi.protegex.owl.ui.cls.LogicClassDefinitionWidget"))
+	(string_value "edu.stanford.smi.protegex.owl.ui.cls.PropertiesClassDefinitionWidget"))
 
 ([KB_465546_Instance_567] of  Widget
 
@@ -1156,9 +1159,6 @@
 	(name "http://protege.stanford.edu/plugins/owl/protege#ExternalResource")
 	(property_list [XY_Instance_890])
 	(widget_class_name "edu.stanford.smi.protegex.owl.ui.widget.OWLFormWidget"))
-
-([KB_565392_Class6] of  Map
-)
 
 ([KB_632156_Instance_0] of  String
 
