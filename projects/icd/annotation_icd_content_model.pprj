@@ -1,4 +1,4 @@
-; Wed Aug 13 17:44:49 PDT 2014
+; Wed Aug 13 18:10:24 PDT 2014
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -6883,7 +6883,7 @@
 	(is_hidden FALSE)
 	(widget_class_name "edu.stanford.smi.protege.widget.InstancesTab"))
 
-([KB_088743_Class4] of  Map
+([KB_667047_Class4] of  Map
 )
 
 ([KB_690954_Instance_0] of  String
@@ -7336,8 +7336,8 @@
 		[changes_ProjectKB_Class30260]
 		[STANDARD_CLASS_FORM_WIDGET]
 		[changes_ProjectKB_Instance_40056]
-		[changes_ProjectKB_Class10086]
 		[changes_ProjectKB_Class30496]
+		[changes_ProjectKB_Class10086]
 		[INSTANCE_ANNOTATION_FORM_WIDGET]
 		[changes_ProjectKB_Instance_51020]
 		[changes_ProjectKB_Instance_81267]
