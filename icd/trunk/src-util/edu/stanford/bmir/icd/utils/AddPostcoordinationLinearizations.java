@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import edu.stanford.bmir.icd.claml.ICDContentModel;
@@ -81,12 +82,12 @@ public class AddPostcoordinationLinearizations {
     
     private static void initPostcoordinationLinearizations() {
     	RDFSNamedClass linViewCls = owlModel.getRDFSNamedClass("http://who.int/icd#ICD11LinearizationView");
-    	List<RDFIndividual> views = new ArrayList<RDFIndividual>(linViewCls.getDirectInstances());
-    	views.add(owlModel.getRDFIndividual("http://who.int/icd#FoundationComponent"));
-    	views.remove(owlModel.getRDFIndividual("http://who.int/icd#Mortality"));
-    	views.remove(owlModel.getRDFIndividual("http://who.int/icd#PrimaryCare"));
-    	views.remove(owlModel.getRDFIndividual("http://who.int/icd#Primary_Care_Low_RS"));
-      	views.remove(owlModel.getRDFIndividual("http://who.int/icd#Primary_Care_High_RS"));
+    	postCoordinationLinearizationViews = new ArrayList<RDFIndividual>(linViewCls.getDirectInstances());
+    	postCoordinationLinearizationViews.add(owlModel.getRDFIndividual("http://who.int/icd#FoundationComponent"));
+    	postCoordinationLinearizationViews.remove(owlModel.getRDFIndividual("http://who.int/icd#Mortality"));
+    	postCoordinationLinearizationViews.remove(owlModel.getRDFIndividual("http://who.int/icd#PrimaryCare"));
+    	postCoordinationLinearizationViews.remove(owlModel.getRDFIndividual("http://who.int/icd#Primary_Care_Low_RS"));
+    	postCoordinationLinearizationViews.remove(owlModel.getRDFIndividual("http://who.int/icd#Primary_Care_High_RS"));
     }
 
     private static void addLinearizations(Collection<RDFSNamedClass> cats) {
@@ -108,7 +109,7 @@ public class AddPostcoordinationLinearizations {
 				addLinearization(cat, linView);
 			}
     	} catch (Exception e) {
-            log.warning("------- Error at adding linearizations to " + cat);
+            log.log(Level.WARNING, "------- Error at adding linearizations to " + cat, e);
         }
     }
 
@@ -118,7 +119,7 @@ public class AddPostcoordinationLinearizations {
             linSpec.setPropertyValue(linearizationViewProp, linearizationViewInst);
             cat.addPropertyValue(allowedPostCoordAxesProp, linSpec);
         } catch (Exception e) {
-            log.warning("------- Error at adding linearization " + linearizationViewInst.getName() + " to " + cat);
+            log.log(Level.WARNING, "------- Error at adding linearization " + linearizationViewInst.getName() + " to " + cat, e);
         }
 
     }
