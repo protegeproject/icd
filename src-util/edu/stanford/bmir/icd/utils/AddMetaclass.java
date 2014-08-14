@@ -47,12 +47,6 @@ public class AddMetaclass {
         icdContentModel = new ICDContentModel(owlModel);
 
         addMetaclass();
-
-        prj.save(errors);
-        if (errors != null) {
-            ProjectManager.getProjectManager().displayErrors("Errors", errors);
-        }
-
     }
 
     private static void addMetaclass() {
