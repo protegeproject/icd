@@ -1,0 +1,9 @@
+Fixed topology sub-properties and its value sets:
+Renamed the following properties:
+    superficialOrDeep to relational, 
+    externalOrInternal to regional
+and the following classes:
+    SuperficialOrDeepReferenceTerm to RelationalReferenceTerm
+    ExternalOrInternalReferenceTerm to RegionalReferenceTerm
+
+In fact the new "relational" property includes both superficialOrDeep and externalOrInternal, and more, and regional is an unrelated sub-axes. We reused the existing properties (by renaming them) only to keep the change history more simple.
