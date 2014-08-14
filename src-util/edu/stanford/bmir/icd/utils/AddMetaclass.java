@@ -56,12 +56,14 @@ public class AddMetaclass {
     }
 
     private static void addMetaclass() {
-        long t0 = System.currentTimeMillis();
+
+    	Log.getLogger().info("Started to retrieve disease classes at: " + new Date());
+    	long t0 = System.currentTimeMillis();
 
         owlModel.setGenerateEventsEnabled(false);
         RDFSNamedClass topClass = icdContentModel.getICDCategoryClass();
         
-        Collection<RDFSNamedClass> clses = topClass.getSubclasses(true);
+        Collection<RDFSNamedClass> clses = new ArrayList<RDFSNamedClass>(topClass.getSubclasses(true));
         clses.add(topClass);
         
         long t1 = System.currentTimeMillis();
