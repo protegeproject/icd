@@ -15,11 +15,11 @@ import edu.stanford.smi.protegex.owl.model.RDFSNamedClass;
 public class AddMetaclass {
     private static OWLModel owlModel;
     private static ICDContentModel icdContentModel;
-    private static RDFSNamedClass causalMechMetaclass;
+    private static RDFSNamedClass metaclass;
 
     public static void main(String[] args) {
-        if (args.length != 1) {
-            System.out.println("Argument missing: pprj file name");
+        if (args.length != 2) {
+            System.out.println("Expected arguments: pprj file name and metaclass name ");
             return;
         }
 
@@ -36,6 +36,14 @@ public class AddMetaclass {
             System.out.println("Failed");
             return;
         }
+        
+        metaclass = (RDFSNamedClass) owlModel.getCls(args[1]);
+        
+        if (metaclass == null) {
+        	System.out.println("Could not find metaclass: " + args[1]);
+        	return;
+        }
+        
         icdContentModel = new ICDContentModel(owlModel);
 
         addMetaclass();
@@ -51,29 +59,31 @@ public class AddMetaclass {
         long t0 = System.currentTimeMillis();
 
         owlModel.setGenerateEventsEnabled(false);
-        RDFSNamedClass ictmCatCls = owlModel.getRDFSNamedClass("http://who.int/ictm#ICTMCategory");
-
-        causalMechMetaclass = owlModel.getRDFSNamedClass("http://who.int/icd#CausalMechanismAndRiskFactorsSection");
-
-        Collection<RDFSNamedClass> clses = ictmCatCls.getSubclasses(true);
-
+        RDFSNamedClass topClass = icdContentModel.getICDCategoryClass();
+        
+        Collection<RDFSNamedClass> clses = topClass.getSubclasses(true);
+        clses.add(topClass);
+        
+        long t1 = System.currentTimeMillis();
+		Log.getLogger().info("Retrieved " + clses.size() + " classes in " + (t1 - t0)/1000 + " secs. Time: " + new Date());
+        
         int i = 0;
 
         for (RDFSNamedClass cls : clses) {
             i++;
             if (i % 500 == 0) {
-                Log.getLogger().info("Fixed: " + i + " classes. Time: " + new Date());
+                Log.getLogger().info("Added metaclass to: " + i + " classes. Time: " + new Date());
             }
             fixMetacls(cls);
         }
 
-        System.out.println("Time: " + (System.currentTimeMillis() - t0) /1000 + " sec");
+        Log.getLogger().info("Time: " + (System.currentTimeMillis() - t1) /1000 + " sec");
         owlModel.setGenerateEventsEnabled(true);
     }
 
     private static void fixMetacls(Cls c) {
-        if (!c.hasDirectType(causalMechMetaclass)) {
-            c.addDirectType(causalMechMetaclass);
+        if (!c.hasDirectType(metaclass)) {
+            c.addDirectType(metaclass);
         }
     }
 
