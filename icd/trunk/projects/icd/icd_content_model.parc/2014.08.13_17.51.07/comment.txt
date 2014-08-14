@@ -1,0 +1,21 @@
+Replaced levelOfConsciousness property with the following property hierarchy 
+consciousnessMeasure
+-levelOfConsciousness
+--hasGCSScore
+---hasGCSVerbalScore
+---hasGCSEyeScore
+---hasGCSMotorScore
+--hasPupilReactionScore
+-durationOfComa
+
+The values of these property come from from the following PostcoordinationValueReferenceTerm hierarchy:
+ConsciousnessMeasureReferenceTerm
+-LevelOfConsciousnessReferenceTerm
+--GCSScoreReferenceTerm
+---GCSVerbalScoreReferenceTerm
+---GCSEyeScoreReferenceTerm
+---GCSMotorScoreReferenceTerm
+--PupilReactionScoreReferenceTerm
+-DurationOfComaReferenceTerm
+
+LevelOfConsciousnessMetaClass was renamed to ConsciousnessMeasureMetaClass, and the  "referencedValue only ConsciousnessMeasureMetaClass" was moved to the top reference term class for consciusness: ConsciousnessMeasureReferenceTerm
