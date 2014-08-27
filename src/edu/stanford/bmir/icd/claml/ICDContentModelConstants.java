@@ -40,6 +40,7 @@ public class ICDContentModelConstants {
     public final static String TERM_DEFINITION_CLASS = NS + "DefinitionTerm";
     public final static String TERM_EXTERNAL_DEFINITION_CLASS = NS + "ExternalDefinitionTerm";
     public final static String TERM_REFERENCE_CLASS = NS + "ReferenceTerm";
+    public final static String TERM_SNOMED_REFERENCE_CLASS = NS + "SnomedReferenceTerm";
     public final static String TERM_SYNONYM_CLASS = NS + "SynonymTerm";
     @Deprecated
     public final static String TERM_INDEX_CLASS = NS + "IndexTerm";
@@ -86,6 +87,7 @@ public class ICDContentModelConstants {
     public final static String SUBCLASS_BASE_INCLUSION_PROP = NS + "subclassBaseInclusion";
     public final static String BASE_EXCLUSION_PROP = NS + "baseExclusion";
     public final static String SORTING_LABEL_PROP = NS + "sortingLabel";
+    public final static String EXTERNAL_REFERENCE_PROP = NS + "externalReference";
 
     @Deprecated
     public final static String INCLUSION_PROP = NS + "inclusion";
@@ -130,7 +132,7 @@ public class ICDContentModelConstants {
     public final static String LINEARIZATION_VIEW_MORTALITY = NS + "Mortality";
     public final static String LINEARIZATION_VIEW_PRIMARY_CARE = NS + "PrimaryCare";
     public final static String LINEARIZATION_VIEW_OPHTHALMOLOGY = NS + "Specialty_Adaptation_Ophthalmology";
-    
+
     public final static String SUPPRESS_OTHER_SPECIFIED_RESIDUALS = NS + "suppressOtherSpecifiedResiduals";
     public final static String SUPPRESS_UNSPECIFIED_RESIDUALS = NS + "suppressUnspecifiedResiduals";
     public final static String OTHER_SPECIFIED_RESIDUAL_TITLE = NS + "otherSpecifiedResidualTitle";
