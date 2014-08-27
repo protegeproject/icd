@@ -6,7 +6,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URI;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
@@ -27,7 +26,7 @@ import edu.stanford.smi.protegex.owl.model.RDFProperty;
 
 public class InsertLabelsFromTerms {
     private static Logger log = Log.getLogger(InsertLabelsFromTerms.class);
-   
+
     public static final String BIOPORTAL_DELAY_PROPERTY="bioportal.call.delay";
     public static final String ICD_ONTOLOGY_LOCATION_PROPERTY="labels.from.term.ontology.location";
     public static final String LABEL_PROPERTY="labels.from.term.label.property";
@@ -35,7 +34,7 @@ public class InsertLabelsFromTerms {
     public static final String RECURSIVE_PROPERTY="labels.from.term.recursive";
     public static final String SNOMED_REST_URL="labels.from.term.rest.url.prefix";
     public static final String TERM_ID_PROPERTY="labels.from.term.id.property";
-    
+
 
     public static String ICD_NS = "http://who.int/icd#";
 
@@ -44,10 +43,10 @@ public class InsertLabelsFromTerms {
     private String  referenceTermName;
     private String  restUrlPrefix;
     private String  termIdPropertyName=ICD_NS + "termId";
-    
+
     private Properties parameters = new Properties();
     private OWLModel owlModel;
-    
+
     public InsertLabelsFromTerms() throws FileNotFoundException, IOException {
         parameters.load(new FileInputStream(new File("local.properties")));
         labelPropertyName = parameters.getProperty(LABEL_PROPERTY);
@@ -56,7 +55,7 @@ public class InsertLabelsFromTerms {
         recursive = parameters.getProperty(RECURSIVE_PROPERTY).toLowerCase().equals("true");
         termIdPropertyName = parameters.getProperty(TERM_ID_PROPERTY);
     }
-    
+
     @SuppressWarnings("unchecked")
     public void loadOntology() throws OntologyLoadException {
         OwlProjectFromUriCreator creator = new OwlProjectFromUriCreator();
@@ -77,7 +76,7 @@ public class InsertLabelsFromTerms {
         }
         owlModel = creator.getOwlModel();
     }
-    
+
     @SuppressWarnings("unchecked")
     public void saveOntology() throws IOException  {
         List errors  = new ArrayList();
@@ -94,12 +93,12 @@ public class InsertLabelsFromTerms {
             throw new IOException();
         }
     }
-    
+
     public void run() throws MalformedURLException {
         OWLNamedClass referenceTermCls = owlModel.getOWLNamedClass(referenceTermName);
         OWLDatatypeProperty termIdProperty = owlModel.getOWLDatatypeProperty(termIdPropertyName);
         RDFProperty labelProperty = owlModel.getRDFProperty(labelPropertyName);
-        
+
         int total = referenceTermCls.getInstanceCount(true);
         int found = 0;
         int counter = 0;
@@ -112,11 +111,11 @@ public class InsertLabelsFromTerms {
                 OWLIndividual i = (OWLIndividual) o;
                 Object v = i.getPropertyValue(termIdProperty);
 
-                if (i.getPropertyValue(labelProperty) == null && 
+                if (i.getPropertyValue(labelProperty) == null &&
                         i.getPropertyValue(termIdProperty) != null &&
                         v instanceof String) {
                     String value = (String) v;
-                    
+
                     String label = getLabelFromTermId(value);
                     if (label != null) {
                         if (++found % 100 == 0) {
@@ -129,7 +128,7 @@ public class InsertLabelsFromTerms {
         }
         log.info("Added Property level for " + found  + "individual");
     }
-    
+
     private String getLabelFromTermId(String termId) throws MalformedURLException {
         try {
             Long.parseLong(termId);
@@ -137,10 +136,11 @@ public class InsertLabelsFromTerms {
         catch (NumberFormatException nfe) {
             return null;
         }
-        
-        ClassBean cb;
+
+        ClassBean cb = null;
         try {
-            cb = new BioportalConcept().getConceptProperties(new URL(restUrlPrefix + termId));
+            //does not compile
+            //cb = new BioportalConcept().getConceptProperties(new URL(restUrlPrefix + termId));
         }
         catch (Throwable t) {
             return null;
@@ -152,13 +152,13 @@ public class InsertLabelsFromTerms {
             return null;
         }
     }
-    
-    
+
+
     /**
      * @param args
-     * @throws IOException 
-     * @throws FileNotFoundException 
-     * @throws OntologyLoadException 
+     * @throws IOException
+     * @throws FileNotFoundException
+     * @throws OntologyLoadException
      */
     public static void main(String[] args) throws FileNotFoundException, IOException, OntologyLoadException {
         Logger.getLogger(BioportalConcept.class.getName()).setLevel(Level.SEVERE);

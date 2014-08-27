@@ -87,7 +87,16 @@ public class ImportSpecificAnatomyLocation {
         metaclasses.add(owlModel.getOWLNamedClass("http://who.int/icd#ValueMetaClass"));
     }
 
+
     private static void importFile(BufferedReader input) {
+        importLines(input);
+        addParents();
+
+        //TODO: optional
+        owlModel.getProject().save(new ArrayList());
+    }
+
+    private static void importLines(BufferedReader input) {
         String line = null;
         int index = 0;
         try {
@@ -116,15 +125,18 @@ public class ImportSpecificAnatomyLocation {
         String id = cols[0];
         String parentId = cols[1];
         String title = cols[2];
-        String snomedCode = cols[3];
-        String snomedTitle = cols[4];
-        String altTerm = cols[5];
-        String synonym = cols[6];
+        String snomedCode = cols.length > 3 ? cols[3] : null;
+        String snomedTitle = cols.length > 4 ? cols[4] : null;
+        String altTerm = cols.length > 5 ? cols[5] : null;
+        String synonym = cols.length > 6 ? cols[6] : null;
 
         OWLNamedClass cls = createClass(id);
         addProperties(cls, title, altTerm, synonym);
         addSnomedRef(cls, snomedCode, snomedTitle);
 
+        if (parentId != null) {
+            id2parentmap.put(cls, PREFIX_NEW_TERM +parentId);
+        }
     }
 
     private static OWLNamedClass createClass(String id) {
@@ -134,7 +146,7 @@ public class ImportSpecificAnatomyLocation {
     }
 
     private static void addMetaclasses(OWLNamedClass cls) {
-        for (OWLNamedClass metacls : metaclasses) {
+        for (RDFSNamedClass metacls : metaclasses) {
             cls.addProtegeType(metacls);
         }
     }
@@ -144,22 +156,47 @@ public class ImportSpecificAnatomyLocation {
         titleTerm.addPropertyValue(cm.getLabelProperty(), title);
         cls.addPropertyValue(cm.getIcdTitleProperty(), titleTerm);
 
-        RDFResource synTerm = cm.createSynonymTerm();
-        synTerm.addPropertyValue(cm.getLabelProperty(), synonym);
-        synTerm.addPropertyValue(cm.getLangProperty(), "en");
-        cls.addPropertyValue(cm.getSynonymProperty(), synTerm);
+        if (synonym != null && synonym.isEmpty() == false) {
+            RDFResource synTerm = cm.createSynonymTerm();
+            cm.fillTerm(synTerm, null, synonym, "en");
+            cls.addPropertyValue(cm.getSynonymProperty(), synTerm);
+        }
 
-        RDFResource altTerm = cm.createSynonymTerm();
-        altTerm.addPropertyValue(cm.getLabelProperty(), altName);
-        altTerm.addPropertyValue(cm.getLangProperty(), "en");
-        // TODO: adding the altTerm as synonym for now
-        cls.addPropertyValue(cm.getSynonymProperty(), altTerm);
+        if (altName != null && altName.isEmpty() == false) {
+            RDFResource altTerm = cm.createSynonymTerm();
+            cm.fillTerm(altTerm, null, altName, "en");
+            // TODO: adding the altTerm as synonym for now
+            cls.addPropertyValue(cm.getSynonymProperty(), altTerm);
+        }
     }
 
 
     private static void addSnomedRef(OWLNamedClass cls, String snomedCode, String snomedTitle) {
-        RDFResource snomedRef = cm.getS
+        if (snomedCode == null) {
+            return;
+        }
 
+        RDFResource snomedRef = cm.createSnomedReferenceTerm();
+        cm.fillTerm(snomedRef, snomedCode, snomedTitle, "en");
+        //TODO: not sure if we should use termId or id, so we use both
+        snomedRef.addPropertyValue(cm.getTermIdProperty(), snomedCode);
+
+        cls.addPropertyValue(cm.getExternalReferenceProperty(), snomedRef);
+
+    }
+
+    private static void addParents(){
+        log.info("Adding parents started at: " + new Date());
+
+        for (OWLNamedClass cls : id2parentmap.keySet()) {
+            OWLNamedClass parent = owlModel.getOWLNamedClass(id2parentmap.get(cls));
+            if (parent != null) {
+                cls.addSuperclass(parent);
+                cls.removeSuperclass(owlModel.getOWLThingClass());
+            } else {
+                log.warning("Could not find parent "+ parent +" for class: " + cls);
+            }
+        }
     }
 
     private static void closeReader(BufferedReader input) {

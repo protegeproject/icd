@@ -29,7 +29,7 @@ public class AddPostcoordinationLinearizations {
     private static OWLNamedClass postCoordAxesSpecCls;
     private static RDFProperty allowedPostCoordAxesProp;
     private static RDFProperty linearizationViewProp;
-    
+
     private static List<RDFIndividual> postCoordinationLinearizationViews;
 
 
@@ -76,10 +76,10 @@ public class AddPostcoordinationLinearizations {
         postCoordAxesSpecCls = (OWLNamedClass) icdContentModel.getPostcoordinationAxesSpecificationClass();
         allowedPostCoordAxesProp = icdContentModel.getAllowedPostcoordinationAxesProperty();
         linearizationViewProp = icdContentModel.getLinearizationViewProperty();
-        
+
         initPostcoordinationLinearizations();
     }
-    
+
     private static void initPostcoordinationLinearizations() {
     	RDFSNamedClass linViewCls = owlModel.getRDFSNamedClass("http://who.int/icd#ICD11LinearizationView");
     	postCoordinationLinearizationViews = new ArrayList<RDFIndividual>(linViewCls.getDirectInstances());
@@ -102,7 +102,7 @@ public class AddPostcoordinationLinearizations {
        }
 
     }
-    
+
     private static void addLinearizations(RDFSNamedClass cat) {
     	try {
     		for (RDFIndividual linView : postCoordinationLinearizationViews) {
