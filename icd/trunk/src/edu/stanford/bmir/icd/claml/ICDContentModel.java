@@ -78,6 +78,7 @@ public class ICDContentModel {
     private RDFSNamedClass termDefinitionClass;
     private RDFSNamedClass termExternalDefinitionClass;
     private RDFSNamedClass termReferenceClass;
+    private RDFSNamedClass termSnomedReferenceClass;
     private RDFSNamedClass termSynonymClass;
     private RDFSNamedClass termIndexClass;
     private RDFSNamedClass indexTermTypeClass;
@@ -107,6 +108,7 @@ public class ICDContentModel {
     private RDFProperty subclassBaseInclusionProperty;
     private RDFProperty baseExclusionProperty;
     private RDFProperty sortingLabelProperty;
+    private RDFProperty externalReferenceProperty;
 
     private RDFProperty inclusionProperty;
     private RDFProperty exclusionProperty;
@@ -116,6 +118,7 @@ public class ICDContentModel {
     private RDFProperty labelProperty;
     private RDFProperty langProperty;
     private RDFProperty ontologyIdProperty;
+    private RDFProperty termIdProperty;
 
     private RDFProperty icdRefCodeProperty;
     private RDFProperty clamlRefProperty;
@@ -334,6 +337,12 @@ public class ICDContentModel {
         return termReferenceClass;
     }
 
+    public RDFSNamedClass  getTermSnomedReferenceClass() {
+        if (termSnomedReferenceClass == null) {
+            termSnomedReferenceClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.TERM_SNOMED_REFERENCE_CLASS);
+        }
+        return termSnomedReferenceClass;
+    }
 
     public RDFSNamedClass getTermSynonymClass() {
         if (termSynonymClass == null) {
@@ -556,6 +565,13 @@ public class ICDContentModel {
         return baseExclusionProperty;
     }
 
+
+    public RDFProperty getExternalReferenceProperty() {
+        if (externalReferenceProperty == null) {
+            externalReferenceProperty = owlModel.getRDFProperty(ICDContentModelConstants.EXTERNAL_REFERENCE_PROP);
+        }
+        return externalReferenceProperty;
+    }
 
     @Deprecated
     public RDFProperty getIndexTypeProperty() {
@@ -829,7 +845,7 @@ public class ICDContentModel {
     	}
     	return precoordinationSuperclassProperty;
     }
-    
+
     public RDFProperty getIsObsoleteProperty() {
         if (isObsoleteProperty == null) {
             isObsoleteProperty = owlModel.getRDFProperty(ICDContentModelConstants.IS_OBSOLETE_PROP);
@@ -865,6 +881,14 @@ public class ICDContentModel {
         }
         return orderedChildProperty;
     }
+
+    public RDFProperty getTermIdProperty() {
+        if (termIdProperty == null) {
+            termIdProperty = owlModel.getRDFProperty(ICDContentModelConstants.TERM_ID_PROP);
+        }
+        return termIdProperty;
+    }
+
 
     /*
      * Getters for instances
@@ -1112,16 +1136,16 @@ public class ICDContentModel {
     }
 
     public void fillTerm(RDFResource term, String id, String label, String lang, String ontology) {
-        if (id != null) {
+        if (id != null && id.isEmpty() == false) {
             term.addPropertyValue(getIdProperty(), id);
         }
-        if (label != null) {
+        if (label != null && label.isEmpty() == false) {
             term.addPropertyValue(getLabelProperty(), label);
         }
-        if (lang != null) {
+        if (lang != null && lang.isEmpty() == false) {
             term.addPropertyValue(getLangProperty(), lang);
         }
-        if (ontology != null) {
+        if (ontology != null && ontology.isEmpty() == false) {
             term.addPropertyValue(getOntologyIdProperty(), ontology);
         }
     }
@@ -1148,6 +1172,10 @@ public class ICDContentModel {
 
     public RDFResource createTitleTerm() {
         return createTerm(getTermTitleClass());
+    }
+
+    public RDFResource createSnomedReferenceTerm() {
+        return createTerm(getTermSnomedReferenceClass());
     }
 
     public void addTitleTermToClass(RDFSNamedClass cls, RDFResource term) {
@@ -1544,47 +1572,47 @@ public class ICDContentModel {
         return getChildrenOrderProperty() != null;
     }
 
-    
+
     /*
      * Equivalent class definitions
      */
-    
+
     public RDFSNamedClass getPreecoordinationSuperclass(String clsName) {
     	RDFSNamedClass cls = getICDClass(clsName);
     	return getPreecoordinationSuperclass(cls);
     }
-    
+
     public RDFSNamedClass getPreecoordinationSuperclass(RDFSNamedClass cls) {
        	RDFProperty precoordSuperclassProp = getPrecoordinationSuperclassProperty();
     	return (RDFSNamedClass) cls.getPropertyValue(precoordSuperclassProp);
     }
-    
+
     public void setPrecoordinationSuperclass(String clsName, String superclsName) {
     	RDFSNamedClass cls = getICDClass(clsName);
     	RDFSNamedClass supercls = getICDClass(superclsName);
-    	
+
     	RDFProperty precoordSuperclassProp = getPrecoordinationSuperclassProperty();
 
     	//TODO see if we need transactions or if we need this method at all
     	cls.setPropertyValue(precoordSuperclassProp, supercls);
-    	
+
     	//TODO do we need to do something special here?
     }
 
     public void removePrecoordinationSuperclass(String clsName) {
     	//TODO
-    	
+
     }
-    
-    
+
+
     public OWLIntersectionClass getEquivalentPrecoordinationClassExpression(RDFSNamedClass cls) {
     	RDFSNamedClass precoordSuperclass = getPreecoordinationSuperclass(cls);
     	if (precoordSuperclass == null) {
-    		//precoordinationSuperclass is not set, so 
-    		//there can't be any equivalent class expression that involve that superclass 
+    		//precoordinationSuperclass is not set, so
+    		//there can't be any equivalent class expression that involve that superclass
     		return null;
     	}
-    	
+
     	Collection<?> equivalentClasses = cls.getEquivalentClasses();
     	if (equivalentClasses == null || equivalentClasses.isEmpty()) {
     		return null;
@@ -1595,18 +1623,18 @@ public class ICDContentModel {
     			return (OWLIntersectionClass) nextEqClass;
     		}
     	}
-    	
+
     	return null;
     }
-    
+
     public OWLIntersectionClass getNecessaryPrecoordinationClassExpression(RDFSNamedClass cls) {
     	RDFSNamedClass precoordSuperclass = getPreecoordinationSuperclass(cls);
     	if (precoordSuperclass == null) {
-    		//precoordinationSuperclass is not set, so 
-    		//there can't be any equivalent class expression that involve that superclass 
+    		//precoordinationSuperclass is not set, so
+    		//there can't be any equivalent class expression that involve that superclass
     		return null;
     	}
-    	
+
     	Collection<?> superclasses = cls.getSuperclasses(false);
     	if (superclasses == null || superclasses.isEmpty()) {
     		return null;
@@ -1618,13 +1646,13 @@ public class ICDContentModel {
     			return (OWLIntersectionClass) nextSuperclass;
     		}
     	}
-    	
+
     	return null;
     }
-    
+
     /**
      * If this method returns true, then the classExpr can be casted to OWLIntersectionClass.
-     * 
+     *
      * @param classExpr a class expression that is part of a class definition, either as a necessary
      * 		condition or as necessary &amp; sufficient condition
      * @param precoordSuperclass the selected precoordination superclass, which needs to be part of a
@@ -1648,7 +1676,7 @@ public class ICDContentModel {
     		return false;
     	}
     }
-    
+
     /**
      * Return the names of the properties that are involved in the precoordination definition
      * of the class <code>cls</code>. If the second <code>definitional</code> is true,
@@ -1666,7 +1694,7 @@ public class ICDContentModel {
     	else {
     		classExpression = getNecessaryPrecoordinationClassExpression(cls);
     	}
-    	
+
     	return getPropertiesFromClassExpression(classExpression);
     }
 
@@ -1693,7 +1721,7 @@ public class ICDContentModel {
     	}
     	return res;
 	}
-	
+
 	public Collection<PrecoordinationDefinitionComponent> getPrecoordinationPropertyValues(RDFSNamedClass cls, Collection<String> properties) {
 		OWLIntersectionClass eqClassExpression = getEquivalentPrecoordinationClassExpression(cls);
 		OWLIntersectionClass necClassExpression = getNecessaryPrecoordinationClassExpression(cls);
@@ -1702,7 +1730,7 @@ public class ICDContentModel {
 
 		Collection<PrecoordinationDefinitionComponent> res = new ArrayList<PrecoordinationDefinitionComponent>();
 		for (Iterator<String> it = properties.iterator(); it.hasNext();) {
-			String property = (String) it.next();
+			String property = it.next();
 			PrecoordinationDefinitionComponent value;
 			if (defProps.contains(property)) {
 				value = getPropertyValueFromClassExpression(eqClassExpression, property, true);
@@ -1717,7 +1745,7 @@ public class ICDContentModel {
 		}
 		return res;
 	}
-	
+
 	private PrecoordinationDefinitionComponent getPropertyValueFromClassExpression(
 			OWLIntersectionClass classExpression, String property, boolean isDefinitional) {
     	Collection<RDFSClass> operands = classExpression.getOperands();
@@ -1730,14 +1758,14 @@ public class ICDContentModel {
     			if (operand instanceof OWLHasValue) {
     				OWLHasValue exRestr = (OWLHasValue) operand;
     				if (exRestr.getOnProperty().getName().equals(property)) {
-    					return new PrecoordinationDefinitionComponent(property, 
+    					return new PrecoordinationDefinitionComponent(property,
     							((RDFResource)exRestr.getHasValue()).getName(), ValueType.INSTANCE, isDefinitional);
     				}
     			}
     			if (operand instanceof OWLSomeValuesFrom) {
     				OWLSomeValuesFrom exRestr = (OWLSomeValuesFrom) operand;
     				if (exRestr.getOnProperty().getName().equals(property)) {
-    					return new PrecoordinationDefinitionComponent(property, 
+    					return new PrecoordinationDefinitionComponent(property,
     							exRestr.getSomeValuesFrom().getName(), ValueType.CLS, isDefinitional);
     				}
     			}
@@ -1751,7 +1779,7 @@ public class ICDContentModel {
 		private String value;
 		private ValueType valueType;
 		private boolean isDefinitional;
-		
+
 		public PrecoordinationDefinitionComponent(String property,
 				String value, ValueType valueType, boolean isDefinitional) {
 			this.property = property;
@@ -1759,7 +1787,7 @@ public class ICDContentModel {
 			this.valueType = valueType;
 			this.isDefinitional = isDefinitional;
 		}
-		
+
 		public String getProperty() {
 			return property;
 		}
@@ -1775,14 +1803,14 @@ public class ICDContentModel {
 		public ValueType getValueType() {
 			return valueType;
 		}
-		
+
 
 		@Override
 		public String toString() {
 			return "PrecoordinationClassExpressionData(" +
 					property + ", " +
-					value + ", " + 
-					valueType + ", " + 
+					value + ", " +
+					valueType + ", " +
 					isDefinitional + ")";
 		}
 
@@ -1801,7 +1829,7 @@ public class ICDContentModel {
 			addPropertyRestrictionToClassExpression(necClassExpression, property, newValue);
 			return true;
 		}
-		
+
 		if (newValue == null) {
 			boolean changed = false;
 			if (defProps.contains(property)) {
@@ -1824,8 +1852,8 @@ public class ICDContentModel {
 			}
 			return changed;
 		}
-		
-		// here we want to add or replace an old value with a (non-null) new value 
+
+		// here we want to add or replace an old value with a (non-null) new value
 		if (oldValue == null) {
 			if (necProps.contains(property)) {
 				//this must be an error
@@ -1839,7 +1867,7 @@ public class ICDContentModel {
 						" Although oldValue is null, " + property + " appears in necessary & sufficient condition: " + eqClassExpression.getBrowserText());
 				removePropertyRestrictionFromClassExpression(eqClassExpression, property);
 			}
-			//TODO see if there are cases when we need to add it to the eq. class expr. 
+			//TODO see if there are cases when we need to add it to the eq. class expr.
 			if (necClassExpression == null) {
 				necClassExpression = createPrecoordinationClassExpressionDraft(cls, false);
 			}
@@ -1939,7 +1967,7 @@ public class ICDContentModel {
 					//((OWLNamedClass)cls).addEquivalentClass(eqClassExpression);
 				}
 				eqClassExpression.addOperand(restr);
-				
+
 				if (necProps.size() == 1) {
 					((OWLNamedClass)cls).removeSuperclass(necClassExpression);
 				}
@@ -1957,7 +1985,7 @@ public class ICDContentModel {
 					//((OWLNamedClass)cls).addSuperclass(necClassExpression);
 				}
 				necClassExpression.addOperand(restr);
-				
+
 				if (defProps.size() == 1) {
 					removeEquivalentClass(cls, eqClassExpression);
 				}
@@ -1977,16 +2005,16 @@ public class ICDContentModel {
 		for (RDFSClass eqClassExpComp : eqClassExpression.getOperands()) {
 			if (eqClassExpComp instanceof OWLNamedClass &&
 					directSuperclasses.contains(eqClassExpComp)) {
-				namedSuperclasses.add((OWLNamedClass) eqClassExpComp);				
+				namedSuperclasses.add((OWLNamedClass) eqClassExpComp);
 			}
 		}
-		
+
 		boolean generateEvents = owlModel.getGenerateEventsEnabled();
 		try {
 			owlModel.setGenerateEventsEnabled(false);
-			
+
 			((OWLNamedClass)cls).removeEquivalentClass(eqClassExpression);
-			
+
 			//this is necessary because removeEquivalentClass removes also the named superclass
 			for (OWLNamedClass superclass : namedSuperclasses) {
 				cls.addSuperclass(superclass);
@@ -2013,14 +2041,14 @@ public class ICDContentModel {
 		}
 		return null;
 	}
-	
+
 	private OWLRestriction removePropertyRestrictionFromClassExpression(
 			OWLIntersectionClass classExpression, String property) {
 		OWLRestriction restr = getPropertyRestrictionFromClassExpression(classExpression, property);
 		if (restr == null) {
 			return null;
 		}
-		
+
 		//OWLRestriction cloneRestr = (OWLRestriction) restr.createClone();  //very slow
 		OWLRestriction cloneRestr = cloneOWLRestriction(restr);
 		classExpression.removeOperand(restr);
