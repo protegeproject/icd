@@ -23,11 +23,11 @@ import edu.stanford.smi.protegex.owl.model.RDFResource;
 import edu.stanford.smi.protegex.owl.model.RDFSNamedClass;
 
 
-public class ImportSeverity {
-    private static Logger log = Log.getLogger(ImportSeverity.class);
+public class ImportTopology {
+    private static Logger log = Log.getLogger(ImportTopology.class);
 
     private static final String SEPARATOR = "\t";
-    private static final String PREFIX_NEW_TERM = "http://who.int/icd#Severity_";
+    private static final String PREFIX_NEW_TERM = "http://who.int/icd#Topology_";
 
     //no. of columns that represent tree levels
     private static final int NO_OF_TREE_COLUMNS = 2;
@@ -86,7 +86,7 @@ public class ImportSeverity {
         metaclasses.add(cm.getLinearizationMetaClass());
         metaclasses.add(cm.getSnomedReferenceMetaClass());
         //FIXME: check if this is the right metaclass
-        metaclasses.add(owlModel.getOWLNamedClass("http://who.int/icd#SeverityMetaClass"));
+        metaclasses.add(owlModel.getOWLNamedClass("http://who.int/icd#TopologyMetaClass"));
         metaclasses.add(owlModel.getOWLNamedClass("http://who.int/icd#ValueMetaClass"));
     }
 
