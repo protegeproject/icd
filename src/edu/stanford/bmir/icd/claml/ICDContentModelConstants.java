@@ -66,6 +66,8 @@ public class ICDContentModelConstants {
 
     public final static String CHILD_ORDER_CLASS = NS +"ChildOrder";
 
+    public final static  String CHAPTER_X_CLASS = NS + "ChapterX";
+
 
     /*
      * Properties
@@ -211,6 +213,8 @@ public class ICDContentModelConstants {
 	public final static String PC_SCALE_SEVERITY = NS + "hasSeverityScale";
 	public final static String PC_SCALE_COURSE = NS + "hasCourseScale";
 	public final static String PC_SCALE_PATTERN_AND_ONSET = NS + "hasPatternActivityClinicalStatusScale";
+
+	public final static String REFERENCED_VALUE_PROP = NS + "referencedValue";
 
     /*
      * Instances
