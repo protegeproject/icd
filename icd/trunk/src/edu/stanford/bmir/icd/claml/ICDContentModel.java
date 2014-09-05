@@ -89,6 +89,7 @@ public class ICDContentModel {
 
     private RDFSNamedClass externalCausesTopClass;
     private RDFSNamedClass childOrderClass;
+    private RDFSNamedClass chapterXClass;
 
     /*
      * Properties
@@ -163,6 +164,8 @@ public class ICDContentModel {
     private RDFProperty childrenOrderProperty;
     private RDFProperty orderedChildIndexProperty;
     private RDFProperty orderedChildProperty;
+
+    private RDFProperty referencedValueProperty;
 
     /*
      * Instances
@@ -460,6 +463,13 @@ public class ICDContentModel {
             childOrderClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.CHILD_ORDER_CLASS);
         }
         return childOrderClass;
+    }
+
+    public RDFSNamedClass getChapterXClass() {
+        if (chapterXClass == null) {
+            chapterXClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.CHAPTER_X_CLASS);
+        }
+        return chapterXClass;
     }
 
     /*
@@ -888,6 +898,14 @@ public class ICDContentModel {
         }
         return termIdProperty;
     }
+
+    public RDFProperty getReferencedValueProperty() {
+        if (referencedValueProperty == null) {
+            referencedValueProperty = owlModel.getRDFProperty(ICDContentModelConstants.REFERENCED_VALUE_PROP);
+        }
+        return referencedValueProperty;
+    }
+
 
 
     /*
