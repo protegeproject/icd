@@ -28,12 +28,14 @@ public class ImportTemporality {
 
     private static final String SEPARATOR = "\t";
     private static final String PREFIX_NEW_TERM = "http://who.int/icd#Temporality_";
+    private static final String VALUE_SET_PARENT_CLASS_NAME = "http://who.int/icd#Temporality";
 
     //no. of columns that represent tree levels
     private static final int NO_OF_TREE_COLUMNS = 4;
 
     private static ICDContentModel cm;
     private static OWLModel owlModel;
+    private static OWLNamedClass valueSetTopClass;
 
     private static List<RDFSNamedClass> metaclasses = new ArrayList<RDFSNamedClass>();
     private static Map<Integer, OWLNamedClass> currentParentForLevel = new HashMap<Integer, OWLNamedClass>();
@@ -88,6 +90,11 @@ public class ImportTemporality {
         //FIXME: check if this is the right metaclass
         metaclasses.add(owlModel.getOWLNamedClass("http://who.int/icd#TimeInLifeMetaClass"));
         metaclasses.add(owlModel.getOWLNamedClass("http://who.int/icd#ValueMetaClass"));
+
+        valueSetTopClass = owlModel.getOWLNamedClass(VALUE_SET_PARENT_CLASS_NAME);
+        if (valueSetTopClass == null) {
+            valueSetTopClass = owlModel.createOWLNamedSubclass(VALUE_SET_PARENT_CLASS_NAME, (OWLNamedClass)cm.getChapterXClass());
+        }
     }
 
 
@@ -140,10 +147,12 @@ public class ImportTemporality {
         String synonym = getValue(cols, NO_OF_TREE_COLUMNS);
         String narrowerTerm = getValue(cols, NO_OF_TREE_COLUMNS + 1);
         String definitionTerm = getValue(cols, NO_OF_TREE_COLUMNS + 2);
+        String refTermCls = getValue(cols, NO_OF_TREE_COLUMNS + 3);
 
         OWLNamedClass cls = createClass(id);
         addProperties(cls, id, narrowerTerm, synonym, definitionTerm);
         //addSnomedRef(cls, snomedCode, snomedTitle);
+        addReferenceScaleValueTerm(refTermCls, cls);
 
         currentParentForLevel.put(i, cls);
 
@@ -153,7 +162,8 @@ public class ImportTemporality {
 
     private static void addParent(OWLNamedClass cls, int level, String line) {
         if (level == 0) {
-            cls.addSuperclass(owlModel.getOWLThingClass());
+            cls.addSuperclass(valueSetTopClass);
+            cls.removeSuperclass(owlModel.getOWLThingClass());
             return;
         }
 
@@ -214,6 +224,22 @@ public class ImportTemporality {
             cm.fillTerm(defTerm, null, definitionName, "en");
             cls.addPropertyValue(cm.getDefinitionProperty(), defTerm);
         }
+    }
+
+    private static void addReferenceScaleValueTerm(String refTermClsName, OWLNamedClass cls) {
+        if (refTermClsName == null) {
+            return;
+        }
+
+        OWLNamedClass refTermCls = owlModel.getOWLNamedClass(refTermClsName);
+        if (refTermCls == null) {
+            log.warning("Could not find term reference class: " + refTermClsName);
+            return;
+        }
+
+        RDFResource refTerm = cm.createTerm(refTermCls);
+        refTerm.addPropertyValue(cm.getReferencedValueProperty(), cls);
+
     }
 
 
