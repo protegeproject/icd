@@ -23,11 +23,11 @@ import edu.stanford.smi.protegex.owl.model.RDFResource;
 import edu.stanford.smi.protegex.owl.model.RDFSNamedClass;
 
 
-public class ImportSpecificAnatomyLocation {
-    private static Logger log = Log.getLogger(ImportSpecificAnatomyLocation.class);
+public class ImportSpecificAnatomicLocation {
+    private static Logger log = Log.getLogger(ImportSpecificAnatomicLocation.class);
 
     private static final String SEPARATOR = "\t";
-    private static final String PREFIX_NEW_TERM = "http://who.int/icd#SpecificAnatomyLocation_";
+    private static final String PREFIX_NEW_TERM = "http://who.int/icd#SpecificAnatomicLocation_";
 
     private static ICDContentModel cm;
     private static OWLModel owlModel;
