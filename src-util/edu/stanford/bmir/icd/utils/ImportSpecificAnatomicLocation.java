@@ -28,9 +28,11 @@ public class ImportSpecificAnatomicLocation {
 
     private static final String SEPARATOR = "\t";
     private static final String PREFIX_NEW_TERM = "http://who.int/icd#SpecificAnatomicLocation_";
+    private static final String VALUE_SET_PARENT_CLASS_NAME = "http://who.int/icd#SpecificAnatomicLocation";
 
     private static ICDContentModel cm;
     private static OWLModel owlModel;
+    private static OWLNamedClass valueSetTopClass;
 
     private static List<RDFSNamedClass> metaclasses = new ArrayList<RDFSNamedClass>();
     private static Map<OWLNamedClass, String> id2parentmap = new HashMap<OWLNamedClass, String>();
@@ -82,9 +84,15 @@ public class ImportSpecificAnatomicLocation {
         metaclasses.add(cm.getTermMetaClass());
         metaclasses.add(cm.getLinearizationMetaClass());
         metaclasses.add(cm.getSnomedReferenceMetaClass());
+        metaclasses.add(cm.getExternalReferenceMetaClass());
         //FIXME: add to CM
         metaclasses.add(owlModel.getOWLNamedClass("http://who.int/icd#SpecificAnatomyMetaClass"));
         metaclasses.add(owlModel.getOWLNamedClass("http://who.int/icd#ValueMetaClass"));
+
+        valueSetTopClass = owlModel.getOWLNamedClass(VALUE_SET_PARENT_CLASS_NAME);
+        if (valueSetTopClass == null) {
+            valueSetTopClass = owlModel.createOWLNamedSubclass(VALUE_SET_PARENT_CLASS_NAME, (OWLNamedClass)cm.getChapterXClass());
+        }
     }
 
 

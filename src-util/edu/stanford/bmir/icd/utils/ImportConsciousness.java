@@ -16,6 +16,7 @@ import java.util.logging.Logger;
 import edu.stanford.bmir.icd.claml.ICDContentModel;
 import edu.stanford.smi.protege.model.Project;
 import edu.stanford.smi.protege.ui.ProjectManager;
+import edu.stanford.smi.protege.util.IDGenerator;
 import edu.stanford.smi.protege.util.Log;
 import edu.stanford.smi.protegex.owl.model.OWLModel;
 import edu.stanford.smi.protegex.owl.model.OWLNamedClass;
@@ -23,15 +24,15 @@ import edu.stanford.smi.protegex.owl.model.RDFResource;
 import edu.stanford.smi.protegex.owl.model.RDFSNamedClass;
 
 
-public class ImportTemporality {
-    private static Logger log = Log.getLogger(ImportTemporality.class);
+public class ImportConsciousness {
+    private static Logger log = Log.getLogger(ImportConsciousness.class);
 
     private static final String SEPARATOR = "\t";
-    private static final String PREFIX_NEW_TERM = "http://who.int/icd#Temporality_";
-    private static final String VALUE_SET_PARENT_CLASS_NAME = "http://who.int/icd#Temporality";
+    private static final String PREFIX_NEW_TERM = "http://who.int/icd#Consciousness_";
+    private static final String VALUE_SET_PARENT_CLASS_NAME = "http://who.int/icd#Consciousness";
 
     //no. of columns that represent tree levels
-    private static final int NO_OF_TREE_COLUMNS = 4;
+    private static final int NO_OF_TREE_COLUMNS = 2;
 
     private static ICDContentModel cm;
     private static OWLModel owlModel;
@@ -88,7 +89,7 @@ public class ImportTemporality {
         metaclasses.add(cm.getLinearizationMetaClass());
         metaclasses.add(cm.getExternalReferenceMetaClass());
         //FIXME: check if this is the right metaclass
-        metaclasses.add(owlModel.getOWLNamedClass("http://who.int/icd#TimeInLifeMetaClass"));
+        metaclasses.add(owlModel.getOWLNamedClass("http://who.int/icd#ConsciousnessMeasureMetaClass"));
         metaclasses.add(owlModel.getOWLNamedClass("http://who.int/icd#ValueMetaClass"));
 
         valueSetTopClass = owlModel.getOWLNamedClass(VALUE_SET_PARENT_CLASS_NAME);
@@ -146,11 +147,10 @@ public class ImportTemporality {
 
         String synonym = getValue(cols, NO_OF_TREE_COLUMNS);
         String narrowerTerm = getValue(cols, NO_OF_TREE_COLUMNS + 1);
-        String definitionTerm = getValue(cols, NO_OF_TREE_COLUMNS + 2);
-        String refTermCls = getValue(cols, NO_OF_TREE_COLUMNS + 3);
+        String refTermCls = getValue(cols, NO_OF_TREE_COLUMNS + 2);
 
         OWLNamedClass cls = createClass(id);
-        addProperties(cls, id, narrowerTerm, synonym, definitionTerm);
+        addProperties(cls, id, narrowerTerm, synonym);
         //addSnomedRef(cls, snomedCode, snomedTitle);
         addReferenceScaleValueTerm(refTermCls, cls);
 
@@ -190,8 +190,7 @@ public class ImportTemporality {
     }
 
     private static OWLNamedClass createClass(String id) {
-        id = id.replace(" ", "_");
-        OWLNamedClass cls = owlModel.createOWLNamedClass(PREFIX_NEW_TERM + id);
+        OWLNamedClass cls = owlModel.createOWLNamedClass(PREFIX_NEW_TERM + IDGenerator.getNextUniqueId());
         addMetaclasses(cls);
         return cls;
     }
@@ -202,7 +201,7 @@ public class ImportTemporality {
         }
     }
 
-    private static void addProperties(OWLNamedClass cls, String title, String narrowerName, String synonym, String definitionName) {
+    private static void addProperties(OWLNamedClass cls, String title, String narrowerName, String synonym) {
         RDFResource titleTerm = cm.createTitleTerm();
         titleTerm.addPropertyValue(cm.getLabelProperty(), title);
         cls.addPropertyValue(cm.getIcdTitleProperty(), titleTerm);
@@ -222,7 +221,7 @@ public class ImportTemporality {
         //Defintion term should always be created according to Csongor, even if empty
        // if (definitionName != null && definitionName.isEmpty() == false) {
             RDFResource defTerm = cm.createDefinitionTerm();
-            cm.fillTerm(defTerm, null, definitionName, "en");
+            cm.fillTerm(defTerm, null, null, "en");
             cls.addPropertyValue(cm.getDefinitionProperty(), defTerm);
        // }
     }
@@ -242,7 +241,6 @@ public class ImportTemporality {
         refTerm.addPropertyValue(cm.getReferencedValueProperty(), cls);
 
     }
-
 
     //may be used later
     private static void addSnomedRef(OWLNamedClass cls, String snomedCode, String snomedTitle) {

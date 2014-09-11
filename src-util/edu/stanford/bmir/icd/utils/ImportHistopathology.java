@@ -87,7 +87,7 @@ public class ImportHistopathology {
         metaclasses.add(cm.getDefinitionMetaClass());
         metaclasses.add(cm.getTermMetaClass());
         metaclasses.add(cm.getLinearizationMetaClass());
-        metaclasses.add(cm.getSnomedReferenceMetaClass());
+        metaclasses.add(cm.getExternalReferenceMetaClass());
         //FIXME: check if this is the right metaclass
         metaclasses.add(owlModel.getOWLNamedClass("http://who.int/icd#HistopathologyMetaClass"));
         metaclasses.add(owlModel.getOWLNamedClass("http://who.int/icd#ValueMetaClass"));
@@ -145,7 +145,7 @@ public class ImportHistopathology {
 
         if (TITLE.equals(type)) {
             addProperties(cls, value, null, null);
-            addSnomedRef(cls, icdocode, null);
+            addICDORef(cls, icdocode, null);
         } else if (SYN.equals(type)) {
             addProperties(cls, null, null, value);
         }
@@ -249,18 +249,18 @@ public class ImportHistopathology {
 
     }
 
-    //may be used later
-    private static void addSnomedRef(OWLNamedClass cls, String snomedCode, String snomedTitle) {
-        if (snomedCode == null) {
+    private static void addICDORef(OWLNamedClass cls, String code, String title) {
+        if (code == null) {
             return;
         }
 
-        RDFResource snomedRef = cm.createSnomedReferenceTerm();
-        cm.fillTerm(snomedRef, snomedCode, snomedTitle, "en");
+        RDFResource extRef = cm.createExternalReferenceTerm();
+        cm.fillTerm(extRef, code, title, "en");
         //TODO: not sure if we should use termId or id, so we use both
-        snomedRef.addPropertyValue(cm.getTermIdProperty(), snomedCode);
+        extRef.addPropertyValue(cm.getTermIdProperty(), code);
+        extRef.addPropertyValue(cm.getOntologyIdProperty(), "ICD-O");
 
-        cls.addPropertyValue(cm.getExternalReferenceProperty(), snomedRef);
+        cls.addPropertyValue(cm.getExternalReferenceProperty(), extRef);
 
     }
 
