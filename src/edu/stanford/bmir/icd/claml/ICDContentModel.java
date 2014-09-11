@@ -50,6 +50,7 @@ public class ICDContentModel {
     private RDFSNamedClass notesMetaClass;
     private RDFSNamedClass linearizationMetaClass;
     private RDFSNamedClass snomedReferenceMetaClass;
+    private RDFSNamedClass externalReferenceMetaClass;
     private RDFSNamedClass termMetaClass;
     private RDFSNamedClass specificConditionMetaClass;
     private RDFSNamedClass externalCauseMetaClass;
@@ -79,6 +80,7 @@ public class ICDContentModel {
     private RDFSNamedClass termExternalDefinitionClass;
     private RDFSNamedClass termReferenceClass;
     private RDFSNamedClass termSnomedReferenceClass;
+    private RDFSNamedClass termExternalReferenceClass;
     private RDFSNamedClass termSynonymClass;
     private RDFSNamedClass termIndexClass;
     private RDFSNamedClass indexTermTypeClass;
@@ -235,6 +237,13 @@ public class ICDContentModel {
         return snomedReferenceMetaClass;
     }
 
+    public RDFSNamedClass getExternalReferenceMetaClass() {
+        if (externalReferenceMetaClass == null) {
+            externalReferenceMetaClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.ICD_EXTERNAL_REFERENCE_METACLASS);
+        }
+        return externalReferenceMetaClass;
+    }
+
     public RDFSNamedClass getTermMetaClass() {
         if (termMetaClass == null) {
             termMetaClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.ICD_TERM_METACLASS);
@@ -345,6 +354,13 @@ public class ICDContentModel {
             termSnomedReferenceClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.TERM_SNOMED_REFERENCE_CLASS);
         }
         return termSnomedReferenceClass;
+    }
+
+    public RDFSNamedClass  getTermExternalReferenceClass() {
+        if (termExternalReferenceClass == null) {
+            termExternalReferenceClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.TERM_EXTERNAL_REFERENCE_CLASS);
+        }
+        return termExternalReferenceClass;
     }
 
     public RDFSNamedClass getTermSynonymClass() {
@@ -1194,6 +1210,10 @@ public class ICDContentModel {
 
     public RDFResource createSnomedReferenceTerm() {
         return createTerm(getTermSnomedReferenceClass());
+    }
+
+    public RDFResource createExternalReferenceTerm() {
+        return createTerm(getTermExternalReferenceClass());
     }
 
     public void addTitleTermToClass(RDFSNamedClass cls, RDFResource term) {
