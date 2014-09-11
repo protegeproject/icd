@@ -86,7 +86,7 @@ public class ImportSeverity {
         metaclasses.add(cm.getDefinitionMetaClass());
         metaclasses.add(cm.getTermMetaClass());
         metaclasses.add(cm.getLinearizationMetaClass());
-        metaclasses.add(cm.getSnomedReferenceMetaClass());
+        metaclasses.add(cm.getExternalReferenceMetaClass());
         //FIXME: check if this is the right metaclass
         metaclasses.add(owlModel.getOWLNamedClass("http://who.int/icd#SeverityMetaClass"));
         metaclasses.add(owlModel.getOWLNamedClass("http://who.int/icd#ValueMetaClass"));
@@ -219,6 +219,13 @@ public class ImportSeverity {
             cm.fillTerm(narrowerTerm, null, narrowerName, "en");
             cls.addPropertyValue(cm.getNarrowerProperty(), narrowerTerm);
         }
+
+        //Defintion term should always be created according to Csongor, even if empty
+       // if (definitionName != null && definitionName.isEmpty() == false) {
+            RDFResource defTerm = cm.createDefinitionTerm();
+            cm.fillTerm(defTerm, null, null, "en");
+            cls.addPropertyValue(cm.getDefinitionProperty(), defTerm);
+       // }
     }
 
     private static void addReferenceScaleValueTerm(String refTermClsName, OWLNamedClass cls) {
