@@ -1,0 +1,14 @@
+Created class ExternalReferenceTerm as subclass of ReferenceTerm and superclass of SnomedReferenceTerm.
+Created class ExternalReferenceSection as subclass of ICDSection and superclass of SnomedReferenceSection.
+
+Added icd:isTemplate as subproperty of protege:isTemplate, and moved the previous ICD specific domain of protege:isTemplate to icd:isTemplate.
+
+Created class hierarchy under PostcoordinationScaleTerm
+TemplateScaleTerm
+    TemplateCourseScaleTerm
+    TemplateSeverityScaleTerm
+    TemplateTemporalPatternAndOnsetScaleTerm
+and also made each Template[X]ScaleTerm subclass of [X]ScaleTerm.
+
+TemplateScaleTerm is also subclass of "icd:isTemplate value true".
+
