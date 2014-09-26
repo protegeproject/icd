@@ -148,6 +148,7 @@ public class ImportMedicaments {
             String currentParent = parentNameForLevel.get(i);
             if (currentParent == null || name.equalsIgnoreCase(currentParent) == false) {
                 OWLNamedClass cls = createClass();
+                addProperties(cls, name, null, null);
                 parentForLevel.put(i, cls);
                 parentNameForLevel.put(i, name);
                 addParent(cls, i, line);
@@ -275,6 +276,8 @@ public class ImportMedicaments {
         if (refTermClsName == null) {
             return;
         }
+
+        //TODO: check if reference not added already!!!
 
         OWLNamedClass refTermCls = owlModel.getOWLNamedClass(refTermClsName);
         if (refTermCls == null) {
