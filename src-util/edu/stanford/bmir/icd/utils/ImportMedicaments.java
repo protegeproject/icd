@@ -42,6 +42,8 @@ public class ImportMedicaments {
     private static Map<Integer, String> parentNameForLevel = new HashMap<Integer, String>();
     private static Map<Integer, OWLNamedClass> parentForLevel = new HashMap<Integer, OWLNamedClass>();
     private static Map<String, OWLNamedClass> synref2Class = new HashMap<String, OWLNamedClass>();
+    private static Map<String, OWLNamedClass> name2Class = new HashMap<Sring, OWLNamedClass>();
+    private static Map<OWLNamedClass, String> class2extRef = new HashMap<OWLNamedClass, String>();
 
     public static void main(String[] args) {
         if (args.length != 2) {
@@ -147,8 +149,12 @@ public class ImportMedicaments {
             String name = getValue(cols, i);
             String currentParent = parentNameForLevel.get(i);
             if (currentParent == null || name.equalsIgnoreCase(currentParent) == false) {
-                OWLNamedClass cls = createClass();
-                addProperties(cls, name, null, null);
+                OWLNamedClass cls = name2Class.get(name);
+                if (cls == null) {                
+                          cls = createClass();
+                          name2Class(name, cls);
+                          addProperties(cls, name, null, null);
+                }
                 parentForLevel.put(i, cls);
                 parentNameForLevel.put(i, name);
                 addParent(cls, i, line);
@@ -185,6 +191,7 @@ public class ImportMedicaments {
 
         } else { //pref is true, this is the first time the class is created
             currentCls = createClass();
+            name2Class.put(label, currentCls);
             synref2Class.put(synref, currentCls);
 
             addProperties(currentCls, label, null, null);
@@ -192,10 +199,22 @@ public class ImportMedicaments {
 
         addParent(currentCls, NO_OF_TREE_COLUMNS, line);
 
-        addExternalReference(currentCls, "ICD-10", icd10code, null);
-        addExternalReference(currentCls, "ATC", atccode, null);
-        addExternalReference(currentCls, "SNOMED-CT", snomedcode, null);
-        addExternalReference(currentCls, "Dermaallergen", dermaalergen, null);
+        if (isExtRef(currentCls, icd10code) == false) {
+              addExternalReference(currentCls, "ICD-10", icd10code, null);
+              addExtRef(currentCls, icd10code);
+        }
+        if (isExtRef(currentCls, atccode) == false) {
+              addExternalReference(currentCls, "ATC", atccode, null);
+              addExtRef(currentCls, atccode);
+         }
+         if (isExtRef(currentCls, snomedcode) == false) {
+                addExternalReference(currentCls, "SNOMED-CT", snomedcode, null);
+                 addExtRef(currentCls,snomedcode);
+         }
+         if (isExtRef(currentCls, dermaalergen) == false) {
+                 addExternalReference(currentCls, "Dermaallergen", dermaalergen, null);
+                  addExtRef(currentCls, dermaalergen);
+         }
     }
 
     @SuppressWarnings("deprecation")
@@ -212,12 +231,29 @@ public class ImportMedicaments {
             return;
         }
 
-        if (cls.hasSuperclass(parent) == false) {
+        if (cls.equals(parent) == false && cls.hasSuperclass(parent) == false) {
             cls.addSuperclass(parent);
             if (cls.hasSuperclass(owlModel.getOWLThingClass())) {
                 cls.removeSuperclass(owlModel.getOWLThingClass());
             }
         }
+    }
+
+    private static boolean isExtRef(OWLNamedClass cls, String extRef) {
+        Set<String> refs = class2extRef.get(cls);
+        if (ref == null) {
+             return false;
+        }
+        return refs.contains(extRef);
+    }
+
+    private static void addExtRef(OWLNamedClass cls, String extRef) {
+        Set<String> refs = class2extRef.get(cls);
+        if (refs = null) {
+              refs = new HashSet<String>();
+        }
+        refs.add(extRef);
+        class2extRef.put(cls, refs);
     }
 
     private static String getValue(String[] cols, int colNo) {
