@@ -192,11 +192,13 @@ public class ImportMedicaments {
 			 addProperties(currentCls, null, null, label);
 
 		 } else { //pref is true, this is the first time the class is created
-			 currentCls = createClass();
-			 name2Class.put(label, currentCls);
+			 currentCls = name2Class.get(label);
+			 if (currentCls == null) {
+				 currentCls = createClass();
+				 name2Class.put(label, currentCls);
+				 addProperties(currentCls, label, null, null);
+			 }
 			 synref2Class.put(synref, currentCls);
-
-			 addProperties(currentCls, label, null, null);
 		 }
 
 		 addParent(currentCls, NO_OF_TREE_COLUMNS, line);
