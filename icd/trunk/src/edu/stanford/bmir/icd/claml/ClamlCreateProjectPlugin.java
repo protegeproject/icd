@@ -13,6 +13,7 @@ import javax.swing.JPanel;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
+import edu.stanford.bmir.whofic.icd.ICDContentModelConstants;
 import edu.stanford.smi.protege.Application;
 import edu.stanford.smi.protege.exception.AmalgamatedLoadException;
 import edu.stanford.smi.protege.exception.OntologyLoadException;
