@@ -75,9 +75,5 @@ public class ICIContentModelConstants extends WHOFICContentModelConstants {
 			PC_AXIS_TARGET_ACTIVITY_PARTICIPATION, PC_AXIS_TARGET_ANATOMIC, PC_AXIS_TARGET_BEHAVIOR,
 			PC_AXIS_TARGET_ENVIRONMENTAL_FACTOR, PC_AXIS_TARGET_FUNCTION);
 
-//	public final static String PC_SCALE_SEVERITY = NS + "hasSeverityScale";
-//	public final static String PC_SCALE_COURSE = NS + "hasCourseScale";
-//	public final static String PC_SCALE_PATTERN_AND_ONSET = NS + "hasPatternActivityClinicalStatusScale";
-
 
 }

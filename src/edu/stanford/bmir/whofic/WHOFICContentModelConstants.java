@@ -1,7 +1,5 @@
 package edu.stanford.bmir.whofic;
 
-import java.util.Arrays;
-import java.util.List;
 
 public class WHOFICContentModelConstants {
 
@@ -148,59 +146,9 @@ public class WHOFICContentModelConstants {
 	public final static String ORDERED_CHILD_INDEX_PROP = NS + "orderedChildIndex";
 	public final static String ORDERED_CHILD_PROP = NS + "orderedChild";
 
-//	/* Post-Coordination Axis Properties */
-//
-//	public final static String PC_AXIS_SPECIFIC_ANATOMY = NS + "specificAnatomy";
-//	public final static String PC_AXIS_TOPOLOGY_DISTRIBUTION = NS + "distribution";
-//	public final static String PC_AXIS_TOPOLOGY_LATERALITY = NS + "laterality";
-//	public final static String PC_AXIS_TOPOLOGY_REGIONAL = NS + "regional";
-//	public final static String PC_AXIS_TOPOLOGY_RELATIONAL = NS + "relational";
-//	public final static String PC_AXIS_BIOLOGICAL_INDICATOR_GENOMIC_AND_CHOMOSOMAL_ANOMALY = NS + "genomicAndChomosomalAnomaly";
-//	public final static String PC_AXIS_BIOLOGICAL_INDICATOR_SEROTYPE = NS + "serotype";
-//	public final static String PC_AXIS_CONSCIOUSNESS_MEASURE_DURATION_OF_COMA = NS + "durationOfComa";
-//	public final static String PC_AXIS_LEVEL_OF_CONSCIOUSNESS = NS + "levelOfConsciousness";
-//	public final static String PC_AXIS_LEVEL_OF_CONSCIOUSNESS_HAS_GCS_SCORE = NS + "hasGCSScore";
-//	public final static String PC_AXIS_LEVEL_OF_CONSCIOUSNESS_HAS_GCS_SCORE_HAS_GCS_EYE_SCORE = NS + "hasGCSEyeScore";
-//	public final static String PC_AXIS_LEVEL_OF_CONSCIOUSNESS_HAS_GCS_SCORE_HAS_GCS_MOTOR_SCORE = NS + "hasGCSMotorScore";
-//	public final static String PC_AXIS_LEVEL_OF_CONSCIOUSNESS_HAS_GCS_SCORE_HAS_GCS_VERBAL_SCORE = NS + "hasGCSVerbalScore";
-//	public final static String PC_AXIS_LEVEL_OF_CONSCIOUSNESS_HAS_PUPIL_REACTION_SCORE = NS + "hasPupilReactionScore";
-//	public final static String PC_AXIS_DIAGNOSIS_CONFIRMED_BY = NS + "diagnosisConfirmedBy";
-//	public final static String PC_AXIS_ETIOLOGY_CAUSALITY = NS + "causality";
-//	public final static String PC_AXIS_ETIOLOGY_CHEMICAL_AGENT = NS + "chemicalAgent";
-//	public final static String PC_AXIS_ETIOLOGY_INFECTIOUS_AGENT = NS + "infectiousAgent";
-//	public final static String PC_AXIS_ETIOLOGY_MEDICATION = NS + "medication";
-//	//externalCauseDimension
-//	public final static String PC_AXIS_HAS_SEVERITY = NS + "hasSeverity";
-//	public final static String PC_AXIS_HISTOPATHOLOGY = NS + "histopathology";
-//	public final static String PC_AXIS_INJURY_QUALIFIER_CUSTOM_BURN_SCALE_VALUE = NS + "customBurnScaleValue";
-//	public final static String PC_AXIS_INJURY_QUALIFIER_CUSTOM_FRACTURE_SUBTYPE = NS + "fractureSubtype";
-//	public final static String PC_AXIS_INJURY_QUALIFIER_CUSTOM_TYPE_OF_INJURY = NS + "typeOfInjury";
-//	public final static String PC_AXIS_TEMPORALITY_COURSE = NS + "course";
-//	public final static String PC_AXIS_TEMPORALITY_PATTERN_AND_ONSET = NS + "temporalPatternAndOnset";
-//	public final static String PC_AXIS_TEMPORALITY_TIME_IN_LIFE = NS + "timeInLife";
-//    //TODO continue list
-////	public final static String[] PC_AXES_PROPERTIES = {PC_AXIS_SEVERITY, PC_AXIS_TEMPORALITY_COURSE,
-////		PC_AXIS_TEMPORALITY_PATTERN_AND_ONSET, PC_AXIS_ETIOLOGY_CAUSALITY, PC_AXIS_ETIOLOGY_INFECTIOUS_AGENT};
-//	public final static List<String> PC_AXES_PROPERTIES_LIST = Arrays.asList(
-//			PC_AXIS_SPECIFIC_ANATOMY, PC_AXIS_TOPOLOGY_DISTRIBUTION, PC_AXIS_TOPOLOGY_LATERALITY,
-//			PC_AXIS_TOPOLOGY_REGIONAL, PC_AXIS_TOPOLOGY_RELATIONAL, PC_AXIS_BIOLOGICAL_INDICATOR_GENOMIC_AND_CHOMOSOMAL_ANOMALY,
-//			PC_AXIS_BIOLOGICAL_INDICATOR_SEROTYPE,
-//			PC_AXIS_CONSCIOUSNESS_MEASURE_DURATION_OF_COMA,
-//			PC_AXIS_LEVEL_OF_CONSCIOUSNESS, PC_AXIS_LEVEL_OF_CONSCIOUSNESS_HAS_GCS_SCORE,
-//			PC_AXIS_LEVEL_OF_CONSCIOUSNESS_HAS_GCS_SCORE_HAS_GCS_EYE_SCORE,
-//			PC_AXIS_LEVEL_OF_CONSCIOUSNESS_HAS_GCS_SCORE_HAS_GCS_MOTOR_SCORE,
-//			PC_AXIS_LEVEL_OF_CONSCIOUSNESS_HAS_GCS_SCORE_HAS_GCS_VERBAL_SCORE,
-//			PC_AXIS_DIAGNOSIS_CONFIRMED_BY, PC_AXIS_ETIOLOGY_CAUSALITY,
-//			PC_AXIS_LEVEL_OF_CONSCIOUSNESS_HAS_PUPIL_REACTION_SCORE,
-//			PC_AXIS_ETIOLOGY_CHEMICAL_AGENT, PC_AXIS_ETIOLOGY_INFECTIOUS_AGENT, PC_AXIS_ETIOLOGY_MEDICATION,
-//			//PC_AXIS_EC...
-//			PC_AXIS_HAS_SEVERITY, PC_AXIS_HISTOPATHOLOGY, PC_AXIS_INJURY_QUALIFIER_CUSTOM_BURN_SCALE_VALUE,
-//			PC_AXIS_INJURY_QUALIFIER_CUSTOM_FRACTURE_SUBTYPE, PC_AXIS_INJURY_QUALIFIER_CUSTOM_TYPE_OF_INJURY,
-//			PC_AXIS_TEMPORALITY_COURSE, PC_AXIS_TEMPORALITY_PATTERN_AND_ONSET, PC_AXIS_TEMPORALITY_TIME_IN_LIFE);
-//
-//	public final static String PC_SCALE_SEVERITY = NS + "hasSeverityScale";
-//	public final static String PC_SCALE_COURSE = NS + "hasCourseScale";
-//	public final static String PC_SCALE_PATTERN_AND_ONSET = NS + "hasPatternActivityClinicalStatusScale";
+	/* Post-Coordination Axis Properties */
+
+
 
 	public final static String REFERENCED_VALUE_PROP = NS + "referencedValue";
 
