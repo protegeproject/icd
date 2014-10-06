@@ -249,7 +249,7 @@ public class ImportTopology {
         RDFResource refTerm = cm.createTerm(refTermCls);
         refTerm.addPropertyValue(cm.getReferencedValueProperty(), cls);
         
-        RDFProperty isTemplateProp = owlModel.getRDFProperty("http://protege.stanford.edu/plugins/owl/protege#isTemplate");
+        RDFProperty isTemplateProp = owlModel.getRDFProperty("http://who.int/icd#isTemplate");
         refTerm.addPropertyValue(isTemplateProp, Boolean.TRUE);
 
     }
