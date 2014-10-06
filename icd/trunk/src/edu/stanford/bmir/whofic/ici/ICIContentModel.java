@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import edu.stanford.bmir.whofic.WHOFICContentModel;
-import edu.stanford.bmir.whofic.icd.ICDContentModelConstants;
 import edu.stanford.smi.protege.util.CollectionUtilities;
 import edu.stanford.smi.protege.util.IDGenerator;
 import edu.stanford.smi.protege.util.Log;
@@ -24,133 +23,20 @@ public class ICIContentModel extends WHOFICContentModel {
     /*
      * Metaclasses
      */
-//    private RDFSNamedClass causalMechanismMetaClass;
-//    private RDFSNamedClass clincalDescriptionMetaClass;
-//    private RDFSNamedClass definitionMetaClass;
-//    private RDFSNamedClass functionalImpactMetaClass;
-//    private RDFSNamedClass diagnosticCriteriaMetaClass;
-//    private RDFSNamedClass notesMetaClass;
-//    private RDFSNamedClass linearizationMetaClass;
-//    private RDFSNamedClass snomedReferenceMetaClass;
-//    private RDFSNamedClass externalReferenceMetaClass;
-//    private RDFSNamedClass termMetaClass;
-//    private RDFSNamedClass specificConditionMetaClass;
-//    private RDFSNamedClass externalCauseMetaClass;
-//
-//    private RDFSNamedClass linearizationViewClass;
-//    private RDFSNamedClass linearizationSpecificationClass;
-//    private RDFSNamedClass linearizationHistoricSpecificationClass;
-//
-//    private RDFSNamedClass postcoordinationAxesSpecificationClass;
 
     private Collection<RDFSNamedClass> diseaseMetaclasses;
-//    private Collection<RDFSNamedClass> externalCausesMetaclasses;
-//
-//    private Collection<RDFResource> linearizationValueSet;
 
     /*
      * Classes
      */
     private RDFSNamedClass icdCategoryClass;
-//    private RDFSNamedClass clamlReferenceClass;
-//    private RDFSNamedClass termClass;
-//    private RDFSNamedClass termTitleClass;
-//    private RDFSNamedClass termInclusionClass;
-//    private RDFSNamedClass termExclusionClass;
-//    private RDFSNamedClass icd10NotesClass;
-//    private RDFSNamedClass termDefinitionClass;
-//    private RDFSNamedClass termExternalDefinitionClass;
-//    private RDFSNamedClass termReferenceClass;
-//    private RDFSNamedClass termSnomedReferenceClass;
-//    private RDFSNamedClass termExternalReferenceClass;
-//    private RDFSNamedClass termSynonymClass;
-//    private RDFSNamedClass termIndexClass;
-//    private RDFSNamedClass indexTermTypeClass;
-//    private RDFSNamedClass termNarrowerClass;
-//    private RDFSNamedClass termBaseIndexClass;
-//    private RDFSNamedClass termBaseInclusionClass;
-//    private RDFSNamedClass termBaseExclusionClass;
-//
-//    private RDFSNamedClass externalCausesTopClass;
-//    private RDFSNamedClass childOrderClass;
-//    private RDFSNamedClass chapterXClass;
+
 
     /*
      * Properties
      */
-//    private RDFProperty icdTitleProperty;
-//    private RDFProperty icdCodeProperty;
-//    private RDFProperty kindProperty;
-//    private RDFProperty usageProperty;
-//    private RDFProperty definitionProperty;
-//    private RDFProperty longDefinitionProperty;
-//    private RDFProperty prefilledDefinitionProperty;
-//    private RDFProperty synonymProperty;
-//    private RDFProperty narrowerProperty;
-//    private RDFProperty baseIndexProperty;
-//    private RDFProperty baseInclusionProperty;
-//    private RDFProperty indexBaseInclusionProperty;
-//    private RDFProperty subclassBaseInclusionProperty;
-//    private RDFProperty baseExclusionProperty;
-//    private RDFProperty sortingLabelProperty;
-//    private RDFProperty externalReferenceProperty;
-//
-//    private RDFProperty inclusionProperty;
-//    private RDFProperty exclusionProperty;
-//    private RDFProperty indexTypeProperty;
-//
-//    private RDFProperty idProperty;
-//    private RDFProperty labelProperty;
-//    private RDFProperty langProperty;
-//    private RDFProperty ontologyIdProperty;
-//    private RDFProperty termIdProperty;
-//
-//    private RDFProperty icdRefCodeProperty;
-//    private RDFProperty clamlRefProperty;
-//    private RDFProperty textProperty;
-//
-//    private RDFProperty codingHintProperty;
-//    private RDFProperty introductionProperty;
-//    private RDFProperty noteProperty;
-//    private RDFProperty preferredProperty;
-//    private RDFProperty preferredLongProperty;
-//
-//    private RDFProperty linearizationProperty;
-//    private RDFProperty isIncludedInLinearizationProperty;
-//    private RDFProperty isGroupingProperty;
-//    private RDFProperty linearizationParentProperty;
-//    private RDFProperty linearizationViewProperty;
-//    private RDFProperty linearizationICD10ViewProperty;
-//    private RDFProperty linearizationICD10TabulationViewProperty;
-//    private RDFProperty linearizationSequenceNoProperty;
-//    private RDFProperty linearizationSortingLabelProperty;
-//
-//    private RDFProperty suppressOtherSpecifiedResidualsProperty;
-//    private RDFProperty suppressUnspecifiedResidualsProperty;
-//    private RDFProperty otherSpecifiedResidualTitleProperty;
-//    private RDFProperty unspecifiedResidualTitleProperty;
-//
-//    private RDFProperty biologicalSexProperty;
-//
-//    private RDFProperty assignedTagProperty;
-//    private RDFProperty assignedPrimaryTagProperty;
-//    private RDFProperty assignedSecondaryTagProperty;
-//    private RDFProperty displayStatusProperty;
-//
-//    private RDFProperty allowedPostcoordinationAxesProperty;
-//    private RDFProperty allowedPostcoordinationAxisPropertyProperty;
-//    private RDFProperty requiredPostcoordinationAxisPropertyProperty;
-//    private RDFProperty precoordinationSuperclassProperty;
-//
-//    private RDFProperty isObsoleteProperty;
-//    private RDFProperty publicIdProperty;
-//
-//    private RDFProperty childrenOrderProperty;
-//    private RDFProperty orderedChildIndexProperty;
-//    private RDFProperty orderedChildProperty;
-//
-//    private RDFProperty referencedValueProperty;
 
+    
     /*
      * Instances
      */
