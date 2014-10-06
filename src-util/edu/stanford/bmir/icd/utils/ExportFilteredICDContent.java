@@ -17,10 +17,10 @@ import java.util.Map;
 import java.util.Set;
 import java.util.logging.Logger;
 
-import edu.stanford.bmir.icd.claml.ICDContentModel;
 import edu.stanford.bmir.icd.utils.ImportUtils;
 import edu.stanford.bmir.protegex.chao.change.api.Change;
 import edu.stanford.bmir.protegex.chao.ontologycomp.api.Ontology_Component;
+import edu.stanford.bmir.whofic.icd.ICDContentModel;
 import edu.stanford.smi.protege.model.KnowledgeBase;
 import edu.stanford.smi.protege.util.Log;
 import edu.stanford.smi.protege.util.SystemUtilities;

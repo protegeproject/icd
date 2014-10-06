@@ -7,7 +7,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 
-import edu.stanford.bmir.icd.claml.ICDContentModel;
 import edu.stanford.bmir.protegex.chao.ChAOKbManager;
 import edu.stanford.bmir.protegex.chao.annotation.api.Annotation;
 import edu.stanford.bmir.protegex.chao.annotation.api.AnnotationFactory;
@@ -17,6 +16,7 @@ import edu.stanford.bmir.protegex.chao.change.api.ChangeFactory;
 import edu.stanford.bmir.protegex.chao.ontologycomp.api.OntologyComponentFactory;
 import edu.stanford.bmir.protegex.chao.ontologycomp.api.Ontology_Component;
 import edu.stanford.bmir.protegex.chao.ontologycomp.api.impl.DefaultTimestamp;
+import edu.stanford.bmir.whofic.icd.ICDContentModel;
 import edu.stanford.smi.protege.model.Cls;
 import edu.stanford.smi.protege.model.Instance;
 import edu.stanford.smi.protege.model.KnowledgeBase;

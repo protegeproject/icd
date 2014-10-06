@@ -2,7 +2,7 @@ package edu.stanford.bmir.protegex.icd.lucene;
 import java.util.Collection;
 import java.util.logging.Level;
 
-import edu.stanford.bmir.icd.claml.ICDContentModelConstants;
+import edu.stanford.bmir.whofic.icd.ICDContentModelConstants;
 import edu.stanford.smi.protege.event.FrameAdapter;
 import edu.stanford.smi.protege.event.FrameEvent;
 import edu.stanford.smi.protege.event.FrameListener;
