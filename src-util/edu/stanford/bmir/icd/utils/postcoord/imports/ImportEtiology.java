@@ -1,4 +1,4 @@
-package edu.stanford.bmir.icd.utils;
+package edu.stanford.bmir.icd.utils.postcoord.imports;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;

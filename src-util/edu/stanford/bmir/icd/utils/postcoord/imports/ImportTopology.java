@@ -1,4 +1,4 @@
-package edu.stanford.bmir.icd.utils;
+package edu.stanford.bmir.icd.utils.postcoord.imports;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -23,12 +23,13 @@ import edu.stanford.smi.protegex.owl.model.RDFResource;
 import edu.stanford.smi.protegex.owl.model.RDFSNamedClass;
 
 
-public class ImportSeverity {
-    private static Logger log = Log.getLogger(ImportSeverity.class);
+public class ImportTopology {
+    private static Logger log = Log.getLogger(ImportTopology.class);
 
     private static final String SEPARATOR = "\t";
-    private static final String PREFIX_NEW_TERM = "http://who.int/icd#Severity_";
-    private static final String VALUE_SET_PARENT_CLASS_NAME = "http://who.int/icd#SeverityScaleValue";
+    private static final String PREFIX_NEW_TERM = "http://who.int/icd#Topology_";
+    private static final String VALUE_SET_PARENT_CLASS_NAME = "http://who.int/icd#TopologyScaleValue";
+
 
     //no. of columns that represent tree levels
     private static final int NO_OF_TREE_COLUMNS = 2;
@@ -39,6 +40,8 @@ public class ImportSeverity {
 
     private static List<RDFSNamedClass> metaclasses = new ArrayList<RDFSNamedClass>();
     private static Map<Integer, OWLNamedClass> currentParentForLevel = new HashMap<Integer, OWLNamedClass>();
+
+
 
     public static void main(String[] args) {
         if (args.length != 2) {
@@ -88,7 +91,7 @@ public class ImportSeverity {
         metaclasses.add(cm.getLinearizationMetaClass());
         metaclasses.add(cm.getExternalReferenceMetaClass());
         //FIXME: check if this is the right metaclass
-        metaclasses.add(owlModel.getOWLNamedClass("http://who.int/icd#SeverityMetaClass"));
+        metaclasses.add(owlModel.getOWLNamedClass("http://who.int/icd#TopologyMetaClass"));
         metaclasses.add(owlModel.getOWLNamedClass("http://who.int/icd#ValueMetaClass"));
 
         valueSetTopClass = owlModel.getOWLNamedClass(VALUE_SET_PARENT_CLASS_NAME);
@@ -102,7 +105,7 @@ public class ImportSeverity {
         importLines(input);
 
         //TODO: optional
-        owlModel.getProject().save(new ArrayList());
+       owlModel.getProject().save(new ArrayList());
     }
 
     private static void importLines(BufferedReader input) {
@@ -227,6 +230,7 @@ public class ImportSeverity {
             cls.addPropertyValue(cm.getDefinitionProperty(), defTerm);
        // }
     }
+
 
     private static void addReferenceScaleValueTerm(String refTermClsName, OWLNamedClass cls) {
         if (refTermClsName == null) {
