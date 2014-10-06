@@ -1,4 +1,4 @@
-package edu.stanford.bmir.icd.utils;
+package edu.stanford.bmir.icd.utils.postcoord.imports;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -16,7 +16,6 @@ import java.util.logging.Logger;
 import edu.stanford.bmir.whofic.icd.ICDContentModel;
 import edu.stanford.smi.protege.model.Project;
 import edu.stanford.smi.protege.ui.ProjectManager;
-import edu.stanford.smi.protege.util.IDGenerator;
 import edu.stanford.smi.protege.util.Log;
 import edu.stanford.smi.protegex.owl.model.OWLModel;
 import edu.stanford.smi.protegex.owl.model.OWLNamedClass;
@@ -24,22 +23,22 @@ import edu.stanford.smi.protegex.owl.model.RDFResource;
 import edu.stanford.smi.protegex.owl.model.RDFSNamedClass;
 
 
-public class ImportHistopathology {
-    private static Logger log = Log.getLogger(ImportHistopathology.class);
+public class ImportTemporality {
+    private static Logger log = Log.getLogger(ImportTemporality.class);
 
     private static final String SEPARATOR = "\t";
-    private static final String PREFIX_NEW_TERM = "http://who.int/icd#Histopathology_";
-    private static final String VALUE_SET_PARENT_CLASS_NAME = "http://who.int/icd#Histopathology";
-    private static final String TITLE = "Title";
-    private static final String SYN = "Synonym";
+    private static final String PREFIX_NEW_TERM = "http://who.int/icd#Temporality_";
+    private static final String VALUE_SET_PARENT_CLASS_NAME = "http://who.int/icd#Temporality";
+
+    //no. of columns that represent tree levels
+    private static final int NO_OF_TREE_COLUMNS = 4;
 
     private static ICDContentModel cm;
     private static OWLModel owlModel;
     private static OWLNamedClass valueSetTopClass;
 
     private static List<RDFSNamedClass> metaclasses = new ArrayList<RDFSNamedClass>();
-    private static Map<String, String> title2id = new HashMap<String, String>();
-
+    private static Map<Integer, OWLNamedClass> currentParentForLevel = new HashMap<Integer, OWLNamedClass>();
 
     public static void main(String[] args) {
         if (args.length != 2) {
@@ -89,7 +88,7 @@ public class ImportHistopathology {
         metaclasses.add(cm.getLinearizationMetaClass());
         metaclasses.add(cm.getExternalReferenceMetaClass());
         //FIXME: check if this is the right metaclass
-        metaclasses.add(owlModel.getOWLNamedClass("http://who.int/icd#HistopathologyMetaClass"));
+        metaclasses.add(owlModel.getOWLNamedClass("http://who.int/icd#TimeInLifeMetaClass"));
         metaclasses.add(owlModel.getOWLNamedClass("http://who.int/icd#ValueMetaClass"));
 
         valueSetTopClass = owlModel.getOWLNamedClass(VALUE_SET_PARENT_CLASS_NAME);
@@ -132,52 +131,49 @@ public class ImportHistopathology {
     private static void importLine(String line) {
         String[] cols = line.split(SEPARATOR);
 
+        int i = NO_OF_TREE_COLUMNS;
+        String id = null;
 
-        String notid = getValue(cols, 0);
-        String parent1 = getValue(cols, 1);
-        String parent2 = getValue(cols, 2);
-        String type = getValue(cols, 3);
-        String value = getValue(cols, 4);
-        String icdocode = getValue(cols, 5);
-
-
-        OWLNamedClass cls = getOrCreateClass(notid);
-
-        if (TITLE.equals(type)) {
-            addProperties(cls, value, null, null);
-            addICDORef(cls, icdocode, null);
-        } else if (SYN.equals(type)) {
-            addProperties(cls, null, null, value);
+        while (i >= 0 && id == null) {
+            i = i - 1;
+            id = getValue(cols, i);
         }
 
-        addParent(cls, parent1, parent2);
+        if (id == null) {
+            log.warning("Could not find class for line: " + line);
+            return;
+        }
+
+        String synonym = getValue(cols, NO_OF_TREE_COLUMNS);
+        String narrowerTerm = getValue(cols, NO_OF_TREE_COLUMNS + 1);
+        String definitionTerm = getValue(cols, NO_OF_TREE_COLUMNS + 2);
+        String refTermCls = getValue(cols, NO_OF_TREE_COLUMNS + 3);
+
+        OWLNamedClass cls = createClass(id);
+        addProperties(cls, id, narrowerTerm, synonym, definitionTerm);
+        //addSnomedRef(cls, snomedCode, snomedTitle);
+        addReferenceScaleValueTerm(refTermCls, cls);
+
+        currentParentForLevel.put(i, cls);
+
+        addParent(cls, i, line);
 
     }
 
-    private static void addParent(OWLNamedClass cls, String parent1, String parent2) {
-
-        boolean parent1Exists = title2id.get(parent1) != null;
-        OWLNamedClass parent1Cls = getOrCreateClass(parent1);
-
-        boolean parent2Exists = title2id.get(parent2) != null;
-        OWLNamedClass parent2Cls = getOrCreateClass(parent2);
-
-        if (parent1Exists == false) {
-            addProperties(parent1Cls, parent1, null, null);
-            parent1Cls.addSuperclass(valueSetTopClass);
-            parent1Cls.removeSuperclass(owlModel.getOWLThingClass());
+    private static void addParent(OWLNamedClass cls, int level, String line) {
+        if (level == 0) {
+            cls.addSuperclass(valueSetTopClass);
+            cls.removeSuperclass(owlModel.getOWLThingClass());
+            return;
         }
 
-        if (parent2Exists == false) {
-            addProperties(parent2Cls, parent2, null, null);
-            parent2Cls.addSuperclass(parent1Cls);
-            parent2Cls.removeSuperclass(owlModel.getOWLThingClass());
+        OWLNamedClass parent = currentParentForLevel.get(level - 1);
+        if (parent == null) {
+            log.warning("Could not find parent for "+ cls +" at level " + level +" Line: " + line);
+            return;
         }
 
-        if (cls.hasSuperclass(parent2Cls) == false) {
-            cls.addSuperclass(parent2Cls);
-        }
-
+        cls.addSuperclass(parent);
         cls.removeSuperclass(owlModel.getOWLThingClass());
     }
 
@@ -193,17 +189,10 @@ public class ImportHistopathology {
         return text.isEmpty() == true ? null : text;
     }
 
-
-    private static OWLNamedClass getOrCreateClass(String notId) {
-        String id = title2id.get(notId);
-
-        OWLNamedClass cls = (id == null) ? null : owlModel.getOWLNamedClass(id);
-        if (cls == null) {
-            id = PREFIX_NEW_TERM + IDGenerator.getNextUniqueId();
-            cls = owlModel.createOWLNamedClass(id);
-            addMetaclasses(cls);
-            title2id.put(notId, id);
-        }
+    private static OWLNamedClass createClass(String id) {
+        id = id.replace(" ", "_");
+        OWLNamedClass cls = owlModel.createOWLNamedClass(PREFIX_NEW_TERM + id);
+        addMetaclasses(cls);
         return cls;
     }
 
@@ -213,12 +202,10 @@ public class ImportHistopathology {
         }
     }
 
-    private static void addProperties(OWLNamedClass cls, String title, String narrowerName, String synonym) {
-        if (title != null && title.isEmpty() == false) {
-            RDFResource titleTerm = cm.createTitleTerm();
-            titleTerm.addPropertyValue(cm.getLabelProperty(), title);
-            cls.addPropertyValue(cm.getIcdTitleProperty(), titleTerm);
-        }
+    private static void addProperties(OWLNamedClass cls, String title, String narrowerName, String synonym, String definitionName) {
+        RDFResource titleTerm = cm.createTitleTerm();
+        titleTerm.addPropertyValue(cm.getLabelProperty(), title);
+        cls.addPropertyValue(cm.getIcdTitleProperty(), titleTerm);
 
         if (synonym != null && synonym.isEmpty() == false) {
             RDFResource synTerm = cm.createSynonymTerm();
@@ -231,6 +218,13 @@ public class ImportHistopathology {
             cm.fillTerm(narrowerTerm, null, narrowerName, "en");
             cls.addPropertyValue(cm.getNarrowerProperty(), narrowerTerm);
         }
+
+        //Defintion term should always be created according to Csongor, even if empty
+       // if (definitionName != null && definitionName.isEmpty() == false) {
+            RDFResource defTerm = cm.createDefinitionTerm();
+            cm.fillTerm(defTerm, null, definitionName, "en");
+            cls.addPropertyValue(cm.getDefinitionProperty(), defTerm);
+       // }
     }
 
     private static void addReferenceScaleValueTerm(String refTermClsName, OWLNamedClass cls) {
@@ -249,18 +243,19 @@ public class ImportHistopathology {
 
     }
 
-    private static void addICDORef(OWLNamedClass cls, String code, String title) {
-        if (code == null) {
+
+    //may be used later
+    private static void addSnomedRef(OWLNamedClass cls, String snomedCode, String snomedTitle) {
+        if (snomedCode == null) {
             return;
         }
 
-        RDFResource extRef = cm.createExternalReferenceTerm();
-        cm.fillTerm(extRef, code, title, "en");
+        RDFResource snomedRef = cm.createSnomedReferenceTerm();
+        cm.fillTerm(snomedRef, snomedCode, snomedTitle, "en");
         //TODO: not sure if we should use termId or id, so we use both
-        extRef.addPropertyValue(cm.getTermIdProperty(), code);
-        extRef.addPropertyValue(cm.getOntologyIdProperty(), "ICD-O");
+        snomedRef.addPropertyValue(cm.getTermIdProperty(), snomedCode);
 
-        cls.addPropertyValue(cm.getExternalReferenceProperty(), extRef);
+        cls.addPropertyValue(cm.getExternalReferenceProperty(), snomedRef);
 
     }
 

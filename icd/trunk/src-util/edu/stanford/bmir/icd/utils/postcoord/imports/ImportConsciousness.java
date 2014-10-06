@@ -1,4 +1,4 @@
-package edu.stanford.bmir.icd.utils;
+package edu.stanford.bmir.icd.utils.postcoord.imports;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -16,6 +16,7 @@ import java.util.logging.Logger;
 import edu.stanford.bmir.whofic.icd.ICDContentModel;
 import edu.stanford.smi.protege.model.Project;
 import edu.stanford.smi.protege.ui.ProjectManager;
+import edu.stanford.smi.protege.util.IDGenerator;
 import edu.stanford.smi.protege.util.Log;
 import edu.stanford.smi.protegex.owl.model.OWLModel;
 import edu.stanford.smi.protegex.owl.model.OWLNamedClass;
@@ -23,13 +24,12 @@ import edu.stanford.smi.protegex.owl.model.RDFResource;
 import edu.stanford.smi.protegex.owl.model.RDFSNamedClass;
 
 
-public class ImportTopology {
-    private static Logger log = Log.getLogger(ImportTopology.class);
+public class ImportConsciousness {
+    private static Logger log = Log.getLogger(ImportConsciousness.class);
 
     private static final String SEPARATOR = "\t";
-    private static final String PREFIX_NEW_TERM = "http://who.int/icd#Topology_";
-    private static final String VALUE_SET_PARENT_CLASS_NAME = "http://who.int/icd#TopologyScaleValue";
-
+    private static final String PREFIX_NEW_TERM = "http://who.int/icd#Consciousness_";
+    private static final String VALUE_SET_PARENT_CLASS_NAME = "http://who.int/icd#Consciousness";
 
     //no. of columns that represent tree levels
     private static final int NO_OF_TREE_COLUMNS = 2;
@@ -40,8 +40,6 @@ public class ImportTopology {
 
     private static List<RDFSNamedClass> metaclasses = new ArrayList<RDFSNamedClass>();
     private static Map<Integer, OWLNamedClass> currentParentForLevel = new HashMap<Integer, OWLNamedClass>();
-
-
 
     public static void main(String[] args) {
         if (args.length != 2) {
@@ -91,7 +89,7 @@ public class ImportTopology {
         metaclasses.add(cm.getLinearizationMetaClass());
         metaclasses.add(cm.getExternalReferenceMetaClass());
         //FIXME: check if this is the right metaclass
-        metaclasses.add(owlModel.getOWLNamedClass("http://who.int/icd#TopologyMetaClass"));
+        metaclasses.add(owlModel.getOWLNamedClass("http://who.int/icd#ConsciousnessMeasureMetaClass"));
         metaclasses.add(owlModel.getOWLNamedClass("http://who.int/icd#ValueMetaClass"));
 
         valueSetTopClass = owlModel.getOWLNamedClass(VALUE_SET_PARENT_CLASS_NAME);
@@ -105,7 +103,7 @@ public class ImportTopology {
         importLines(input);
 
         //TODO: optional
-       owlModel.getProject().save(new ArrayList());
+        owlModel.getProject().save(new ArrayList());
     }
 
     private static void importLines(BufferedReader input) {
@@ -192,10 +190,7 @@ public class ImportTopology {
     }
 
     private static OWLNamedClass createClass(String id) {
-        id = id.replace(" ", "_");
-        id = id.replace(",", "_");
-        id = id.replace("/", "_");
-        OWLNamedClass cls = owlModel.createOWLNamedClass(PREFIX_NEW_TERM + id);
+        OWLNamedClass cls = owlModel.createOWLNamedClass(PREFIX_NEW_TERM + IDGenerator.getNextUniqueId());
         addMetaclasses(cls);
         return cls;
     }
@@ -230,7 +225,6 @@ public class ImportTopology {
             cls.addPropertyValue(cm.getDefinitionProperty(), defTerm);
        // }
     }
-
 
     private static void addReferenceScaleValueTerm(String refTermClsName, OWLNamedClass cls) {
         if (refTermClsName == null) {

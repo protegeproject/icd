@@ -1,4 +1,4 @@
-package edu.stanford.bmir.icd.utils;
+package edu.stanford.bmir.icd.utils.postcoord.imports;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -23,22 +23,19 @@ import edu.stanford.smi.protegex.owl.model.RDFResource;
 import edu.stanford.smi.protegex.owl.model.RDFSNamedClass;
 
 
-public class ImportTemporality {
-    private static Logger log = Log.getLogger(ImportTemporality.class);
+public class ImportSpecificAnatomicLocation {
+    private static Logger log = Log.getLogger(ImportSpecificAnatomicLocation.class);
 
     private static final String SEPARATOR = "\t";
-    private static final String PREFIX_NEW_TERM = "http://who.int/icd#Temporality_";
-    private static final String VALUE_SET_PARENT_CLASS_NAME = "http://who.int/icd#Temporality";
-
-    //no. of columns that represent tree levels
-    private static final int NO_OF_TREE_COLUMNS = 4;
+    private static final String PREFIX_NEW_TERM = "http://who.int/icd#SpecificAnatomicLocation_";
+    private static final String VALUE_SET_PARENT_CLASS_NAME = "http://who.int/icd#SpecificAnatomicLocation";
 
     private static ICDContentModel cm;
     private static OWLModel owlModel;
     private static OWLNamedClass valueSetTopClass;
 
     private static List<RDFSNamedClass> metaclasses = new ArrayList<RDFSNamedClass>();
-    private static Map<Integer, OWLNamedClass> currentParentForLevel = new HashMap<Integer, OWLNamedClass>();
+    private static Map<OWLNamedClass, String> id2parentmap = new HashMap<OWLNamedClass, String>();
 
     public static void main(String[] args) {
         if (args.length != 2) {
@@ -86,9 +83,10 @@ public class ImportTemporality {
         metaclasses.add(cm.getDefinitionMetaClass());
         metaclasses.add(cm.getTermMetaClass());
         metaclasses.add(cm.getLinearizationMetaClass());
+        metaclasses.add(cm.getSnomedReferenceMetaClass());
         metaclasses.add(cm.getExternalReferenceMetaClass());
-        //FIXME: check if this is the right metaclass
-        metaclasses.add(owlModel.getOWLNamedClass("http://who.int/icd#TimeInLifeMetaClass"));
+        //FIXME: add to CM
+        metaclasses.add(owlModel.getOWLNamedClass("http://who.int/icd#SpecificAnatomyMetaClass"));
         metaclasses.add(owlModel.getOWLNamedClass("http://who.int/icd#ValueMetaClass"));
 
         valueSetTopClass = owlModel.getOWLNamedClass(VALUE_SET_PARENT_CLASS_NAME);
@@ -100,6 +98,7 @@ public class ImportTemporality {
 
     private static void importFile(BufferedReader input) {
         importLines(input);
+        addParents();
 
         //TODO: optional
         owlModel.getProject().save(new ArrayList());
@@ -131,66 +130,24 @@ public class ImportTemporality {
     private static void importLine(String line) {
         String[] cols = line.split(SEPARATOR);
 
-        int i = NO_OF_TREE_COLUMNS;
-        String id = null;
-
-        while (i >= 0 && id == null) {
-            i = i - 1;
-            id = getValue(cols, i);
-        }
-
-        if (id == null) {
-            log.warning("Could not find class for line: " + line);
-            return;
-        }
-
-        String synonym = getValue(cols, NO_OF_TREE_COLUMNS);
-        String narrowerTerm = getValue(cols, NO_OF_TREE_COLUMNS + 1);
-        String definitionTerm = getValue(cols, NO_OF_TREE_COLUMNS + 2);
-        String refTermCls = getValue(cols, NO_OF_TREE_COLUMNS + 3);
+        String id = cols[0];
+        String parentId = cols[1];
+        String title = cols[2];
+        String snomedCode = cols.length > 3 ? cols[3] : null;
+        String snomedTitle = cols.length > 4 ? cols[4] : null;
+        String altTerm = cols.length > 5 ? cols[5] : null;
+        String synonym = cols.length > 6 ? cols[6] : null;
 
         OWLNamedClass cls = createClass(id);
-        addProperties(cls, id, narrowerTerm, synonym, definitionTerm);
-        //addSnomedRef(cls, snomedCode, snomedTitle);
-        addReferenceScaleValueTerm(refTermCls, cls);
+        addProperties(cls, title, altTerm, synonym);
+        addSnomedRef(cls, snomedCode, snomedTitle);
 
-        currentParentForLevel.put(i, cls);
-
-        addParent(cls, i, line);
-
-    }
-
-    private static void addParent(OWLNamedClass cls, int level, String line) {
-        if (level == 0) {
-            cls.addSuperclass(valueSetTopClass);
-            cls.removeSuperclass(owlModel.getOWLThingClass());
-            return;
+        if (parentId != null) {
+            id2parentmap.put(cls, PREFIX_NEW_TERM +parentId);
         }
-
-        OWLNamedClass parent = currentParentForLevel.get(level - 1);
-        if (parent == null) {
-            log.warning("Could not find parent for "+ cls +" at level " + level +" Line: " + line);
-            return;
-        }
-
-        cls.addSuperclass(parent);
-        cls.removeSuperclass(owlModel.getOWLThingClass());
-    }
-
-    private static String getValue(String[] cols, int colNo) {
-        //colNo is -1 for empty rows
-        String text = colNo >=0 && cols.length > colNo ? cols[colNo] : null;
-
-        if (text == null) {
-            return null;
-        }
-
-        text = text.trim();
-        return text.isEmpty() == true ? null : text;
     }
 
     private static OWLNamedClass createClass(String id) {
-        id = id.replace(" ", "_");
         OWLNamedClass cls = owlModel.createOWLNamedClass(PREFIX_NEW_TERM + id);
         addMetaclasses(cls);
         return cls;
@@ -202,7 +159,7 @@ public class ImportTemporality {
         }
     }
 
-    private static void addProperties(OWLNamedClass cls, String title, String narrowerName, String synonym, String definitionName) {
+    private static void addProperties(OWLNamedClass cls, String title, String altName, String synonym) {
         RDFResource titleTerm = cm.createTitleTerm();
         titleTerm.addPropertyValue(cm.getLabelProperty(), title);
         cls.addPropertyValue(cm.getIcdTitleProperty(), titleTerm);
@@ -213,38 +170,15 @@ public class ImportTemporality {
             cls.addPropertyValue(cm.getSynonymProperty(), synTerm);
         }
 
-        if (narrowerName != null && narrowerName.isEmpty() == false) {
-            RDFResource narrowerTerm = cm.createTerm(cm.getTermNarrowerClass());
-            cm.fillTerm(narrowerTerm, null, narrowerName, "en");
-            cls.addPropertyValue(cm.getNarrowerProperty(), narrowerTerm);
+        if (altName != null && altName.isEmpty() == false) {
+            RDFResource altTerm = cm.createSynonymTerm();
+            cm.fillTerm(altTerm, null, altName, "en");
+            // TODO: adding the altTerm as synonym for now
+            cls.addPropertyValue(cm.getSynonymProperty(), altTerm);
         }
-
-        //Defintion term should always be created according to Csongor, even if empty
-       // if (definitionName != null && definitionName.isEmpty() == false) {
-            RDFResource defTerm = cm.createDefinitionTerm();
-            cm.fillTerm(defTerm, null, definitionName, "en");
-            cls.addPropertyValue(cm.getDefinitionProperty(), defTerm);
-       // }
-    }
-
-    private static void addReferenceScaleValueTerm(String refTermClsName, OWLNamedClass cls) {
-        if (refTermClsName == null) {
-            return;
-        }
-
-        OWLNamedClass refTermCls = owlModel.getOWLNamedClass(refTermClsName);
-        if (refTermCls == null) {
-            log.warning("Could not find term reference class: " + refTermClsName);
-            return;
-        }
-
-        RDFResource refTerm = cm.createTerm(refTermCls);
-        refTerm.addPropertyValue(cm.getReferencedValueProperty(), cls);
-
     }
 
 
-    //may be used later
     private static void addSnomedRef(OWLNamedClass cls, String snomedCode, String snomedTitle) {
         if (snomedCode == null) {
             return;
@@ -259,6 +193,19 @@ public class ImportTemporality {
 
     }
 
+    private static void addParents(){
+        log.info("Adding parents started at: " + new Date());
+
+        for (OWLNamedClass cls : id2parentmap.keySet()) {
+            OWLNamedClass parent = owlModel.getOWLNamedClass(id2parentmap.get(cls));
+            if (parent != null) {
+                cls.addSuperclass(parent);
+                cls.removeSuperclass(owlModel.getOWLThingClass());
+            } else {
+                log.warning("Could not find parent "+ parent +" for class: " + cls);
+            }
+        }
+    }
 
     private static void closeReader(BufferedReader input) {
         try {
