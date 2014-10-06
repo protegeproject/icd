@@ -3,7 +3,7 @@ package edu.stanford.bmir.icd.utils;
 import java.util.ArrayList;
 import java.util.Collection;
 
-import edu.stanford.bmir.icd.claml.ICDContentModel;
+import edu.stanford.bmir.whofic.icd.ICDContentModel;
 import edu.stanford.smi.protege.model.Frame;
 import edu.stanford.smi.protege.model.Project;
 import edu.stanford.smi.protegex.owl.model.OWLModel;

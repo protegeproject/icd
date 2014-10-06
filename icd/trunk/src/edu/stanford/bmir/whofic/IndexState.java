@@ -1,4 +1,4 @@
-package edu.stanford.bmir.icd.claml;
+package edu.stanford.bmir.whofic;
 
 enum IndexState {
     VALID, // index is in a valid state

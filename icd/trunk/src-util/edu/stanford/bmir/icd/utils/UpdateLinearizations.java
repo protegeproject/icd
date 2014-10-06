@@ -10,7 +10,7 @@ import java.util.List;
 import jxl.Sheet;
 import jxl.Workbook;
 import jxl.read.biff.BiffException;
-import edu.stanford.bmir.icd.claml.ICDContentModelConstants;
+import edu.stanford.bmir.whofic.icd.ICDContentModelConstants;
 import edu.stanford.smi.protege.util.Log;
 import edu.stanford.smi.protege.util.SystemUtilities;
 import edu.stanford.smi.protegex.owl.model.OWLModel;

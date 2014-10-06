@@ -15,12 +15,12 @@ import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import edu.stanford.bmir.icd.claml.ICDContentModel;
-import edu.stanford.bmir.icd.claml.ICDContentModelConstants;
 import edu.stanford.bmir.protegex.chao.ChAOKbManager;
 import edu.stanford.bmir.protegex.chao.change.api.Change;
 import edu.stanford.bmir.protegex.chao.change.api.ChangeFactory;
 import edu.stanford.bmir.protegex.chao.ontologycomp.api.OntologyComponentFactory;
+import edu.stanford.bmir.whofic.icd.ICDContentModel;
+import edu.stanford.bmir.whofic.icd.ICDContentModelConstants;
 import edu.stanford.smi.protege.model.Cls;
 import edu.stanford.smi.protege.model.KnowledgeBase;
 import edu.stanford.smi.protege.util.Log;

@@ -1,4 +1,4 @@
-package edu.stanford.bmir.icd.claml;
+package edu.stanford.bmir.whofic;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -45,10 +45,10 @@ public class SiblingReordering {
 
     private static int CHILD_INDEX_INCREMENT = 1000000;
 
-    private ICDContentModel cm;
+    private WHOFICContentModel cm;
 
 
-    public SiblingReordering(ICDContentModel cm) {
+    public SiblingReordering(WHOFICContentModel cm) {
         this.cm = cm;
     }
 
@@ -371,7 +371,7 @@ public class SiblingReordering {
          int index = orderedChildrenMap.lastKey();
 
         // index is valid, add the child at the end
-        ICDContentModel cm = new ICDContentModel(parent.getOWLModel());
+        WHOFICContentModel cm = new WHOFICContentModel(parent.getOWLModel());
         RDFResource inst = cm.createOrderedChildIndex(cls, index);
         parent.addPropertyValue(cm.getChildrenOrderProperty(), inst);
 

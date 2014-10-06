@@ -6,7 +6,7 @@ import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import edu.stanford.bmir.icd.claml.ICDContentModel;
+import edu.stanford.bmir.whofic.icd.ICDContentModel;
 import edu.stanford.smi.protege.model.Project;
 import edu.stanford.smi.protege.ui.ProjectManager;
 import edu.stanford.smi.protege.util.Log;

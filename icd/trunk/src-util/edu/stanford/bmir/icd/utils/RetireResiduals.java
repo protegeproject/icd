@@ -10,7 +10,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.logging.Level;
 
-import edu.stanford.bmir.icd.claml.ICDContentModel;
+import edu.stanford.bmir.whofic.icd.ICDContentModel;
 import edu.stanford.smi.protege.model.Project;
 import edu.stanford.smi.protege.util.Log;
 import edu.stanford.smi.protegex.owl.model.OWLModel;

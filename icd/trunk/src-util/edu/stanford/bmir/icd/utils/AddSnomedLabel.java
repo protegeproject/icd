@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.logging.Level;
 
-import edu.stanford.bmir.icd.claml.ICDContentModelConstants;
+import edu.stanford.bmir.whofic.icd.ICDContentModelConstants;
 import edu.stanford.smi.protege.model.Project;
 import edu.stanford.smi.protege.ui.ProjectManager;
 import edu.stanford.smi.protege.util.Log;
