@@ -19,6 +19,7 @@ import edu.stanford.smi.protege.ui.ProjectManager;
 import edu.stanford.smi.protege.util.Log;
 import edu.stanford.smi.protegex.owl.model.OWLModel;
 import edu.stanford.smi.protegex.owl.model.OWLNamedClass;
+import edu.stanford.smi.protegex.owl.model.RDFProperty;
 import edu.stanford.smi.protegex.owl.model.RDFResource;
 import edu.stanford.smi.protegex.owl.model.RDFSNamedClass;
 
@@ -87,13 +88,15 @@ public class ImportSeverity {
         metaclasses.add(cm.getTermMetaClass());
         metaclasses.add(cm.getLinearizationMetaClass());
         metaclasses.add(cm.getExternalReferenceMetaClass());
-        //FIXME: check if this is the right metaclass
         metaclasses.add(owlModel.getOWLNamedClass("http://who.int/icd#SeverityMetaClass"));
         metaclasses.add(owlModel.getOWLNamedClass("http://who.int/icd#ValueMetaClass"));
 
         valueSetTopClass = owlModel.getOWLNamedClass(VALUE_SET_PARENT_CLASS_NAME);
         if (valueSetTopClass == null) {
             valueSetTopClass = owlModel.createOWLNamedSubclass(VALUE_SET_PARENT_CLASS_NAME, (OWLNamedClass)cm.getChapterXClass());
+            for (RDFSNamedClass metaclass : metaclasses) {
+				valueSetTopClass.addRDFType(metaclass);
+			}
         }
     }
 
@@ -241,6 +244,9 @@ public class ImportSeverity {
 
         RDFResource refTerm = cm.createTerm(refTermCls);
         refTerm.addPropertyValue(cm.getReferencedValueProperty(), cls);
+        
+        RDFProperty isTemplateProp = owlModel.getRDFProperty("http://protege.stanford.edu/plugins/owl/protege#isTemplate");
+        refTerm.addPropertyValue(isTemplateProp, Boolean.TRUE);
 
     }
 
