@@ -45,6 +45,8 @@ public class ICDContentModelConstants extends WHOFICContentModelConstants {
      * Properties
      */
 
+    public final static  String IS_TEMPLATE = NS + "isTemplate";
+
 
     /* Linearizations */
     public final static String LINEARIZATION_ICD_10_PROP = NS + "icd10Linearization";

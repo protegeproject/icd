@@ -46,6 +46,7 @@ public class ICDContentModel extends WHOFICContentModel {
     /*
      * Properties
      */
+    private RDFProperty isTemplateProperty;
     private RDFProperty linearizationICD10ViewProperty;
     private RDFProperty linearizationICD10TabulationViewProperty;
 
@@ -161,6 +162,13 @@ public class ICDContentModel extends WHOFICContentModel {
     /*
      * Getters for properties
      */
+
+    public RDFProperty getIsTemplateProperty() {
+        if (isTemplateProperty == null) {
+        	isTemplateProperty = owlModel.getRDFProperty(ICDContentModelConstants.IS_TEMPLATE);
+        }
+        return isTemplateProperty;
+    }
 
     public RDFProperty getLinearizationICD10Property() {
         if (linearizationICD10ViewProperty == null) {
