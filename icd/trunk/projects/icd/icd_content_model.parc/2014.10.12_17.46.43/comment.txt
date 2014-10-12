@@ -1,0 +1,1 @@
+Created DiagnosisConfirmedByReferenceTerm class and set range of diagnosisConfirmedBy and levelOfConsciousness properties.
