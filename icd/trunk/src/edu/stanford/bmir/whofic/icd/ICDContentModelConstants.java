@@ -1,6 +1,7 @@
 package edu.stanford.bmir.whofic.icd;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 
 import edu.stanford.bmir.whofic.WHOFICContentModelConstants;
@@ -74,17 +75,16 @@ public class ICDContentModelConstants extends WHOFICContentModelConstants {
 	public final static String PC_AXIS_ETIOLOGY_INFECTIOUS_AGENT = NS + "infectiousAgent";
 	public final static String PC_AXIS_ETIOLOGY_MEDICATION = NS + "medication";
 	//externalCauseDimension
-	public final static String PC_AXIS_HAS_SEVERITY = NS + "hasSeverity";
+	public final static String PC_AXIS_HAS_SEVERITY = NS + "hasSeverity";	//replicated in ICDConstants for iCAT client
 	public final static String PC_AXIS_HISTOPATHOLOGY = NS + "histopathology";
 	public final static String PC_AXIS_INJURY_QUALIFIER_CUSTOM_BURN_SCALE_VALUE = NS + "customBurnScaleValue";
 	public final static String PC_AXIS_INJURY_QUALIFIER_CUSTOM_FRACTURE_SUBTYPE = NS + "fractureSubtype";
 	public final static String PC_AXIS_INJURY_QUALIFIER_CUSTOM_TYPE_OF_INJURY = NS + "typeOfInjury";
-	public final static String PC_AXIS_TEMPORALITY_COURSE = NS + "course";
-	public final static String PC_AXIS_TEMPORALITY_PATTERN_AND_ONSET = NS + "temporalPatternAndOnset";
+	public final static String PC_AXIS_TEMPORALITY_COURSE = NS + "course";	//replicated in ICDConstants for iCAT client
+	public final static String PC_AXIS_TEMPORALITY_PATTERN_AND_ONSET = NS + "temporalPatternAndOnset";	//replicated in ICDConstants for iCAT client
 	public final static String PC_AXIS_TEMPORALITY_TIME_IN_LIFE = NS + "timeInLife";
     //TODO continue list
-//	public final static String[] PC_AXES_PROPERTIES = {PC_AXIS_SEVERITY, PC_AXIS_TEMPORALITY_COURSE,
-//		PC_AXIS_TEMPORALITY_PATTERN_AND_ONSET, PC_AXIS_ETIOLOGY_CAUSALITY, PC_AXIS_ETIOLOGY_INFECTIOUS_AGENT};
+
 	public final static List<String> PC_AXES_PROPERTIES_LIST = Arrays.asList(
 			PC_AXIS_SPECIFIC_ANATOMY, PC_AXIS_TOPOLOGY_DISTRIBUTION, PC_AXIS_TOPOLOGY_LATERALITY,
 			PC_AXIS_TOPOLOGY_REGIONAL, PC_AXIS_TOPOLOGY_RELATIONAL, PC_AXIS_BIOLOGICAL_INDICATOR_GENOMIC_AND_CHOMOSOMAL_ANOMALY,
@@ -102,9 +102,30 @@ public class ICDContentModelConstants extends WHOFICContentModelConstants {
 			PC_AXIS_INJURY_QUALIFIER_CUSTOM_FRACTURE_SUBTYPE, PC_AXIS_INJURY_QUALIFIER_CUSTOM_TYPE_OF_INJURY,
 			PC_AXIS_TEMPORALITY_COURSE, PC_AXIS_TEMPORALITY_PATTERN_AND_ONSET, PC_AXIS_TEMPORALITY_TIME_IN_LIFE);
 
-	public final static String PC_SCALE_SEVERITY = NS + "hasSeverityScale";
-	public final static String PC_SCALE_COURSE = NS + "hasCourseScale";
-	public final static String PC_SCALE_PATTERN_AND_ONSET = NS + "hasPatternActivityClinicalStatusScale";
+	
+	public final static String PC_SCALE_SEVERITY = NS + "hasSeverityScale";	//replicated in ICDConstants for iCAT client
+	public final static String PC_SCALE_COURSE = NS + "hasCourseScale";	//replicated in ICDConstants for iCAT client
+	public final static String PC_SCALE_PATTERN_AND_ONSET = NS + "hasPatternActivityClinicalStatusScale";	//replicated in ICDConstants for iCAT client
+
+	
+	@SuppressWarnings("serial")
+	public
+	static final HashMap<String, String> PC_AXIS_PROP_TO_VALUE_SET_PROP = new HashMap<String, String>(){
+		{
+			put(PC_AXIS_HAS_SEVERITY, PC_SCALE_SEVERITY);
+			put(PC_AXIS_TEMPORALITY_COURSE, PC_SCALE_COURSE);
+	    	put(PC_AXIS_TEMPORALITY_PATTERN_AND_ONSET, PC_SCALE_PATTERN_AND_ONSET);
+	    }
+	
+		@Override
+		public String get(Object key){
+			String res = super.get(key);
+			if (res == null) {
+				return (String)key;
+			}
+			return res;
+		}
+	};
 
 
 }

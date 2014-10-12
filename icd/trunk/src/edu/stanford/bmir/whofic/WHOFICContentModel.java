@@ -52,6 +52,8 @@ public class WHOFICContentModel {
     private RDFSNamedClass linearizationHistoricSpecificationClass;
 
     private RDFSNamedClass postcoordinationAxesSpecificationClass;
+    private RDFSNamedClass postcoordinationScaleTermClass;
+    private RDFSNamedClass postcoordinationValueReferenceClass;
 
     private Collection<RDFResource> linearizationValueSet;
 
@@ -145,6 +147,9 @@ public class WHOFICContentModel {
     private RDFProperty allowedPostcoordinationAxisPropertyProperty;
     private RDFProperty requiredPostcoordinationAxisPropertyProperty;
     private RDFProperty precoordinationSuperclassProperty;
+    private RDFProperty hasScaleValueProperty;
+
+    private RDFProperty referencedValueProperty;
 
     private RDFProperty isObsoleteProperty;
     private RDFProperty publicIdProperty;
@@ -152,8 +157,6 @@ public class WHOFICContentModel {
     private RDFProperty childrenOrderProperty;
     private RDFProperty orderedChildIndexProperty;
     private RDFProperty orderedChildProperty;
-
-    private RDFProperty referencedValueProperty;
 
     /*
      * Instances
@@ -385,6 +388,20 @@ public class WHOFICContentModel {
             postcoordinationAxesSpecificationClass = owlModel.getRDFSNamedClass(WHOFICContentModelConstants.POSTCOORDINATION_AXES_SPECIFICATION_CLASS);
         }
         return postcoordinationAxesSpecificationClass;
+    }
+    
+    public RDFSNamedClass getPostcoordinationScaleTermClass() {
+    	if (postcoordinationScaleTermClass == null) {
+    		postcoordinationScaleTermClass = owlModel.getRDFSNamedClass(WHOFICContentModelConstants.POSTCOORDINATION_SCALE_TERM_CLASS);
+    	}
+    	return postcoordinationScaleTermClass;
+    }
+    
+    public RDFSNamedClass getPostcoordinationValueReferenceClass() {
+    	if (postcoordinationValueReferenceClass == null) {
+    		postcoordinationValueReferenceClass = owlModel.getRDFSNamedClass(WHOFICContentModelConstants.POSTCOORDINATION_VALUE_REFERENCE_TERM_CLASS);
+    	}
+    	return postcoordinationValueReferenceClass;
     }
 
     public RDFSNamedClass getChildOrderClass() {
@@ -771,6 +788,20 @@ public class WHOFICContentModel {
     	return precoordinationSuperclassProperty;
     }
 
+    public RDFProperty getHasScaleValueProperty() {
+        if (hasScaleValueProperty == null) {
+        	hasScaleValueProperty  = owlModel.getRDFProperty(WHOFICContentModelConstants.HAS_SCALE_VALUE_PROP);
+        }
+        return hasScaleValueProperty ;
+    }
+
+    public RDFProperty getReferencedValueProperty() {
+        if (referencedValueProperty == null) {
+            referencedValueProperty = owlModel.getRDFProperty(WHOFICContentModelConstants.REFERENCED_VALUE_PROP);
+        }
+        return referencedValueProperty;
+    }
+
     public RDFProperty getIsObsoleteProperty() {
         if (isObsoleteProperty == null) {
             isObsoleteProperty = owlModel.getRDFProperty(WHOFICContentModelConstants.IS_OBSOLETE_PROP);
@@ -816,13 +847,6 @@ public class WHOFICContentModel {
 
     public List<String> getPostcoordinationAxesPropertyList() {
     	return new ArrayList<String>();
-    }
-
-    public RDFProperty getReferencedValueProperty() {
-        if (referencedValueProperty == null) {
-            referencedValueProperty = owlModel.getRDFProperty(WHOFICContentModelConstants.REFERENCED_VALUE_PROP);
-        }
-        return referencedValueProperty;
     }
 
 
@@ -1557,14 +1581,14 @@ public class WHOFICContentModel {
 		Collection<PrecoordinationDefinitionComponent> res = new ArrayList<PrecoordinationDefinitionComponent>();
 		for (Iterator<String> it = properties.iterator(); it.hasNext();) {
 			String property = it.next();
-			PrecoordinationDefinitionComponent value;
+			PrecoordinationDefinitionComponent value = null;
 			if (defProps.contains(property)) {
 				value = getPropertyValueFromClassExpression(eqClassExpression, property, true);
 			}
 			else if (necProps.contains(property)){
 				value = getPropertyValueFromClassExpression(necClassExpression, property, false);
 			}
-			else {
+			if (value == null) {
 				value = new PrecoordinationDefinitionComponent(property, null, null, false);
 			}
 			res.add(value);
@@ -1584,15 +1608,27 @@ public class WHOFICContentModel {
     			if (operand instanceof OWLHasValue) {
     				OWLHasValue exRestr = (OWLHasValue) operand;
     				if (exRestr.getOnProperty().getName().equals(property)) {
-    					return new PrecoordinationDefinitionComponent(property,
-    							((RDFResource)exRestr.getHasValue()).getName(), ValueType.INSTANCE, isDefinitional);
+    					RDFResource hasValue = (RDFResource)exRestr.getHasValue();
+    					if (hasValue != null) {
+							return new PrecoordinationDefinitionComponent(property,
+	    							hasValue.getName(), ValueType.INSTANCE, isDefinitional);
+    					}
+    					else {
+    						Log.getLogger().warning("Error in getPropertyValueFromClassExpression: 'hasValue' expression involving property " + property + " has no value set.");
+    					}
     				}
     			}
     			if (operand instanceof OWLSomeValuesFrom) {
     				OWLSomeValuesFrom exRestr = (OWLSomeValuesFrom) operand;
     				if (exRestr.getOnProperty().getName().equals(property)) {
-    					return new PrecoordinationDefinitionComponent(property,
-    							exRestr.getSomeValuesFrom().getName(), ValueType.CLS, isDefinitional);
+    					RDFResource someValuesFrom = exRestr.getSomeValuesFrom();
+    					if (someValuesFrom != null) {
+							return new PrecoordinationDefinitionComponent(property,
+	    							someValuesFrom.getName(), ValueType.CLS, isDefinitional);
+    					}
+    					else {
+    						Log.getLogger().warning("Error in getPropertyValueFromClassExpression: 'someValuesFrom' expression involving property " + property + " has no value set.");
+    					}
     				}
     			}
     		}
