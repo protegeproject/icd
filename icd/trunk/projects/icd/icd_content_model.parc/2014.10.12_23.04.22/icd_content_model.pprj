@@ -1,4 +1,4 @@
-; Sun Oct 12 23:04:02 EEST 2014
+; Sun Oct 12 23:04:22 EEST 2014
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -6,20 +6,20 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[icd_content_model_ProjectKB_Class30869]
-		[icd_content_model_ProjectKB_Class30870]
-		[icd_content_model_ProjectKB_Class30871]
-		[icd_content_model_ProjectKB_Class30872]
-		[icd_content_model_ProjectKB_Class30873]
-		[icd_content_model_ProjectKB_Class30874]
-		[icd_content_model_ProjectKB_Class30875]
-		[icd_content_model_ProjectKB_Class30876]
-		[icd_content_model_ProjectKB_Class30877]
-		[icd_content_model_ProjectKB_Class30878]
-		[icd_content_model_ProjectKB_Class30879]
-		[icd_content_model_ProjectKB_Class30880]
-		[icd_content_model_ProjectKB_Class30881]
-		[icd_content_model_ProjectKB_Class30882]))
+		[icd_content_model_ProjectKB_Class30889]
+		[icd_content_model_ProjectKB_Class30890]
+		[icd_content_model_ProjectKB_Class30891]
+		[icd_content_model_ProjectKB_Class30892]
+		[icd_content_model_ProjectKB_Class30893]
+		[icd_content_model_ProjectKB_Class30894]
+		[icd_content_model_ProjectKB_Class30895]
+		[icd_content_model_ProjectKB_Class30896]
+		[icd_content_model_ProjectKB_Class30897]
+		[icd_content_model_ProjectKB_Class30898]
+		[icd_content_model_ProjectKB_Class30899]
+		[icd_content_model_ProjectKB_Class30900]
+		[icd_content_model_ProjectKB_Class30901]
+		[icd_content_model_ProjectKB_Class30902]))
 
 ([CLSES_TAB] of  Widget
 
@@ -162,112 +162,112 @@
 ([icd_content_model_ProjectKB_Class30] of  Property_List
 )
 
-([icd_content_model_ProjectKB_Class30869] of  String
+([icd_content_model_ProjectKB_Class30889] of  String
 
 	(name ":PAL-CONSTRAINT")
 	(string_value "%3APAL-NAME"))
 
-([icd_content_model_ProjectKB_Class30870] of  String
+([icd_content_model_ProjectKB_Class30890] of  String
 
 	(name ":META-CLASS")
 	(string_value "%3ANAME"))
 
-([icd_content_model_ProjectKB_Class30871] of  String
+([icd_content_model_ProjectKB_Class30891] of  String
 
 	(name "http://www.w3.org/2002/07/owl#DatatypeProperty")
 	(string_value "%3ANAME"))
 
-([icd_content_model_ProjectKB_Class30872] of  String
+([icd_content_model_ProjectKB_Class30892] of  String
 
 	(name "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property")
 	(string_value "%3ANAME"))
 
-([icd_content_model_ProjectKB_Class30873] of  String
+([icd_content_model_ProjectKB_Class30893] of  String
 
 	(name "http://www.w3.org/2000/01/rdf-schema#Class")
 	(string_value "%3ANAME"))
 
-([icd_content_model_ProjectKB_Class30874] of  String
+([icd_content_model_ProjectKB_Class30894] of  String
 
 	(name "http://who.int/icd#PostcoordinationValueReferenceTerm")
 	(string_value "http%3A%2F%2Fwho.int%2Ficd%23referencedValue"))
 
-([icd_content_model_ProjectKB_Class30875] of  String
+([icd_content_model_ProjectKB_Class30895] of  String
 
 	(name ":INSTANCE-ANNOTATION")
 	(string_value "%3AANNOTATION-TEXT"))
 
-([icd_content_model_ProjectKB_Class30876] of  String
+([icd_content_model_ProjectKB_Class30896] of  String
 
 	(name "http://www.w3.org/2002/07/owl#Class")
 	(string_value "%3ANAME"))
 
-([icd_content_model_ProjectKB_Class30877] of  String
+([icd_content_model_ProjectKB_Class30897] of  String
 
 	(name "http://www.w3.org/2002/07/owl#FunctionalProperty")
 	(string_value "%3ANAME"))
 
-([icd_content_model_ProjectKB_Class30878] of  String
+([icd_content_model_ProjectKB_Class30898] of  String
 
 	(name "http://www.w3.org/2002/07/owl#AnnotationProperty")
 	(string_value "%3ANAME"))
 
-([icd_content_model_ProjectKB_Class30879] of  String
+([icd_content_model_ProjectKB_Class30899] of  String
 
 	(name "http://www.w3.org/2002/07/owl#DeprecatedProperty")
 	(string_value "%3ANAME"))
 
-([icd_content_model_ProjectKB_Class30880] of  String
+([icd_content_model_ProjectKB_Class30900] of  String
 
 	(name "http://www.w3.org/2000/01/rdf-schema#Datatype")
 	(string_value "%3ANAME"))
 
-([icd_content_model_ProjectKB_Class30881] of  String
+([icd_content_model_ProjectKB_Class30901] of  String
 
 	(name "http://www.w3.org/2002/07/owl#ObjectProperty")
 	(string_value "%3ANAME"))
 
-([icd_content_model_ProjectKB_Class30882] of  String
+([icd_content_model_ProjectKB_Class30902] of  String
 
 	(name "http://www.w3.org/2002/07/owl#Thing")
 	(string_value "%3ANAME"))
 
-([icd_content_model_ProjectKB_Class30883] of  Map_Entry
+([icd_content_model_ProjectKB_Class30903] of  Map_Entry
 
 	(key "add_name_on_instance_form")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([icd_content_model_ProjectKB_Class30884] of  Map_Entry
+([icd_content_model_ProjectKB_Class30904] of  Map_Entry
 
 	(key "show_collaboration_panel")
 	(key_class "java.lang.String")
 	(value "true")
 	(value_class "java.lang.Boolean"))
 
-([icd_content_model_ProjectKB_Class30885] of  Map_Entry
+([icd_content_model_ProjectKB_Class30905] of  Map_Entry
 
 	(key "collab.hide.archived")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([icd_content_model_ProjectKB_Class30886] of  Map_Entry
+([icd_content_model_ProjectKB_Class30906] of  Map_Entry
 
 	(key "edu.stanford.smi.protege.collab.annotation.gui.panel.ChatPanel")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([icd_content_model_ProjectKB_Class30887] of  Map_Entry
+([icd_content_model_ProjectKB_Class30907] of  Map_Entry
 
 	(key "change_tracking_active")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([icd_content_model_ProjectKB_Class30888] of  Map_Entry
+([icd_content_model_ProjectKB_Class30908] of  Map_Entry
 
 	(key "suppress_instance_counting")
 	(key_class "java.lang.String")
@@ -1139,12 +1139,12 @@
 ([KB_325529_Class0] of  Map
 
 	(entries
-		[icd_content_model_ProjectKB_Class30883]
-		[icd_content_model_ProjectKB_Class30884]
-		[icd_content_model_ProjectKB_Class30885]
-		[icd_content_model_ProjectKB_Class30886]
-		[icd_content_model_ProjectKB_Class30887]
-		[icd_content_model_ProjectKB_Class30888]))
+		[icd_content_model_ProjectKB_Class30903]
+		[icd_content_model_ProjectKB_Class30904]
+		[icd_content_model_ProjectKB_Class30905]
+		[icd_content_model_ProjectKB_Class30906]
+		[icd_content_model_ProjectKB_Class30907]
+		[icd_content_model_ProjectKB_Class30908]))
 
 ([KB_325529_Class4] of  String
 
