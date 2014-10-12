@@ -51,6 +51,8 @@ public class WHOFICContentModelConstants {
 
 	/* Post-Coordination */
     public final static String POSTCOORDINATION_AXES_SPECIFICATION_CLASS = NS + "PostcoordinationAxesSpecification";
+    public final static String POSTCOORDINATION_SCALE_TERM_CLASS = NS + "PostcoordinationScaleTerm";
+    public final static String POSTCOORDINATION_VALUE_REFERENCE_TERM_CLASS = NS + "PostcoordinationValueReferenceTerm";
 
     public final static String CHILD_ORDER_CLASS = NS +"ChildOrder";
 
@@ -134,10 +136,15 @@ public class WHOFICContentModelConstants {
     public final static String ASSIGNED_SECONDARY_TAG_PROP = NS + "assignedSecondaryTAG";
 	public final static String DISPLAY_STATUS_PROP = NS + "displayStatus";
 
+	/* Post-Coordination */
 	public final static String ALLOWED_POSTCOORDINATION_AXES_PROP = NS + "allowedPostcoordinationAxes";
 	public final static String ALLOWED_POSTCOORDINATION_AXIS_PROPERTY_PROP = NS + "allowedPostcoordinationAxisProperty";
 	public final static String REQUIRED_POSTCOORDINATION_AXIS_PROPERTY_PROP = NS + "requiredPostcoordinationAxisProperty";
 	public final static String PRECOORDINATION_SUPERCLASS_PROP = NS + "precoordinationSuperclass";
+	public final static String HAS_SCALE_VALUE_PROP = NS + "hasScaleValue";
+
+	public final static String REFERENCED_VALUE_PROP = NS + "referencedValue";
+
 
 	public final static String IS_OBSOLETE_PROP = NS + "isObsolete";
 
@@ -148,9 +155,6 @@ public class WHOFICContentModelConstants {
 
 	/* Post-Coordination Axis Properties */
 
-
-
-	public final static String REFERENCED_VALUE_PROP = NS + "referencedValue";
 
     /*
      * Instances
