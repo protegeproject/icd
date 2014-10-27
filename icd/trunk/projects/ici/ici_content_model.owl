@@ -1,0 +1,807 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns="http://who.int/ici/contentModel#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:cpt="http://ama-assn.org/cpt#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:fic="http://who.int/icd#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:ic="http://who.int/who-icd#"
+  xml:base="http://who.int/ici/contentModel">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://who.int/icd"/>
+  </owl:Ontology>
+  <owl:Class rdf:ID="AnatomicStructureMetaClass">
+    <rdfs:subClassOf rdf:resource="http://who.int/icd#ValueMetaClass"/>
+  </owl:Class>
+  <owl:Class rdf:ID="PostcoordinationSection">
+    <rdfs:subClassOf rdf:resource="http://who.int/icd#PostcoordinationSection"/>
+  </owl:Class>
+  <owl:Class rdf:ID="OrganismMetaClass">
+    <rdfs:subClassOf rdf:resource="http://who.int/icd#ValueMetaClass"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ObservableEntityMetaClass">
+    <rdfs:subClassOf rdf:resource="http://who.int/icd#ValueMetaClass"/>
+  </owl:Class>
+  <owl:Class rdf:ID="SurgicalMedicalPostcoordinationSection">
+    <rdfs:subClassOf rdf:resource="#PostcoordinationSection"/>
+  </owl:Class>
+  <owl:Class rdf:ID="AnatomicTargetReferenceTerm">
+    <rdfs:subClassOf rdf:resource="http://who.int/icd#PostcoordinationValueReferenceTerm"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://who.int/icd#referencedValue"/>
+        <owl:allValuesFrom rdf:resource="#AnatomicStructureMetaClass"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Intent">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://who.int/icd#DefiningTerm"/>
+          <owl:Class>
+            <owl:oneOf rdf:parseType="Collection">
+              <Intent rdf:ID="Therapy"/>
+              <Intent rdf:ID="Screening"/>
+              <Intent rdf:ID="Prevention"/>
+              <Intent rdf:ID="Guidance"/>
+              <Intent rdf:ID="Education"/>
+              <Intent rdf:ID="Monitoring"/>
+              <Intent rdf:ID="Forensics"/>
+              <Intent rdf:ID="Palliation"/>
+            </owl:oneOf>
+          </owl:Class>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="ComplexityReferenceTerm">
+    <rdfs:subClassOf rdf:resource="http://who.int/icd#PostcoordinationValueReferenceTerm"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://who.int/icd#referencedValue"/>
+        <owl:allValuesFrom>
+          <owl:Class rdf:ID="ComplexityMetaClass"/>
+        </owl:allValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="PatientStatusReferenceTerm">
+    <rdfs:subClassOf rdf:resource="http://who.int/icd#PostcoordinationValueReferenceTerm"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://who.int/icd#referencedValue"/>
+        <owl:allValuesFrom>
+          <owl:Class rdf:ID="PatientStatusMetaClass"/>
+        </owl:allValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="HealthBehaviorTargetReferenceTerm">
+    <rdfs:subClassOf rdf:resource="http://who.int/icd#PostcoordinationValueReferenceTerm"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:ID="HealthBehaviorMetaClass"/>
+        </owl:allValuesFrom>
+        <owl:onProperty rdf:resource="http://who.int/icd#referencedValue"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ApproachMetaClass">
+    <rdfs:subClassOf rdf:resource="http://who.int/icd#ValueMetaClass"/>
+  </owl:Class>
+  <owl:Class rdf:ID="PathologyLabPostcoordinationSection">
+    <rdfs:subClassOf rdf:resource="#SurgicalMedicalPostcoordinationSection"/>
+  </owl:Class>
+  <owl:Class rdf:ID="LocaleReferenceTerm">
+    <rdfs:subClassOf rdf:resource="http://who.int/icd#PostcoordinationValueReferenceTerm"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://who.int/icd#referencedValue"/>
+        <owl:allValuesFrom>
+          <owl:Class rdf:ID="LocaleMetaClass"/>
+        </owl:allValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="BodySystemMetaClass">
+    <rdfs:subClassOf rdf:resource="http://who.int/icd#ValueMetaClass"/>
+  </owl:Class>
+  <owl:Class rdf:ID="EntityAddedOrRemovedInProcedureReferenceTerm">
+    <rdfs:subClassOf rdf:resource="http://who.int/icd#PostcoordinationValueReferenceTerm"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://who.int/icd#referencedValue"/>
+        <owl:allValuesFrom>
+          <owl:Class rdf:ID="EntityAddedOrRemovedInProcedureMetaClass"/>
+        </owl:allValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="FunctionMetaClass">
+    <rdfs:subClassOf rdf:resource="http://who.int/icd#ValueMetaClass"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ActivityAndParticipationReferenceTerm">
+    <rdfs:subClassOf rdf:resource="http://who.int/icd#PostcoordinationValueReferenceTerm"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://who.int/icd#referencedValue"/>
+        <owl:allValuesFrom>
+          <owl:Class rdf:ID="ActivityAndParticipationMetaClass"/>
+        </owl:allValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#PatientStatusMetaClass">
+    <rdfs:subClassOf rdf:resource="http://who.int/icd#ValueMetaClass"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ActionMetaClass">
+    <rdfs:subClassOf rdf:resource="http://who.int/icd#ValueMetaClass"/>
+  </owl:Class>
+  <owl:Class rdf:about="#EntityAddedOrRemovedInProcedureMetaClass">
+    <rdfs:subClassOf rdf:resource="http://who.int/icd#ValueMetaClass"/>
+  </owl:Class>
+  <owl:Class rdf:ID="FindingIndicationReferenceTerm">
+    <rdfs:subClassOf rdf:resource="http://who.int/icd#PostcoordinationValueReferenceTerm"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://who.int/icd#referencedValue"/>
+        <owl:allValuesFrom>
+          <owl:Class rdf:ID="FindingIndicationMetaClass"/>
+        </owl:allValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="SpecimenMetaClass">
+    <rdfs:subClassOf rdf:resource="http://who.int/icd#ValueMetaClass"/>
+  </owl:Class>
+  <owl:Class rdf:ID="SubstanceMetaClass">
+    <rdfs:subClassOf rdf:resource="http://who.int/icd#ValueMetaClass"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ActionReferenceTerm">
+    <rdfs:subClassOf rdf:resource="http://who.int/icd#PostcoordinationValueReferenceTerm"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://who.int/icd#referencedValue"/>
+        <owl:allValuesFrom rdf:resource="#ActionMetaClass"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="BodySystemReferenceTerm">
+    <rdfs:subClassOf rdf:resource="http://who.int/icd#PostcoordinationValueReferenceTerm"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#BodySystemMetaClass"/>
+        <owl:onProperty rdf:resource="http://who.int/icd#referencedValue"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="EnvironmentalFactorTargetReferenceTerm">
+    <rdfs:subClassOf rdf:resource="http://who.int/icd#PostcoordinationValueReferenceTerm"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://who.int/icd#referencedValue"/>
+        <owl:allValuesFrom>
+          <owl:Class rdf:ID="EnvironmentalFactorMetaClass"/>
+        </owl:allValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="FunctionTargetReferenceTerm">
+    <rdfs:subClassOf rdf:resource="http://who.int/icd#PostcoordinationValueReferenceTerm"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#FunctionMetaClass"/>
+        <owl:onProperty rdf:resource="http://who.int/icd#referencedValue"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ApproachReferenceTerm">
+    <rdfs:subClassOf rdf:resource="http://who.int/icd#PostcoordinationValueReferenceTerm"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://who.int/icd#referencedValue"/>
+        <owl:allValuesFrom rdf:resource="#ApproachMetaClass"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="PartReferenceTerm">
+    <rdfs:subClassOf rdf:resource="http://who.int/icd#PostcoordinationValueReferenceTerm"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://who.int/icd#ClassificationEntityMetaClass"/>
+        <owl:onProperty rdf:resource="http://who.int/icd#referencedValue"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ExtentMetaClass">
+    <rdfs:subClassOf rdf:resource="http://who.int/icd#ValueMetaClass"/>
+  </owl:Class>
+  <owl:Class rdf:ID="AnnotationsSection">
+    <rdfs:subClassOf rdf:resource="http://who.int/icd#ICSection"/>
+  </owl:Class>
+  <owl:Class rdf:ID="FunctionInterventionPostcoordiantionSection">
+    <rdfs:subClassOf rdf:resource="#PostcoordinationSection"/>
+  </owl:Class>
+  <owl:Class rdf:ID="PathologyMetaClass">
+    <rdfs:subClassOf rdf:resource="http://who.int/icd#ValueMetaClass"/>
+  </owl:Class>
+  <owl:Class rdf:ID="RecipientTypeReferenceTerm">
+    <rdfs:subClassOf rdf:resource="http://who.int/icd#PostcoordinationValueReferenceTerm"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://who.int/icd#referencedValue"/>
+        <owl:allValuesFrom>
+          <owl:Class rdf:ID="RecipientTypeMetaClass"/>
+        </owl:allValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#LocaleMetaClass">
+    <rdfs:subClassOf rdf:resource="http://who.int/icd#ValueMetaClass"/>
+  </owl:Class>
+  <owl:Class rdf:ID="AssociatedProcedureReferenceTerm">
+    <rdfs:subClassOf rdf:resource="http://who.int/icd#PostcoordinationValueReferenceTerm"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://who.int/icd#referencedValue"/>
+        <owl:allValuesFrom rdf:resource="http://who.int/icd#ClassificationEntityMetaClass"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#EnvironmentalFactorMetaClass">
+    <rdfs:subClassOf rdf:resource="http://who.int/icd#ValueMetaClass"/>
+  </owl:Class>
+  <owl:Class rdf:about="#ActivityAndParticipationMetaClass">
+    <rdfs:subClassOf rdf:resource="http://who.int/icd#ValueMetaClass"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ComponentReferenceTerm">
+    <rdfs:subClassOf rdf:resource="http://who.int/icd#PostcoordinationValueReferenceTerm"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://who.int/icd#referencedValue"/>
+        <owl:allValuesFrom>
+          <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+              <owl:Class rdf:about="#SubstanceMetaClass"/>
+              <owl:Class rdf:about="#OrganismMetaClass"/>
+              <owl:Class rdf:about="#ObservableEntityMetaClass"/>
+            </owl:unionOf>
+          </owl:Class>
+        </owl:allValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#ComplexityMetaClass">
+    <rdfs:subClassOf rdf:resource="http://who.int/icd#ValueMetaClass"/>
+  </owl:Class>
+  <owl:Class rdf:ID="EntityUsedInProcedureMetaClass">
+    <rdfs:subClassOf rdf:resource="http://who.int/icd#ValueMetaClass"/>
+  </owl:Class>
+  <owl:Class rdf:ID="PathologyReferenceTerm">
+    <rdfs:subClassOf rdf:resource="http://who.int/icd#PostcoordinationValueReferenceTerm"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://who.int/icd#referencedValue"/>
+        <owl:allValuesFrom rdf:resource="#PathologyMetaClass"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ExtentReferenceTerm">
+    <rdfs:subClassOf rdf:resource="http://who.int/icd#PostcoordinationValueReferenceTerm"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://who.int/icd#referencedValue"/>
+        <owl:allValuesFrom rdf:resource="#ExtentMetaClass"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="DeviceMetaClass">
+    <rdfs:subClassOf rdf:resource="http://who.int/icd#ValueMetaClass"/>
+  </owl:Class>
+  <owl:Class rdf:about="#FindingIndicationMetaClass">
+    <rdfs:subClassOf rdf:resource="http://who.int/icd#ValueMetaClass"/>
+  </owl:Class>
+  <owl:Class rdf:ID="EntityUsedInProcedureReferenceTerm">
+    <rdfs:subClassOf rdf:resource="http://who.int/icd#PostcoordinationValueReferenceTerm"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#EntityUsedInProcedureMetaClass"/>
+        <owl:onProperty rdf:resource="http://who.int/icd#referencedValue"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#RecipientTypeMetaClass">
+    <rdfs:subClassOf rdf:resource="http://who.int/icd#ValueMetaClass"/>
+  </owl:Class>
+  <owl:Class rdf:about="#HealthBehaviorMetaClass">
+    <rdfs:subClassOf rdf:resource="http://who.int/icd#ValueMetaClass"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:ID="hasFindingIndication">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:ID="hasIndication"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#SurgicalMedicalPostcoordinationSection"/>
+          <owl:Class rdf:about="#FunctionInterventionPostcoordiantionSection"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="#FindingIndicationReferenceTerm"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasApproach">
+    <rdfs:domain rdf:resource="#SurgicalMedicalPostcoordinationSection"/>
+    <rdfs:subPropertyOf rdf:resource="http://who.int/icd#postcoordinationAxis"/>
+    <rdfs:range rdf:resource="#ApproachReferenceTerm"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasPanelElement">
+    <rdfs:domain rdf:resource="#PathologyLabPostcoordinationSection"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:ID="hasPart"/>
+    </rdfs:subPropertyOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasBehaviorTarget">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:ID="hasTarget"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="#HealthBehaviorTargetReferenceTerm"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasComplexity">
+    <rdfs:subPropertyOf rdf:resource="http://who.int/icd#postcoordinationAxis"/>
+    <rdfs:domain rdf:resource="#PostcoordinationSection"/>
+    <rdfs:range rdf:resource="#ComplexityReferenceTerm"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasEntityUsedInProcedure">
+    <rdfs:domain rdf:resource="#PostcoordinationSection"/>
+    <rdfs:subPropertyOf rdf:resource="http://who.int/icd#postcoordinationAxis"/>
+    <rdfs:range rdf:resource="#EntityUsedInProcedureReferenceTerm"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasPathology">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#hasIndication"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="#PathologyReferenceTerm"/>
+    <rdfs:domain rdf:resource="#SurgicalMedicalPostcoordinationSection"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasIntent">
+    <rdfs:subPropertyOf rdf:resource="http://who.int/icd#hasType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://who.int/icd#DefinitionSection"/>
+    <rdfs:range rdf:resource="#Intent"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasAnatomicTarget">
+    <rdfs:range rdf:resource="#AnatomicTargetReferenceTerm"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#hasTarget"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain rdf:resource="#SurgicalMedicalPostcoordinationSection"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasAssociatedProcedure">
+    <rdfs:range rdf:resource="#AssociatedProcedureReferenceTerm"/>
+    <rdfs:subPropertyOf rdf:resource="http://who.int/icd#postcoordinationAxis"/>
+    <rdfs:domain rdf:resource="#PostcoordinationSection"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasComponent">
+    <rdfs:range rdf:resource="#ComponentReferenceTerm"/>
+    <rdfs:subPropertyOf rdf:resource="http://who.int/icd#postcoordinationAxis"/>
+    <rdfs:domain rdf:resource="#SurgicalMedicalPostcoordinationSection"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasEntityAddedInProcedure">
+    <rdfs:domain rdf:resource="#SurgicalMedicalPostcoordinationSection"/>
+    <rdfs:subPropertyOf rdf:resource="http://who.int/icd#postcoordinationAxis"/>
+    <rdfs:range rdf:resource="#EntityAddedOrRemovedInProcedureReferenceTerm"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasTarget">
+    <rdfs:subPropertyOf rdf:resource="http://who.int/icd#postcoordinationAxis"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasPatientStatus">
+    <rdfs:subPropertyOf rdf:resource="http://who.int/icd#postcoordinationAxis"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#SurgicalMedicalPostcoordinationSection"/>
+          <owl:Class rdf:about="#FunctionInterventionPostcoordiantionSection"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="#PatientStatusReferenceTerm"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasPart">
+    <rdfs:domain rdf:resource="#PostcoordinationSection"/>
+    <rdfs:subPropertyOf rdf:resource="http://who.int/icd#postcoordinationAxis"/>
+    <rdfs:range rdf:resource="#PartReferenceTerm"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasFunctionTarget">
+    <rdfs:range rdf:resource="#FunctionTargetReferenceTerm"/>
+    <rdfs:domain rdf:resource="#FunctionInterventionPostcoordiantionSection"/>
+    <rdfs:subPropertyOf rdf:resource="#hasTarget"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasRecipientType">
+    <rdfs:subPropertyOf rdf:resource="http://who.int/icd#postcoordinationAxis"/>
+    <rdfs:domain rdf:resource="#PostcoordinationSection"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="#RecipientTypeReferenceTerm"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasExtent">
+    <rdfs:domain rdf:resource="#PostcoordinationSection"/>
+    <rdfs:subPropertyOf rdf:resource="http://who.int/icd#postcoordinationAxis"/>
+    <rdfs:range rdf:resource="#ExtentReferenceTerm"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasIndication">
+    <rdfs:subPropertyOf rdf:resource="http://who.int/icd#postcoordinationAxis"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasLocale">
+    <rdfs:range rdf:resource="#LocaleReferenceTerm"/>
+    <rdfs:domain rdf:resource="#PostcoordinationSection"/>
+    <rdfs:subPropertyOf rdf:resource="http://who.int/icd#postcoordinationAxis"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasBodySystem">
+    <rdfs:range rdf:resource="#BodySystemReferenceTerm"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#SurgicalMedicalPostcoordinationSection"/>
+          <owl:Class rdf:about="#FunctionInterventionPostcoordiantionSection"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:subPropertyOf rdf:resource="http://who.int/icd#postcoordinationAxis"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasEntityRemovedInProcedure">
+    <rdfs:subPropertyOf rdf:resource="http://who.int/icd#postcoordinationAxis"/>
+    <rdfs:range rdf:resource="#EntityAddedOrRemovedInProcedureReferenceTerm"/>
+    <rdfs:domain rdf:resource="#SurgicalMedicalPostcoordinationSection"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasAction">
+    <rdfs:range rdf:resource="#ActionReferenceTerm"/>
+    <rdfs:domain rdf:resource="#PostcoordinationSection"/>
+    <rdfs:subPropertyOf rdf:resource="http://who.int/icd#postcoordinationAxis"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasActivityParticipationTarget">
+    <rdfs:subPropertyOf rdf:resource="#hasTarget"/>
+    <rdfs:range rdf:resource="#ActivityAndParticipationReferenceTerm"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasEnvironmentalFactorTarget">
+    <rdfs:range rdf:resource="#EnvironmentalFactorTargetReferenceTerm"/>
+    <rdfs:subPropertyOf rdf:resource="#hasTarget"/>
+  </owl:ObjectProperty>
+  <!-- rdf:Property rdf:about="http://who.int/icd#allowedPostcoordinationAxes">
+    <rdfs:domain rdf:resource="#SurgicalMedicalPostcoordinationSection"/>
+  </rdf:Property-->
+  <owl:DatatypeProperty rdf:ID="hasICHIAnnotation">
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:ID="ichiAnnotationProperty"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain rdf:resource="#AnnotationsSection"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasMeasure_Developer">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <cptAnnotationPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Measure_Developer</cptAnnotationPropertyName>
+    <rdfs:domain rdf:resource="#AnnotationsSection"/>
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:ID="cptAnnotationProperty"/>
+    </rdfs:subPropertyOf>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasChange_History">
+    <rdfs:subPropertyOf rdf:resource="#cptAnnotationProperty"/>
+    <cptAnnotationPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Change_History</cptAnnotationPropertyName>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#AnnotationsSection"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasICHIMapping">
+    <rdfs:subPropertyOf rdf:resource="#ichiAnnotationProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#AnnotationsSection"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasModifier_Code">
+    <rdfs:subPropertyOf rdf:resource="#cptAnnotationProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <cptAnnotationPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Modifier_Code</cptAnnotationPropertyName>
+    <rdfs:domain rdf:resource="#AnnotationsSection"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasICHITitle">
+    <rdfs:subPropertyOf rdf:resource="#ichiAnnotationProperty"/>
+    <rdfs:domain rdf:resource="#AnnotationsSection"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasExempt_Mod">
+    <cptAnnotationPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Exempt_Mod</cptAnnotationPropertyName>
+    <rdfs:subPropertyOf rdf:resource="#cptAnnotationProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#AnnotationsSection"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasLevel">
+    <rdfs:subPropertyOf rdf:resource="#cptAnnotationProperty"/>
+    <rdfs:domain rdf:resource="#AnnotationsSection"/>
+    <cptAnnotationPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Level</cptAnnotationPropertyName>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasICHICodeAlso">
+    <rdfs:domain rdf:resource="#AnnotationsSection"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:subPropertyOf rdf:resource="#ichiAnnotationProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasICHIInclusion">
+    <rdfs:subPropertyOf rdf:resource="#ichiAnnotationProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#AnnotationsSection"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasGuideline">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <cptAnnotationPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Guideline</cptAnnotationPropertyName>
+    <rdfs:subPropertyOf rdf:resource="#cptAnnotationProperty"/>
+    <rdfs:domain rdf:resource="#AnnotationsSection"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasShort_Descriptor">
+    <rdfs:subPropertyOf rdf:resource="#cptAnnotationProperty"/>
+    <cptAnnotationPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Short_Descriptor</cptAnnotationPropertyName>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#AnnotationsSection"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasLast_Revised">
+    <cptAnnotationPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Last_Revised</cptAnnotationPropertyName>
+    <rdfs:domain rdf:resource="#AnnotationsSection"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:subPropertyOf rdf:resource="#cptAnnotationProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasICHIComment">
+    <rdfs:domain rdf:resource="#AnnotationsSection"/>
+    <rdfs:subPropertyOf rdf:resource="#ichiAnnotationProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasModerate__Conscious__Sedation">
+    <rdfs:domain rdf:resource="#AnnotationsSection"/>
+    <rdfs:subPropertyOf rdf:resource="#cptAnnotationProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <cptAnnotationPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Moderate__Conscious__Sedation</cptAnnotationPropertyName>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasDescriptor_Extension">
+    <rdfs:domain rdf:resource="#AnnotationsSection"/>
+    <rdfs:subPropertyOf rdf:resource="#cptAnnotationProperty"/>
+    <cptAnnotationPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Descriptor_Extension</cptAnnotationPropertyName>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasICHITargetSystem">
+    <rdfs:subPropertyOf rdf:resource="#ichiAnnotationProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#AnnotationsSection"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasSNOMED_CT_Fully_Specified_Name">
+    <rdfs:domain rdf:resource="#AnnotationsSection"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <cptAnnotationPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >SNOMED_CT_Fully_Specified_Name</cptAnnotationPropertyName>
+    <rdfs:subPropertyOf rdf:resource="#cptAnnotationProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasConsumer_Friendly_Descriptor">
+    <rdfs:domain rdf:resource="#AnnotationsSection"/>
+    <cptAnnotationPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Consumer_Friendly_Descriptor</cptAnnotationPropertyName>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:subPropertyOf rdf:resource="#cptAnnotationProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasSNOMED_CT_Code__SCTID">
+    <rdfs:subPropertyOf rdf:resource="#cptAnnotationProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#AnnotationsSection"/>
+    <cptAnnotationPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >SNOMED_CT_Code__SCTID_</cptAnnotationPropertyName>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasDescriptor_Element">
+    <cptAnnotationPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Descriptor_Element</cptAnnotationPropertyName>
+    <rdfs:domain rdf:resource="#AnnotationsSection"/>
+    <rdfs:subPropertyOf rdf:resource="#cptAnnotationProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasFirst_Appearance">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <cptAnnotationPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >First_Appearance</cptAnnotationPropertyName>
+    <rdfs:domain rdf:resource="#AnnotationsSection"/>
+    <rdfs:subPropertyOf rdf:resource="#cptAnnotationProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasClinician_Descriptor">
+    <rdfs:domain rdf:resource="#AnnotationsSection"/>
+    <cptAnnotationPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Clinician_Descriptor</cptAnnotationPropertyName>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:subPropertyOf rdf:resource="#cptAnnotationProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasMedium_Descriptor">
+    <rdfs:domain rdf:resource="#AnnotationsSection"/>
+    <cptAnnotationPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medium_Descriptor</cptAnnotationPropertyName>
+    <rdfs:subPropertyOf rdf:resource="#cptAnnotationProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCPT_Code">
+    <rdfs:domain rdf:resource="#AnnotationsSection"/>
+    <rdfs:subPropertyOf rdf:resource="#cptAnnotationProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <cptAnnotationPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CPT_Code</cptAnnotationPropertyName>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasAdditional_Guideline">
+    <cptAnnotationPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Additional_Guideline</cptAnnotationPropertyName>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:subPropertyOf rdf:resource="#cptAnnotationProperty"/>
+    <rdfs:domain rdf:resource="#AnnotationsSection"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasReportable">
+    <rdfs:subPropertyOf rdf:resource="#cptAnnotationProperty"/>
+    <rdfs:domain rdf:resource="#AnnotationsSection"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <cptAnnotationPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Reportable</cptAnnotationPropertyName>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasFDA_Approval_Pending">
+    <rdfs:subPropertyOf rdf:resource="#cptAnnotationProperty"/>
+    <rdfs:domain rdf:resource="#AnnotationsSection"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <cptAnnotationPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >FDA_Approval_Pending</cptAnnotationPropertyName>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCODE">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#AnnotationsSection"/>
+    <cptAnnotationPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CODE</cptAnnotationPropertyName>
+    <rdfs:subPropertyOf rdf:resource="#cptAnnotationProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasAddon_Code">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <cptAnnotationPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Addon_Code</cptAnnotationPropertyName>
+    <rdfs:subPropertyOf rdf:resource="#cptAnnotationProperty"/>
+    <rdfs:domain rdf:resource="#AnnotationsSection"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasConsumer_Friendly_Enhanced_Descriptor">
+    <rdfs:subPropertyOf rdf:resource="#cptAnnotationProperty"/>
+    <rdfs:domain rdf:resource="#AnnotationsSection"/>
+    <cptAnnotationPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Consumer_Friendly_Enhanced_Descriptor</cptAnnotationPropertyName>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasICHIExclusion">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#AnnotationsSection"/>
+    <rdfs:subPropertyOf rdf:resource="#ichiAnnotationProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasDescriptor">
+    <rdfs:domain rdf:resource="#AnnotationsSection"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <cptAnnotationPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Descriptor</cptAnnotationPropertyName>
+    <rdfs:subPropertyOf rdf:resource="#cptAnnotationProperty"/>
+  </owl:DatatypeProperty>
+  <owl:FunctionalProperty rdf:ID="hasICHIType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:subPropertyOf rdf:resource="#ichiAnnotationProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#AnnotationsSection"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="hasICHIAlphaCode">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#AnnotationsSection"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:subPropertyOf rdf:resource="#ichiAnnotationProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="hasICHIICD9Code">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:subPropertyOf rdf:resource="#ichiAnnotationProperty"/>
+    <rdfs:domain rdf:resource="#AnnotationsSection"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="hasICHITypeDetail">
+    <rdfs:subPropertyOf rdf:resource="#ichiAnnotationProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="#AnnotationsSection"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="hasICHIDefinition">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#AnnotationsSection"/>
+    <rdfs:subPropertyOf rdf:resource="#ichiAnnotationProperty"/>
+  </owl:FunctionalProperty>
+  <rdf:Description rdf:about="http://who.int/icd#narrower">
+    <rdfs:domain rdf:resource="http://who.int/icd#TermSection"/>
+  </rdf:Description>
+  <owl:AnnotationProperty rdf:ID="cptAnnotationPropertyName">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:AnnotationProperty>
+  <fic:TermSection rdf:ID="ICICategory">
+    <rdf:type rdf:resource="http://who.int/icd#LinearizationSection"/>
+    <rdf:type rdf:resource="http://who.int/icd#DefinitionSection"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://who.int/icd#DomainConcept"/>
+  </fic:TermSection>
+  <owl:DeprecatedClass rdf:about="http://who.int/icd#ResidualCategoryTerm"/>
+  <rdf:Description rdf:about="http://who.int/icd#ICEntity">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >At the toplevel, the iCAT IC content model is divided into three parts: 
+    (1) DomainConcept consisting of the concepts related to the definition of 
+    IC categories. (2) ValueSet consisting of enumerations of values that 
+    constitue some of the value domains of IC properties (3) An information 
+    model of IC Category consisting of a number of IC Sections.</rdfs:comment>
+  </rdf:Description>
+  <fic:FoundationComponentView rdf:ID="FoundationComponent">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Extension Axes</rdfs:label>
+    <fic:sortingCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0</fic:sortingCode>
+  </fic:FoundationComponentView>
+  <owl:AllDifferent>
+    <owl:distinctMembers rdf:parseType="Collection">
+      <fic:LinearizationView rdf:ID="iCPT">
+        <fic:sortingCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >1</fic:sortingCode>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >iCPT</rdfs:label>
+      </fic:LinearizationView>
+      <fic:LinearizationView rdf:ID="ICHI_International">
+        <fic:sortingCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >2</fic:sortingCode>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >ICHI - International</rdfs:label>
+      </fic:LinearizationView>
+      <fic:LinearizationView rdf:ID="ICHI_Primary_Care_High_RS">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >ICHI - Primary Care - High Res.</rdfs:label>
+        <fic:sortingCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >3</fic:sortingCode>
+      </fic:LinearizationView>
+      <fic:LinearizationView rdf:ID="ICHI_Primary_Care_Low_RS">
+        <fic:sortingCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >4</fic:sortingCode>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >ICHI - Primary Care - Low Res</rdfs:label>
+      </fic:LinearizationView>
+      <fic:LinearizationView rdf:ID="ICHI_Research">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >ICHI - Research</rdfs:label>
+        <fic:sortingCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >5</fic:sortingCode>
+      </fic:LinearizationView>
+    </owl:distinctMembers>
+  </owl:AllDifferent>
+  <owl:AllDifferent>
+    <owl:distinctMembers rdf:parseType="Collection">
+      <Intent rdf:about="#Therapy"/>
+      <Intent rdf:about="#Screening"/>
+      <Intent rdf:about="#Prevention"/>
+      <Intent rdf:about="#Guidance"/>
+      <Intent rdf:about="#Education"/>
+      <Intent rdf:about="#Monitoring"/>
+      <Intent rdf:about="#Forensics"/>
+      <Intent rdf:about="#Palliation"/>
+    </owl:distinctMembers>
+  </owl:AllDifferent>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.5, Build 663)  http://protege.stanford.edu -->
