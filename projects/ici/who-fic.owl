@@ -1,0 +1,1006 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:bp="http://bioportal.bioontology.org#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns="http://who.int/icd#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:iceci="http://who.int/iceci/iceci.owl#"
+  xml:base="http://who.int/icd">
+  <owl:Ontology rdf:about=""/>
+  <owl:Class rdf:ID="ValueSet">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ICEntity"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="LanguageTerm">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Term"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >LanguageTerm</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="FullySpecifiedName">
+    <rdfs:subClassOf rdf:resource="#LanguageTerm"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Fully Specified Name</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="InteriorCodedTerm">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DeprecatedClass"/>
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:complementOf>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:ID="inclusion"/>
+            </owl:onProperty>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Term"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:complementOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="CodedTerm"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ReferenceTerm">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ReferenceTerm</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A type of ICD11_Entity that plays a role to hook the logical definitions from external vocabularies such as SNOMED CT, HUGO or ICF while it also plays a role for value set binding to those characteristics used to describe a clinical criteria, e.g. using "CD_Anatomical_Site" to represent the target concept descriptor of characteristic "Anatomical_Site". 
+
+Mapping relationship: Mappings of the concept to different coding systems (e.g. ICD-0, ICF,...) and other standardised systems like terminologies (SNOMED) etc.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Term"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="PostcoordinationScaleTerm">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Term"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ClamlReference">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="DomainConcept"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Linearization">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="LiniearizationEntity"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >This is the manifestation of ICD 11 in publishable form. Note, this is the first time that a Coded Element, in the historical tradition of the ICD codes, appears. It is a kind of linearization entity, comprising a Coded Term. However, this Coded Term links back to an Entity ID, which traces its lineage to the cloud layer and the ontology layer. Thus, stomach cancer as a Coded Term would correspond to related concepts at the Category Level and the Ontology Level. Nevertheless, a given linearization may assign different ICD codes in this current model. This is highly controversial, and we will need to address this question. For example, in a primary care linearization, stomach cancer might have been ICD code of I12.34. Whereas in a mortality linearization, the code might be P45.56. Similarly in a morbidity classification the same concept might be Q98.76. The implication is that the Coded Term is a subset of the Linearization rather than that of the Category Layer. However the linkage to the Category Layer occurs through the Entity ID. It is at the Linearization Layer that concepts of inclusions, index terms, exclusions come to the fore. These again all derived from the structures and hierarchies associated with the category layer.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="BaseExclusionTerm">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="InternalReferenceTerm"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ICSection">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >not happy with the "Section" postfix</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >IC Section</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ICEntity"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ReferenceSource">
+    <rdfs:subClassOf rdf:resource="#ValueSet"/>
+  </owl:Class>
+  <owl:Class rdf:about="#DomainConcept">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ICEntity"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="DisplayStatusValueSet">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:oneOf rdf:parseType="Collection">
+          <DisplayStatusValueSet rdf:ID="DS_Blue"/>
+          <DisplayStatusValueSet rdf:ID="DS_Yellow"/>
+          <DisplayStatusValueSet rdf:ID="DS_Red"/>
+        </owl:oneOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#ValueSet"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ExclusionTerm">
+    <rdfs:subClassOf rdf:resource="#LanguageTerm"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#LiniearizationEntity"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Exclusion Term</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DeprecatedClass"/>
+  </owl:Class>
+  <owl:Class rdf:ID="EvidenceLevel">
+    <rdfs:subClassOf rdf:resource="#ValueSet"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:oneOf rdf:parseType="Collection">
+          <EvidenceLevel rdf:ID="Expert_Opinion"/>
+          <EvidenceLevel rdf:ID="Systematic_Review_of_Literature_AND_Formalized_Peer_Review_Consensus"/>
+          <EvidenceLevel rdf:ID="Systematic_Review_of_Literature_OR_Formalized_Peer_Review_Consensus"/>
+        </owl:oneOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="BaseInclusionTerm">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="BaseIndexTerm"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="PostcoordinationValueReferenceTerm">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Term"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#CodedTerm">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DeprecatedClass"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A type of ICD11_Linearization_Entity that holds the traditional ICD legacy code.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="IdentifiableClass"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#LiniearizationEntity"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ChildOrder">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Instances of this class keep the sibling index for a parent.
+:DefinitionSection --childrenOrder  --&gt; ChildOrder (orderedChild, orderedChildIndex)</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ICEntity"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="DefinitionSection">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >DefinitionSection</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ICSection"/>
+  </owl:Class>
+  <owl:Class rdf:ID="FoundationComponentView">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="LinearizationView"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="NarrowerTerm">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#BaseIndexTerm"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="LiteratureReference">
+    <rdfs:subClassOf rdf:resource="#DomainConcept"/>
+  </owl:Class>
+  <owl:Class rdf:ID="InclusionTerm">
+    <rdfs:subClassOf rdf:resource="#LanguageTerm"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#LiniearizationEntity"/>
+    </rdfs:subClassOf>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DeprecatedClass"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Exemplers of the category</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Inclusion Term</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#Term">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Term</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#IdentifiableClass"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Note that the Lingustic Term is not a subclass of Term because External Definition is not part of the Foundation Content Model, although it is used to help users defining the ICD category.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >subclasses of Term correspond to components of  the Foundation Content Model.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="ExternalReferenceTerm">
+    <rdfs:subClassOf rdf:resource="#ReferenceTerm"/>
+  </owl:Class>
+  <owl:Class rdf:ID="DefiningTerm">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Defining Terms contributes toward specifying the meaning of the ICD category</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Term"/>
+  </owl:Class>
+  <owl:Class rdf:ID="LinearizationSection">
+    <rdfs:subClassOf rdf:resource="#ICSection"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >LinearizationSection</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#BaseIndexTerm">
+    <rdfs:subClassOf rdf:resource="#LanguageTerm"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Base Index Term</rdfs:label>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#LiniearizationEntity"/>
+          <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+              <owl:Class rdf:about="#NarrowerTerm"/>
+              <owl:Class rdf:ID="SynonymTerm"/>
+              <owl:Class rdf:about="#SynonymTerm"/>
+            </owl:unionOf>
+          </owl:Class>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="ExternalDefinitionTerm">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="BioportalReferenceTerm"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#LanguageTerm"/>
+    <rdfs:subClassOf rdf:resource="#ReferenceTerm"/>
+  </owl:Class>
+  <owl:Class rdf:ID="VersionNote">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DeprecatedClass"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ClassificationEntityMetaClass">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Metaclass of all classification entity classes. In a classification, we distinguish between classes that are classification entities (e.g., disease and external causes in ICD, health interventions in ICHI) and classes that are values in some value set.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#LinearizationView">
+    <rdfs:subClassOf rdf:resource="#ValueSet"/>
+  </owl:Class>
+  <owl:Class rdf:ID="UseCase">
+    <rdfs:subClassOf rdf:resource="#DomainConcept"/>
+  </owl:Class>
+  <owl:Class rdf:about="#SynonymTerm">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >SynonymTerm</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#LanguageTerm"/>
+    <rdfs:subClassOf rdf:resource="#BaseIndexTerm"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ExclusionTermType">
+    <rdfs:subClassOf rdf:resource="#ValueSet"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:oneOf rdf:parseType="Collection">
+          <ExclusionTermType rdf:ID="also_code">
+            <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >A type 2 excludes note represents "Not included here". An excludes2 note indicates that the condition excluded is not part of the condition it is excluded from but a patient may have both conditions at the same time. When an Excludes2 note appears under a code it is acceptable to use both the code and the excluded code together. (Note: From ICD10CM)</rdfs:comment>
+          </ExclusionTermType>
+          <ExclusionTermType rdf:ID="rule_out">
+            <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >A type 1 Excludes note is a pure excludes. It means "NOT CODED HERE!" An Excludes1 note indicates that the code excluded should never be used at the same time as the code above the Excludes1 note. An Excludes1 is for used for when two conditions cannot occur together, such as a congenital form versus an acquired form of the same condition. (From ICD10CM description)</rdfs:comment>
+          </ExclusionTermType>
+        </owl:oneOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="IndexTermType">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:oneOf rdf:parseType="Collection">
+          <IndexTermType rdf:ID="NarrowTerm"/>
+          <IndexTermType rdf:ID="Synonym"/>
+        </owl:oneOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#ValueSet"/>
+  </owl:Class>
+  <owl:Class rdf:about="#IdentifiableClass">
+    <rdfs:subClassOf rdf:resource="#DomainConcept"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >IdentifiableClass</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="SubclassInclusionTerm">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#InternalReferenceTerm"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ResidualCategoryTerm">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="LeafCodedTerm"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >This is a specific type of CodedTerm that corresponds to traditional ICD residual categories such as Not Elsewhere Classified (NEC) and Not Otherwise Specified (NOS) .</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="DefinitionTerm">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Textual Definition</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#LanguageTerm"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Definition of ICD category</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#LeafCodedTerm">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="narrower"/>
+        </owl:onProperty>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >0</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#CodedTerm"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DeprecatedClass"/>
+  </owl:Class>
+  <owl:Class rdf:ID="PostcoordinationAxesSpecification">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#LiniearizationEntity"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="EditorialStatusValueSet">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:oneOf rdf:parseType="Collection">
+          <EditorialStatusValueSet rdf:ID="In_Conflict"/>
+          <EditorialStatusValueSet rdf:ID="Under_Discussion"/>
+          <EditorialStatusValueSet rdf:ID="Prefilled"/>
+          <EditorialStatusValueSet rdf:ID="RSG_Approved"/>
+          <EditorialStatusValueSet rdf:ID="TAG_Approved"/>
+          <EditorialStatusValueSet rdf:ID="WHO_Approved"/>
+        </owl:oneOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#ValueSet"/>
+  </owl:Class>
+  <owl:Class rdf:about="#InternalReferenceTerm">
+    <rdfs:subClassOf rdf:resource="#Term"/>
+  </owl:Class>
+  <owl:Class rdf:ID="PrecoordinationSuperclassTerm">
+    <rdfs:subClassOf rdf:resource="#InternalReferenceTerm"/>
+  </owl:Class>
+  <owl:Class rdf:about="#BioportalReferenceTerm">
+    <rdfs:subClassOf rdf:resource="#Term"/>
+  </owl:Class>
+  <owl:Class rdf:about="#LiniearizationEntity">
+    <rdfs:subClassOf rdf:resource="#DomainConcept"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A type of ICD11_Entity that is used to represent all entities related to publications, such as CodedTerm (traditional ICD category with ICD legacy code), Index Term, Synonym, Inclusion Term and Exclusion Term (two types).</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="PostcoordinationSection">
+    <rdfs:subClassOf rdf:resource="#ICSection"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ValueMetaClass">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Metaclass of axis classes that serve as values of value sets.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="#DomainConcept"/>
+  </owl:Class>
+  <owl:Class rdf:ID="TitleTerm">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Title Term</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#LanguageTerm"/>
+  </owl:Class>
+  <owl:Class rdf:about="#ICEntity">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >At the toplevel, the iCAT IC content model is divided into three parts: 
+(1) DomainConcept consisting of the concepts related to the definition of IC categories. 
+(2) ValueSet consisting of enumerations of values that constitue some of the value domains of IC properties
+(3) An information model of IC Category consisting of a number of ICDSections.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="TermSection">
+    <rdfs:subClassOf rdf:resource="#ICSection"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >TermSection</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >base inclusion should be a subset of synonym</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="LinearizationSpecification">
+    <rdfs:subClassOf rdf:resource="#LiniearizationEntity"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:ID="icdCategory">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#ExclusionTerm"/>
+          <owl:Class rdf:about="#InclusionTerm"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The list of ICD categories that correspond to an exclusion or inclusion  term</rdfs:comment>
+    <rdfs:range rdf:resource="#ICSection"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="lifeCycle"/>
+  <owl:ObjectProperty rdf:ID="postcoordinationAxis"/>
+  <owl:ObjectProperty rdf:ID="linearizationParent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#LinearizationSpecification"/>
+    <rdfs:range rdf:resource="#ICSection"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="linearization">
+    <rdfs:domain rdf:resource="#LinearizationSection"/>
+    <rdfs:range rdf:resource="#LinearizationSpecification"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#narrower">
+    <rdfs:range rdf:resource="#NarrowerTerm"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:ID="baseIndex"/>
+    </rdfs:subPropertyOf>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="exclusionType">
+    <rdfs:domain rdf:resource="#ExclusionTerm"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >exclusionType</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="#ExclusionTermType"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="broader">
+    <rdfs:range rdf:resource="#CodedTerm"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Note by Alan Rector about why using Broader/Narrower:
+
+This is more than a labelling issue. It is highly substantive.
+
+* Superclass/Subclass means that every member of the superclass is a member of the
+
+subclass. This is a logical relation with logical criteria.
+
+* Broader_than/Narrower_than is a linguistic, or more properly information retrieval
+
+term, that means that the broader items should be retrieved, or browsed to
+
+when the narrow terms are requested.
+
+Example. In a thesaurus, "Aortic valve" might be "narrower than" "Heart". However,
+
+"Aortic Valve" is not a subclass/kind of "heart". Librarians and information retrieval
+
+specialists use "Broader than"/"narrower than" specifically to avoid the implications of
+
+Superclass/Subclass and to emphasise that the relation should not be used for inheritance
+
+or other logical functions, but only for navigation and browsing. Everything true of all
+
+members of a superclass is true of all members of a subclass. There is no implication that
+
+things true of members of a broader class are also true of the narrower class.</rdfs:comment>
+    <rdfs:domain rdf:resource="#CodedTerm"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#baseIndex">
+    <rdfs:domain rdf:resource="#TermSection"/>
+    <rdfs:range rdf:resource="#BaseIndexTerm"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="index">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >legacy index term</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DeprecatedProperty"/>
+    <rdfs:range rdf:resource="#BaseIndexTerm"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#CodedTerm"/>
+          <owl:Class rdf:about="#TermSection"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bodyPart">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bodyPart</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="allowedPostcoordinationAxes">
+    <rdfs:range rdf:resource="#PostcoordinationAxesSpecification"/>
+    <rdfs:domain rdf:resource="#PostcoordinationSection"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasICDCategory">
+    <rdfs:range rdf:resource="#ICSection"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="referenceSource">
+    <rdfs:domain rdf:resource="#LiteratureReference"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="#ReferenceSource"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >PMID, ISBN, URL, or other sources of information</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="synonym">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >synonym</rdfs:label>
+    <rdfs:range rdf:resource="#SynonymTerm"/>
+    <rdfs:domain rdf:resource="#TermSection"/>
+    <rdfs:subPropertyOf rdf:resource="#baseIndex"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="versionNote">
+    <rdfs:domain rdf:resource="#ICEntity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+    <rdfs:range rdf:resource="#VersionNote"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="externalReference">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >externalReference</rdfs:label>
+    <rdfs:domain rdf:resource="#DefinitionSection"/>
+    <rdfs:range rdf:resource="#ExternalReferenceTerm"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="baseExclusion">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >base exclusion</rdfs:label>
+    <rdfs:range rdf:resource="#BaseExclusionTerm"/>
+    <rdfs:domain rdf:resource="#TermSection"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="rootCodedTerm">
+    <rdfs:domain rdf:resource="#Linearization"/>
+    <rdfs:range rdf:resource="#CodedTerm"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#inclusion">
+    <rdfs:domain rdf:resource="#TermSection"/>
+    <rdfs:range rdf:resource="#InclusionTerm"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DeprecatedProperty"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >legay inclusion</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="clamlReferences">
+    <rdfs:range rdf:resource="#ClamlReference"/>
+    <rdfs:domain rdf:resource="#Term"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="fullySpecifiedName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="#FullySpecifiedName"/>
+    <rdfs:domain rdf:resource="#DefinitionSection"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="icdRefCode">
+    <rdfs:domain rdf:resource="#ClamlReference"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="preferredLong">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >preferredLong</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="editorialStatusLinearization">
+    <rdfs:subPropertyOf>
+      <owl:FunctionalProperty rdf:ID="editorialStatus"/>
+    </rdfs:subPropertyOf>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="editorialStatusSnomedRef">
+    <rdfs:subPropertyOf>
+      <owl:FunctionalProperty rdf:about="#editorialStatus"/>
+    </rdfs:subPropertyOf>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bodySystem">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Should this also be a term?!</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bodySystem</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="literatureReference">
+    <rdfs:range rdf:resource="#LiteratureReference"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="evidenceLevel">
+    <rdfs:range rdf:resource="#EvidenceLevel"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="indexTermType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DeprecatedProperty"/>
+    <rdfs:range rdf:resource="#IndexTermType"/>
+    <rdfs:domain rdf:resource="#BaseIndexTerm"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="allowedPostcoordinationAxisProperty">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The value of this property is a subproperty of the OWL  whofic:postcoordinationAxis property.
+ The postocoordination axis represented by the value of this property is  an allowed postcoordination axis for a given entity and a given 
+      linearization.</rdfs:comment>
+    <rdfs:domain rdf:resource="#PostcoordinationAxesSpecification"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="motherLifeCycle">
+    <rdfs:subPropertyOf rdf:resource="#lifeCycle"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="linearizationView">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Linearization"/>
+          <owl:Class rdf:about="#LinearizationSpecification"/>
+          <owl:Class rdf:about="#PostcoordinationAxesSpecification"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="#LinearizationView"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="introduction">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >introduction</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasDirectReference"/>
+  <owl:ObjectProperty rdf:ID="subclassBaseInclusion">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:ID="baseInclusion"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="#SubclassInclusionTerm"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="referencedValue"/>
+  <owl:ObjectProperty rdf:ID="requiredPostcoordinationAxisProperty">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The value of this property is a subproperty of the OWL icd:postcoordinationAxis property.
+The postocoordination axis represented by the value of this property is not just an allowed postcoordination axis, but is a required one.
+This is a subproperty of allowedPostcoordinationAxisProperty, because all required postcoordination axes are by definition also allowed postcoordination axes.</rdfs:comment>
+    <rdfs:domain rdf:resource="#PostcoordinationAxesSpecification"/>
+    <rdfs:subPropertyOf rdf:resource="#allowedPostcoordinationAxisProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="childLifeCycle">
+    <rdfs:subPropertyOf rdf:resource="#lifeCycle"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#baseInclusion">
+    <rdfs:domain rdf:resource="#TermSection"/>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#BaseInclusionTerm"/>
+          <owl:Class rdf:about="#SubclassInclusionTerm"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >base inclusion</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="definitionPrefilled">
+    <rdfs:domain rdf:resource="#DefinitionSection"/>
+    <owl:inverseOf>
+      <owl:FunctionalProperty rdf:ID="is_prefilled_definition_of"/>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="indexBaseInclusion">
+    <rdfs:subPropertyOf rdf:resource="#baseInclusion"/>
+    <rdfs:range rdf:resource="#BaseInclusionTerm"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="treatment"/>
+  <owl:ObjectProperty rdf:ID="displayStatus">
+    <rdfs:domain rdf:resource="#ICSection"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="exclusion">
+    <rdfs:range rdf:resource="#ExclusionTerm"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DeprecatedProperty"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >legacy  exclusion</rdfs:label>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#CodedTerm"/>
+          <owl:Class rdf:about="#TermSection"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="preferred">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >preferred</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="editorialStatusTerm">
+    <rdfs:subPropertyOf>
+      <owl:FunctionalProperty rdf:about="#editorialStatus"/>
+    </rdfs:subPropertyOf>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="note">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >note</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="childrenOrder">
+    <rdfs:domain rdf:resource="#DefinitionSection"/>
+    <rdfs:range rdf:resource="#ChildOrder"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="orderedChild">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="#DefinitionSection"/>
+    <rdfs:domain rdf:resource="#ChildOrder"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="title">
+    <rdfs:domain rdf:resource="#DefinitionSection"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >title</rdfs:label>
+    <rdfs:range rdf:resource="#TitleTerm"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="editorialStatusDefinition">
+    <rdfs:subPropertyOf>
+      <owl:FunctionalProperty rdf:about="#editorialStatus"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain rdf:resource="#DefinitionSection"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="definition">
+    <rdfs:range rdf:resource="#DefinitionTerm"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >definition</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#DefinitionSection"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="longDefinition">
+    <rdfs:range rdf:resource="#DefinitionTerm"/>
+    <rdfs:domain rdf:resource="#DefinitionSection"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="sequenceNumber">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="isIncludedInLinearization">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >True if the ICD category is included in the linearization</rdfs:comment>
+    <rdfs:domain rdf:resource="#LinearizationSpecification"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="clamlKind">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#DefinitionSection"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="isDefinitional">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >isDefinitional</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:domain rdf:resource="#DefiningTerm"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="viewFlag">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Every category can have Subset adaptation and special view flags. This allows to group selected codes to a Subset that can be extracted for further use, e.g. to generate ICD-11-Mental Health or ICD-11-Mortality</rdfs:comment>
+    <rdfs:domain rdf:resource="#CodedTerm"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="inclusionType">
+    <rdfs:range>
+      <owl:DataRange>
+        <owl:oneOf rdf:parseType="Resource">
+          <rdf:rest rdf:parseType="Resource">
+            <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >synonym</rdf:first>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+          </rdf:rest>
+          <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+          >subclass</rdf:first>
+        </owl:oneOf>
+      </owl:DataRange>
+    </rdfs:range>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >inclusionType</rdfs:label>
+    <rdfs:domain rdf:resource="#InclusionTerm"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://bioportal.bioontology.org#ontologyId">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >This is the BioPortal ontology id, e.g., "40403"</rdfs:comment>
+    <rdfs:domain rdf:resource="#BioportalReferenceTerm"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="citation">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#ExternalDefinitionTerm"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >citation</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="isGrouping">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:domain rdf:resource="#LinearizationSpecification"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="id">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id</rdfs:label>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#DefinitionSection"/>
+          <owl:Class rdf:about="#IdentifiableClass"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >This is the internal id of a category or term (could be split in two or three other ids)</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="level">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >level</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="ontologyId">
+    <rdfs:domain rdf:resource="#ReferenceTerm"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ontologyId</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >This is either the full URI of the ontology (ontology name), or some short name, if full URI does not exist</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="comment">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >comment</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#ReferenceTerm"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="termId">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >This is the termId of the referenced term. Should be full URI if available, or else some other id (e.g. Snomed id)</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >termId</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#ReferenceTerm"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="summary">
+    <rdfs:domain rdf:resource="#LiteratureReference"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="kind">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Intended to be used for specifying the kind of category: chapter, block or single category.</rdfs:comment>
+    <rdfs:domain rdf:resource="#CodedTerm"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="clamlContent">
+    <rdfs:domain rdf:resource="#Term"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="sortingCode">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The property used to sort linearization views</rdfs:comment>
+    <rdfs:domain rdf:resource="#LinearizationView"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="url">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Is this property necessary?</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >url</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://bioportal.bioontology.org#shortTermId">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >This is the BioPortal short term id, e.g. "12345" or  "p1:Pizza"</rdfs:comment>
+    <rdfs:domain rdf:resource="#BioportalReferenceTerm"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="sortingLabel">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#DefinitionSection"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="source">
+    <rdfs:domain rdf:resource="#LanguageTerm"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="referenceID">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#LiteratureReference"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="orderedChildIndex">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#ChildOrder"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="linearizationSortingLabel">
+    <rdfs:domain rdf:resource="#LinearizationSpecification"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="isObsolete">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:domain rdf:resource="#DefinitionSection"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="adminInfo">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Use as Underlying cause code, legal restrictions (country specific), etc.
+Administrative information like "may be coded as underlying cause", "may be used for morbidity coding", "rare disease" and others.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="label">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Term"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >label</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://bioportal.bioontology.org#ontologyLabel">
+    <rdfs:domain rdf:resource="#BioportalReferenceTerm"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="clamlUsage">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#ClamlReference"/>
+          <owl:Class rdf:about="#DefinitionSection"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="definitionType">
+    <rdfs:domain rdf:resource="#ExternalDefinitionTerm"/>
+    <rdfs:range>
+      <owl:DataRange>
+        <owl:oneOf rdf:parseType="Resource">
+          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+          <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+          >prefilled</rdf:first>
+        </owl:oneOf>
+      </owl:DataRange>
+    </rdfs:range>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="text">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#ClamlReference"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="unspecifiedTypeComment">
+    <rdfs:domain rdf:resource="#DefinitionSection"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Unspecified: When this box is checked, the iCAT user will be required to comment on why it is unspecifie</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="description">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="language">
+    <rdfs:domain rdf:resource="#LanguageTerm"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >lanugage</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="publicId">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:FunctionalProperty rdf:ID="unit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="#editorialStatus">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="#EditorialStatusValueSet"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="value">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="precoordinationSuperclass">
+    <rdfs:range rdf:resource="#ICSection"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#PostcoordinationSection"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="hasType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="#is_prefilled_definition_of">
+    <owl:inverseOf rdf:resource="#definitionPrefilled"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#ExternalDefinitionTerm"/>
+    <rdfs:range rdf:resource="#DefinitionSection"/>
+  </owl:FunctionalProperty>
+  <TitleTerm rdf:ID="TitleTerm_2"/>
+  <ReferenceSource rdf:ID="PMID"/>
+  <ReferenceSource rdf:ID="ISBN"/>
+  <LinearizationSpecification rdf:ID="TestIsIncludedSlotLinearization">
+    <isIncludedInLinearization rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</isIncludedInLinearization>
+  </LinearizationSpecification>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.5, Build 663)  http://protege.stanford.edu -->
