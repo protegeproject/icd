@@ -899,9 +899,9 @@ public class WHOFICContentModel {
         return linViews;
     }
 
-    protected Collection<RDFResource> getLinearizationViewsFromCls(RDFSNamedClass parentCls, RDFProperty linProp) {
+    protected Collection<RDFResource> getLinearizationViewsFromCls(RDFSNamedClass cls, RDFProperty linProp) {
         Collection<RDFResource> linViews = new ArrayList<RDFResource>();
-        Collection<RDFResource> linearizationSpecs = getLinearizationSpecificationsForProp(parentCls, linProp);
+        Collection<RDFResource> linearizationSpecs = cls.getPropertyValues(linProp);
 
         for (RDFResource linearizationSpec : linearizationSpecs) {
             RDFResource linearizationView = (RDFResource) linearizationSpec.getPropertyValue(getLinearizationViewProperty());
@@ -911,10 +911,6 @@ public class WHOFICContentModel {
         }
 
         return linViews;
-    }
-
-    protected Collection<RDFResource> getLinearizationSpecificationsForProp(RDFSNamedClass parentCls, RDFProperty linProp) {
-        return parentCls.getPropertyValues(linProp);
     }
 
 
@@ -934,6 +930,31 @@ public class WHOFICContentModel {
         }
     }
 
+    public List<RDFProperty> getAllSelectedPostcoordinationAxes(RDFSNamedClass cls, boolean requiredOnly) {
+		RDFProperty allowedPCAxisPropertyProp = (requiredOnly ? getRequiredPostcoordinationAxisPropertyProperty() : getAllowedPostcoordinationAxisPropertyProperty());
+		
+		return getAllSelectedPostcoordinationAxes(cls, allowedPCAxisPropertyProp);
+    }
+
+    protected List<RDFProperty> getAllSelectedPostcoordinationAxes(RDFSNamedClass cls, RDFProperty allowedPCAxisPropertyProp) {
+		List<RDFProperty> res = new ArrayList<RDFProperty>();
+		for (RDFResource pcAxesSpec : getAllowedPostcoorcdinationSpecifications(cls)) {
+			Collection<RDFProperty> allowedPCAxes = pcAxesSpec.getPropertyValues(allowedPCAxisPropertyProp);
+			res.addAll(allowedPCAxes);
+		}
+		return res;
+    }
+
+    
+    public List<RDFProperty> getSelectedAllowedPostcoordinationAxes(RDFResource pcAxesSpec, boolean includeRequired) {
+    	return (List<RDFProperty>) pcAxesSpec.getPropertyValues(getAllowedPostcoordinationAxisPropertyProperty(), includeRequired);
+    }
+
+    public List<RDFProperty> getSelectedRequiredPostcoordinationAxes(RDFResource pcAxesSpec) {
+    	return (List<RDFProperty>) pcAxesSpec.getPropertyValues(getRequiredPostcoordinationAxisPropertyProperty());
+    }
+
+    
     /**
      * It gets or creates and ICDClass. If it creates, it will not add the metaclasses.
      * To create an ICDMetaclass, it is better to use {@link #createICDCategory(String, Collection)}
@@ -1301,6 +1322,11 @@ public class WHOFICContentModel {
     @SuppressWarnings("unchecked")
     public Collection<RDFResource> getLinearizationSpecifications(RDFSNamedClass icdClass) {
         return icdClass.getPropertyValues(getLinearizationProperty());
+    }
+
+    @SuppressWarnings("unchecked")
+    public Collection<RDFResource> getAllowedPostcoorcdinationSpecifications(RDFSNamedClass icdClass) {
+        return icdClass.getPropertyValues(getAllowedPostcoordinationAxesProperty());
     }
 
     /*

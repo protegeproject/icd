@@ -6,9 +6,11 @@ import java.util.List;
 import java.util.Map;
 
 import edu.stanford.bmir.whofic.icd.ICDContentModel;
+import edu.stanford.bmir.whofic.icd.ICDContentModelConstants;
 import edu.stanford.smi.protege.model.Project;
 import edu.stanford.smi.protege.ui.ProjectManager;
 import edu.stanford.smi.protegex.owl.model.OWLModel;
+import edu.stanford.smi.protegex.owl.model.RDFProperty;
 import edu.stanford.smi.protegex.owl.model.RDFResource;
 import edu.stanford.smi.protegex.owl.model.RDFSNamedClass;
 
@@ -17,6 +19,9 @@ public class ICD_API_Example {
     private static OWLModel owlModel;
     private static ICDContentModel icdContentModel;
 
+    private static final boolean REQUIRED_ONLY = true;
+    private static final boolean ALL_ALLOWED = false;
+    
     public static void main(String[] args) {
         if (args.length != 1) {
            System.out.println("Argument missing: pprj file name");
@@ -45,6 +50,7 @@ public class ICD_API_Example {
         getChildren();
         getClamlRef();
         getLinearizationInfo();
+        getPostcoordinationInfo();
         getDisplayStatusAndTagResponsability();
         getPublicId();
     }
@@ -114,6 +120,35 @@ public class ICD_API_Example {
                    "; linearization parent: " +( linearizationParent == null ? "none" : linearizationParent.getBrowserText()) +
                    "; linearization sorting label: " + (linSortingLabel == null ? "(not specified)" : linSortingLabel));
        }
+    }
+
+    public static void getPostcoordinationInfo() {
+        System.out.println("\n Post-Coordination information:");
+
+        List<String> pcAxesPropertiesList = ICDContentModelConstants.PC_AXES_PROPERTIES_LIST;
+        System.out.println("List of all possible postcoordination axes in ICD: " + pcAxesPropertiesList);
+
+        RDFSNamedClass category = icdContentModel.getICDCategory("http://who.int/icd#A65-A69");
+        System.out.println("\n Post-Coordination summary for " + category.getBrowserText());
+        
+        List<RDFProperty> allAllowedPostcoordinationAxes = icdContentModel.getAllSelectedPostcoordinationAxes(category, ALL_ALLOWED);
+        List<RDFProperty> allRequiredPostcoordinationAxes = icdContentModel.getAllSelectedPostcoordinationAxes(category, REQUIRED_ONLY);
+        
+        System.out.println("All allowed postcoordination axes selected (including required ones): " + allAllowedPostcoordinationAxes);
+        System.out.println("All required postcoordination axes selected: " + allRequiredPostcoordinationAxes);
+        allAllowedPostcoordinationAxes.removeAll(allRequiredPostcoordinationAxes);
+        System.out.println("All allowed (but not required) postcoordination axes selected: " + allAllowedPostcoordinationAxes);
+        
+        System.out.println("\n Post-Coordination details per linearization: ");
+        for (RDFResource pcAxesSpec : icdContentModel.getAllowedPostcoorcdinationSpecifications(category)) {
+            RDFResource linearization = (RDFResource) pcAxesSpec.getPropertyValue(icdContentModel.getLinearizationViewProperty());
+        	Collection<RDFProperty> allowedPCAxes = icdContentModel.getSelectedAllowedPostcoordinationAxes(pcAxesSpec, false);
+        	Collection<RDFProperty> requiredPCAxes = icdContentModel.getSelectedRequiredPostcoordinationAxes(pcAxesSpec);
+    	   
+        	System.out.println("Linearization: " + linearization.getBrowserText() +
+        			"\n    allowed: " + allowedPCAxes +
+        			"\n    required: " +requiredPCAxes );
+        }
     }
 
     public static void getResidualGenerationInfo() {
