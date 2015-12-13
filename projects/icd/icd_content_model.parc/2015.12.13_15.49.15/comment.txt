@@ -1,0 +1,1 @@
+Added TermSection and LinearizationSection types to ChapterX
