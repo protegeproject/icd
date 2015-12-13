@@ -1,0 +1,1 @@
+Added ICD11LinearizationView instance for ICD-O. Set label, comment and sorting label (25).
