@@ -58,10 +58,13 @@
 	        	dir="." 
 	            	classname="edu.stanford.bmir.icd.utils.AddMetaclass"
                         maxmemory="${heap.size.max}">
-		      	<classpath refid = "project.classpath"/>	        	
+		      	<classpath refid = "project.classpath"/>
+	 		<arg line="${pprj.file} ${metaclass} ${topclasses}"/>	
+       	<!--
 	 		<arg value="${pprj.file}"/>	
 	        <arg value="${metaclass}"/>	
         	<arg value="${topclasses}"/>	
+        	-->
 	        </java>
 	 </target>
 	
