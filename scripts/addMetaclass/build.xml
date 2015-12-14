@@ -59,8 +59,9 @@
 	            	classname="edu.stanford.bmir.icd.utils.AddMetaclass"
                         maxmemory="${heap.size.max}">
 		      	<classpath refid = "project.classpath"/>	        	
-	 		<arg value="${pprj.file}"/>		
+	 		<arg value="${pprj.file}"/>	
 	        <arg value="${metaclass}"/>	
+        	<arg value="${topclasses}"/>	
 	        </java>
 	 </target>
 	

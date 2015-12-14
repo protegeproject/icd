@@ -18,8 +18,8 @@ public class AddMetaclass {
     private static RDFSNamedClass metaclass;
 
     public static void main(String[] args) {
-        if (args.length != 2) {
-            System.out.println("Expected arguments: pprj file name and metaclass name ");
+        if (args.length >= 2) {
+            System.out.println("Usage: AddMetaclass pprj_file_name metaclass_name [top_class_name]+");
             return;
         }
 
@@ -46,16 +46,30 @@ public class AddMetaclass {
         
         icdContentModel = new ICDContentModel(owlModel);
 
-        addMetaclass();
+        RDFSNamedClass topClass = icdContentModel.getICDCategoryClass();
+        if (args.length > 2) {
+        	for (int i = 2; i < args.length; i++) {
+	        	topClass = (RDFSNamedClass) owlModel.getCls(args[i]);
+	            
+	            if (topClass == null) {
+	            	System.out.println("ERROR: Could not find top class: " + args[i]);
+	            	continue;
+	            }
+	            
+	            addMetaclass(topClass);
+        	}
+        }
+        else {
+        	addMetaclass(topClass);
+        }
     }
 
-    private static void addMetaclass() {
+    private static void addMetaclass(RDFSNamedClass topClass) {
 
     	Log.getLogger().info("Started to retrieve disease classes at: " + new Date());
     	long t0 = System.currentTimeMillis();
 
         owlModel.setGenerateEventsEnabled(false);
-        RDFSNamedClass topClass = icdContentModel.getICDCategoryClass();
         
         Collection<RDFSNamedClass> clses = new ArrayList<RDFSNamedClass>(topClass.getSubclasses(true));
         clses.add(topClass);
