@@ -56,7 +56,7 @@
 	        <java 
 			fork="true" 
 	        	dir="." 
-	            	classname="edu.stanford.bmir.icd.utils.AddLinearization"
+	            	classname="edu.stanford.bmir.icd.utils.AddMultipleLinearizations"
                         maxmemory="${heap.size.max}">
 		      	<classpath refid = "project.classpath"/>
 	        <arg value="${opt.isPartOf}"/>
