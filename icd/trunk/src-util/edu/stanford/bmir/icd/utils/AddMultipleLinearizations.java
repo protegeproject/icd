@@ -120,7 +120,7 @@ public class AddMultipleLinearizations {
     private static int countNonOptionArguments(String[] args) {
 		int nonOptArgCount = 0;
 		for (String arg : args) {
-			if (isOptionArgument(arg)) {
+			if (! isOptionArgument(arg)) {
 				nonOptArgCount++;
 			}
 		}
