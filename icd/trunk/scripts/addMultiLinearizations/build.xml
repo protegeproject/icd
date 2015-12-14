@@ -59,11 +59,14 @@
 	            	classname="edu.stanford.bmir.icd.utils.AddMultipleLinearizations"
                         maxmemory="${heap.size.max}">
 		      	<classpath refid = "project.classpath"/>
+	        <arg line="${opt.isPartOf} ${opt.isGrouping} ${pprj.file} ${top.class} ${lin.views}"/>
+<!--
 	        <arg value="${opt.isPartOf}"/>
 	        <arg value="${opt.isGrouping}"/>
 	 		<arg value="${pprj.file}"/>	
 	 		<arg value="${top.class}"/>	
-	        <arg value="${lin.views}"/>	
+	        <arg value="${lin.views}"/>
+	        	-->
 	        </java>
 	 </target>
 	
