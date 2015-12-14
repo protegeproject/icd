@@ -53,6 +53,8 @@ public class AddMultipleLinearizations {
     private static OWLNamedClass linearizationSpecificationClass;
     private static RDFProperty linearizationProp;
     private static RDFProperty linearizationViewProp;
+    private static RDFProperty isIncludedInLinearizationProp;
+    private static RDFProperty isGroupingProp;
 
 
     public static void main(String[] args) {
@@ -114,7 +116,7 @@ public class AddMultipleLinearizations {
 
 	private static void usage() {
 		Log.getLogger().info(
-				"Usage: AddLinearizationAdvanced [-partOf|-notPartOf] [-gr|-nogr] pprj_file_name top_category linearization_view_1 [linearization_view_2 ...]");
+				"Usage: AddLinearizationAdvanced pprj_file_name top_category linearization_view_1 [linearization_view_2 ...] [-partOf|-notPartOf] [-gr|-nogr]");
 	}
 	
     private static int countNonOptionArguments(String[] args) {
@@ -168,6 +170,8 @@ public class AddMultipleLinearizations {
         linearizationSpecificationClass = (OWLNamedClass) icdContentModel.getLinearizationSpecificationClass();
         linearizationProp = icdContentModel.getLinearizationProperty();
         linearizationViewProp = icdContentModel.getLinearizationViewProperty();
+        isIncludedInLinearizationProp = icdContentModel.getIsIncludedInLinearizationProperty();
+        isGroupingProp = icdContentModel.getIsGroupingProperty();
     }
 
     private static void addLinearization(Collection<RDFSNamedClass> cats) {
@@ -188,6 +192,12 @@ public class AddMultipleLinearizations {
 	        try{
 	            RDFResource linSpec = linearizationSpecificationClass.createInstance(IDGenerator.getNextUniqueId());
 	            linSpec.setPropertyValue(linearizationViewProp, linearizationViewInst);
+	            if (isPartOf != null) {
+	            	linSpec.setPropertyValue(isIncludedInLinearizationProp, isPartOf.booleanValue());
+	            }
+	            if (isGrouping != null) {
+	            	linSpec.setPropertyValue(isGroupingProp, isGrouping.booleanValue());
+	            }
 	            cat.addPropertyValue(linearizationProp, linSpec);
 	        } catch (Exception e) {
 	            log.warning("------- Error at adding lin to " + cat);
