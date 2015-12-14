@@ -92,9 +92,10 @@ public class AddMultipleLinearizations {
         }
         
         for (int i = 2; i < nonOptArgCount; i++) {
-	        RDFIndividual linearizationViewInst = owlModel.getRDFIndividual(getNonOptionArgument(args, i));
+	        String linViewArg = getNonOptionArgument(args, i);
+			RDFIndividual linearizationViewInst = owlModel.getRDFIndividual(linViewArg);
 	        if (linearizationViewInst == null) {
-	            log.severe("Abort. Failed to find linearization view: " + linearizationViewInst);
+	            log.severe("Abort. Failed to find linearization view: " + linViewArg);
 	            return;
 	        }
 	        linearizationViewInstances.add(linearizationViewInst);
