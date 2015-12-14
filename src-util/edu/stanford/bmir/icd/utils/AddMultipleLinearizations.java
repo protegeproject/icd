@@ -83,6 +83,8 @@ public class AddMultipleLinearizations {
         }
 
 
+        init();
+
         topCategory = icdContentModel.getICDCategory(getNonOptionArgument(args, 1));
         if (topCategory == null) {
             log.severe("Abort. Failed to find category: " + topCategory);
@@ -97,8 +99,6 @@ public class AddMultipleLinearizations {
 	        }
 	        linearizationViewInstances.add(linearizationViewInst);
         }
-
-        init();
 
         long t0 = System.currentTimeMillis();
         log.info("Started getting ICD categories at: " + new Date());
@@ -116,7 +116,7 @@ public class AddMultipleLinearizations {
 
 	private static void usage() {
 		Log.getLogger().info(
-				"Usage: AddLinearizationAdvanced pprj_file_name top_category linearization_view_1 [linearization_view_2 ...] [-partOf|-notPartOf] [-gr|-nogr]");
+				"Usage: AddLinearizationAdvanced  [-partOf|-notPartOf] [-gr|-nogr]  pprj_file_name top_category linearization_view_1 [linearization_view_2 ...]");
 	}
 	
     private static int countNonOptionArguments(String[] args) {
