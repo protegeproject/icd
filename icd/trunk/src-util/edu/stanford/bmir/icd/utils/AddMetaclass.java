@@ -18,7 +18,7 @@ public class AddMetaclass {
     private static RDFSNamedClass metaclass;
 
     public static void main(String[] args) {
-        if (args.length >= 2) {
+        if (args.length < 2) {
             System.out.println("Usage: AddMetaclass pprj_file_name metaclass_name [top_class_name]+");
             return;
         }
