@@ -17,6 +17,17 @@ import edu.stanford.smi.protegex.owl.model.RDFProperty;
 import edu.stanford.smi.protegex.owl.model.RDFResource;
 import edu.stanford.smi.protegex.owl.model.RDFSNamedClass;
 
+/**
+ * This script adds one linearization specification to all entities in ICD.
+ * <p>
+ * It is similar to based on {@link AddMultipleLinearizations} script, 
+ * with the difference that it always adds the linearization specified in the argument
+ * to all ICD categories, not only to a given branch/subset of categories.
+ * <p>
+ * If you need to add multiple linearizations to all ICD entities, you can either
+ * call this script multiple times, or you can call the {@link AddMultipleLinearizations}
+ * script with the top_category_class being "ICD Category".
+ */
 
 public class AddLinearization {
     private static Logger log = Log.getLogger(AddLinearization.class);
