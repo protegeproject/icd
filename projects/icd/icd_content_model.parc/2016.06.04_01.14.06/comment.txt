@@ -1,0 +1,17 @@
+- added new postcoordinationAxis: associatedWith (range: AssociatedWithReferenceTerm)
+- reorganized subproperties of injuryQualifier as the following
+	- injuryQualifier
+	  - burnQualifier	(range: BurnQualifierReferenceTerm *)
+	    - extentOfBurnByBodySurface	(range: ExtentOfBurnByBodySurfaceReferenceTerm)
+	    - extentOfFullThicknessBurnByBodySurface	(range: ExtentOfFullThicknessBurnByBodySurfaceReferenceTerm)
+	    - outcomeOfFullThicknessBurn	(range: OutcomeOfFullThicknessBurnReferenceTerm)
+	  - fractureQualifier	(range: FractureQualifierReferenceTerm **)
+	    - fractureSubtype	(range: FractureSubtypeReferenceTerm **)
+	    - fractureOpenOrClosed	(range: FractureOpenOrClosedReferenceTerm)
+	    - jointInvolvementInFracture	(range: JointInvlolvementInFractureReferenceTerm)
+	  - typeOfInjury	(range: TypeOfInjuryReferenceTerm)
+- (*) renamed BurnScaleValueReferenceTerm to BurnQualifierReferenceTerm and BurnScaleValueMetaClass to BurnQualifierMetaClass
+- (**) renamed FractureSubtypeMetaClass to FractureQualifierMetaClass and added it as referencedValue for FractureQualifierReferenceTerm instead of FractureSubtypeReferenceTerm
+- added ICDSection to the range of referencedValue property
+- changed definition of SpecificAnatomyReferenceTerm from "referencedValue some SpecificAnatomyMetaClass" to "referencedValue only SpecificAnatomyMetaClass"
+

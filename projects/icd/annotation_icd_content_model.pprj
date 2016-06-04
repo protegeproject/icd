@@ -1,100 +1,100 @@
-; Sun Dec 13 15:49:21 PST 2015
+; Fri Jun 03 22:03:19 EEST 2016
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
 
-([annotation_icd_content_model_ProjectKB_Class10112] of  String
+([annotation_icd_content_model_ProjectKB_Class23] of  String
 
 	(name "Change")
 	(string_value "context"))
 
-([annotation_icd_content_model_ProjectKB_Class10113] of  String
+([annotation_icd_content_model_ProjectKB_Class24] of  String
 
 	(name "AnnotationStatus")
 	(string_value "description"))
 
-([annotation_icd_content_model_ProjectKB_Class10114] of  String
+([annotation_icd_content_model_ProjectKB_Class25] of  String
 
 	(name "Ontology_Component")
 	(string_value "currentName"))
 
-([annotation_icd_content_model_ProjectKB_Class10115] of  String
+([annotation_icd_content_model_ProjectKB_Class26] of  String
 
 	(name "LinguisticEntity")
 	(string_value "label{+%28}language{%29}"))
 
-([annotation_icd_content_model_ProjectKB_Class10116] of  String
+([annotation_icd_content_model_ProjectKB_Class27] of  String
 
 	(name "Status")
 	(string_value "description"))
 
-([annotation_icd_content_model_ProjectKB_Class10117] of  String
+([annotation_icd_content_model_ProjectKB_Class28] of  String
 
 	(name "ChangeStatus")
 	(string_value "description"))
 
-([annotation_icd_content_model_ProjectKB_Class10118] of  String
+([annotation_icd_content_model_ProjectKB_Class29] of  String
 
 	(name "Proposal")
 	(string_value "subject"))
 
-([annotation_icd_content_model_ProjectKB_Class10119] of  String
+([annotation_icd_content_model_ProjectKB_Class30] of  String
 
 	(name ":INSTANCE-ANNOTATION")
 	(string_value "%3AANNOTATION-TEXT"))
 
-([annotation_icd_content_model_ProjectKB_Class10120] of  String
+([annotation_icd_content_model_ProjectKB_Class31] of  String
 
 	(name "Annotation")
 	(string_value "subject"))
 
-([annotation_icd_content_model_ProjectKB_Class10121] of  String
+([annotation_icd_content_model_ProjectKB_Class32] of  String
 
 	(name ":PAL-CONSTRAINT")
 	(string_value "%3APAL-NAME"))
 
-([annotation_icd_content_model_ProjectKB_Class10122] of  String
+([annotation_icd_content_model_ProjectKB_Class33] of  String
 
 	(name ":META-CLASS")
 	(string_value "%3ANAME"))
 
-([annotation_icd_content_model_ProjectKB_Class10123] of  String
+([annotation_icd_content_model_ProjectKB_Class34] of  String
 
 	(name "Timestamp")
 	(string_value "date"))
 
-([annotation_icd_content_model_ProjectKB_Class10124] of  String
+([annotation_icd_content_model_ProjectKB_Class35] of  String
 
 	(name "Vote")
 	(string_value "subject"))
 
-([annotation_icd_content_model_ProjectKB_Class10125] of  String
+([annotation_icd_content_model_ProjectKB_Class36] of  String
 
 	(name "User")
 	(string_value "name"))
 
-([annotation_icd_content_model_ProjectKB_Class10126] of  Map_Entry
+([annotation_icd_content_model_ProjectKB_Class37] of  Map_Entry
 
 	(key "suppress_instance_counting")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([annotation_icd_content_model_ProjectKB_Class10127] of  Map_Entry
+([annotation_icd_content_model_ProjectKB_Class38] of  Map_Entry
 
 	(key "add_name_on_instance_form")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([annotation_icd_content_model_ProjectKB_Class10128] of  Map_Entry
+([annotation_icd_content_model_ProjectKB_Class39] of  Map_Entry
 
 	(key "annotation_proj_exists")
 	(key_class "java.lang.String")
 	(value "yes")
 	(value_class "java.lang.String"))
 
-([annotation_icd_content_model_ProjectKB_Class10129] of  Map_Entry
+([annotation_icd_content_model_ProjectKB_Class40] of  Map_Entry
 
 	(key "change_tracking_active")
 	(key_class "java.lang.String")
@@ -185,20 +185,20 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[annotation_icd_content_model_ProjectKB_Class10112]
-		[annotation_icd_content_model_ProjectKB_Class10113]
-		[annotation_icd_content_model_ProjectKB_Class10114]
-		[annotation_icd_content_model_ProjectKB_Class10115]
-		[annotation_icd_content_model_ProjectKB_Class10116]
-		[annotation_icd_content_model_ProjectKB_Class10117]
-		[annotation_icd_content_model_ProjectKB_Class10118]
-		[annotation_icd_content_model_ProjectKB_Class10119]
-		[annotation_icd_content_model_ProjectKB_Class10120]
-		[annotation_icd_content_model_ProjectKB_Class10121]
-		[annotation_icd_content_model_ProjectKB_Class10122]
-		[annotation_icd_content_model_ProjectKB_Class10123]
-		[annotation_icd_content_model_ProjectKB_Class10124]
-		[annotation_icd_content_model_ProjectKB_Class10125]))
+		[annotation_icd_content_model_ProjectKB_Class23]
+		[annotation_icd_content_model_ProjectKB_Class24]
+		[annotation_icd_content_model_ProjectKB_Class25]
+		[annotation_icd_content_model_ProjectKB_Class26]
+		[annotation_icd_content_model_ProjectKB_Class27]
+		[annotation_icd_content_model_ProjectKB_Class28]
+		[annotation_icd_content_model_ProjectKB_Class29]
+		[annotation_icd_content_model_ProjectKB_Class30]
+		[annotation_icd_content_model_ProjectKB_Class31]
+		[annotation_icd_content_model_ProjectKB_Class32]
+		[annotation_icd_content_model_ProjectKB_Class33]
+		[annotation_icd_content_model_ProjectKB_Class34]
+		[annotation_icd_content_model_ProjectKB_Class35]
+		[annotation_icd_content_model_ProjectKB_Class36]))
 
 ([changes_ProjectKB_Class10] of  Property_List
 )
@@ -4079,10 +4079,10 @@
 ([changes_ProjectKB_Instance_10131] of  Map
 
 	(entries
-		[annotation_icd_content_model_ProjectKB_Class10126]
-		[annotation_icd_content_model_ProjectKB_Class10127]
-		[annotation_icd_content_model_ProjectKB_Class10128]
-		[annotation_icd_content_model_ProjectKB_Class10129]))
+		[annotation_icd_content_model_ProjectKB_Class37]
+		[annotation_icd_content_model_ProjectKB_Class38]
+		[annotation_icd_content_model_ProjectKB_Class39]
+		[annotation_icd_content_model_ProjectKB_Class40]))
 
 ([changes_ProjectKB_Instance_120] of  Property_List
 
@@ -6883,7 +6883,7 @@
 	(is_hidden FALSE)
 	(widget_class_name "edu.stanford.smi.protege.widget.InstancesTab"))
 
-([KB_289458_Class4] of  Map
+([KB_465260_Class4] of  Map
 )
 
 ([KB_690954_Instance_0] of  String
