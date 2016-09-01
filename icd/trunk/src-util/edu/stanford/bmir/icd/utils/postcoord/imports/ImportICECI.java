@@ -17,6 +17,7 @@ import edu.stanford.bmir.whofic.icd.ICDContentModel;
 import edu.stanford.smi.protege.model.Project;
 import edu.stanford.smi.protege.ui.ProjectManager;
 import edu.stanford.smi.protege.util.Log;
+import edu.stanford.smi.protegex.owl.model.OWLDatatypeProperty;
 import edu.stanford.smi.protegex.owl.model.OWLModel;
 import edu.stanford.smi.protegex.owl.model.OWLNamedClass;
 import edu.stanford.smi.protegex.owl.model.OWLObjectProperty;
@@ -37,11 +38,13 @@ public class ImportICECI {
     private static final String VALUE_SEPARATOR = ",";
     private static final String PREFIX_NEW_TERM = "http://who.int/icd#ICECI_";
     private static final String VALUE_SET_PARENT_CLASS_NAME = "http://who.int/icd#ICECI_ICECI";
-    private static final String REFERENCED_CATEGORY_PROPERTY_NAME = "http://who.int/icd#referencedCategory";
+	private static final String REFERENCED_CATEGORY_PROPERTY_NAME = "http://who.int/icd#referencedCategory";
+    private static final String ICECI_CODE_PROPERTY_NAME = "http://who.int/icd#iceciCode";
     
     private static ICDContentModel cm;
     private static OWLModel owlModel;
     private static OWLNamedClass valueSetTopClass;
+    private static OWLDatatypeProperty iceciCodeProperty;
 
     private static List<RDFSNamedClass> metaclasses = new ArrayList<RDFSNamedClass>();
     private static Map<OWLNamedClass, String> id2baseExclusionsMap = new HashMap<OWLNamedClass, String>();
@@ -103,6 +106,7 @@ public class ImportICECI {
             valueSetTopClass = (OWLNamedClass) cm.createICDCategory(VALUE_SET_PARENT_CLASS_NAME, cm.getChapterXClass().getName());
             addMetaclasses(valueSetTopClass);
         }
+        iceciCodeProperty = owlModel.getOWLDatatypeProperty(ICECI_CODE_PROPERTY_NAME);
     }
 
 
@@ -152,7 +156,7 @@ public class ImportICECI {
         String relevantEntities = cols.length > 5 ? cols[5] : null;
 
         OWLNamedClass cls = createClass(id, parentId);
-        addProperties(cls, title, inclusions);
+        addProperties(cls, title, id, inclusions);
 
         if (baseExclusions != null) {
             id2baseExclusionsMap.put(cls, baseExclusions);
@@ -174,11 +178,13 @@ public class ImportICECI {
         }
     }
 
-    private static void addProperties(OWLNamedClass cls, String title, String inclusions) {
+    private static void addProperties(OWLNamedClass cls, String title, String iceciCode, String inclusions) {
         RDFResource titleTerm = cm.createTitleTerm();
         titleTerm.addPropertyValue(cm.getLabelProperty(), title);
         cls.addPropertyValue(cm.getIcdTitleProperty(), titleTerm);
 
+        cls.addPropertyValue(iceciCodeProperty, iceciCode);
+        
         for (String incl : split(inclusions)) {
 			RDFResource narrowerTerm = cm.createTerm(cm.getTermNarrowerClass());
 			cm.fillTerm(narrowerTerm, null, incl, "en");
@@ -191,7 +197,7 @@ public class ImportICECI {
     private static void addCrossReferences(){
         log.info("Adding cross referneces (for exclusions and related entities) started at: " + new Date());
 
-        OWLObjectProperty referendeCatProp = owlModel.getOWLObjectProperty(REFERENCED_CATEGORY_PROPERTY_NAME);
+        OWLObjectProperty referencedCatProp = owlModel.getOWLObjectProperty(REFERENCED_CATEGORY_PROPERTY_NAME);
         for (OWLNamedClass cls : id2baseExclusionsMap.keySet()) {
         	String exclusions = id2baseExclusionsMap.get(cls);
         	for (String exclusionName : split(exclusions)) {
@@ -200,7 +206,7 @@ public class ImportICECI {
                 if (excludedCategory != null) {
         			RDFResource exclusionTerm = cm.createTerm(cm.getTermBaseExclusionClass());
         			//TODO check this statement
-        			exclusionTerm.addPropertyValue(referendeCatProp, excludedCategory);
+        			exclusionTerm.addPropertyValue(referencedCatProp, excludedCategory);
         			cm.addBaseExclusionTermToClass(cls, exclusionTerm);
                 } else {
                     log.warning("Could not find exclusion "+ excludedCategory +" for class: " + cls);
