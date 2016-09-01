@@ -1,3 +1,6 @@
 Note: If not otherwise specified all class, property and individual names 
 	are in the "http://who.int/icd#" namespace
 
+- Make sure to update content model before running the script
+- Make sure all parameters in excel_import_iceci.properties are set correctly
+- Make sure (proper version of) icd.jar is available
