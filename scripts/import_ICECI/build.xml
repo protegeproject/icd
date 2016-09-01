@@ -1,6 +1,6 @@
 <?xml version = "1.0" encoding = "utf-8"?>
 <project name = "Fill in Values from Excel sheets" default = "run">    
-   <property file="excel_import.properties"/>  
+   <property file="excel_import_iceci.properties"/>  
    <property name = "owl.path"         value = "edu.stanford.smi.protegex.owl"/>   
    <property name = "owl.plugin.path"  value = "${protege.home}/plugins/${owl.path}"/>
    <property name = "icd.path"         value = "${protege.home}/plugins/edu.stanford.bmir.icd.misc"/>
