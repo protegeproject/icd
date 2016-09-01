@@ -37,7 +37,7 @@
         <fileset dir="${owl.plugin.path}"/>
       	<fileset dir="${icd.path}"/>
       	<fileset dir="${chao.path}"/>
-      	<pathelement location = "excel_import_ch20.jar"/>
+      	<pathelement location = "excel_import_iceci.jar"/>
       </path>
 
     </target>
