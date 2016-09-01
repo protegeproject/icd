@@ -1,0 +1,3 @@
+Note: If not otherwise specified all class, property and individual names 
+	are in the "http://who.int/icd#" namespace
+
