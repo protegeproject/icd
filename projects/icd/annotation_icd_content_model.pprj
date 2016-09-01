@@ -1,102 +1,102 @@
-; Fri Jun 03 22:03:19 EEST 2016
+; Thu Aug 25 17:57:21 PDT 2016
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
 
 ([annotation_icd_content_model_ProjectKB_Class23] of  String
 
-	(name "Change")
-	(string_value "context"))
-
-([annotation_icd_content_model_ProjectKB_Class24] of  String
-
 	(name "AnnotationStatus")
 	(string_value "description"))
 
-([annotation_icd_content_model_ProjectKB_Class25] of  String
-
-	(name "Ontology_Component")
-	(string_value "currentName"))
-
-([annotation_icd_content_model_ProjectKB_Class26] of  String
-
-	(name "LinguisticEntity")
-	(string_value "label{+%28}language{%29}"))
-
-([annotation_icd_content_model_ProjectKB_Class27] of  String
-
-	(name "Status")
-	(string_value "description"))
-
-([annotation_icd_content_model_ProjectKB_Class28] of  String
-
-	(name "ChangeStatus")
-	(string_value "description"))
-
-([annotation_icd_content_model_ProjectKB_Class29] of  String
-
-	(name "Proposal")
-	(string_value "subject"))
-
-([annotation_icd_content_model_ProjectKB_Class30] of  String
-
-	(name ":INSTANCE-ANNOTATION")
-	(string_value "%3AANNOTATION-TEXT"))
-
-([annotation_icd_content_model_ProjectKB_Class31] of  String
+([annotation_icd_content_model_ProjectKB_Class24] of  String
 
 	(name "Annotation")
 	(string_value "subject"))
 
-([annotation_icd_content_model_ProjectKB_Class32] of  String
-
-	(name ":PAL-CONSTRAINT")
-	(string_value "%3APAL-NAME"))
-
-([annotation_icd_content_model_ProjectKB_Class33] of  String
-
-	(name ":META-CLASS")
-	(string_value "%3ANAME"))
-
-([annotation_icd_content_model_ProjectKB_Class34] of  String
+([annotation_icd_content_model_ProjectKB_Class25] of  String
 
 	(name "Timestamp")
 	(string_value "date"))
 
-([annotation_icd_content_model_ProjectKB_Class35] of  String
+([annotation_icd_content_model_ProjectKB_Class26] of  String
+
+	(name ":PAL-CONSTRAINT")
+	(string_value "%3APAL-NAME"))
+
+([annotation_icd_content_model_ProjectKB_Class27] of  String
+
+	(name ":META-CLASS")
+	(string_value "%3ANAME"))
+
+([annotation_icd_content_model_ProjectKB_Class28] of  String
 
 	(name "Vote")
 	(string_value "subject"))
 
-([annotation_icd_content_model_ProjectKB_Class36] of  String
+([annotation_icd_content_model_ProjectKB_Class29] of  String
+
+	(name "Change")
+	(string_value "context"))
+
+([annotation_icd_content_model_ProjectKB_Class30] of  String
+
+	(name "LinguisticEntity")
+	(string_value "label{+%28}language{%29}"))
+
+([annotation_icd_content_model_ProjectKB_Class31] of  String
+
+	(name ":INSTANCE-ANNOTATION")
+	(string_value "%3AANNOTATION-TEXT"))
+
+([annotation_icd_content_model_ProjectKB_Class32] of  String
+
+	(name "Ontology_Component")
+	(string_value "currentName"))
+
+([annotation_icd_content_model_ProjectKB_Class33] of  String
 
 	(name "User")
 	(string_value "name"))
 
+([annotation_icd_content_model_ProjectKB_Class34] of  String
+
+	(name "Status")
+	(string_value "description"))
+
+([annotation_icd_content_model_ProjectKB_Class35] of  String
+
+	(name "ChangeStatus")
+	(string_value "description"))
+
+([annotation_icd_content_model_ProjectKB_Class36] of  String
+
+	(name "Proposal")
+	(string_value "subject"))
+
 ([annotation_icd_content_model_ProjectKB_Class37] of  Map_Entry
-
-	(key "suppress_instance_counting")
-	(key_class "java.lang.String")
-	(value "false")
-	(value_class "java.lang.String"))
-
-([annotation_icd_content_model_ProjectKB_Class38] of  Map_Entry
 
 	(key "add_name_on_instance_form")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([annotation_icd_content_model_ProjectKB_Class39] of  Map_Entry
+([annotation_icd_content_model_ProjectKB_Class38] of  Map_Entry
 
 	(key "annotation_proj_exists")
 	(key_class "java.lang.String")
 	(value "yes")
 	(value_class "java.lang.String"))
 
-([annotation_icd_content_model_ProjectKB_Class40] of  Map_Entry
+([annotation_icd_content_model_ProjectKB_Class39] of  Map_Entry
 
 	(key "change_tracking_active")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
+
+([annotation_icd_content_model_ProjectKB_Class40] of  Map_Entry
+
+	(key "suppress_instance_counting")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
@@ -6883,7 +6883,7 @@
 	(is_hidden FALSE)
 	(widget_class_name "edu.stanford.smi.protege.widget.InstancesTab"))
 
-([KB_465260_Class4] of  Map
+([KB_675014_Class4] of  Map
 )
 
 ([KB_690954_Instance_0] of  String
@@ -6893,7 +6893,7 @@
 ([KB_690954_Instance_1] of  String
 
 	(name "namespaces")
-	(string_value "rdf http://www.w3.org/1999/02/22-rdf-syntax-ns# rdfs http://www.w3.org/2000/01/rdf-schema# "))
+	(string_value "rdfs http://www.w3.org/2000/01/rdf-schema# rdf http://www.w3.org/1999/02/22-rdf-syntax-ns# "))
 
 ([KB_806078_Instance_0] of  Property_List
 
@@ -7324,29 +7324,29 @@
 
 	(browser_slot_names [BROWSER_SLOT_NAMES])
 	(customized_instance_widgets
-		[changes_ProjectKB_Instance_40056]
-		[changes_ProjectKB_Class40192]
-		[STANDARD_CLASS_FORM_WIDGET]
-		[STANDARD_SLOT_FORM_WIDGET]
-		[changes_ProjectKB_Instance_81267]
-		[changes_ProjectKB_Class30260]
-		[changes_ProjectKB_Class10086]
-		[changes_ProjectKB_Class50585]
-		[changes_ProjectKB_Instance_51308]
-		[changes_ProjectKB_Instance_82926]
-		[changes_ProjectKB_Class30496]
-		[changes_ProjectKB_Class40150]
-		[changes_ProjectKB_Instance_51020]
-		[changes_ProjectKB_Class30101]
-		[INSTANCE_ANNOTATION_FORM_WIDGET]
-		[changes_ProjectKB_Class10059]
 		[changes_ProjectKB_Instance_16]
-		[STANDARD_FACET_FORM_WIDGET]
-		[PAL_FORM_WIDGET]
-		[changes_ProjectKB_Instance_50854]
+		[changes_ProjectKB_Class50585]
 		[changes_ProjectKB_Instance_51393]
+		[STANDARD_FACET_FORM_WIDGET]
+		[changes_ProjectKB_Instance_51308]
+		[PAL_FORM_WIDGET]
+		[changes_ProjectKB_Instance_82926]
+		[changes_ProjectKB_Instance_80822]
+		[changes_ProjectKB_Class40192]
+		[changes_ProjectKB_Class30260]
+		[STANDARD_CLASS_FORM_WIDGET]
+		[changes_ProjectKB_Instance_40056]
+		[changes_ProjectKB_Class10086]
+		[changes_ProjectKB_Class30496]
+		[INSTANCE_ANNOTATION_FORM_WIDGET]
+		[changes_ProjectKB_Instance_51020]
+		[changes_ProjectKB_Instance_81267]
+		[changes_ProjectKB_Instance_50854]
+		[STANDARD_SLOT_FORM_WIDGET]
+		[changes_ProjectKB_Class10059]
+		[changes_ProjectKB_Class40150]
 		[changes_ProjectKB_Class10045]
-		[changes_ProjectKB_Instance_80822])
+		[changes_ProjectKB_Class30101])
 	(default_cls_metaclass ":STANDARD-CLASS")
 	(default_facet_metaclass ":STANDARD-FACET")
 	(default_instance_widget_class_name "edu.stanford.smi.protege.widget.FormWidget")

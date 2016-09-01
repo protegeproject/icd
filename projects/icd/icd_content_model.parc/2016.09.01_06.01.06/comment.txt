@@ -1,0 +1,1 @@
+Added classes (ICECIMetaClass and ExternalCauseDimensionReferenceTerm) and properties (relevantEntity and iceciCode) to support ICECI as a value set
