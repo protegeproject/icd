@@ -80,6 +80,52 @@ C.2.2.3.8	C.2.2.3	Other specified biting, stinging, invenomating
 C.2.2.3.9	C.2.2.3	Unspecified biting, stinging, invenomating			
 C.2.2.8	C.2.2	other specified piercing/penetrating force			
 C.2.2.9	C.2.2	unspecified piercing/penetrating force			
+C.2.20	C.2	Complications of health care			
+C.2.20.1	C.2.20	Adverse effects related to drugs, medicaments, or biological substances			
+C.2.20.1.1	C.2.20.1	Adverse effects in the therapeutic use of drugs, medicaments, or biological substances during surgical/medical care			
+C.2.20.1.2	C.2.20.1	Adverse effects from contaminated medical or biological substances			
+C.2.20.1.3	C.2.20.1	Failure in dosage of drugs, medicaments, or biological substances during surgical/medical care			
+C.2.20.1.8	C.2.20.1	Other specified adverse effects related to drugs, medicaments, or biological substances			
+C.2.20.1.9	C.2.20.1	Unspecified adverse effects related to drugs, medicaments, or biological substances			
+C.2.20.2	C.2.20	Foreign object left in body during surgical/medical care			
+C.2.20.2.0	C.2.20.2	Foreign object left in body during surgical operation			
+C.2.20.2.1	C.2.20.2	Foreign object left in body during infusion or transfusion			
+C.2.20.2.2	C.2.20.2	Foreign object left in body during kidney dialysis or other perfusion			
+C.2.20.2.3	C.2.20.2	Foreign object left in body during injection or immunization			
+C.2.20.2.4	C.2.20.2	Foreign object left in body during endoscopic examination			
+C.2.20.2.5	C.2.20.2	Foreign object left in body during heart catheterization			
+C.2.20.2.6	C.2.20.2	Foreign object left in body during aspiration, puncture, or other catheterization			
+C.2.20.2.7	C.2.20.2	Foreign object left in body during removal of catheter or packing			
+C.2.20.2.8	C.2.20.2	Foreign object left in body during other specified surgical/medical care			
+C.2.20.2.9	C.2.20.2	Foreign object left in body during unspecified surgical/medical care			
+C.2.20.3	C.2.20	adverse incidents associated with medical devices in diagnostic/therapeutic use			
+C.2.20.4	C.2.20	Unintentional cut, puncture, perforation during surgical/medical care			
+C.2.20.4.0	C.2.20.4	Unintentional cut, puncture, perforation during surgical operation			
+C.2.20.4.1	C.2.20.4	Unintentional cut, puncture, perforation during infusion or transfusion			
+C.2.20.4.2	C.2.20.4	Unintentional cut, puncture, perforation during kidney dialysis or other perfusion			
+C.2.20.4.3	C.2.20.4	Unintentional cut, puncture, perforation during injection or immunization			
+C.2.20.4.4	C.2.20.4	Unintentional cut, puncture, perforation during endoscopic examination			
+C.2.20.4.5	C.2.20.4	Unintentional cut, puncture, perforation during heart catheterization			
+C.2.20.4.6	C.2.20.4	Unintentional cut, puncture, perforation during aspiration, puncture, or other catheterization			
+C.2.20.4.7	C.2.20.4	Unintentional cut, puncture, perforation during administration of enema			
+C.2.20.4.8	C.2.20.4	Unintentional cut, puncture, perforation during other specified surgical/medical care			
+C.2.20.4.9	C.2.20.4	Unintentional cut, puncture, perforation during unspecified surgical/medical care			
+C.2.20.5	C.2.20	Failure of sterile precautions during surgical/medical care			
+C.2.20.5.1	C.2.20.5	Failure of sterile precautions during surgical operation			
+C.2.20.5.2	C.2.20.5	Failure of sterile precautions during infusion or transfusion			
+C.2.20.5.3	C.2.20.5	Failure of sterile precautions during kidney dialysis or other perfusion			
+C.2.20.5.4	C.2.20.5	Failure of sterile precautions during injection or immunization			
+C.2.20.5.5	C.2.20.5	Failure of sterile precautions during endoscopic examination			
+C.2.20.5.6	C.2.20.5	Failure of sterile precautions during heart catheterization			
+C.2.20.5.7	C.2.20.5	Failure of sterile precautions during aspiration, puncture, or other catheterization			
+C.2.20.5.8	C.2.20.5	Failure of sterile precautions during other specified surgical/medical care			
+C.2.20.5.9	C.2.20.5	Failure of sterile precautions during unspecified surgical/medical care			
+C.2.20.6	C.2.20	Abnormal reaction of the patient or later complication caused by surgical operations or other surgical/medical procedures, without mention of misadventure at the time of the procedure, NEC			
+C.2.20.6.1	C.2.20.6	Surgical operation or procedure as the cause of abnormal reaction of the patient or of later complication without mention of misadventure at the time of the procedure			
+C.2.20.6.2	C.2.20.6	Medical procedure, other than surgical, as the cause of abnormal reaction of the patient or of later complication without mention of misadventure at the time of the procedure			
+C.2.20.7	C.2.20	non-administration of surgical/medical care			
+C.2.20.8	C.2.20	other specified complications of health care			
+C.2.20.9	C.2.20	unspecified complications of health care			
 C.2.3	C.2	Other mechanical force			
 C.2.3.1	C.2.3	struck by explosive blast	[C.2.4.1.3,C.2.8.4.1]		
 C.2.3.2	C.2.3	contact with machinery	[C.2.98.1,C.2.1.1]		
@@ -168,52 +214,6 @@ C.2.8.8	C.2.8	Exposure to (effect of) other specified weather, natural disaster 
 C.2.8.8.1	C.2.8.8	Exposure to lightning			
 C.2.8.8.8	C.2.8.8	Exposure to other specified (effect of) weather, natural disaster or other force of nature			
 C.2.8.9	C.2.8	exposure to (effect of) unspecified weather, natural disaster or other force of nature			
-C.2.20	C.2	Complications of health care			
-C.2.20.1	C.2.20	Adverse effects related to drugs, medicaments, or biological substances			
-C.2.20.1.1	C.2.20.1	Adverse effects in the therapeutic use of drugs, medicaments, or biological substances during surgical/medical care			
-C.2.20.1.2	C.2.20.1	Adverse effects from contaminated medical or biological substances			
-C.2.20.1.3	C.2.20.1	Failure in dosage of drugs, medicaments, or biological substances during surgical/medical care			
-C.2.20.1.8	C.2.20.1	Other specified adverse effects related to drugs, medicaments, or biological substances			
-C.2.20.1.9	C.2.20.1	Unspecified adverse effects related to drugs, medicaments, or biological substances			
-C.2.20.2	C.2.20	Foreign object left in body during surgical/medical care			
-C.2.20.2.0	C.2.20.2	Foreign object left in body during surgical operation			
-C.2.20.2.1	C.2.20.2	Foreign object left in body during infusion or transfusion			
-C.2.20.2.2	C.2.20.2	Foreign object left in body during kidney dialysis or other perfusion			
-C.2.20.2.3	C.2.20.2	Foreign object left in body during injection or immunization			
-C.2.20.2.4	C.2.20.2	Foreign object left in body during endoscopic examination			
-C.2.20.2.5	C.2.20.2	Foreign object left in body during heart catheterization			
-C.2.20.2.6	C.2.20.2	Foreign object left in body during aspiration, puncture, or other catheterization			
-C.2.20.2.7	C.2.20.2	Foreign object left in body during removal of catheter or packing			
-C.2.20.2.8	C.2.20.2	Foreign object left in body during other specified surgical/medical care			
-C.2.20.2.9	C.2.20.2	Foreign object left in body during unspecified surgical/medical care			
-C.2.20.3	C.2.20	adverse incidents associated with medical devices in diagnostic/therapeutic use			
-C.2.20.4	C.2.20	Unintentional cut, puncture, perforation during surgical/medical care			
-C.2.20.4.0	C.2.20.4	Unintentional cut, puncture, perforation during surgical operation			
-C.2.20.4.1	C.2.20.4	Unintentional cut, puncture, perforation during infusion or transfusion			
-C.2.20.4.2	C.2.20.4	Unintentional cut, puncture, perforation during kidney dialysis or other perfusion			
-C.2.20.4.3	C.2.20.4	Unintentional cut, puncture, perforation during injection or immunization			
-C.2.20.4.4	C.2.20.4	Unintentional cut, puncture, perforation during endoscopic examination			
-C.2.20.4.5	C.2.20.4	Unintentional cut, puncture, perforation during heart catheterization			
-C.2.20.4.6	C.2.20.4	Unintentional cut, puncture, perforation during aspiration, puncture, or other catheterization			
-C.2.20.4.7	C.2.20.4	Unintentional cut, puncture, perforation during administration of enema			
-C.2.20.4.8	C.2.20.4	Unintentional cut, puncture, perforation during other specified surgical/medical care			
-C.2.20.4.9	C.2.20.4	Unintentional cut, puncture, perforation during unspecified surgical/medical care			
-C.2.20.5	C.2.20	Failure of sterile precautions during surgical/medical care			
-C.2.20.5.1	C.2.20.5	Failure of sterile precautions during surgical operation			
-C.2.20.5.2	C.2.20.5	Failure of sterile precautions during infusion or transfusion			
-C.2.20.5.3	C.2.20.5	Failure of sterile precautions during kidney dialysis or other perfusion			
-C.2.20.5.4	C.2.20.5	Failure of sterile precautions during injection or immunization			
-C.2.20.5.5	C.2.20.5	Failure of sterile precautions during endoscopic examination			
-C.2.20.5.6	C.2.20.5	Failure of sterile precautions during heart catheterization			
-C.2.20.5.7	C.2.20.5	Failure of sterile precautions during aspiration, puncture, or other catheterization			
-C.2.20.5.8	C.2.20.5	Failure of sterile precautions during other specified surgical/medical care			
-C.2.20.5.9	C.2.20.5	Failure of sterile precautions during unspecified surgical/medical care			
-C.2.20.6	C.2.20	Abnormal reaction of the patient or later complication caused by surgical operations or other surgical/medical procedures, without mention of misadventure at the time of the procedure, NEC			
-C.2.20.6.1	C.2.20.6	Surgical operation or procedure as the cause of abnormal reaction of the patient or of later complication without mention of misadventure at the time of the procedure			
-C.2.20.6.2	C.2.20.6	Medical procedure, other than surgical, as the cause of abnormal reaction of the patient or of later complication without mention of misadventure at the time of the procedure			
-C.2.20.7	C.2.20	non-administration of surgical/medical care			
-C.2.20.8	C.2.20	other specified complications of health care			
-C.2.20.9	C.2.20	unspecified complications of health care			
 C.2.98	C.2	Other specified mechanism of injury			
 C.2.98.1	C.2.98	Contact with foreign body			
 C.2.98.1.1	C.2.98.1	Foreign body on eye or entering into/through eye			
@@ -298,358 +298,6 @@ C.3.1.98.10	C.3.1.98	Small-sized motorized vehicles for children
 C.3.1.98.15	C.3.1.98	Motor home			
 C.3.1.98.98	C.3.1.98	Other specified land vehicle or means of land transport			
 C.3.1.99	C.3.1	unspecified land vehicle or means of land transport			
-C.3.2	C.3	Mobile machinery or special purpose vehicle			
-C.3.2.01	C.3.2	Mobile machinery/special purpose vehicle mainly used in agriculture			
-C.3.2.01.01	C.3.2.01	Ride-on lawnmower			
-C.3.2.01.05	C.3.2.01	Tractor			
-C.3.2.01.10	C.3.2.01	Harvesting machine			
-C.3.2.01.15	C.3.2.01	Auger, post-hole digger			
-C.3.2.01.20	C.3.2.01	Equipment towed or powered by tractors NEC			
-C.3.2.01.98	C.3.2.01	Other specified mobile machinery or special purpose vehicle used in agriculture			
-C.3.2.01.99	C.3.2.01	Unspecified mobile machinery or special purpose vehicle used in agriculture			
-C.3.2.02	C.3.2	Mobile machinery/special purpose vehicle mainly used in industry			
-C.3.2.02.01	C.3.2.02	Forklift or lift truck			
-C.3.2.02.05	C.3.2.02	Mobile crane			
-C.3.2.02.10	C.3.2.02	Battery-powered airport passenger vehicle			
-C.3.2.02.15	C.3.2.02	Logging car			
-C.3.2.02.20	C.3.2.02	Coal-car in mine			
-C.3.2.02.25	C.3.2.02	Tram, truck, or tub in mine or quarry			
-C.3.2.02.98	C.3.2.02	Other specified  mobile machinery or special purpose vehicle mainly used in industry			
-C.3.2.02.99	C.3.2.02	Unspecified  mobile machinery or special purpose vehicle mainly used in industry			
-C.3.2.03	C.3.2	Mobile machinery/special purpose vehicle mainly used in construction			
-C.3.2.03.01	C.3.2.03	Grader			
-C.3.2.03.05	C.3.2.03	Front-end loader, bulldozer			
-C.3.2.03.10	C.3.2.03	Excavator, digger, mechanical shovel			
-C.3.2.03.15	C.3.2.03	Road roller			
-C.3.2.03.98	C.3.2.03	Other specified  mobile machinery or special purpose vehicle mainly used in construction			
-C.3.2.03.99	C.3.2.03	Unspecified  mobile machinery or special purpose vehicle mainly used in construction			
-C.3.2.98	C.3.2	Other specified mobile machinery or special purpose vehicle			
-C.3.2.98.01	C.3.2.98	Ambulance			
-C.3.2.98.05	C.3.2.98	Fire truck, fire engine			
-C.3.2.98.10	C.3.2.98	Race car			
-C.3.2.98.15	C.3.2.98	Snowmobile, ski-scooter			
-C.3.2.98.20	C.3.2.98	Special all-terrain vehicle/off-road vehicle			
-C.3.2.98.98	C.3.2.98	Other specified mobile machinery or special purpose vehicle			
-C.3.2.99	C.3.2	Unspecified mobile machinery or special purpose vehicle			
-C.3.3	C.3	Watercraft or means of water transport			
-C.3.3.01	C.3.3	Powered (motorised) watercraft or means of water transport			
-C.3.3.01.01	C.3.3.01	Merchant ship, cargo ship, oil tanker			
-C.3.3.01.05	C.3.3.01	Passenger ship, passenger liner, ocean liner			
-C.3.3.01.10	C.3.3.01	Fishing boat, trawler			
-C.3.3.01.15	C.3.3.01	Ferry used for short trips across closed waters (e.g. small lake minor rivers)			
-C.3.3.01.20	C.3.3.01	Motorized yacht, motorboat, powered boat, personal powered watercraft			
-C.3.3.01.30	C.3.3.01	Houseboat			
-C.3.3.01.40	C.3.3.01	Hovercraft			
-C.3.3.01.50	C.3.3.01	Airboat			
-C.3.3.01.60	C.3.3.01	Submarine or related craft			
-C.3.3.01.98	C.3.3.01	Other specified powered watercraft or means of water transport			
-C.3.3.01.99	C.3.3.01	Unspecified powered watercraft or means of water transport			
-C.3.3.02	C.3.3	Unpowered watercraft or means of water transport			
-C.3.3.02.01	C.3.3.02	Sailboat, unpowered yacht			
-C.3.3.02.05	C.3.3.02	Canoe, kayak, row boat, pirogue, piragua			
-C.3.3.02.10	C.3.3.02	Wave board, surfboard, paddle ski			
-C.3.3.02.15	C.3.3.02	Windsurfer			
-C.3.3.02.98	C.3.3.02	Other specified unpowered watercraft or means of water transport			
-C.3.3.02.99	C.3.3.02	Unspecified unpowered watercraft or means of water transport			
-C.3.3.03	C.3.3	Part/component of watercraft (powered or unpowered)			
-C.3.3.98	C.3.3	Other specified watercraft or means of water transport			
-C.3.3.99	C.3.3	Watercraft, unspecified as powered or unpowered, or unspecified means of water transport			
-C.3.4	C.3	Aircraft or means of air transport			
-C.3.4.01	C.3.4	Powered aircraft or means of air transport			
-C.3.4.01.01	C.3.4.01	Helicopter			
-C.3.4.01.05	C.3.4.01	Airship, blimp			
-C.3.4.01.10	C.3.4.01	Ultralight powered aircraft			
-C.3.4.01.15	C.3.4.01	Private fixed-wing powered aircraft			
-C.3.4.01.20	C.3.4.01	Commercial fixed-wing powered aircraft			
-C.3.4.01.40	C.3.4.01	Military fixed-wing powered aircraft			
-C.3.4.01.50	C.3.4.01	Spacecraft			
-C.3.4.01.98	C.3.4.01	Other specified powered aircraft or means of air transport			
-C.3.4.01.99	C.3.4.01	Unspecified powered aircraft or means of air transport			
-C.3.4.02	C.3.4	Unpowered aircraft or means of air transport			
-C.3.4.02.01	C.3.4.02	Passenger balloon, unpowered			
-C.3.4.02.05	C.3.4.02	Parachute			
-C.3.4.02.10	C.3.4.02	Hang-glider			
-C.3.4.02.15	C.3.4.02	Glider			
-C.3.4.02.98	C.3.4.02	Other specified unpowered aircraft or means of air transport			
-C.3.4.02.99	C.3.4.02	Unspecified unpowered aircraft or means of air transport			
-C.3.4.03	C.3.4	Part/component of aircraft (powered or unpowered)			
-C.3.4.98	C.3.4	Other specified aircraft or means of air transport			
-C.3.4.99	C.3.4	Unspecified aircraft or means of air transport			
-C.3.5	C.3	Furniture/furnishing			
-C.3.5.01	C.3.5	Bed, bedding or bedding accessories			
-C.3.5.01.01	C.3.5.01	furniture/furnishing: Bunk bed			
-C.3.5.01.05	C.3.5.01	furniture/furnishing: Special bed, orthopaedic bed, or stretcher			
-C.3.5.01.10	C.3.5.01	Hammock			
-C.3.5.01.15	C.3.5.01	Mattress, sleeping mat			
-C.3.5.01.20	C.3.5.01	Other specified bed			
-C.3.5.01.25	C.3.5.01	Pillow, cushion			
-C.3.5.01.30	C.3.5.01	Bedrails			
-C.3.5.01.98	C.3.5.01	Other specified bedding or bedding accessories			
-C.3.5.01.99	C.3.5.01	Unspecified bedding or bedding accessories			
-C.3.5.02	C.3.5	Chair, sofa			
-C.3.5.02.01	C.3.5.02	Upholstered chair, sofa, couch, lounge, divan			
-C.3.5.02.05	C.3.5.02	Hard chair, couch, bench			
-C.3.5.02.10	C.3.5.02	Rocking/gliding chair			
-C.3.5.02.15	C.3.5.02	Folding chair			
-C.3.5.02.20	C.3.5.02	Revolving chair			
-C.3.5.02.25	C.3.5.02	Stool			
-C.3.5.02.30	C.3.5.02	Commode chair			
-C.3.5.02.98	C.3.5.02	Other specified chair, sofa			
-C.3.5.02.99	C.3.5.02	Unspecified chair, sofa			
-C.3.5.03	C.3.5	Table, stand, cupboard, shelf or partition			
-C.3.5.03.01	C.3.5.03	Rack, bookshelf			
-C.3.5.03.05	C.3.5.03	Cabinet, cupboard, side board, chest of drawers, tall boy, dresser			
-C.3.5.03.10	C.3.5.03	Dining room/kitchen table, kitchen bench			
-C.3.5.03.15	C.3.5.03	Coffee table			
-C.3.5.03.20	C.3.5.03	Night table, end table			
-C.3.5.03.25	C.3.5.03	Desk, workbench			
-C.3.5.03.30	C.3.5.03	Television table, stand, cupboard			
-C.3.5.03.35	C.3.5.03	Folding table			
-C.3.5.03.40	C.3.5.03	Room divider or partition			
-C.3.5.03.98	C.3.5.03	Other specified table, stand, cupboard, shelf or partition			
-C.3.5.03.99	C.3.5.03	Unspecified table, stand, cupboard, shelf or partition			
-C.3.5.04	C.3.5	Decoration, decorating item			
-C.3.5.04.01	C.3.5.04	Rug, mat, loose carpet			
-C.3.5.04.05	C.3.5.04	Draperies, curtains			
-C.3.5.04.10	C.3.5.04	Roller/venetian blind or indoor shutter			
-C.3.5.04.15	C.3.5.04	Window covering hardware			
-C.3.5.04.20	C.3.5.04	Mirror or mirror glass			
-C.3.5.04.25	C.3.5.04	Portrait, picture, picture frame, or other wall hanging or similar decoration			
-C.3.5.04.35	C.3.5.04	Christmas tree			
-C.3.5.04.40	C.3.5.04	Holiday decorations			
-C.3.5.04.98	C.3.5.04	Other specified decoration, decorating item			
-C.3.5.04.99	C.3.5.04	Unspecified decoration, decorating item			
-C.3.5.98	C.3.5	Other specified furniture/furnishing			
-C.3.5.99	C.3.5	Unspecified furniture/furnishing			
-C.3.6	C.3	Infant or child product			
-C.3.6.01	C.3.6	Baby or child article			
-C.3.6.01.01	C.3.6.01	Baby pram, buggy, pusher, stroller, carriage			
-C.3.6.01.05	C.3.6.01	Baby walker			
-C.3.6.01.10	C.3.6.01	Baby exerciser, jumper, or portable swing (home use)			
-C.3.6.01.15	C.3.6.01	High chair, booster seat			
-C.3.6.01.20	C.3.6.01	Baby or child car seat			
-C.3.6.01.25	C.3.6.01	Potty chair, training seat			
-C.3.6.01.30	C.3.6.01	Cot, crib, baby bed			
-C.3.6.01.45	C.3.6.01	Playpen, travel yard			
-C.3.6.01.50	C.3.6.01	Baby gate or barrier			
-C.3.6.01.55	C.3.6.01	Baby carrier (back pack type)			
-C.3.6.01.60	C.3.6.01	Baby carrier (pedal cycle)			
-C.3.6.01.65	C.3.6.01	Baby baths or bathinettes			
-C.3.6.01.70	C.3.6.01	Baby or child changing table			
-C.3.6.01.75	C.3.6.01	Baby or child pacifier, dummy			
-C.3.6.01.80	C.3.6.01	Baby bottle or nipple			
-C.3.6.01.85	C.3.6.01	Diaper, nappy			
-C.3.6.01.90	C.3.6.01	Diaper fastener			
-C.3.6.01.98	C.3.6.01	Other specified baby or child article			
-C.3.6.01.99	C.3.6.01	Unspecified baby or child article			
-C.3.6.02	C.3.6	Toy			
-C.3.6.02.01	C.3.6.02	Tricycle (child's) or other ride-on toy			
-C.3.6.02.05	C.3.6.02	Toy vehicle			
-C.3.6.02.10	C.3.6.02	Toy gun or related accessory			
-C.3.6.02.18	C.3.6.02	Other toy weapon or projectile toy			
-C.3.6.02.20	C.3.6.02	Toy - art, craft, or kit			
-C.3.6.02.25	C.3.6.02	Board game or accessory/piece			
-C.3.6.02.30	C.3.6.02	Toy sports equipment			
-C.3.6.02.45	C.3.6.02	Ball, general, other than sport specific			
-C.3.6.02.50	C.3.6.02	infant or child product: Flying toy			
-C.3.6.02.55	C.3.6.02	infant or child product: Doll, doll accessory or part, stuffed toy			
-C.3.6.02.60	C.3.6.02	infant or child product: Balloon (toy)			
-C.3.6.02.65	C.3.6.02	infant or child product: Other inflatable toy			
-C.3.6.02.70	C.3.6.02	infant or child product: Marble, bead			
-C.3.6.02.75	C.3.6.02	infant or child product: Play tent, tunnel, or other enclosure			
-C.3.6.02.80	C.3.6.02	infant or child product: Toy box or chest			
-C.3.6.02.98	C.3.6.02	infant or child product: Other specified toy			
-C.3.6.02.99	C.3.6.02	infant or child product: Unspecified toy			
-C.3.6.03	C.3.6	Playground equipment			
-C.3.6.03.01	C.3.6.03	Tree house, play house			
-C.3.6.03.05	C.3.6.03	playground equipment: Flying fox			
-C.3.6.03.10	C.3.6.03	playground equipment: Monkey bar			
-C.3.6.03.18	C.3.6.03	Other playground climbing apparatus			
-C.3.6.03.20	C.3.6.03	playground equipment: Slide, sliding board			
-C.3.6.03.25	C.3.6.03	playground equipment: Swing, swing set			
-C.3.6.03.30	C.3.6.03	playground equipment: Seesaw, teeter totter			
-C.3.6.03.45	C.3.6.03	infant or child product: Powered amusement rides			
-C.3.6.03.98	C.3.6.03	infant or child product: Other specified playground equipment			
-C.3.6.03.99	C.3.6.03	infant or child product: Unspecified playground equipment			
-C.3.6.98	C.3.6	Other specified infant or child product			
-C.3.6.99	C.3.6	Unspecified infant or child product			
-C.3.7	C.3	Appliance mainly used in household			
-C.3.7.01	C.3.7	Cooking or kitchen appliance			
-C.3.7.01.01	C.3.7.01	Electric kettle			
-C.3.7.01.05	C.3.7.01	Electric frying pan, deep fryer			
-C.3.7.01.10	C.3.7.01	Electric bread making machine			
-C.3.7.01.15	C.3.7.01	Food processor, blender, juicer			
-C.3.7.01.20	C.3.7.01	Powered knife			
-C.3.7.01.25	C.3.7.01	Electric toaster, toaster oven			
-C.3.7.01.26	C.3.7.01	Microwave oven			
-C.3.7.01.30	C.3.7.01	Other electric cooking or food processing appliance			
-C.3.7.01.45	C.3.7.01	Stove, oven, cooktop			
-C.3.7.01.55	C.3.7.01	Pressurized kerosene/paraffin cooking stove			
-C.3.7.01.56	C.3.7.01	Other type of kerosene/paraffin cooking stove			
-C.3.7.01.60	C.3.7.01	Coal pot			
-C.3.7.01.61	C.3.7.01	Chulo stove			
-C.3.7.01.65	C.3.7.01	Barbeque, outdoor cookers/griller, outdoor clay oven			
-C.3.7.01.70	C.3.7.01	Dishwasher			
-C.3.7.01.75	C.3.7.01	Refrigerator, freezer			
-C.3.7.01.98	C.3.7.01	Other specified cooking or kitchen appliance			
-C.3.7.01.99	C.3.7.01	Unspecified cooking or kitchen appliance			
-C.3.7.02	C.3.7	Cleaning or laundering appliance or tool			
-C.3.7.02.01	C.3.7.02	Washing machine			
-C.3.7.02.05	C.3.7.02	Other specified clothes cleaning appliance			
-C.3.7.02.10	C.3.7.02	Clothes dryer			
-C.3.7.02.15	C.3.7.02	Clothes iron, press			
-C.3.7.02.16	C.3.7.02	Clothesline, clothes drying rack, clotheshorse			
-C.3.7.02.20	C.3.7.02	Cleaning tool (unpowered)			
-C.3.7.02.25	C.3.7.02	Vacuum cleaner			
-C.3.7.02.30	C.3.7.02	Powered cleaning tool NEC			
-C.3.7.02.98	C.3.7.02	Other specified cleaning or laundering appliance or tool			
-C.3.7.02.99	C.3.7.02	Unspecified cleaning or laundering appliance or tool			
-C.3.7.03	C.3.7	Lighting appliance			
-C.3.7.03.01	C.3.7.03	Free-standing gas, oil, or kerosene lamp			
-C.3.7.03.02	C.3.7.03	Electric lamp			
-C.3.7.03.05	C.3.7.03	Other specified lamp or lamp component			
-C.3.7.03.10	C.3.7.03	Battery-operated torch			
-C.3.7.03.15	C.3.7.03	Candle, candlestick			
-C.3.7.03.98	C.3.7.03	Other specified lighting appliance			
-C.3.7.03.99	C.3.7.03	Unspecified lighting appliance			
-C.3.7.04	C.3.7	Heating or cooling appliance			
-C.3.7.04.01	C.3.7.04	Fan			
-C.3.7.04.05	C.3.7.04	Electric or gas radiator, heater			
-C.3.7.04.10	C.3.7.04	Kerosene heater			
-C.3.7.04.98	C.3.7.04	Other specified heating or cooling appliance			
-C.3.7.04.99	C.3.7.04	Unspecified heating or cooling appliance			
-C.3.7.05	C.3.7	Sewing appliance or equipment			
-C.3.7.05.01	C.3.7.05	Sewing machine			
-C.3.7.05.05	C.3.7.05	Scissors			
-C.3.7.05.10	C.3.7.05	Pin, needle			
-C.3.7.05.98	C.3.7.05	Other specified sewing appliance or equipment			
-C.3.7.05.99	C.3.7.05	Unspecified sewing appliance or equipment			
-C.3.7.06	C.3.7	Entertainment appliance			
-C.3.7.06.01	C.3.7.06	Television			
-C.3.7.06.05	C.3.7.06	Video recorder, decoder player			
-C.3.7.06.10	C.3.7.06	Video camera, camera, digital camera or accessory			
-C.3.7.06.15	C.3.7.06	Sound equipment			
-C.3.7.06.98	C.3.7.06	Other specified entertainment appliance			
-C.3.7.06.99	C.3.7.06	Unspecified entertainment appliance			
-C.3.7.98	C.3.7	Other specified household appliance			
-C.3.7.98.01	C.3.7.98	Cord of household appliance, extension cord			
-C.3.7.98.98	C.3.7.98	Other specified household appliance			
-C.3.7.99	C.3.7	Unspecified household appliance			
-C.3.8	C.3	Utensil or container			
-C.3.8.01	C.3.8	Cooking or food processing utensil			
-C.3.8.01.01	C.3.8.01	Non-electric kettle			
-C.3.8.01.05	C.3.8.01	Knife NEC			
-C.3.8.01.10	C.3.8.01	Cooking pot, pan			
-C.3.8.01.15	C.3.8.01	Pressure cooker			
-C.3.8.01.20	C.3.8.01	Cutlery, food preparation utensil			
-C.3.8.01.98	C.3.8.01	Other specified cooking or food processing utensil			
-C.3.8.01.99	C.3.8.01	Unspecified cooking or food processing utensil			
-C.3.8.02	C.3.8	Crockery, kitchen container			
-C.3.8.02.01	C.3.8.02	Drinking glass, cup made from glass or china, etc.			
-C.3.8.02.05	C.3.8.02	Plate, bowl, dish made from glass or china, etc			
-C.3.8.02.10	C.3.8.02	Glass bottle or jar			
-C.3.8.02.15	C.3.8.02	Container made from plastic, wood, or clay			
-C.3.8.02.98	C.3.8.02	Other specified crockery, kitchen container			
-C.3.8.02.99	C.3.8.02	Unspecified crockery, kitchen container			
-C.3.8.03	C.3.8	Cleaning utensil or container			
-C.3.8.03.05	C.3.8.03	Bucket, pail			
-C.3.8.03.98	C.3.8.03	Other specified cleaning utensil or container			
-C.3.8.03.99	C.3.8.03	Unspecified cleaning utensil or container			
-C.3.8.04	C.3.8	Food storage or related utensil or container			
-C.3.8.04.01	C.3.8.04	Tinned container, tin can			
-C.3.8.04.05	C.3.8.04	Box or carton containing food or drink			
-C.3.8.04.10	C.3.8.04	Grocery or shopping trolley/cart			
-C.3.8.04.98	C.3.8.04	Other specified food storage or related utensil or container			
-C.3.8.04.99	C.3.8.04	Unspecified food storage or related utensil or container			
-C.3.8.98	C.3.8	Other specified utensil or container			
-C.3.8.98.01	C.3.8.98	Rubbish bin, trash can, dumpster			
-C.3.8.98.08	C.3.8.98	Heavy container, box, package NEC			
-C.3.8.98.18	C.3.8.98	Bag, sack NEC			
-C.3.8.98.98	C.3.8.98	Other specified utensil or container			
-C.3.8.99	C.3.8	Unspecified utensil or container			
-C.3.9	C.3	Item mainly for personal use			
-C.3.9.01	C.3.9	Clothes, foot wear, or related products			
-C.3.9.01.01	C.3.9.01	Belt, braces, suspenders, sash			
-C.3.9.01.05	C.3.9.01	Button			
-C.3.9.01.10	C.3.9.01	Other specified clothes fastener			
-C.3.9.01.15	C.3.9.01	Shoe, sandal, slipper, boot			
-C.3.9.01.20	C.3.9.01	Shoelace, shoe buckle			
-C.3.9.01.25	C.3.9.01	Shirt, blouse, t-shirt, trousers, slacks, jacket, coat, outerwear			
-C.3.9.01.30	C.3.9.01	Nightclothes, pyjamas, nightwear, underwear, undergarment, lingerie			
-C.3.9.01.98	C.3.9.01	Other specified clothes, foot wear, or related product			
-C.3.9.01.99	C.3.9.01	Unspecified clothes, foot wear, or related product			
-C.3.9.02	C.3.9	Clothing accessory or personal decoration item			
-C.3.9.02.01	C.3.9.02	Wristwatch, jewellery			
-C.3.9.02.98	C.3.9.02	Other specified clothing accessory or personal decorative item			
-C.3.9.02.99	C.3.9.02	Unspecified clothing accessory or personal decorative item			
-C.3.9.03	C.3.9	Personal grooming utensil			
-C.3.9.03.01	C.3.9.03	Hair dryer, curling iron, curler			
-C.3.9.03.05	C.3.9.03	Comb, hairbrush			
-C.3.9.03.10	C.3.9.03	Razor, razor blade			
-C.3.9.03.15	C.3.9.03	Electric shaver			
-C.3.9.03.20	C.3.9.03	Electric toothbrush			
-C.3.9.03.28	C.3.9.03	Other toothbrush			
-C.3.9.03.98	C.3.9.03	Other specified personal grooming utensil			
-C.3.9.03.99	C.3.9.03	Unspecified personal grooming utensil			
-C.3.9.04	C.3.9	Toiletries, cosmetics, or related product			
-C.3.9.04.01	C.3.9.04	Cleaning agent for contact lenses			
-C.3.9.04.05	C.3.9.04	Dental care products			
-C.3.9.04.10	C.3.9.04	Cotton swab, cotton bud, Q-Tip?			
-C.3.9.04.15	C.3.9.04	Soap			
-C.3.9.04.20	C.3.9.04	Deodorants			
-C.3.9.04.25	C.3.9.04	Perfume, cologne			
-C.3.9.04.35	C.3.9.04	Hair colouring preparation			
-C.3.9.04.40	C.3.9.04	Hair removal preparation, depilatory			
-C.3.9.04.43	C.3.9.04	Other hair care product			
-C.3.9.04.45	C.3.9.04	Nail polish or nail polish remover			
-C.3.9.04.50	C.3.9.04	Body or facial cream/lotion			
-C.3.9.04.55	C.3.9.04	Body powder, talc			
-C.3.9.04.60	C.3.9.04	Cosmetics NEC			
-C.3.9.04.65	C.3.9.04	Suntan or sunscreen products, self-tan products			
-C.3.9.04.70	C.3.9.04	Essential oils, oils used in aromatherapy			
-C.3.9.04.98	C.3.9.04	Other specified toiletries or related product			
-C.3.9.04.99	C.3.9.04	Unspecified toiletries or related product			
-C.3.9.05	C.3.9	Communication or related utensil or accessory			
-C.3.9.05.01	C.3.9.05	Telephone, mobile phone, cellular phone			
-C.3.9.05.05	C.3.9.05	Personal computer or related accessory			
-C.3.9.05.10	C.3.9.05	Fax machine and other related equipment			
-C.3.9.05.11	C.3.9.05	Typewriter correction fluid			
-C.3.9.05.15	C.3.9.05	Pen, pencil			
-C.3.9.05.20	C.3.9.05	Other stationery item			
-C.3.9.05.98	C.3.9.05	Other specified communication or related utensil or accessory			
-C.3.9.05.99	C.3.9.05	Unspecified communication or related utensil or accessory			
-C.3.9.06	C.3.9	Arts and crafts supplies			
-C.3.9.06.01	C.3.9.06	Artist paint			
-C.3.9.06.05	C.3.9.06	Chalk, crayon			
-C.3.9.06.10	C.3.9.06	Glazes			
-C.3.9.06.15	C.3.9.06	Canvas			
-C.3.9.06.98	C.3.9.06	Other specified arts and crafts supplies			
-C.3.9.06.99	C.3.9.06	Unspecified arts and crafts supplies			
-C.3.9.07	C.3.9	Personal aid			
-C.3.9.07.01	C.3.9.07	Eyewear			
-C.3.9.07.05	C.3.9.07	Wheelchair			
-C.3.9.07.10	C.3.9.07	Cane, walker, walking stick, walking frame			
-C.3.9.07.15	C.3.9.07	Prosthesis			
-C.3.9.07.20	C.3.9.07	Rubber bathtub mat			
-C.3.9.07.98	C.3.9.07	Other specified personal aid			
-C.3.9.07.99	C.3.9.07	personal aid: Unspecified personal aid			
-C.3.9.08	C.3.9	Tobacco or related product			
-C.3.9.08.01	C.3.9.08	Cigarette, cigar, pipe			
-C.3.9.08.05	C.3.9.08	Lighter, match			
-C.3.9.08.10	C.3.9.08	Aids to quit smoking			
-C.3.9.08.98	C.3.9.08	Other specified tobacco or related product			
-C.3.9.08.99	C.3.9.08	Unspecified tobacco or related product			
-C.3.9.98	C.3.9	Other specified personal use item			
-C.3.9.98.01	C.3.9.98	Vaporizer, humidifier			
-C.3.9.98.05	C.3.9.98	Oil burner			
-C.3.9.98.10	C.3.9.98	Condom, or other contraceptive device			
-C.3.9.98.15	C.3.9.98	Sex aids			
-C.3.9.98.20	C.3.9.98	Alarm clock, clock	[C.3.5.98]		
-C.3.9.98.25	C.3.9.98	Umbrella			
-C.3.9.98.30	C.3.9.98	Coins			
-C.3.9.98.40	C.3.9.98	Hand-held fan			
-C.3.9.98.98	C.3.9.98	Other specified personal use item			
-C.3.9.99	C.3.9	Unspecified personal use item			
 C.3.10	C.3	Equipment mainly used in sports/recreational activity			
 C.3.10.01	C.3.10	Ball used in sport			
 C.3.10.01.01	C.3.10.01	Soft ball			
@@ -991,6 +639,39 @@ C.3.19.01.25	C.3.19.01	Cold drink - non-alcoholic
 C.3.19.01.30	C.3.19.01	Drink - alcoholic			
 C.3.19.98	C.3.19	Other specified food, drink	[C.3.98.98.78]		
 C.3.19.99	C.3.19	Unspecified food, drink			
+C.3.2	C.3	Mobile machinery or special purpose vehicle			
+C.3.2.01	C.3.2	Mobile machinery/special purpose vehicle mainly used in agriculture			
+C.3.2.01.01	C.3.2.01	Ride-on lawnmower			
+C.3.2.01.05	C.3.2.01	Tractor			
+C.3.2.01.10	C.3.2.01	Harvesting machine			
+C.3.2.01.15	C.3.2.01	Auger, post-hole digger			
+C.3.2.01.20	C.3.2.01	Equipment towed or powered by tractors NEC			
+C.3.2.01.98	C.3.2.01	Other specified mobile machinery or special purpose vehicle used in agriculture			
+C.3.2.01.99	C.3.2.01	Unspecified mobile machinery or special purpose vehicle used in agriculture			
+C.3.2.02	C.3.2	Mobile machinery/special purpose vehicle mainly used in industry			
+C.3.2.02.01	C.3.2.02	Forklift or lift truck			
+C.3.2.02.05	C.3.2.02	Mobile crane			
+C.3.2.02.10	C.3.2.02	Battery-powered airport passenger vehicle			
+C.3.2.02.15	C.3.2.02	Logging car			
+C.3.2.02.20	C.3.2.02	Coal-car in mine			
+C.3.2.02.25	C.3.2.02	Tram, truck, or tub in mine or quarry			
+C.3.2.02.98	C.3.2.02	Other specified  mobile machinery or special purpose vehicle mainly used in industry			
+C.3.2.02.99	C.3.2.02	Unspecified  mobile machinery or special purpose vehicle mainly used in industry			
+C.3.2.03	C.3.2	Mobile machinery/special purpose vehicle mainly used in construction			
+C.3.2.03.01	C.3.2.03	Grader			
+C.3.2.03.05	C.3.2.03	Front-end loader, bulldozer			
+C.3.2.03.10	C.3.2.03	Excavator, digger, mechanical shovel			
+C.3.2.03.15	C.3.2.03	Road roller			
+C.3.2.03.98	C.3.2.03	Other specified  mobile machinery or special purpose vehicle mainly used in construction			
+C.3.2.03.99	C.3.2.03	Unspecified  mobile machinery or special purpose vehicle mainly used in construction			
+C.3.2.98	C.3.2	Other specified mobile machinery or special purpose vehicle			
+C.3.2.98.01	C.3.2.98	Ambulance			
+C.3.2.98.05	C.3.2.98	Fire truck, fire engine			
+C.3.2.98.10	C.3.2.98	Race car			
+C.3.2.98.15	C.3.2.98	Snowmobile, ski-scooter			
+C.3.2.98.20	C.3.2.98	Special all-terrain vehicle/off-road vehicle			
+C.3.2.98.98	C.3.2.98	Other specified mobile machinery or special purpose vehicle			
+C.3.2.99	C.3.2	Unspecified mobile machinery or special purpose vehicle			
 C.3.20	C.3	Pharmaceutical substance for human use, ie. drug, medicine	[C.3.21,C.3.19]		
 C.3.20.01	C.3.20	Analgesic, antipyretic, antirheumatic			
 C.3.20.01.01	C.3.20.01	human drug: Paracetamol only preparation			
@@ -1258,6 +939,50 @@ C.3.21.98.70	C.3.21.98	Photographic products
 C.3.21.98.80	C.3.21.98	Traditional medicine, folk remedy NEC			
 C.3.21.98.98	C.3.21.98	Other specified non-pharmaceutical chemical substance			
 C.3.21.99	C.3.21	Unspecified non-pharmaceutical chemical substance			
+C.3.3	C.3	Watercraft or means of water transport			
+C.3.3.01	C.3.3	Powered (motorised) watercraft or means of water transport			
+C.3.3.01.01	C.3.3.01	Merchant ship, cargo ship, oil tanker			
+C.3.3.01.05	C.3.3.01	Passenger ship, passenger liner, ocean liner			
+C.3.3.01.10	C.3.3.01	Fishing boat, trawler			
+C.3.3.01.15	C.3.3.01	Ferry used for short trips across closed waters (e.g. small lake minor rivers)			
+C.3.3.01.20	C.3.3.01	Motorized yacht, motorboat, powered boat, personal powered watercraft			
+C.3.3.01.30	C.3.3.01	Houseboat			
+C.3.3.01.40	C.3.3.01	Hovercraft			
+C.3.3.01.50	C.3.3.01	Airboat			
+C.3.3.01.60	C.3.3.01	Submarine or related craft			
+C.3.3.01.98	C.3.3.01	Other specified powered watercraft or means of water transport			
+C.3.3.01.99	C.3.3.01	Unspecified powered watercraft or means of water transport			
+C.3.3.02	C.3.3	Unpowered watercraft or means of water transport			
+C.3.3.02.01	C.3.3.02	Sailboat, unpowered yacht			
+C.3.3.02.05	C.3.3.02	Canoe, kayak, row boat, pirogue, piragua			
+C.3.3.02.10	C.3.3.02	Wave board, surfboard, paddle ski			
+C.3.3.02.15	C.3.3.02	Windsurfer			
+C.3.3.02.98	C.3.3.02	Other specified unpowered watercraft or means of water transport			
+C.3.3.02.99	C.3.3.02	Unspecified unpowered watercraft or means of water transport			
+C.3.3.03	C.3.3	Part/component of watercraft (powered or unpowered)			
+C.3.3.98	C.3.3	Other specified watercraft or means of water transport			
+C.3.3.99	C.3.3	Watercraft, unspecified as powered or unpowered, or unspecified means of water transport			
+C.3.4	C.3	Aircraft or means of air transport			
+C.3.4.01	C.3.4	Powered aircraft or means of air transport			
+C.3.4.01.01	C.3.4.01	Helicopter			
+C.3.4.01.05	C.3.4.01	Airship, blimp			
+C.3.4.01.10	C.3.4.01	Ultralight powered aircraft			
+C.3.4.01.15	C.3.4.01	Private fixed-wing powered aircraft			
+C.3.4.01.20	C.3.4.01	Commercial fixed-wing powered aircraft			
+C.3.4.01.40	C.3.4.01	Military fixed-wing powered aircraft			
+C.3.4.01.50	C.3.4.01	Spacecraft			
+C.3.4.01.98	C.3.4.01	Other specified powered aircraft or means of air transport			
+C.3.4.01.99	C.3.4.01	Unspecified powered aircraft or means of air transport			
+C.3.4.02	C.3.4	Unpowered aircraft or means of air transport			
+C.3.4.02.01	C.3.4.02	Passenger balloon, unpowered			
+C.3.4.02.05	C.3.4.02	Parachute			
+C.3.4.02.10	C.3.4.02	Hang-glider			
+C.3.4.02.15	C.3.4.02	Glider			
+C.3.4.02.98	C.3.4.02	Other specified unpowered aircraft or means of air transport			
+C.3.4.02.99	C.3.4.02	Unspecified unpowered aircraft or means of air transport			
+C.3.4.03	C.3.4	Part/component of aircraft (powered or unpowered)			
+C.3.4.98	C.3.4	Other specified aircraft or means of air transport			
+C.3.4.99	C.3.4	Unspecified aircraft or means of air transport			
 C.3.40	C.3	Medical/surgical device			
 C.3.40.01	C.3.40	General hospital or personal use device			
 C.3.40.01.01	C.3.40.01	Hypodermic needle/syringe			
@@ -1279,6 +1004,281 @@ C.3.40.11	C.3.40	Radiological device
 C.3.40.12	C.3.40	Physical medicine device			
 C.3.40.98	C.3.40	Other specified medical/surgical device			
 C.3.40.99	C.3.40	Unspecified medical/surgical device			
+C.3.5	C.3	Furniture/furnishing			
+C.3.5.01	C.3.5	Bed, bedding or bedding accessories			
+C.3.5.01.01	C.3.5.01	furniture/furnishing: Bunk bed			
+C.3.5.01.05	C.3.5.01	furniture/furnishing: Special bed, orthopaedic bed, or stretcher			
+C.3.5.01.10	C.3.5.01	Hammock			
+C.3.5.01.15	C.3.5.01	Mattress, sleeping mat			
+C.3.5.01.20	C.3.5.01	Other specified bed			
+C.3.5.01.25	C.3.5.01	Pillow, cushion			
+C.3.5.01.30	C.3.5.01	Bedrails			
+C.3.5.01.98	C.3.5.01	Other specified bedding or bedding accessories			
+C.3.5.01.99	C.3.5.01	Unspecified bedding or bedding accessories			
+C.3.5.02	C.3.5	Chair, sofa			
+C.3.5.02.01	C.3.5.02	Upholstered chair, sofa, couch, lounge, divan			
+C.3.5.02.05	C.3.5.02	Hard chair, couch, bench			
+C.3.5.02.10	C.3.5.02	Rocking/gliding chair			
+C.3.5.02.15	C.3.5.02	Folding chair			
+C.3.5.02.20	C.3.5.02	Revolving chair			
+C.3.5.02.25	C.3.5.02	Stool			
+C.3.5.02.30	C.3.5.02	Commode chair			
+C.3.5.02.98	C.3.5.02	Other specified chair, sofa			
+C.3.5.02.99	C.3.5.02	Unspecified chair, sofa			
+C.3.5.03	C.3.5	Table, stand, cupboard, shelf or partition			
+C.3.5.03.01	C.3.5.03	Rack, bookshelf			
+C.3.5.03.05	C.3.5.03	Cabinet, cupboard, side board, chest of drawers, tall boy, dresser			
+C.3.5.03.10	C.3.5.03	Dining room/kitchen table, kitchen bench			
+C.3.5.03.15	C.3.5.03	Coffee table			
+C.3.5.03.20	C.3.5.03	Night table, end table			
+C.3.5.03.25	C.3.5.03	Desk, workbench			
+C.3.5.03.30	C.3.5.03	Television table, stand, cupboard			
+C.3.5.03.35	C.3.5.03	Folding table			
+C.3.5.03.40	C.3.5.03	Room divider or partition			
+C.3.5.03.98	C.3.5.03	Other specified table, stand, cupboard, shelf or partition			
+C.3.5.03.99	C.3.5.03	Unspecified table, stand, cupboard, shelf or partition			
+C.3.5.04	C.3.5	Decoration, decorating item			
+C.3.5.04.01	C.3.5.04	Rug, mat, loose carpet			
+C.3.5.04.05	C.3.5.04	Draperies, curtains			
+C.3.5.04.10	C.3.5.04	Roller/venetian blind or indoor shutter			
+C.3.5.04.15	C.3.5.04	Window covering hardware			
+C.3.5.04.20	C.3.5.04	Mirror or mirror glass			
+C.3.5.04.25	C.3.5.04	Portrait, picture, picture frame, or other wall hanging or similar decoration			
+C.3.5.04.35	C.3.5.04	Christmas tree			
+C.3.5.04.40	C.3.5.04	Holiday decorations			
+C.3.5.04.98	C.3.5.04	Other specified decoration, decorating item			
+C.3.5.04.99	C.3.5.04	Unspecified decoration, decorating item			
+C.3.5.98	C.3.5	Other specified furniture/furnishing			
+C.3.5.99	C.3.5	Unspecified furniture/furnishing			
+C.3.6	C.3	Infant or child product			
+C.3.6.01	C.3.6	Baby or child article			
+C.3.6.01.01	C.3.6.01	Baby pram, buggy, pusher, stroller, carriage			
+C.3.6.01.05	C.3.6.01	Baby walker			
+C.3.6.01.10	C.3.6.01	Baby exerciser, jumper, or portable swing (home use)			
+C.3.6.01.15	C.3.6.01	High chair, booster seat			
+C.3.6.01.20	C.3.6.01	Baby or child car seat			
+C.3.6.01.25	C.3.6.01	Potty chair, training seat			
+C.3.6.01.30	C.3.6.01	Cot, crib, baby bed			
+C.3.6.01.45	C.3.6.01	Playpen, travel yard			
+C.3.6.01.50	C.3.6.01	Baby gate or barrier			
+C.3.6.01.55	C.3.6.01	Baby carrier (back pack type)			
+C.3.6.01.60	C.3.6.01	Baby carrier (pedal cycle)			
+C.3.6.01.65	C.3.6.01	Baby baths or bathinettes			
+C.3.6.01.70	C.3.6.01	Baby or child changing table			
+C.3.6.01.75	C.3.6.01	Baby or child pacifier, dummy			
+C.3.6.01.80	C.3.6.01	Baby bottle or nipple			
+C.3.6.01.85	C.3.6.01	Diaper, nappy			
+C.3.6.01.90	C.3.6.01	Diaper fastener			
+C.3.6.01.98	C.3.6.01	Other specified baby or child article			
+C.3.6.01.99	C.3.6.01	Unspecified baby or child article			
+C.3.6.02	C.3.6	Toy			
+C.3.6.02.01	C.3.6.02	Tricycle (child's) or other ride-on toy			
+C.3.6.02.05	C.3.6.02	Toy vehicle			
+C.3.6.02.10	C.3.6.02	Toy gun or related accessory			
+C.3.6.02.18	C.3.6.02	Other toy weapon or projectile toy			
+C.3.6.02.20	C.3.6.02	Toy - art, craft, or kit			
+C.3.6.02.25	C.3.6.02	Board game or accessory/piece			
+C.3.6.02.30	C.3.6.02	Toy sports equipment			
+C.3.6.02.45	C.3.6.02	Ball, general, other than sport specific			
+C.3.6.02.50	C.3.6.02	infant or child product: Flying toy			
+C.3.6.02.55	C.3.6.02	infant or child product: Doll, doll accessory or part, stuffed toy			
+C.3.6.02.60	C.3.6.02	infant or child product: Balloon (toy)			
+C.3.6.02.65	C.3.6.02	infant or child product: Other inflatable toy			
+C.3.6.02.70	C.3.6.02	infant or child product: Marble, bead			
+C.3.6.02.75	C.3.6.02	infant or child product: Play tent, tunnel, or other enclosure			
+C.3.6.02.80	C.3.6.02	infant or child product: Toy box or chest			
+C.3.6.02.98	C.3.6.02	infant or child product: Other specified toy			
+C.3.6.02.99	C.3.6.02	infant or child product: Unspecified toy			
+C.3.6.03	C.3.6	Playground equipment			
+C.3.6.03.01	C.3.6.03	Tree house, play house			
+C.3.6.03.05	C.3.6.03	playground equipment: Flying fox			
+C.3.6.03.10	C.3.6.03	playground equipment: Monkey bar			
+C.3.6.03.18	C.3.6.03	Other playground climbing apparatus			
+C.3.6.03.20	C.3.6.03	playground equipment: Slide, sliding board			
+C.3.6.03.25	C.3.6.03	playground equipment: Swing, swing set			
+C.3.6.03.30	C.3.6.03	playground equipment: Seesaw, teeter totter			
+C.3.6.03.45	C.3.6.03	infant or child product: Powered amusement rides			
+C.3.6.03.98	C.3.6.03	infant or child product: Other specified playground equipment			
+C.3.6.03.99	C.3.6.03	infant or child product: Unspecified playground equipment			
+C.3.6.98	C.3.6	Other specified infant or child product			
+C.3.6.99	C.3.6	Unspecified infant or child product			
+C.3.7	C.3	Appliance mainly used in household			
+C.3.7.01	C.3.7	Cooking or kitchen appliance			
+C.3.7.01.01	C.3.7.01	Electric kettle			
+C.3.7.01.05	C.3.7.01	Electric frying pan, deep fryer			
+C.3.7.01.10	C.3.7.01	Electric bread making machine			
+C.3.7.01.15	C.3.7.01	Food processor, blender, juicer			
+C.3.7.01.20	C.3.7.01	Powered knife			
+C.3.7.01.25	C.3.7.01	Electric toaster, toaster oven			
+C.3.7.01.26	C.3.7.01	Microwave oven			
+C.3.7.01.30	C.3.7.01	Other electric cooking or food processing appliance			
+C.3.7.01.45	C.3.7.01	Stove, oven, cooktop			
+C.3.7.01.55	C.3.7.01	Pressurized kerosene/paraffin cooking stove			
+C.3.7.01.56	C.3.7.01	Other type of kerosene/paraffin cooking stove			
+C.3.7.01.60	C.3.7.01	Coal pot			
+C.3.7.01.61	C.3.7.01	Chulo stove			
+C.3.7.01.65	C.3.7.01	Barbeque, outdoor cookers/griller, outdoor clay oven			
+C.3.7.01.70	C.3.7.01	Dishwasher			
+C.3.7.01.75	C.3.7.01	Refrigerator, freezer			
+C.3.7.01.98	C.3.7.01	Other specified cooking or kitchen appliance			
+C.3.7.01.99	C.3.7.01	Unspecified cooking or kitchen appliance			
+C.3.7.02	C.3.7	Cleaning or laundering appliance or tool			
+C.3.7.02.01	C.3.7.02	Washing machine			
+C.3.7.02.05	C.3.7.02	Other specified clothes cleaning appliance			
+C.3.7.02.10	C.3.7.02	Clothes dryer			
+C.3.7.02.15	C.3.7.02	Clothes iron, press			
+C.3.7.02.16	C.3.7.02	Clothesline, clothes drying rack, clotheshorse			
+C.3.7.02.20	C.3.7.02	Cleaning tool (unpowered)			
+C.3.7.02.25	C.3.7.02	Vacuum cleaner			
+C.3.7.02.30	C.3.7.02	Powered cleaning tool NEC			
+C.3.7.02.98	C.3.7.02	Other specified cleaning or laundering appliance or tool			
+C.3.7.02.99	C.3.7.02	Unspecified cleaning or laundering appliance or tool			
+C.3.7.03	C.3.7	Lighting appliance			
+C.3.7.03.01	C.3.7.03	Free-standing gas, oil, or kerosene lamp			
+C.3.7.03.02	C.3.7.03	Electric lamp			
+C.3.7.03.05	C.3.7.03	Other specified lamp or lamp component			
+C.3.7.03.10	C.3.7.03	Battery-operated torch			
+C.3.7.03.15	C.3.7.03	Candle, candlestick			
+C.3.7.03.98	C.3.7.03	Other specified lighting appliance			
+C.3.7.03.99	C.3.7.03	Unspecified lighting appliance			
+C.3.7.04	C.3.7	Heating or cooling appliance			
+C.3.7.04.01	C.3.7.04	Fan			
+C.3.7.04.05	C.3.7.04	Electric or gas radiator, heater			
+C.3.7.04.10	C.3.7.04	Kerosene heater			
+C.3.7.04.98	C.3.7.04	Other specified heating or cooling appliance			
+C.3.7.04.99	C.3.7.04	Unspecified heating or cooling appliance			
+C.3.7.05	C.3.7	Sewing appliance or equipment			
+C.3.7.05.01	C.3.7.05	Sewing machine			
+C.3.7.05.05	C.3.7.05	Scissors			
+C.3.7.05.10	C.3.7.05	Pin, needle			
+C.3.7.05.98	C.3.7.05	Other specified sewing appliance or equipment			
+C.3.7.05.99	C.3.7.05	Unspecified sewing appliance or equipment			
+C.3.7.06	C.3.7	Entertainment appliance			
+C.3.7.06.01	C.3.7.06	Television			
+C.3.7.06.05	C.3.7.06	Video recorder, decoder player			
+C.3.7.06.10	C.3.7.06	Video camera, camera, digital camera or accessory			
+C.3.7.06.15	C.3.7.06	Sound equipment			
+C.3.7.06.98	C.3.7.06	Other specified entertainment appliance			
+C.3.7.06.99	C.3.7.06	Unspecified entertainment appliance			
+C.3.7.98	C.3.7	Other specified household appliance			
+C.3.7.98.01	C.3.7.98	Cord of household appliance, extension cord			
+C.3.7.98.98	C.3.7.98	Other specified household appliance			
+C.3.7.99	C.3.7	Unspecified household appliance			
+C.3.8	C.3	Utensil or container			
+C.3.8.01	C.3.8	Cooking or food processing utensil			
+C.3.8.01.01	C.3.8.01	Non-electric kettle			
+C.3.8.01.05	C.3.8.01	Knife NEC			
+C.3.8.01.10	C.3.8.01	Cooking pot, pan			
+C.3.8.01.15	C.3.8.01	Pressure cooker			
+C.3.8.01.20	C.3.8.01	Cutlery, food preparation utensil			
+C.3.8.01.98	C.3.8.01	Other specified cooking or food processing utensil			
+C.3.8.01.99	C.3.8.01	Unspecified cooking or food processing utensil			
+C.3.8.02	C.3.8	Crockery, kitchen container			
+C.3.8.02.01	C.3.8.02	Drinking glass, cup made from glass or china, etc.			
+C.3.8.02.05	C.3.8.02	Plate, bowl, dish made from glass or china, etc			
+C.3.8.02.10	C.3.8.02	Glass bottle or jar			
+C.3.8.02.15	C.3.8.02	Container made from plastic, wood, or clay			
+C.3.8.02.98	C.3.8.02	Other specified crockery, kitchen container			
+C.3.8.02.99	C.3.8.02	Unspecified crockery, kitchen container			
+C.3.8.03	C.3.8	Cleaning utensil or container			
+C.3.8.03.05	C.3.8.03	Bucket, pail			
+C.3.8.03.98	C.3.8.03	Other specified cleaning utensil or container			
+C.3.8.03.99	C.3.8.03	Unspecified cleaning utensil or container			
+C.3.8.04	C.3.8	Food storage or related utensil or container			
+C.3.8.04.01	C.3.8.04	Tinned container, tin can			
+C.3.8.04.05	C.3.8.04	Box or carton containing food or drink			
+C.3.8.04.10	C.3.8.04	Grocery or shopping trolley/cart			
+C.3.8.04.98	C.3.8.04	Other specified food storage or related utensil or container			
+C.3.8.04.99	C.3.8.04	Unspecified food storage or related utensil or container			
+C.3.8.98	C.3.8	Other specified utensil or container			
+C.3.8.98.01	C.3.8.98	Rubbish bin, trash can, dumpster			
+C.3.8.98.08	C.3.8.98	Heavy container, box, package NEC			
+C.3.8.98.18	C.3.8.98	Bag, sack NEC			
+C.3.8.98.98	C.3.8.98	Other specified utensil or container			
+C.3.8.99	C.3.8	Unspecified utensil or container			
+C.3.9	C.3	Item mainly for personal use			
+C.3.9.01	C.3.9	Clothes, foot wear, or related products			
+C.3.9.01.01	C.3.9.01	Belt, braces, suspenders, sash			
+C.3.9.01.05	C.3.9.01	Button			
+C.3.9.01.10	C.3.9.01	Other specified clothes fastener			
+C.3.9.01.15	C.3.9.01	Shoe, sandal, slipper, boot			
+C.3.9.01.20	C.3.9.01	Shoelace, shoe buckle			
+C.3.9.01.25	C.3.9.01	Shirt, blouse, t-shirt, trousers, slacks, jacket, coat, outerwear			
+C.3.9.01.30	C.3.9.01	Nightclothes, pyjamas, nightwear, underwear, undergarment, lingerie			
+C.3.9.01.98	C.3.9.01	Other specified clothes, foot wear, or related product			
+C.3.9.01.99	C.3.9.01	Unspecified clothes, foot wear, or related product			
+C.3.9.02	C.3.9	Clothing accessory or personal decoration item			
+C.3.9.02.01	C.3.9.02	Wristwatch, jewellery			
+C.3.9.02.98	C.3.9.02	Other specified clothing accessory or personal decorative item			
+C.3.9.02.99	C.3.9.02	Unspecified clothing accessory or personal decorative item			
+C.3.9.03	C.3.9	Personal grooming utensil			
+C.3.9.03.01	C.3.9.03	Hair dryer, curling iron, curler			
+C.3.9.03.05	C.3.9.03	Comb, hairbrush			
+C.3.9.03.10	C.3.9.03	Razor, razor blade			
+C.3.9.03.15	C.3.9.03	Electric shaver			
+C.3.9.03.20	C.3.9.03	Electric toothbrush			
+C.3.9.03.28	C.3.9.03	Other toothbrush			
+C.3.9.03.98	C.3.9.03	Other specified personal grooming utensil			
+C.3.9.03.99	C.3.9.03	Unspecified personal grooming utensil			
+C.3.9.04	C.3.9	Toiletries, cosmetics, or related product			
+C.3.9.04.01	C.3.9.04	Cleaning agent for contact lenses			
+C.3.9.04.05	C.3.9.04	Dental care products			
+C.3.9.04.10	C.3.9.04	Cotton swab, cotton bud, Q-Tip?			
+C.3.9.04.15	C.3.9.04	Soap			
+C.3.9.04.20	C.3.9.04	Deodorants			
+C.3.9.04.25	C.3.9.04	Perfume, cologne			
+C.3.9.04.35	C.3.9.04	Hair colouring preparation			
+C.3.9.04.40	C.3.9.04	Hair removal preparation, depilatory			
+C.3.9.04.43	C.3.9.04	Other hair care product			
+C.3.9.04.45	C.3.9.04	Nail polish or nail polish remover			
+C.3.9.04.50	C.3.9.04	Body or facial cream/lotion			
+C.3.9.04.55	C.3.9.04	Body powder, talc			
+C.3.9.04.60	C.3.9.04	Cosmetics NEC			
+C.3.9.04.65	C.3.9.04	Suntan or sunscreen products, self-tan products			
+C.3.9.04.70	C.3.9.04	Essential oils, oils used in aromatherapy			
+C.3.9.04.98	C.3.9.04	Other specified toiletries or related product			
+C.3.9.04.99	C.3.9.04	Unspecified toiletries or related product			
+C.3.9.05	C.3.9	Communication or related utensil or accessory			
+C.3.9.05.01	C.3.9.05	Telephone, mobile phone, cellular phone			
+C.3.9.05.05	C.3.9.05	Personal computer or related accessory			
+C.3.9.05.10	C.3.9.05	Fax machine and other related equipment			
+C.3.9.05.11	C.3.9.05	Typewriter correction fluid			
+C.3.9.05.15	C.3.9.05	Pen, pencil			
+C.3.9.05.20	C.3.9.05	Other stationery item			
+C.3.9.05.98	C.3.9.05	Other specified communication or related utensil or accessory			
+C.3.9.05.99	C.3.9.05	Unspecified communication or related utensil or accessory			
+C.3.9.06	C.3.9	Arts and crafts supplies			
+C.3.9.06.01	C.3.9.06	Artist paint			
+C.3.9.06.05	C.3.9.06	Chalk, crayon			
+C.3.9.06.10	C.3.9.06	Glazes			
+C.3.9.06.15	C.3.9.06	Canvas			
+C.3.9.06.98	C.3.9.06	Other specified arts and crafts supplies			
+C.3.9.06.99	C.3.9.06	Unspecified arts and crafts supplies			
+C.3.9.07	C.3.9	Personal aid			
+C.3.9.07.01	C.3.9.07	Eyewear			
+C.3.9.07.05	C.3.9.07	Wheelchair			
+C.3.9.07.10	C.3.9.07	Cane, walker, walking stick, walking frame			
+C.3.9.07.15	C.3.9.07	Prosthesis			
+C.3.9.07.20	C.3.9.07	Rubber bathtub mat			
+C.3.9.07.98	C.3.9.07	Other specified personal aid			
+C.3.9.07.99	C.3.9.07	personal aid: Unspecified personal aid			
+C.3.9.08	C.3.9	Tobacco or related product			
+C.3.9.08.01	C.3.9.08	Cigarette, cigar, pipe			
+C.3.9.08.05	C.3.9.08	Lighter, match			
+C.3.9.08.10	C.3.9.08	Aids to quit smoking			
+C.3.9.08.98	C.3.9.08	Other specified tobacco or related product			
+C.3.9.08.99	C.3.9.08	Unspecified tobacco or related product			
+C.3.9.98	C.3.9	Other specified personal use item			
+C.3.9.98.01	C.3.9.98	Vaporizer, humidifier			
+C.3.9.98.05	C.3.9.98	Oil burner			
+C.3.9.98.10	C.3.9.98	Condom, or other contraceptive device			
+C.3.9.98.15	C.3.9.98	Sex aids			
+C.3.9.98.20	C.3.9.98	Alarm clock, clock	[C.3.5.98]		
+C.3.9.98.25	C.3.9.98	Umbrella			
+C.3.9.98.30	C.3.9.98	Coins			
+C.3.9.98.40	C.3.9.98	Hand-held fan			
+C.3.9.98.98	C.3.9.98	Other specified personal use item			
+C.3.9.99	C.3.9	Unspecified personal use item			
 C.3.98	C.3	Other specified object/substance			
 C.3.98.01	C.3.98	Law enforcement equipment	[C.3.12]		
 C.3.98.01.01	C.3.98.01	Handcuffs			
@@ -1327,6 +1327,31 @@ C.3.98.98.98	C.3.98.98	Other specified object/substance
 C.3.99	C.3	 Unspecified object/substance			
 C.4	CORE_MODULE	PLACE OF OCCURRENCE			
 C.4.1	C.4	home	[C.4.2,C.4.2.3,C.4.6.2,C.4.8.1,C.4.8.2,C.4.2.2]		
+C.4.10	C.4	Recreational area, cultural area, or public building			
+C.4.10.1	C.4.10	public playground	[C.4.1,C.4.4.4]		
+C.4.10.2	C.4.10	amusement park, theme park			
+C.4.10.3	C.4.10	public park	[C.4.12]		
+C.4.10.4	C.4.10	public building, non-cultural	[C.4.2.3]		
+C.4.10.5	C.4.10	holiday park, campground			
+C.4.10.6	C.4.10	public religious place			
+C.4.10.8	C.4.10	other specified recreational, cultural area, or public building			
+C.4.10.9	C.4.10	unspecified recreational, cultural area, or public building			
+C.4.11	C.4	Commercial area (non-recreational)			
+C.4.11.1	C.4.11	shop, store			
+C.4.11.2	C.4.11	commercial garage	[C.4.1,C.4.7.1]		
+C.4.11.3	C.4.11	office building	[C.4.3.3]		
+C.4.11.8	C.4.11	other specified commercial area (non-recreational)			
+C.4.11.9	C.4.11	unspecified commercial area (non-recreational)			
+C.4.12	C.4	Countryside			
+C.4.12.1	C.4.12	area of still water	[C.4.12.5,C.4.12.3]		
+C.4.12.2	C.4.12	stream of water	[C.4.12.5]		
+C.4.12.3	C.4.12	large area of water	[C.4.8.8,C.4.12.1,C.4.12.5,C.4.98]		
+C.4.12.4	C.4.12	marsh, swamp	[C.4.12.5]		
+C.4.12.5	C.4.12	beach, shore, bank of a body of water			
+C.4.12.6	C.4.12	forest			
+C.4.12.7	C.4.12	desert			
+C.4.12.8	C.4.12	other specified countryside			
+C.4.12.9	C.4.12	unspecified countryside			
 C.4.2	C.4	Residential institution			
 C.4.2.1	C.4.2	home for the elderly	[C.4.2.2]		
 C.4.2.2	C.4.2	nursing home	[C.4.2.1]		
@@ -1385,31 +1410,6 @@ C.4.9.2	C.4.9	area for raising or care of animals
 C.4.9.3	C.4.9	area for growing crops combined with raising/care of animals (mixed farming)			
 C.4.9.8	C.4.9	other specified farm or other place of primary production			
 C.4.9.9	C.4.9	unspecified farm or other place of primary production			
-C.4.10	C.4	Recreational area, cultural area, or public building			
-C.4.10.1	C.4.10	public playground	[C.4.1,C.4.4.4]		
-C.4.10.2	C.4.10	amusement park, theme park			
-C.4.10.3	C.4.10	public park	[C.4.12]		
-C.4.10.4	C.4.10	public building, non-cultural	[C.4.2.3]		
-C.4.10.5	C.4.10	holiday park, campground			
-C.4.10.6	C.4.10	public religious place			
-C.4.10.8	C.4.10	other specified recreational, cultural area, or public building			
-C.4.10.9	C.4.10	unspecified recreational, cultural area, or public building			
-C.4.11	C.4	Commercial area (non-recreational)			
-C.4.11.1	C.4.11	shop, store			
-C.4.11.2	C.4.11	commercial garage	[C.4.1,C.4.7.1]		
-C.4.11.3	C.4.11	office building	[C.4.3.3]		
-C.4.11.8	C.4.11	other specified commercial area (non-recreational)			
-C.4.11.9	C.4.11	unspecified commercial area (non-recreational)			
-C.4.12	C.4	Countryside			
-C.4.12.1	C.4.12	area of still water	[C.4.12.5,C.4.12.3]		
-C.4.12.2	C.4.12	stream of water	[C.4.12.5]		
-C.4.12.3	C.4.12	large area of water	[C.4.8.8,C.4.12.1,C.4.12.5,C.4.98]		
-C.4.12.4	C.4.12	marsh, swamp	[C.4.12.5]		
-C.4.12.5	C.4.12	beach, shore, bank of a body of water			
-C.4.12.6	C.4.12	forest			
-C.4.12.7	C.4.12	desert			
-C.4.12.8	C.4.12	other specified countryside			
-C.4.12.9	C.4.12	unspecified countryside			
 C.4.98	C.4	other specified place of occurrence	[C.4.8.8]		
 C.4.99	C.4	unspecified place of occurrence			
 C.5	CORE_MODULE	ACTIVITY WHEN INJURED			
@@ -1454,14 +1454,6 @@ C.7.4	C.7	psychoactive drug or substance use: suspicion or evidence of psychoact
 C.7.5	C.7	psychoactive drug or substance use: suspicion or evidence of psychoactive drug or other substance use by both the injured person and other persons involved in the injury event			
 O.1	OCCUPATIONAL_MODULE	ECONOMIC ACTIVITY			
 O.1.1	O.1	economic activity: agriculture, hunting, or forestry	[O.1.14]		
-O.1.2	O.1	economic activity: fishing			
-O.1.3	O.1	economic activity: mining, quarrying, extraction			
-O.1.4	O.1	economic activity: manufacturing			
-O.1.5	O.1	economic activity: electricity, gas, or water supply			
-O.1.6	O.1	economic activity: construction			
-O.1.7	O.1	economic activity: wholesale or retail trade; repair of motor vehicles, motorcycles, or personal and household goods			
-O.1.8	O.1	economic activity: hotels and restaurants			
-O.1.9	O.1	economic activity: transport, storage, or communications			
 O.1.10	O.1	economic activity: financial intermediation			
 O.1.11	O.1	economic activity: real estate, renting, or business activities			
 O.1.12	O.1	economic activity: public administration, defense, or compulsory social security			
@@ -1470,10 +1462,19 @@ O.1.14	O.1	economic activity: health or social work
 O.1.15	O.1	economic activity: other community, social, or personal service activities			
 O.1.16	O.1	economic activity: private households with employed persons			
 O.1.17	O.1	economic activity: extra-territorial organizations and bodies			
+O.1.2	O.1	economic activity: fishing			
+O.1.3	O.1	economic activity: mining, quarrying, extraction			
+O.1.4	O.1	economic activity: manufacturing			
+O.1.5	O.1	economic activity: electricity, gas, or water supply			
+O.1.6	O.1	economic activity: construction			
+O.1.7	O.1	economic activity: wholesale or retail trade; repair of motor vehicles, motorcycles, or personal and household goods			
+O.1.8	O.1	economic activity: hotels and restaurants			
+O.1.9	O.1	economic activity: transport, storage, or communications			
 O.1.98	O.1	other specified economic activity			
 O.1.99	O.1	unspecified economic activity			
 O.2	OCCUPATIONAL_MODULE	OCCUPATION			
 O.2.1	O.2	occupation: legislators, senior officials, managers			
+O.2.10	O.2	occupation: armed forces			
 O.2.2	O.2	occupation: professionals			
 O.2.3	O.2	occupation: technicians or associate professionals			
 O.2.4	O.2	occupation: clerks, secretaries			
@@ -1482,7 +1483,6 @@ O.2.6	O.2	occupation: skilled agriculture or fishery workers
 O.2.7	O.2	occupation: craft or related trades workers			
 O.2.8	O.2	occupation: plant/machine operators or assemblers			
 O.2.9	O.2	occupation: elementary occupations			
-O.2.10	O.2	occupation: armed forces			
 O.2.98	O.2	occupation: other specified occupation			
 O.2.99	O.2	occupation: unspecified occupation			
 P.1	PLACE_MODULE	INDOOR/OUTDOOR			
@@ -1491,14 +1491,6 @@ P.1.2	P.1	indoor/outdoor: outdoor
 P.1.9	P.1	indoor/outdoor: unspecified			
 P.2	PLACE_MODULE	PART OF BUILDING OR GROUNDS			
 P.2.1	P.2	part of building or grounds: bathroom, toilet			
-P.2.2	P.2	part of building or grounds: kitchen			
-P.2.3	P.2	part of building or grounds: living room			
-P.2.4	P.2	part of building or grounds: bedroom			
-P.2.5	P.2	part of building or grounds: playroom/family room			
-P.2.6	P.2	part of building or grounds: office, home office			
-P.2.7	P.2	part of building or grounds: classroom			
-P.2.8	P.2	part of building or grounds: canteen, cafeteria			
-P.2.9	P.2	part of building or grounds: balcony			
 P.2.10	P.2	part of building or grounds: stairs			
 P.2.11	P.2	part of building or grounds: elevator			
 P.2.12	P.2	part of building or grounds: corridor			
@@ -1509,9 +1501,17 @@ P.2.16	P.2	part of building or grounds: driveway
 P.2.17	P.2	part of building or grounds: swimming pool			
 P.2.18	P.2	part of building or grounds: tennis court			
 P.2.19	P.2	part of building or grounds: other specified sporting facility			
+P.2.2	P.2	part of building or grounds: kitchen			
 P.2.20	P.2	part of building or grounds: playground			
 P.2.21	P.2	part of building or grounds: private road			
 P.2.22	P.2	part of building or grounds: private parking area			
+P.2.3	P.2	part of building or grounds: living room			
+P.2.4	P.2	part of building or grounds: bedroom			
+P.2.5	P.2	part of building or grounds: playroom/family room			
+P.2.6	P.2	part of building or grounds: office, home office			
+P.2.7	P.2	part of building or grounds: classroom			
+P.2.8	P.2	part of building or grounds: canteen, cafeteria			
+P.2.9	P.2	part of building or grounds: balcony			
 P.2.98	P.2	part of building or grounds: other specified part of building or grounds			
 P.2.99	P.2	part of building or grounds: unspecified part of building or grounds			
 P.3	PLACE_MODULE	TYPE OF HOME			
@@ -1562,116 +1562,6 @@ S.1.1.15	S.1.1	type of sport/exercise activity: volleyball
 S.1.1.16	S.1.1	type of sport/exercise activity: walleyball			
 S.1.1.98	S.1.1	type of sport/exercise activity: other specified team ball sport			
 S.1.1.99	S.1.1	type of sport/exercise activity: unspecified team ball sport			
-S.1.2	S.1	Team bat or stick sports			
-S.1.2.01	S.1.2	type of sport/exercise activity: baseball			
-S.1.2.02	S.1.2	type of sport/exercise activity: cricket			
-S.1.2.03	S.1.2	type of sport/exercise activity: hockey - ice			
-S.1.2.04	S.1.2	type of sport/exercise activity: hockey - street/ball			
-S.1.2.05	S.1.2	type of sport/exercise activity: hockey - field			
-S.1.2.06	S.1.2	type of sport/exercise activity: hockey - floor			
-S.1.2.07	S.1.2	type of sport/exercise activity: hockey - other specified			
-S.1.2.08	S.1.2	type of sport/exercise activity: hockey - unspecified			
-S.1.2.09	S.1.2	type of sport/exercise activity: ringette			
-S.1.2.10	S.1.2	type of sport/exercise activity: softball			
-S.1.2.11	S.1.2	type of sport/exercise activity: t-ball			
-S.1.2.98	S.1.2	type of sport/exercise activity: other specified team bat or stick sport			
-S.1.2.99	S.1.2	type of sport/exercise activity: unspecified team bat or stick sport			
-S.1.3	S.1	Team water sports			
-S.1.3.01	S.1.3	type of sport/exercise activity: rescue and resuscitation			
-S.1.3.02	S.1.3	type of sport/exercise activity: synchronized swimming	[S.1.5]		
-S.1.3.03	S.1.3	type of sport/exercise activity: underwater hockey			
-S.1.3.04	S.1.3	type of sport/exercise activity: water polo			
-S.1.3.98	S.1.3	type of sport/exercise activity: other specified team water sport			
-S.1.3.99	S.1.3	type of sport/exercise activity: unspecified team water sport			
-S.1.4	S.1	Boating sports			
-S.1.4.01	S.1.4	type of sport/exercise activity: canoeing			
-S.1.4.02	S.1.4	type of sport/exercise activity: jet skiing			
-S.1.4.03	S.1.4	type of sport/exercise activity: kayaking/white-water rafting			
-S.1.4.04	S.1.4	type of sport/exercise activity: power boat racing			
-S.1.4.05	S.1.4	type of sport/exercise activity: rowing/sculling			
-S.1.4.06	S.1.4	type of sport/exercise activity: surf boating			
-S.1.4.07	S.1.4	type of sport/exercise activity: yachting/sailing			
-S.1.4.98	S.1.4	type of sport/exercise activity: other specified boating sport			
-S.1.4.99	S.1.4	type of sport/exercise activity: unspecified boating sport			
-S.1.5	S.1	Individual water sports			
-S.1.5.01	S.1.5	type of sport/exercise activity: diving - platform	[S.1.5.13]		
-S.1.5.02	S.1.5	type of sport/exercise activity: diving - springboard			
-S.1.5.03	S.1.5	type of sport/exercise activity: diving - unspecified			
-S.1.5.04	S.1.5	type of sport/exercise activity: fishing			
-S.1.5.05	S.1.5	type of sport/exercise activity: scuba diving			
-S.1.5.06	S.1.5	type of sport/exercise activity: snorkeling			
-S.1.5.07	S.1.5	type of sport/exercise activity: surfing/boogie boarding	[S.1.5.12]		
-S.1.5.08	S.1.5	type of sport/exercise activity: surf life saving			
-S.1.5.09	S.1.5	type of sport/exercise activity: swimming - competitive	[S.1.5.14]		
-S.1.5.10	S.1.5	type of sport/exercise activity: water skiing			
-S.1.5.11	S.1.5	type of sport/exercise activity: water tubing			
-S.1.5.12	S.1.5	type of sport/exercise activity: wind surfing			
-S.1.5.13	S.1.5	type of sport/exercise activity: diving -cliff			
-S.1.5.14	S.1.5	type of sport/exercise activity: swimming - recreational			
-S.1.5.98	S.1.5	type of sport/exercise activity: other specified individual water sport			
-S.1.5.99	S.1.5	type of sport/exercise activity: unspecified individual water sport			
-S.1.6	S.1	Ice or snow sports			
-S.1.6.01	S.1.6	type of sport/exercise activity: bobsledding			
-S.1.6.02	S.1.6	type of sport/exercise activity: curling			
-S.1.6.03	S.1.6	type of sport/exercise activity: ice skating/ice dancing	[S.1.6.14]		
-S.1.6.04	S.1.6	type of sport/exercise activity: luge			
-S.1.6.05	S.1.6	type of sport/exercise activity: ski patrolling			
-S.1.6.06	S.1.6	type of sport/exercise activity: skiing - alpine/downhill			
-S.1.6.07	S.1.6	type of sport/exercise activity: skiing - Nordic/cross country			
-S.1.6.08	S.1.6	type of sport/exercise activity: skiing - freestyle			
-S.1.6.09	S.1.6	type of sport/exercise activity: skiing - snow ski jumping			
-S.1.6.10	S.1.6	type of sport/exercise activity: skiing - other specified			
-S.1.6.11	S.1.6	type of sport/exercise activity: skiing - unspecified			
-S.1.6.12	S.1.6	type of sport/exercise activity: snowmobiling			
-S.1.6.13	S.1.6	type of sport/exercise activity: snow boarding			
-S.1.6.14	S.1.6	type of sport/exercise activity: speed skating			
-S.1.6.15	S.1.6	type of sport/exercise activity: tobogganing			
-S.1.6.98	S.1.6	type of sport/exercise activity: other specified ice or snow sport			
-S.1.6.99	S.1.6	type of sport/exercise activity: unspecified ice or snow sport			
-S.1.7	S.1	Individual athletic activities			
-S.1.7.01	S.1.7	type of sport/exercise activity: aerobics/callisthenics			
-S.1.7.02	S.1.7	type of sport/exercise activity: jogging/running	[S.1.7.18]		
-S.1.7.03	S.1.7	type of sport/exercise activity: tai chi			
-S.1.7.04	S.1.7	type of sport/exercise activity: track & field - racing over obstacles or hurdles			
-S.1.7.05	S.1.7	type of sport/exercise activity: track & field - sprinting (1-400 metres)			
-S.1.7.06	S.1.7	type of sport/exercise activity: track & field - running middle distances (401-1,500 metres)			
-S.1.7.07	S.1.7	type of sport/exercise activity: track & field - running long distances (greater than 1,500 metres)			
-S.1.7.08	S.1.7	type of sport/exercise activity: track & field - high jump			
-S.1.7.09	S.1.7	type of sport/exercise activity: track & field - long jump			
-S.1.7.10	S.1.7	type of sport/exercise activity: track & field - pole vault			
-S.1.7.11	S.1.7	type of sport/exercise activity: track & field - triple jump			
-S.1.7.12	S.1.7	type of sport/exercise activity: track & field - discus			
-S.1.7.13	S.1.7	type of sport/exercise activity: track & field - javelin			
-S.1.7.14	S.1.7	type of sport/exercise activity: track & field - hammer throw			
-S.1.7.15	S.1.7	type of sport/exercise activity: track & field - shot putt			
-S.1.7.16	S.1.7	type of sport/exercise activity: track & field - other specified			
-S.1.7.17	S.1.7	type of sport/exercise activity: track & field - unspecified			
-S.1.7.18	S.1.7	type of sport/exercise activity: walking			
-S.1.7.19	S.1.7	type of sport/exercise activity: yoga/Pilates			
-S.1.7.20	S.1.7	type of sport/exercise activity: stationary aerobic exercise with equipment			
-S.1.7.98	S.1.7	type of sport/exercise activity: other specified individual athletic activity			
-S.1.7.99	S.1.7	type of sport/exercise activity: unspecified individual athletic activity			
-S.1.8	S.1	Acrobatic sports			
-S.1.8.01	S.1.8	type of sport/exercise activity: cheerleading			
-S.1.8.02	S.1.8	type of sport/exercise activity: gymnastics - balance beam			
-S.1.8.03	S.1.8	type of sport/exercise activity: gymnastics - floor exercise/tumbling			
-S.1.8.04	S.1.8	type of sport/exercise activity: gymnastics - high bar			
-S.1.8.05	S.1.8	type of sport/exercise activity: gymnastics - parallel bars			
-S.1.8.06	S.1.8	type of sport/exercise activity: gymnastics - rhythmic (with props)			
-S.1.8.07	S.1.8	type of sport/exercise activity: gymnastics - rings			
-S.1.8.08	S.1.8	type of sport/exercise activity: gymnastics - side horse/pommel horse			
-S.1.8.09	S.1.8	type of sport/exercise activity: gymnastics - trampoline/mini-trampoline			
-S.1.8.10	S.1.8	type of sport/exercise activity: gymnastics - uneven parallel bars			
-S.1.8.11	S.1.8	type of sport/exercise activity: gymnastics - vault			
-S.1.8.12	S.1.8	type of sport/exercise activity: gymnastics - other specified			
-S.1.8.13	S.1.8	type of sport/exercise activity: gymnastics - unspecified			
-S.1.8.98	S.1.8	type of sport/exercise activity: other specified acrobatic sport			
-S.1.8.99	S.1.8	type of sport/exercise activity: unspecified acrobatic sport			
-S.1.9	S.1	Aesthetic activities			
-S.1.9.01	S.1.9	type of sport/exercise activity: dancing			
-S.1.9.02	S.1.9	type of sport/exercise activity: marching			
-S.1.9.98	S.1.9	type of sport/exercise activity: other specified aesthetic sport			
-S.1.9.99	S.1.9	type of sport/exercise activity: unspecified aesthetic sport			
 S.1.10	S.1	Racquet sports			
 S.1.10.01	S.1.10	type of sport/exercise activity: badminton			
 S.1.10.02	S.1.10	type of sport/exercise activity: racquetball			
@@ -1810,11 +1700,121 @@ S.1.19.05	S.1.19	type of sport/exercise activity: paragliding/parasailing
 S.1.19.06	S.1.19	type of sport/exercise activity: hot air ballooning			
 S.1.19.98	S.1.19	type of sport/exercise activity: other specified aero sport			
 S.1.19.99	S.1.19	type of sport/exercise activity: unspecified aero sport			
+S.1.2	S.1	Team bat or stick sports			
+S.1.2.01	S.1.2	type of sport/exercise activity: baseball			
+S.1.2.02	S.1.2	type of sport/exercise activity: cricket			
+S.1.2.03	S.1.2	type of sport/exercise activity: hockey - ice			
+S.1.2.04	S.1.2	type of sport/exercise activity: hockey - street/ball			
+S.1.2.05	S.1.2	type of sport/exercise activity: hockey - field			
+S.1.2.06	S.1.2	type of sport/exercise activity: hockey - floor			
+S.1.2.07	S.1.2	type of sport/exercise activity: hockey - other specified			
+S.1.2.08	S.1.2	type of sport/exercise activity: hockey - unspecified			
+S.1.2.09	S.1.2	type of sport/exercise activity: ringette			
+S.1.2.10	S.1.2	type of sport/exercise activity: softball			
+S.1.2.11	S.1.2	type of sport/exercise activity: t-ball			
+S.1.2.98	S.1.2	type of sport/exercise activity: other specified team bat or stick sport			
+S.1.2.99	S.1.2	type of sport/exercise activity: unspecified team bat or stick sport			
 S.1.20	S.1	Other school-related recreational activities			
 S.1.20.01	S.1.20	type of sport/exercise activity: school physical education class			
 S.1.20.02	S.1.20	type of sport/exercise activity: school free play			
 S.1.20.98	S.1.20	type of sport/exercise activity other specified school sport/exercise activity			
 S.1.20.99	S.1.20	type of sport/exercise activity: unspecified school sport/exercise activity			
+S.1.3	S.1	Team water sports			
+S.1.3.01	S.1.3	type of sport/exercise activity: rescue and resuscitation			
+S.1.3.02	S.1.3	type of sport/exercise activity: synchronized swimming	[S.1.5]		
+S.1.3.03	S.1.3	type of sport/exercise activity: underwater hockey			
+S.1.3.04	S.1.3	type of sport/exercise activity: water polo			
+S.1.3.98	S.1.3	type of sport/exercise activity: other specified team water sport			
+S.1.3.99	S.1.3	type of sport/exercise activity: unspecified team water sport			
+S.1.4	S.1	Boating sports			
+S.1.4.01	S.1.4	type of sport/exercise activity: canoeing			
+S.1.4.02	S.1.4	type of sport/exercise activity: jet skiing			
+S.1.4.03	S.1.4	type of sport/exercise activity: kayaking/white-water rafting			
+S.1.4.04	S.1.4	type of sport/exercise activity: power boat racing			
+S.1.4.05	S.1.4	type of sport/exercise activity: rowing/sculling			
+S.1.4.06	S.1.4	type of sport/exercise activity: surf boating			
+S.1.4.07	S.1.4	type of sport/exercise activity: yachting/sailing			
+S.1.4.98	S.1.4	type of sport/exercise activity: other specified boating sport			
+S.1.4.99	S.1.4	type of sport/exercise activity: unspecified boating sport			
+S.1.5	S.1	Individual water sports			
+S.1.5.01	S.1.5	type of sport/exercise activity: diving - platform	[S.1.5.13]		
+S.1.5.02	S.1.5	type of sport/exercise activity: diving - springboard			
+S.1.5.03	S.1.5	type of sport/exercise activity: diving - unspecified			
+S.1.5.04	S.1.5	type of sport/exercise activity: fishing			
+S.1.5.05	S.1.5	type of sport/exercise activity: scuba diving			
+S.1.5.06	S.1.5	type of sport/exercise activity: snorkeling			
+S.1.5.07	S.1.5	type of sport/exercise activity: surfing/boogie boarding	[S.1.5.12]		
+S.1.5.08	S.1.5	type of sport/exercise activity: surf life saving			
+S.1.5.09	S.1.5	type of sport/exercise activity: swimming - competitive	[S.1.5.14]		
+S.1.5.10	S.1.5	type of sport/exercise activity: water skiing			
+S.1.5.11	S.1.5	type of sport/exercise activity: water tubing			
+S.1.5.12	S.1.5	type of sport/exercise activity: wind surfing			
+S.1.5.13	S.1.5	type of sport/exercise activity: diving -cliff			
+S.1.5.14	S.1.5	type of sport/exercise activity: swimming - recreational			
+S.1.5.98	S.1.5	type of sport/exercise activity: other specified individual water sport			
+S.1.5.99	S.1.5	type of sport/exercise activity: unspecified individual water sport			
+S.1.6	S.1	Ice or snow sports			
+S.1.6.01	S.1.6	type of sport/exercise activity: bobsledding			
+S.1.6.02	S.1.6	type of sport/exercise activity: curling			
+S.1.6.03	S.1.6	type of sport/exercise activity: ice skating/ice dancing	[S.1.6.14]		
+S.1.6.04	S.1.6	type of sport/exercise activity: luge			
+S.1.6.05	S.1.6	type of sport/exercise activity: ski patrolling			
+S.1.6.06	S.1.6	type of sport/exercise activity: skiing - alpine/downhill			
+S.1.6.07	S.1.6	type of sport/exercise activity: skiing - Nordic/cross country			
+S.1.6.08	S.1.6	type of sport/exercise activity: skiing - freestyle			
+S.1.6.09	S.1.6	type of sport/exercise activity: skiing - snow ski jumping			
+S.1.6.10	S.1.6	type of sport/exercise activity: skiing - other specified			
+S.1.6.11	S.1.6	type of sport/exercise activity: skiing - unspecified			
+S.1.6.12	S.1.6	type of sport/exercise activity: snowmobiling			
+S.1.6.13	S.1.6	type of sport/exercise activity: snow boarding			
+S.1.6.14	S.1.6	type of sport/exercise activity: speed skating			
+S.1.6.15	S.1.6	type of sport/exercise activity: tobogganing			
+S.1.6.98	S.1.6	type of sport/exercise activity: other specified ice or snow sport			
+S.1.6.99	S.1.6	type of sport/exercise activity: unspecified ice or snow sport			
+S.1.7	S.1	Individual athletic activities			
+S.1.7.01	S.1.7	type of sport/exercise activity: aerobics/callisthenics			
+S.1.7.02	S.1.7	type of sport/exercise activity: jogging/running	[S.1.7.18]		
+S.1.7.03	S.1.7	type of sport/exercise activity: tai chi			
+S.1.7.04	S.1.7	type of sport/exercise activity: track & field - racing over obstacles or hurdles			
+S.1.7.05	S.1.7	type of sport/exercise activity: track & field - sprinting (1-400 metres)			
+S.1.7.06	S.1.7	type of sport/exercise activity: track & field - running middle distances (401-1,500 metres)			
+S.1.7.07	S.1.7	type of sport/exercise activity: track & field - running long distances (greater than 1,500 metres)			
+S.1.7.08	S.1.7	type of sport/exercise activity: track & field - high jump			
+S.1.7.09	S.1.7	type of sport/exercise activity: track & field - long jump			
+S.1.7.10	S.1.7	type of sport/exercise activity: track & field - pole vault			
+S.1.7.11	S.1.7	type of sport/exercise activity: track & field - triple jump			
+S.1.7.12	S.1.7	type of sport/exercise activity: track & field - discus			
+S.1.7.13	S.1.7	type of sport/exercise activity: track & field - javelin			
+S.1.7.14	S.1.7	type of sport/exercise activity: track & field - hammer throw			
+S.1.7.15	S.1.7	type of sport/exercise activity: track & field - shot putt			
+S.1.7.16	S.1.7	type of sport/exercise activity: track & field - other specified			
+S.1.7.17	S.1.7	type of sport/exercise activity: track & field - unspecified			
+S.1.7.18	S.1.7	type of sport/exercise activity: walking			
+S.1.7.19	S.1.7	type of sport/exercise activity: yoga/Pilates			
+S.1.7.20	S.1.7	type of sport/exercise activity: stationary aerobic exercise with equipment			
+S.1.7.98	S.1.7	type of sport/exercise activity: other specified individual athletic activity			
+S.1.7.99	S.1.7	type of sport/exercise activity: unspecified individual athletic activity			
+S.1.8	S.1	Acrobatic sports			
+S.1.8.01	S.1.8	type of sport/exercise activity: cheerleading			
+S.1.8.02	S.1.8	type of sport/exercise activity: gymnastics - balance beam			
+S.1.8.03	S.1.8	type of sport/exercise activity: gymnastics - floor exercise/tumbling			
+S.1.8.04	S.1.8	type of sport/exercise activity: gymnastics - high bar			
+S.1.8.05	S.1.8	type of sport/exercise activity: gymnastics - parallel bars			
+S.1.8.06	S.1.8	type of sport/exercise activity: gymnastics - rhythmic (with props)			
+S.1.8.07	S.1.8	type of sport/exercise activity: gymnastics - rings			
+S.1.8.08	S.1.8	type of sport/exercise activity: gymnastics - side horse/pommel horse			
+S.1.8.09	S.1.8	type of sport/exercise activity: gymnastics - trampoline/mini-trampoline			
+S.1.8.10	S.1.8	type of sport/exercise activity: gymnastics - uneven parallel bars			
+S.1.8.11	S.1.8	type of sport/exercise activity: gymnastics - vault			
+S.1.8.12	S.1.8	type of sport/exercise activity: gymnastics - other specified			
+S.1.8.13	S.1.8	type of sport/exercise activity: gymnastics - unspecified			
+S.1.8.98	S.1.8	type of sport/exercise activity: other specified acrobatic sport			
+S.1.8.99	S.1.8	type of sport/exercise activity: unspecified acrobatic sport			
+S.1.9	S.1	Aesthetic activities			
+S.1.9.01	S.1.9	type of sport/exercise activity: dancing			
+S.1.9.02	S.1.9	type of sport/exercise activity: marching			
+S.1.9.98	S.1.9	type of sport/exercise activity: other specified aesthetic sport			
+S.1.9.99	S.1.9	type of sport/exercise activity: unspecified aesthetic sport			
 S.1.98	S.1	type of sport/exercise activity:  other specified sport/exercise activity			
 S.1.99	S.1	type of sport/exercise activity:  unspecified sport/exercise activity			
 S.2	SPORTS_MODULE	PHASE OF ACTIVITY			
@@ -1840,6 +1840,11 @@ S.2.8	S.2	phase of activity: other specified phase or activity
 S.2.9	S.2	unspecified phase or activity			
 S.3	SPORTS_MODULE	PERSONAL COUNTERMEASURES			
 S.3.1	S.3	personal countermeasures: no protective devices used			
+S.3.10	S.3	personal countermeasures: eye goggles/protective glasses			
+S.3.11	S.3	personal countermeasures: helmet			
+S.3.12	S.3	personal countermeasures: face mask/shield			
+S.3.13	S.3	personal countermeasures: foot wear			
+S.3.14	S.3	personal countermeasures: personal flotation device			
 S.3.2	S.3	personal countermeasures: braces, guards, orthoses			
 S.3.3	S.3	personal countermeasures: rigid taping of joint			
 S.3.4	S.3	personal countermeasures: padding of joint, bony prominence, or muscle			
@@ -1848,11 +1853,6 @@ S.3.6	S.3	personal countermeasures: splints
 S.3.7	S.3	personal countermeasures: jock strap, protective cup			
 S.3.8	S.3	personal countermeasures: gloves			
 S.3.9	S.3	personal countermeasures: mouth guard			
-S.3.10	S.3	personal countermeasures: eye goggles/protective glasses			
-S.3.11	S.3	personal countermeasures: helmet			
-S.3.12	S.3	personal countermeasures: face mask/shield			
-S.3.13	S.3	personal countermeasures: foot wear			
-S.3.14	S.3	personal countermeasures: personal flotation device			
 S.3.98	S.3	personal countermeasures: other specified personal countermeasure			
 S.3.99	S.3	personal countermeasures: unspecified personal countermeasure			
 S.4	SPORTS_MODULE	ENVIRONMENTAL COUNTERMEASURES			
@@ -1867,6 +1867,26 @@ T.1	TRANSPORT_MODULE	MODE OF TRANSPORT
 T.1.1	T.1	Pedestrian			
 T.1.1.1	T.1.1	mode of transport: person on foot			
 T.1.1.2	T.1.1	mode of transport: pedestrian: person using a pedestrian conveyance			
+T.1.10	T.1	Special all-terrain or off-road vehicle			
+T.1.10.1	T.1.10	mode of transport: snowmobile			
+T.1.10.2	T.1.10	mode of transport: hovercraft operating on land or swamp			
+T.1.10.8	T.1.10	mode of transport: special other specified all-terrain or off-road vehicle			
+T.1.10.9	T.1.10	mode of transport: unspecified all-terrain or off-road vehicle			
+T.1.11	T.1	Watercraft			
+T.1.11.1	T.1.11	mode of transport: merchant ship			
+T.1.11.2	T.1.11	mode of transport: passenger ship			
+T.1.11.3	T.1.11	mode of transport: fishing boat, trawler			
+T.1.11.4	T.1.11	mode of transport: other specified powered (motorized) watercraft			
+T.1.11.5	T.1.11	mode of transport: sailboat, unpowered yacht	[T.1.11.8]		
+T.1.11.8	T.1.11	mode of transport: other specified unpowered watercraft			
+T.1.11.9	T.1.11	mode of transport: watercraft, unspecified as powered or unpowered			
+T.1.12	T.1	Aircraft			
+T.1.12.1	T.1.12	mode of transport: powered aircraft	[T.1.12.4]		
+T.1.12.2	T.1.12	mode of transport: unpowered aircraft			
+T.1.12.4	T.1.12	mode of transport: space craft			
+T.1.12.5	T.1.12	mode of transport: parachute used in descent from damaged aircraft			
+T.1.12.6	T.1.12	mode of transport: parachute used in descent from undamaged aircraft			
+T.1.12.9	T.1.12	mode of transport: unspecified aircraft			
 T.1.2	T.1	mode of transport: pedal cycle			
 T.1.3	T.1	Other non-motorised transport device			
 T.1.3.1	T.1.3	mode of transport: animal-drawn vehicle			
@@ -1901,26 +1921,6 @@ T.1.9	T.1	Special industrial, agricultural, or construction vehicle
 T.1.9.1	T.1.9	mode of transport: special vehicle used in industry			
 T.1.9.2	T.1.9	mode of transport: special vehicle used in agriculture			
 T.1.9.3	T.1.9	mode of transport: special vehicle used in construction			
-T.1.10	T.1	Special all-terrain or off-road vehicle			
-T.1.10.1	T.1.10	mode of transport: snowmobile			
-T.1.10.2	T.1.10	mode of transport: hovercraft operating on land or swamp			
-T.1.10.8	T.1.10	mode of transport: special other specified all-terrain or off-road vehicle			
-T.1.10.9	T.1.10	mode of transport: unspecified all-terrain or off-road vehicle			
-T.1.11	T.1	Watercraft			
-T.1.11.1	T.1.11	mode of transport: merchant ship			
-T.1.11.2	T.1.11	mode of transport: passenger ship			
-T.1.11.3	T.1.11	mode of transport: fishing boat, trawler			
-T.1.11.4	T.1.11	mode of transport: other specified powered (motorized) watercraft			
-T.1.11.5	T.1.11	mode of transport: sailboat, unpowered yacht	[T.1.11.8]		
-T.1.11.8	T.1.11	mode of transport: other specified unpowered watercraft			
-T.1.11.9	T.1.11	mode of transport: watercraft, unspecified as powered or unpowered			
-T.1.12	T.1	Aircraft			
-T.1.12.1	T.1.12	mode of transport: powered aircraft	[T.1.12.4]		
-T.1.12.2	T.1.12	mode of transport: unpowered aircraft			
-T.1.12.4	T.1.12	mode of transport: space craft			
-T.1.12.5	T.1.12	mode of transport: parachute used in descent from damaged aircraft			
-T.1.12.6	T.1.12	mode of transport: parachute used in descent from undamaged aircraft			
-T.1.12.9	T.1.12	mode of transport: unspecified aircraft			
 T.1.98	T.1	mode of transport: other specified mode of transport			
 T.1.99	T.1	mode of transport: unspecified mode of transport			
 T.2	TRANSPORT_MODULE	ROLE OF THE INJURED PERSON			
@@ -1936,40 +1936,6 @@ T.3	TRANSPORT_MODULE	COUNTERPART
 T.3.1	T.3	Pedestrian			
 T.3.1.1	T.3.1	counterpart: person on foot			
 T.3.1.2	T.3.1	counterpart: pedestrian: person using a pedestrian conveyance			
-T.3.2	T.3	counterpart: pedal cycle			
-T.3.3	T.3	Other non-motorised transport device			
-T.3.3.1	T.3.3	counterpart: animal-drawn vehicle			
-T.3.3.2	T.3.3	counterpart: animal being ridden			
-T.3.3.8	T.3.3	counterpart: other specified non-motorized transport device			
-T.3.3.9	T.3.3	counterpart: unspecified non-motorized transport device			
-T.3.4	T.3	Two-wheeled motor vehicle			
-T.3.4.1	T.3.4	counterpart: motorized bicycle	[T.3.5]		
-T.3.4.2	T.3.4	counterpart: motorcycle			
-T.3.4.8	T.3.4	counterpart: other specified two-wheeled motor vehicle			
-T.3.4.9	T.3.4	counterpart: unspecified two-wheeled motor vehicle			
-T.3.5	T.3	counterpart: three-wheeled motor vehicle			
-T.3.6	T.3	Light transport vehicle with four or more wheels			
-T.3.6.1	T.3.6	counterpart: motor car, station wagon, minivan, jeep, sport utility vehicle, 4x4	[T.3.6.2,T.3.6.4]		
-T.3.6.2	T.3.6	counterpart: minibus, passenger van	[T.3.6.4,T.3.6.1,T.3.7.1]		
-T.3.6.3	T.3.6	counterpart: pick-up truck, goods or work van, ambulance, motor home	[T.3.6.1,T.3.6.2]		
-T.3.6.4	T.3.6	counterpart: light transport vehicle with four or more wheels used in sport and leisure activities			
-T.3.6.8	T.3.6	counterpart: other specified light transport vehicle with four or more wheels			
-T.3.6.9	T.3.6	counterpart: unspecified light transport vehicle with four or more wheels			
-T.3.7	T.3	Heavy transport vehicle			
-T.3.7.1	T.3.7	counterpart: bus or coach	[T.3.6.2]		
-T.3.7.2	T.3.7	counterpart: truck	[T.3.6.3]		
-T.3.7.8	T.3.7	counterpart: other specified heavy transport vehicle			
-T.3.7.9	T.3.7	counterpart: unspecified heavy transport vehicle			
-T.3.8	T.3	Rail vehicle			
-T.3.8.1	T.3.8	counterpart: railway train			
-T.3.8.2	T.3.8	counterpart: rail streetcar, tram			
-T.3.8.3	T.3.8	counterpart: funicular, monorail	[T.3.98]		
-T.3.8.8	T.3.8	counterpart: other specified rail vehicle			
-T.3.8.9	T.3.8	counterpart: unspecified rail vehicle			
-T.3.9	T.3	Special industrial, agricultural, or construction vehicle			
-T.3.9.1	T.3.9	counterpart: special vehicle used in industry			
-T.3.9.2	T.3.9	counterpart: special vehicle used in agriculture			
-T.3.9.3	T.3.9	counterpart: special vehicle used in construction			
 T.3.10	T.3	Special all-terrain or off-road vehicle			
 T.3.10.1	T.3.10	counterpart: snowmobile			
 T.3.10.2	T.3.10	counterpart: hovercraft operating on land or swamp			
@@ -2006,6 +1972,40 @@ T.3.15	T.3	No counterpart
 T.3.15.1	T.3.15	no counterpart: sudden movement of vehicle, without collision, resulted in injury			
 T.3.15.2	T.3.15	no counterpart: rollover of vehicle without collision			
 T.3.15.9	T.3.15	no counterpart: unspecified			
+T.3.2	T.3	counterpart: pedal cycle			
+T.3.3	T.3	Other non-motorised transport device			
+T.3.3.1	T.3.3	counterpart: animal-drawn vehicle			
+T.3.3.2	T.3.3	counterpart: animal being ridden			
+T.3.3.8	T.3.3	counterpart: other specified non-motorized transport device			
+T.3.3.9	T.3.3	counterpart: unspecified non-motorized transport device			
+T.3.4	T.3	Two-wheeled motor vehicle			
+T.3.4.1	T.3.4	counterpart: motorized bicycle	[T.3.5]		
+T.3.4.2	T.3.4	counterpart: motorcycle			
+T.3.4.8	T.3.4	counterpart: other specified two-wheeled motor vehicle			
+T.3.4.9	T.3.4	counterpart: unspecified two-wheeled motor vehicle			
+T.3.5	T.3	counterpart: three-wheeled motor vehicle			
+T.3.6	T.3	Light transport vehicle with four or more wheels			
+T.3.6.1	T.3.6	counterpart: motor car, station wagon, minivan, jeep, sport utility vehicle, 4x4	[T.3.6.2,T.3.6.4]		
+T.3.6.2	T.3.6	counterpart: minibus, passenger van	[T.3.6.4,T.3.6.1,T.3.7.1]		
+T.3.6.3	T.3.6	counterpart: pick-up truck, goods or work van, ambulance, motor home	[T.3.6.1,T.3.6.2]		
+T.3.6.4	T.3.6	counterpart: light transport vehicle with four or more wheels used in sport and leisure activities			
+T.3.6.8	T.3.6	counterpart: other specified light transport vehicle with four or more wheels			
+T.3.6.9	T.3.6	counterpart: unspecified light transport vehicle with four or more wheels			
+T.3.7	T.3	Heavy transport vehicle			
+T.3.7.1	T.3.7	counterpart: bus or coach	[T.3.6.2]		
+T.3.7.2	T.3.7	counterpart: truck	[T.3.6.3]		
+T.3.7.8	T.3.7	counterpart: other specified heavy transport vehicle			
+T.3.7.9	T.3.7	counterpart: unspecified heavy transport vehicle			
+T.3.8	T.3	Rail vehicle			
+T.3.8.1	T.3.8	counterpart: railway train			
+T.3.8.2	T.3.8	counterpart: rail streetcar, tram			
+T.3.8.3	T.3.8	counterpart: funicular, monorail	[T.3.98]		
+T.3.8.8	T.3.8	counterpart: other specified rail vehicle			
+T.3.8.9	T.3.8	counterpart: unspecified rail vehicle			
+T.3.9	T.3	Special industrial, agricultural, or construction vehicle			
+T.3.9.1	T.3.9	counterpart: special vehicle used in industry			
+T.3.9.2	T.3.9	counterpart: special vehicle used in agriculture			
+T.3.9.3	T.3.9	counterpart: special vehicle used in construction			
 T.3.98	T.3	counterpart: other specified counterpart			
 T.3.99	T.3	counterpart: unspecified counterpart			
 T.4	TRANSPORT_MODULE	TYPE OF TRANSPORT INJURY EVENT			
