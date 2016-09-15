@@ -13,6 +13,7 @@ import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import edu.stanford.bmir.whofic.SiblingReordering;
 import edu.stanford.bmir.whofic.icd.ICDContentModel;
 import edu.stanford.smi.protege.model.Project;
 import edu.stanford.smi.protege.ui.ProjectManager;
@@ -42,6 +43,7 @@ public class ImportICECI {
     private static final String ICECI_CODE_PROPERTY_NAME = "http://who.int/icd#iceciCode";
     
     private static ICDContentModel cm;
+    private static SiblingReordering sibOrder;
     private static OWLModel owlModel;
     private static OWLNamedClass valueSetTopClass;
     private static OWLDatatypeProperty iceciCodeProperty;
@@ -74,6 +76,7 @@ public class ImportICECI {
 
         owlModel = (OWLModel) prj.getKnowledgeBase();
         cm = new ICDContentModel(owlModel);
+        sibOrder = new SiblingReordering(cm);
 
         if (owlModel == null) {
             log.severe("Abort. Failed to load pprj file");
@@ -169,6 +172,7 @@ public class ImportICECI {
     private static OWLNamedClass createClass(String id, String parentId) {
         OWLNamedClass cls = (OWLNamedClass) cm.createICDCategory(PREFIX_NEW_TERM + id, PREFIX_NEW_TERM + parentId);
         //addMetaclasses(cls);	//metaclasses should be inherited from parent
+        sibOrder.addChildToParentIndex(cm.getICDCategory(PREFIX_NEW_TERM + parentId), cls, true);
         return cls;
     }
 
