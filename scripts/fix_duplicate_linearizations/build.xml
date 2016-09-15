@@ -1,5 +1,6 @@
 <?xml version = "1.0" encoding = "utf-8"?>
 <project name = "Fix duplicate linearizations" default = "run">    
+   <property file="build.properties"/>  
    <property environment="env"/>
    <property name="protege.home" value="${env.PROTEGE_HOME}"/>
    <property name = "owl.path"         value = "edu.stanford.smi.protegex.owl"/>
