@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jardesc>
+    <jar path="ICD/scripts/fix_duplicate_linearizations/fix_duplicate_linearizations.jar"/>
+    <options buildIfNeeded="true" compress="true" descriptionLocation="/ICD/scripts/fix_duplicate_linearizations/fix_duplicate_linearizations.jardesc" exportErrors="false" exportWarnings="true" includeDirectoryEntries="false" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+    <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+    <selectedProjects/>
+    <manifest generateManifest="true" mainClassHandleIdentifier="=ICD/src-util&lt;edu.stanford.bmir.icd.utils{FixDuplicateLinearizations.java[FixDuplicateLinearizations" manifestLocation="" manifestVersion="1.0" reuseManifest="false" saveManifest="false" usesManifest="true">
+        <sealing sealJar="false">
+            <packagesToSeal/>
+            <packagesToUnSeal/>
+        </sealing>
+    </manifest>
+    <selectedElements exportClassFiles="true" exportJavaFiles="true" exportOutputFolder="false">
+        <javaElement handleIdentifier="=ICD/src-util&lt;edu.stanford.bmir.icd.utils{FixDuplicateLinearizations.java"/>
+    </selectedElements>
+</jardesc>
