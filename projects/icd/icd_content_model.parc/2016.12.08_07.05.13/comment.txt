@@ -1,0 +1,2 @@
+- Added property codingNote with domain LinearizationSpecification and range CodingNoteTerm
+- Documented the following properties to clarify distinction: codingHint, note and codingNote.
