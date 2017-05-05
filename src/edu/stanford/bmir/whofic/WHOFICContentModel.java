@@ -79,6 +79,7 @@ public class WHOFICContentModel {
     private RDFSNamedClass termBaseIndexClass;
     private RDFSNamedClass termBaseInclusionClass;
     private RDFSNamedClass termBaseExclusionClass;
+    private RDFSNamedClass termCodingNoteClass;
 
     private RDFSNamedClass childOrderClass;
     private RDFSNamedClass chapterXClass;
@@ -126,6 +127,7 @@ public class WHOFICContentModel {
     private RDFProperty linearizationProperty;
     private RDFProperty isIncludedInLinearizationProperty;
     private RDFProperty isGroupingProperty;
+    private RDFProperty codingNoteProperty;
     private RDFProperty linearizationParentProperty;
     private RDFProperty linearizationViewProperty;
     private RDFProperty linearizationSequenceNoProperty;
@@ -319,6 +321,13 @@ public class WHOFICContentModel {
             termBaseExclusionClass = owlModel.getRDFSNamedClass(WHOFICContentModelConstants.TERM_BASE_EXCLUSION_CLASS);
         }
         return termBaseExclusionClass;
+    }
+
+    public RDFSNamedClass getTermCodingNoteClass() {
+        if (termCodingNoteClass == null) {
+        	termCodingNoteClass = owlModel.getRDFSNamedClass(WHOFICContentModelConstants.TERM_CODING_NOTE_CLASS);
+        }
+        return termCodingNoteClass;
     }
 
 
@@ -663,6 +672,13 @@ public class WHOFICContentModel {
             isGroupingProperty = owlModel.getRDFProperty(WHOFICContentModelConstants.IS_GROUPING_PROP);
         }
         return isGroupingProperty;
+    }
+
+    public RDFProperty getCodingNoteProperty() {
+        if (codingNoteProperty == null) {
+        	codingNoteProperty = owlModel.getRDFProperty(WHOFICContentModelConstants.CODING_NOTE_PROP);
+        }
+        return codingNoteProperty;
     }
 
     public RDFProperty getLinearizationParentProperty() {

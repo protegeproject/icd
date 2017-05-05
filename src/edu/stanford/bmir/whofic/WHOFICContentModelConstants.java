@@ -43,6 +43,7 @@ public class WHOFICContentModelConstants {
     public final static String TERM_BASE_INDEX_CLASS = NS + "BaseIndexTerm";
     public final static String TERM_BASE_INCLUSION_CLASS = NS + "BaseInclusionTerm";
     public final static String TERM_BASE_EXCLUSION_CLASS = NS + "BaseExclusionTerm";
+    public final static String TERM_CODING_NOTE_CLASS = NS + "CodingNoteTerm";
 
     /* Linearizations */
     public final static String LINEARIZATION_VIEW_CLASS = NS + "LinearizationView";
@@ -113,6 +114,7 @@ public class WHOFICContentModelConstants {
 
     public final static String IS_INCLUDED_IN_LINEARIZATION_PROP = NS + "isIncludedInLinearization";
     public final static String IS_GROUPING_PROP = NS + "isGrouping";
+    public final static String CODING_NOTE_PROP = NS + "codingNote";
     public final static String LINEARIZATION_PARENT_PROP = NS + "linearizationParent";
     public final static String LINEARIZATION_VIEW_PROP = NS + "linearizationView";
     public final static String LINEARIZATION_SEQUENCE_NO_PROP = NS + "sequenceNumber";
