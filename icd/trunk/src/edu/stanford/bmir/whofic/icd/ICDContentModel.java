@@ -31,6 +31,7 @@ public class ICDContentModel extends WHOFICContentModel {
     private RDFSNamedClass snomedReferenceMetaClass;
     private RDFSNamedClass specificConditionMetaClass;
     private RDFSNamedClass externalCauseMetaClass;
+    private RDFSNamedClass iceciMetaClass;
 
     private Collection<RDFSNamedClass> diseaseMetaclasses;
     private Collection<RDFSNamedClass> externalCausesMetaclasses;
@@ -121,6 +122,13 @@ public class ICDContentModel extends WHOFICContentModel {
             externalCauseMetaClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.ICD_EXTERNAL_CAUSE_METACLASS);
         }
         return externalCauseMetaClass;
+    }
+
+    public RDFSNamedClass getICECIMetaClass() {
+        if (iceciMetaClass == null) {
+        	iceciMetaClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.ICD_ICECI_METACLASS);
+        }
+        return iceciMetaClass;
     }
 
     @SuppressWarnings({"deprecation", "unchecked"})
