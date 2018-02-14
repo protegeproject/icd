@@ -1,4 +1,4 @@
-; Thu Apr 27 00:07:35 PDT 2017
+; Tue Feb 13 01:11:57 PST 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -6,20 +6,20 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[icd_content_model_externalcauses_ProjectKB_Class10029]
-		[icd_content_model_externalcauses_ProjectKB_Class10030]
-		[icd_content_model_externalcauses_ProjectKB_Class10031]
-		[icd_content_model_externalcauses_ProjectKB_Class10032]
-		[icd_content_model_externalcauses_ProjectKB_Class10033]
-		[icd_content_model_externalcauses_ProjectKB_Class10034]
-		[icd_content_model_externalcauses_ProjectKB_Class10035]
-		[icd_content_model_externalcauses_ProjectKB_Class10036]
-		[icd_content_model_externalcauses_ProjectKB_Class10037]
-		[icd_content_model_externalcauses_ProjectKB_Class10038]
-		[icd_content_model_externalcauses_ProjectKB_Class10039]
-		[icd_content_model_externalcauses_ProjectKB_Class10040]
-		[icd_content_model_externalcauses_ProjectKB_Class10041]
-		[icd_content_model_externalcauses_ProjectKB_Class10042]))
+		[icd_content_model_externalcauses_ProjectKB_Class20052]
+		[icd_content_model_externalcauses_ProjectKB_Class20053]
+		[icd_content_model_externalcauses_ProjectKB_Class20054]
+		[icd_content_model_externalcauses_ProjectKB_Class20055]
+		[icd_content_model_externalcauses_ProjectKB_Class20056]
+		[icd_content_model_externalcauses_ProjectKB_Class20057]
+		[icd_content_model_externalcauses_ProjectKB_Class20058]
+		[icd_content_model_externalcauses_ProjectKB_Class20059]
+		[icd_content_model_externalcauses_ProjectKB_Class20060]
+		[icd_content_model_externalcauses_ProjectKB_Class20061]
+		[icd_content_model_externalcauses_ProjectKB_Class20062]
+		[icd_content_model_externalcauses_ProjectKB_Class20063]
+		[icd_content_model_externalcauses_ProjectKB_Class20064]
+		[icd_content_model_externalcauses_ProjectKB_Class20065]))
 
 ([CLSES_TAB] of  Widget
 
@@ -54,117 +54,14 @@
 ([icd_content_model_externalcauses_ProjectKB_Class100] of  Property_List
 )
 
-([icd_content_model_externalcauses_ProjectKB_Class10029] of  String
+([icd_content_model_externalcauses_ProjectKB_Class10009] of  Widget
 
-	(name ":PAL-CONSTRAINT")
-	(string_value "%3APAL-NAME"))
+	(is_hidden TRUE)
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class10010])
+	(widget_class_name "edu.stanford.bmir.protegex.icd.diff.ICDDiff"))
 
-([icd_content_model_externalcauses_ProjectKB_Class10030] of  String
-
-	(name ":META-CLASS")
-	(string_value "%3ANAME"))
-
-([icd_content_model_externalcauses_ProjectKB_Class10031] of  String
-
-	(name "http://www.w3.org/2002/07/owl#DatatypeProperty")
-	(string_value "%3ANAME"))
-
-([icd_content_model_externalcauses_ProjectKB_Class10032] of  String
-
-	(name "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property")
-	(string_value "%3ANAME"))
-
-([icd_content_model_externalcauses_ProjectKB_Class10033] of  String
-
-	(name "http://www.w3.org/2000/01/rdf-schema#Class")
-	(string_value "%3ANAME"))
-
-([icd_content_model_externalcauses_ProjectKB_Class10034] of  String
-
-	(name "http://who.int/icd#PostcoordinationValueReferenceTerm")
-	(string_value "http%3A%2F%2Fwho.int%2Ficd%23referencedValue"))
-
-([icd_content_model_externalcauses_ProjectKB_Class10035] of  String
-
-	(name ":INSTANCE-ANNOTATION")
-	(string_value "%3AANNOTATION-TEXT"))
-
-([icd_content_model_externalcauses_ProjectKB_Class10036] of  String
-
-	(name "http://www.w3.org/2002/07/owl#Class")
-	(string_value "%3ANAME"))
-
-([icd_content_model_externalcauses_ProjectKB_Class10037] of  String
-
-	(name "http://www.w3.org/2002/07/owl#FunctionalProperty")
-	(string_value "%3ANAME"))
-
-([icd_content_model_externalcauses_ProjectKB_Class10038] of  String
-
-	(name "http://www.w3.org/2002/07/owl#AnnotationProperty")
-	(string_value "%3ANAME"))
-
-([icd_content_model_externalcauses_ProjectKB_Class10039] of  String
-
-	(name "http://www.w3.org/2002/07/owl#DeprecatedProperty")
-	(string_value "%3ANAME"))
-
-([icd_content_model_externalcauses_ProjectKB_Class10040] of  String
-
-	(name "http://www.w3.org/2000/01/rdf-schema#Datatype")
-	(string_value "%3ANAME"))
-
-([icd_content_model_externalcauses_ProjectKB_Class10041] of  String
-
-	(name "http://www.w3.org/2002/07/owl#ObjectProperty")
-	(string_value "%3ANAME"))
-
-([icd_content_model_externalcauses_ProjectKB_Class10042] of  String
-
-	(name "http://www.w3.org/2002/07/owl#Thing")
-	(string_value "%3ANAME"))
-
-([icd_content_model_externalcauses_ProjectKB_Class10043] of  Map_Entry
-
-	(key "collab.hide.archived")
-	(key_class "java.lang.String")
-	(value "false")
-	(value_class "java.lang.String"))
-
-([icd_content_model_externalcauses_ProjectKB_Class10044] of  Map_Entry
-
-	(key "show_collaboration_panel")
-	(key_class "java.lang.String")
-	(value "true")
-	(value_class "java.lang.Boolean"))
-
-([icd_content_model_externalcauses_ProjectKB_Class10045] of  Map_Entry
-
-	(key "add_name_on_instance_form")
-	(key_class "java.lang.String")
-	(value "false")
-	(value_class "java.lang.String"))
-
-([icd_content_model_externalcauses_ProjectKB_Class10046] of  Map_Entry
-
-	(key "edu.stanford.smi.protege.collab.annotation.gui.panel.ChatPanel")
-	(key_class "java.lang.String")
-	(value "false")
-	(value_class "java.lang.String"))
-
-([icd_content_model_externalcauses_ProjectKB_Class10047] of  Map_Entry
-
-	(key "change_tracking_active")
-	(key_class "java.lang.String")
-	(value "false")
-	(value_class "java.lang.String"))
-
-([icd_content_model_externalcauses_ProjectKB_Class10048] of  Map_Entry
-
-	(key "suppress_instance_counting")
-	(key_class "java.lang.String")
-	(value "false")
-	(value_class "java.lang.String"))
+([icd_content_model_externalcauses_ProjectKB_Class10010] of  Property_List
+)
 
 ([icd_content_model_externalcauses_ProjectKB_Class101] of  Widget
 
@@ -900,6 +797,118 @@
 
 	(boolean_value FALSE)
 	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class20052] of  String
+
+	(name ":PAL-CONSTRAINT")
+	(string_value "%3APAL-NAME"))
+
+([icd_content_model_externalcauses_ProjectKB_Class20053] of  String
+
+	(name ":META-CLASS")
+	(string_value "%3ANAME"))
+
+([icd_content_model_externalcauses_ProjectKB_Class20054] of  String
+
+	(name "http://www.w3.org/2002/07/owl#DatatypeProperty")
+	(string_value "%3ANAME"))
+
+([icd_content_model_externalcauses_ProjectKB_Class20055] of  String
+
+	(name "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property")
+	(string_value "%3ANAME"))
+
+([icd_content_model_externalcauses_ProjectKB_Class20056] of  String
+
+	(name "http://www.w3.org/2000/01/rdf-schema#Class")
+	(string_value "%3ANAME"))
+
+([icd_content_model_externalcauses_ProjectKB_Class20057] of  String
+
+	(name "http://who.int/icd#PostcoordinationValueReferenceTerm")
+	(string_value "http%3A%2F%2Fwho.int%2Ficd%23referencedValue"))
+
+([icd_content_model_externalcauses_ProjectKB_Class20058] of  String
+
+	(name ":INSTANCE-ANNOTATION")
+	(string_value "%3AANNOTATION-TEXT"))
+
+([icd_content_model_externalcauses_ProjectKB_Class20059] of  String
+
+	(name "http://www.w3.org/2002/07/owl#Class")
+	(string_value "%3ANAME"))
+
+([icd_content_model_externalcauses_ProjectKB_Class20060] of  String
+
+	(name "http://www.w3.org/2002/07/owl#FunctionalProperty")
+	(string_value "%3ANAME"))
+
+([icd_content_model_externalcauses_ProjectKB_Class20061] of  String
+
+	(name "http://www.w3.org/2002/07/owl#AnnotationProperty")
+	(string_value "%3ANAME"))
+
+([icd_content_model_externalcauses_ProjectKB_Class20062] of  String
+
+	(name "http://www.w3.org/2002/07/owl#DeprecatedProperty")
+	(string_value "%3ANAME"))
+
+([icd_content_model_externalcauses_ProjectKB_Class20063] of  String
+
+	(name "http://www.w3.org/2000/01/rdf-schema#Datatype")
+	(string_value "%3ANAME"))
+
+([icd_content_model_externalcauses_ProjectKB_Class20064] of  String
+
+	(name "http://www.w3.org/2002/07/owl#ObjectProperty")
+	(string_value "%3ANAME"))
+
+([icd_content_model_externalcauses_ProjectKB_Class20065] of  String
+
+	(name "http://www.w3.org/2002/07/owl#Thing")
+	(string_value "%3ANAME"))
+
+([icd_content_model_externalcauses_ProjectKB_Class20066] of  Map_Entry
+
+	(key "collab.hide.archived")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
+
+([icd_content_model_externalcauses_ProjectKB_Class20067] of  Map_Entry
+
+	(key "show_collaboration_panel")
+	(key_class "java.lang.String")
+	(value "true")
+	(value_class "java.lang.Boolean"))
+
+([icd_content_model_externalcauses_ProjectKB_Class20068] of  Map_Entry
+
+	(key "add_name_on_instance_form")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
+
+([icd_content_model_externalcauses_ProjectKB_Class20069] of  Map_Entry
+
+	(key "edu.stanford.smi.protege.collab.annotation.gui.panel.ChatPanel")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
+
+([icd_content_model_externalcauses_ProjectKB_Class20070] of  Map_Entry
+
+	(key "change_tracking_active")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
+
+([icd_content_model_externalcauses_ProjectKB_Class20071] of  Map_Entry
+
+	(key "suppress_instance_counting")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
 
 ([icd_content_model_externalcauses_ProjectKB_Class201] of  Widget
 
@@ -2465,7 +2474,7 @@
 
 	(is_hidden TRUE)
 	(property_list [icd_content_model_externalcauses_ProjectKB_Class8])
-	(widget_class_name "nl.uva.psy.swi.beangenerator.OntologyBeanGeneratorTab"))
+	(widget_class_name "edu.stanford.bmir.protegex.icd.ICDTab"))
 
 ([icd_content_model_externalcauses_ProjectKB_Class70] of  Property_List
 
@@ -3531,6 +3540,9 @@
 ([KB_221055_Instance_71] of  Property_List
 )
 
+([KB_229001_Class6] of  Map
+)
+
 ([KB_301165_Instance_1013] of  Widget
 
 	(is_hidden FALSE)
@@ -3638,12 +3650,12 @@
 ([KB_325529_Class0] of  Map
 
 	(entries
-		[icd_content_model_externalcauses_ProjectKB_Class10043]
-		[icd_content_model_externalcauses_ProjectKB_Class10044]
-		[icd_content_model_externalcauses_ProjectKB_Class10045]
-		[icd_content_model_externalcauses_ProjectKB_Class10046]
-		[icd_content_model_externalcauses_ProjectKB_Class10047]
-		[icd_content_model_externalcauses_ProjectKB_Class10048]))
+		[icd_content_model_externalcauses_ProjectKB_Class20066]
+		[icd_content_model_externalcauses_ProjectKB_Class20067]
+		[icd_content_model_externalcauses_ProjectKB_Class20068]
+		[icd_content_model_externalcauses_ProjectKB_Class20069]
+		[icd_content_model_externalcauses_ProjectKB_Class20070]
+		[icd_content_model_externalcauses_ProjectKB_Class20071]))
 
 ([KB_325529_Class4] of  String
 
@@ -3842,9 +3854,6 @@
 	(property_list [KB_635552_Instance_9]))
 
 ([KB_635552_Instance_9] of  Property_List
-)
-
-([KB_673145_Class6] of  Map
 )
 
 ([KB_691299_Instance_398] of  Widget

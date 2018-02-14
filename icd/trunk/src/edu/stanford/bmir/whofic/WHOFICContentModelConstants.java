@@ -114,6 +114,7 @@ public class WHOFICContentModelConstants {
 
     public final static String IS_INCLUDED_IN_LINEARIZATION_PROP = NS + "isIncludedInLinearization";
     public final static String IS_GROUPING_PROP = NS + "isGrouping";
+    public final static String IS_AUXILIARY_AXIS_CHILD_PROP = NS + "isAuxiliaryAxisChild";
     public final static String CODING_NOTE_PROP = NS + "codingNote";
     public final static String LINEARIZATION_PARENT_PROP = NS + "linearizationParent";
     public final static String LINEARIZATION_VIEW_PROP = NS + "linearizationView";

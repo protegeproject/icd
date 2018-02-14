@@ -123,6 +123,8 @@ public class ICDContentModelConstants extends WHOFICContentModelConstants {
 	public final static String PC_AXIS_TEMPORALITY_COURSE = NS + "course";	//replicated in ICDConstants for iCAT client
 	public final static String PC_AXIS_TEMPORALITY_PATTERN_AND_ONSET = NS + "temporalPatternAndOnset";	//replicated in ICDConstants for iCAT client
 	public final static String PC_AXIS_TEMPORALITY_TIME_IN_LIFE = NS + "timeInLife";
+	public final static String PC_AXIS_HAS_CAUSING_CONDITION = NS + "hasCausingCondition";
+	public final static String PC_AXIS_HAS_MANIFESTATION = NS + "hasManifestation";
 	public final static String PC_AXIS_ASSOCIATED_WITH = NS + "associatedWith";
     //TODO continue list
 
@@ -182,7 +184,7 @@ public class ICDContentModelConstants extends WHOFICContentModelConstants {
 			PC_AXIS_INJURY_QUALIFIER_FRACTURE_QUALIFIER_JOINT_INVOLVEMENT_IN_FRACTURE_SUBTYPE,
 			PC_AXIS_INJURY_QUALIFIER_TYPE_OF_INJURY,
 			PC_AXIS_TEMPORALITY_COURSE, PC_AXIS_TEMPORALITY_PATTERN_AND_ONSET, PC_AXIS_TEMPORALITY_TIME_IN_LIFE,
-			PC_AXIS_ASSOCIATED_WITH);
+			PC_AXIS_HAS_CAUSING_CONDITION, PC_AXIS_HAS_MANIFESTATION, PC_AXIS_ASSOCIATED_WITH);
 
 	
 	public final static String PC_SCALE_SEVERITY = NS + "hasSeverityScale";	//replicated in ICDConstants for iCAT client

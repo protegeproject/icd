@@ -1,105 +1,105 @@
-; Thu Apr 27 00:07:37 PDT 2017
+; Tue Feb 13 01:11:59 PST 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
 
-([annotation_icd_content_model_externalcauses_ProjectKB_Class23] of  String
-
-	(name "AnnotationStatus")
-	(string_value "description"))
-
-([annotation_icd_content_model_externalcauses_ProjectKB_Class24] of  String
-
-	(name "Annotation")
-	(string_value "subject"))
-
-([annotation_icd_content_model_externalcauses_ProjectKB_Class25] of  String
-
-	(name "Timestamp")
-	(string_value "date"))
-
-([annotation_icd_content_model_externalcauses_ProjectKB_Class26] of  String
-
-	(name ":PAL-CONSTRAINT")
-	(string_value "%3APAL-NAME"))
-
-([annotation_icd_content_model_externalcauses_ProjectKB_Class27] of  String
-
-	(name ":META-CLASS")
-	(string_value "%3ANAME"))
-
-([annotation_icd_content_model_externalcauses_ProjectKB_Class28] of  String
-
-	(name "Vote")
-	(string_value "subject"))
-
-([annotation_icd_content_model_externalcauses_ProjectKB_Class29] of  String
+([annotation_icd_content_model_externalcauses_ProjectKB_Class100] of  String
 
 	(name "Change")
 	(string_value "context"))
 
-([annotation_icd_content_model_externalcauses_ProjectKB_Class30] of  String
+([annotation_icd_content_model_externalcauses_ProjectKB_Class101] of  String
 
 	(name "LinguisticEntity")
 	(string_value "label{+%28}language{%29}"))
 
-([annotation_icd_content_model_externalcauses_ProjectKB_Class31] of  String
+([annotation_icd_content_model_externalcauses_ProjectKB_Class102] of  String
 
 	(name ":INSTANCE-ANNOTATION")
 	(string_value "%3AANNOTATION-TEXT"))
 
-([annotation_icd_content_model_externalcauses_ProjectKB_Class32] of  String
+([annotation_icd_content_model_externalcauses_ProjectKB_Class103] of  String
 
 	(name "Ontology_Component")
 	(string_value "currentName"))
 
-([annotation_icd_content_model_externalcauses_ProjectKB_Class33] of  String
+([annotation_icd_content_model_externalcauses_ProjectKB_Class104] of  String
 
 	(name "User")
 	(string_value "name"))
 
-([annotation_icd_content_model_externalcauses_ProjectKB_Class34] of  String
+([annotation_icd_content_model_externalcauses_ProjectKB_Class105] of  String
 
 	(name "Status")
 	(string_value "description"))
 
-([annotation_icd_content_model_externalcauses_ProjectKB_Class35] of  String
+([annotation_icd_content_model_externalcauses_ProjectKB_Class106] of  String
 
 	(name "ChangeStatus")
 	(string_value "description"))
 
-([annotation_icd_content_model_externalcauses_ProjectKB_Class36] of  String
+([annotation_icd_content_model_externalcauses_ProjectKB_Class107] of  String
 
 	(name "Proposal")
 	(string_value "subject"))
 
-([annotation_icd_content_model_externalcauses_ProjectKB_Class37] of  Map_Entry
+([annotation_icd_content_model_externalcauses_ProjectKB_Class108] of  Map_Entry
 
 	(key "add_name_on_instance_form")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([annotation_icd_content_model_externalcauses_ProjectKB_Class38] of  Map_Entry
+([annotation_icd_content_model_externalcauses_ProjectKB_Class109] of  Map_Entry
 
 	(key "annotation_proj_exists")
 	(key_class "java.lang.String")
 	(value "yes")
 	(value_class "java.lang.String"))
 
-([annotation_icd_content_model_externalcauses_ProjectKB_Class39] of  Map_Entry
+([annotation_icd_content_model_externalcauses_ProjectKB_Class110] of  Map_Entry
 
 	(key "change_tracking_active")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([annotation_icd_content_model_externalcauses_ProjectKB_Class40] of  Map_Entry
+([annotation_icd_content_model_externalcauses_ProjectKB_Class111] of  Map_Entry
 
 	(key "suppress_instance_counting")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
+
+([annotation_icd_content_model_externalcauses_ProjectKB_Class94] of  String
+
+	(name "AnnotationStatus")
+	(string_value "description"))
+
+([annotation_icd_content_model_externalcauses_ProjectKB_Class95] of  String
+
+	(name "Annotation")
+	(string_value "subject"))
+
+([annotation_icd_content_model_externalcauses_ProjectKB_Class96] of  String
+
+	(name "Timestamp")
+	(string_value "date"))
+
+([annotation_icd_content_model_externalcauses_ProjectKB_Class97] of  String
+
+	(name ":PAL-CONSTRAINT")
+	(string_value "%3APAL-NAME"))
+
+([annotation_icd_content_model_externalcauses_ProjectKB_Class98] of  String
+
+	(name ":META-CLASS")
+	(string_value "%3ANAME"))
+
+([annotation_icd_content_model_externalcauses_ProjectKB_Class99] of  String
+
+	(name "Vote")
+	(string_value "subject"))
 
 ([annotation_ICD_ProjectKB_Class10112] of  Widget
 
@@ -185,20 +185,20 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[annotation_icd_content_model_externalcauses_ProjectKB_Class23]
-		[annotation_icd_content_model_externalcauses_ProjectKB_Class24]
-		[annotation_icd_content_model_externalcauses_ProjectKB_Class25]
-		[annotation_icd_content_model_externalcauses_ProjectKB_Class26]
-		[annotation_icd_content_model_externalcauses_ProjectKB_Class27]
-		[annotation_icd_content_model_externalcauses_ProjectKB_Class28]
-		[annotation_icd_content_model_externalcauses_ProjectKB_Class29]
-		[annotation_icd_content_model_externalcauses_ProjectKB_Class30]
-		[annotation_icd_content_model_externalcauses_ProjectKB_Class31]
-		[annotation_icd_content_model_externalcauses_ProjectKB_Class32]
-		[annotation_icd_content_model_externalcauses_ProjectKB_Class33]
-		[annotation_icd_content_model_externalcauses_ProjectKB_Class34]
-		[annotation_icd_content_model_externalcauses_ProjectKB_Class35]
-		[annotation_icd_content_model_externalcauses_ProjectKB_Class36]))
+		[annotation_icd_content_model_externalcauses_ProjectKB_Class94]
+		[annotation_icd_content_model_externalcauses_ProjectKB_Class95]
+		[annotation_icd_content_model_externalcauses_ProjectKB_Class96]
+		[annotation_icd_content_model_externalcauses_ProjectKB_Class97]
+		[annotation_icd_content_model_externalcauses_ProjectKB_Class98]
+		[annotation_icd_content_model_externalcauses_ProjectKB_Class99]
+		[annotation_icd_content_model_externalcauses_ProjectKB_Class100]
+		[annotation_icd_content_model_externalcauses_ProjectKB_Class101]
+		[annotation_icd_content_model_externalcauses_ProjectKB_Class102]
+		[annotation_icd_content_model_externalcauses_ProjectKB_Class103]
+		[annotation_icd_content_model_externalcauses_ProjectKB_Class104]
+		[annotation_icd_content_model_externalcauses_ProjectKB_Class105]
+		[annotation_icd_content_model_externalcauses_ProjectKB_Class106]
+		[annotation_icd_content_model_externalcauses_ProjectKB_Class107]))
 
 ([changes_ProjectKB_Class10] of  Property_List
 )
@@ -4079,10 +4079,10 @@
 ([changes_ProjectKB_Instance_10131] of  Map
 
 	(entries
-		[annotation_icd_content_model_externalcauses_ProjectKB_Class37]
-		[annotation_icd_content_model_externalcauses_ProjectKB_Class38]
-		[annotation_icd_content_model_externalcauses_ProjectKB_Class39]
-		[annotation_icd_content_model_externalcauses_ProjectKB_Class40]))
+		[annotation_icd_content_model_externalcauses_ProjectKB_Class108]
+		[annotation_icd_content_model_externalcauses_ProjectKB_Class109]
+		[annotation_icd_content_model_externalcauses_ProjectKB_Class110]
+		[annotation_icd_content_model_externalcauses_ProjectKB_Class111]))
 
 ([changes_ProjectKB_Instance_120] of  Property_List
 
@@ -6883,7 +6883,7 @@
 	(is_hidden FALSE)
 	(widget_class_name "edu.stanford.smi.protege.widget.InstancesTab"))
 
-([KB_114910_Class4] of  Map
+([KB_054431_Class4] of  Map
 )
 
 ([KB_690954_Instance_0] of  String
