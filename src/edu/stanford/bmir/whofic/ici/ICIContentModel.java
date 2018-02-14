@@ -184,6 +184,7 @@ public class ICIContentModel extends WHOFICContentModel {
             linSpec.setPropertyValue(getLinearizationViewProperty(), linView);
             //set default grouping to FALSE
             linSpec.setPropertyValue(getIsGroupingProperty(), Boolean.FALSE);
+            linSpec.setPropertyValue(getIsAuxiliaryAxisChildProperty(), Boolean.FALSE);
 
             cls.addPropertyValue(linProp, linSpec);
 

@@ -40,6 +40,8 @@ public class AddMultipleLinearizations {
 	private static final String OPTION_NOT_PART_OF = "-notPartOf";
 	private static final String OPTION_GROUPING = "-gr";
 	private static final String OPTION_NO_GROUPING = "-nogr";
+	private static final String OPTION_AUX_AX_CHILD = "-auxAxChild";
+	private static final String OPTION_NOT_AUX_AX_CHILD = "-notAuxAxChild";
 
 	private static Logger log = Log.getLogger(AddMultipleLinearizations.class);
 
@@ -50,11 +52,13 @@ public class AddMultipleLinearizations {
     private static List<RDFIndividual> linearizationViewInstances = new ArrayList<RDFIndividual>();
     private static Boolean isPartOf;
     private static Boolean isGrouping;
+    private static Boolean isAuxiliaryAxisChild;
     private static OWLNamedClass linearizationSpecificationClass;
     private static RDFProperty linearizationProp;
     private static RDFProperty linearizationViewProp;
     private static RDFProperty isIncludedInLinearizationProp;
     private static RDFProperty isGroupingProp;
+    private static RDFProperty isAuxiliaryAxisChildProp;
 
 
     public static void main(String[] args) {
@@ -67,6 +71,7 @@ public class AddMultipleLinearizations {
 
         isPartOf = getAlternativeOptionValue(args, OPTION_PART_OF, OPTION_NOT_PART_OF);
 		isGrouping = getAlternativeOptionValue(args, OPTION_GROUPING, OPTION_NO_GROUPING);
+		isAuxiliaryAxisChild = getAlternativeOptionValue(args, OPTION_AUX_AX_CHILD, OPTION_NOT_AUX_AX_CHILD);
 
         Collection errors = new ArrayList();
         Project prj = Project.loadProjectFromFile(getNonOptionArgument(args, 0), errors);
@@ -173,6 +178,7 @@ public class AddMultipleLinearizations {
         linearizationViewProp = icdContentModel.getLinearizationViewProperty();
         isIncludedInLinearizationProp = icdContentModel.getIsIncludedInLinearizationProperty();
         isGroupingProp = icdContentModel.getIsGroupingProperty();
+        isAuxiliaryAxisChildProp = icdContentModel.getIsAuxiliaryAxisChildProperty();
     }
 
     private static void addLinearization(Collection<RDFSNamedClass> cats) {
@@ -198,6 +204,9 @@ public class AddMultipleLinearizations {
 	            }
 	            if (isGrouping != null) {
 	            	linSpec.setPropertyValue(isGroupingProp, isGrouping.booleanValue());
+	            }
+	            if (isAuxiliaryAxisChild != null) {
+	            	linSpec.setPropertyValue(isAuxiliaryAxisChildProp, isAuxiliaryAxisChild.booleanValue());
 	            }
 	            cat.addPropertyValue(linearizationProp, linSpec);
 	        } catch (Exception e) {

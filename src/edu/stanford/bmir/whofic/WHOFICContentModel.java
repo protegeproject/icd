@@ -127,6 +127,7 @@ public class WHOFICContentModel {
     private RDFProperty linearizationProperty;
     private RDFProperty isIncludedInLinearizationProperty;
     private RDFProperty isGroupingProperty;
+    private RDFProperty isAuxiliaryAxisChildProperty;
     private RDFProperty codingNoteProperty;
     private RDFProperty linearizationParentProperty;
     private RDFProperty linearizationViewProperty;
@@ -672,6 +673,13 @@ public class WHOFICContentModel {
             isGroupingProperty = owlModel.getRDFProperty(WHOFICContentModelConstants.IS_GROUPING_PROP);
         }
         return isGroupingProperty;
+    }
+
+    public RDFProperty getIsAuxiliaryAxisChildProperty() {
+        if (isAuxiliaryAxisChildProperty == null) {
+        	isAuxiliaryAxisChildProperty = owlModel.getRDFProperty(WHOFICContentModelConstants.IS_AUXILIARY_AXIS_CHILD_PROP);
+        }
+        return isAuxiliaryAxisChildProperty;
     }
 
     public RDFProperty getCodingNoteProperty() {

@@ -1,0 +1,6 @@
+- Created functional datatype property isAuxiliaryAxisChild, with domain LinearizationSpecification and range boolean.
+- Created two new sub-properties of postcoordinationAxis:
+	- hasCausingCondition (with range CausingConditionReferenceTerm)
+	- hasManifestation (with range ManifestingConditionReferenceTerm)
+- both newly created CausingConditionReferenceTerm and ManifestingConditionReferenceTerm classes, together with the already existing AssociatedWithReferenceTerm class, were organized as subclasses of the new ICDCategoryReferenceTerm. We added the "referencedValue only ICDSection" axiom to ICDCategoryReferenceTerm class, so that it will be inherited by all three subclasses.
+- Fix: we set the domain of associatedWith property to PostcoordinationSection
