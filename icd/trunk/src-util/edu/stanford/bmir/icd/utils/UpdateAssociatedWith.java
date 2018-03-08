@@ -134,11 +134,11 @@ public class UpdateAssociatedWith {
 		for (String catName : categories) {
 			RDFSNamedClass cat = icdContentModel.getICDCategory(catName);
 			if (cat == null) {
-				System.out.println("WARNING: Did not find category: " + catName);
+				Log.getLogger().info("WARNING: Did not find category: " + catName);
 				continue;
 			}
 			String browserText = cat.getBrowserText();
-			System.out.println("\nProcessing " + browserText + " (" + catName + ")");
+			Log.getLogger().info("\nProcessing " + browserText + " (" + catName + ")");
 			
             String operationDescription = "Automatic conversion of 'associatedWith' post-coordination axes to '" + newProp.getLocalName() + "' for "+ browserText +".";
 			try {
@@ -149,14 +149,14 @@ public class UpdateAssociatedWith {
 				for (RDFResource pcAxesSpec : pcAxesSpecs) {
 					List<RDFProperty> selectedRequiredPCAxes = icdContentModel.getSelectedRequiredPostcoordinationAxes(pcAxesSpec);
 					if (selectedRequiredPCAxes.contains(assocWithProp)) {
-						System.out.println("  required:" + pcAxesSpec.getPropertyValue(icdContentModel.getLinearizationViewProperty()));
+						Log.getLogger().info("  required:" + pcAxesSpec.getPropertyValue(icdContentModel.getLinearizationViewProperty()));
 						//remove assocWithProp and add newProp
 	                	pcAxesSpec.removePropertyValue(requiredPostCoordinationAxisPropertyProperty, assocWithProp);
 						pcAxesSpec.addPropertyValue(requiredPostCoordinationAxisPropertyProperty, newProp);
 					}
 					List<RDFProperty> selectedAllowedPCAxes = icdContentModel.getSelectedAllowedPostcoordinationAxes(pcAxesSpec, false);
 					if (selectedAllowedPCAxes.contains(assocWithProp)) {
-						System.out.println("  allowed:" + pcAxesSpec.getPropertyValue(icdContentModel.getLinearizationViewProperty()));
+						Log.getLogger().info("  allowed:" + pcAxesSpec.getPropertyValue(icdContentModel.getLinearizationViewProperty()));
 						//remove assocWithProp and add newProp
 						pcAxesSpec.removePropertyValue(allowedPostCoordinationAxisPropertyProperty, assocWithProp);
 						pcAxesSpec.addPropertyValue(allowedPostCoordinationAxisPropertyProperty, newProp);
@@ -164,7 +164,7 @@ public class UpdateAssociatedWith {
 				}
 				
 				Collection<RDFResource> assocWithRefTerms = cat.getPropertyValues(assocWithProp);
-				System.out.println("  assocWith reference term: " + assocWithRefTerms);
+				Log.getLogger().info("  assocWith reference term: " + assocWithRefTerms);
 				for (RDFResource assocWithRefTerm : assocWithRefTerms) {
 					//remove it from assocWithProp and add it to newProp
 					cat.removePropertyValue(assocWithProp, assocWithRefTerm);
@@ -183,10 +183,11 @@ public class UpdateAssociatedWith {
 				owlModel.rollbackTransaction();
 				throw new RuntimeException(e.getMessage(), e);
 			}
+			
 			Log.getLogger().info(cat + ": " + operationDescription);
 			countChangedCategories++;
 			if (countChangedCategories % UPDATE_INTERVALS_CHANGED == 0) {
-			Log.getLogger().info("\nChanged " + countChangedCategories + " categories so far...");
+				System.out.println("\nChanged " + countChangedCategories + " categories so far...");
 			}
 
 		}
