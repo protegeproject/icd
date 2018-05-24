@@ -1,5 +1,5 @@
 <?xml version = "1.0" encoding = "utf-8"?>
-<project name = "Add Linearization Generic" default = "run">    
+<project name = "Add Multiple Linearizations" default = "run">    
    <property file="build.properties"/>  
    <property name = "owl.path"         value = "edu.stanford.smi.protegex.owl"/>   
    <property name = "owl.plugin.path"  value = "${protege.home}/plugins/${owl.path}"/>
@@ -59,7 +59,7 @@
 	            	classname="edu.stanford.bmir.icd.utils.AddMultipleLinearizations"
                         maxmemory="${heap.size.max}">
 		      	<classpath refid = "project.classpath"/>
-	        <arg line="${opt.isPartOf} ${opt.isGrouping} ${pprj.file} ${top.class} ${lin.views}"/>
+	        <arg line="${opt.isPartOf} ${opt.isGrouping} ${opt.isAuxAxChild} ${pprj.file} ${top.class} ${lin.views}"/>
 <!--
 	        <arg value="${opt.isPartOf}"/>
 	        <arg value="${opt.isGrouping}"/>
