@@ -135,16 +135,21 @@ public class Other_ICD_stuff {
         RDFResource defTerm = icdContentModel.getTerm(category, icdContentModel.getDefinitionProperty());
         if (defTerm != null) {
             Object defTermId = defTerm.getPropertyValue(termIdProp);
-            Collection isPrefilledOf = defTerm.getPropertyValues(defPrefilledInveProp);
+            Collection<?> isPrefilledOf = defTerm.getPropertyValues(defPrefilledInveProp);
             if (isPrefilledOf != null && isPrefilledOf.size() > 1) {
                 Log.getLogger().warning("!!! Multiple is prefilled of " + category.getBrowserText() + " isPrefilledOf: " + isPrefilledOf);
             }
             if (defTermId != null) {
                 if (isPrefilledOf != null) {
-                    RDFResource inv = CollectionUtilities.getFirstItem(isPrefilledOf);
-                    if (!inv.equals(category)) {
-                        Log.getLogger().warning("**** Wrong inverses!!! " + category.getBrowserText() + " ? " + inv.getBrowserText());
-                    }
+                	try {
+	                    RDFResource inv = (RDFResource) CollectionUtilities.getFirstItem(isPrefilledOf);
+	                    if (!inv.equals(category)) {
+	                        Log.getLogger().warning("**** Wrong inverses!!! " + category.getBrowserText() + " ? " + inv.getBrowserText());
+	                    }
+                	} catch (ClassCastException e) {
+                        Log.getLogger().warning("**** Wrong type (serious content error)!!! Property value for " + category.getBrowserText() + " and " + defPrefilledInveProp.getBrowserText() + 
+                        		" is suppose to be of type RDFResource");
+                	}
                 }
                 Log.getLogger().warning("Invalid def for " + category.getBrowserText() + " defTerm: " + defTerm.getLocalName() + " is Prefilled of: " + isPrefilledOf + "; termId:" + defTermId + " def: " + defTerm.getPropertyValue(icdContentModel.getLabelProperty()));
                 return 1;
