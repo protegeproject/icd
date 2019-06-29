@@ -1,0 +1,11 @@
+Further updates to the CM to conform to the new External Causes post-coordination model:
+
+- Retired intent
+- Added intentionToDieAspectOfSelfHarm
+- Retired typeOfTransportInjuryEven subproperty of transportEventDescriptor, and added mechanismOfTransportInjuryWithoutCounterpart instead.
+
+- Renamed phaseOfActivity to phaseOfSportOrExerciseActivity
+- Renamed typeOfConflict to typeOfArmedConflict
+
+- Added and updated several comments.
+
