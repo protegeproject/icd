@@ -1,1 +1,0 @@
-Added a linearization view for "Small Mortality List" by creating an instance called "SMoL" of the class ICD11LinearizationView.

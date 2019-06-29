@@ -1,4 +1,4 @@
-; Thu Dec 08 07:03:57 PST 2016
+; Sat Jun 29 02:35:48 PDT 2019
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -6,20 +6,20 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[icd_content_model_ProjectKB_Class20363]
-		[icd_content_model_ProjectKB_Class20364]
-		[icd_content_model_ProjectKB_Class20365]
-		[icd_content_model_ProjectKB_Class20366]
-		[icd_content_model_ProjectKB_Class20367]
-		[icd_content_model_ProjectKB_Class20368]
-		[icd_content_model_ProjectKB_Class20369]
-		[icd_content_model_ProjectKB_Class20370]
-		[icd_content_model_ProjectKB_Class20371]
-		[icd_content_model_ProjectKB_Class20372]
-		[icd_content_model_ProjectKB_Class20373]
-		[icd_content_model_ProjectKB_Class20374]
-		[icd_content_model_ProjectKB_Class20375]
-		[icd_content_model_ProjectKB_Class20376]))
+		[icd_content_model_ProjectKB_Class10007]
+		[icd_content_model_ProjectKB_Class10008]
+		[icd_content_model_ProjectKB_Class10009]
+		[icd_content_model_ProjectKB_Class10010]
+		[icd_content_model_ProjectKB_Class20011]
+		[icd_content_model_ProjectKB_Class20012]
+		[icd_content_model_ProjectKB_Class20013]
+		[icd_content_model_ProjectKB_Class20014]
+		[icd_content_model_ProjectKB_Class20015]
+		[icd_content_model_ProjectKB_Class20016]
+		[icd_content_model_ProjectKB_Class20017]
+		[icd_content_model_ProjectKB_Class20018]
+		[icd_content_model_ProjectKB_Class20019]
+		[icd_content_model_ProjectKB_Class20020]))
 
 ([CLSES_TAB] of  Widget
 
@@ -45,6 +45,2519 @@
 	(property_list [Instance_85])
 	(widget_class_name "edu.stanford.smi.protege.widget.FormsTab"))
 
+([icd_content_model_externalcauses_ProjectKB_Class10] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class11]
+		[icd_content_model_externalcauses_ProjectKB_Class12]))
+
+([icd_content_model_externalcauses_ProjectKB_Class100] of  Property_List
+)
+
+([icd_content_model_externalcauses_ProjectKB_Class101] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#agent")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class102])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 960))
+
+([icd_content_model_externalcauses_ProjectKB_Class102] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class103]
+		[icd_content_model_externalcauses_ProjectKB_Class104]))
+
+([icd_content_model_externalcauses_ProjectKB_Class103] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class104] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class105] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#previousSuicideAttempt")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class106])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 400)
+	(y 480))
+
+([icd_content_model_externalcauses_ProjectKB_Class106] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class107]
+		[icd_content_model_externalcauses_ProjectKB_Class108]))
+
+([icd_content_model_externalcauses_ProjectKB_Class107] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class108] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class109] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#indexBaseInclusion")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class110])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 200)
+	(y 840))
+
+([icd_content_model_externalcauses_ProjectKB_Class11] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class110] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class111]
+		[icd_content_model_externalcauses_ProjectKB_Class112]))
+
+([icd_content_model_externalcauses_ProjectKB_Class111] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class112] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class113] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#typeOfConflict")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class114])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 400)
+	(y 2280))
+
+([icd_content_model_externalcauses_ProjectKB_Class114] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class115]
+		[icd_content_model_externalcauses_ProjectKB_Class116]))
+
+([icd_content_model_externalcauses_ProjectKB_Class115] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class116] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class117] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#transportUserRoleOfInjuredPerson")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class118])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 400)
+	(y 2160))
+
+([icd_content_model_externalcauses_ProjectKB_Class118] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class119]
+		[icd_content_model_externalcauses_ProjectKB_Class120]))
+
+([icd_content_model_externalcauses_ProjectKB_Class119] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class12] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class120] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class121] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#motherLifeCycle")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class122])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 200)
+	(y 2760))
+
+([icd_content_model_externalcauses_ProjectKB_Class122] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class123]
+		[icd_content_model_externalcauses_ProjectKB_Class124]))
+
+([icd_content_model_externalcauses_ProjectKB_Class123] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class124] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class125] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#hasGCSMotorScore")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class126])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 200)
+	(y 240))
+
+([icd_content_model_externalcauses_ProjectKB_Class126] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class127]
+		[icd_content_model_externalcauses_ProjectKB_Class128]))
+
+([icd_content_model_externalcauses_ProjectKB_Class127] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class128] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class129] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#phaseOfActivity")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class130])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 400)
+	(y 240))
+
+([icd_content_model_externalcauses_ProjectKB_Class13] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#morbidityLinearization")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class14])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 200)
+	(y 2280))
+
+([icd_content_model_externalcauses_ProjectKB_Class130] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class131]
+		[icd_content_model_externalcauses_ProjectKB_Class132]))
+
+([icd_content_model_externalcauses_ProjectKB_Class131] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class132] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class133] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#hasGCSEyeScore")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class134])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 200)
+	(y 120))
+
+([icd_content_model_externalcauses_ProjectKB_Class134] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class135]
+		[icd_content_model_externalcauses_ProjectKB_Class136]))
+
+([icd_content_model_externalcauses_ProjectKB_Class135] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class136] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class137] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#hasScale")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class138])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
+	(width 200)
+	(x 0)
+	(y 840))
+
+([icd_content_model_externalcauses_ProjectKB_Class138] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class139]
+		[icd_content_model_externalcauses_ProjectKB_Class140]))
+
+([icd_content_model_externalcauses_ProjectKB_Class139] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class14] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class15]
+		[icd_content_model_externalcauses_ProjectKB_Class16]))
+
+([icd_content_model_externalcauses_ProjectKB_Class140] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class141] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#mortalityLinearization")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class142])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 200)
+	(y 2640))
+
+([icd_content_model_externalcauses_ProjectKB_Class142] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class143]
+		[icd_content_model_externalcauses_ProjectKB_Class144]))
+
+([icd_content_model_externalcauses_ProjectKB_Class143] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class144] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class145] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#extentOfBurnByBodySurface")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class146])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 2760))
+
+([icd_content_model_externalcauses_ProjectKB_Class146] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class147]
+		[icd_content_model_externalcauses_ProjectKB_Class148]))
+
+([icd_content_model_externalcauses_ProjectKB_Class147] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class148] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class149] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#icd10Linearization")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class150])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 200)
+	(y 600))
+
+([icd_content_model_externalcauses_ProjectKB_Class15] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class150] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class151]
+		[icd_content_model_externalcauses_ProjectKB_Class152]))
+
+([icd_content_model_externalcauses_ProjectKB_Class151] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class152] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class153] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#consciousnessMeasure")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class154])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 2040))
+
+([icd_content_model_externalcauses_ProjectKB_Class154] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class155]
+		[icd_content_model_externalcauses_ProjectKB_Class156]))
+
+([icd_content_model_externalcauses_ProjectKB_Class155] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class156] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class157] of  Widget
+
+	(is_hidden FALSE)
+	(name "http://www.w3.org/2003/11/swrlb#minArgs")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class158]))
+
+([icd_content_model_externalcauses_ProjectKB_Class158] of  Property_List
+)
+
+([icd_content_model_externalcauses_ProjectKB_Class159] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#environmentalCountermeasures")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class160])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 2520))
+
+([icd_content_model_externalcauses_ProjectKB_Class16] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class160] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class161]
+		[icd_content_model_externalcauses_ProjectKB_Class162]))
+
+([icd_content_model_externalcauses_ProjectKB_Class161] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class162] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class163] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#suppressOtherSpecifiedResiduals")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class164])
+	(widget_class_name "edu.stanford.smi.protege.widget.CheckBoxWidget")
+	(width 200)
+	(x 0)
+	(y 120))
+
+([icd_content_model_externalcauses_ProjectKB_Class164] of  Property_List
+)
+
+([icd_content_model_externalcauses_ProjectKB_Class165] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#editorialStatusFunctionalImpact")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class166])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
+	(width 200)
+	(x 0)
+	(y 540))
+
+([icd_content_model_externalcauses_ProjectKB_Class166] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class167]
+		[icd_content_model_externalcauses_ProjectKB_Class168]))
+
+([icd_content_model_externalcauses_ProjectKB_Class167] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class168] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class169] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#interpersonalRelationsImpact")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class170])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 200)
+	(y 1320))
+
+([icd_content_model_externalcauses_ProjectKB_Class17] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#topology")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class18])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 400)
+	(y 1920))
+
+([icd_content_model_externalcauses_ProjectKB_Class170] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class171]
+		[icd_content_model_externalcauses_ProjectKB_Class172]))
+
+([icd_content_model_externalcauses_ProjectKB_Class171] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class172] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class173] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#extentOfFullThicknessBurnByBodySurface")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class174])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 2880))
+
+([icd_content_model_externalcauses_ProjectKB_Class174] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class175]
+		[icd_content_model_externalcauses_ProjectKB_Class176]))
+
+([icd_content_model_externalcauses_ProjectKB_Class175] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class176] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class177] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#primaryCareLinearization")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class178])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 400)
+	(y 600))
+
+([icd_content_model_externalcauses_ProjectKB_Class178] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class179]
+		[icd_content_model_externalcauses_ProjectKB_Class180]))
+
+([icd_content_model_externalcauses_ProjectKB_Class179] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class18] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class19]
+		[icd_content_model_externalcauses_ProjectKB_Class20]))
+
+([icd_content_model_externalcauses_ProjectKB_Class180] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class181] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#personalCountermeasures")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class182])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 400)
+	(y 120))
+
+([icd_content_model_externalcauses_ProjectKB_Class182] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class183]
+		[icd_content_model_externalcauses_ProjectKB_Class184]))
+
+([icd_content_model_externalcauses_ProjectKB_Class183] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class184] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class185] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#editorialStatusCausalMechanism")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class186])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
+	(width 200)
+	(x 0)
+	(y 360))
+
+([icd_content_model_externalcauses_ProjectKB_Class186] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class187]
+		[icd_content_model_externalcauses_ProjectKB_Class188]))
+
+([icd_content_model_externalcauses_ProjectKB_Class187] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class188] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class189] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#externalCauseDimensionDescriptor")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class190])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 3120))
+
+([icd_content_model_externalcauses_ProjectKB_Class19] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class190] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class191]
+		[icd_content_model_externalcauses_ProjectKB_Class192]))
+
+([icd_content_model_externalcauses_ProjectKB_Class191] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class192] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class193] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#editorialStatusSnomedRef")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class194])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
+	(width 200)
+	(x 0)
+	(y 720))
+
+([icd_content_model_externalcauses_ProjectKB_Class194] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class195]
+		[icd_content_model_externalcauses_ProjectKB_Class196]))
+
+([icd_content_model_externalcauses_ProjectKB_Class195] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class196] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class197] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#anatomy")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class198])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 1080))
+
+([icd_content_model_externalcauses_ProjectKB_Class198] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class199]
+		[icd_content_model_externalcauses_ProjectKB_Class200]))
+
+([icd_content_model_externalcauses_ProjectKB_Class199] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class20] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class200] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class201] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#editorialStatusLinearization")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class202])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
+	(width 200)
+	(x 0)
+	(y 660))
+
+([icd_content_model_externalcauses_ProjectKB_Class202] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class203]
+		[icd_content_model_externalcauses_ProjectKB_Class204]))
+
+([icd_content_model_externalcauses_ProjectKB_Class203] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class204] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class205] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#occupationalDescriptor")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class206])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 200)
+	(y 3000))
+
+([icd_content_model_externalcauses_ProjectKB_Class206] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class207]
+		[icd_content_model_externalcauses_ProjectKB_Class208]))
+
+([icd_content_model_externalcauses_ProjectKB_Class207] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class208] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class209] of  Widget
+
+	(is_hidden FALSE)
+	(name "http://www.w3.org/2003/11/swrlb#args")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class210]))
+
+([icd_content_model_externalcauses_ProjectKB_Class21] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#editorialStatusDiagnosticCriteria")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class22])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
+	(width 200)
+	(x 0)
+	(y 480))
+
+([icd_content_model_externalcauses_ProjectKB_Class210] of  Property_List
+)
+
+([icd_content_model_externalcauses_ProjectKB_Class211] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#fractureOpenOrClosed")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class212])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 3240))
+
+([icd_content_model_externalcauses_ProjectKB_Class212] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class213]
+		[icd_content_model_externalcauses_ProjectKB_Class214]))
+
+([icd_content_model_externalcauses_ProjectKB_Class213] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class214] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class215] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#modeOfTransport")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class216])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 200)
+	(y 2160))
+
+([icd_content_model_externalcauses_ProjectKB_Class216] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class217]
+		[icd_content_model_externalcauses_ProjectKB_Class218]))
+
+([icd_content_model_externalcauses_ProjectKB_Class217] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class218] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class219] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#economicActivity")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class220])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 2400))
+
+([icd_content_model_externalcauses_ProjectKB_Class22] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class23]
+		[icd_content_model_externalcauses_ProjectKB_Class24]))
+
+([icd_content_model_externalcauses_ProjectKB_Class220] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class221]
+		[icd_content_model_externalcauses_ProjectKB_Class222]))
+
+([icd_content_model_externalcauses_ProjectKB_Class221] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class222] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class223] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#childrenAndYouthImpact")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class224])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 1800))
+
+([icd_content_model_externalcauses_ProjectKB_Class224] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class225]
+		[icd_content_model_externalcauses_ProjectKB_Class226]))
+
+([icd_content_model_externalcauses_ProjectKB_Class225] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class226] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class227] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#residentOfHome")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class228])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 400)
+	(y 840))
+
+([icd_content_model_externalcauses_ProjectKB_Class228] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class229]
+		[icd_content_model_externalcauses_ProjectKB_Class230]))
+
+([icd_content_model_externalcauses_ProjectKB_Class229] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class23] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class230] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class231] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#morbidityParent")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class232])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 200)
+	(y 2400))
+
+([icd_content_model_externalcauses_ProjectKB_Class232] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class233]
+		[icd_content_model_externalcauses_ProjectKB_Class234]))
+
+([icd_content_model_externalcauses_ProjectKB_Class233] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class234] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class235] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#transportEventDescriptor")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class236])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 400)
+	(y 2040))
+
+([icd_content_model_externalcauses_ProjectKB_Class236] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class237]
+		[icd_content_model_externalcauses_ProjectKB_Class238]))
+
+([icd_content_model_externalcauses_ProjectKB_Class237] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class238] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class239] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#publicId")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class240])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 0))
+
+([icd_content_model_externalcauses_ProjectKB_Class24] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class240] of  Property_List
+)
+
+([icd_content_model_externalcauses_ProjectKB_Class241] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#biologicalIndicator")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class242])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 1440))
+
+([icd_content_model_externalcauses_ProjectKB_Class242] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class243]
+		[icd_content_model_externalcauses_ProjectKB_Class244]))
+
+([icd_content_model_externalcauses_ProjectKB_Class243] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class244] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class245] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#lifeActivitiesImpact")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class246])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 200)
+	(y 1680))
+
+([icd_content_model_externalcauses_ProjectKB_Class246] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class247]
+		[icd_content_model_externalcauses_ProjectKB_Class248]))
+
+([icd_content_model_externalcauses_ProjectKB_Class247] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class248] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class249] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#fractureSubtype")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class250])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 200)
+	(y 0))
+
+([icd_content_model_externalcauses_ProjectKB_Class25] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#typeOfHome")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class26])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 400)
+	(y 2400))
+
+([icd_content_model_externalcauses_ProjectKB_Class250] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class251]
+		[icd_content_model_externalcauses_ProjectKB_Class252]))
+
+([icd_content_model_externalcauses_ProjectKB_Class251] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class252] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class253] of  Widget
+
+	(is_hidden FALSE)
+	(name "http://who.int/icd#sequenceNumber")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class254]))
+
+([icd_content_model_externalcauses_ProjectKB_Class254] of  Property_List
+)
+
+([icd_content_model_externalcauses_ProjectKB_Class255] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#outcomeOfFullThicknessBurn")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class256])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 200)
+	(y 3120))
+
+([icd_content_model_externalcauses_ProjectKB_Class256] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class257]
+		[icd_content_model_externalcauses_ProjectKB_Class258]))
+
+([icd_content_model_externalcauses_ProjectKB_Class257] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class258] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class259] of  Widget
+
+	(is_hidden FALSE)
+	(name "http://who.int/icd#exclusion_type")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class260]))
+
+([icd_content_model_externalcauses_ProjectKB_Class26] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class27]
+		[icd_content_model_externalcauses_ProjectKB_Class28]))
+
+([icd_content_model_externalcauses_ProjectKB_Class260] of  Property_List
+)
+
+([icd_content_model_externalcauses_ProjectKB_Class261] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#violenceDescriptor")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class262])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 400)
+	(y 3120))
+
+([icd_content_model_externalcauses_ProjectKB_Class262] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class263]
+		[icd_content_model_externalcauses_ProjectKB_Class264]))
+
+([icd_content_model_externalcauses_ProjectKB_Class263] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class264] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class265] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#sportsActivityDescriptor")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class266])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 400)
+	(y 1560))
+
+([icd_content_model_externalcauses_ProjectKB_Class266] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class267]
+		[icd_content_model_externalcauses_ProjectKB_Class268]))
+
+([icd_content_model_externalcauses_ProjectKB_Class267] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class268] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class269] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#perpetratorVictimRelationship")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class270])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 400)
+	(y 0))
+
+([icd_content_model_externalcauses_ProjectKB_Class27] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class270] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class271]
+		[icd_content_model_externalcauses_ProjectKB_Class272]))
+
+([icd_content_model_externalcauses_ProjectKB_Class271] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class272] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class273] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#mechanism")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class274])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 200)
+	(y 1920))
+
+([icd_content_model_externalcauses_ProjectKB_Class274] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class275]
+		[icd_content_model_externalcauses_ProjectKB_Class276]))
+
+([icd_content_model_externalcauses_ProjectKB_Class275] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class276] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class277] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#temporality")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class278])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 400)
+	(y 1800))
+
+([icd_content_model_externalcauses_ProjectKB_Class278] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class279]
+		[icd_content_model_externalcauses_ProjectKB_Class280]))
+
+([icd_content_model_externalcauses_ProjectKB_Class279] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class28] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class280] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class281] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#indoorOrOutdoor")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class282])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 200)
+	(y 960))
+
+([icd_content_model_externalcauses_ProjectKB_Class282] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class283]
+		[icd_content_model_externalcauses_ProjectKB_Class284]))
+
+([icd_content_model_externalcauses_ProjectKB_Class283] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class284] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class285] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#typeOfInjury")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class286])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 400)
+	(y 2520))
+
+([icd_content_model_externalcauses_ProjectKB_Class286] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class287]
+		[icd_content_model_externalcauses_ProjectKB_Class288]))
+
+([icd_content_model_externalcauses_ProjectKB_Class287] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class288] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class289] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#schoolActivitiesImpact")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class290])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 400)
+	(y 960))
+
+([icd_content_model_externalcauses_ProjectKB_Class29] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#editorialStatusTerm")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class30])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
+	(width 200)
+	(x 0)
+	(y 780))
+
+([icd_content_model_externalcauses_ProjectKB_Class290] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class291]
+		[icd_content_model_externalcauses_ProjectKB_Class292]))
+
+([icd_content_model_externalcauses_ProjectKB_Class291] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class292] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class293] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#jointInvolvementInFracture")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class294])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 200)
+	(y 1440))
+
+([icd_content_model_externalcauses_ProjectKB_Class294] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class295]
+		[icd_content_model_externalcauses_ProjectKB_Class296]))
+
+([icd_content_model_externalcauses_ProjectKB_Class295] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class296] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class297] of  Widget
+
+	(height 240)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#workActivitiesImpact")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class298])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 400)
+	(y 3240))
+
+([icd_content_model_externalcauses_ProjectKB_Class298] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class299]
+		[icd_content_model_externalcauses_ProjectKB_Class300]))
+
+([icd_content_model_externalcauses_ProjectKB_Class299] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class30] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class31]
+		[icd_content_model_externalcauses_ProjectKB_Class32]))
+
+([icd_content_model_externalcauses_ProjectKB_Class300] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class301] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#assignedSecondaryTAG")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class302])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 1200))
+
+([icd_content_model_externalcauses_ProjectKB_Class302] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class303]
+		[icd_content_model_externalcauses_ProjectKB_Class304]))
+
+([icd_content_model_externalcauses_ProjectKB_Class303] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class304] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class305] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#settingOfEvent")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class306])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 400)
+	(y 1200))
+
+([icd_content_model_externalcauses_ProjectKB_Class306] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class307]
+		[icd_content_model_externalcauses_ProjectKB_Class308]))
+
+([icd_content_model_externalcauses_ProjectKB_Class307] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class308] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class309] of  Widget
+
+	(is_hidden FALSE)
+	(name "http://who.int/icd#DatatypeProperty_7")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class310]))
+
+([icd_content_model_externalcauses_ProjectKB_Class31] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class310] of  Property_List
+)
+
+([icd_content_model_externalcauses_ProjectKB_Class311] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#insideOrOutsideCityLimits")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class312])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 200)
+	(y 1200))
+
+([icd_content_model_externalcauses_ProjectKB_Class312] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class313]
+		[icd_content_model_externalcauses_ProjectKB_Class314]))
+
+([icd_content_model_externalcauses_ProjectKB_Class313] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class314] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class315] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#contextOfAssault")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class316])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 2160))
+
+([icd_content_model_externalcauses_ProjectKB_Class316] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class317]
+		[icd_content_model_externalcauses_ProjectKB_Class318]))
+
+([icd_content_model_externalcauses_ProjectKB_Class317] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class318] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class319] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#occupation")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class320])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 200)
+	(y 2880))
+
+([icd_content_model_externalcauses_ProjectKB_Class32] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class320] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class321]
+		[icd_content_model_externalcauses_ProjectKB_Class322]))
+
+([icd_content_model_externalcauses_ProjectKB_Class321] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class322] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class323] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#typeOfSchool")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class324])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 400)
+	(y 2760))
+
+([icd_content_model_externalcauses_ProjectKB_Class324] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class325]
+		[icd_content_model_externalcauses_ProjectKB_Class326]))
+
+([icd_content_model_externalcauses_ProjectKB_Class325] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class326] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class327] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#editorialStatusClinicalDescription")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class328])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
+	(width 200)
+	(x 0)
+	(y 420))
+
+([icd_content_model_externalcauses_ProjectKB_Class328] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class329]
+		[icd_content_model_externalcauses_ProjectKB_Class330]))
+
+([icd_content_model_externalcauses_ProjectKB_Class329] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class33] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#lifeManagementActivitiesImpact")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class34])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 200)
+	(y 1800))
+
+([icd_content_model_externalcauses_ProjectKB_Class330] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class331] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#proximalRiskFactorsForIntentionalSelfHarm")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class332])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 400)
+	(y 720))
+
+([icd_content_model_externalcauses_ProjectKB_Class332] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class333]
+		[icd_content_model_externalcauses_ProjectKB_Class334]))
+
+([icd_content_model_externalcauses_ProjectKB_Class333] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class334] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class335] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#counterPartInCollision")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class336])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 2280))
+
+([icd_content_model_externalcauses_ProjectKB_Class336] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class337]
+		[icd_content_model_externalcauses_ProjectKB_Class338]))
+
+([icd_content_model_externalcauses_ProjectKB_Class337] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class338] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class339] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#icd10TabulationList")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class340])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 200)
+	(y 720))
+
+([icd_content_model_externalcauses_ProjectKB_Class34] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class35]
+		[icd_content_model_externalcauses_ProjectKB_Class36]))
+
+([icd_content_model_externalcauses_ProjectKB_Class340] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class341]
+		[icd_content_model_externalcauses_ProjectKB_Class342]))
+
+([icd_content_model_externalcauses_ProjectKB_Class341] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class342] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class343] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#mobilityImpact")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class344])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 200)
+	(y 2040))
+
+([icd_content_model_externalcauses_ProjectKB_Class344] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class345]
+		[icd_content_model_externalcauses_ProjectKB_Class346]))
+
+([icd_content_model_externalcauses_ProjectKB_Class345] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class346] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class347] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#indexTermType")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class348])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
+	(width 200)
+	(x 0)
+	(y 900))
+
+([icd_content_model_externalcauses_ProjectKB_Class348] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class349]
+		[icd_content_model_externalcauses_ProjectKB_Class350]))
+
+([icd_content_model_externalcauses_ProjectKB_Class349] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class35] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class350] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class351] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#subclassBaseInclusion")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class352])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 400)
+	(y 1680))
+
+([icd_content_model_externalcauses_ProjectKB_Class352] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class353]
+		[icd_content_model_externalcauses_ProjectKB_Class354]))
+
+([icd_content_model_externalcauses_ProjectKB_Class353] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class354] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class355] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#childLifeCycle")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class356])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 1680))
+
+([icd_content_model_externalcauses_ProjectKB_Class356] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class357]
+		[icd_content_model_externalcauses_ProjectKB_Class358]))
+
+([icd_content_model_externalcauses_ProjectKB_Class357] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class358] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class359] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#burnQualifier")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class360])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 1560))
+
+([icd_content_model_externalcauses_ProjectKB_Class36] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class360] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class361]
+		[icd_content_model_externalcauses_ProjectKB_Class362]))
+
+([icd_content_model_externalcauses_ProjectKB_Class361] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class362] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class363] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#assignedPrimaryTAG")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class364])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
+	(width 200)
+	(x 0)
+	(y 240))
+
+([icd_content_model_externalcauses_ProjectKB_Class364] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class365]
+		[icd_content_model_externalcauses_ProjectKB_Class366]))
+
+([icd_content_model_externalcauses_ProjectKB_Class365] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class366] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class367] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#suppressUnspecifiedResiduals")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class368])
+	(widget_class_name "edu.stanford.smi.protege.widget.CheckBoxWidget")
+	(width 200)
+	(x 0)
+	(y 180))
+
+([icd_content_model_externalcauses_ProjectKB_Class368] of  Property_List
+)
+
+([icd_content_model_externalcauses_ProjectKB_Class369] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#sexOfPerpetrator")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class370])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 400)
+	(y 1320))
+
+([icd_content_model_externalcauses_ProjectKB_Class37] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#injuryQualifier")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class38])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 200)
+	(y 1080))
+
+([icd_content_model_externalcauses_ProjectKB_Class370] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class371]
+		[icd_content_model_externalcauses_ProjectKB_Class372]))
+
+([icd_content_model_externalcauses_ProjectKB_Class371] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class372] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class373] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#etiology")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class374])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 2640))
+
+([icd_content_model_externalcauses_ProjectKB_Class374] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class375]
+		[icd_content_model_externalcauses_ProjectKB_Class376]))
+
+([icd_content_model_externalcauses_ProjectKB_Class375] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class376] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class377] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#externalCauseDimension")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class378])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 3000))
+
+([icd_content_model_externalcauses_ProjectKB_Class378] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class379]
+		[icd_content_model_externalcauses_ProjectKB_Class380]))
+
+([icd_content_model_externalcauses_ProjectKB_Class379] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class38] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class39]
+		[icd_content_model_externalcauses_ProjectKB_Class40]))
+
+([icd_content_model_externalcauses_ProjectKB_Class380] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class381] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#fractureQualifier")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class382])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 3360))
+
+([icd_content_model_externalcauses_ProjectKB_Class382] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class383]
+		[icd_content_model_externalcauses_ProjectKB_Class384]))
+
+([icd_content_model_externalcauses_ProjectKB_Class383] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class384] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class39] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class40] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class41] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#postcoordinationAxis")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class42])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 400)
+	(y 360))
+
+([icd_content_model_externalcauses_ProjectKB_Class42] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class43]
+		[icd_content_model_externalcauses_ProjectKB_Class44]))
+
+([icd_content_model_externalcauses_ProjectKB_Class43] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class44] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class45] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#selfCareImpact")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class46])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 400)
+	(y 1080))
+
+([icd_content_model_externalcauses_ProjectKB_Class46] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class47]
+		[icd_content_model_externalcauses_ProjectKB_Class48]))
+
+([icd_content_model_externalcauses_ProjectKB_Class47] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class48] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class49] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#hasGCSVerbalScore")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class50])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 200)
+	(y 360))
+
+([icd_content_model_externalcauses_ProjectKB_Class50] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class51]
+		[icd_content_model_externalcauses_ProjectKB_Class52]))
+
+([icd_content_model_externalcauses_ProjectKB_Class51] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class52] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class53] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#understandingImpact")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class54])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 400)
+	(y 3000))
+
+([icd_content_model_externalcauses_ProjectKB_Class54] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class55]
+		[icd_content_model_externalcauses_ProjectKB_Class56]))
+
+([icd_content_model_externalcauses_ProjectKB_Class55] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class56] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class57] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#editorialStatus")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class58])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
+	(width 200)
+	(x 0)
+	(y 300))
+
+([icd_content_model_externalcauses_ProjectKB_Class58] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class59]
+		[icd_content_model_externalcauses_ProjectKB_Class60]))
+
+([icd_content_model_externalcauses_ProjectKB_Class59] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class60] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class61] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#morbiditySubclasses")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class62])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 200)
+	(y 2520))
+
+([icd_content_model_externalcauses_ProjectKB_Class62] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class63]
+		[icd_content_model_externalcauses_ProjectKB_Class64]))
+
+([icd_content_model_externalcauses_ProjectKB_Class63] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class64] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class65] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#editorialStatusICD10Notes")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class66])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
+	(width 200)
+	(x 0)
+	(y 600))
+
+([icd_content_model_externalcauses_ProjectKB_Class66] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class67]
+		[icd_content_model_externalcauses_ProjectKB_Class68]))
+
+([icd_content_model_externalcauses_ProjectKB_Class67] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class68] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class69] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#communicationImpact")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class70])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 1920))
+
+([icd_content_model_externalcauses_ProjectKB_Class70] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class71]
+		[icd_content_model_externalcauses_ProjectKB_Class72]))
+
+([icd_content_model_externalcauses_ProjectKB_Class71] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class72] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class73] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#associatedWith")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class74])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 1320))
+
+([icd_content_model_externalcauses_ProjectKB_Class74] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class75]
+		[icd_content_model_externalcauses_ProjectKB_Class76]))
+
+([icd_content_model_externalcauses_ProjectKB_Class75] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class76] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class77] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#typeOfSportOrExerciseActivity")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class78])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 400)
+	(y 2880))
+
+([icd_content_model_externalcauses_ProjectKB_Class78] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class79]
+		[icd_content_model_externalcauses_ProjectKB_Class80]))
+
+([icd_content_model_externalcauses_ProjectKB_Class79] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class80] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class81] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#typeOfLegalIntervention")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class82])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 400)
+	(y 2640))
+
+([icd_content_model_externalcauses_ProjectKB_Class82] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class83]
+		[icd_content_model_externalcauses_ProjectKB_Class84]))
+
+([icd_content_model_externalcauses_ProjectKB_Class83] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class84] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class85] of  Widget
+
+	(height 240)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#partOfBuildingOrGrounds")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class86])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 200)
+	(y 3240))
+
+([icd_content_model_externalcauses_ProjectKB_Class86] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class87]
+		[icd_content_model_externalcauses_ProjectKB_Class88]))
+
+([icd_content_model_externalcauses_ProjectKB_Class87] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class88] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class89] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#householdActivitiesImpact")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class90])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 200)
+	(y 480))
+
+([icd_content_model_externalcauses_ProjectKB_Class9] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#levelOfConsciousness")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class10])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 200)
+	(y 1560))
+
+([icd_content_model_externalcauses_ProjectKB_Class90] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class91]
+		[icd_content_model_externalcauses_ProjectKB_Class92]))
+
+([icd_content_model_externalcauses_ProjectKB_Class91] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class92] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class93] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://who.int/icd#socialParticipationImpact")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class94])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 400)
+	(y 1440))
+
+([icd_content_model_externalcauses_ProjectKB_Class94] of  Property_List
+
+	(properties
+		[icd_content_model_externalcauses_ProjectKB_Class95]
+		[icd_content_model_externalcauses_ProjectKB_Class96]))
+
+([icd_content_model_externalcauses_ProjectKB_Class95] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([icd_content_model_externalcauses_ProjectKB_Class96] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([icd_content_model_externalcauses_ProjectKB_Class97] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "http://protege.stanford.edu/plugins/owl/protege#isTemplate")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class98])
+	(widget_class_name "edu.stanford.smi.protege.widget.CheckBoxWidget")
+	(width 200)
+	(x 0)
+	(y 60))
+
+([icd_content_model_externalcauses_ProjectKB_Class98] of  Property_List
+)
+
+([icd_content_model_externalcauses_ProjectKB_Class99] of  Widget
+
+	(is_hidden FALSE)
+	(name "http://www.w3.org/2003/11/swrlb#maxArgs")
+	(property_list [icd_content_model_externalcauses_ProjectKB_Class100]))
+
 ([icd_content_model_ProjectKB_Class1] of  Widget
 
 	(is_hidden TRUE)
@@ -54,23 +2567,25 @@
 ([icd_content_model_ProjectKB_Class10] of  Property_List
 )
 
-([icd_content_model_ProjectKB_Class10007] of  Widget
+([icd_content_model_ProjectKB_Class10007] of  String
 
-	(is_hidden TRUE)
-	(property_list [icd_content_model_ProjectKB_Class10008])
-	(widget_class_name "edu.stanford.bmir.protegex.icd.ICDTab"))
+	(name ":PAL-CONSTRAINT")
+	(string_value "%3APAL-NAME"))
 
-([icd_content_model_ProjectKB_Class10008] of  Property_List
-)
+([icd_content_model_ProjectKB_Class10008] of  String
 
-([icd_content_model_ProjectKB_Class10009] of  Widget
+	(name ":META-CLASS")
+	(string_value "%3ANAME"))
 
-	(is_hidden TRUE)
-	(property_list [icd_content_model_ProjectKB_Class10010])
-	(widget_class_name "edu.stanford.bmir.protegex.icd.diff.ICDDiff"))
+([icd_content_model_ProjectKB_Class10009] of  String
 
-([icd_content_model_ProjectKB_Class10010] of  Property_List
-)
+	(name "http://www.w3.org/2002/07/owl#DatatypeProperty")
+	(string_value "%3ANAME"))
+
+([icd_content_model_ProjectKB_Class10010] of  String
+
+	(name "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property")
+	(string_value "%3ANAME"))
 
 ([icd_content_model_ProjectKB_Class10011] of  Widget
 
@@ -111,112 +2626,92 @@
 ([icd_content_model_ProjectKB_Class20] of  Property_List
 )
 
-([icd_content_model_ProjectKB_Class20363] of  String
-
-	(name ":PAL-CONSTRAINT")
-	(string_value "%3APAL-NAME"))
-
-([icd_content_model_ProjectKB_Class20364] of  String
-
-	(name ":META-CLASS")
-	(string_value "%3ANAME"))
-
-([icd_content_model_ProjectKB_Class20365] of  String
-
-	(name "http://www.w3.org/2002/07/owl#DatatypeProperty")
-	(string_value "%3ANAME"))
-
-([icd_content_model_ProjectKB_Class20366] of  String
-
-	(name "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property")
-	(string_value "%3ANAME"))
-
-([icd_content_model_ProjectKB_Class20367] of  String
+([icd_content_model_ProjectKB_Class20011] of  String
 
 	(name "http://www.w3.org/2000/01/rdf-schema#Class")
 	(string_value "%3ANAME"))
 
-([icd_content_model_ProjectKB_Class20368] of  String
+([icd_content_model_ProjectKB_Class20012] of  String
 
 	(name "http://who.int/icd#PostcoordinationValueReferenceTerm")
 	(string_value "http%3A%2F%2Fwho.int%2Ficd%23referencedValue"))
 
-([icd_content_model_ProjectKB_Class20369] of  String
+([icd_content_model_ProjectKB_Class20013] of  String
 
 	(name ":INSTANCE-ANNOTATION")
 	(string_value "%3AANNOTATION-TEXT"))
 
-([icd_content_model_ProjectKB_Class20370] of  String
+([icd_content_model_ProjectKB_Class20014] of  String
 
 	(name "http://www.w3.org/2002/07/owl#Class")
 	(string_value "%3ANAME"))
 
-([icd_content_model_ProjectKB_Class20371] of  String
+([icd_content_model_ProjectKB_Class20015] of  String
 
 	(name "http://www.w3.org/2002/07/owl#FunctionalProperty")
 	(string_value "%3ANAME"))
 
-([icd_content_model_ProjectKB_Class20372] of  String
+([icd_content_model_ProjectKB_Class20016] of  String
 
 	(name "http://www.w3.org/2002/07/owl#AnnotationProperty")
 	(string_value "%3ANAME"))
 
-([icd_content_model_ProjectKB_Class20373] of  String
+([icd_content_model_ProjectKB_Class20017] of  String
 
 	(name "http://www.w3.org/2002/07/owl#DeprecatedProperty")
 	(string_value "%3ANAME"))
 
-([icd_content_model_ProjectKB_Class20374] of  String
+([icd_content_model_ProjectKB_Class20018] of  String
 
 	(name "http://www.w3.org/2002/07/owl#ObjectProperty")
 	(string_value "%3ANAME"))
 
-([icd_content_model_ProjectKB_Class20375] of  String
+([icd_content_model_ProjectKB_Class20019] of  String
 
 	(name "http://www.w3.org/2000/01/rdf-schema#Datatype")
 	(string_value "%3ANAME"))
 
-([icd_content_model_ProjectKB_Class20376] of  String
+([icd_content_model_ProjectKB_Class20020] of  String
 
 	(name "http://www.w3.org/2002/07/owl#Thing")
 	(string_value "%3ANAME"))
 
-([icd_content_model_ProjectKB_Class20377] of  Map_Entry
+([icd_content_model_ProjectKB_Class20021] of  Map_Entry
 
 	(key "add_name_on_instance_form")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([icd_content_model_ProjectKB_Class20378] of  Map_Entry
+([icd_content_model_ProjectKB_Class20022] of  Map_Entry
 
 	(key "show_collaboration_panel")
 	(key_class "java.lang.String")
 	(value "true")
 	(value_class "java.lang.Boolean"))
 
-([icd_content_model_ProjectKB_Class20379] of  Map_Entry
+([icd_content_model_ProjectKB_Class20023] of  Map_Entry
 
 	(key "collab.hide.archived")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([icd_content_model_ProjectKB_Class20380] of  Map_Entry
+([icd_content_model_ProjectKB_Class20024] of  Map_Entry
 
 	(key "edu.stanford.smi.protege.collab.annotation.gui.panel.ChatPanel")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([icd_content_model_ProjectKB_Class20381] of  Map_Entry
+([icd_content_model_ProjectKB_Class20025] of  Map_Entry
 
 	(key "change_tracking_active")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([icd_content_model_ProjectKB_Class20382] of  Map_Entry
+([icd_content_model_ProjectKB_Class20026] of  Map_Entry
 
 	(key "suppress_instance_counting")
 	(key_class "java.lang.String")
@@ -545,7 +3040,7 @@
 
 	(confirm_on_remove FALSE)
 	(display_abstract_class_icon FALSE)
-	(display_hidden_classes FALSE)
+	(display_hidden_classes TRUE)
 	(display_multi_parent_class_icon FALSE)
 	(is_readonly FALSE)
 	(tabbed_instance_form_layout TRUE)
@@ -1134,12 +3629,12 @@
 ([KB_325529_Class0] of  Map
 
 	(entries
-		[icd_content_model_ProjectKB_Class20377]
-		[icd_content_model_ProjectKB_Class20378]
-		[icd_content_model_ProjectKB_Class20379]
-		[icd_content_model_ProjectKB_Class20380]
-		[icd_content_model_ProjectKB_Class20381]
-		[icd_content_model_ProjectKB_Class20382]))
+		[icd_content_model_ProjectKB_Class20021]
+		[icd_content_model_ProjectKB_Class20022]
+		[icd_content_model_ProjectKB_Class20023]
+		[icd_content_model_ProjectKB_Class20024]
+		[icd_content_model_ProjectKB_Class20025]
+		[icd_content_model_ProjectKB_Class20026]))
 
 ([KB_325529_Class4] of  String
 
@@ -1157,9 +3652,6 @@
 	(name "http://protege.stanford.edu/plugins/owl/protege#ExternalResource")
 	(property_list [XY_Instance_890])
 	(widget_class_name "edu.stanford.smi.protegex.owl.ui.widget.OWLFormWidget"))
-
-([KB_511429_Class6] of  Map
-)
 
 ([KB_632156_Instance_0] of  String
 
@@ -1356,6 +3848,9 @@
 	(name "http://www.w3.org/2002/07/owl#ObjectProperty")
 	(property_list [XY_Instance_462])
 	(widget_class_name "edu.stanford.smi.protegex.owl.ui.widget.OWLFormWidget"))
+
+([KB_693477_Class6] of  Map
+)
 
 ([KB_713803_Instance_10] of  Widget
 
@@ -3936,15 +6431,6 @@
 ([KB_938545_Instance_1207] of  Property_List
 )
 
-([KB_938545_Instance_1208] of  Widget
-
-	(is_hidden FALSE)
-	(name "http://protege.stanford.edu/plugins/owl/protege#inferredType")
-	(property_list [KB_938545_Instance_1209]))
-
-([KB_938545_Instance_1209] of  Property_List
-)
-
 ([KB_938545_Instance_121] of  Property_List
 )
 
@@ -5794,9 +8280,9 @@
 		"http://www.w3.org/2001/XMLSchema#IDREF"
 		"http://www.w3.org/2002/07/owl#SymmetricProperty"
 		"http://www.w3.org/2001/XMLSchema#integer"
-		"http://www.w3.org/2002/07/owl#differentFrom"
 		"http://protege.stanford.edu/plugins/owl/protege#PAL-NAME"
 		":SLOT-NUMERIC-MINIMUM"
+		"http://www.w3.org/2002/07/owl#differentFrom"
 		"http://www.w3.org/2001/XMLSchema#gMonth"
 		"http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"
 		"http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
@@ -5836,10 +8322,10 @@
 		"http://www.w3.org/2001/XMLSchema#decimal"
 		"http://www.w3.org/2002/07/owl#cardinality"
 		"http://www.w3.org/2003/11/swrl#AtomList"
+		"http://www.w3.org/2002/07/owl#equivalentProperty"
 		"http://www.w3.org/2000/01/rdf-schema#Literal"
 		"http://www.w3.org/2003/11/swrl#classPredicate"
 		"http://www.w3.org/2001/XMLSchema#Name"
-		"http://www.w3.org/2002/07/owl#equivalentProperty"
 		":ANNOTATION"
 		"http://www.w3.org/2001/XMLSchema#long"
 		"http://www.w3.org/2002/07/owl#SomeValuesFromRestriction"
@@ -5912,8 +8398,8 @@
 		"http://www.w3.org/1999/02/22-rdf-syntax-ns#rest"
 		"http://www.w3.org/2000/01/rdf-schema#domain"
 		"http://protege.stanford.edu/plugins/owl/protege#TO"
-		"http://www.w3.org/2002/07/owl#backwardCompatibleWith"
 		":DIRECT-SUBSLOTS"
+		"http://www.w3.org/2002/07/owl#backwardCompatibleWith"
 		":RELATION"
 		":MODIFICATION-TIMESTAMP"
 		"http://www.w3.org/2001/XMLSchema#gYear"
@@ -6124,172 +8610,110 @@
 
 	(name "class widget properties")
 	(properties
-		[XY_Instance_1064]
-		[XY_Instance_1066]
-		[XY_Instance_1067]
-		[XY_Instance_1068]
-		[XY_Instance_1069]
-		[XY_Instance_1071]
-		[XY_Instance_1072]
-		[XY_Instance_1073]
-		[XY_Instance_1074]
 		[XY_Instance_1088]
 		[XY_Instance_1092]
 		[XY_Instance_1096]
-		[XY_Instance_1098]
 		[XY_Instance_1100]
 		[KB_938545_Instance_1206]
-		[KB_938545_Instance_1208]))
-
-([XY_Instance_1064] of  Widget
-
-	(height 0)
-	(label "Constraints")
-	(name ":SLOT-CONSTRAINTS")
-	(property_list [XY_Instance_1065])
-	(width 0)
-	(x 0)
-	(y 0))
-
-([XY_Instance_1065] of  Property_List
-)
-
-([XY_Instance_1066] of  Widget
-
-	(name ":DIRECT-INSTANCES"))
-
-([XY_Instance_1067] of  Widget
-
-	(name ":DIRECT-SUBCLASSES"))
-
-([XY_Instance_1068] of  Widget
-
-	(name ":DIRECT-SUPERCLASSES"))
-
-([XY_Instance_1069] of  Widget
-
-	(height 120)
-	(label "Documentation")
-	(name ":DOCUMENTATION")
-	(property_list [XY_Instance_1070])
-	(widget_class_name "edu.stanford.smi.protege.widget.DocumentationWidget")
-	(width 400)
-	(x 200)
-	(y 0))
-
-([XY_Instance_1070] of  Property_List
-)
-
-([XY_Instance_1071] of  Widget
-
-	(height 60)
-	(label "Name")
-	(name ":NAME")
-	(widget_class_name "edu.stanford.smi.protege.widget.InstanceNameWidget")
-	(width 200)
-	(x 0)
-	(y 0))
-
-([XY_Instance_1072] of  Widget
-
-	(height 60)
-	(label "Role")
-	(name ":ROLE")
-	(widget_class_name "edu.stanford.smi.protege.widget.RoleWidget")
-	(width 200)
-	(x 0)
-	(y 60))
-
-([XY_Instance_1073] of  Widget
-
-	(name ":DIRECT-TYPE"))
-
-([XY_Instance_1074] of  Widget
-
-	(height 150)
-	(label "Template Slots")
-	(name ":DIRECT-TEMPLATE-SLOTS")
-	(property_list [XY_Instance_1075])
-	(widget_class_name "edu.stanford.smi.protege.widget.TemplateSlotsWidget")
-	(width 600)
-	(x 0)
-	(y 120))
-
-([XY_Instance_1075] of  Property_List
-
-	(properties
-		[XY_Instance_1076]
-		[XY_Instance_1077]
-		[XY_Instance_1078]
-		[XY_Instance_1079]
-		[XY_Instance_1080]
-		[XY_Instance_1081]
-		[XY_Instance_1082]
-		[XY_Instance_1083]
-		[XY_Instance_1084]
-		[XY_Instance_1085]
-		[XY_Instance_1086]
-		[XY_Instance_1087]))
-
-([XY_Instance_1076] of  Boolean
-
-	(boolean_value TRUE)
-	(name "ButtonDisplayed-View selected properties"))
-
-([XY_Instance_1077] of  Boolean
-
-	(boolean_value TRUE)
-	(name "ButtonDisplayed-View selected properties at class"))
-
-([XY_Instance_1078] of  Boolean
-
-	(boolean_value TRUE)
-	(name "ButtonDisplayed-Create property and attach to class"))
-
-([XY_Instance_1079] of  Boolean
-
-	(boolean_value TRUE)
-	(name "ButtonDisplayed-Remove overrides from selected properties"))
-
-([XY_Instance_1080] of  Boolean
-
-	(boolean_value TRUE)
-	(name "ButtonDisplayed-Add"))
-
-([XY_Instance_1081] of  Boolean
-
-	(boolean_value TRUE)
-	(name "ButtonDisplayed-Remove"))
-
-([XY_Instance_1082] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-Move up"))
-
-([XY_Instance_1083] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-Move down"))
-
-([XY_Instance_1084] of  Boolean
-
-	(boolean_value TRUE)
-	(name "ButtonDisplayed-View selected slots"))
-
-([XY_Instance_1085] of  Boolean
-
-	(boolean_value TRUE)
-	(name "ButtonDisplayed-View selected slots at class"))
-
-([XY_Instance_1086] of  Boolean
-
-	(boolean_value TRUE)
-	(name "ButtonDisplayed-Create slot and attach to class"))
-
-([XY_Instance_1087] of  Boolean
-
-	(boolean_value TRUE)
-	(name "ButtonDisplayed-Remove overrides from selected slots"))
+		[icd_content_model_externalcauses_ProjectKB_Class9]
+		[icd_content_model_externalcauses_ProjectKB_Class13]
+		[icd_content_model_externalcauses_ProjectKB_Class17]
+		[icd_content_model_externalcauses_ProjectKB_Class21]
+		[icd_content_model_externalcauses_ProjectKB_Class25]
+		[icd_content_model_externalcauses_ProjectKB_Class29]
+		[icd_content_model_externalcauses_ProjectKB_Class33]
+		[icd_content_model_externalcauses_ProjectKB_Class37]
+		[icd_content_model_externalcauses_ProjectKB_Class41]
+		[icd_content_model_externalcauses_ProjectKB_Class45]
+		[icd_content_model_externalcauses_ProjectKB_Class49]
+		[icd_content_model_externalcauses_ProjectKB_Class53]
+		[icd_content_model_externalcauses_ProjectKB_Class57]
+		[icd_content_model_externalcauses_ProjectKB_Class61]
+		[icd_content_model_externalcauses_ProjectKB_Class65]
+		[icd_content_model_externalcauses_ProjectKB_Class69]
+		[icd_content_model_externalcauses_ProjectKB_Class73]
+		[icd_content_model_externalcauses_ProjectKB_Class77]
+		[icd_content_model_externalcauses_ProjectKB_Class81]
+		[icd_content_model_externalcauses_ProjectKB_Class85]
+		[icd_content_model_externalcauses_ProjectKB_Class89]
+		[icd_content_model_externalcauses_ProjectKB_Class93]
+		[icd_content_model_externalcauses_ProjectKB_Class97]
+		[icd_content_model_externalcauses_ProjectKB_Class99]
+		[icd_content_model_externalcauses_ProjectKB_Class101]
+		[icd_content_model_externalcauses_ProjectKB_Class105]
+		[icd_content_model_externalcauses_ProjectKB_Class109]
+		[icd_content_model_externalcauses_ProjectKB_Class113]
+		[icd_content_model_externalcauses_ProjectKB_Class117]
+		[icd_content_model_externalcauses_ProjectKB_Class121]
+		[icd_content_model_externalcauses_ProjectKB_Class125]
+		[icd_content_model_externalcauses_ProjectKB_Class129]
+		[icd_content_model_externalcauses_ProjectKB_Class133]
+		[icd_content_model_externalcauses_ProjectKB_Class137]
+		[icd_content_model_externalcauses_ProjectKB_Class141]
+		[icd_content_model_externalcauses_ProjectKB_Class145]
+		[icd_content_model_externalcauses_ProjectKB_Class149]
+		[icd_content_model_externalcauses_ProjectKB_Class153]
+		[icd_content_model_externalcauses_ProjectKB_Class157]
+		[icd_content_model_externalcauses_ProjectKB_Class159]
+		[icd_content_model_externalcauses_ProjectKB_Class163]
+		[icd_content_model_externalcauses_ProjectKB_Class165]
+		[icd_content_model_externalcauses_ProjectKB_Class169]
+		[icd_content_model_externalcauses_ProjectKB_Class173]
+		[icd_content_model_externalcauses_ProjectKB_Class177]
+		[icd_content_model_externalcauses_ProjectKB_Class181]
+		[icd_content_model_externalcauses_ProjectKB_Class185]
+		[icd_content_model_externalcauses_ProjectKB_Class189]
+		[icd_content_model_externalcauses_ProjectKB_Class193]
+		[icd_content_model_externalcauses_ProjectKB_Class197]
+		[icd_content_model_externalcauses_ProjectKB_Class201]
+		[icd_content_model_externalcauses_ProjectKB_Class205]
+		[icd_content_model_externalcauses_ProjectKB_Class209]
+		[icd_content_model_externalcauses_ProjectKB_Class211]
+		[icd_content_model_externalcauses_ProjectKB_Class215]
+		[icd_content_model_externalcauses_ProjectKB_Class219]
+		[icd_content_model_externalcauses_ProjectKB_Class223]
+		[icd_content_model_externalcauses_ProjectKB_Class227]
+		[icd_content_model_externalcauses_ProjectKB_Class231]
+		[icd_content_model_externalcauses_ProjectKB_Class235]
+		[icd_content_model_externalcauses_ProjectKB_Class239]
+		[icd_content_model_externalcauses_ProjectKB_Class241]
+		[icd_content_model_externalcauses_ProjectKB_Class245]
+		[icd_content_model_externalcauses_ProjectKB_Class249]
+		[icd_content_model_externalcauses_ProjectKB_Class253]
+		[icd_content_model_externalcauses_ProjectKB_Class255]
+		[icd_content_model_externalcauses_ProjectKB_Class259]
+		[icd_content_model_externalcauses_ProjectKB_Class261]
+		[icd_content_model_externalcauses_ProjectKB_Class265]
+		[icd_content_model_externalcauses_ProjectKB_Class269]
+		[icd_content_model_externalcauses_ProjectKB_Class273]
+		[icd_content_model_externalcauses_ProjectKB_Class277]
+		[icd_content_model_externalcauses_ProjectKB_Class281]
+		[icd_content_model_externalcauses_ProjectKB_Class285]
+		[icd_content_model_externalcauses_ProjectKB_Class289]
+		[icd_content_model_externalcauses_ProjectKB_Class293]
+		[icd_content_model_externalcauses_ProjectKB_Class297]
+		[icd_content_model_externalcauses_ProjectKB_Class301]
+		[icd_content_model_externalcauses_ProjectKB_Class305]
+		[icd_content_model_externalcauses_ProjectKB_Class309]
+		[icd_content_model_externalcauses_ProjectKB_Class311]
+		[icd_content_model_externalcauses_ProjectKB_Class315]
+		[icd_content_model_externalcauses_ProjectKB_Class319]
+		[icd_content_model_externalcauses_ProjectKB_Class323]
+		[icd_content_model_externalcauses_ProjectKB_Class327]
+		[icd_content_model_externalcauses_ProjectKB_Class331]
+		[icd_content_model_externalcauses_ProjectKB_Class335]
+		[icd_content_model_externalcauses_ProjectKB_Class339]
+		[icd_content_model_externalcauses_ProjectKB_Class343]
+		[icd_content_model_externalcauses_ProjectKB_Class347]
+		[icd_content_model_externalcauses_ProjectKB_Class351]
+		[icd_content_model_externalcauses_ProjectKB_Class355]
+		[icd_content_model_externalcauses_ProjectKB_Class359]
+		[icd_content_model_externalcauses_ProjectKB_Class363]
+		[icd_content_model_externalcauses_ProjectKB_Class367]
+		[icd_content_model_externalcauses_ProjectKB_Class369]
+		[icd_content_model_externalcauses_ProjectKB_Class373]
+		[icd_content_model_externalcauses_ProjectKB_Class377]
+		[icd_content_model_externalcauses_ProjectKB_Class381]))
 
 ([XY_Instance_1088] of  Property_List
 
@@ -6325,19 +8749,6 @@
 	(y 0))
 
 ([XY_Instance_1097] of  Property_List
-)
-
-([XY_Instance_1098] of  Widget
-
-	(height 0)
-	(is_hidden FALSE)
-	(name "http://www.w3.org/2002/07/owl#versionInfo")
-	(property_list [XY_Instance_1099])
-	(width 0)
-	(x 0)
-	(y 0))
-
-([XY_Instance_1099] of  Property_List
 )
 
 ([XY_Instance_1100] of  Widget

@@ -1,1 +1,0 @@
-Set deprecation and obsolete flags for properties retired in the new External Causes post-coordination content model.
