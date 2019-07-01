@@ -1,0 +1,1 @@
+Added further details (e.g. properties to represent scales) for alternative severity post-coordination axes.
