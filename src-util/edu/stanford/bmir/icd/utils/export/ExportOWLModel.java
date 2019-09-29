@@ -16,7 +16,9 @@ import edu.stanford.smi.protege.ui.ProjectManager;
 import edu.stanford.smi.protege.util.Log;
 import edu.stanford.smi.protegex.owl.database.OWLDatabaseModel;
 import edu.stanford.smi.protegex.owl.jena.JenaOWLModel;
+import edu.stanford.smi.protegex.owl.jena.creator.JenaCreator;
 import edu.stanford.smi.protegex.owl.model.OWLModel;
+import edu.stanford.smi.protegex.owl.ui.widget.ModalProgressBarManager;
 import edu.stanford.smi.protegex.owl.writer.rdfxml.rdfwriter.OWLModelAllTripleStoresWriter;
 
 public class ExportOWLModel {
@@ -82,7 +84,11 @@ public class ExportOWLModel {
 			log.info("This is not an OWL database project. Abort");
 			return;
 		}
-		OntModel newModel = ((OWLDatabaseModel) owlModel).getOntModel();
+		
+		 JenaCreator creator = new JenaCreator(owlModel, false, null, null);
+		 OntModel newModel = creator.createOntModel();
+		
+		//OntModel newModel = ((OWLDatabaseModel) owlModel).getOntModel();
 		OWLDatabaseModel dbModel = (OWLDatabaseModel) owlModel;
 		String xmlBase = dbModel.getTripleStoreModel().getActiveTripleStore().getOriginalXMLBase();
 		String defaultNS = dbModel.getNamespaceManager().getDefaultNamespace();
