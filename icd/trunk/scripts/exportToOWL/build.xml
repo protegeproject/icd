@@ -61,6 +61,7 @@
 		      	<classpath refid = "project.classpath"/>	        	
 	 			<arg value="${pprj.file}"/>	
 	        	<arg value="${export.file}"/>	
+	        	<arg value="${export.type}"/>	
 	        </java>
 	 </target>
 	
