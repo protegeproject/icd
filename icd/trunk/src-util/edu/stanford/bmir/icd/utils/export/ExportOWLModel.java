@@ -86,6 +86,7 @@ public class ExportOWLModel {
 		}
 		
 		 JenaCreator creator = new JenaCreator(owlModel, false, null, null);
+		 creator.setProcessImports(false);
 		 OntModel newModel = creator.createOntModel();
 		
 		//OntModel newModel = ((OWLDatabaseModel) owlModel).getOntModel();
