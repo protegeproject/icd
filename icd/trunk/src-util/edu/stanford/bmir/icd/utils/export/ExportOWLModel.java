@@ -8,9 +8,14 @@ import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import com.hp.hpl.jena.ontology.OntModel;
+import com.hp.hpl.jena.util.FileUtils;
+
 import edu.stanford.smi.protege.model.Project;
 import edu.stanford.smi.protege.ui.ProjectManager;
 import edu.stanford.smi.protege.util.Log;
+import edu.stanford.smi.protegex.owl.database.OWLDatabaseModel;
+import edu.stanford.smi.protegex.owl.jena.JenaOWLModel;
 import edu.stanford.smi.protegex.owl.model.OWLModel;
 import edu.stanford.smi.protegex.owl.writer.rdfxml.rdfwriter.OWLModelAllTripleStoresWriter;
 
@@ -22,8 +27,8 @@ public class ExportOWLModel {
 	// private static ICDContentModel icdContentModel;
 
 	public static void main(String[] args) throws Exception {
-		if (args.length < 2) {
-			System.out.println("Usage: ExportOWLModel db_pprj_file_name exported_owl_filename");
+		if (args.length < 3) {
+			System.out.println("Usage: ExportOWLModel db_pprj_file_name exported_owl_filename [NATIVE|JENA]");
 			return;
 		}
 
@@ -43,10 +48,18 @@ public class ExportOWLModel {
 		}
 
 		URI fileURI = (new File(args[1])).toURI();
-		log.info("Started the OWL export to " + fileURI + " on: " + new Date());
-		
-		writeOWLModel(fileURI);
-		
+		String exportConfig = args[2];
+		boolean isNativeExport = exportConfig == null || exportConfig.equalsIgnoreCase("NATIVE") ? true : false;
+
+		log.info("Started the " + (isNativeExport ? "native" : "Jena") + " OWL export to " + fileURI + " on: "
+				+ new Date());
+
+		if (isNativeExport == true) {
+			writeOWLModelNative(fileURI);
+		} else {
+			writeOWLModelJena(fileURI);
+		}
+
 		log.info("Ended export of OWL file: " + new Date());
 
 		/*
@@ -54,15 +67,38 @@ public class ExportOWLModel {
 		 */
 	}
 
-	private static void writeOWLModel(URI fileURI) throws Exception {
+	private static void writeOWLModelNative(URI fileURI) throws Exception {
 		try {
 			OWLModelAllTripleStoresWriter writer = new OWLModelAllTripleStoresWriter(owlModel, fileURI, true);
 			writer.write();
 		} catch (Exception ex) {
-			log.log(Level.SEVERE, "Failed to save file: " +fileURI + ". Message: "+ ex.getMessage(), ex);
+			log.log(Level.SEVERE, "Failed to save file: " + fileURI + ". Message: " + ex.getMessage(), ex);
 			throw ex;
 		}
+	}
 
+	private static void writeOWLModelJena(URI fileURI) {
+		if (owlModel instanceof OWLDatabaseModel == false) {
+			log.info("This is not an OWL database project. Abort");
+			return;
+		}
+		OntModel newModel = ((OWLDatabaseModel) owlModel).getOntModel();
+		OWLDatabaseModel dbModel = (OWLDatabaseModel) owlModel;
+		String xmlBase = dbModel.getTripleStoreModel().getActiveTripleStore().getOriginalXMLBase();
+		String defaultNS = dbModel.getNamespaceManager().getDefaultNamespace();
+		if (xmlBase == null) {
+			if (defaultNS != null && defaultNS.endsWith("#")) {
+				xmlBase = defaultNS.substring(0, defaultNS.length() - 1);
+			}
+		}
+		try {
+			File file = new File(fileURI);
+			// TT: writing to langXMl rather than langXMLAbbrev might be more efficient for
+			// DB mode; to be checked
+			JenaOWLModel.save(file, newModel, FileUtils.langXML, defaultNS, xmlBase);
+		} catch (Throwable t) {
+			Log.getLogger().log(Level.SEVERE, "Errors at exporting the OWL Database to OWL file", t);
+		}
 	}
 
 }
