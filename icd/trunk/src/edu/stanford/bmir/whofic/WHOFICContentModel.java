@@ -1352,7 +1352,36 @@ public class WHOFICContentModel {
     public Collection<RDFResource> getAllowedPostcoorcdinationSpecifications(RDFSNamedClass icdClass) {
         return icdClass.getPropertyValues(getAllowedPostcoordinationAxesProperty());
     }
+    
+    /*
+     * Utilities for common terms
+     */  
+    
+    public String getTermLabel(RDFSNamedClass icdClass, RDFProperty icdTermProp) {
+    	RDFResource termInst =  getTerm(icdClass, icdTermProp);
+    	return (termInst == null ? null : (String) termInst.getPropertyValue(getLabelProperty()));
+    }
 
+    public String getTitleLabel(RDFSNamedClass icdClass) {
+    	return getTermLabel(icdClass, getIcdTitleProperty());
+    }
+    
+    public Collection<String> getTermLabels(RDFSNamedClass icdClass, RDFProperty icdTermProp) {
+    	List<String> labels = new ArrayList<String>();
+    	Collection<RDFResource> termInstances = getTerms(icdClass, icdTermProp);
+    	for (RDFResource termInst : termInstances) {
+			String label = (String) termInst.getPropertyValue(getLabelProperty());
+			if (label != null) {
+				labels.add(label);
+			}
+		}
+    	return labels;
+    }
+    
+    public Collection<String> getSynonymLabels(RDFSNamedClass icdClass) {
+    	return getTermLabels(icdClass, getSynonymProperty());
+    }
+    
     /*
      * TAG management methods
      */
