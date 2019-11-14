@@ -18,12 +18,11 @@ import edu.stanford.smi.protegex.owl.database.OWLDatabaseModel;
 import edu.stanford.smi.protegex.owl.jena.JenaOWLModel;
 import edu.stanford.smi.protegex.owl.jena.creator.JenaCreator;
 import edu.stanford.smi.protegex.owl.model.OWLModel;
-import edu.stanford.smi.protegex.owl.ui.widget.ModalProgressBarManager;
 import edu.stanford.smi.protegex.owl.writer.rdfxml.rdfwriter.OWLModelAllTripleStoresWriter;
 
-public class ExportOWLModel {
+public class ExportOWLFromDB {
 
-	private static Logger log = Log.getLogger(ExportOWLModel.class);
+	private static Logger log = Log.getLogger(ExportOWLFromDB.class);
 
 	private static OWLModel owlModel;
 	// private static ICDContentModel icdContentModel;
