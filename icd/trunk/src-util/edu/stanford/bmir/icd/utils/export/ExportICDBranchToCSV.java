@@ -17,8 +17,8 @@ import edu.stanford.smi.protege.util.SystemUtilities;
 import edu.stanford.smi.protegex.owl.model.OWLModel;
 import edu.stanford.smi.protegex.owl.model.RDFSNamedClass;
 
-public class ExportOntologyBranchToCSV {
-	private final static Logger log = Log.getLogger(ExportOntologyBranchToCSV.class);
+public class ExportICDBranchToCSV {
+	private final static Logger log = Log.getLogger(ExportICDBranchToCSV.class);
 	
 	private static final String COL_SEPARATOR = "\t";
 	private static final String VALUE_SEPARATOR = "*";
