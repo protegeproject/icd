@@ -155,6 +155,7 @@ public class WHOFICContentModel {
     private RDFProperty referencedValueProperty;
 
     private RDFProperty isObsoleteProperty;
+    private RDFProperty isDeprecatedProperty;
     private RDFProperty publicIdProperty;
 
     private RDFProperty childrenOrderProperty;
@@ -833,6 +834,13 @@ public class WHOFICContentModel {
         return isObsoleteProperty;
     }
 
+    public RDFProperty getIsDeprecatedProperty() {
+        if (isDeprecatedProperty == null) {
+        	isDeprecatedProperty = owlModel.getRDFProperty(WHOFICContentModelConstants.IS_DEPRECATED_PROP);
+        }
+        return isDeprecatedProperty;
+    }
+
     public RDFProperty getPublicIdProperty() {
         if (publicIdProperty == null) {
             publicIdProperty = owlModel.getRDFProperty(WHOFICContentModelConstants.PUBLIC_ID_PROP);
@@ -1163,6 +1171,16 @@ public class WHOFICContentModel {
         //term.addLabel(label, lang); //TODO: BP does not handle languages in literals, so ignore for the moment
         term.addLabel(label, null);
     }
+    
+    public boolean isDeprecatedTerm(RDFResource term) {
+    	Object isDeprecatedValue = term.getPropertyValue(getIsDeprecatedProperty());
+    	return isDeprecatedValue != null && isDeprecatedValue instanceof Boolean && ((Boolean)isDeprecatedValue);
+    }
+    
+    public void setIsDeprecated(RDFResource term, boolean isDeprecated) {
+    	term.setPropertyValue(getIsDeprecatedProperty(), isDeprecated);
+    }
+    
 
     /*
      * Claml References

@@ -1,0 +1,1 @@
+Added isDeprecated boolean data property to be able to mark any languge term (e.g. index terms) as deprecated.
