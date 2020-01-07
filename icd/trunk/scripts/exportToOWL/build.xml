@@ -1,5 +1,5 @@
 <?xml version = "1.0" encoding = "utf-8"?>
-<project name = "Export to OWL file" default = "run">    
+<project name = "Export to OWL file" default = "run_export_to_owl">    
    <property file="export.properties"/>  
    <property name = "owl.path"         value = "edu.stanford.smi.protegex.owl"/>   
    <property name = "owl.plugin.path"  value = "${protege.home}/plugins/${owl.path}"/>
@@ -52,7 +52,7 @@
     </target>
       
 	
-	 <target name="run" depends="checkProtegeLibsAndReport">
+	 <target name="run_export_to_owl" depends="checkProtegeLibsAndReport">
 	        <java 
 			fork="true" 
 	        	dir="." 
@@ -64,5 +64,18 @@
 	        	<arg value="${export.type}"/>	
 	        </java>
 	 </target>
+
+	 <target name="run_export_branch_to_owl" depends="checkProtegeLibsAndReport">
+		        <java 
+				fork="true" 
+		        	dir="." 
+		            	classname="edu.stanford.bmir.icd.utils.export.ExportICDBranchToOWL"
+	                        maxmemory="${heap.size.max}">
+			      	<classpath refid = "project.classpath"/>	        	
+		 			<arg value="${pprj.file}"/>	
+		        	<arg value="${export.topclass}"/>	
+		        	<arg value="${export.file}"/>	
+		        </java>
+		 </target>
 	
 </project>
