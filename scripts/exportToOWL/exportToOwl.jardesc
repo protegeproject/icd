@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="WINDOWS-1252" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <jardesc>
     <jar path="icd/scripts/exportToOWL/lib/exportToOwl.jar"/>
     <options buildIfNeeded="true" compress="true" descriptionLocation="/icd/scripts/exportToOWL/exportToOwl.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="false" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
     <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
     <selectedProjects/>
-    <manifest generateManifest="true" mainClassHandleIdentifier="=icd/src-util&lt;edu.stanford.bmir.icd.utils.export{ExportOWLModel.java[ExportOWLModel" manifestLocation="" manifestVersion="1.0" reuseManifest="false" saveManifest="false" usesManifest="true">
+    <manifest generateManifest="true" mainClassHandleIdentifier="=icd/src-util&lt;edu.stanford.bmir.icd.utils.export{ExportOWLFromDB.java[ExportOWLFromDB" manifestLocation="" manifestVersion="1.0" reuseManifest="false" saveManifest="false" usesManifest="true">
         <sealing sealJar="false">
             <packagesToSeal/>
             <packagesToUnSeal/>
