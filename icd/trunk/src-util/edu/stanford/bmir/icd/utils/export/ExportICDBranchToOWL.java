@@ -147,14 +147,17 @@ public class ExportICDBranchToOWL {
 		for (RDFSNamedClass sourceClass : sourceClasses) {
 			exportClass(sourceClass);
 			if (i % 100 == 0) {
-				log.info("Exported " + i + "classes");
+				log.info("Exported " + i + " classes");
 			}
 			i++;
 		}
 		
 		log.info("Started adding subclass rels");
+		
 		addSuperClses(sourceClasses);
+		
 		log.info("Ended adding subclass rels");
+	
 		targetOwlModel.getOWLNamedClass(sourceTopClass.getName()).addSuperclass(targetOwlModel.getOWLThingClass());
 	}
 
@@ -187,12 +190,21 @@ public class ExportICDBranchToOWL {
 	private static void exportClass(RDFSNamedClass sourceOwlClass) {
 		try {
 			OWLNamedClass targetOWLCls = targetOwlModel.createOWLNamedClass(sourceOwlClass.getName());
-			targetOWLCls.addPropertyValue(skosPrefLabelProp, cm.getTitleLabel(sourceOwlClass));
-			targetOWLCls.addPropertyValue(skosDefProp, cm.getTermLabel(sourceOwlClass, cm.getDefinitionProperty()));
+			
+			String titleLabel = cm.getTitleLabel(sourceOwlClass);
+			if (titleLabel != null) {
+				targetOWLCls.addPropertyValue(skosPrefLabelProp, titleLabel);
+			}
+			
+			String defLabel = cm.getTermLabel(sourceOwlClass, cm.getDefinitionProperty());
+			if (defLabel != null) {
+				targetOWLCls.addPropertyValue(skosDefProp, defLabel);
+			}
+			
 			createSyns(sourceOwlClass, targetOWLCls);
     	} 
     	catch (Exception e) {
-			log.severe("Could not export: " + sourceOwlClass);
+			log.severe("Could not export: " + sourceOwlClass + ": " + e.getMessage());
 		}
 	}
 
