@@ -24,13 +24,18 @@ import edu.stanford.smi.protegex.owl.model.RDFSNamedClass;
 public class ExportICDBranchToOWL {
 	private final static Logger log = Log.getLogger(ExportICDBranchToOWL.class);
 	
-	private final static String TARGET_ONT_NAME = "http://who.int/icd_flattened/anatomy";
-	private final static String TARGET_SYN_PROP = "http://who.int/icd_flattened/synonym";
+	private final static String TARGET_ONT_NAME = "http://who.int/icd";
+	
+	private final static String SKOS_ALT_LABEL = "http://www.w3.org/2004/02/skos/core#altLabel";
+	private final static String SKOS_PREF_LABEL = "http://www.w3.org/2004/02/skos/core#prefLabel";
+	private final static String SKOS_DEF = "http://www.w3.org/2004/02/skos/core#definition";
 	
     private static OWLModel sourceOwlModel;
     private static JenaOWLModel targetOwlModel;
     private static RDFSNamedClass sourceTopClass;
     private static RDFProperty targetSynProp;
+    private static RDFProperty skosPrefLabelProp;
+    private static RDFProperty skosDefProp;
     
     private static ICDContentModel cm;
    
@@ -119,7 +124,9 @@ public class ExportICDBranchToOWL {
 			creator.create(errors);
 			owlModel = creator.getOwlModel();
 			
-			targetSynProp = owlModel.createAnnotationProperty(TARGET_SYN_PROP);
+			targetSynProp = owlModel.createAnnotationProperty(SKOS_ALT_LABEL);
+			skosPrefLabelProp = owlModel.createAnnotationProperty(SKOS_PREF_LABEL);
+			skosDefProp = owlModel.createAnnotationProperty(SKOS_DEF);
 		} catch (OntologyLoadException e) {
 			log.log(Level.SEVERE, e.getMessage(), e);
 		}
@@ -127,21 +134,34 @@ public class ExportICDBranchToOWL {
 	}
 
 	private static void exportBranch() {
+		
+		log.info("Getting classes to export .. ");
 		Collection<RDFSNamedClass> sourceClasses = getClassesToExport();
+		log.info("Retrieved " + sourceClasses.size() + " classes to export.");
+		
 		sourceClasses = new ArrayList<RDFSNamedClass>(sourceClasses);
 		sourceClasses.add(sourceTopClass);
 		
+		int i = 0;
+		
 		for (RDFSNamedClass sourceClass : sourceClasses) {
 			exportClass(sourceClass);
+			if (i % 100 == 0) {
+				log.info("Exported " + i + "classes");
+			}
+			i++;
 		}
 		
+		log.info("Started adding subclass rels");
 		addSuperClses(sourceClasses);
+		log.info("Ended adding subclass rels");
 		targetOwlModel.getOWLNamedClass(sourceTopClass.getName()).addSuperclass(targetOwlModel.getOWLThingClass());
 	}
 
 	private static void addSuperClses(Collection<RDFSNamedClass> sourceClasses) {
+		int i = 0 ;
 		for (RDFSNamedClass sourceCls : sourceClasses) {
-			Collection<RDFSNamedClass> sourceSuperClses = sourceCls.getSuperclasses(false);
+			Collection<RDFSNamedClass> sourceSuperClses = cm.getRDFSNamedClassList(sourceCls.getSuperclasses(false));
 			for (RDFSNamedClass sourceSuperCls : sourceSuperClses) {
 				if (sourceSuperCls.getSuperclasses(true).contains(sourceTopClass) || sourceSuperCls.equals(sourceTopClass)) {
 					try {
@@ -149,6 +169,12 @@ public class ExportICDBranchToOWL {
 						OWLNamedClass targetSuperCls = targetOwlModel.getOWLNamedClass(sourceSuperCls.getName());
 						targetCls.addSuperclass(targetSuperCls);
 						targetCls.removeSuperclass(targetOwlModel.getOWLThingClass());
+						
+						if (i % 100 == 0) {
+							log.info("Added subclasses for " + i + "classes");
+						}
+						i++;
+						
 					} catch (Exception e) {
 						log.log(Level.WARNING, "Error at adding superclasses for " + sourceCls.getName() + ", " + sourceCls.getBrowserText());
 					}
@@ -161,7 +187,8 @@ public class ExportICDBranchToOWL {
 	private static void exportClass(RDFSNamedClass sourceOwlClass) {
 		try {
 			OWLNamedClass targetOWLCls = targetOwlModel.createOWLNamedClass(sourceOwlClass.getName());
-			targetOWLCls.addPropertyValue(targetOwlModel.getRDFSLabelProperty(), cm.getTitleLabel(sourceOwlClass));
+			targetOWLCls.addPropertyValue(skosPrefLabelProp, cm.getTitleLabel(sourceOwlClass));
+			targetOWLCls.addPropertyValue(skosDefProp, cm.getTermLabel(sourceOwlClass, cm.getDefinitionProperty()));
 			createSyns(sourceOwlClass, targetOWLCls);
     	} 
     	catch (Exception e) {
@@ -178,7 +205,7 @@ public class ExportICDBranchToOWL {
 
 
 	private static Collection<RDFSNamedClass> getClassesToExport() {
-		return sourceTopClass.getSubclasses(true);
+		return cm.getRDFSNamedClassList(sourceTopClass.getSubclasses(true));
 	}
 
     

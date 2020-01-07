@@ -68,6 +68,7 @@ public class ExportICDBranchToCSV {
 		
 		try {
 			exportBranch();
+			csvWriter.flush();
 			csvWriter.close();
 		}
 		catch (Throwable t) {
@@ -90,24 +91,34 @@ public class ExportICDBranchToCSV {
 		//export children of top class
 		Collection<RDFSNamedClass> classes = getClassesToExport();
 		
+		log.info("Ended retrieving classes to export");
+		log.info("Start exporting classes ..");
+		
+		int i = 0;
+		
 		for (RDFSNamedClass owlClass : classes) {
 			exportClass(owlClass);
+			
+			i++;
+			if (i % 100 == 0) {
+				log.info("Exported " + i + " classes");
+			}
 		}
 	}
 
 	private static void exportClass(RDFSNamedClass owlClass) {
-		String id = owlClass.getName();
-		String title = cm.getTitleLabel(owlClass);
-		String syns = getExportString(cm.getSynonymLabels(owlClass));
-		String superclses = getSuperclsesExportString(owlClass);
-		
 		try {
-        	csvWriter.write(toCsvField(id) + COL_SEPARATOR + toCsvField(title) + COL_SEPARATOR +
-        			toCsvField(syns) + COL_SEPARATOR + toCsvField(superclses));
-        	csvWriter.newLine();
-    	} 
-    	catch (IOException ioe) {
-			log.severe("Could not export line for: " + owlClass);
+			String id = owlClass.getName();
+			String title = cm.getTitleLabel(owlClass);
+			String syns = getExportString(cm.getSynonymLabels(owlClass));
+			String superclses = getSuperclsesExportString(owlClass);
+
+			csvWriter.write(toCsvField(id) + COL_SEPARATOR + toCsvField(title) + COL_SEPARATOR + toCsvField(syns)
+					+ COL_SEPARATOR + toCsvField(superclses));
+			csvWriter.newLine();
+			csvWriter.flush();
+		} catch (Exception e) {
+			log.severe("Could not export: " + owlClass);
 		}
 	}
 
@@ -126,7 +137,9 @@ public class ExportICDBranchToCSV {
 
 	private static String getSuperclsesExportString(RDFSNamedClass owlClass) {
 		StringBuffer s = new StringBuffer();
-		for (RDFSNamedClass superCls : (Collection<RDFSNamedClass>) owlClass.getSuperclasses(false)) {
+		Collection<RDFSNamedClass> superClses = cm.getRDFSNamedClassCollection(owlClass.getSuperclasses(false));
+	
+		for (RDFSNamedClass superCls : superClses) {
 			s.append(superCls.getName());
 			s.append(VALUE_SEPARATOR);
 		}
@@ -139,7 +152,7 @@ public class ExportICDBranchToCSV {
 	
 	
 	private static Collection<RDFSNamedClass> getClassesToExport() {
-		return topClass.getSubclasses(true);
+		return cm.getRDFSNamedClassCollection(topClass.getSubclasses(true));
 	}
 
 	
