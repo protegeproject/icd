@@ -66,6 +66,7 @@ public class WHOFICContentModelConstants {
 
     public final static String ICD_CODE_PROP = NS + "icdCode";
     public final static String ICD_TITLE_PROP = NS + "icdTitle";
+    public final static String FULLY_SPECIFIED_NAME_PROP = NS + "fullySpecifiedName";
     public final static String CLAML_KIND_PROP = NS + "clamlKind";
     public final static String CLAML_USAGE_PROP = NS + "clamlUsage";
     public final static String TEXT_PROP = NS + "text";
@@ -81,6 +82,7 @@ public class WHOFICContentModelConstants {
     public final static String BASE_EXCLUSION_PROP = NS + "baseExclusion";
     public final static String SORTING_LABEL_PROP = NS + "sortingLabel";
     public final static String EXTERNAL_REFERENCE_PROP = NS + "externalReference";
+    public final static String REFERENCED_CATEGORY_PROP = NS + "referencedCategory";
 
     @Deprecated
     public final static String INCLUSION_PROP = NS + "inclusion";
