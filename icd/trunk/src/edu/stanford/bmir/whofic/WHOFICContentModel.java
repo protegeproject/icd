@@ -88,6 +88,7 @@ public class WHOFICContentModel {
      * Properties
      */
     private RDFProperty icdTitleProperty;
+    private RDFProperty fullySpecifiedNameProperty;
     private RDFProperty icdCodeProperty;
     private RDFProperty kindProperty;
     private RDFProperty usageProperty;
@@ -103,6 +104,7 @@ public class WHOFICContentModel {
     private RDFProperty baseExclusionProperty;
     private RDFProperty sortingLabelProperty;
     private RDFProperty externalReferenceProperty;
+    private RDFProperty referencedCategoryProperty;
 
     private RDFProperty inclusionProperty;
     private RDFProperty exclusionProperty;
@@ -440,6 +442,14 @@ public class WHOFICContentModel {
         return icdTitleProperty;
     }
 
+
+    public RDFProperty getFullySpecifiedNameProperty() {
+        if (fullySpecifiedNameProperty == null) {
+        	fullySpecifiedNameProperty = owlModel.getRDFProperty(WHOFICContentModelConstants.FULLY_SPECIFIED_NAME_PROP);
+        }
+        return fullySpecifiedNameProperty;
+    }
+
     public RDFProperty getIcdCodeProperty() {
         if (icdCodeProperty == null) {
             icdCodeProperty = owlModel.getRDFProperty(WHOFICContentModelConstants.ICD_CODE_PROP);
@@ -538,6 +548,13 @@ public class WHOFICContentModel {
             externalReferenceProperty = owlModel.getRDFProperty(WHOFICContentModelConstants.EXTERNAL_REFERENCE_PROP);
         }
         return externalReferenceProperty;
+    }
+    
+    public RDFProperty getReferencedCategoryProperty() {
+    	if (referencedCategoryProperty == null) {
+    		referencedCategoryProperty = owlModel.getRDFProperty(WHOFICContentModelConstants.REFERENCED_CATEGORY_PROP);
+    	}
+    	return referencedCategoryProperty;
     }
 
     @Deprecated
