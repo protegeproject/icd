@@ -105,7 +105,7 @@ public class DeleteRetiredClasses {
 			for (String className : classes) {
 				OWLNamedClass owlClass = owlModel.getOWLNamedClass(className);
 				if (owlClass == null) {
-					log.log(Level.WARNING,className + " not found. Cannot be deleted.");
+					//log.log(Level.WARNING,className + " not found. Cannot be deleted.");
 					//System.out.println(className + " not found. Cannot be deleted.");
 				}
 				else {
@@ -145,7 +145,7 @@ public class DeleteRetiredClasses {
 			directSubclasses = (Collection<OWLClass>) owlClass.getSubclasses(false);
 			
 			if (directSubclasses.isEmpty()) {
-				//log.info("Deleting class " + owlClass + " (" + owlClass.getBrowserText() + ")");
+				log.info("Deleting class " + owlClass + " (" + owlClass.getBrowserText() + ")");
 				owlClass.delete();
 			}
 			else {
