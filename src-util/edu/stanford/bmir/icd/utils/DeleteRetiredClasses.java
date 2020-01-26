@@ -145,7 +145,7 @@ public class DeleteRetiredClasses {
 			directSubclasses = (Collection<OWLClass>) owlClass.getSubclasses(false);
 			
 			if (directSubclasses.isEmpty()) {
-				log.info("Deleting class " + owlClass + " (" + owlClass.getBrowserText() + ")");
+				//log.info("Deleting class " + owlClass + " (" + owlClass.getBrowserText() + ")");
 				owlClass.delete();
 			}
 			else {
