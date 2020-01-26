@@ -11,17 +11,18 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.TimeZone;
-
-import org.apache.log4j.Logger;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import edu.stanford.smi.protege.model.Project;
 import edu.stanford.smi.protege.ui.ProjectManager;
+import edu.stanford.smi.protege.util.Log;
 import edu.stanford.smi.protegex.owl.model.OWLClass;
 import edu.stanford.smi.protegex.owl.model.OWLModel;
 import edu.stanford.smi.protegex.owl.model.OWLNamedClass;
 
 public class DeleteRetiredClasses {
-	private static transient Logger log = Logger.getLogger(DeleteRetiredClasses.class);
+	private static transient Logger log = Log.getLogger(DeleteRetiredClasses.class);
 
 	private static final String COL_SEPARATOR = "\t";
 	private static final int CLASS_COUNT_FOR_STATUS_NOTIFICATION = 10;
@@ -29,7 +30,7 @@ public class DeleteRetiredClasses {
 	
 	public static void main(String[] args) {
         if (args.length != 2) {
-            System.out.println("Expected two arguments: pprj_file_name  file_containing_list_of_classes_to_be_deleted");
+            log.info("Expected two arguments: pprj_file_name  file_containing_list_of_classes_to_be_deleted");
             return;
         }
 
@@ -50,7 +51,7 @@ public class DeleteRetiredClasses {
         long timeElapsed = System.currentTimeMillis() - startTime;
         SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss.SSS");
         sdf.setTimeZone(TimeZone.getTimeZone("UTC"));
-        System.out.println(String.format("Deleted % d classes. Total time: %d mins %.3f seconds (or %s)", 
+        log.info(String.format("Deleted % d classes. Total time: %d mins %.3f seconds (or %s)", 
         		currClassCount,
         		timeElapsed / (60*1000), timeElapsed / 1000.0,
         		sdf.format(timeElapsed)));
@@ -63,7 +64,7 @@ public class DeleteRetiredClasses {
 		try {
 			csvReader = new BufferedReader(new FileReader(csvFile));
 		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+			log.log(Level.SEVERE, e.getMessage(), e);
 		}
 		
 		List<String> classesToBeDeleted = new ArrayList<String>();
@@ -74,13 +75,13 @@ public class DeleteRetiredClasses {
 				processLine(row, classesToBeDeleted);
 			}
 		} catch (IOException e) {
-			log.error("IO Exception at processing FMA row: " + row, e);
+			log.log(Level.SEVERE, "IO Exception at processing FMA row: " + row, e);
 		}
 
 		try {
 			csvReader.close();
 		} catch (IOException e) {
-			e.printStackTrace();
+			log.log(Level.SEVERE, e.getMessage(), e);
 		}
 		
 		return classesToBeDeleted;
@@ -104,8 +105,8 @@ public class DeleteRetiredClasses {
 			for (String className : classes) {
 				OWLNamedClass owlClass = owlModel.getOWLNamedClass(className);
 				if (owlClass == null) {
-					log.warn(className + " not found. Cannot be deleted.");
-					System.out.println(className + " not found. Cannot be deleted.");
+					log.log(Level.WARNING,className + " not found. Cannot be deleted.");
+					//System.out.println(className + " not found. Cannot be deleted.");
 				}
 				else {
 					owlClasses.add(owlClass);
@@ -144,7 +145,7 @@ public class DeleteRetiredClasses {
 			directSubclasses = (Collection<OWLClass>) owlClass.getSubclasses(false);
 			
 			if (directSubclasses.isEmpty()) {
-				System.out.println("Deleting class " + owlClass + " (" + owlClass.getBrowserText() + ")");
+				log.info("Deleting class " + owlClass + " (" + owlClass.getBrowserText() + ")");
 				owlClass.delete();
 			}
 			else {
@@ -152,19 +153,21 @@ public class DeleteRetiredClasses {
 			}
 	
 			if (++currClassCount % CLASS_COUNT_FOR_STATUS_NOTIFICATION == 0) {
-				System.out.println(String.format("Deleted: %d. %d to go.", currClassCount, owlClasses.size()));
+				log.info(String.format("Deleted: %d. %d to go.", currClassCount, owlClasses.size()));
 			}
 		}
 		catch (Throwable e) {
-			e.printStackTrace();
+			log.log(Level.SEVERE, e.getMessage(), e);
 		}
 	}
 
 
 	private static void removeParentRelation(OWLClass child, OWLClass parent) {
 		child.removeSuperclass(parent);
-		System.out.println("Removing superclass " + parent + " (" + parent.getBrowserText() + ")" +
+		log.info("Removing superclass " + parent + " (" + parent.getBrowserText() + ")" +
 				" of class " + child + " (" + child.getBrowserText() + ")");
+		//System.out.println("Removing superclass " + parent + " (" + parent.getBrowserText() + ")" +
+		//		" of class " + child + " (" + child.getBrowserText() + ")");
 	}
 
 
