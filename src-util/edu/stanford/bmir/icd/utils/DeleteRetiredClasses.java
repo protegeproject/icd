@@ -145,11 +145,18 @@ public class DeleteRetiredClasses {
 			directSubclasses = (Collection<OWLClass>) owlClass.getSubclasses(false);
 			
 			if (directSubclasses.isEmpty()) {
-				log.info("Deleting class " + owlClass + " (" + owlClass.getBrowserText() + ")");
+//				log.info("Deleting class " + owlClass + " (" + owlClass.getBrowserText() + ")");
 				owlClass.delete();
 			}
 			else {
 				directSubclasses.stream().forEach((c) -> removeParentRelation(c, owlClass));
+
+				directSubclasses = (Collection<OWLClass>) owlClass.getSubclasses(false);
+				
+				if (directSubclasses.isEmpty()) {
+//					log.info("Deleting class " + owlClass + " (" + owlClass.getBrowserText() + ")");
+					owlClass.delete();
+				}
 			}
 	
 			if (++currClassCount % CLASS_COUNT_FOR_STATUS_NOTIFICATION == 0) {
