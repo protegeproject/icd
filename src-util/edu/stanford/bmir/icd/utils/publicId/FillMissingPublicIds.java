@@ -35,7 +35,7 @@ import edu.stanford.smi.protegex.owl.model.RDFSNamedClass;
  */
 public class FillMissingPublicIds {
 
-	private static Logger log = Log.getLogger(AddPublicId.class);
+	private static Logger log = Log.getLogger(FillMissingPublicIds.class);
 
 	private static String QUERY = "select frame from icd_umbrella a where "
 			+ "(slot = \"http://www.w3.org/1999/02/22-rdf-syntax-ns#type\" and "
