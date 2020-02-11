@@ -45,7 +45,6 @@ public class UpdateLuceneIndexProjectPlugin extends ProjectPluginAdapter {
         OWLModel owlModel = (OWLModel) kb;
 
         if (owlModel.getRDFProperty(ICDContentModelConstants.ICD_TITLE_PROP) == null ||
-                owlModel.getRDFProperty(ICDContentModelConstants.SORTING_LABEL_PROP) == null ||
                 owlModel.getRDFProperty(ICDContentModelConstants.LABEL_PROP) == null) {
             return; //most likely not a ICD project
         }
@@ -75,13 +74,12 @@ public class UpdateLuceneIndexProjectPlugin extends ProjectPluginAdapter {
                     OWLModel owlModel = (OWLModel) frame.getKnowledgeBase();
 
                     final RDFProperty icdTitleProp = owlModel.getRDFProperty(ICDContentModelConstants.ICD_TITLE_PROP);
-                    final RDFProperty sortingLabelProp = owlModel.getRDFProperty(ICDContentModelConstants.SORTING_LABEL_PROP);
                     final RDFProperty labelProp = owlModel.getRDFProperty(ICDContentModelConstants.LABEL_PROP);
 
                     Frame changedFrame = null;
                     try {
                         Slot slot = event.getSlot();
-                        if (slot.equals(sortingLabelProp) || slot.equals(icdTitleProp)) {
+                        if (slot.equals(icdTitleProp)) {
                             BrowserTextChanged.browserTextChanged(changedFrame = event.getFrame());
                         } else if (slot.equals(labelProp)) {
                             Collection<Reference> refs = event.getFrame().getReferences(1);
