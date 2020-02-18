@@ -355,4 +355,22 @@ public class ICDContentModel extends WHOFICContentModel {
         return icdClass.getPropertyValues(getLinearizationICD10TabulationProperty());
     }
 
+
+	public static boolean isFixedScalePCProp(String propName) {
+		return ICDContentModelConstants.FIXED_SCALE_PC_AXES_PROPERTIES_LIST.contains(propName);
+	}
+	
+	public static boolean isScalePCProp(String propName) {
+		return ICDContentModelConstants.SCALE_PC_AXES_PROPERTIES_LIST.contains(propName);
+	}
+	
+	public static boolean isHierarchicalPCProp(String propName) {
+		return ICDContentModelConstants.HIERARCHICAL_PC_AXES_PROPERTIES_LIST.contains(propName);
+	}
+	
+	public static boolean isLogicalDefinitionWithHasValueRestriction(String propName) {
+		return isFixedScalePCProp(propName) || isScalePCProp(propName);
+	}
+
+
 }
