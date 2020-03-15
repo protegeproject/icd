@@ -5,10 +5,10 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.logging.Level;
 
+import edu.stanford.bmir.whofic.IcdIdGenerator;
 import edu.stanford.bmir.whofic.icd.ICDContentModel;
 import edu.stanford.smi.protege.model.Project;
 import edu.stanford.smi.protege.ui.ProjectManager;
-import edu.stanford.smi.protege.util.IDGenerator;
 import edu.stanford.smi.protege.util.Log;
 import edu.stanford.smi.protegex.owl.model.OWLModel;
 import edu.stanford.smi.protegex.owl.model.OWLNamedClass;
@@ -124,7 +124,7 @@ public class FixLinearizations {
         Collection<RDFResource> missingLinSpecs = removeLinearizationParentsAndGetMissingLinearizations(c, linViewInstances);
 
     	for (RDFResource linViewInstance : missingLinSpecs) {
-            RDFResource linSpec = linearizationSpecificationClass.createInstance(IDGenerator.getNextUniqueId());
+            RDFResource linSpec = linearizationSpecificationClass.createInstance(IcdIdGenerator.getNextUniqueId(owlModel));
             linSpec.setPropertyValue(linearizationViewProp, linViewInstance);
 
             c.addPropertyValue(linearizationProp, linSpec);

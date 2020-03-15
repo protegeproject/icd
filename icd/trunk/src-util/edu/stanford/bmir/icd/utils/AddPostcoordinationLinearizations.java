@@ -7,10 +7,10 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import edu.stanford.bmir.whofic.IcdIdGenerator;
 import edu.stanford.bmir.whofic.icd.ICDContentModel;
 import edu.stanford.smi.protege.model.Project;
 import edu.stanford.smi.protege.ui.ProjectManager;
-import edu.stanford.smi.protege.util.IDGenerator;
 import edu.stanford.smi.protege.util.Log;
 import edu.stanford.smi.protegex.owl.model.OWLModel;
 import edu.stanford.smi.protegex.owl.model.OWLNamedClass;
@@ -115,7 +115,7 @@ public class AddPostcoordinationLinearizations {
 
     private static void addLinearization(RDFSNamedClass cat, RDFIndividual linearizationViewInst ) {
         try{
-            RDFResource linSpec = postCoordAxesSpecCls.createInstance(IDGenerator.getNextUniqueId());
+            RDFResource linSpec = postCoordAxesSpecCls.createInstance(IcdIdGenerator.getNextUniqueId(cat.getOWLModel()));
             linSpec.setPropertyValue(linearizationViewProp, linearizationViewInst);
             cat.addPropertyValue(allowedPostCoordAxesProp, linSpec);
         } catch (Exception e) {
