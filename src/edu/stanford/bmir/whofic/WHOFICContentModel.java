@@ -18,7 +18,6 @@ import edu.stanford.smi.protege.model.ModelUtilities;
 import edu.stanford.smi.protege.model.ValueType;
 import edu.stanford.smi.protege.ui.FrameComparator;
 import edu.stanford.smi.protege.util.CollectionUtilities;
-import edu.stanford.smi.protege.util.IDGenerator;
 import edu.stanford.smi.protege.util.Log;
 import edu.stanford.smi.protegex.owl.model.OWLClass;
 import edu.stanford.smi.protegex.owl.model.OWLExistentialRestriction;
@@ -970,7 +969,7 @@ public class WHOFICContentModel {
 
     protected void createPostcoordinationSpecifications(RDFSNamedClass cls, RDFSNamedClass pcAxesSpecificationClass, RDFProperty pcAxesProp) {
         for (RDFResource linView : getLinearizationViewsFromParents(cls, pcAxesProp)) {
-            RDFResource linSpec = pcAxesSpecificationClass.createInstance(IDGenerator.getNextUniqueId());
+            RDFResource linSpec = pcAxesSpecificationClass.createInstance(IcdIdGenerator.getNextUniqueId(owlModel));
             linSpec.setPropertyValue(getLinearizationViewProperty(), linView);
 
             cls.addPropertyValue(pcAxesProp, linSpec);
@@ -1022,7 +1021,7 @@ public class WHOFICContentModel {
     }
 
     public RDFSNamedClass getICDClass(String name) {
-        return owlModel.getRDFSNamedClass(name);
+        return KBUtil.getRDFSNamedClass(owlModel, name);
     }
 
     public void addClassMetadata(RDFSNamedClass cls, String code, String kind, String usage) {
@@ -1053,7 +1052,7 @@ public class WHOFICContentModel {
      */
 
     public RDFResource createTerm(RDFSNamedClass type) {
-        RDFResource term = (RDFResource) owlModel.createInstance(IDGenerator.getNextUniqueId(), CollectionUtilities.createCollection(type));
+        RDFResource term = (RDFResource) owlModel.createInstance(IcdIdGenerator.getNextUniqueId(owlModel), CollectionUtilities.createCollection(type));
         return term;
     }
 
@@ -1234,7 +1233,7 @@ public class WHOFICContentModel {
 
 
     public RDFResource createOrderedChildIndex(RDFSNamedClass child, int index) {
-        RDFResource indexInst = getChildOrderClass().createRDFIndividual(IDGenerator.getNextUniqueId());
+        RDFResource indexInst = getChildOrderClass().createRDFIndividual(IcdIdGenerator.getNextUniqueId(owlModel));
         indexInst.setPropertyValue(getOrderedChildProperty(), child);
         indexInst.setPropertyValue(getOrderedChildIndexProperty(), index);
         return indexInst;

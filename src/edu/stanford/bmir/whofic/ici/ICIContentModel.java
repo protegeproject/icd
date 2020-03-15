@@ -5,9 +5,9 @@ import java.util.Collection;
 import java.util.List;
 import java.util.logging.Logger;
 
+import edu.stanford.bmir.whofic.IcdIdGenerator;
 import edu.stanford.bmir.whofic.WHOFICContentModel;
 import edu.stanford.smi.protege.util.CollectionUtilities;
-import edu.stanford.smi.protege.util.IDGenerator;
 import edu.stanford.smi.protege.util.Log;
 import edu.stanford.smi.protegex.owl.model.OWLModel;
 import edu.stanford.smi.protegex.owl.model.RDFProperty;
@@ -120,7 +120,7 @@ public class ICIContentModel extends WHOFICContentModel {
     @SuppressWarnings("deprecation")
     public RDFSNamedClass createICICategory(String name, Collection<String> superclsesName, boolean createSuperclasses, boolean createICDSpecificEntities) {
         if (name == null) {
-            name = IDGenerator.getNextUniqueId();
+            name = IcdIdGenerator.getNextUniqueId(owlModel);
         }
         RDFSNamedClass cls = getICDClass(name, true);
 
@@ -180,7 +180,7 @@ public class ICIContentModel extends WHOFICContentModel {
 
     private void createLinearizationSpecifications(RDFSNamedClass cls, RDFSNamedClass linSpecificationClass, RDFProperty linProp) {
         for (RDFResource linView : getLinearizationViewsFromParents(cls, linProp)) {
-            RDFResource linSpec = linSpecificationClass.createInstance(IDGenerator.getNextUniqueId());
+            RDFResource linSpec = linSpecificationClass.createInstance(IcdIdGenerator.getNextUniqueId(owlModel));
             linSpec.setPropertyValue(getLinearizationViewProperty(), linView);
             //set default grouping to FALSE
             linSpec.setPropertyValue(getIsGroupingProperty(), Boolean.FALSE);
