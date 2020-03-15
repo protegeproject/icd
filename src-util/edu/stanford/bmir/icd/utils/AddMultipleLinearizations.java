@@ -7,10 +7,10 @@ import java.util.Date;
 import java.util.List;
 import java.util.logging.Logger;
 
+import edu.stanford.bmir.whofic.IcdIdGenerator;
 import edu.stanford.bmir.whofic.icd.ICDContentModel;
 import edu.stanford.smi.protege.model.Project;
 import edu.stanford.smi.protege.ui.ProjectManager;
-import edu.stanford.smi.protege.util.IDGenerator;
 import edu.stanford.smi.protege.util.Log;
 import edu.stanford.smi.protegex.owl.model.OWLModel;
 import edu.stanford.smi.protegex.owl.model.OWLNamedClass;
@@ -197,7 +197,7 @@ public class AddMultipleLinearizations {
     private static void addLinearization(RDFSNamedClass cat) {
     	for (RDFIndividual linearizationViewInst : linearizationViewInstances) {
 	        try{
-	            RDFResource linSpec = linearizationSpecificationClass.createInstance(IDGenerator.getNextUniqueId());
+	            RDFResource linSpec = linearizationSpecificationClass.createInstance((IcdIdGenerator.getNextUniqueId(cat.getOWLModel())));
 	            linSpec.setPropertyValue(linearizationViewProp, linearizationViewInst);
 	            if (isPartOf != null) {
 	            	linSpec.setPropertyValue(isIncludedInLinearizationProp, isPartOf.booleanValue());

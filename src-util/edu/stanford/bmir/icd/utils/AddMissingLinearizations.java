@@ -11,20 +11,20 @@ import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 
-import jxl.Sheet;
-import jxl.Workbook;
-import jxl.read.biff.BiffException;
+import edu.stanford.bmir.whofic.IcdIdGenerator;
 import edu.stanford.bmir.whofic.icd.ICDContentModel;
 import edu.stanford.bmir.whofic.icd.ICDContentModelConstants;
 import edu.stanford.smi.protege.model.Project;
 import edu.stanford.smi.protege.ui.ProjectManager;
-import edu.stanford.smi.protege.util.IDGenerator;
 import edu.stanford.smi.protege.util.Log;
 import edu.stanford.smi.protegex.owl.model.OWLModel;
 import edu.stanford.smi.protegex.owl.model.OWLNamedClass;
 import edu.stanford.smi.protegex.owl.model.RDFProperty;
 import edu.stanford.smi.protegex.owl.model.RDFResource;
 import edu.stanford.smi.protegex.owl.model.RDFSNamedClass;
+import jxl.Sheet;
+import jxl.Workbook;
+import jxl.read.biff.BiffException;
 
 /**
  * This script adds some of the ICD-10 Historic linearization specifications 
@@ -222,7 +222,7 @@ public class AddMissingLinearizations {
 	    			linSpec = recyclableLinSpecs.get( recycledLinSpecCntr ++ );
 	    		}
 	    		else {
-	    			linSpec = linearizationSpecificationClass.createInstance(IDGenerator.getNextUniqueId());
+	    			linSpec = linearizationSpecificationClass.createInstance(IcdIdGenerator.getNextUniqueId(owlModel));
 	            	c.addPropertyValue(linearizationProp, linSpec);
 	    		}
 	            linSpec.setPropertyValue(linearizationViewProp, linViewInstance);
@@ -271,7 +271,7 @@ public class AddMissingLinearizations {
     			linSpec = recyclableLinSpecs.get( recycledLinSpecCntr ++ );
     		}
     		else {
-    			linSpec = historicLinearizationSpecificationClass.createInstance(IDGenerator.getNextUniqueId());
+    			linSpec = historicLinearizationSpecificationClass.createInstance(IcdIdGenerator.getNextUniqueId(owlModel));
             	c.addPropertyValue(icd10LinearizationProp, linSpec);
     		}
             linSpec.setPropertyValue(linearizationViewProp, linViewInstance);
