@@ -4,6 +4,7 @@ import edu.stanford.smi.protege.model.Cls;
 import edu.stanford.smi.protege.model.KnowledgeBase;
 import edu.stanford.smi.protege.model.Slot;
 
+@Deprecated
 public class ICDModel {
 	
 	private KnowledgeBase kb;

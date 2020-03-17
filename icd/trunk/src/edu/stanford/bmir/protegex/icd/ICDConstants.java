@@ -1,5 +1,6 @@
 package edu.stanford.bmir.protegex.icd;
 
+@Deprecated
 public class ICDConstants {
 
 	final static String ICD_METACLASS = "ICD_meta_class";
