@@ -18,6 +18,7 @@ import edu.stanford.smi.protege.util.AllowableAction;
 import edu.stanford.smi.protege.util.ComponentUtilities;
 import edu.stanford.smi.protege.widget.ClsesTab;
 
+@Deprecated
 public class ICDTab extends ClsesTab {
     private static final long serialVersionUID = -8916256673675254058L;
     private ClsesPanel clsesPanel;
