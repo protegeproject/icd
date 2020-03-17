@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import edu.stanford.bmir.whofic.IcdIdGenerator;
+import edu.stanford.bmir.whofic.KBUtil;
 import edu.stanford.bmir.whofic.WHOFICContentModel;
 import edu.stanford.smi.protege.util.CollectionUtilities;
 import edu.stanford.smi.protege.util.Log;
@@ -201,12 +202,21 @@ public class ICDContentModel extends WHOFICContentModel {
      * Create methods
      */
 
+    /**
+     * This method is deprecated, as it does not behave as expected.
+     * 
+     * Use {@link #createICDCategory(String, Collection) instead}.
+     * 
+     * This method will also create the superclasses of this class, 
+     * but it will not add the right metaclasses to the superclasses.
+     * 
+     * @param name of ICD class to be created; if null, one will be generated.
+     * @param superclsName - the superclass of the class to be created. The superclass will be created, if it does not exist.
+     * @return
+     */
+    @Deprecated
     public RDFSNamedClass createICDCategory(String name, String superclsName) {
         return createICDCategory(name, CollectionUtilities.createCollection(superclsName), true, true); //method is used by the CLAML parser
-    }
-
-    public RDFSNamedClass createICDCategory(String name, Collection<String> superclsesName) {
-        return createICDCategory(name, superclsesName, false, true);
     }
 
     /**
@@ -220,11 +230,38 @@ public class ICDContentModel extends WHOFICContentModel {
      *
      * @param name                      - name of the new category
      * @param superclsesName            - names of the parents
-     * @param createSuperclasses        - true to create parents, if they don't already exist (only the CLAML parser needs to set this to true, all the rest, should use false)
      * @param createICDSpecificEntities
      * @return
      */
-    @SuppressWarnings("deprecation")
+    public RDFSNamedClass createICDCategory(String name, Collection<String> superclsesName) {
+        return createICDCategory(name, superclsesName, false, true);
+    }
+
+    /**
+     * Creates an ICD Category under the given parents. Default actions:
+     * <ul>
+     * <li>Add the correct metaclasses (if regular disease, use metaclasses of ICDCategory; if subclass of External causes, use metaclasses of
+     * External Causes</li>
+     * <li>Create the linearization values: morbidity - is included, and mortality - is not included</li>
+     * <li>Set the biologicalSex to NA </li>
+     * </ul>
+     *
+     * This method is deprecated, as it does not behave as expected, if the createSuperClasses flag is set to true.
+     * If it will create also the superclasses, they will not have the right metaclasses set.
+     * 
+     * Use instead {@link #createICDCategory(String, Collection)}.
+     *
+     * @param name                      - name of the new category
+     * @param superclsesName            - names of the parents
+     * @param createSuperclasses        - true to create parents, 
+     * 										if they don't already exist (only the CLAML parser needs to set this to true, 
+     * 										all the rest, should use false)
+     * 									WARNING: If it creates the superclasses, it will not add the right metaclasses.
+     * 
+     * @param createICDSpecificEntities
+     * @return
+     */
+    @Deprecated
     public RDFSNamedClass createICDCategory(String name, Collection<String> superclsesName, boolean createSuperclasses, boolean createICDSpecificEntities) {
         if (name == null) {
             name = IcdIdGenerator.getNextUniqueId(owlModel);
@@ -312,12 +349,16 @@ public class ICDContentModel extends WHOFICContentModel {
      * It gets or creates and ICDClass. If it creates, it will not add the metaclasses.
      * To create an ICDMetaclass, it is better to use {@link #createICDCategory(String, Collection)}
      *
+     * This method is deprecated, as it does not behave as expected. If the class will be
+     * created, the correct metaclasses will not be added. Use instead {@link #createICDCategory(String, Collection)}.
+     *
      * @param name   - name of the class to be retrieved or created
      * @param create - true to create class if it doesn't exit
      * @return - the class
      */
+    @Deprecated
     private RDFSNamedClass getICDClass(String name, boolean create) {
-        RDFSNamedClass cls = owlModel.getRDFSNamedClass(name);
+        RDFSNamedClass cls = getICDClass(name);
         if (cls == null && create) {
             cls = owlModel.createOWLNamedClass(name);
             cls.addSuperclass(owlModel.getOWLThingClass());
@@ -326,7 +367,7 @@ public class ICDContentModel extends WHOFICContentModel {
     }
 
     public RDFSNamedClass getICDClass(String name) {
-        return owlModel.getRDFSNamedClass(name);
+        return KBUtil.getRDFSNamedClass(owlModel, name);
     }
 
     /**
