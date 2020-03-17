@@ -1006,13 +1006,16 @@ public class WHOFICContentModel {
     /**
      * It gets or creates and ICDClass. If it creates, it will not add the metaclasses.
      * To create an ICDMetaclass, it is better to use {@link #createICDCategory(String, Collection)}
+     * 
+     * This method deprecated. Use instead:  {@link #createICDCategory(String, Collection)}
      *
      * @param name   - name of the class to be retrieved or created
      * @param create - true to create class if it doesn't exit
      * @return - the class
      */
+    @Deprecated
     private RDFSNamedClass getICDClass(String name, boolean create) {
-        RDFSNamedClass cls = owlModel.getRDFSNamedClass(name);
+        RDFSNamedClass cls = getICDClass(name);
         if (cls == null && create) {
             cls = owlModel.createOWLNamedClass(name);
             cls.addSuperclass(owlModel.getOWLThingClass());
@@ -1202,9 +1205,9 @@ public class WHOFICContentModel {
      * Claml References
      */
 
-    @SuppressWarnings("deprecation")
+
     public RDFResource createClamlReference() {
-        return (RDFResource) owlModel.createInstance(null, getClamlReferencesClass());
+        return (RDFResource) owlModel.createInstance(IcdIdGenerator.getNextUniqueId(owlModel), CollectionUtilities.createCollection(getClamlReferencesClass()));
     }
 
     public void fillClamlReference(RDFResource clamlRef, String text, String usage, RDFResource ref) {
@@ -1304,7 +1307,7 @@ public class WHOFICContentModel {
      * @return
      */
     public RDFSNamedClass getICDCategory(String id) {
-        return owlModel.getRDFSNamedClass(id);
+        return KBUtil.getRDFSNamedClass(owlModel, id);
     }
 
     /**
@@ -1811,10 +1814,10 @@ public class WHOFICContentModel {
 			if (necProps.contains(property)) {
 				OWLRestriction restr = getPropertyRestrictionFromClassExpression(necClassExpression, property);
 				if (restr instanceof OWLHasValue) {
-					((OWLHasValue)restr).setHasValue(owlModel.getRDFResource(newValue));
+					((OWLHasValue)restr).setHasValue(KBUtil.getRDFResource(owlModel, newValue));
 				}
 				else if (restr instanceof OWLSomeValuesFrom) {
-					((OWLSomeValuesFrom)restr).setSomeValuesFrom(owlModel.getRDFResource(newValue));
+					((OWLSomeValuesFrom)restr).setSomeValuesFrom(KBUtil.getRDFResource(owlModel, newValue));
 				}
 				else {
 					//this must be an error
@@ -1829,10 +1832,10 @@ public class WHOFICContentModel {
 			else if (defProps.contains(property)) {
 				OWLRestriction restr = getPropertyRestrictionFromClassExpression(eqClassExpression, property);
 				if (restr instanceof OWLHasValue) {
-					((OWLHasValue)restr).setHasValue(owlModel.getRDFResource(newValue));
+					((OWLHasValue)restr).setHasValue(KBUtil.getRDFResource(owlModel, newValue));
 				}
 				else if (restr instanceof OWLSomeValuesFrom) {
-					((OWLSomeValuesFrom)restr).setSomeValuesFrom(owlModel.getRDFResource(newValue));
+					((OWLSomeValuesFrom)restr).setSomeValuesFrom(KBUtil.getRDFResource(owlModel, newValue));
 				}
 				else {
 					//this must be an error
@@ -1870,16 +1873,16 @@ public class WHOFICContentModel {
 			OWLIntersectionClass classExpression, String property, String newValue) {
 		//TODO Do we need additional information to know whether we should create a hasValue or
 		//or a someValueOf property restriction
-		RDFResource value = owlModel.getRDFResource(newValue);
+		RDFResource value = KBUtil.getRDFResource(owlModel, newValue);
 		if (value instanceof OWLClass) {
 			OWLSomeValuesFrom someValuesFromRestr = owlModel.createOWLSomeValuesFrom();
-			someValuesFromRestr.setOnProperty(owlModel.getOWLProperty(property));
+			someValuesFromRestr.setOnProperty(KBUtil.getOWLProperty(owlModel, property));
 			someValuesFromRestr.setSomeValuesFrom(value);
 			classExpression.addOperand(someValuesFromRestr);
 		}
 		else {
 			OWLHasValue hasValueRestr = owlModel.createOWLHasValue();
-			hasValueRestr.setOnProperty(owlModel.getOWLProperty(property));
+			hasValueRestr.setOnProperty(KBUtil.getOWLProperty(owlModel, property));
 			hasValueRestr.setHasValue(value);
 			classExpression.addOperand(hasValueRestr);
 		}
