@@ -2,6 +2,8 @@ package edu.stanford.bmir.protegex.icd.lucene;
 import java.util.Collection;
 import java.util.logging.Level;
 
+import org.apache.lucene.search.BooleanQuery;
+
 import edu.stanford.bmir.whofic.icd.ICDContentModelConstants;
 import edu.stanford.smi.protege.event.FrameAdapter;
 import edu.stanford.smi.protege.event.FrameEvent;
@@ -17,6 +19,7 @@ import edu.stanford.smi.protege.plugin.ProjectPluginAdapter;
 import edu.stanford.smi.protege.query.api.QueryApi;
 import edu.stanford.smi.protege.query.api.QueryConfiguration;
 import edu.stanford.smi.protege.query.indexer.BrowserTextChanged;
+import edu.stanford.smi.protege.query.menu.QueryUIConfiguration.BooleanConfigItem;
 import edu.stanford.smi.protege.util.Log;
 import edu.stanford.smi.protegex.owl.model.OWLModel;
 import edu.stanford.smi.protegex.owl.model.RDFProperty;
@@ -55,12 +58,25 @@ public class UpdateLuceneIndexProjectPlugin extends ProjectPluginAdapter {
         if (qConf == null) {
             return;
         }
-
+        
+        configLuceneSearch(owlModel);
+        
         kbListener = getKbListener();
         owlModel.addFrameListener(kbListener);
     }
 
-    private FrameListener getKbListener() {
+    private void configLuceneSearch(OWLModel owlModel) {
+		//make sure that we search only classes
+    	owlModel.getProject().setClientInformation(BooleanConfigItem.SEARCH_FOR_CLASSES, true);
+    	owlModel.getProject().setClientInformation(BooleanConfigItem.SEARCH_FOR_PROPERTIES, false);
+    	owlModel.getProject().setClientInformation(BooleanConfigItem.SEARCH_FOR_INDIVIDUALS, false);
+		
+    	//set a bigger boolean query results limit, 100000 - approx no of classes
+    	//System.setProperty("org.apache.lucene.maxClauseCount", "100000");
+    	BooleanQuery.setMaxClauseCount(100000);
+	}
+
+	private FrameListener getKbListener() {
         if (kbListener == null) {
             kbListener = new FrameAdapter() {
                 @Override
