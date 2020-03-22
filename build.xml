@@ -23,6 +23,8 @@
               location="${protege.home}/plugins/edu.stanford.bmir.protegex.bp.ref/bioportalReference.jar"/>
     <property name="lucene.lib"
               location="${protege.home}/plugins/edu.stanford.smi.protegex.query.lucene/luceneQueryPlugin.jar"/>
+	<property name="lucene2.lib"
+	              location="${protege.home}/plugins/edu.stanford.smi.protegex.query.lucene/lucene-core.jar"/>
     <!--
     #  ********** Finding Protege Libraries. *************
     -->
@@ -34,12 +36,14 @@
                 <available file="${protege.lib}" type="file"/>
                 <available file="${protege.owl.lib}" type="file"/>
                 <available file="${lucene.lib}" type="file"/>
+            	<available file="${lucene2.lib}" type="file"/>
             </and>
         </condition>
         <path id="project.classpath">
             <pathelement location="${protege.lib}"/>
             <pathelement location="${protege.owl.lib}"/>
             <pathelement location="${lucene.lib}"/>
+        	<pathelement location="${lucene2.lib}"/>
             <fileset dir="${lib}"/>
             <fileset dir="${export.lib}"/>
         </path>
