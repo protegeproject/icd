@@ -1200,6 +1200,14 @@ public class WHOFICContentModel {
     	term.setPropertyValue(getIsDeprecatedProperty(), isDeprecated);
     }
     
+    public void addPostCoordinationValueReferenceTermToClass(
+    		RDFSNamedClass cls, RDFProperty pcAxisProperty, 
+    		RDFSNamedClass termType, RDFResource termReferencedValue) {
+    	RDFResource referenceTerm = termType.createRDFIndividual(null);
+    	referenceTerm.setPropertyValue(getReferencedValueProperty(), termReferencedValue);
+        addTermToClass(cls, pcAxisProperty, referenceTerm);
+    }
+
 
     /*
      * Claml References
