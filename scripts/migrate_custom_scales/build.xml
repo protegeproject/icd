@@ -68,13 +68,7 @@
 	            	classname="edu.stanford.bmir.icd.utils.MigrateCustomScales"
                         maxmemory="${heap.size.max}">
 		      	<classpath refid = "project.classpath"/>
-	 		<arg value="${pprj.file}"/>
-	 		<arg value="${property.option1}"/>
-	 		<arg value="${property.option2}"/>
-	 		<arg value="${property.option3}"/>
-	 		<arg value="${property.option4}"/>
-	 		<arg value="${property.option5}"/>
-	 		<arg value="${property.option6}"/>
+	 		<arg line="${pprj.file} ${property.options}"/>
 	        </java>
 	 </target>
 
