@@ -3,6 +3,7 @@ package edu.stanford.bmir.icd.utils;
 import java.net.URI;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.logging.Level;
 
 import edu.stanford.smi.protege.model.KnowledgeBase;
 import edu.stanford.smi.protege.model.Project;
@@ -27,7 +28,15 @@ public class ImportUtils {
 	 */
 	public static OWLModel openOWLModel(URI pprjFileUri) {
 		Log.getLogger().info("\nOpening OWL model... ");
-		return (OWLModel)openKb(pprjFileUri);
+		KnowledgeBase kb = openKb(pprjFileUri);
+		if (kb instanceof OWLModel) {
+			return (OWLModel)kb;
+		}
+		else {
+			Log.getLogger().log(Level.SEVERE, String.format(
+					"Protege KB for %s is not of type OWLModel: %s", pprjFileUri, kb));
+			return null;
+		}
 	}
 
 	/**

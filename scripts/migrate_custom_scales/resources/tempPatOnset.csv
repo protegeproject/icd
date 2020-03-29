@@ -1,0 +1,5 @@
+ent.frame (Entity ID)	ent.slot (Property)	ent.short_value (Scale reference term ID)	Scale Top Class ID
+http://who.int/icd#15257_b047675b_e7d6_403d_8ca9_f59ab5570ff4	http://who.int/icd#hasPatternActivityClinicalStatusScale	http://who.int/icd#PostcoordinationTemporalPatternAndOnsetScaleTerm_17	http://who.int/icd#7494_6649f4ab_e2bf_447e_94a9_797fc66c1078
+http://who.int/icd#1575_52a94b8b_65cc_439a_b8e5_57058c37b3ab	http://who.int/icd#hasPatternActivityClinicalStatusScale	http://who.int/icd#PostcoordinationTemporalPatternAndOnsetScaleTerm_2485	http://who.int/icd#7494_6649f4ab_e2bf_447e_94a9_797fc66c1078
+http://who.int/icd#A09	http://who.int/icd#hasPatternActivityClinicalStatusScale	http://who.int/icd#PostcoordinationTemporalPatternAndOnsetScaleTerm_250	http://who.int/icd#7494_6649f4ab_e2bf_447e_94a9_797fc66c1078
+http://who.int/icd#2340_dd0250d2_e8cd_4c48_a93f_7997cc1c8b07	http://who.int/icd#hasPatternActivityClinicalStatusScale	http://who.int/icd#PostcoordinationTemporalPatternAndOnsetScaleTerm_574	http://who.int/icd#7494_6649f4ab_e2bf_447e_94a9_797fc66c1078
