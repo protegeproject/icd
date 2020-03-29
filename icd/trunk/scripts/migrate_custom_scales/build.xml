@@ -1,0 +1,93 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<project name = "Migrate custom scale references to value hierarchies" default = "run">    
+   <property file="build.properties"/>  
+   <property name = "owl.path"         value = "edu.stanford.smi.protegex.owl"/>   
+   <property name = "owl.plugin.path"  value = "${protege.home}/plugins/${owl.path}"/>
+   <property name = "icd.path"         value = "${protege.home}/plugins/edu.stanford.bmir.icd.misc"/>
+   <property name = "lib"             location = "./lib"/>
+
+   <!-- 
+     #  ********** Finding Protege Libraries. *************
+   -->
+
+   <target name="checkProtegeHome">
+       <condition property="protege.home.set">
+           <available file="${protege.home}/protege.jar" type="file"/>
+       </condition>
+   </target>
+
+   <target name="useProtegeHome" depends="checkProtegeHome" if="protege.home.set">
+       <echo message="Using Protege Home = ${protege.home} to find protege jars"/>
+       <property name="protege.lib" value="${protege.home}/protege.jar"/>
+       <property name="protege.owl.lib" value="${protege.home}/plugins/${owl.path}/protege-owl.jar"/>   	   
+   </target>
+    
+
+    <target name = "checkProtegeLibs" depends="useProtegeHome">
+      <condition property="libs.found">
+        <and>
+          <available file="${protege.lib}" type = "file"/>
+          <available file="${protege.owl.lib}" type = "file"/>
+        </and>
+      </condition>
+      <path id = "project.classpath">    
+        <pathelement location = "${protege.lib}"/>
+        <pathelement location = "${protege.home}/driver.jar"/>        
+        <fileset dir="${owl.plugin.path}"/>
+      	<fileset dir="${icd.path}"/>      	
+      	<fileset dir="./lib" />
+      </path>
+
+    </target>
+
+    <target name="checkProtegeLibsAndReport" depends="checkProtegeLibs"
+            unless="libs.found">
+      <echo message="Missing protege libraries.  You need to set "/>
+      <echo message="the PROTEGE_HOME environment variable to a"/>
+      <echo message="protege installation directory where the"/>
+      <echo message="appropriate plugins have been installed."/>
+      <echo message="Alternatively set the jar libs in local.properties (protege.lib=...)"/>
+      <echo message="Use the -v option to ant to see what jars are missing."/>
+      <fail message = "missing protege libraries"/>
+    </target>
+      
+
+    <target name="run" depends="checkProtegeLibsAndReport">
+      <echo message="Unlike in case of other scripts, the default 'run' target"/>
+      <echo message="does NOT do anything useful (except checking for dependencies)."/>
+      <echo message="Please specify either the 'runScales' or the 'runLogDef' targets to run the"/>
+      <echo message="MigrateCustomScales and MigrateScalesInLogicalDefinitions respectively."/>
+      <echo message="For a complete migration both targets need to be invoked!"/>
+      <echo message="    e.g. ant runScales runLogDef"/>
+    </target>
+
+	 <target name="runScales" depends="checkProtegeLibsAndReport">
+	        <java 
+			fork="true" 
+	        	dir="." 
+	            	classname="edu.stanford.bmir.icd.utils.MigrateCustomScales"
+                        maxmemory="${heap.size.max}">
+		      	<classpath refid = "project.classpath"/>
+	 		<arg value="${pprj.file}"/>
+	 		<arg value="${property.option1}"/>
+	 		<arg value="${property.option2}"/>
+	 		<arg value="${property.option3}"/>
+	 		<arg value="${property.option4}"/>
+	 		<arg value="${property.option5}"/>
+	 		<arg value="${property.option6}"/>
+	        </java>
+	 </target>
+
+	
+	 <target name="runLogDef" depends="checkProtegeLibsAndReport">
+	        <java 
+			fork="true" 
+	        	dir="." 
+	            	classname="edu.stanford.bmir.icd.utils.MigrateScalesInLogicalDefinitions"
+                        maxmemory="${heap.size.max}">
+		      	<classpath refid = "project.classpath"/>
+	 		<arg value="${pprj.file}"/>
+	        </java>
+	 </target>
+	
+</project>

@@ -39,7 +39,7 @@ public class MigrateScalesInLogicalDefinitions {
 
 	private static URI pprjFileUri = new File(PPRJ_FILE_URI).toURI();
 
-	private static final boolean TEST_RUN = true;
+	private static final boolean TEST_RUN = false;
 	private static final boolean DEBUG = false;
 
 
