@@ -349,7 +349,7 @@ public class SiblingReordering {
      * at the end.
      * @param parent
      * @param cls
-     * @param isSiblingIndexValid - usually coming from a previous computation. If true, it will force
+     * @param isSiblingIndexValid - usually coming from a previous computation. If false, it will force
      * a recreation of the index
      * @return - true if the index is not recreated, or false - otherwise
      */
