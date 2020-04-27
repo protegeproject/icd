@@ -312,7 +312,7 @@ public class ICDContentModel extends WHOFICContentModel {
         createPostcoordinationSpecifications(cls);
 
         //set biologicalSex - default value: N/A (not applicable)
-        cls.addPropertyValue(getBiologicalSexProperty(), owlModel.getRDFResource(ICDContentModelConstants.BIOLOGICAL_SEX_NA));
+        //cls.addPropertyValue(getBiologicalSexProperty(), owlModel.getRDFResource(ICDContentModelConstants.BIOLOGICAL_SEX_NA));
     }
 
 
