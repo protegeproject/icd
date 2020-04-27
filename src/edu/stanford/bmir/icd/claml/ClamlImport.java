@@ -39,27 +39,36 @@ public class ClamlImport {
 	private Map<RDFSNamedClass, List<String>> cls2superclsesNames = new HashMap<RDFSNamedClass, List<String>>();
 
 	/**
-	 * This is just an example on how to use the importer programmatically
+	 * CLAML programmatic import. 
 	 * 
-	 * @param args - no args needed
+	 * @param args - (1) Path to PPRJ file into which to import;
+	 * 				 (2) Path to CLAML file to import;
+	 * 			     (3) Name of top class to import under.
 	 */
 	public static void main(String[] args) {
-		File file = new File("/tmp/icd10_claml.xml");
+		if (args.length < 3) {
+			System.out.println("Expected 3 arguments: (1) Path to PPRJ file into which to import; "
+					+ "(2) Path to CLAML file to import; "
+					+ "(3) Name of top class to import under.");
+			System.exit(1);
+		}
 
 		// load into a file that has the empty content model in it
-		Project prj = Project.loadProjectFromFile("/tmp/icd_content_model_empty.pprj", new ArrayList());
+		Project prj = Project.loadProjectFromFile(args[0], new ArrayList());
 		OWLModel owlModel = (OWLModel) prj.getKnowledgeBase();
 
-		ClamlImport ci = new ClamlImport(owlModel);
-		ci.doImport(file, null);
-
-		log.info("Started saving of OWL file on " + new Date());
 		long t0 = System.currentTimeMillis();
+		ClamlImport ci = new ClamlImport(owlModel);
+		
+		log.info("Starting CLAML import");
+		
+		ci.doImport(new File(args[1]), args[2]);
 
+		log.info("Saving of OWL file on " + new Date());
+		
 		prj.save(new ArrayList());
 
-		log.info("Finished saving OWL file in " + ((System.currentTimeMillis() - t0) / 1000) + " seconds");
-
+		log.info("Finished CLAML import in " + ((System.currentTimeMillis() - t0) / 1000) + " seconds");
 	}
 
 	public ClamlImport(OWLModel owlModel) {
@@ -339,6 +348,7 @@ public class ClamlImport {
 
 	private void cleanup() {
 		termToRefCode.clear();
+		cls2superclsesNames.clear();
 	}
 
 }
