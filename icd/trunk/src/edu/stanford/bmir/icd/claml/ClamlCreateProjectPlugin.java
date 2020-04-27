@@ -1,15 +1,15 @@
 package edu.stanford.bmir.icd.claml;
 
 import java.awt.BorderLayout;
-import java.awt.GridLayout;
 import java.io.File;
 import java.net.URI;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.logging.Level;
 
+import javax.swing.Box;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
+import javax.swing.JTextField;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
@@ -21,7 +21,9 @@ import edu.stanford.smi.protege.model.KnowledgeBaseFactory;
 import edu.stanford.smi.protege.model.Project;
 import edu.stanford.smi.protege.plugin.AbstractCreateProjectPlugin;
 import edu.stanford.smi.protege.plugin.CreateProjectWizard;
+import edu.stanford.smi.protege.util.ComponentFactory;
 import edu.stanford.smi.protege.util.FileField;
+import edu.stanford.smi.protege.util.LabeledComponent;
 import edu.stanford.smi.protege.util.Log;
 import edu.stanford.smi.protege.util.PropertyList;
 import edu.stanford.smi.protege.util.Wizard;
@@ -38,6 +40,7 @@ public class ClamlCreateProjectPlugin extends AbstractCreateProjectPlugin {
     private static final URI CLAML_CM_ONTOLOGY_NAME = URI.create("http://who.int/icd/contentModel");
 
     private File clamlFile;
+    private String topCls;
 
     public ClamlCreateProjectPlugin() {
         super("CLAML Files");
@@ -58,6 +61,10 @@ public class ClamlCreateProjectPlugin extends AbstractCreateProjectPlugin {
     public void setFile(File file) {
         clamlFile = file;
     }
+    
+    public void setTopCls(String topCls) {
+    	this.topCls = topCls;
+    }
 
     @Override
     protected Project buildNewProject(KnowledgeBaseFactory factory) {
@@ -66,7 +73,7 @@ public class ClamlCreateProjectPlugin extends AbstractCreateProjectPlugin {
             try {
                 importClamlCM((OWLModel) project.getKnowledgeBase());
                 ClamlImport clamlImport = new ClamlImport((OWLModel) project.getKnowledgeBase());
-                clamlImport.doImport(clamlFile);
+                clamlImport.doImport(clamlFile, topCls);
             } catch (Exception ex) {
                 Log.getLogger().log(Level.SEVERE, "Exception caught", ex);
                 JOptionPane.showMessageDialog(Application.getMainWindow(), "Could not load " + clamlFile.getAbsolutePath() + "\n" + ex, "Error", JOptionPane.ERROR_MESSAGE);
@@ -125,16 +132,25 @@ public class ClamlCreateProjectPlugin extends AbstractCreateProjectPlugin {
 
         private ClamlCreateProjectPlugin plugin;
         private FileField fileField;
+        private JTextField topClsField;
 
         ClamlFilesWizardPage(Wizard wizard, ClamlCreateProjectPlugin plugin) {
-            super("foo files", wizard);
+            super("CLAML files", wizard);
             this.plugin = plugin;
+            
             fileField = new FileField("CLAML File", null, ".xml", "CLAML Files");
-            JPanel panel = new JPanel(new GridLayout(1, 0));
+            topClsField = ComponentFactory.createTextField();
+            topClsField.setText("http://www.w3.org/2002/07/owl#Thing");
+            
+            Box panel = Box.createVerticalBox();
             panel.add(fileField);
+            panel.add(new LabeledComponent("Top class name (class to import under) - Optional", topClsField));
+            
             setLayout(new BorderLayout());
             add(panel);
+            
             setPageComplete(false);
+            
             fileField.addChangeListener(new ChangeListener() {
                 public void stateChanged(ChangeEvent event) {
                     updatePageComplete();
@@ -150,6 +166,7 @@ public class ClamlCreateProjectPlugin extends AbstractCreateProjectPlugin {
         @Override
         public void onFinish() {
             plugin.setFile(fileField.getFilePath());
+            plugin.setTopCls(topClsField.getText());
         }
     }
 
