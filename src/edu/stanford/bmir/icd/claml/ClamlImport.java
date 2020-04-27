@@ -26,6 +26,17 @@ import edu.stanford.smi.protegex.owl.model.OWLModel;
 import edu.stanford.smi.protegex.owl.model.RDFResource;
 import edu.stanford.smi.protegex.owl.model.RDFSNamedClass;
 
+
+/**
+ * Class that imports a CLAML file. 
+ * 
+ * The class imports the CLAML content into the ICD content model.
+ * 
+ * TODO: add also the public ids to newly created classes
+ * 
+ * @author ttania
+ *
+ */
 public class ClamlImport {
 	private static transient Logger log = Log.getLogger(ClamlImport.class);
 
