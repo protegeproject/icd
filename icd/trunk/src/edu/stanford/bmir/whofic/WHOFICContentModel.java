@@ -1044,7 +1044,10 @@ public class WHOFICContentModel {
             String code = (String) cls.getPropertyValue(getIcdCodeProperty());
             Instance titleInst = (Instance) cls.getPropertyValue(getIcdTitleProperty());
             String title = (String) titleInst.getOwnSlotValue(getLabelProperty());
-            cls.addLabel(code + ". " + title, null);
+            
+            String label = code == null ? title : code + ". " + title;
+            
+            cls.addLabel(label, null);
         } catch (Exception e) {
             log.log(Level.WARNING, "Could not set rdfs:label for " + cls);
         }
@@ -1130,10 +1133,14 @@ public class WHOFICContentModel {
         addTermToClass(cls, getNarrowerProperty(), term);
     }
 
+    public void addBaseIndexTermToClass(RDFSNamedClass cls, RDFResource term) {
+        addTermToClass(cls, getBaseIndexProperty(), term);
+    }
+    
     public void addBaseInclusionTermToClass(RDFSNamedClass cls, RDFResource term) {
         addTermToClass(cls, getIndexBaseInclusionProperty(), term);
     }
-
+    
     public void addSubclassInclusionTermToClass(RDFSNamedClass cls, RDFResource term) {
         addTermToClass(cls, getSubclassBaseInclusionProperty(), term);
     }
@@ -1142,19 +1149,35 @@ public class WHOFICContentModel {
         addTermToClass(cls, getBaseExclusionProperty(), term);
     }
 
+    
+    /**
+     * This method is deprecated. Use instead {@link #createBaseInclusionTerm()}.
+     */
     @Deprecated
     public RDFResource createInclusionTerm() {
         return createTerm(getTermInclusionClass());
     }
 
+    public RDFResource createBaseInclusionTerm() {
+    	return createTerm(getTermBaseInclusionClass());
+    }
+    
     @Deprecated
     public void addInclusionTermToClass(RDFSNamedClass cls, RDFResource term) {
         addTermToClass(cls, getInclusionProperty(), term);
     }
 
+    
+    /**
+     * This method is deprecated. Use instead {@link #createBaseExclusionTerm()}.
+     */
     @Deprecated
     public RDFResource createExclusionTerm() {
         return createTerm(getTermExclusionClass());
+    }
+    
+    public RDFResource createBaseExclusionTerm() {
+    	return createTerm(getTermBaseExclusionClass());
     }
 
     @Deprecated
