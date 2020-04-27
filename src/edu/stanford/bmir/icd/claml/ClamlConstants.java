@@ -7,6 +7,10 @@ public class ClamlConstants {
 	public final static String SUBCLASS_ELEMENT = "SubClass";
 	public final static String REFERENCE_ELEMENT = "Reference";
 
+	//a.k.a qualifiers
+	public final static String MODIFIER_ELEMENT = "Modifier";
+	public final static String MODIFIER_CLASS_ELEMENT = "ModifierClass";
+	
 	public final static String RUBRIC_ELEMENT = "Rubric";
 	public final static String LABEL_ELEMENT = "Label";
 
