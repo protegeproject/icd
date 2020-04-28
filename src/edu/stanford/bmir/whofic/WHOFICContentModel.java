@@ -1058,10 +1058,15 @@ public class WHOFICContentModel {
      */
 
     public RDFResource createTerm(RDFSNamedClass type) {
-        RDFResource term = (RDFResource) owlModel.createInstance(IcdIdGenerator.getNextUniqueId(owlModel), CollectionUtilities.createCollection(type));
+        RDFResource term = createTerm(IcdIdGenerator.getNextUniqueId(owlModel), type);
         return term;
     }
 
+    public RDFResource createTerm(String name, RDFSNamedClass type) {
+        RDFResource term = (RDFResource) owlModel.createInstance(name, CollectionUtilities.createCollection(type));
+        return term;
+    }
+    
     public void fillTerm(RDFResource term, String id, String label, String lang) {
         fillTerm(term, id, label, lang, null);
     }
