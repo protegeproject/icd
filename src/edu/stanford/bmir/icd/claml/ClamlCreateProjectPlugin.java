@@ -41,6 +41,7 @@ public class ClamlCreateProjectPlugin extends AbstractCreateProjectPlugin {
 
     private File clamlFile;
     private String topCls;
+    private String defaultNamespace;
 
     public ClamlCreateProjectPlugin() {
         super("CLAML Files");
@@ -65,7 +66,17 @@ public class ClamlCreateProjectPlugin extends AbstractCreateProjectPlugin {
     public void setTopCls(String topCls) {
     	this.topCls = topCls;
     }
+    
+	public void setDefaultNamespace(String ns) {
+		if (defaultNamespace != null) {
+			defaultNamespace = defaultNamespace.trim();
+		} else {
+			defaultNamespace = "";
+		}
+		this.defaultNamespace = ns;
+	}
 
+	
     @Override
     protected Project buildNewProject(KnowledgeBaseFactory factory) {
         Project project = createNewProject(factory);
@@ -73,7 +84,7 @@ public class ClamlCreateProjectPlugin extends AbstractCreateProjectPlugin {
             try {
                 importClamlCM((OWLModel) project.getKnowledgeBase());
                 ClamlImport clamlImport = new ClamlImport((OWLModel) project.getKnowledgeBase());
-                clamlImport.doImport(clamlFile, topCls);
+                clamlImport.doImport(clamlFile, topCls, defaultNamespace);
             } catch (Exception ex) {
                 Log.getLogger().log(Level.SEVERE, "Exception caught", ex);
                 JOptionPane.showMessageDialog(Application.getMainWindow(), "Could not load " + clamlFile.getAbsolutePath() + "\n" + ex, "Error", JOptionPane.ERROR_MESSAGE);
@@ -132,6 +143,7 @@ public class ClamlCreateProjectPlugin extends AbstractCreateProjectPlugin {
 
         private ClamlCreateProjectPlugin plugin;
         private FileField fileField;
+        private JTextField defaultPrefixField;
         private JTextField topClsField;
 
         ClamlFilesWizardPage(Wizard wizard, ClamlCreateProjectPlugin plugin) {
@@ -139,11 +151,13 @@ public class ClamlCreateProjectPlugin extends AbstractCreateProjectPlugin {
             this.plugin = plugin;
             
             fileField = new FileField("CLAML File", null, ".xml", "CLAML Files");
+            defaultPrefixField = ComponentFactory.createTextField();
             topClsField = ComponentFactory.createTextField();
             topClsField.setText("http://www.w3.org/2002/07/owl#Thing");
             
             Box panel = Box.createVerticalBox();
             panel.add(fileField);
+            panel.add(new LabeledComponent("Default namespace to add to imported classes (e.g., http://who.int/icf#) - Optional", defaultPrefixField));
             panel.add(new LabeledComponent("Top class name (class to import under) - Optional", topClsField));
             
             setLayout(new BorderLayout());
@@ -167,7 +181,9 @@ public class ClamlCreateProjectPlugin extends AbstractCreateProjectPlugin {
         public void onFinish() {
             plugin.setFile(fileField.getFilePath());
             plugin.setTopCls(topClsField.getText());
+            plugin.setDefaultNamespace(defaultPrefixField.getText());
         }
     }
+
 
 }
