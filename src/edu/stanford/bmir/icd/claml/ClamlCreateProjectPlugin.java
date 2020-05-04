@@ -3,6 +3,7 @@ package edu.stanford.bmir.icd.claml;
 import java.awt.BorderLayout;
 import java.io.File;
 import java.net.URI;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.logging.Level;
@@ -129,13 +130,15 @@ public class ClamlCreateProjectPlugin extends AbstractCreateProjectPlugin {
     }
 
     protected URI getClamlDir() {
-        URI clamlURI = null;
         try {
-            clamlURI = ClamlCreateProjectPlugin.class.getResource(PROJECTS_PATH).toURI();
+           URL clamlURL = ClamlCreateProjectPlugin.class.getResource(PROJECTS_PATH);
+           if (clamlURL != null) {
+        	   return clamlURL.toURI();
+           }
         } catch (Throwable e) {
             Log.getLogger().log(Level.WARNING, "Could not find CLAML CM ontology in the CLAML plugin directory.", e);
         }
-        return clamlURI;
+        return null;
     }
 
     class ClamlFilesWizardPage extends WizardPage {
