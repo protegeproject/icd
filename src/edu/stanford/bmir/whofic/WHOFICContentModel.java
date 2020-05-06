@@ -1040,8 +1040,17 @@ public class WHOFICContentModel {
     }
 
     public void addRdfsLabel(RDFSNamedClass cls) {
+    	addRdfsLabel(cls, true);
+    }
+    
+    public void addRdfsLabel(RDFSNamedClass cls, boolean includeCode) {
         try {
-            String code = (String) cls.getPropertyValue(getIcdCodeProperty());
+        	String code = null;
+        	
+        	if (includeCode == true) {
+        		code = (String) cls.getPropertyValue(getIcdCodeProperty());
+        	}
+        	
             Instance titleInst = (Instance) cls.getPropertyValue(getIcdTitleProperty());
             String title = (String) titleInst.getOwnSlotValue(getLabelProperty());
             
