@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -26,6 +27,7 @@ import edu.stanford.smi.protege.util.IDGenerator;
 import edu.stanford.smi.protege.util.Log;
 import edu.stanford.smi.protegex.owl.model.OWLModel;
 import edu.stanford.smi.protegex.owl.model.RDFResource;
+import edu.stanford.smi.protegex.owl.model.RDFSClass;
 import edu.stanford.smi.protegex.owl.model.RDFSNamedClass;
 
 
@@ -35,6 +37,7 @@ import edu.stanford.smi.protegex.owl.model.RDFSNamedClass;
  * The class imports the CLAML content into the ICD content model.
  * 
  * TODO: add also the public ids to newly created classes
+ * 
  * 
  * @author ttania
  *
@@ -52,6 +55,8 @@ public class ClamlImport {
 	private Map<RDFResource, String> termToRefCode = new HashMap<RDFResource, String>();
 	private Map<RDFSNamedClass, List<String>> cls2superclsesNames = new HashMap<RDFSNamedClass, List<String>>();
 
+	private Collection<RDFSNamedClass> visitedClses = new ArrayList<RDFSNamedClass>();
+	
 	/**
 	 * CLAML programmatic import. 
 	 * 
@@ -62,7 +67,8 @@ public class ClamlImport {
 	 */
 	public static void main(String[] args) {
 		if (args.length < 4) {
-			System.out.println("Expected 3 arguments: (1) Path to PPRJ file into which to import; "
+			System.out.println("Expected 4 arguments: "
+					+ "(1) Path to PPRJ file into which to import; "
 					+ "(2) Path to CLAML file to import; "
 					+ "(3) Name of top class to import under; "
 					+ "(4) Default namespace for imported entities.");
@@ -170,15 +176,23 @@ public class ClamlImport {
 	}
 
 	private RDFSNamedClass parseCls(Element el) {
-		RDFSNamedClass cls = null;
+	
 		String code = el.getAttributeValue(ClamlConstants.CODE_ATTR);
 
-		// create it under the top cls, fix parents in post-processing
-		// this is needed to create the appropriate metaclasses
-		cls = cm.createICDCategory(defaultNamespace + code, topClsColl);
+		String clsName = defaultNamespace + code;
 		
-		//TODO: this adds the icdCode, but it may not be the right one for all classifications
-		cls.addPropertyValue(cm.getIcdCodeProperty(), code);
+		//the class might exist already from an imported ontology, e.g., the content model
+		RDFSNamedClass cls = owlModel.getRDFSNamedClass(clsName);
+		
+		if (cls == null) {
+			// create it under the top cls, fix parents in post-processing
+			// this is needed to create the appropriate metaclasses
+			
+			cls = cm.createICDCategory(clsName, topClsColl);
+			
+			//TODO: this adds the icdCode, but it may not be the right one for all classifications
+			cls.addPropertyValue(cm.getIcdCodeProperty(), code);
+		}
 
 		List superClsElems = el.getChildren(ClamlConstants.SUPERCLASS_ELEMENT);
 
@@ -238,8 +252,8 @@ public class ClamlImport {
 		RDFResource term = cm.createTerm(generateId(), cm.getTermTitleClass());
 		parseLabel(cls, term, id, labelElement);
 		cm.addTitleTermToClass(cls, term);
-		// add also the rdfs:label as the code + title for BioPortal
-		cm.addRdfsLabel(cls);
+		// add also the rdfs:label as the title for BioPortal
+		cm.addRdfsLabel(cls, false);
 	}
 
 	private void parseInclusion(RDFSNamedClass cls, String id, Element labelElement) {
@@ -324,7 +338,10 @@ public class ClamlImport {
 	private void postprocess() {
 		addSuperClses();
 		addReferencedCategories();
+		fixMetaclasses();
+		addSiblingOrdering();
 	}
+
 
 	private void addSuperClses() {
 		log.info("Adding superclasses..");
@@ -365,10 +382,103 @@ public class ClamlImport {
 			}
 		}
 	}
+	
+	private void fixMetaclasses() {
+		log.info("Fixing metaclasses..");
+		RDFSNamedClass topCls = owlModel.getRDFSNamedClass(CollectionUtilities.getFirstItem(topClsColl));
+		fixMetaclasses(topCls);
+	}
 
+	private void fixMetaclasses(RDFSNamedClass parentCls) {
+		if (visitedClses.contains(parentCls)) {
+			return;
+		}
+		
+		visitedClses.add(parentCls);
+		
+		for (RDFSClass cls : (Collection<RDFSClass>) parentCls.getSubclasses(false)) {
+			if (cls instanceof RDFSNamedClass) {
+				fixMetaclasses(parentCls, (RDFSNamedClass) cls);
+			}
+		}
+	}
+
+	private void fixMetaclasses(RDFSNamedClass parentCls, RDFSNamedClass cls) {
+		Collection<RDFSNamedClass> parentTypes = parentCls.getRDFTypes();
+		Collection<RDFSNamedClass> childTypes = cls.getRDFTypes();
+		for (RDFSNamedClass parentType : parentTypes) {
+			if (childTypes.contains(parentType) == false) {
+				cls.addRDFType(parentType);
+			}
+		}
+		fixMetaclasses(cls);
+	}
+	
+	private void addSiblingOrdering() {
+		log.info("Adding sibling ordering..");
+		RDFSNamedClass topCls = owlModel.getRDFSNamedClass(CollectionUtilities.getFirstItem(topClsColl));
+		
+		visitedClses.clear();
+		addSiblingOrdering(topCls);
+	}
+
+	private void addSiblingOrdering(RDFSNamedClass parentCls) {
+		if (visitedClses.contains(parentCls)) {
+			return;
+		}
+		
+		visitedClses.add(parentCls);
+		
+		List<RDFSNamedClass> children = getNamedChildren(parentCls);
+		children.sort(getCodeComparator());
+		
+		for (RDFSNamedClass child : children) {
+			cm.addChildToIndex(parentCls, child, true);
+			addSiblingOrdering(child);
+		}
+	}
+
+	private List<RDFSNamedClass> getNamedChildren(RDFSNamedClass parentCls) {
+		List<RDFSClass> children = (List<RDFSClass>) parentCls.getSubclasses(false);
+		List<RDFSNamedClass> namedChildren = new ArrayList<RDFSNamedClass>();
+		for (RDFSClass child : children) {
+			if (child instanceof RDFSNamedClass) {
+				namedChildren.add((RDFSNamedClass) child);
+			}
+		}
+		return namedChildren;
+	}
+	
+	private Comparator<RDFSNamedClass> getCodeComparator() {
+		return new Comparator<RDFSNamedClass>() {
+
+			@Override
+			public int compare(RDFSNamedClass c1, RDFSNamedClass c2) {
+				String code1 = (String) c1.getPropertyValue(cm.getIcdCodeProperty());
+				String code2 = (String) c2.getPropertyValue(cm.getIcdCodeProperty());
+				
+				if (code1 == null && code2 == null) {
+					return 0;
+				}
+				
+				if (code1 == null) {
+					return 1;
+				}
+				
+				if (code2 == null) {
+					return -1;
+				}
+				
+				return code1.compareTo(code2);
+			}
+		};
+	}
+
+	
 	private void cleanup() {
 		termToRefCode.clear();
 		cls2superclsesNames.clear();
+		visitedClses.clear();
 	}
 
 }
