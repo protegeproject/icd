@@ -4,7 +4,7 @@
    <property name = "owl.path"         value = "edu.stanford.smi.protegex.owl"/>   
    <property name = "owl.plugin.path"  value = "${protege.home}/plugins/${owl.path}"/>
    <property name = "icd.path"         value = "${protege.home}/plugins/edu.stanford.bmir.icd.misc"/>
-   <property name = "lib"             location = "./lib"/>
+  
 
    <!-- 
      #  ********** Finding Protege Libraries. *************
@@ -35,7 +35,6 @@
         <pathelement location = "${protege.home}/driver.jar"/>        
         <fileset dir="${owl.plugin.path}"/>
       	<fileset dir="${icd.path}"/>      	
-      	<fileset dir="./lib" />
       </path>
 
     </target>
