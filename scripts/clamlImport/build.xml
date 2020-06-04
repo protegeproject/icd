@@ -59,7 +59,7 @@
                         maxmemory="${heap.size.max}">
 		      	<classpath refid = "project.classpath"/>
 	        	<arg value="${pprj.file}"/>
-	        	<arg value="${icf.file}"/>
+	        	<arg value="${claml.file}"/>
 	 			<arg value="${top.class}"/>
 	        	<arg value="${default.namespace}"/>
 	        </java>
