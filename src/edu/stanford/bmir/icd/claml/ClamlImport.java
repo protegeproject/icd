@@ -189,10 +189,10 @@ public class ClamlImport {
 			// this is needed to create the appropriate metaclasses
 			
 			cls = cm.createICDCategory(clsName, topClsColl);
-			
-			//TODO: this adds the icdCode, but it may not be the right one for all classifications
-			cls.addPropertyValue(cm.getIcdCodeProperty(), code);
 		}
+		
+		//TODO: this adds the icdCode, but it may not be the right one for all classifications
+		cls.addPropertyValue(cm.getIcdCodeProperty(), code);
 
 		List superClsElems = el.getChildren(ClamlConstants.SUPERCLASS_ELEMENT);
 
