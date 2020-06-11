@@ -134,6 +134,7 @@ public class ClamlImport {
 				return CollectionUtilities.createCollection(topClsName);
 			}
 		}
+		log.warning("Could not find top class: " + topClsName + ". Using owl:Thing as top class.");
 		return CollectionUtilities.createCollection(owlModel.getOWLThingClass().getName());
 	}
 
@@ -298,6 +299,7 @@ public class ClamlImport {
 	private void parseLabel(RDFSNamedClass cls, RDFResource term, String id, Element labelElement) {
 		String label = labelElement.getTextTrim();
 		label = label.replace("()", "");
+		label = label.trim();
 
 		String lang = labelElement.getAttributeValue(ClamlConstants.XML_LANG, Namespace.XML_NAMESPACE);
 		cm.fillTerm(term, id, label, lang);
@@ -321,6 +323,10 @@ public class ClamlImport {
 		String code = refElement.getAttributeValue(ClamlConstants.CODE_ATTR);
 		String usage = refElement.getAttributeValue(ClamlConstants.USAGE_ATTR);
 		String text = refElement.getTextTrim();
+		
+		if (text != null) {
+			text = text.trim();
+		}
 		
 		cm.fillClamlReference(ref, text, usage, code);
 		cm.addClamlRefToTerm(term, ref);
@@ -375,6 +381,14 @@ public class ClamlImport {
 					log.warning("Could not find referenced class: " + code);
 				} else {
 					term.setPropertyValue(cm.getReferencedCategoryProperty(), refCls);
+					
+					//remove ref label if the same as ref class title
+					String refTitle = cm.getTitleLabel(refCls);
+					String termLabel = (String) term.getPropertyValue(cm.getLabelProperty());
+					
+					if (refTitle.trim().equalsIgnoreCase(termLabel.trim())) {
+						term.removePropertyValue(cm.getLabelProperty(), termLabel);
+					}
 				}
 
 			} catch (Exception e) {
