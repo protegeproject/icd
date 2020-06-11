@@ -418,12 +418,12 @@ public class ClamlImport {
 	}
 
 	private void fixMetaclasses(RDFSNamedClass parentCls, RDFSNamedClass cls) {
-		log.info("Fix metaclasses for: " + cls);
+		log.fine("Fix metaclasses for: " + cls);
 		Collection<RDFSNamedClass> parentTypes = parentCls.getRDFTypes();
 		Collection<RDFSNamedClass> childTypes = cls.getRDFTypes();
 		for (RDFSNamedClass parentType : parentTypes) {
 			if (childTypes.contains(parentType) == false) {
-				log.info("--- Add type: " + parentType);
+				log.fine("--- Add type: " + parentType);
 				cls.addRDFType(parentType);
 			}
 		}
@@ -445,7 +445,7 @@ public class ClamlImport {
 		
 		visitedClses.add(parentCls);
 		
-		log.info("Add sibling order to: " + parentCls);
+		log.fine("Add sibling order to: " + parentCls);
 		
 		List<RDFSNamedClass> children = getNamedChildren(parentCls);
 		children.sort(getCodeComparator());
