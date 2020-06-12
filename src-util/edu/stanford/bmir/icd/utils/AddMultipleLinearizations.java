@@ -116,8 +116,13 @@ public class AddMultipleLinearizations {
         cats.add(topCategory);
 
         addLinearization(cats);
+        
+        log.info("Saving ontology..");
+        
+        prj.save(new ArrayList<>());
 
         log.info("Finished at: " + new Date());
+        
     }
 
 	private static void usage() {
