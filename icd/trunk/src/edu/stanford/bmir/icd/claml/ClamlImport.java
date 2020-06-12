@@ -342,12 +342,50 @@ public class ClamlImport {
 	}
 	
 	private void postprocess() {
+		removeResidualClses();
 		addSuperClses();
 		addReferencedCategories();
 		fixMetaclasses();
 		addSiblingOrdering();
 	}
 
+
+	private void removeResidualClses() {
+		log.info("Removing residual classes..");
+		
+		Collection<RDFSNamedClass> residuals = new ArrayList<RDFSNamedClass>();
+		
+		for (RDFSNamedClass cls : cls2superclsesNames.keySet()) {
+			if (isResidual(cls)) {
+				residuals.add(cls);
+			}
+		}
+
+		for (RDFSNamedClass residualCls : residuals) {
+			log.info("--- Removing residual: " + residualCls.getLabels() + ". " + residualCls);
+			cls2superclsesNames.remove(residualCls);
+			deleteResidual(residualCls);
+		}
+		
+	}
+
+	private void deleteResidual(RDFSNamedClass cls) {
+		RDFResource titleInst = cm.getTerm(cls, cm.getIcdTitleProperty());
+		titleInst.delete();
+		
+		cls.delete();
+	}
+
+	private boolean isResidual(RDFSNamedClass cls) {
+		String title = cm.getTitleLabel(cls);
+		title = title.toLowerCase();
+		
+		String icdCode = (String) cls.getPropertyValue(cm.getIcdCodeProperty());
+		icdCode = icdCode == null ? "" : icdCode;
+		
+		return (icdCode.endsWith("8") || icdCode.endsWith("9")) &&
+				(title.contains("other specified") || title.contains("unspecified"));
+	}
 
 	private void addSuperClses() {
 		log.info("Adding superclasses..");
