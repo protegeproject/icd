@@ -384,7 +384,8 @@ public class ClamlImport {
 		icdCode = icdCode == null ? "" : icdCode;
 		
 		return (icdCode.endsWith("8") || icdCode.endsWith("9")) &&
-				(title.contains("other specified") || title.contains("unspecified"));
+				(title.contains("other specified") || title.contains("unspecified")
+						|| title.contains(", specified"));    //this last one is for handling typos, such as in ICF codes b7209 and s76009
 	}
 
 	private void addSuperClses() {
