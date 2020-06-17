@@ -299,25 +299,32 @@ public class ClamlImport {
 	private void parseLabel(RDFSNamedClass cls, RDFResource term, String id, Element labelElement) {
 		String label = labelElement.getTextTrim();
 		label = label.replace("()", "");
+		label = label.replace("(-)", "");
 		label = label.trim();
 
 		String lang = labelElement.getAttributeValue(ClamlConstants.XML_LANG, Namespace.XML_NAMESPACE);
 		cm.fillTerm(term, id, label, lang);
 		
-		List cl = labelElement.getChildren(ClamlConstants.REFERENCE_ELEMENT);
-		for (Iterator iterator = cl.iterator(); iterator.hasNext();) {
-			Object next = iterator.next();
-			if (next instanceof Element) {
-				Element refElement = (Element) next;
-				parseRefElement(term, refElement);
+		List refElems = labelElement.getChildren(ClamlConstants.REFERENCE_ELEMENT);
+		
+		if (refElems.size() == 1) {
+			parseSingleRefElement(term, (Element) refElems.iterator().next());
+		} else if (refElems.size() == 2) {
+			if (labelElement.getTextTrim().contains("(-)")) {
+				parseRangeRef(term,refElems);
+			} else {
+				parseMultipleRefElems(term, refElems);
 			}
+		} else if (refElems.size() > 2) {
+			parseMultipleRefElems(term, refElems);
 		}
 		
 		// add rdfs:label to terms for BioPortal
 		cm.addRdfsLabelToTerm(term, label, lang);
 	}
 
-	private void parseRefElement(RDFResource term, Element refElement) {
+
+	private void parseSingleRefElement(RDFResource term, Element refElement) {
 		RDFResource ref = cm.createTerm(generateId(), cm.getClamlReferencesClass());
 		
 		String code = refElement.getAttributeValue(ClamlConstants.CODE_ATTR);
@@ -333,6 +340,35 @@ public class ClamlImport {
 
 		termToRefCode.put(term, text);
 	}
+	
+	private void parseMultipleRefElems(RDFResource term, List refElems) {
+		for (Iterator iterator = refElems.iterator(); iterator.hasNext();) {
+			Object next = iterator.next();
+			if (next instanceof Element) {
+				Element refElement = (Element) next;
+				parseSingleRefElement(term, refElement);
+			}
+		}
+	}
+	
+	private void parseRangeRef(RDFResource term, List refElems) {
+		RDFResource ref = cm.createTerm(generateId(), cm.getClamlReferencesClass());
+		
+		Element el1 = (Element) refElems.get(0);
+		String text1 = el1.getTextTrim().trim();
+		
+		Element el2 = (Element) refElems.get(1);
+		String text2 = el2.getTextTrim().trim();
+		
+		String text = text1 + "-" + text2;
+		
+		cm.fillClamlReference(ref, text, (String) null, (String) null);
+		cm.addClamlRefToTerm(term, ref);
+
+		termToRefCode.put(term, text);
+	}
+	
+	
 
 	private String generateId() {
 		if (defaultNamespace.length() == 0) {
@@ -342,8 +378,10 @@ public class ClamlImport {
 	}
 	
 	private void postprocess() {
-		removeResidualClses();
 		addSuperClses();
+		addResidualFlagsAndTitles();
+		//has to come after addSuperClses() and addResidualFlagsAndTitles()
+		removeResidualClses(); 
 		addReferencedCategories();
 		fixMetaclasses();
 		addSiblingOrdering();
@@ -366,9 +404,88 @@ public class ClamlImport {
 			cls2superclsesNames.remove(residualCls);
 			deleteResidual(residualCls);
 		}
-		
 	}
 
+	private void addResidualFlagsAndTitles() {
+		List<String> processed = new ArrayList<String>();
+		for (List<String> superClsNames : cls2superclsesNames.values()) {
+			for (String superClsName : superClsNames) {
+				if (processed.contains(superClsName)) {
+					continue;
+				}
+				RDFSNamedClass superCls = owlModel.getRDFSNamedClass(defaultNamespace + superClsName);
+				
+				Collection<RDFSNamedClass> subclses = getNamedChildren(superCls);
+				RDFSNamedClass otherResidual = getOtherResidual(subclses);
+				RDFSNamedClass unspecResidual = getUnspecResidual(subclses);
+				
+				addOtherResidualFlagAndTitle(superCls, otherResidual);
+				addUnspecifiedResidualFlagAndTitle(superCls, unspecResidual);
+				
+				processed.add(superClsName);
+			}
+		}
+	}
+
+	
+	
+	private RDFSNamedClass getUnspecResidual(Collection<RDFSNamedClass> subclses) {
+		for (RDFSNamedClass subcls : subclses) {
+			String subClsTitle = cm.getTitleLabel(subcls);
+			if (subcls.getName().endsWith("9") && 
+					subClsTitle.contains("unspecified")) {
+				return subcls;
+			}
+		}
+		return null;
+	}
+
+	private RDFSNamedClass getOtherResidual(Collection<RDFSNamedClass> subclses) {
+		for (RDFSNamedClass subcls : subclses) {
+			String subClsTitle = cm.getTitleLabel(subcls);
+			if (subcls.getName().endsWith("8") && 
+					subClsTitle.contains("other specified")) {
+				return subcls;
+			}
+		}
+		return null;
+	}
+	
+
+	private void addOtherResidualFlagAndTitle(RDFSNamedClass superCls, RDFSNamedClass otherResidual) {
+		if (otherResidual == null) {
+			//suppress other residual
+			superCls.addPropertyValue(cm.getSuppressOtherSpecifiedResidualsProperty(), Boolean.TRUE);
+		} else {
+			superCls.addPropertyValue(cm.getSuppressOtherSpecifiedResidualsProperty(), Boolean.FALSE);
+			
+			//if it exists, check title
+			String otherResTitle = cm.getTitleLabel(otherResidual);
+			String goodTitle = cm.getTitleLabel(superCls) + ", other specified";
+			
+			if (goodTitle.equalsIgnoreCase(otherResTitle) == false) {
+				superCls.addPropertyValue(cm.getOtherSpecifiedResidualTitleProperty(), otherResTitle);
+			}
+		}
+	}
+	
+	private void addUnspecifiedResidualFlagAndTitle(RDFSNamedClass superCls, RDFSNamedClass unspecifiedResidual) {
+		if (unspecifiedResidual == null) {
+			//suppress unspecified residual
+			superCls.addPropertyValue(cm.getSuppressUnspecifiedResidualsProperty(), Boolean.TRUE);
+		} else {
+			superCls.addPropertyValue(cm.getSuppressUnspecifiedResidualsProperty(), Boolean.FALSE);
+			
+			//if it exists, check title
+			String unspecResTitle = cm.getTitleLabel(unspecifiedResidual);
+			String goodTitle = cm.getTitleLabel(superCls) + ", unspecified";
+			
+			if (goodTitle.equalsIgnoreCase(unspecResTitle) == false) {
+				superCls.addPropertyValue(cm.getUnspecifiedResidualTitleProperty(), unspecResTitle);
+			}
+		}
+	}
+	
 	private void deleteResidual(RDFSNamedClass cls) {
 		RDFResource titleInst = cm.getTerm(cls, cm.getIcdTitleProperty());
 		titleInst.delete();
@@ -376,6 +493,7 @@ public class ClamlImport {
 		cls.delete();
 	}
 
+	//FIXME: This might be ICF specific
 	private boolean isResidual(RDFSNamedClass cls) {
 		String title = cm.getTitleLabel(cls);
 		title = title.toLowerCase();
@@ -417,7 +535,7 @@ public class ClamlImport {
 			try {
 				RDFSNamedClass refCls = owlModel.getRDFSNamedClass(defaultNamespace + code);
 				if (refCls == null) {
-					log.warning("Could not find referenced class: " + code);
+					log.warning("Could not find referenced class: " + code + ". Referee: " + owlModel.getReferences(term, 0));
 				} else {
 					term.setPropertyValue(cm.getReferencedCategoryProperty(), refCls);
 					
