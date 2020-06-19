@@ -1433,7 +1433,7 @@ public class WHOFICContentModel {
     public RDFResource getLinearizationSpecificationForView(RDFSNamedClass icdClass, RDFResource linView) {
     	for (RDFResource linSpec : getLinearizationSpecifications(icdClass)) {
 			RDFResource view = (RDFResource) linSpec.getPropertyValue(getLinearizationViewProperty());
-			if (linView.equals(view)) {
+			if (view != null && linView.equals(view)) {
 				return linSpec;
 			}
     	}
