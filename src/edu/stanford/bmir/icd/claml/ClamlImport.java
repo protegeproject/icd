@@ -251,7 +251,11 @@ public class ClamlImport {
 
 	private void parsePreferred(RDFSNamedClass cls, String id, Element labelElement) {
 		RDFResource term = cm.createTerm(generateId(), cm.getTermTitleClass());
+		
+		labelElement.setText(getProperCaseTitle(labelElement.getTextTrim().trim()));
+		
 		parseLabel(cls, term, id, labelElement);
+		
 		cm.addTitleTermToClass(cls, term);
 		// add also the rdfs:label as the title for BioPortal
 		cm.addRdfsLabel(cls, false);
@@ -649,6 +653,23 @@ public class ClamlImport {
 		};
 	}
 
+	private String getProperCaseTitle(String title) {
+		if (title.length() > 1 && isUpperCase(title)) {
+			title = title.charAt(0) + title.substring(1).toLowerCase();
+		}
+		
+		return title;
+	}
+	
+	private boolean isUpperCase(String str) {
+		for (int i=0; i< str.length(); i++) {
+			if (Character.isWhitespace(str.charAt(i)) == false && 
+					Character.isLowerCase(str.charAt(i))) {
+				return false;
+			}
+		}
+		return true;
+	}
 	
 	private void cleanup() {
 		termToRefCode.clear();
