@@ -1429,6 +1429,17 @@ public class WHOFICContentModel {
     public Collection<RDFResource> getLinearizationSpecifications(RDFSNamedClass icdClass) {
         return icdClass.getPropertyValues(getLinearizationProperty());
     }
+    
+    public RDFResource getLinearizationSpecificationForView(RDFSNamedClass icdClass, RDFResource linView) {
+    	for (RDFResource linSpec : getLinearizationSpecifications(icdClass)) {
+			RDFResource view = (RDFResource) linSpec.getPropertyValue(getLinearizationViewProperty());
+			if (linView.equals(view)) {
+				return linSpec;
+			}
+    	}
+    	return null;
+    }
+    
 
     @SuppressWarnings("unchecked")
     public Collection<RDFResource> getAllowedPostcoorcdinationSpecifications(RDFSNamedClass icdClass) {
