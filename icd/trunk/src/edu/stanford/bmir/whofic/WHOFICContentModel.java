@@ -3,6 +3,7 @@ package edu.stanford.bmir.whofic;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
@@ -1440,8 +1441,45 @@ public class WHOFICContentModel {
     	return null;
     }
     
+    /**
+     * This method will clone the linearization specifications from the sourceCls to the targetCls.
+     * It will reuse the linearization specification instances from the targetCls, if they exist, 
+     * if not, it will create new ones. Therefore, if the targetCls already has linearization 
+     * specifications that were not part of the sourceCls, it will keep them.
+     * 
+     * @param targetCls
+     * @param sourceCls
+     */
+    public void copyLinearizationSpecificationsFromCls(RDFSNamedClass targetCls, RDFSNamedClass sourceCls) {
+    	
+    	Map<RDFResource, RDFResource> targetView2LinSpec = new HashMap<RDFResource, RDFResource>();
+    	for (RDFResource targetLinSpec : getLinearizationSpecifications(targetCls)) {
+			targetView2LinSpec.put((RDFResource)targetLinSpec.getPropertyValue(getLinearizationViewProperty()), targetLinSpec);
+		}
+    	
+    	for (RDFResource sourceLinSpec : getLinearizationSpecifications(sourceCls)) {
+			RDFResource sourceLinView = (RDFResource) sourceLinSpec.getPropertyValue(getLinearizationViewProperty());
+			RDFResource targetLinSpec = targetView2LinSpec.get(sourceLinView);
+			if (targetLinSpec == null) {
+				targetLinSpec = getLinearizationSpecificationClass().createRDFIndividual(IcdIdGenerator.getNextUniqueId(targetCls.getOWLModel()));
+				targetLinSpec.setPropertyValue(getLinearizationViewProperty(), sourceLinView);
+			}
+			copyLinearizationSpecification(targetLinSpec, sourceLinSpec);
+		}
+    }
+    
 
-    @SuppressWarnings("unchecked")
+    //The linearization view is not copied, as it is assumed the same
+    private void copyLinearizationSpecification(RDFResource targetLinSpec, RDFResource sourceLinSpec) {
+		targetLinSpec.setPropertyValue(getIsAuxiliaryAxisChildProperty(), sourceLinSpec.getPropertyValue(getIsAuxiliaryAxisChildProperty()));
+		targetLinSpec.setPropertyValue(getIsGroupingProperty(), sourceLinSpec.getPropertyValue(getIsGroupingProperty()));
+		targetLinSpec.setPropertyValue(getIsIncludedInLinearizationProperty(), sourceLinSpec.getPropertyValue(getIsIncludedInLinearizationProperty()));
+	
+		targetLinSpec.setPropertyValue(getLinearizationParentProperty(), sourceLinSpec.getPropertyValue(getLinearizationParentProperty()));
+		targetLinSpec.setPropertyValues(getCodingNoteProperty(), sourceLinSpec.getPropertyValues(getCodingNoteProperty()));
+    }
+
+	@SuppressWarnings("unchecked")
     public Collection<RDFResource> getAllowedPostcoorcdinationSpecifications(RDFSNamedClass icdClass) {
         return icdClass.getPropertyValues(getAllowedPostcoordinationAxesProperty());
     }
