@@ -19,8 +19,6 @@ public class ICDContentModel extends WHOFICContentModel {
 
     private static transient Logger log = Log.getLogger(ICDContentModel.class);
 
-    private final OWLModel owlModel;
-
     /*
      * Metaclasses
      */
@@ -57,10 +55,8 @@ public class ICDContentModel extends WHOFICContentModel {
      */
 
 
-
     public ICDContentModel(OWLModel owlModel) {
     	super(owlModel);
-        this.owlModel = owlModel;
     }
 
     /*
@@ -69,21 +65,21 @@ public class ICDContentModel extends WHOFICContentModel {
 
     public RDFSNamedClass getCausalMechanismMetaClass() {
         if (causalMechanismMetaClass == null) {
-            causalMechanismMetaClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.ICD_CAUSAL_MECH_METACLASS);
+            causalMechanismMetaClass = getOwlModel().getRDFSNamedClass(ICDContentModelConstants.ICD_CAUSAL_MECH_METACLASS);
         }
         return causalMechanismMetaClass;
     }
 
     public RDFSNamedClass getClinicalDescriptionMetaClass() {
         if (clincalDescriptionMetaClass == null) {
-            clincalDescriptionMetaClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.ICD_CLINICAL_DESC_METACLASS);
+            clincalDescriptionMetaClass = getOwlModel().getRDFSNamedClass(ICDContentModelConstants.ICD_CLINICAL_DESC_METACLASS);
         }
         return clincalDescriptionMetaClass;
     }
 
     public RDFSNamedClass getFunctionalImpactMetaClass() {
         if (functionalImpactMetaClass == null) {
-            functionalImpactMetaClass = owlModel
+            functionalImpactMetaClass = getOwlModel()
                     .getRDFSNamedClass(ICDContentModelConstants.ICD_FUNCTIONAL_IMPACT_METACLASS);
         }
         return functionalImpactMetaClass;
@@ -91,21 +87,21 @@ public class ICDContentModel extends WHOFICContentModel {
 
     public RDFSNamedClass getNotesMetaClass() {
         if (notesMetaClass == null) {
-            notesMetaClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.ICD_NOTES_METACLASS);
+            notesMetaClass = getOwlModel().getRDFSNamedClass(ICDContentModelConstants.ICD_NOTES_METACLASS);
         }
         return notesMetaClass;
     }
 
     public RDFSNamedClass getSnomedReferenceMetaClass() {
         if (snomedReferenceMetaClass == null) {
-            snomedReferenceMetaClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.ICD_SNOMED_METACLASS);
+            snomedReferenceMetaClass = getOwlModel().getRDFSNamedClass(ICDContentModelConstants.ICD_SNOMED_METACLASS);
         }
         return snomedReferenceMetaClass;
     }
 
     public RDFSNamedClass getDiagnosticCriteriaMetaClass() {
         if (diagnosticCriteriaMetaClass == null) {
-            diagnosticCriteriaMetaClass = owlModel
+            diagnosticCriteriaMetaClass = getOwlModel()
                     .getRDFSNamedClass(ICDContentModelConstants.ICD_DIAGNOSTIC_CRITERIA_METACLASS);
         }
         return diagnosticCriteriaMetaClass;
@@ -113,21 +109,21 @@ public class ICDContentModel extends WHOFICContentModel {
 
     public RDFSNamedClass getSpecificConditionMetaClass() {
         if (specificConditionMetaClass == null) {
-            specificConditionMetaClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.ICD_SPECIFIC_CONDITION_METACLASS);
+            specificConditionMetaClass = getOwlModel().getRDFSNamedClass(ICDContentModelConstants.ICD_SPECIFIC_CONDITION_METACLASS);
         }
         return specificConditionMetaClass;
     }
 
     public RDFSNamedClass getExternalCauseMetaClass() {
         if (externalCauseMetaClass == null) {
-            externalCauseMetaClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.ICD_EXTERNAL_CAUSE_METACLASS);
+            externalCauseMetaClass = getOwlModel().getRDFSNamedClass(ICDContentModelConstants.ICD_EXTERNAL_CAUSE_METACLASS);
         }
         return externalCauseMetaClass;
     }
 
     public RDFSNamedClass getICECIMetaClass() {
         if (iceciMetaClass == null) {
-        	iceciMetaClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.ICD_ICECI_METACLASS);
+        	iceciMetaClass = getOwlModel().getRDFSNamedClass(ICDContentModelConstants.ICD_ICECI_METACLASS);
         }
         return iceciMetaClass;
     }
@@ -154,14 +150,14 @@ public class ICDContentModel extends WHOFICContentModel {
 
     public RDFSNamedClass getICDCategoryClass() {
         if (icdCategoryClass == null) {
-            icdCategoryClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.ICD_CATEGORY_CLASS);
+            icdCategoryClass = getOwlModel().getRDFSNamedClass(ICDContentModelConstants.ICD_CATEGORY_CLASS);
         }
         return icdCategoryClass;
     }
 
     public RDFSNamedClass getExternalCausesTopClass() {
         if (externalCausesTopClass == null) {
-            externalCausesTopClass = owlModel.getRDFSNamedClass(ICDContentModelConstants.EXTERNAL_CAUSES_TOP_CLASS);
+            externalCausesTopClass = getOwlModel().getRDFSNamedClass(ICDContentModelConstants.EXTERNAL_CAUSES_TOP_CLASS);
         }
         return externalCausesTopClass;
     }
@@ -174,21 +170,21 @@ public class ICDContentModel extends WHOFICContentModel {
 
     public RDFProperty getIsTemplateProperty() {
         if (isTemplateProperty == null) {
-        	isTemplateProperty = owlModel.getRDFProperty(ICDContentModelConstants.IS_TEMPLATE);
+        	isTemplateProperty = getOwlModel().getRDFProperty(ICDContentModelConstants.IS_TEMPLATE);
         }
         return isTemplateProperty;
     }
 
     public RDFProperty getLinearizationICD10Property() {
         if (linearizationICD10ViewProperty == null) {
-            linearizationICD10ViewProperty = owlModel.getRDFProperty(ICDContentModelConstants.LINEARIZATION_ICD_10_PROP);
+            linearizationICD10ViewProperty = getOwlModel().getRDFProperty(ICDContentModelConstants.LINEARIZATION_ICD_10_PROP);
         }
         return linearizationICD10ViewProperty;
     }
 
     public RDFProperty getLinearizationICD10TabulationProperty() {
         if (linearizationICD10TabulationViewProperty == null) {
-            linearizationICD10TabulationViewProperty = owlModel.getRDFProperty(ICDContentModelConstants.LINEARIZATION_ICD_10_TABULATION_PROP);
+            linearizationICD10TabulationViewProperty = getOwlModel().getRDFProperty(ICDContentModelConstants.LINEARIZATION_ICD_10_TABULATION_PROP);
         }
         return linearizationICD10TabulationViewProperty;
     }
@@ -264,7 +260,7 @@ public class ICDContentModel extends WHOFICContentModel {
     @Deprecated
     public RDFSNamedClass createICDCategory(String name, Collection<String> superclsesName, boolean createSuperclasses, boolean createICDSpecificEntities) {
         if (name == null) {
-            name = IcdIdGenerator.getNextUniqueId(owlModel);
+            name = IcdIdGenerator.getNextUniqueId(getOwlModel());
         }
         RDFSNamedClass cls = getICDClass(name, true);
 
@@ -282,8 +278,8 @@ public class ICDContentModel extends WHOFICContentModel {
                     //add superclasses
                     if (!cls.getSuperclasses(true).contains(supercls)) {
                         cls.addSuperclass(supercls);
-                        if (cls.hasDirectSuperclass(owlModel.getOWLThingClass())) {
-                            cls.removeSuperclass(owlModel.getOWLThingClass());
+                        if (cls.hasDirectSuperclass(getOwlModel().getOWLThingClass())) {
+                            cls.removeSuperclass(getOwlModel().getOWLThingClass());
                         }
                         cls.setDirectTypes(supercls.getProtegeTypes());
                     }
@@ -312,7 +308,7 @@ public class ICDContentModel extends WHOFICContentModel {
         createPostcoordinationSpecifications(cls);
 
         //set biologicalSex - default value: N/A (not applicable)
-        //cls.addPropertyValue(getBiologicalSexProperty(), owlModel.getRDFResource(ICDContentModelConstants.BIOLOGICAL_SEX_NA));
+        //cls.addPropertyValue(getBiologicalSexProperty(), getOwlModel().getRDFResource(ICDContentModelConstants.BIOLOGICAL_SEX_NA));
     }
 
 
@@ -327,7 +323,7 @@ public class ICDContentModel extends WHOFICContentModel {
 
     protected void createLinearizationSpecifications(RDFSNamedClass cls, RDFSNamedClass linSpecificationClass, RDFProperty linProp) {
         for (RDFResource linView : getLinearizationViewsFromParents(cls, linProp)) {
-            RDFResource linSpec = linSpecificationClass.createInstance(IcdIdGenerator.getNextUniqueId(owlModel));
+            RDFResource linSpec = linSpecificationClass.createInstance(IcdIdGenerator.getNextUniqueId(getOwlModel()));
             linSpec.setPropertyValue(getLinearizationViewProperty(), linView);
             //set default grouping to FALSE
             linSpec.setPropertyValue(getIsGroupingProperty(), Boolean.FALSE);
@@ -360,14 +356,14 @@ public class ICDContentModel extends WHOFICContentModel {
     private RDFSNamedClass getICDClass(String name, boolean create) {
         RDFSNamedClass cls = getICDClass(name);
         if (cls == null && create) {
-            cls = owlModel.createOWLNamedClass(name);
-            cls.addSuperclass(owlModel.getOWLThingClass());
+            cls = getOwlModel().createOWLNamedClass(name);
+            cls.addSuperclass(getOwlModel().getOWLThingClass());
         }
         return cls;
     }
 
     public RDFSNamedClass getICDClass(String name) {
-        return KBUtil.getRDFSNamedClass(owlModel, name);
+        return KBUtil.getRDFSNamedClass(getOwlModel(), name);
     }
 
     /**
