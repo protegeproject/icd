@@ -178,6 +178,10 @@ public class WHOFICContentModel {
         this.owlModel = owlModel;
     }
 
+    public OWLModel getOwlModel() {
+		return owlModel;
+	}
+    
     /*
      * Getters for sections (metaclasses)
      */
