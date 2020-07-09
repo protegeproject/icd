@@ -991,7 +991,7 @@ public class WHOFICContentModel {
 
     protected List<RDFProperty> getAllSelectedPostcoordinationAxes(RDFSNamedClass cls, RDFProperty allowedPCAxisPropertyProp) {
 		List<RDFProperty> res = new ArrayList<RDFProperty>();
-		for (RDFResource pcAxesSpec : getAllowedPostcoorcdinationSpecifications(cls)) {
+		for (RDFResource pcAxesSpec : getAllowedPostcoordinationSpecifications(cls)) {
 			Collection<RDFProperty> allowedPCAxes = pcAxesSpec.getPropertyValues(allowedPCAxisPropertyProp);
 			res.addAll(allowedPCAxes);
 		}
@@ -1463,12 +1463,15 @@ public class WHOFICContentModel {
     	
     	for (RDFResource sourceLinSpec : getLinearizationSpecifications(sourceCls)) {
 			RDFResource sourceLinView = (RDFResource) sourceLinSpec.getPropertyValue(getLinearizationViewProperty());
+			
 			RDFResource targetLinSpec = targetView2LinSpec.get(sourceLinView);
 			if (targetLinSpec == null) {
 				targetLinSpec = getLinearizationSpecificationClass().createRDFIndividual(IcdIdGenerator.getNextUniqueId(targetCls.getOWLModel()));
 				targetLinSpec.setPropertyValue(getLinearizationViewProperty(), sourceLinView);
 			}
 			copyLinearizationSpecification(targetLinSpec, sourceLinSpec);
+			
+			targetCls.addPropertyValue(getLinearizationProperty(), targetLinSpec);
 		}
     }
     
@@ -1482,9 +1485,65 @@ public class WHOFICContentModel {
 		targetLinSpec.setPropertyValue(getLinearizationParentProperty(), sourceLinSpec.getPropertyValue(getLinearizationParentProperty()));
 		targetLinSpec.setPropertyValues(getCodingNoteProperty(), sourceLinSpec.getPropertyValues(getCodingNoteProperty()));
     }
+    
+    /**
+     * This method will clone the postcoordination specifications from the sourceCls to the targetCls.
+     * It will reuse the postcoordination specification instances from the targetCls, if they exist, 
+     * if not, it will create new ones. Therefore, if the targetCls already has postcoordination 
+     * specifications that were not part of the sourceCls, it will keep them.
+     * 
+     * @param targetCls
+     * @param sourceCls
+     */
+    public void copyPostcoordinationSpecificationsFromCls(RDFSNamedClass targetCls, RDFSNamedClass sourceCls) {
+    	
+    	Map<RDFResource, RDFResource> allowedTargetView2PCSpec = new HashMap<RDFResource, RDFResource>();
+    	for (RDFResource targetPCSpec : getAllowedPostcoordinationSpecifications(targetCls)) {
+    		allowedTargetView2PCSpec.put((RDFResource)targetPCSpec.getPropertyValue(getLinearizationViewProperty()), targetPCSpec);
+		}
+    	
+    	
+    	for (RDFResource sourcePCSpec : getAllowedPostcoordinationSpecifications(sourceCls)) {
+			RDFResource sourceLinView = (RDFResource) sourcePCSpec.getPropertyValue(getLinearizationViewProperty());
+			RDFResource targetPCSpec = allowedTargetView2PCSpec.get(sourceLinView);
+			if (targetPCSpec == null) {
+				targetPCSpec = getPostcoordinationAxesSpecificationClass().createRDFIndividual(IcdIdGenerator.getNextUniqueId(targetCls.getOWLModel()));
+				targetPCSpec.setPropertyValue(getLinearizationViewProperty(), sourceLinView);
+			}
+			copyPostcoordinationSpecification(targetPCSpec, sourcePCSpec);
+			
+			targetCls.addPropertyValue(getAllowedPostcoordinationAxesProperty(), targetPCSpec);
+		}
+    	
+    }
+    
 
-	@SuppressWarnings("unchecked")
+    //The linearization view is not copied, as it is assumed the same
+    private void copyPostcoordinationSpecification(RDFResource targetPCSpec, RDFResource sourcePCSpec) {
+    	Collection<RDFProperty> allowedPCProps = sourcePCSpec.getPropertyValues(getAllowedPostcoordinationAxisPropertyProperty());
+    	for (RDFProperty prop : allowedPCProps) {
+			targetPCSpec.addPropertyValue(getAllowedPostcoordinationAxisPropertyProperty(), prop);
+		}
+    	
+    	Collection<RDFProperty> requiredPCProps = sourcePCSpec.getPropertyValues(getRequiredPostcoordinationAxisPropertyProperty());
+    	for (RDFProperty prop : requiredPCProps) {
+			targetPCSpec.addPropertyValue(getRequiredPostcoordinationAxisPropertyProperty(), prop);
+		}
+    }
+    
+
+    /**
+     * This method is deprecated due to the typo in the name. Use instead {@link #getAllowedPostcoordinationSpecifications(RDFSNamedClass)}
+     * @param icdClass
+     * @return
+     */
+    @Deprecated 
     public Collection<RDFResource> getAllowedPostcoorcdinationSpecifications(RDFSNamedClass icdClass) {
+    	return getAllowedPostcoordinationSpecifications(icdClass);
+    }
+    
+	@SuppressWarnings("unchecked")
+    public Collection<RDFResource> getAllowedPostcoordinationSpecifications(RDFSNamedClass icdClass) {
         return icdClass.getPropertyValues(getAllowedPostcoordinationAxesProperty());
     }
     
@@ -1516,6 +1575,7 @@ public class WHOFICContentModel {
     public Collection<String> getSynonymLabels(RDFSNamedClass icdClass) {
     	return getTermLabels(icdClass, getSynonymProperty());
     }
+    
     
     /*
      * TAG management methods
