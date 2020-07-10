@@ -59,9 +59,7 @@
 	            	classname="edu.stanford.bmir.icd.utils.AddMultiplePostCoordinationSpecs"
                         maxmemory="${heap.size.max}">
 		      	<classpath refid = "project.classpath"/>
-	 		<arg value="${pprj.file}"/>	
-	 		<arg value="${top.class}"/>	
-	        <arg value="${lin.views}"/>
+	        	<arg line="${pprj.file} ${top.class} ${lin.views}"/>
 	        </java>
 	 </target>
 	
