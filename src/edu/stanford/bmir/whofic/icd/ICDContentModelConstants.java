@@ -151,8 +151,15 @@ public class ICDContentModelConstants extends WHOFICContentModelConstants {
 	public final static String PC_AXIS_HAS_CAUSING_CONDITION = NS + "hasCausingCondition";
 	public final static String PC_AXIS_HAS_MANIFESTATION = NS + "hasManifestation";
 	public final static String PC_AXIS_ASSOCIATED_WITH = NS + "associatedWith";
-    //TODO continue list
+    //TODO: continue list
 
+	/* ICHI Post-Coordination Axis Properties */
+	public final static String PC_AXIS_ICHI_TARGET = NS + "hasTarget";
+	public final static String PC_AXIS_ICHI_MEANS = NS + "hasMeans";
+	public final static String PC_AXIS_ICHI_ACTION = NS + "hasAction";
+	//TODO: add the rest of the ICHI post-coordination axes
+	
+	
 	public final static List<String> PC_AXES_PROPERTIES_LIST = Arrays.asList(
 			PC_AXIS_SPECIFIC_ANATOMY, PC_AXIS_TOPOLOGY_DISTRIBUTION, PC_AXIS_TOPOLOGY_LATERALITY,
 			PC_AXIS_TOPOLOGY_REGIONAL, PC_AXIS_TOPOLOGY_RELATIONAL, PC_AXIS_BIOLOGICAL_INDICATOR_GENOMIC_AND_CHOMOSOMAL_ANOMALY,
@@ -222,7 +229,11 @@ public class ICDContentModelConstants extends WHOFICContentModelConstants {
 			PC_AXIS_INJURY_QUALIFIER_FRACTURE_QUALIFIER_JOINT_INVOLVEMENT_IN_FRACTURE_SUBTYPE,
 			PC_AXIS_INJURY_QUALIFIER_TYPE_OF_INJURY,
 			PC_AXIS_TEMPORALITY_COURSE, PC_AXIS_TEMPORALITY_PATTERN_AND_ONSET, PC_AXIS_TEMPORALITY_TIME_IN_LIFE,
-			PC_AXIS_HAS_CAUSING_CONDITION, PC_AXIS_HAS_MANIFESTATION, PC_AXIS_ASSOCIATED_WITH);
+			PC_AXIS_HAS_CAUSING_CONDITION, PC_AXIS_HAS_MANIFESTATION, PC_AXIS_ASSOCIATED_WITH,
+			
+			// *** ICHI PC axes ***
+			
+			PC_AXIS_ICHI_ACTION, PC_AXIS_ICHI_TARGET, PC_AXIS_ICHI_MEANS);
 
 	
 	public final static String PC_SCALE_SEVERITY = NS + "hasSeverityScale";	//replicated in ICDConstants for iCAT client
