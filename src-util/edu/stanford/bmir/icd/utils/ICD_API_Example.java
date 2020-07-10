@@ -140,7 +140,7 @@ public class ICD_API_Example {
         System.out.println("All allowed (but not required) postcoordination axes selected: " + allAllowedPostcoordinationAxes);
         
         System.out.println("\n Post-Coordination details per linearization: ");
-        for (RDFResource pcAxesSpec : icdContentModel.getAllowedPostcoorcdinationSpecifications(category)) {
+        for (RDFResource pcAxesSpec : icdContentModel.getAllowedPostcoordinationSpecifications(category)) {
             RDFResource linearization = (RDFResource) pcAxesSpec.getPropertyValue(icdContentModel.getLinearizationViewProperty());
         	Collection<RDFProperty> allowedPCAxes = icdContentModel.getSelectedAllowedPostcoordinationAxes(pcAxesSpec, false);
         	Collection<RDFProperty> requiredPCAxes = icdContentModel.getSelectedRequiredPostcoordinationAxes(pcAxesSpec);
