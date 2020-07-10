@@ -468,7 +468,10 @@ public class ClamlImport {
 			String goodTitle = cm.getTitleLabel(superCls) + ", other specified";
 			
 			if (goodTitle.equalsIgnoreCase(otherResTitle) == false) {
-				superCls.addPropertyValue(cm.getOtherSpecifiedResidualTitleProperty(), otherResTitle);
+				RDFResource titleTerm = cm.createTitleTerm();
+				titleTerm.setPropertyValue(cm.getLabelProperty(), otherResTitle);
+				titleTerm.setPropertyValue(cm.getLangProperty(), "en");
+				superCls.addPropertyValue(cm.getOtherSpecifiedResidualTitleProperty(), titleTerm);
 			}
 		}
 	}
@@ -485,7 +488,10 @@ public class ClamlImport {
 			String goodTitle = cm.getTitleLabel(superCls) + ", unspecified";
 			
 			if (goodTitle.equalsIgnoreCase(unspecResTitle) == false) {
-				superCls.addPropertyValue(cm.getUnspecifiedResidualTitleProperty(), unspecResTitle);
+				RDFResource titleTerm = cm.createTitleTerm();
+				titleTerm.setPropertyValue(cm.getLabelProperty(), unspecResTitle);
+				titleTerm.setPropertyValue(cm.getLangProperty(), "en");
+				superCls.addPropertyValue(cm.getUnspecifiedResidualTitleProperty(), titleTerm);
 			}
 		}
 	}
