@@ -38,7 +38,7 @@ public class AddMultiplePostCoordinationSpecs {
     public static void main(String[] args) {
     	int nonOptArgCount = countNonOptionArguments(args);
         if (nonOptArgCount < 3) {
-            log.severe("Argument missing: pprj file name, category name or linearization name");
+            log.severe("Argument missing: pprj file name, top cls name, or linearization name");
             return;
         }
 
