@@ -77,6 +77,7 @@ public class WHOFICContentModel {
     private RDFSNamedClass indexTermTypeClass;
     private RDFSNamedClass termNarrowerClass;
     private RDFSNamedClass termBaseIndexClass;
+    private RDFSNamedClass termSubclassInclusionClass;
     private RDFSNamedClass termBaseInclusionClass;
     private RDFSNamedClass termBaseExclusionClass;
     private RDFSNamedClass termCodingNoteClass;
@@ -315,6 +316,13 @@ public class WHOFICContentModel {
             termBaseIndexClass = owlModel.getRDFSNamedClass(WHOFICContentModelConstants.TERM_BASE_INDEX_CLASS);
         }
         return termBaseIndexClass;
+    }
+    
+    public RDFSNamedClass getTermSubclassInclusionClass() {
+    	if (termSubclassInclusionClass == null) {
+    		termSubclassInclusionClass = owlModel.getRDFSNamedClass(WHOFICContentModelConstants.TERM_SUBCLASS_INCLUSION_CLASS);
+    	}
+    	return termSubclassInclusionClass;
     }
 
     public RDFSNamedClass getTermBaseInclusionClass() {
@@ -1184,6 +1192,14 @@ public class WHOFICContentModel {
     @Deprecated
     public void addInclusionTermToClass(RDFSNamedClass cls, RDFResource term) {
         addTermToClass(cls, getInclusionProperty(), term);
+    }
+    
+    public RDFResource createSubclassBaseInclusionTerm() {
+    	return createTerm(getTermSubclassInclusionClass());
+    }
+    
+    public void addSubclassBaseInclusionTermToClass(RDFSNamedClass cls, RDFResource term) {
+    	addTermToClass(cls, getSubclassBaseInclusionProperty(), term);
     }
 
     

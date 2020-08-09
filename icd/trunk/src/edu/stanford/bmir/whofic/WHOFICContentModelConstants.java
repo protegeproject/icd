@@ -42,6 +42,7 @@ public class WHOFICContentModelConstants {
     public final static String TERM_NARROWER_CLASS = NS + "NarrowerTerm";
     public final static String TERM_BASE_INDEX_CLASS = NS + "BaseIndexTerm";
     public final static String TERM_BASE_INCLUSION_CLASS = NS + "BaseInclusionTerm";
+    public final static String TERM_SUBCLASS_INCLUSION_CLASS = NS + "SubclassInclusionTerm";
     public final static String TERM_BASE_EXCLUSION_CLASS = NS + "BaseExclusionTerm";
     public final static String TERM_CODING_NOTE_CLASS = NS + "CodingNoteTerm";
 
