@@ -1779,6 +1779,10 @@ public class WHOFICContentModel {
     	//TODO do we need to do something special here?
     }
 
+    public void setPrecoordinationSuperclass(RDFSNamedClass cls, RDFSNamedClass precoorParent) {
+    	cls.setPropertyValue(getPrecoordinationSuperclassProperty(), precoorParent);
+    }
+    
     public void removePrecoordinationSuperclass(String clsName) {
     	//TODO
 
