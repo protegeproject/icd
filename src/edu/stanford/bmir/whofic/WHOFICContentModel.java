@@ -1242,10 +1242,15 @@ public class WHOFICContentModel {
     	term.setPropertyValue(getIsDeprecatedProperty(), isDeprecated);
     }
     
+    public boolean isObsoleteCls(RDFSNamedClass cls) {
+    	Object isObsoleteVal = cls.getPropertyValue(getIsObsoleteProperty());
+    	return isObsoleteVal != null && isObsoleteVal instanceof Boolean && ((Boolean)isObsoleteVal);
+    }
+    
     public void addPostCoordinationValueReferenceTermToClass(
     		RDFSNamedClass cls, RDFProperty pcAxisProperty, 
     		RDFSNamedClass termType, RDFResource termReferencedValue) {
-    	RDFResource referenceTerm = termType.createRDFIndividual(null);
+    	RDFResource referenceTerm = termType.createRDFIndividual(IcdIdGenerator.getNextUniqueId(getOwlModel()));
     	referenceTerm.setPropertyValue(getReferencedValueProperty(), termReferencedValue);
         addTermToClass(cls, pcAxisProperty, referenceTerm);
     }
@@ -1435,6 +1440,10 @@ public class WHOFICContentModel {
         return icdClass.getPropertyValues(getLinearizationProperty());
     }
     
+    public RDFResource getLinearizationViewFromSpecification(RDFResource linSpec) {
+    	return (RDFResource) linSpec.getPropertyValue(getLinearizationViewProperty());
+    }
+    
     public RDFResource getLinearizationSpecificationForView(RDFSNamedClass icdClass, RDFResource linView) {
     	for (RDFResource linSpec : getLinearizationSpecifications(icdClass)) {
 			RDFResource view = (RDFResource) linSpec.getPropertyValue(getLinearizationViewProperty());
@@ -1484,6 +1493,14 @@ public class WHOFICContentModel {
 	
 		targetLinSpec.setPropertyValue(getLinearizationParentProperty(), sourceLinSpec.getPropertyValue(getLinearizationParentProperty()));
 		targetLinSpec.setPropertyValues(getCodingNoteProperty(), sourceLinSpec.getPropertyValues(getCodingNoteProperty()));
+    }
+    
+    
+    public RDFResource createPostcoordinationSpecification(RDFSNamedClass cls, RDFResource linView) {
+    	RDFResource pcSpec = getPostcoordinationAxesSpecificationClass().createRDFIndividual(IcdIdGenerator.getNextUniqueId(getOwlModel()));
+    	pcSpec.setPropertyValue(getLinearizationViewProperty(), linView);
+    	cls.addPropertyValue(getAllowedPostcoordinationAxesProperty(), pcSpec);
+    	return pcSpec;
     }
     
     /**
@@ -1546,6 +1563,45 @@ public class WHOFICContentModel {
     public Collection<RDFResource> getAllowedPostcoordinationSpecifications(RDFSNamedClass icdClass) {
         return icdClass.getPropertyValues(getAllowedPostcoordinationAxesProperty());
     }
+	
+	/**
+	 * Returns the linearization view for a linearization or a postcoordination specification.
+	 * @param spec
+	 * @return
+	 */
+	public RDFResource getLinearizationViewForSpec(RDFResource spec) {
+		return (RDFResource) spec.getPropertyValue(getLinearizationViewProperty());
+	}
+	
+	/**
+	 * Retrieves the postcoordination specification for a class and a linearization view.
+	 * @param cls
+	 * @param linView
+	 * @return the postcoordination specification, or null if not found
+	 */
+	public RDFResource getPostCoordinationSpecification(RDFSNamedClass cls, RDFResource linView) {
+		for (RDFResource pcSpec : getAllowedPostcoordinationSpecifications(cls)) {
+			if (linView.equals(getLinearizationViewForSpec(pcSpec))) {
+				return pcSpec;
+			}
+		}
+		return null;
+	}
+
+	public Collection<RDFProperty> getAllowedPostCoordinationProperties(RDFSNamedClass cls, RDFResource linView) {
+		RDFResource pcSpec = getPostCoordinationSpecification(cls, linView);
+		if (pcSpec == null) {
+			return null;
+		}
+		return getAllowedPostCoordinationProperties(pcSpec);
+	}
+	
+	
+	@SuppressWarnings("unchecked")
+	public Collection<RDFProperty> getAllowedPostCoordinationProperties(RDFResource pcSpec) {
+		Collection<RDFProperty> props = (Collection<RDFProperty>) pcSpec.getPropertyValues(getAllowedPostcoordinationAxisPropertyProperty());
+		return props == null ? new ArrayList<RDFProperty>() : props;
+	}
     
     /*
      * Utilities for common terms
