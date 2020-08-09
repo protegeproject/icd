@@ -54,6 +54,7 @@ public class ICDContentModel extends WHOFICContentModel {
      * Instances
      */
 
+    private RDFResource morbidityLinView;
 
     public ICDContentModel(OWLModel owlModel) {
     	super(owlModel);
@@ -409,5 +410,11 @@ public class ICDContentModel extends WHOFICContentModel {
 		return isFixedScalePCProp(propName) || isScalePCProp(propName);
 	}
 
+	public RDFResource getMorbidityLinearizationView() {
+		if (morbidityLinView == null) {
+			morbidityLinView = getOwlModel().getRDFResource(ICDContentModelConstants.LINEARIZATION_VIEW_MORBIDITY);
+		}
+		return morbidityLinView;
+	}
 
 }
