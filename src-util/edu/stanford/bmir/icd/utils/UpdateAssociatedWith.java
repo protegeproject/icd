@@ -144,7 +144,7 @@ public class UpdateAssociatedWith {
 			try {
 				owlModel.beginTransaction(operationDescription, catName);
 	
-				Collection<RDFResource> pcAxesSpecs = icdContentModel.getAllowedPostcoorcdinationSpecifications(cat);
+				Collection<RDFResource> pcAxesSpecs = icdContentModel.getAllowedPostcoordinationSpecifications(cat);
 	
 				for (RDFResource pcAxesSpec : pcAxesSpecs) {
 					List<RDFProperty> selectedRequiredPCAxes = icdContentModel.getSelectedRequiredPostcoordinationAxes(pcAxesSpec);
