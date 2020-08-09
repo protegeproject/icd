@@ -1768,14 +1768,9 @@ public class WHOFICContentModel {
     }
 
     public void setPrecoordinationSuperclass(String clsName, String superclsName) {
-    	RDFSNamedClass cls = getICDClass(clsName);
-    	RDFSNamedClass supercls = getICDClass(superclsName);
-
-    	RDFProperty precoordSuperclassProp = getPrecoordinationSuperclassProperty();
+    	setPrecoordinationSuperclass(getICDClass(clsName), getICDClass(superclsName));
 
     	//TODO see if we need transactions or if we need this method at all
-    	cls.setPropertyValue(precoordSuperclassProp, supercls);
-
     	//TODO do we need to do something special here?
     }
 
@@ -1785,7 +1780,6 @@ public class WHOFICContentModel {
     
     public void removePrecoordinationSuperclass(String clsName) {
     	//TODO
-
     }
 
 
