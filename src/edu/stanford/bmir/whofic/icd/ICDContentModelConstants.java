@@ -157,7 +157,25 @@ public class ICDContentModelConstants extends WHOFICContentModelConstants {
 	public final static String PC_AXIS_ICHI_TARGET = NS + "hasTarget";
 	public final static String PC_AXIS_ICHI_MEANS = NS + "hasMeans";
 	public final static String PC_AXIS_ICHI_ACTION = NS + "hasAction";
-	//TODO: add the rest of the ICHI post-coordination axes
+	
+	public final static String PC_AXIS_ICHI_ADDITIONAL_TARGET = NS + "additionalTarget";
+	public final static String PC_AXIS_ICHI_SPECIFIC_ANATOMIC_DETAIL = NS + "specificAnatomicDetail";
+	public final static String PC_AXIS_ICHI_MEASUREMENT = NS + "measurement";
+	public final static String PC_AXIS_ICHI_MEDICAMENT = NS + "medicament";
+	public final static String PC_AXIS_ICHI_THERAPEUTIC_PRODUCT = NS + "therapeuticProduct";
+	public final static String PC_AXIS_ICHI_ASSISTIVE_PRODUCT = NS + "assistiveProduct";
+	public final static String PC_AXIS_ICHI_ESSENTIAL_PATHOLOGY_TEST = NS + "essentialPathologyTest";
+	
+	public final static String PC_AXIS_ICHI_QUANTIFIER = NS + "quantifier";
+	public final static String PC_AXIS_ICHI_NR_ANATOMICAL_STRUCTURES_FOR_INTERVENTION = NS + "numberOfAnatomicalStructuresAnInterventionIsPerformedOn";
+	public final static String PC_AXIS_ICHI_NR_INTERVENTIONS_PERFORMED = NS + "numberOfInterventionsPerformed";
+	public final static String PC_AXIS_ICHI_NR_THERAPEUTIC_PRODUCTS_INSERTED = NS + "numberOfTherapeuticProductsInserted";
+	
+	public final static String PC_AXIS_ICHI_TELEHEALTH = NS + "telehealth";
+	public final static String PC_AXIS_ICHI_INTERVENTION_PERFORMED_WITH_ADVICE_OR_ASSIST_FROM_DISTANCE= NS + "interventionPerformedWithAdviceOrAssistanceProvidedFromADistantLocation";
+	public final static String PC_AXIS_ICHI_TELEHEALTH_INTERVENTION_PROVIDED_TO_RECEIPIENT_IN_DISTANT_LOCATION = NS + "interventionProvidedToRecipientInADistantLocation";
+	public final static String PC_AXIS_ICHI_TELEHEALTH_INTERVENTION_DELIVERED_VIA_TEXH_WITHOUT_HUMAN_INVOLVMENT = NS + "interventionsDeliveredViaTechnologyWithoutDirectInvolvementOfAHumanProvider";
+	public final static String PC_AXIS_ICHI_ADDITIONAL_DESCRIPTIVE_INFORMATION = NS + "additionalDescriptiveInformationForIntervention";
 	
 	
 	public final static List<String> PC_AXES_PROPERTIES_LIST = Arrays.asList(
@@ -237,7 +255,30 @@ public class ICDContentModelConstants extends WHOFICContentModelConstants {
 			
 			// *** ICHI PC axes ***
 			
-			PC_AXIS_ICHI_ACTION, PC_AXIS_ICHI_TARGET, PC_AXIS_ICHI_MEANS);
+			PC_AXIS_ICHI_ACTION,
+			PC_AXIS_ICHI_TARGET,
+			PC_AXIS_ICHI_MEANS,
+			
+			PC_AXIS_ICHI_ADDITIONAL_TARGET,
+			PC_AXIS_ICHI_SPECIFIC_ANATOMIC_DETAIL,
+			PC_AXIS_ICHI_MEASUREMENT,
+			PC_AXIS_ICHI_MEDICAMENT,
+			PC_AXIS_ICHI_THERAPEUTIC_PRODUCT,
+			PC_AXIS_ICHI_ASSISTIVE_PRODUCT,
+			PC_AXIS_ICHI_ESSENTIAL_PATHOLOGY_TEST,
+				
+			PC_AXIS_ICHI_QUANTIFIER,
+			PC_AXIS_ICHI_NR_ANATOMICAL_STRUCTURES_FOR_INTERVENTION,
+			PC_AXIS_ICHI_NR_INTERVENTIONS_PERFORMED,
+			PC_AXIS_ICHI_NR_THERAPEUTIC_PRODUCTS_INSERTED,
+				
+			PC_AXIS_ICHI_TELEHEALTH,
+			PC_AXIS_ICHI_INTERVENTION_PERFORMED_WITH_ADVICE_OR_ASSIST_FROM_DISTANCE,
+			PC_AXIS_ICHI_TELEHEALTH_INTERVENTION_PROVIDED_TO_RECEIPIENT_IN_DISTANT_LOCATION,
+			PC_AXIS_ICHI_TELEHEALTH_INTERVENTION_DELIVERED_VIA_TEXH_WITHOUT_HUMAN_INVOLVMENT,
+			PC_AXIS_ICHI_ADDITIONAL_DESCRIPTIVE_INFORMATION
+		
+			);
 
 	
 	public final static String PC_SCALE_SEVERITY = NS + "hasSeverityScale";	//replicated in ICDConstants for iCAT client
