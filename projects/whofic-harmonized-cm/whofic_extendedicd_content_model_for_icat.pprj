@@ -1,4 +1,4 @@
-; Sun Aug 09 21:45:05 EEST 2020
+; Mon Aug 17 11:11:16 EEST 2020
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -6,13 +6,13 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[whofic_extendedicd_content_model_for_icat_ProjectKB_Class8]
-		[whofic_extendedicd_content_model_for_icat_ProjectKB_Class9]
-		[whofic_extendedicd_content_model_for_icat_ProjectKB_Class10]
-		[whofic_extendedicd_content_model_for_icat_ProjectKB_Class11]
-		[whofic_extendedicd_content_model_for_icat_ProjectKB_Class12]
-		[whofic_extendedicd_content_model_for_icat_ProjectKB_Class13]
-		[whofic_extendedicd_content_model_for_icat_ProjectKB_Class14]))
+		[whofic_extendedicd_content_model_for_icat_ProjectKB_Class466]
+		[whofic_extendedicd_content_model_for_icat_ProjectKB_Class467]
+		[whofic_extendedicd_content_model_for_icat_ProjectKB_Class468]
+		[whofic_extendedicd_content_model_for_icat_ProjectKB_Class469]
+		[whofic_extendedicd_content_model_for_icat_ProjectKB_Class470]
+		[whofic_extendedicd_content_model_for_icat_ProjectKB_Class471]
+		[whofic_extendedicd_content_model_for_icat_ProjectKB_Class472]))
 
 ([CLSES_TAB] of  Widget
 
@@ -747,20 +747,20 @@
 	(property_list [XY_Instance_665])
 	(widget_class_name "edu.stanford.smi.protegex.owl.ui.widget.OWLFormWidget"))
 
-([KB_321494_Class3] of  Map
-)
-
 ([KB_325529_Class0] of  Map
 
 	(entries
-		[whofic_extendedicd_content_model_for_icat_ProjectKB_Class15]
-		[whofic_extendedicd_content_model_for_icat_ProjectKB_Class16]
-		[whofic_extendedicd_content_model_for_icat_ProjectKB_Class17]))
+		[whofic_extendedicd_content_model_for_icat_ProjectKB_Class473]
+		[whofic_extendedicd_content_model_for_icat_ProjectKB_Class474]
+		[whofic_extendedicd_content_model_for_icat_ProjectKB_Class475]))
 
 ([KB_325529_Class4] of  String
 
 	(name "owl_file_name")
 	(string_value "whofic_extendedicd_content_model_for_icat.owl"))
+
+([KB_372057_Class3] of  Map
+)
 
 ([KB_444675_Instance_0] of  String
 
@@ -5666,57 +5666,67 @@
 	(property_list [XY_Instance_725])
 	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
 
-([whofic_extendedicd_content_model_for_icat_ProjectKB_Class10] of  String
+([whofic_extendedicd_content_model_for_icat_ProjectKB_Class4] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [whofic_extendedicd_content_model_for_icat_ProjectKB_Class5])
+	(widget_class_name "edu.stanford.bmir.protegex.icd.diff.ICDDiff"))
+
+([whofic_extendedicd_content_model_for_icat_ProjectKB_Class466] of  String
+
+	(name ":INSTANCE-ANNOTATION")
+	(string_value "%3AANNOTATION-TEXT"))
+
+([whofic_extendedicd_content_model_for_icat_ProjectKB_Class467] of  String
+
+	(name "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property")
+	(string_value "%3ANAME"))
+
+([whofic_extendedicd_content_model_for_icat_ProjectKB_Class468] of  String
 
 	(name "http://www.w3.org/2002/07/owl#Thing")
 	(string_value "%3ANAME"))
 
-([whofic_extendedicd_content_model_for_icat_ProjectKB_Class11] of  String
+([whofic_extendedicd_content_model_for_icat_ProjectKB_Class469] of  String
 
 	(name "http://www.w3.org/2000/01/rdf-schema#Class")
 	(string_value "%3ANAME"))
 
-([whofic_extendedicd_content_model_for_icat_ProjectKB_Class12] of  String
+([whofic_extendedicd_content_model_for_icat_ProjectKB_Class470] of  String
 
 	(name "http://www.w3.org/2002/07/owl#Class")
 	(string_value "%3ANAME"))
 
-([whofic_extendedicd_content_model_for_icat_ProjectKB_Class13] of  String
+([whofic_extendedicd_content_model_for_icat_ProjectKB_Class471] of  String
 
 	(name ":PAL-CONSTRAINT")
 	(string_value "%3APAL-NAME"))
 
-([whofic_extendedicd_content_model_for_icat_ProjectKB_Class14] of  String
+([whofic_extendedicd_content_model_for_icat_ProjectKB_Class472] of  String
 
 	(name ":META-CLASS")
 	(string_value "%3ANAME"))
 
-([whofic_extendedicd_content_model_for_icat_ProjectKB_Class15] of  Map_Entry
+([whofic_extendedicd_content_model_for_icat_ProjectKB_Class473] of  Map_Entry
 
 	(key "suppress_instance_counting")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([whofic_extendedicd_content_model_for_icat_ProjectKB_Class16] of  Map_Entry
+([whofic_extendedicd_content_model_for_icat_ProjectKB_Class474] of  Map_Entry
 
 	(key "add_name_on_instance_form")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([whofic_extendedicd_content_model_for_icat_ProjectKB_Class17] of  Map_Entry
+([whofic_extendedicd_content_model_for_icat_ProjectKB_Class475] of  Map_Entry
 
 	(key "change_tracking_active")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
-
-([whofic_extendedicd_content_model_for_icat_ProjectKB_Class4] of  Widget
-
-	(is_hidden TRUE)
-	(property_list [whofic_extendedicd_content_model_for_icat_ProjectKB_Class5])
-	(widget_class_name "edu.stanford.bmir.protegex.icd.diff.ICDDiff"))
 
 ([whofic_extendedicd_content_model_for_icat_ProjectKB_Class5] of  Property_List
 )
@@ -5729,16 +5739,6 @@
 
 ([whofic_extendedicd_content_model_for_icat_ProjectKB_Class7] of  Property_List
 )
-
-([whofic_extendedicd_content_model_for_icat_ProjectKB_Class8] of  String
-
-	(name ":INSTANCE-ANNOTATION")
-	(string_value "%3AANNOTATION-TEXT"))
-
-([whofic_extendedicd_content_model_for_icat_ProjectKB_Class9] of  String
-
-	(name "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property")
-	(string_value "%3ANAME"))
 
 ([whofic_extendedicd_content_model_ProjectKB_Class1] of  Widget
 
