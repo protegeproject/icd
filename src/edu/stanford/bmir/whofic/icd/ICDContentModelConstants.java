@@ -80,6 +80,8 @@ public class ICDContentModelConstants extends WHOFICContentModelConstants {
 	public final static String PC_AXIS_EC_INTENT = NS + "intent";
 	public final static String PC_AXIS_EC_MECHANISM_OF_INJURY = NS + "mechanismOfInjury";
 	public final static String PC_AXIS_EC_OBJECT_OR_SUBSTANCE_PRODUCING_INJURY = NS + "objectOrSubstanceProducingInjury";
+	public final static String PC_AXIS_EC_SUBSTANCE_PRODUCING_HARM = NS + "substanceProducingHarm";
+	
 	public final static String PC_AXIS_EC_PLACE_OF_OCCURRENCE = NS + "placeOfOccurrence";
 	public final static String PC_AXIS_EC_PLACE_OF_OCCURRENCE_TYPE_OF_PLACE = NS + "typeOfPlace";
 	public final static String PC_AXIS_EC_PLACE_OF_OCCURRENCE_PART_OF_PLACE = NS + "partOfPlace";
@@ -196,6 +198,7 @@ public class ICDContentModelConstants extends WHOFICContentModelConstants {
 //			PC_AXIS_EC_INTENT,
 			PC_AXIS_EC_MECHANISM_OF_INJURY,
 			PC_AXIS_EC_OBJECT_OR_SUBSTANCE_PRODUCING_INJURY,
+			PC_AXIS_EC_SUBSTANCE_PRODUCING_HARM,
 			PC_AXIS_EC_PLACE_OF_OCCURRENCE,
 			PC_AXIS_EC_PLACE_OF_OCCURRENCE_TYPE_OF_PLACE,
 			PC_AXIS_EC_PLACE_OF_OCCURRENCE_PART_OF_PLACE,
