@@ -332,13 +332,18 @@ public class ICDContentModel extends WHOFICContentModel {
 
             cls.addPropertyValue(linProp, linSpec);
 
+            
+            // 2020-08-31 TT: These defaults are not needed anymore, as discussed with Can and Linda, so I am taking them out.
+            
             /* These only apply to the ICD-11 linearizations, but it is easier to make them for all. It won't have any effect on the historic linearization specifications */
             /* set the default for new categories: morbidity - included; mortality - not included */
+            /* 
             if (linView.getName().equals(ICDContentModelConstants.LINEARIZATION_VIEW_MORBIDITY)) {
                 linSpec.setPropertyValue(getIsIncludedInLinearizationProperty(), Boolean.TRUE);
             } else if (linView.getName().equals(ICDContentModelConstants.LINEARIZATION_VIEW_MORTALITY)) {
                 linSpec.setPropertyValue(getIsIncludedInLinearizationProperty(), Boolean.FALSE);
             }
+            */
         }
     }
 
