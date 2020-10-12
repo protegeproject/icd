@@ -30,6 +30,10 @@ import edu.stanford.smi.protegex.owl.model.RDFSNamedClass;
  * added (the {@link AddLinearization} script assumed that it is "ICD Categories"), and possibly
  * more than just one linearization view name, in case there is more than one linearization 
  * is to be added to these classes.
+ * <p>
+ * If a linearization specification for one of the linearization views already exists, it will
+ * reuse it and set its properties as defined in the properties files. So, it is safe to run the
+ * script multiple times with the same settings.
  * 
  * @author csnyulas
  *
@@ -45,10 +49,10 @@ public class AddMultipleLinearizations {
 
 	private static Logger log = Log.getLogger(AddMultipleLinearizations.class);
 
-    private static ICDContentModel icdContentModel;
+    private static ICDContentModel cm;
     private static OWLModel owlModel;
 
-	private static RDFSNamedClass topCategory;
+	private static RDFSNamedClass topCls;
     private static List<RDFIndividual> linearizationViewInstances = new ArrayList<RDFIndividual>();
     private static Boolean isPartOf;
     private static Boolean isGrouping;
@@ -90,9 +94,9 @@ public class AddMultipleLinearizations {
 
         init();
 
-        topCategory = icdContentModel.getICDCategory(getNonOptionArgument(args, 1));
-        if (topCategory == null) {
-            log.severe("Abort. Failed to find category: " + topCategory);
+        topCls = cm.getICDCategory(getNonOptionArgument(args, 1));
+        if (topCls == null) {
+            log.severe("Abort. Failed to find top class: " + topCls);
             return;
         }
         
@@ -107,13 +111,13 @@ public class AddMultipleLinearizations {
         }
 
         long t0 = System.currentTimeMillis();
-        log.info("Started getting ICD categories at: " + new Date());
+        log.info("Started getting ICD classes at: " + new Date());
 
-        Collection<RDFSNamedClass> cats = icdContentModel.getRDFSNamedClassCollection(topCategory.getSubclasses(true));
+        Collection<RDFSNamedClass> cats = cm.getRDFSNamedClassCollection(topCls.getSubclasses(true));
 
-        log.info("Got " + cats.size() + " ICD categories at: " + new Date() + " in " + (System.currentTimeMillis() -  t0)/1000 + " secs.");
+        log.info("Got " + cats.size() + " ICD classes at: " + new Date() + " in " + (System.currentTimeMillis() -  t0)/1000 + " secs.");
 
-        cats.add(topCategory);
+        cats.add(topCls);
 
         addLinearization(cats);
         
@@ -176,34 +180,34 @@ public class AddMultipleLinearizations {
 	}
 	
 	private static void init() {
-        icdContentModel = new ICDContentModel(owlModel);
+        cm = new ICDContentModel(owlModel);
 
-        linearizationSpecificationClass = (OWLNamedClass) icdContentModel.getLinearizationSpecificationClass();
-        linearizationProp = icdContentModel.getLinearizationProperty();
-        linearizationViewProp = icdContentModel.getLinearizationViewProperty();
-        isIncludedInLinearizationProp = icdContentModel.getIsIncludedInLinearizationProperty();
-        isGroupingProp = icdContentModel.getIsGroupingProperty();
-        isAuxiliaryAxisChildProp = icdContentModel.getIsAuxiliaryAxisChildProperty();
+        linearizationSpecificationClass = (OWLNamedClass) cm.getLinearizationSpecificationClass();
+        linearizationProp = cm.getLinearizationProperty();
+        linearizationViewProp = cm.getLinearizationViewProperty();
+        isIncludedInLinearizationProp = cm.getIsIncludedInLinearizationProperty();
+        isGroupingProp = cm.getIsGroupingProperty();
+        isAuxiliaryAxisChildProp = cm.getIsAuxiliaryAxisChildProperty();
     }
 
-    private static void addLinearization(Collection<RDFSNamedClass> cats) {
+    private static void addLinearization(Collection<RDFSNamedClass> clses) {
         int i = 0;
-        for (RDFSNamedClass cat : cats) {
-            addLinearization(cat);
+        for (RDFSNamedClass cls : clses) {
+            addLinearization(cls);
 
             i++;
             if (i % 1000 == 0) {
-                log.info("Processed " + i + " categories at " + new Date());
+                log.info("Processed " + i + " classes at " + new Date());
             }
        }
 
     }
 
-    private static void addLinearization(RDFSNamedClass cat) {
+    private static void addLinearization(RDFSNamedClass cls) {
     	for (RDFIndividual linearizationViewInst : linearizationViewInstances) {
+    		
 	        try{
-	            RDFResource linSpec = linearizationSpecificationClass.createInstance((IcdIdGenerator.getNextUniqueId(cat.getOWLModel())));
-	            linSpec.setPropertyValue(linearizationViewProp, linearizationViewInst);
+	            RDFResource linSpec = getOrCreateLinSpecInstance(cls, linearizationViewInst);
 	            if (isPartOf != null) {
 	            	linSpec.setPropertyValue(isIncludedInLinearizationProp, isPartOf.booleanValue());
 	            }
@@ -213,10 +217,22 @@ public class AddMultipleLinearizations {
 	            if (isAuxiliaryAxisChild != null) {
 	            	linSpec.setPropertyValue(isAuxiliaryAxisChildProp, isAuxiliaryAxisChild.booleanValue());
 	            }
-	            cat.addPropertyValue(linearizationProp, linSpec);
+	            
 	        } catch (Exception e) {
-	            log.warning("------- Error at adding lin to " + cat);
+	            log.warning("------- Error at adding lin to " + cls);
 	        }
     	}
+    }
+    
+    private static RDFResource getOrCreateLinSpecInstance(RDFSNamedClass cls, RDFResource linView) {
+    	RDFResource linSpec = cm.getLinearizationSpecificationForView(linearizationSpecificationClass, linView);
+    	
+    	if (linSpec == null) {
+    		linSpec = linearizationSpecificationClass.createInstance((IcdIdGenerator.getNextUniqueId(owlModel)));
+            linSpec.setPropertyValue(linearizationViewProp, linView);
+            cls.addPropertyValue(linearizationProp, linSpec);
+    	}
+    	
+    	return linSpec;
     }
 }
