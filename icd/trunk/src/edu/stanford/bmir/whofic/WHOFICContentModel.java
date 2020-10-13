@@ -1493,10 +1493,9 @@ public class WHOFICContentModel {
 			if (targetLinSpec == null) {
 				targetLinSpec = getLinearizationSpecificationClass().createRDFIndividual(IcdIdGenerator.getNextUniqueId(targetCls.getOWLModel()));
 				targetLinSpec.setPropertyValue(getLinearizationViewProperty(), sourceLinView);
+				targetCls.addPropertyValue(getLinearizationProperty(), targetLinSpec);
 			}
 			copyLinearizationSpecification(targetLinSpec, sourceLinSpec);
-			
-			targetCls.addPropertyValue(getLinearizationProperty(), targetLinSpec);
 		}
     }
     
