@@ -45,6 +45,10 @@ public class WHOFICContentModelConstants {
     public final static String TERM_SUBCLASS_INCLUSION_CLASS = NS + "SubclassInclusionTerm";
     public final static String TERM_BASE_EXCLUSION_CLASS = NS + "BaseExclusionTerm";
     public final static String TERM_CODING_NOTE_CLASS = NS + "CodingNoteTerm";
+    
+    public final static String TERM_RELATED_IMPAIRMENT_CLASS = NS + "RelatedImpairmentTerm";
+    public final static String TERM_REMARK_CLASS = NS + "RemarkTerm";
+    public final static String TERM_ICF_REFERENCE_CLASS = NS + "ICFReferenceTerm";
 
     /* Linearizations */
     public final static String LINEARIZATION_VIEW_CLASS = NS + "LinearizationView";
@@ -84,6 +88,10 @@ public class WHOFICContentModelConstants {
     public final static String SORTING_LABEL_PROP = NS + "sortingLabel";
     public final static String EXTERNAL_REFERENCE_PROP = NS + "externalReference";
     public final static String REFERENCED_CATEGORY_PROP = NS + "referencedCategory";
+    
+    public final static String ICF_REFERENCE_PROP = NS + "icfReference";
+    public final static String RELATED_IMPAIRMENT_PROP = NS + "relatedImpairment";
+    public final static String REMARK_PROP = NS + "remark";
 
     @Deprecated
     public final static String INCLUSION_PROP = NS + "inclusion";
@@ -111,6 +119,7 @@ public class WHOFICContentModelConstants {
     public final static String TERM_ID_PROP = NS + "termId";
     public final static String PUBLIC_ID_PROP = NS+ "publicId";
 
+    
     /* Linearizations */
     public final static String LINEARIZATION_PROP = NS + "linearization";
     public final static String LINEARIZATION_HISTORIC_PROP = NS + "historicLinearization";
