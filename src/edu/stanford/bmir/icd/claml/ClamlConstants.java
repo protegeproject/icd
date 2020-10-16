@@ -33,6 +33,8 @@ public class ClamlConstants {
 	public final static String RUBRIC_KIND_INCLUSION_ATTR = "inclusion";
 	public final static String RUBRIC_KIND_PREFFERD_LONG_ATTR = "preferredLong";
 	public final static String RUBRIC_KIND_PREFFERD_ATTR = "preferred";
+	public final static String RUBRIC_KIND_RELATED_IMPAIRMENT_ATTR = "relatedImpairment";
+	public final static String RUBRIC_KIND_REMARK_ATTR = "remark";
 
 
 	public final static String XML_LANG = "lang";

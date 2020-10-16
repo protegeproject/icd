@@ -240,7 +240,41 @@ public class ClamlImport {
 			parsePreferredLong(cls, id, labelElement);
 		} else if (kind.equals(ClamlConstants.RUBRIC_KIND_DEFINITION_ATTR)) {
 			parseDefinition(cls, id, labelElement);
+		} else if (kind.equals(ClamlConstants.RUBRIC_KIND_RELATED_IMPAIRMENT_ATTR)) {
+			parseRelatedImpairment(cls, id, labelElement);
+		} else if (kind.equals(ClamlConstants.RUBRIC_KIND_REMARK_ATTR)) {
+			parseRemark(cls, id, labelElement);
 		}
+	}
+
+	private void parseRemark(RDFSNamedClass cls, String id, Element labelElement) {
+		String label = labelElement.getTextTrim();
+		label = label.trim();
+		if (label.length() == 0) {
+			return;
+		}
+		
+		RDFResource term = cm.createTerm(cm.getTermRemarkClass());
+		
+		String lang = labelElement.getAttributeValue(ClamlConstants.XML_LANG, Namespace.XML_NAMESPACE);
+		cm.fillTerm(term, id, label, lang);
+		
+		cls.addPropertyValue(cm.getRemarkProperty(), term);
+	}
+
+	private void parseRelatedImpairment(RDFSNamedClass cls, String id, Element labelElement) {
+		String label = labelElement.getTextTrim();
+		label = label.trim();
+		if (label.length() == 0) {
+			return;
+		}
+		
+		RDFResource term = cm.createTerm(cm.getTermRelatedImpairmentClass());
+		
+		String lang = labelElement.getAttributeValue(ClamlConstants.XML_LANG, Namespace.XML_NAMESPACE);
+		cm.fillTerm(term, id, label, lang);
+		
+		cls.addPropertyValue(cm.getRelatedImpairmentProperty(), term);
 	}
 
 	private void parseDefinition(RDFSNamedClass cls, String id, Element labelElement) {
