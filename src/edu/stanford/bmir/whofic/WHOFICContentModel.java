@@ -1717,10 +1717,12 @@ public class WHOFICContentModel {
     	return getReferencedCategory(cls, getICFReferenceProperty());
     }
     
-    public void createICFReference(RDFSNamedClass cls, RDFSNamedClass icfCls) {
+    public RDFResource createICFReference(RDFSNamedClass cls, RDFSNamedClass icfCls) {
     	RDFResource term = createTerm(getTermICFReferenceClass());
     	term.addPropertyValue(getReferencedCategoryProperty(), icfCls);
     	cls.addPropertyValue(getICFReferenceProperty(), term);
+    	
+    	return term;
     }
     
     /*
