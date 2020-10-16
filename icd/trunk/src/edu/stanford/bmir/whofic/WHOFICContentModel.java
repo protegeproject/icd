@@ -81,6 +81,10 @@ public class WHOFICContentModel {
     private RDFSNamedClass termBaseInclusionClass;
     private RDFSNamedClass termBaseExclusionClass;
     private RDFSNamedClass termCodingNoteClass;
+    
+    private RDFSNamedClass termRelatedImpairmentClass;
+    private RDFSNamedClass termRemarkClass;
+    private RDFSNamedClass termICFReferenceClass;
 
     private RDFSNamedClass childOrderClass;
     private RDFSNamedClass chapterXClass;
@@ -106,7 +110,11 @@ public class WHOFICContentModel {
     private RDFProperty sortingLabelProperty;
     private RDFProperty externalReferenceProperty;
     private RDFProperty referencedCategoryProperty;
-
+    
+    private RDFProperty icfReferenceProperty;
+    private RDFProperty relatedImpairmentProperty;
+    private RDFProperty remarkProperty;
+    
     private RDFProperty inclusionProperty;
     private RDFProperty exclusionProperty;
     private RDFProperty indexTypeProperty;
@@ -347,6 +355,27 @@ public class WHOFICContentModel {
     }
 
 
+    public RDFSNamedClass getTermICFReferenceClass() {
+    	if (termICFReferenceClass == null) {
+    		termICFReferenceClass = owlModel.getRDFSNamedClass(WHOFICContentModelConstants.TERM_ICF_REFERENCE_CLASS);
+    	}
+    	return termICFReferenceClass;
+    }
+    
+    public RDFSNamedClass getTermRelatedImpairmentClass() {
+    	if (termRelatedImpairmentClass == null) {
+    		termRelatedImpairmentClass = owlModel.getRDFSNamedClass(WHOFICContentModelConstants.TERM_RELATED_IMPAIRMENT_CLASS);
+    	}
+    	return termRelatedImpairmentClass;
+    }
+    
+    public RDFSNamedClass getTermRemarkClass() {
+    	if (termRemarkClass == null) {
+    		termRemarkClass = owlModel.getRDFSNamedClass(WHOFICContentModelConstants.TERM_REMARK_CLASS);
+    	}
+    	return termRemarkClass;
+    }
+    
     @Deprecated
     public RDFSNamedClass getTermIndexClass() {
         if (termIndexClass == null) {
@@ -568,7 +597,28 @@ public class WHOFICContentModel {
     	}
     	return referencedCategoryProperty;
     }
+    
+    public RDFProperty getICFReferenceProperty() {
+    	if (icfReferenceProperty == null) {
+    		icfReferenceProperty = owlModel.getRDFProperty(WHOFICContentModelConstants.ICF_REFERENCE_PROP);
+    	}
+    	return icfReferenceProperty;
+    }
 
+    public RDFProperty getRelatedImpairmentProperty() {
+    	if (relatedImpairmentProperty == null) {
+    		relatedImpairmentProperty = owlModel.getRDFProperty(WHOFICContentModelConstants.RELATED_IMPAIRMENT_PROP);
+    	}
+    	return relatedImpairmentProperty;
+    }
+    
+    public RDFProperty getRemarkProperty() {
+    	if (remarkProperty == null) {
+    		remarkProperty = owlModel.getRDFProperty(WHOFICContentModelConstants.REMARK_PROP);
+    	}
+    	return remarkProperty;
+    }
+    
     @Deprecated
     public RDFProperty getIndexTypeProperty() {
         if (indexTypeProperty == null) {
@@ -1647,6 +1697,31 @@ public class WHOFICContentModel {
     	return getTermLabels(icdClass, getSynonymProperty());
     }
     
+    public RDFSNamedClass getReferencedCategory(RDFSNamedClass cls, RDFProperty internalRefProp) {
+    	RDFResource term = (RDFResource) cls.getPropertyValue(internalRefProp);
+    	if (term == null) {
+    		return null;
+    	}
+    	return (RDFSNamedClass) term.getPropertyValue(getReferencedCategoryProperty());
+    }
+    
+    public Collection<RDFSNamedClass> getReferencedCategories(RDFSNamedClass cls, RDFProperty internalRefProp) {
+    	RDFResource term = (RDFResource) cls.getPropertyValue(internalRefProp);
+    	if (term == null) {
+    		return null;
+    	}
+    	return getRDFSNamedClassCollection(term.getPropertyValues(getReferencedCategoryProperty()));
+    }
+    
+    public RDFSNamedClass getICFReference(RDFSNamedClass cls) {
+    	return getReferencedCategory(cls, getICFReferenceProperty());
+    }
+    
+    public void createICFReference(RDFSNamedClass cls, RDFSNamedClass icfCls) {
+    	RDFResource term = createTerm(getTermICFReferenceClass());
+    	term.addPropertyValue(getReferencedCategoryProperty(), icfCls);
+    	cls.addPropertyValue(getICFReferenceProperty(), term);
+    }
     
     /*
      * TAG management methods
