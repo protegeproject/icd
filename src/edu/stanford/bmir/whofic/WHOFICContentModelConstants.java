@@ -163,6 +163,8 @@ public class WHOFICContentModelConstants {
 
 	public final static String IS_OBSOLETE_PROP = NS + "isObsolete";
 	public final static String IS_DEPRECATED_PROP = NS + "isDeprecated";
+	
+	public final static String IS_RELEASED_PROP = NS + "isReleased";
 
 	/* Children Ordering based on the parent */
 	public final static String CHILDREN_ORDER_PROP = NS + "childrenOrder";

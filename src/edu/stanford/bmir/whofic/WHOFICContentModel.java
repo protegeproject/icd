@@ -167,6 +167,7 @@ public class WHOFICContentModel {
 
     private RDFProperty isObsoleteProperty;
     private RDFProperty isDeprecatedProperty;
+    private RDFProperty isReleasedProperty;
     private RDFProperty publicIdProperty;
 
     private RDFProperty childrenOrderProperty;
@@ -918,6 +919,13 @@ public class WHOFICContentModel {
         	isDeprecatedProperty = owlModel.getRDFProperty(WHOFICContentModelConstants.IS_DEPRECATED_PROP);
         }
         return isDeprecatedProperty;
+    }
+    
+    public RDFProperty getIsReleasedProperty() {
+        if (isReleasedProperty == null) {
+        	isReleasedProperty = owlModel.getRDFProperty(WHOFICContentModelConstants.IS_RELEASED_PROP);
+        }
+        return isReleasedProperty;
     }
 
     public RDFProperty getPublicIdProperty() {
@@ -1723,6 +1731,11 @@ public class WHOFICContentModel {
     	cls.addPropertyValue(getICFReferenceProperty(), term);
     	
     	return term;
+    }
+    
+    public boolean isReleased(RDFSNamedClass cls) {
+    	Boolean val = (Boolean) cls.getPropertyValue(getIsReleasedProperty());
+    	return val == null ? false : val;
     }
     
     /*
