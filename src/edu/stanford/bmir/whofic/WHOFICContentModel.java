@@ -1738,6 +1738,10 @@ public class WHOFICContentModel {
     	return val == null ? false : val;
     }
     
+    public void setReleased(RDFSNamedClass cls, boolean released) {
+    	cls.setPropertyValue(getIsReleasedProperty(), released);
+    }
+    
     /*
      * TAG management methods
      */
@@ -1810,6 +1814,10 @@ public class WHOFICContentModel {
         return (RDFResource) icdClass.getPropertyValue(getDisplayStatusProperty());
     }
 
+    public void setDisplayStatus(RDFSNamedClass cls, RDFResource displayStatusInst) {
+    	cls.setPropertyValue(getDisplayStatusProperty(), displayStatusInst);
+    }
+    
     /**
      * Retrieves the children of a parent ordered by an index.
      * The index is stored as instances of the ChildOrder class, and accessed through the
