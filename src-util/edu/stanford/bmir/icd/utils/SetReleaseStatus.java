@@ -39,7 +39,9 @@ public class SetReleaseStatus {
         owlModel = (OWLModel) prj.getKnowledgeBase();
         cm = new ICDContentModel(owlModel);
 
+        //TODO: Uncomment this method for production!!
         //removeDisplayStatus();
+        
         setReleasedStatus(args[1]);
     }
 
