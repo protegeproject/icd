@@ -14,7 +14,7 @@ import edu.stanford.smi.protege.util.Log;
 import edu.stanford.smi.protegex.owl.model.OWLModel;
 import edu.stanford.smi.protegex.owl.model.RDFSNamedClass;
 
-//TODO: Uncomment method to delete existing display status!!!! It's commented only for testing
+//TODO: Both methods need to be uncommented for production!
 
 public class SetReleaseStatus {
 
@@ -39,9 +39,8 @@ public class SetReleaseStatus {
         owlModel = (OWLModel) prj.getKnowledgeBase();
         cm = new ICDContentModel(owlModel);
 
-        //TODO: Uncomment this method for production!!
-        //removeDisplayStatus();
-        
+        //TODO: Both methods need to be uncommented for production!!
+        removeDisplayStatus();
         setReleasedStatus(args[1]);
     }
 
@@ -50,8 +49,16 @@ public class SetReleaseStatus {
     	
     	//doing it only for ICD, the others don't have display status set
 		Collection<RDFSNamedClass> clses = cm.getICDCategories();
+		
+		int count = 0;
+		
 		for (RDFSNamedClass cls : clses) {
 			cm.setDisplayStatus(cls, null);
+			
+			if (count % 1000 == 0) {
+				Log.getLogger().info("Removed display status for " + count + " entities");
+			}
+			count ++;
 		}
 	}
 
