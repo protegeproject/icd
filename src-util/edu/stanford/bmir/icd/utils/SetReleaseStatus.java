@@ -49,6 +49,7 @@ public class SetReleaseStatus {
     	
     	//doing it only for ICD, the others don't have display status set
 		Collection<RDFSNamedClass> clses = cm.getICDCategories();
+		clses.add(cm.getICDCategoryClass());
 		
 		int count = 0;
 		
