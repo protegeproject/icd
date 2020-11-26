@@ -26,6 +26,7 @@ public class ClamlConstants {
 	public final static String RUBRIC_KIND_TEXT_ATTR = "text";
 	public final static String RUBRIC_KIND_CODING_HINT_ATTR = "coding-hint";
 	public final static String RUBRIC_KIND_DEFINITION_ATTR = "definition";
+	public final static String RUBRIC_KIND_DESCRIPTION_ATTR = "description";
 	public final static String RUBRIC_KIND_INTRODUCTION_ATTR = "introduction";
 	public final static String RUBRIC_KIND_MODOFIER_LINK_ATTR = "modifierlink";
 	public final static String RUBRIC_KIND_NOTE_ATTR = "note";
