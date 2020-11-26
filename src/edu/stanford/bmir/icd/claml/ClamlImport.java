@@ -238,7 +238,8 @@ public class ClamlImport {
 			parseNote(cls, id, labelElement);
 		} else if (kind.equals(ClamlConstants.RUBRIC_KIND_PREFFERD_LONG_ATTR)) {
 			parsePreferredLong(cls, id, labelElement);
-		} else if (kind.equals(ClamlConstants.RUBRIC_KIND_DEFINITION_ATTR)) {
+		} else if ( kind.equals(ClamlConstants.RUBRIC_KIND_DEFINITION_ATTR) ||
+				    kind.equals(ClamlConstants.RUBRIC_KIND_DESCRIPTION_ATTR) ) {
 			parseDefinition(cls, id, labelElement);
 		} else if (kind.equals(ClamlConstants.RUBRIC_KIND_RELATED_IMPAIRMENT_ATTR)) {
 			parseRelatedImpairment(cls, id, labelElement);
