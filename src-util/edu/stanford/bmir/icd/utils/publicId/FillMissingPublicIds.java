@@ -39,7 +39,7 @@ public class FillMissingPublicIds {
 
 	private static String QUERY = "select frame from icd_umbrella a where "
 			+ "(slot = \"http://www.w3.org/1999/02/22-rdf-syntax-ns#type\" and "
-			+ "short_value = \"http://who.int/icd#PostcoordinationSection\" and "
+			+ "short_value = \"http://who.int/icd#DefinitionSection\" and "
 			+ "not exists (select null from icd_umbrella b where "
 			+ "(a.frame=b.frame and slot=\"http://who.int/icd#publicId\")));";
 
