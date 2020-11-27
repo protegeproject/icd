@@ -185,7 +185,7 @@ public class FillMissingPublicIds {
 				log.warning("Could not get public ID from ID server for class: " + cat.getName());
 			} else {
 				cat.setPropertyValue(publicIDProp, publicId);
-				log.info("Adding public id to class: " + cat.getName() + " publicId: " + publicId);
+				//log.fine("Adding public id to class: " + cat.getName() + " publicId: " + publicId);
 				return true;
 			}
 		} catch (Exception e) {
