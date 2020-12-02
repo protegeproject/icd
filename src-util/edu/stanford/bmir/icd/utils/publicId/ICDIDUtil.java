@@ -44,9 +44,35 @@ public class ICDIDUtil {
     }
 
     public static void main (String[] args) throws Exception{
-        System.out.println(getPublicId("http://who.int/icd#V"));
+        //System.out.println(getPublicId("http://who.int/icd#V"));
+    	
+    	printPublicId("http://who.int/icd#HealthIntervention");
+    	
+    	/*printPublicId("http://who.int/icd#ICHICategory");
+    	printPublicId("http://who.int/icd#Target");
+    	printPublicId("http://who.int/icd#Means");
+    	printPublicId("http://who.int/icd#Action");
+    	printPublicId("http://who.int/icd#ICHIExtensionCode");
+    	
+    	printPublicId("http://who.int/icf#ICFCategory");
+    	printPublicId("http://who.int/icf#S");
+    	printPublicId("http://who.int/icf#B");
+    	printPublicId("http://who.int/icf#E");
+    	printPublicId("http://who.int/icf#D");
+    	
+    	printPublicId("http://who.int/icf#ICFQualifier");
+    	printPublicId("http://who.int/icf#Q-al");
+    	printPublicId("http://who.int/icf#Q-bf");
+    	printPublicId("http://who.int/icf#Q-ncbs");
+    	printPublicId("http://who.int/icf#Q-p");
+    	printPublicId("http://who.int/icf#Q-emi");
+    	printPublicId("http://who.int/icf#Q-c");
+    	*/
     }
 
+    private static void printPublicId(String icatId) {
+    	System.out.println(icatId + "\t" + getPublicId(icatId));
+    }
 
     /*
     URL: http://apps.who.int/classifications/icd11/idgenerator/GetNewId
