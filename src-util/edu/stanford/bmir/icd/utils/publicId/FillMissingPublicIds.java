@@ -16,7 +16,6 @@ import edu.stanford.bmir.whofic.icd.ICDContentModel;
 import edu.stanford.smi.protege.model.Project;
 import edu.stanford.smi.protege.server.RemoteProjectManager;
 import edu.stanford.smi.protege.storage.database.DatabaseKnowledgeBaseFactory;
-import edu.stanford.smi.protege.ui.ProjectManager;
 import edu.stanford.smi.protege.util.Log;
 import edu.stanford.smi.protege.util.PropertyList;
 import edu.stanford.smi.protegex.owl.model.OWLModel;
@@ -65,7 +64,7 @@ public class FillMissingPublicIds {
 		Project localPrj = Project.loadProjectFromFile(args[0], errors);
 
 		if (errors != null) {
-			ProjectManager.getProjectManager().displayErrors("Errors", errors);
+			log.warning(errors.toString());
 		}
 
 		if (localPrj == null) {
@@ -103,7 +102,7 @@ public class FillMissingPublicIds {
 			return new ArrayList<String>();
 		}
 
-		log.info("Retrieving classes with missing public id from " + (query.equals(QUERY_CM) ? "icd_ann" : "icd_umbrella") + " ...");
+		log.info("Retrieving classes with missing public id from " + (query.equals(QUERY_CM) ? "icd_cm" : "icd_umbrella") + " ...");
 		
 		Collection<String> clsesWithMissingPublicIds = getClsesWithMissingPublicId(stmt, query);
 		
