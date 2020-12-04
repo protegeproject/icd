@@ -37,11 +37,18 @@ public class FillMissingPublicIds {
 
 	private static Logger log = Log.getLogger(FillMissingPublicIds.class);
 
-	private static String QUERY = "select frame from icd_umbrella a where "
+	private static String QUERY_UMB = "select frame from icd_umbrella a where "
 			+ "(slot = \"http://www.w3.org/1999/02/22-rdf-syntax-ns#type\" and "
 			+ "short_value = \"http://who.int/icd#DefinitionSection\" and "
 			+ "not exists (select null from icd_umbrella b where "
 			+ "(a.frame=b.frame and slot=\"http://who.int/icd#publicId\")));";
+	
+	private static String QUERY_CM = "select frame from icd_cm a where "
+			+ "(slot = \"http://www.w3.org/1999/02/22-rdf-syntax-ns#type\" and "
+			+ "short_value = \"http://who.int/icd#DefinitionSection\" and "
+			+ "not exists (select null from icd_umbrella b where "
+			+ "(a.frame=b.frame and slot=\"http://who.int/icd#publicId\")));";
+	
 
 	private static ICDContentModel cm;
 	private static OWLModel owlModel;
@@ -66,16 +73,14 @@ public class FillMissingPublicIds {
 			return;
 		}
 
-		Statement stmt = getStatement(localPrj);
-
-		if (stmt == null) {
-			log.log(Level.SEVERE, "Cannot get a DB statement. Abort.");
-			System.exit(1);
+		Collection<String> clsesWithMissingPublicIds = new ArrayList<String>();
+		clsesWithMissingPublicIds.addAll(getClsesWithMissingPublicId(localPrj, QUERY_CM));
+		clsesWithMissingPublicIds.addAll(getClsesWithMissingPublicId(localPrj, QUERY_UMB));
+		
+		if (clsesWithMissingPublicIds.size() == 0) {
+			log.info("Did not retrieve any classes with missing public ids");
+			System.exit(0);
 		}
-
-		log.info("Retrieving classes with missing public id..");
-		Collection<String> clsesWithMissingPublicIds = getClsesWithMissingPublicId(stmt);
-		log.info("Retrieved " + clsesWithMissingPublicIds.size() + " classes with missing public ids.");
 
 		Project remotePrj = connectToRemoteProject(args);
 		if (remotePrj == null) {
@@ -90,16 +95,32 @@ public class FillMissingPublicIds {
 		addPublicId(clsesWithMissingPublicIds);
 	}
 
+	private static Collection<String> getClsesWithMissingPublicId(Project localPrj, String query) {
+		Statement stmt = getStatement(localPrj);
+
+		if (stmt == null) {
+			log.log(Level.SEVERE, "Cannot get a DB statement. Abort.");
+			return new ArrayList<String>();
+		}
+
+		log.info("Retrieving classes with missing public id from " + (query.equals(QUERY_CM) ? "icd_ann" : "icd_umbrella") + " ...");
+		
+		Collection<String> clsesWithMissingPublicIds = getClsesWithMissingPublicId(stmt, query);
+		
+		log.info("Retrieved " + clsesWithMissingPublicIds.size() + " classes with missing public ids.");
+		return clsesWithMissingPublicIds;
+	}
+
 	private static void init() {
 		cm = new ICDContentModel(owlModel);
 		publicIDProp = cm.getPublicIdProperty();
 	}
 
-	private static Collection<String> getClsesWithMissingPublicId(Statement stmt) {
+	private static Collection<String> getClsesWithMissingPublicId(Statement stmt, String query) {
 		List<String> frameIds = new ArrayList<String>();
 
 		try {
-			ResultSet rset = stmt.executeQuery(QUERY);
+			ResultSet rset = stmt.executeQuery(query);
 			while (rset.next()) {
 				String frameId = rset.getString("frame");
 				frameIds.add(frameId);
@@ -185,7 +206,7 @@ public class FillMissingPublicIds {
 				log.warning("Could not get public ID from ID server for class: " + cat.getName());
 			} else {
 				cat.setPropertyValue(publicIDProp, publicId);
-				//log.fine("Adding public id to class: " + cat.getName() + " publicId: " + publicId);
+				log.info("Adding public id to class: " + cat.getName() + " publicId: " + publicId);
 				return true;
 			}
 		} catch (Exception e) {
