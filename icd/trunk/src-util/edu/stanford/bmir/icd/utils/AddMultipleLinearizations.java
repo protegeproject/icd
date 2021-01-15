@@ -229,6 +229,9 @@ public class AddMultipleLinearizations {
     	RDFResource linSpec = cm.getLinearizationSpecificationForView(linearizationSpecificationClass, linView);
     	
     	if (linSpec == null) {
+    		//to be commented out
+    		log.info("Creating lin spec for: " + cm.getTitleLabel(cls) + " . Lin View: " + linView);
+    		
     		linSpec = linearizationSpecificationClass.createInstance((IcdIdGenerator.getNextUniqueId(owlModel)));
             linSpec.setPropertyValue(linearizationViewProp, linView);
             cls.addPropertyValue(linearizationProp, linSpec);
