@@ -114,6 +114,7 @@ public class AddMultipleLinearizations {
         log.info("Started getting ICD classes at: " + new Date());
 
         Collection<RDFSNamedClass> cats = cm.getRDFSNamedClassCollection(topCls.getSubclasses(true));
+        cats.add(topCls); //adding also the top class
 
         log.info("Got " + cats.size() + " ICD classes at: " + new Date() + " in " + (System.currentTimeMillis() -  t0)/1000 + " secs.");
 
