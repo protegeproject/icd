@@ -59,6 +59,7 @@
 	            	classname="edu.stanford.bmir.icd.utils.AddMultipleLinearizations"
                         maxmemory="${heap.size.max}">
 		      	<classpath refid = "project.classpath"/>
+	        	<jvmarg value="-agentlib:jdwp=transport=dt_socket,address=8100,server=y,suspend=n" />
 	        <arg line="${opt.isPartOf} ${opt.isGrouping} ${opt.isAuxAxChild} ${pprj.file} ${top.class} ${lin.views}"/>
 <!--
 	        <arg value="${opt.isPartOf}"/>
