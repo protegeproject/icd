@@ -226,7 +226,7 @@ public class AddMultipleLinearizations {
     }
     
     private static RDFResource getOrCreateLinSpecInstance(RDFSNamedClass cls, RDFResource linView) {
-    	RDFResource linSpec = cm.getLinearizationSpecificationForView(linearizationSpecificationClass, linView);
+    	RDFResource linSpec = cm.getLinearizationSpecificationForView(cls, linView);
     	
     	if (linSpec == null) {
     		//to be commented out
