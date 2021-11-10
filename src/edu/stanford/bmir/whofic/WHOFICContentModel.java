@@ -1869,13 +1869,29 @@ public class WHOFICContentModel {
     /*
      * Equivalent class definitions
      */
-
+    
+    /**
+     * @deprecated because of typo. Use {@link #getPrecoordinationSuperclass(String) instead}
+     */
+    @Deprecated 
     public RDFSNamedClass getPreecoordinationSuperclass(String clsName) {
+    	return getPrecoordinationSuperclass(clsName);
+    }
+    
+    public RDFSNamedClass getPrecoordinationSuperclass(String clsName) {
     	RDFSNamedClass cls = getICDClass(clsName);
-    	return getPreecoordinationSuperclass(cls);
+    	return getPrecoordinationSuperclass(cls);
+    }
+    
+    /**
+     * @deprecated because of typo. Use {@link #getPrecoordinationSuperclass(RDFSNamedClass) instead}
+     */
+    @Deprecated 
+    public RDFSNamedClass getPreecoordinationSuperclass(RDFSNamedClass cls) {
+    	return getPrecoordinationSuperclass(cls);
     }
 
-    public RDFSNamedClass getPreecoordinationSuperclass(RDFSNamedClass cls) {
+    public RDFSNamedClass getPrecoordinationSuperclass(RDFSNamedClass cls) {
        	RDFProperty precoordSuperclassProp = getPrecoordinationSuperclassProperty();
     	return (RDFSNamedClass) cls.getPropertyValue(precoordSuperclassProp);
     }
@@ -1897,7 +1913,7 @@ public class WHOFICContentModel {
 
 
     public OWLIntersectionClass getEquivalentPrecoordinationClassExpression(RDFSNamedClass cls) {
-    	RDFSNamedClass precoordSuperclass = getPreecoordinationSuperclass(cls);
+    	RDFSNamedClass precoordSuperclass = getPrecoordinationSuperclass(cls);
     	if (precoordSuperclass == null) {
     		//precoordinationSuperclass is not set, so
     		//there can't be any equivalent class expression that involve that superclass
@@ -1919,7 +1935,7 @@ public class WHOFICContentModel {
     }
 
     public OWLIntersectionClass getNecessaryPrecoordinationClassExpression(RDFSNamedClass cls) {
-    	RDFSNamedClass precoordSuperclass = getPreecoordinationSuperclass(cls);
+    	RDFSNamedClass precoordSuperclass = getPrecoordinationSuperclass(cls);
     	if (precoordSuperclass == null) {
     		//precoordinationSuperclass is not set, so
     		//there can't be any equivalent class expression that involve that superclass
@@ -2184,7 +2200,7 @@ public class WHOFICContentModel {
 	private OWLIntersectionClass createPrecoordinationClassExpressionDraft(RDFSNamedClass cls, boolean equivalentClass) {
 		OWLIntersectionClass precoordClassExpression;
 		precoordClassExpression = owlModel.createOWLIntersectionClass();
-		precoordClassExpression.addOperand(getPreecoordinationSuperclass(cls));
+		precoordClassExpression.addOperand(getPrecoordinationSuperclass(cls));
 		if (equivalentClass) {
 			((OWLNamedClass)cls).addEquivalentClass(precoordClassExpression);
 		}
