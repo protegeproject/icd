@@ -125,7 +125,8 @@ public class ICD_API_Example {
     public static void getPostcoordinationInfo() {
         System.out.println("\n Post-Coordination information:");
 
-        List<String> pcAxesPropertiesList = ICDContentModelConstants.PC_AXES_PROPERTIES_LIST;
+//        List<String> pcAxesPropertiesList = ICDContentModelConstants.PC_AXES_PROPERTIES_LIST;
+        List<String> pcAxesPropertiesList = icdContentModel.getPostcoordinationAxesPropertyList();
         System.out.println("List of all possible postcoordination axes in ICD: " + pcAxesPropertiesList);
 
         RDFSNamedClass category = icdContentModel.getICDCategory("http://who.int/icd#A65-A69");
