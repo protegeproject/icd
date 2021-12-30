@@ -1623,7 +1623,8 @@ public class WHOFICContentModel {
     
 
     /**
-     * This method is deprecated due to the typo in the name. Use instead {@link #getAllowedPostcoordinationSpecifications(RDFSNamedClass)}
+     * This method is deprecated due to the typo in the name. 
+     * Use instead {@link #getAllowedPostcoordinationSpecifications(RDFSNamedClass)}.
      * @param icdClass
      * @return
      */
@@ -1871,47 +1872,102 @@ public class WHOFICContentModel {
      */
     
     /**
-     * @deprecated because of typo. Use {@link #getPrecoordinationSuperclass(String) instead}
+     * @deprecated because of typo. Use {@link #getPrecoordinationSuperclass(String)} instead.
      */
     @Deprecated 
     public RDFSNamedClass getPreecoordinationSuperclass(String clsName) {
     	return getPrecoordinationSuperclass(clsName);
     }
     
+    /**
+     * @deprecated Deprecated in the updated logical definition API.
+     *     Use {@link #getLogicalDefinitionSuperclasses(String)} instead.
+     */
+    @Deprecated
     public RDFSNamedClass getPrecoordinationSuperclass(String clsName) {
     	RDFSNamedClass cls = getICDClass(clsName);
     	return getPrecoordinationSuperclass(cls);
     }
     
     /**
-     * @deprecated because of typo. Use {@link #getPrecoordinationSuperclass(RDFSNamedClass) instead}
+     * @deprecated because of typo. Use {@link #getPrecoordinationSuperclass(RDFSNamedClass)} instead.
      */
     @Deprecated 
     public RDFSNamedClass getPreecoordinationSuperclass(RDFSNamedClass cls) {
     	return getPrecoordinationSuperclass(cls);
     }
 
+    /**
+     * @deprecated Deprecated in the updated logical definition API. 
+     *     Use {@link #getLogicalDefinitionSuperclasses(RDFSNamedClass)} instead.
+     */
+    @Deprecated
     public RDFSNamedClass getPrecoordinationSuperclass(RDFSNamedClass cls) {
        	RDFProperty precoordSuperclassProp = getPrecoordinationSuperclassProperty();
     	return (RDFSNamedClass) cls.getPropertyValue(precoordSuperclassProp);
     }
 
-    public void setPrecoordinationSuperclass(String clsName, String superclsName) {
-    	setPrecoordinationSuperclass(getICDClass(clsName), getICDClass(superclsName));
-
-    	//TODO see if we need transactions or if we need this method at all
-    	//TODO do we need to do something special here?
+//TODO: Add methods to set or perhaps even better to add precoordination superclasses.
+//    Decide if we want to use "logical definition" or "precoordination" superclass to refer to it.
+//    Perhaps create the setPrecoordinationSuperclass methods and deprecate them, and suggest
+//    that the addLogicalDefintionSuperclass method should be used instead.
+//    
+//    public void setPrecoordinationSuperclass(String clsName, String superclsName) {
+//    	setPrecoordinationSuperclass(getICDClass(clsName), getICDClass(superclsName));
+//    }
+//
+//    public void setPrecoordinationSuperclass(RDFSNamedClass cls, RDFSNamedClass precoordSuperclass) {
+//    	cls.setPropertyValue(getPrecoordinationSuperclassProperty(), precoordSuperclass);
+//
+//    	//TODO see if we need transactions or if we need this method at all
+//    	//TODO do we need to do something special here? e.g. remove logical definition(s)
+//    	//		created with the old precoordination superclass(es)
+//    }
+    
+    /**
+     * @deprecated Deprecated in the updated logical definition API. 
+     *     Use {@link #removeLogicalDefinitionSuperclass(RDFSNamedClass, RDFSNamedClass)} instead.
+     */
+    @Deprecated
+    public void removePrecoordinationSuperclass(String clsName) {
+    	removePrecoordinationSuperclass(getICDClass(clsName));
     }
 
-    public void setPrecoordinationSuperclass(RDFSNamedClass cls, RDFSNamedClass precoorParent) {
-    	cls.setPropertyValue(getPrecoordinationSuperclassProperty(), precoorParent);
+    /**
+     * @deprecated Deprecated in the updated logical definition API. 
+     *     Use {@link #removeLogicalDefinitionSuperclass(RDFSNamedClass, RDFSNamedClass)} instead.
+     */
+    @Deprecated
+    public void removePrecoordinationSuperclass(RDFSNamedClass cls) {
+    	removeLogicalDefinitionSuperclass(cls, getPrecoordinationSuperclass(cls));
     }
     
-    public void removePrecoordinationSuperclass(String clsName) {
-    	//TODO
+    public void removeLogicalDefinitionSuperclass(RDFSNamedClass cls, RDFSNamedClass precoordSuperclass) {
+    	//by default we should also remove the logical definition 
+    	//that was created with this precoordination parent
+    	removeLogicalDefinitionSuperclass(cls, precoordSuperclass, true);
     }
+    
+    public void removeLogicalDefinitionSuperclass(RDFSNamedClass cls, 
+    		RDFSNamedClass precoordSuperclass, boolean alsoRemoveLogicalDefinition) {
+    	cls.removePropertyValue(getPrecoordinationSuperclassProperty(), precoordSuperclass);
+    	if (alsoRemoveLogicalDefinition) {
+    		removeLogicalDefinitionForSuperclass(cls, precoordSuperclass);
+    	}
+    }
+    
+    public void removeLogicalDefinitionForSuperclass(RDFSNamedClass cls, 
+    		RDFSNamedClass precoordSuperclass) {
+    	OWLIntersectionClass eqClassExpression = getEquivalentPrecoordinationClassExpression(cls, precoordSuperclass);
+    	removeEquivalentClass(cls, eqClassExpression);
+    }
+    
 
-
+    /**
+     * @deprecated Deprecated in the updated logical definition API. 
+     *     Use {@link #getEquivalentPrecoordinationClassExpression(RDFSNamedClass, RDFSNamedClass)} instead.
+     */
+    @Deprecated
     public OWLIntersectionClass getEquivalentPrecoordinationClassExpression(RDFSNamedClass cls) {
     	RDFSNamedClass precoordSuperclass = getPrecoordinationSuperclass(cls);
     	if (precoordSuperclass == null) {
@@ -1920,20 +1976,14 @@ public class WHOFICContentModel {
     		return null;
     	}
 
-    	Collection<?> equivalentClasses = cls.getEquivalentClasses();
-    	if (equivalentClasses == null || equivalentClasses.isEmpty()) {
-    		return null;
-    	}
-    	for (Iterator<?> it = equivalentClasses.iterator(); it.hasNext(); ) {
-    		OWLClass nextEqClass = (OWLClass)it.next();
-    		if (isValidPrecoordinationDefinitionClassExpression(nextEqClass, precoordSuperclass)) {
-    			return (OWLIntersectionClass) nextEqClass;
-    		}
-    	}
-
-    	return null;
+    	return getEquivalentPrecoordinationClassExpression(cls, precoordSuperclass);
     }
 
+    /**
+     * @deprecated Deprecated in the updated logical definition API. 
+     *     Use {@link #getNecessaryPrecoordinationClassExpression(RDFSNamedClass, RDFSNamedClass)} instead.
+     */
+    @Deprecated
     public OWLIntersectionClass getNecessaryPrecoordinationClassExpression(RDFSNamedClass cls) {
     	RDFSNamedClass precoordSuperclass = getPrecoordinationSuperclass(cls);
     	if (precoordSuperclass == null) {
@@ -1942,19 +1992,92 @@ public class WHOFICContentModel {
     		return null;
     	}
 
-    	Collection<?> superclasses = cls.getSuperclasses(false);
-    	if (superclasses == null || superclasses.isEmpty()) {
-    		return null;
-    	}
-    	for (Iterator<?> it = superclasses.iterator(); it.hasNext(); ) {
-    		OWLClass nextSuperclass = (OWLClass)it.next();
-    		if ( (! cls.hasEquivalentClass(nextSuperclass)) &&
-    				isValidPrecoordinationDefinitionClassExpression(nextSuperclass, precoordSuperclass)) {
-    			return (OWLIntersectionClass) nextSuperclass;
-    		}
-    	}
+    	return getNecessaryPrecoordinationClassExpression(cls, precoordSuperclass);
+    }
 
-    	return null;
+    /**
+     * If this method returns true, then the classExpr can be casted to OWLIntersectionClass.
+     *
+     * @param classExpr a class expression that is part of a class definition, either as a necessary
+     * 		condition or as necessary &amp; sufficient condition
+     * @param isSuperclassReferenceRequired specifies whether a named class should be part of a
+     * 		class expression in order it to be considered as a valid part of the logical definition.
+     * @return
+     */
+    public boolean isClassExpressionValidPartOfLogicalDefinition(OWLClass classExpr, boolean isSuperclassReferenceRequired) {
+    	if (classExpr instanceof OWLIntersectionClass) {
+    		boolean foundNamedClass = false;
+    		boolean foundLogicalClassExpression = false;	//e.g. (property some proprtyValueClass)
+    		
+    		OWLIntersectionClass intClassExpr = (OWLIntersectionClass) classExpr;
+    		Collection<RDFSClass> operands = intClassExpr.getOperands();
+    		Iterator<RDFSClass> it = operands.iterator();
+    		while (it.hasNext()) {
+    			RDFSClass op = it.next();
+    			if (op instanceof RDFSNamedClass) {
+    				foundNamedClass = true;
+    			}
+    			else {
+    				foundLogicalClassExpression = true;
+    			}
+    			
+    			if (foundLogicalClassExpression && (foundNamedClass || !isSuperclassReferenceRequired)) {
+    				return true;
+    			}
+    		}
+    		return false;
+    	}
+    	else {
+    		return false;
+    	}
+    }
+
+    /**
+     * If this method returns true, then the classExpr can be casted to OWLIntersectionClass.
+     *
+     * @param classExpr a class expression that is part of a class definition, either as a necessary
+     * 		condition or as necessary &amp; sufficient condition
+     * @param precoordSuperclass the selected precoordination superclass, which needs to be part of
+     * 		the class expression in order it to be considered as a valid part of the logical definition.
+     * 		If <code>precoordSuperclass</code> is null, the <code>classExpr</code> should not contain 
+     * 		a reference to a named class.
+     * @return
+     */
+    public boolean isClassExpressionValidPartOfLogicalDefinition(OWLClass classExpr, RDFSNamedClass precoordSuperclass) {
+    	if (classExpr instanceof OWLIntersectionClass) {
+    		boolean precoordSuperclassRequired = (precoordSuperclass != null);	//flag for controlling the logic (whether precoordSuperclass needs to be present or absent in class expression)
+    		boolean foundPrecoordSuperclass = false;
+    		boolean foundLogicalClassExpression = false;	//e.g. (property some proprtyValueClass)
+    		
+    		OWLIntersectionClass intClassExpr = (OWLIntersectionClass) classExpr;
+    		Collection<RDFSClass> operands = intClassExpr.getOperands();
+    		Iterator<RDFSClass> it = operands.iterator();
+    		while (it.hasNext()) {
+    			RDFSClass op = it.next();
+    			if (op instanceof RDFSNamedClass) {
+    				foundPrecoordSuperclass = foundPrecoordSuperclass || 
+    						(!precoordSuperclassRequired) || op.equals(precoordSuperclass);
+    			}
+    			else {
+    				foundLogicalClassExpression = true;
+    			}
+    			
+    			if (precoordSuperclassRequired && foundLogicalClassExpression && foundPrecoordSuperclass) {
+    				return true;
+    			}
+    			if (!precoordSuperclassRequired && foundPrecoordSuperclass) {
+    				return false;
+    			}
+    		}
+    		//if haven't returned from the method until this point, it means that:
+    		//	- if precoordSuperclass is non-null: we haven't found both the class and a property value expression, so we return false
+    		//	- if precoordSuperclass is null: we haven't found a named class (which is good), so the returned value depends on 
+    		//			whether we have found at least one property value expression.
+    		return (precoordSuperclassRequired ? false : foundLogicalClassExpression);
+    	}
+    	else {
+    		return false;
+    	}
     }
 
     /**
@@ -1965,7 +2088,13 @@ public class WHOFICContentModel {
      * @param precoordSuperclass the selected precoordination superclass, which needs to be part of a
      * 		valid precoordination definition class expression.
      * @return
+     * 
+     * @deprecated Deprecated in the updated logical definition API. 
+     *     Use {@link #isClassExpressionValidPartOfLogicalDefinition(OWLClass, RDFSNamedClass)} instead,
+     *     or {@link #isClassExpressionValidPartOfLogicalDefinition(OWLClass, boolean)} if reference to 
+     *     superclass is not known or it is optional.
      */
+    @Deprecated
     public boolean isValidPrecoordinationDefinitionClassExpression(OWLClass classExpr, RDFSNamedClass precoordSuperclass) {
     	if (classExpr instanceof OWLIntersectionClass) {
     		OWLIntersectionClass intClassExpr = (OWLIntersectionClass) classExpr;
@@ -1986,7 +2115,7 @@ public class WHOFICContentModel {
 
     /**
      * Return the names of the properties that are involved in the precoordination definition
-     * of the class <code>cls</code>. If the second <code>definitional</code> is true,
+     * of the class {@code cls}. If the second {@code definitional} is <code>true</code>
      * the method returns the list of properties involved in the equivalent class expression.
      * In case it is false, it returns the properties involves in the necessary conditions.
      * @param cls
@@ -2005,6 +2134,14 @@ public class WHOFICContentModel {
     	return getPropertiesFromClassExpression(classExpression);
     }
 
+	/**
+	 * Returns the properties that appear in the OWL intersection {@code classExpression},
+	 * which is part of the logical definition of a WHO-FIC entity.
+	 * 
+	 * @param classExpression an OWL intersection class that is part of the logical definition
+	 * @return a list of strings each being the identifier of a property that is part of 
+	 *     the {@code classExpression} argument.
+	 */
 	public Collection<String> getPropertiesFromClassExpression(
 			OWLIntersectionClass classExpression) {
 		if (classExpression == null) {
@@ -2028,10 +2165,43 @@ public class WHOFICContentModel {
     	}
     	return res;
 	}
-
-	public Collection<PrecoordinationDefinitionComponent> getPrecoordinationPropertyValues(RDFSNamedClass cls, Collection<String> properties) {
+	
+	/**
+	 * @param cls
+	 * @param properties
+	 * @return
+	 * 
+     * @deprecated Deprecated in the updated logical definition API. 
+     *     Use {@link #getPrecoordinationPropertyValues(RDFSNamedClass, RDFSNamedClass, Collection)} instead.
+     */
+    @Deprecated
+	public Collection<PrecoordinationDefinitionComponent> getPrecoordinationPropertyValues(
+			RDFSNamedClass cls, Collection<String> properties) {
 		OWLIntersectionClass eqClassExpression = getEquivalentPrecoordinationClassExpression(cls);
 		OWLIntersectionClass necClassExpression = getNecessaryPrecoordinationClassExpression(cls);
+		
+		return getPrecoordinationPropertyValuesFromClassExpressions(eqClassExpression, necClassExpression, properties);
+	}
+	
+	/**
+	 * TODO Check if we need this method like this, since according the new logical definition API
+	 *     the necessary conditions part does not need a precoordination superclass to be set.
+	 * 
+	 * @param cls
+	 * @param precoordSuperclass
+	 * @param properties
+	 * @return
+	 */
+	public Collection<PrecoordinationDefinitionComponent> getPrecoordinationPropertyValues(RDFSNamedClass cls, 
+			RDFSNamedClass precoordSuperclass, Collection<String> properties) {
+		OWLIntersectionClass eqClassExpression = getEquivalentPrecoordinationClassExpression(cls, precoordSuperclass);
+		OWLIntersectionClass necClassExpression = getNecessaryPrecoordinationClassExpression(cls, false);
+		
+		return getPrecoordinationPropertyValuesFromClassExpressions(eqClassExpression, necClassExpression, properties);
+	}
+	
+	private Collection<PrecoordinationDefinitionComponent> getPrecoordinationPropertyValuesFromClassExpressions(
+			OWLIntersectionClass eqClassExpression, OWLIntersectionClass necClassExpression, Collection<String> properties) {
 		Collection<String> defProps = getPropertiesFromClassExpression(eqClassExpression);
 		Collection<String> necProps = getPropertiesFromClassExpression(necClassExpression);
 
@@ -2042,7 +2212,20 @@ public class WHOFICContentModel {
 			if (defProps.contains(property)) {
 				value = getPropertyValueFromClassExpression(eqClassExpression, property, true);
 			}
-			else if (necProps.contains(property)){
+			//the condition below used to be "else if" instead of "if", 
+			//in order to return at most one value for a given property, even when the property  
+			//appeared (for some undesirable reason) in both the necessary and the nec.&suff. class expressions
+			//(in such cases only the latter one was returned)
+			//Since in the new API a property can appear both in the necessary and necessary&sufficient part,
+			//although still undesirable, we should allow the result to contain two values for the same property.
+			//
+//			else if (necProps.contains(property)){
+//				value = getPropertyValueFromClassExpression(necClassExpression, property, false);
+//			}
+			if (necProps.contains(property)){
+				if (value != null) {
+					res.add(value);
+				}
 				value = getPropertyValueFromClassExpression(necClassExpression, property, false);
 			}
 			if (value == null) {
@@ -2092,24 +2275,52 @@ public class WHOFICContentModel {
     	}
 		return null;
 	}
+	
+	/**
+	 * @param cls
+	 * @param property
+	 * @param oldValue
+	 * @param newValue
+	 * @return
+	 * 
+     * @deprecated Deprecated in the updated logical definition API. 
+     *     Use {@link #setPrecoordinationDefinitionPropertyValue(RDFSNamedClass, String, 
+     *     RDFSNamedClass, String, String, boolean)} instead.
+	 */
+	@Deprecated
+	public boolean setPrecoordinationDefinitionPropertyValue(
+			RDFSNamedClass cls, String property, 
+			String oldValue, String newValue) { 
+    	RDFSNamedClass precoordSuperclass = getPrecoordinationSuperclass(cls);
+		return setPrecoordinationDefinitionPropertyValue(cls, property, precoordSuperclass, oldValue, newValue, false);
+	}
 
 	public boolean setPrecoordinationDefinitionPropertyValue(
-			RDFSNamedClass cls, String property,
-			String oldValue, String newValue) {
-		OWLIntersectionClass eqClassExpression = getEquivalentPrecoordinationClassExpression(cls);
-		OWLIntersectionClass necClassExpression = getNecessaryPrecoordinationClassExpression(cls);
+			RDFSNamedClass cls, String property, RDFSNamedClass precoordSuperclass,
+			String oldValue, String newValue, boolean isDefinitional) {
+		OWLIntersectionClass eqClassExpression = getEquivalentPrecoordinationClassExpression(cls, precoordSuperclass);
+		//TODO DECIDE which version is more appropriate in the new API. Also see if we can keep backwards compatibility.
+		//OWLIntersectionClass necClassExpression = getNecessaryPrecoordinationClassExpression(cls, precoordSuperclass);
+		OWLIntersectionClass necClassExpression = getNecessaryPrecoordinationClassExpression(cls, null);
 		Collection<String> defProps = getPropertiesFromClassExpression(eqClassExpression);
 		Collection<String> necProps = getPropertiesFromClassExpression(necClassExpression);
 
-		if (eqClassExpression == null && necClassExpression == null && newValue != null) {
-			necClassExpression = createPrecoordinationClassExpressionDraft(cls, false);
+		if (isDefinitional && eqClassExpression == null && newValue != null) {
+			eqClassExpression = createPrecoordinationClassExpressionDraft(cls, precoordSuperclass, true);
+			addPropertyRestrictionToClassExpression(eqClassExpression, property, newValue);
+			return true;
+		}
+		if (!isDefinitional && necClassExpression == null && newValue != null) {
+			//TODO DECIDE which version is more appropriate in the new API. Also see if we can keep backwards compatibility.
+			//necClassExpression = createPrecoordinationClassExpressionDraft(cls, precoordSuperclass, false);
+			necClassExpression = createPrecoordinationClassExpressionDraft(cls, null, false);
 			addPropertyRestrictionToClassExpression(necClassExpression, property, newValue);
 			return true;
 		}
 
 		if (newValue == null) {
 			boolean changed = false;
-			if (defProps.contains(property)) {
+			if (isDefinitional && defProps.contains(property)) {
 				if (defProps.size() == 1) {	//this is the only (i.e. the last) property in this class expression
 					removeEquivalentClass(cls, eqClassExpression);
 				}
@@ -2118,7 +2329,7 @@ public class WHOFICContentModel {
 				}
 				changed = true;
 			}
-			if (necProps.contains(property)) {
+			if (!isDefinitional && necProps.contains(property)) {
 				if (necProps.size() == 1) {	//this is the only (i.e. the last) property in this class expression
 					((OWLNamedClass)cls).removeSuperclass(necClassExpression);
 				}
@@ -2132,77 +2343,116 @@ public class WHOFICContentModel {
 
 		// here we want to add or replace an old value with a (non-null) new value
 		if (oldValue == null) {
-			if (necProps.contains(property)) {
+			if (!isDefinitional && necProps.contains(property)) {
 				//this must be an error
 				Log.getLogger().warning("Possible error while changing value of property " + property + " in precoordination definition." +
 						" Although oldValue is null, " + property + " appears in necessary condition: " + necClassExpression.getBrowserText());
 				removePropertyRestrictionFromClassExpression(necClassExpression, property);
 			}
-			if (defProps.contains(property)) {
+			if (isDefinitional && defProps.contains(property)) {
 				//this must be an error
 				Log.getLogger().warning("Possible error while changing value of property " + property + " in precoordination definition." +
 						" Although oldValue is null, " + property + " appears in necessary & sufficient condition: " + eqClassExpression.getBrowserText());
 				removePropertyRestrictionFromClassExpression(eqClassExpression, property);
 			}
-			//TODO see if there are cases when we need to add it to the eq. class expr.
-			if (necClassExpression == null) {
-				necClassExpression = createPrecoordinationClassExpressionDraft(cls, false);
+
+			if (isDefinitional) {
+				addPropertyRestrictionToClassExpression(eqClassExpression, property, newValue);
 			}
-			addPropertyRestrictionToClassExpression(necClassExpression, property, newValue);
+			else {
+				addPropertyRestrictionToClassExpression(necClassExpression, property, newValue);
+			}
 			return true;
 		}
 		else {
-			if (necProps.contains(property)) {
-				OWLRestriction restr = getPropertyRestrictionFromClassExpression(necClassExpression, property);
-				if (restr instanceof OWLHasValue) {
-					((OWLHasValue)restr).setHasValue(KBUtil.getRDFResource(owlModel, newValue));
-				}
-				else if (restr instanceof OWLSomeValuesFrom) {
-					((OWLSomeValuesFrom)restr).setSomeValuesFrom(KBUtil.getRDFResource(owlModel, newValue));
-				}
-				else {
-					//this must be an error
-					Log.getLogger().severe("Error while changing value of property " + property + " in precoordination definition." +
-						" Old value was not set as neither a hasValue nor a someValueFrom restriction");
-					//remove old restriction & create a new restriction of the appropriate type
-					removePropertyRestrictionFromClassExpression(necClassExpression, property);
-					addPropertyRestrictionToClassExpression(necClassExpression, property, newValue);
-				}
-				return true;
-			}
-			else if (defProps.contains(property)) {
-				OWLRestriction restr = getPropertyRestrictionFromClassExpression(eqClassExpression, property);
-				if (restr instanceof OWLHasValue) {
-					((OWLHasValue)restr).setHasValue(KBUtil.getRDFResource(owlModel, newValue));
-				}
-				else if (restr instanceof OWLSomeValuesFrom) {
-					((OWLSomeValuesFrom)restr).setSomeValuesFrom(KBUtil.getRDFResource(owlModel, newValue));
+			//here oldValue != null AND newValue != null
+			if ( !isDefinitional ) {
+				if (necProps.contains(property)) {
+					OWLRestriction restr = getPropertyRestrictionFromClassExpression(necClassExpression, property);
+					if (restr instanceof OWLHasValue) {
+						((OWLHasValue)restr).setHasValue(KBUtil.getRDFResource(owlModel, newValue));
+					}
+					else if (restr instanceof OWLSomeValuesFrom) {
+						((OWLSomeValuesFrom)restr).setSomeValuesFrom(KBUtil.getRDFResource(owlModel, newValue));
+					}
+					else {
+						//this must be an error
+						Log.getLogger().severe("Error while changing value of property " + property + " in precoordination definition." +
+							" Old value was not set as neither a hasValue nor a someValueFrom restriction");
+						//remove old restriction & create a new restriction of the appropriate type
+						removePropertyRestrictionFromClassExpression(necClassExpression, property);
+						addPropertyRestrictionToClassExpression(necClassExpression, property, newValue);
+					}
+					return true;
 				}
 				else {
 					//this must be an error
-					Log.getLogger().severe("Error while changing value of property " + property + " in precoordination definition." +
-						" Old value was not set as neither a hasValue nor a someValueFrom restriction");
-					//remove old restriction & create a new restriction of the appropriate type
-					removePropertyRestrictionFromClassExpression(eqClassExpression, property);
-					addPropertyRestrictionToClassExpression(eqClassExpression, property, newValue);
+					Log.getLogger().warning("Possible error while changing value of property " + property + " in precoordination definition (isDefinitional=false)." +
+							" Although oldValue is not null, " + property + " does not appear in necessary conditions: ");
+					return false;
 				}
-				return true;
 			}
-			else {
-				//this must be an error
-				Log.getLogger().warning("Possible error while changing value of property " + property + " in precoordination definition." +
-						" Although oldValue is not null, " + property + " does not appears in necessary or necessary & sufficient conditions: ");
-				return false;
+			else {//isDefinitional
+				if (defProps.contains(property)) {
+					OWLRestriction restr = getPropertyRestrictionFromClassExpression(eqClassExpression, property);
+					if (restr instanceof OWLHasValue) {
+						((OWLHasValue)restr).setHasValue(KBUtil.getRDFResource(owlModel, newValue));
+					}
+					else if (restr instanceof OWLSomeValuesFrom) {
+						((OWLSomeValuesFrom)restr).setSomeValuesFrom(KBUtil.getRDFResource(owlModel, newValue));
+					}
+					else {
+						//this must be an error
+						Log.getLogger().severe("Error while changing value of property " + property + " in precoordination definition." +
+							" Old value was not set as neither a hasValue nor a someValueFrom restriction");
+						//remove old restriction & create a new restriction of the appropriate type
+						removePropertyRestrictionFromClassExpression(eqClassExpression, property);
+						addPropertyRestrictionToClassExpression(eqClassExpression, property, newValue);
+					}
+					return true;
+				}
+				else {
+					//this must be an error
+					Log.getLogger().warning("Possible error while changing value of property " + property + " in precoordination definition (isDefinitional=true)." +
+							" Although oldValue is not null, " + property + " does not appear in necessary & sufficient conditions: ");
+					return false;
+				}
 			}
 		}
 	}
 
+	/**
+	 * @param cls
+	 * @param equivalentClass
+	 * @return
+     * @deprecated Deprecated in the updated logical definition API. 
+     *     Use {@link #setPrecoordinationDefinitionPropertyValue(RDFSNamedClass, String, 
+     *     RDFSNamedClass, String, String)} instead.
+	 */
 	private OWLIntersectionClass createPrecoordinationClassExpressionDraft(RDFSNamedClass cls, boolean equivalentClass) {
+		return createPrecoordinationClassExpressionDraft( cls, 
+				getPrecoordinationSuperclass(cls), equivalentClass);
+	}
+	
+	private OWLIntersectionClass createPrecoordinationClassExpressionDraft(RDFSNamedClass cls, 
+			RDFSNamedClass precoordSuperclass, boolean isEquivalentClass) {
+		boolean isDirectSuperclass = false;
 		OWLIntersectionClass precoordClassExpression;
 		precoordClassExpression = owlModel.createOWLIntersectionClass();
-		precoordClassExpression.addOperand(getPrecoordinationSuperclass(cls));
-		if (equivalentClass) {
+		if (precoordSuperclass != null) {
+			precoordClassExpression.addOperand(precoordSuperclass);
+			isDirectSuperclass = cls.isSubclassOf(precoordSuperclass);
+		}
+		if (isEquivalentClass) {
 			((OWLNamedClass)cls).addEquivalentClass(precoordClassExpression);
+
+			//If precoordSuperclass was not a direct superclass of cls, make sure to remove it, 
+			//because when we add the OWL intersection class expression as equivalent class
+			//the Protege default inference engine will explicitly add all the named classes in
+			//the class expression as direct superclass.
+			if (! isDirectSuperclass) {
+				cls.removeSuperclass(precoordSuperclass);
+			}
 		}
 		else {
 			cls.addSuperclass(precoordClassExpression);
@@ -2228,19 +2478,59 @@ public class WHOFICContentModel {
 			classExpression.addOperand(hasValueRestr);
 		}
 	}
-
+	
+	/**
+	 * @param cls
+	 * @param property
+	 * @param isDefinitionalFlag
+	 * @return
+	 * 
+	 * @deprecated Use {@link #changeIsDefinitionalFlag(RDFSNamedClass, RDFSNamedClass, String, boolean)} instead.
+	 */
 	public boolean changeIsDefinitionalFlag(RDFSNamedClass cls,
 			String property, boolean isDefinitionalFlag) {
 		OWLIntersectionClass eqClassExpression = getEquivalentPrecoordinationClassExpression(cls);
 		OWLIntersectionClass necClassExpression = getNecessaryPrecoordinationClassExpression(cls);
+
+		return changeIsDefinitionalFlag(cls, getPrecoordinationSuperclass(cls), 
+				eqClassExpression, necClassExpression, property, isDefinitionalFlag);
+	}
+		
+	/**
+	 * TODO Check if we need this method like this, since according the new logical definition API
+	 *     the necessary conditions part does not need a precoordination superclass to be set.
+	 * 
+	 * @param cls
+	 * @param precoordSuperclass
+	 * @param properties
+	 * @return
+	 */
+	public boolean changeIsDefinitionalFlag(RDFSNamedClass cls, RDFSNamedClass precoordSuperclass,
+			String property, boolean isDefinitionalFlag) {
+		OWLIntersectionClass eqClassExpression = getEquivalentPrecoordinationClassExpression(cls, precoordSuperclass);
+		//TODO DECIDE which version is more appropriate in the new API. Also see if we can keep backwards compatibility.
+		//OWLIntersectionClass necClassExpression = getNecessaryPrecoordinationClassExpression(cls, precoordSuperclass);
+		OWLIntersectionClass necClassExpression = getNecessaryPrecoordinationClassExpression(cls, null);
+
+		return changeIsDefinitionalFlag(cls, precoordSuperclass, 
+				eqClassExpression, necClassExpression, property, isDefinitionalFlag);
+	}
+	
+	private boolean changeIsDefinitionalFlag(RDFSNamedClass cls, RDFSNamedClass precoordSuperclass,
+			OWLIntersectionClass eqClassExpression, OWLIntersectionClass necClassExpression,
+			String property, boolean isDefinitionalFlag) {
 		Collection<String> defProps = getPropertiesFromClassExpression(eqClassExpression);
 		Collection<String> necProps = getPropertiesFromClassExpression(necClassExpression);
 
 		if (isDefinitionalFlag) {
 			if (necProps.contains(property)) {
 				OWLRestriction restr = removePropertyRestrictionFromClassExpression(necClassExpression, property);
+//				//safety check. This should never happen, but if it does we don't want to create an empty equivalent class
+//				if (restr == null) {
+//					return false;
+//				}
 				if (eqClassExpression == null) {
-					eqClassExpression = createPrecoordinationClassExpressionDraft(cls, true);
+					eqClassExpression = createPrecoordinationClassExpressionDraft(cls, precoordSuperclass, true);
 					//((OWLNamedClass)cls).addEquivalentClass(eqClassExpression);
 				}
 				eqClassExpression.addOperand(restr);
@@ -2258,7 +2548,9 @@ public class WHOFICContentModel {
 			if (defProps.contains(property)) {
 				OWLRestriction restr = removePropertyRestrictionFromClassExpression(eqClassExpression, property);
 				if (necClassExpression == null) {
-					necClassExpression = createPrecoordinationClassExpressionDraft(cls, false);
+					//TODO DECIDE which version is more appropriate in the new API. Also see if we can keep backwards compatibility.
+					//necClassExpression = createPrecoordinationClassExpressionDraft(cls, precoordSuperclass, false);
+					necClassExpression = createPrecoordinationClassExpressionDraft(cls, null, false);
 					//((OWLNamedClass)cls).addSuperclass(necClassExpression);
 				}
 				necClassExpression.addOperand(restr);
@@ -2277,8 +2569,11 @@ public class WHOFICContentModel {
 
 	private void removeEquivalentClass(RDFSNamedClass cls,
 			OWLIntersectionClass eqClassExpression) {
+		if ( eqClassExpression == null ) {
+			return;
+		}
 		Collection<OWLNamedClass> namedSuperclasses = new ArrayList<OWLNamedClass>();
-		Collection directSuperclasses = cls.getSuperclasses(false);
+		Collection<?> directSuperclasses = cls.getSuperclasses(false);
 		for (RDFSClass eqClassExpComp : eqClassExpression.getOperands()) {
 			if (eqClassExpComp instanceof OWLNamedClass &&
 					directSuperclasses.contains(eqClassExpComp)) {
@@ -2292,7 +2587,7 @@ public class WHOFICContentModel {
 
 			((OWLNamedClass)cls).removeEquivalentClass(eqClassExpression);
 
-			//this is necessary because removeEquivalentClass removes also the named superclass
+			//IMPORTANT: this is necessary because removeEquivalentClass removes also the named superclass
 			for (OWLNamedClass superclass : namedSuperclasses) {
 				cls.addSuperclass(superclass);
 			}
@@ -2349,4 +2644,120 @@ public class WHOFICContentModel {
 		//we don't deal with other type of restrictions
 		return null;
 	}
+	
+	
+	//==== methods of the new Logical definition API ====
+	
+	public Collection<RDFSNamedClass> getLogicalDefinitionSuperclasses(String clsName) {
+    	RDFSNamedClass cls = getICDClass(clsName);
+		return getLogicalDefinitionSuperclasses(cls);
+	}
+	
+    public Collection<RDFSNamedClass> getLogicalDefinitionSuperclasses(RDFSNamedClass cls) {
+       	RDFProperty precoordSuperclassProp = getPrecoordinationSuperclassProperty();
+    	return (Collection<RDFSNamedClass>) cls.getPropertyValues(precoordSuperclassProp);
+    }
+
+
+    public Collection<OWLIntersectionClass> getAllEquivalentPrecoordinationClassExpressions(RDFSNamedClass cls) {
+    	Collection<OWLIntersectionClass> res = new ArrayList<OWLIntersectionClass>();
+    	
+    	Collection<?> equivalentClasses = cls.getEquivalentClasses();
+    	if (equivalentClasses == null || equivalentClasses.isEmpty()) {
+    		return res;
+    	}
+    	for (Iterator<?> it = equivalentClasses.iterator(); it.hasNext(); ) {
+    		OWLClass nextEqClass = (OWLClass)it.next();
+    		if (isClassExpressionValidPartOfLogicalDefinition(nextEqClass, true)) {
+    			res.add( (OWLIntersectionClass) nextEqClass);
+    		}
+    	}
+
+    	return res;
+    }
+
+    public OWLIntersectionClass getEquivalentPrecoordinationClassExpression(RDFSNamedClass cls, RDFSNamedClass precoordSuperclass) {
+    	Collection<?> equivalentClasses = cls.getEquivalentClasses();
+    	if (equivalentClasses == null || equivalentClasses.isEmpty()) {
+    		return null;
+    	}
+    	for (Iterator<?> it = equivalentClasses.iterator(); it.hasNext(); ) {
+    		OWLClass nextEqClass = (OWLClass)it.next();
+    		if (isClassExpressionValidPartOfLogicalDefinition(nextEqClass, precoordSuperclass)) {
+    			return (OWLIntersectionClass) nextEqClass;
+    		}
+    	}
+
+    	return null;
+    }
+
+
+    public Collection<OWLIntersectionClass> getAllNecessaryPrecoordinationClassExpressions(RDFSNamedClass cls) {
+    	Collection<OWLIntersectionClass> res = new ArrayList<OWLIntersectionClass>();
+    	
+    	Collection<?> superclasses = cls.getSuperclasses(false);
+    	if (superclasses == null || superclasses.isEmpty()) {
+    		return res;
+    	}
+    	for (Iterator<?> it = superclasses.iterator(); it.hasNext(); ) {
+    		OWLClass nextSuperclass = (OWLClass)it.next();
+    		if ( (! cls.hasEquivalentClass(nextSuperclass)) &&
+    				isClassExpressionValidPartOfLogicalDefinition(nextSuperclass, false)) {
+    			res.add( (OWLIntersectionClass) nextSuperclass );
+    		}
+    	}
+
+    	return res;
+    }
+
+    /**
+     * According to the new logical definition API, the necessary conditions do not
+     * have to refer to a precoordination superclass, so instead of this method 
+     * one should probably use
+     * {@link #getNecessaryPrecoordinationClassExpression(RDFSNamedClass, boolean)},
+     * with second argument set to <code>false</code>.
+     * 
+     * @param cls
+     * @param precoordSuperclass
+     * @return
+     * @see #getNecessaryPrecoordinationClassExpression(RDFSNamedClass, boolean)
+     */
+    public OWLIntersectionClass getNecessaryPrecoordinationClassExpression(RDFSNamedClass cls, RDFSNamedClass precoordSuperclass) {
+    	Collection<?> superclasses = cls.getSuperclasses(false);
+    	if (superclasses == null || superclasses.isEmpty()) {
+    		return null;
+    	}
+    	for (Iterator<?> it = superclasses.iterator(); it.hasNext(); ) {
+    		OWLClass nextSuperclass = (OWLClass)it.next();
+    		if ( (! cls.hasEquivalentClass(nextSuperclass)) &&
+    				isClassExpressionValidPartOfLogicalDefinition(nextSuperclass, precoordSuperclass)) {
+    			return (OWLIntersectionClass) nextSuperclass;
+    		}
+    	}
+
+    	return null;
+    }
+
+    /**
+     * 
+     * @param cls
+     * @param precoordSuperclass
+     * @return
+     */
+    public OWLIntersectionClass getNecessaryPrecoordinationClassExpression(RDFSNamedClass cls, boolean isSuperclassReferenceRequired) {
+    	Collection<?> superclasses = cls.getSuperclasses(false);
+    	if (superclasses == null || superclasses.isEmpty()) {
+    		return null;
+    	}
+    	for (Iterator<?> it = superclasses.iterator(); it.hasNext(); ) {
+    		OWLClass nextSuperclass = (OWLClass)it.next();
+    		if ( (! cls.hasEquivalentClass(nextSuperclass)) &&
+    				isClassExpressionValidPartOfLogicalDefinition(nextSuperclass, isSuperclassReferenceRequired)) {
+    			return (OWLIntersectionClass) nextSuperclass;
+    		}
+    	}
+    	
+    	return null;
+    }
+
 }
