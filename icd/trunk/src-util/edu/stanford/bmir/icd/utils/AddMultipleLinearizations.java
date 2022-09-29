@@ -40,35 +40,56 @@ import edu.stanford.smi.protegex.owl.model.RDFSNamedClass;
  */
 
 public class AddMultipleLinearizations {
+	private static Logger log = Log.getLogger(AddMultipleLinearizations.class);
+	
 	private static final String OPTION_PART_OF = "-partOf";
 	private static final String OPTION_NOT_PART_OF = "-notPartOf";
 	private static final String OPTION_GROUPING = "-gr";
 	private static final String OPTION_NO_GROUPING = "-nogr";
 	private static final String OPTION_AUX_AX_CHILD = "-auxAxChild";
 	private static final String OPTION_NOT_AUX_AX_CHILD = "-notAuxAxChild";
-
-	private static Logger log = Log.getLogger(AddMultipleLinearizations.class);
+	
+	//these are different types of options 
+	
+	private static final String OPTION_OVERRIDE_EXISTING_FLAGS = "-overrideExistingFlags";
+	private static final String OPTION_NOT_OVERRIDE_EXISTING_FLAGS = "-notOverrideExistingFlags";
+	//If this option is set, then it will overide all the other options.
+	private static final String OPTION_COPY_MMS_FLAGS = "-copyMMSFlags";
+	// This option does not make any sense, but keep it for the consistency sake. 
+	// Ralph Waldo Emerson: “A foolish consistency is the hobgoblin of little minds, 
+	// adored by little statesmen and philosophers and divines."
+	private static final String OPTION_NOT_COPY_MMS_FLAGS = "-notCopyMMSFlags"; 
+	
+	private static final String MMS_LIN_VIEW = "http://who.int/icd#Morbidity";
 
     private static ICDContentModel cm;
     private static OWLModel owlModel;
 
 	private static RDFSNamedClass topCls;
     private static List<RDFIndividual> linearizationViewInstances = new ArrayList<RDFIndividual>();
+  
     private static Boolean isPartOf;
     private static Boolean isGrouping;
     private static Boolean isAuxiliaryAxisChild;
+    
+    private static boolean isOverrideExistingFlags = true; //by default override existing flags
+    private static boolean isCopyMMSFlags = false;
+    
     private static OWLNamedClass linearizationSpecificationClass;
+    
     private static RDFProperty linearizationProp;
     private static RDFProperty linearizationViewProp;
     private static RDFProperty isIncludedInLinearizationProp;
     private static RDFProperty isGroupingProp;
     private static RDFProperty isAuxiliaryAxisChildProp;
+    
+    private static RDFResource mmsLinViewInstance;
 
 
     public static void main(String[] args) {
     	int nonOptArgCount = countNonOptionArguments(args);
         if (nonOptArgCount < 3) {
-            log.severe("Argument missing: pprj file name, category name or linearization name");
+            log.severe("Argument missing: (1) pprj_file_name (2) top_cls (3) linearization_name(s)");
             usage();
             return;
         }
@@ -76,7 +97,15 @@ public class AddMultipleLinearizations {
         isPartOf = getAlternativeOptionValue(args, OPTION_PART_OF, OPTION_NOT_PART_OF);
 		isGrouping = getAlternativeOptionValue(args, OPTION_GROUPING, OPTION_NO_GROUPING);
 		isAuxiliaryAxisChild = getAlternativeOptionValue(args, OPTION_AUX_AX_CHILD, OPTION_NOT_AUX_AX_CHILD);
-
+		
+		Boolean b = getAlternativeOptionValue(args, OPTION_OVERRIDE_EXISTING_FLAGS, OPTION_NOT_OVERRIDE_EXISTING_FLAGS);
+		isOverrideExistingFlags = (b == null || b == true) ? true : false;
+		
+		b = getAlternativeOptionValue(args, OPTION_COPY_MMS_FLAGS, OPTION_NOT_COPY_MMS_FLAGS);
+		isCopyMMSFlags = (b != null && b == true);
+		
+		printOpts();
+		
         Collection errors = new ArrayList();
         Project prj = Project.loadProjectFromFile(getNonOptionArgument(args, 0), errors);
 
@@ -90,7 +119,6 @@ public class AddMultipleLinearizations {
             log.severe("Abort. Failed to load pprj file");
             return;
         }
-
 
         init();
 
@@ -110,6 +138,8 @@ public class AddMultipleLinearizations {
 	        linearizationViewInstances.add(linearizationViewInst);
         }
 
+        mmsLinViewInstance = owlModel.getRDFIndividual(MMS_LIN_VIEW);
+        
         long t0 = System.currentTimeMillis();
         log.info("Started getting ICD classes at: " + new Date());
 
@@ -132,7 +162,21 @@ public class AddMultipleLinearizations {
 
 	private static void usage() {
 		Log.getLogger().info(
-				"Usage: AddLinearizationAdvanced  [-partOf|-notPartOf] [-gr|-nogr]  pprj_file_name top_category linearization_view_1 [linearization_view_2 ...]");
+				"Usage: AddMultipleLinearizations [-partOf|-notPartOf] [-gr|-nogr] "
+				+ "[-overideExistingFlags|-notOverideExistingFlags] "
+				+ "[-copyMMSFlags|-notCopyMMSFlags] "
+				+ "pprj_file_name top_category linearization_view_1 [linearization_view_2 ...]");
+	}
+	
+	private static void printOpts() {
+		log.info("===== Options =====");
+		log.info("Option: isPartOf = " + isPartOf);
+		log.info("Option: isGrouping = " + isGrouping);
+		log.info("Option: isAuxiliaryAxisChild = " + isAuxiliaryAxisChild);
+		
+		log.info("Option: isOverideExistingFlags = " + isOverrideExistingFlags);
+		log.info("Option: isCopyMMSFlags = " + isCopyMMSFlags);
+		log.info("====================");
 	}
 	
     private static int countNonOptionArguments(String[] args) {
@@ -201,22 +245,42 @@ public class AddMultipleLinearizations {
                 log.info("Processed " + i + " classes at " + new Date());
             }
        }
-
     }
 
     private static void addLinearization(RDFSNamedClass cls) {
     	for (RDFIndividual linearizationViewInst : linearizationViewInstances) {
     		
 	        try{
-	            RDFResource linSpec = getOrCreateLinSpecInstance(cls, linearizationViewInst);
-	            if (isPartOf != null) {
-	            	linSpec.setPropertyValue(isIncludedInLinearizationProp, isPartOf.booleanValue());
+	        	Boolean linSpecExists = false;
+	            RDFResource linSpec = getOrCreateLinSpecInstance(cls, linearizationViewInst, linSpecExists);
+	            
+	            //not overriding existing flags
+	            if (linSpecExists != null && linSpecExists == true && isOverrideExistingFlags == false) { 
+	            	continue; //skip this lin
 	            }
-	            if (isGrouping != null) {
-	            	linSpec.setPropertyValue(isGroupingProp, isGrouping.booleanValue());
+	            
+	            Boolean tmpIsPartOf = isPartOf;
+	            Boolean tmpIsGrouping = isGrouping;
+	            Boolean tmpisAuxiliaryAxisChild = isAuxiliaryAxisChild;
+	            
+	            if (isCopyMMSFlags == true) {
+	            	RDFResource mmsLinInst = getMMSLinSpecInstance(cls);
+	            	
+	            	if (mmsLinInst != null && linearizationViewInst.equals(mmsLinInst) == false) {
+	            		tmpIsPartOf = (Boolean) mmsLinInst.getPropertyValue(isIncludedInLinearizationProp);
+	            		tmpIsGrouping = (Boolean) mmsLinInst.getPropertyValue(isGroupingProp);
+	            		tmpisAuxiliaryAxisChild = (Boolean) mmsLinInst.getPropertyValue(isAuxiliaryAxisChildProp);
+	            	}
 	            }
-	            if (isAuxiliaryAxisChild != null) {
-	            	linSpec.setPropertyValue(isAuxiliaryAxisChildProp, isAuxiliaryAxisChild.booleanValue());
+	            
+	            if (tmpIsPartOf != null) {
+	            	linSpec.setPropertyValue(isIncludedInLinearizationProp, tmpIsPartOf.booleanValue());
+	            }
+	            if (tmpIsGrouping != null) {
+	            	linSpec.setPropertyValue(isGroupingProp, tmpIsGrouping.booleanValue());
+	            }
+	            if (tmpisAuxiliaryAxisChild != null) {
+	            	linSpec.setPropertyValue(isAuxiliaryAxisChildProp, tmpisAuxiliaryAxisChild.booleanValue());
 	            }
 	            
 	        } catch (Exception e) {
@@ -225,18 +289,26 @@ public class AddMultipleLinearizations {
     	}
     }
     
-    private static RDFResource getOrCreateLinSpecInstance(RDFSNamedClass cls, RDFResource linView) {
+    private static RDFResource getOrCreateLinSpecInstance(RDFSNamedClass cls, RDFResource linView, Boolean linSpecExists) {
     	RDFResource linSpec = cm.getLinearizationSpecificationForView(cls, linView);
     	
-    	if (linSpec == null) {
-    		//to be commented out
-    		log.info("Creating lin spec for: " + cm.getTitleLabel(cls) + " . Lin View: " + linView);
-    		
-    		linSpec = linearizationSpecificationClass.createInstance((IcdIdGenerator.getNextUniqueId(owlModel)));
-            linSpec.setPropertyValue(linearizationViewProp, linView);
-            cls.addPropertyValue(linearizationProp, linSpec);
+    	if (linSpec != null) {
+    		linSpecExists = true;
+    		return linSpec;
     	}
     	
+		//log.info("Creating lin spec for: " + cm.getTitleLabel(cls) + " . Lin View: " + linView);
+		
+		linSpec = linearizationSpecificationClass.createInstance((IcdIdGenerator.getNextUniqueId(owlModel)));
+        linSpec.setPropertyValue(linearizationViewProp, linView);
+        cls.addPropertyValue(linearizationProp, linSpec);
+        
+        linSpecExists = false;
+	
     	return linSpec;
+    }
+    
+    private static RDFResource getMMSLinSpecInstance(RDFSNamedClass cls) {
+    	return cm.getLinearizationSpecificationForView(cls, mmsLinViewInstance);
     }
 }
