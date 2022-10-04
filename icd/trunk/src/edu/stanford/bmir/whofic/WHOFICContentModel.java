@@ -88,6 +88,7 @@ public class WHOFICContentModel {
 
     private RDFSNamedClass childOrderClass;
     private RDFSNamedClass chapterXClass;
+    private RDFSNamedClass orphanClass;
 
     /*
      * Properties
@@ -471,6 +472,13 @@ public class WHOFICContentModel {
             chapterXClass = owlModel.getRDFSNamedClass(WHOFICContentModelConstants.CHAPTER_X_CLASS);
         }
         return chapterXClass;
+    }
+    
+    public RDFSNamedClass getOrphanClass() {
+        if (orphanClass == null) {
+        	orphanClass = owlModel.getRDFSNamedClass(WHOFICContentModelConstants.ORPHAN_CLASS);
+        }
+        return orphanClass;
     }
 
     /*
