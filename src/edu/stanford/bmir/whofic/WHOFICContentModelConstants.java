@@ -63,6 +63,8 @@ public class WHOFICContentModelConstants {
     public final static String CHILD_ORDER_CLASS = NS +"ChildOrder";
 
     public final static  String CHAPTER_X_CLASS = NS + "ChapterX";
+    
+    public final static  String ORPHAN_CLASS = NS + "OrphanClass";
 
 
     /*
