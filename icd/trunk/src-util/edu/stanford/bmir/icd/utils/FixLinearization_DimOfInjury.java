@@ -6,10 +6,12 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import edu.stanford.bmir.whofic.icd.ICDContentModel;
 import edu.stanford.smi.protege.model.Project;
+import edu.stanford.smi.protege.server.RemoteProjectManager;
 import edu.stanford.smi.protege.ui.ProjectManager;
 import edu.stanford.smi.protege.util.Log;
 import edu.stanford.smi.protegex.owl.model.OWLModel;
@@ -43,13 +45,27 @@ public class FixLinearization_DimOfInjury {
 
 
     public static void main(String[] args) {
-        if (args.length != 1) {
+/*       
+  		if (args.length != 1) {
             log.severe("Argument missing: pprj file name");
+            return;
+        }
+*/
+        
+        if (args.length != 4) {
+            log.severe("Arguments missing: server name, user name, password, prj name");
             return;
         }
 
         Collection errors = new ArrayList();
-        Project prj = Project.loadProjectFromFile(args[0], errors);
+        //Project prj = Project.loadProjectFromFile(args[0], errors);
+        
+        Project prj = connectToRemoteProject(args);
+
+        if (prj == null) {
+            log.log(Level.SEVERE, "Cannot connect to remote project: " + args[0] +" " + args[1] + " " + args[2] + " " + args[3]);
+            return;
+        }
 
         if (errors != null) {
             ProjectManager.getProjectManager().displayErrors("Errors", errors);
@@ -80,6 +96,17 @@ public class FixLinearization_DimOfInjury {
         owlModel.setGenerateEventsEnabled(true);
         
         log.info("Finished at: " + new Date());
+    }
+    
+    private static Project connectToRemoteProject(String[] args){
+        Project prj = null;
+        try {
+            prj = RemoteProjectManager.getInstance().getProject(args[0], args[1], args[2], args[3], false);
+        } catch (Exception e) {
+            log.log(Level.SEVERE, "Cannot connect to remote project: " + args, e.getMessage());
+            return null;
+        }
+        return prj;
     }
 
     private static void init() {
