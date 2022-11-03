@@ -59,7 +59,11 @@
 	            	classname="edu.stanford.bmir.icd.utils.FixLinearization_DimOfInjury"
                         maxmemory="${heap.size.max}">
 		      	<classpath refid = "project.classpath"/>	        	
-	 		<arg value="${pprj.file}"/>	
+	 			<!-- <arg value="${pprj.file}"/> -->
+	        	<arg value="${server}"/>
+	        	<arg value="${user}"/>
+	        	<arg value="${pass}"/>
+	        	<arg value="${prj}"/>
 	        </java>
 	 </target>
 	
