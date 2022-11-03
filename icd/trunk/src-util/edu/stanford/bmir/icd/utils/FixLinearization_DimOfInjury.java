@@ -45,27 +45,28 @@ public class FixLinearization_DimOfInjury {
 
 
     public static void main(String[] args) {
-/*       
+       
   		if (args.length != 1) {
             log.severe("Argument missing: pprj file name");
             return;
         }
-*/
+
         
-        if (args.length != 4) {
+/*        if (args.length != 4) {
             log.severe("Arguments missing: server name, user name, password, prj name");
             return;
         }
-
+*/
         Collection errors = new ArrayList();
-        //Project prj = Project.loadProjectFromFile(args[0], errors);
+        Project prj = Project.loadProjectFromFile(args[0], errors);
         
-        Project prj = connectToRemoteProject(args);
+//        Project prj = connectToRemoteProject(args);
 
-        if (prj == null) {
+/*        if (prj == null) {
             log.log(Level.SEVERE, "Cannot connect to remote project: " + args[0] +" " + args[1] + " " + args[2] + " " + args[3]);
             return;
         }
+        */
 
         if (errors != null) {
             ProjectManager.getProjectManager().displayErrors("Errors", errors);
@@ -172,7 +173,7 @@ public class FixLinearization_DimOfInjury {
         	}
         	
         } catch (Exception e) {
-            log.severe("------- Error at processing  " + cls);
+            log.log(Level.SEVERE, "------- Error at processing  " + cls, e);
         }
 
     }
