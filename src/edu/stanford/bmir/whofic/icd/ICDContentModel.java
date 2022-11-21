@@ -40,8 +40,11 @@ public class ICDContentModel extends WHOFICContentModel {
      * Classes
      */
     private RDFSNamedClass icdCategoryClass;
+    private RDFSNamedClass icfCategoryClass;
+    private RDFSNamedClass ichiCategoryClass;
 
     private RDFSNamedClass externalCausesTopClass;
+    private RDFSNamedClass healthInterventionClass;
 
     /*
      * Properties
@@ -155,12 +158,33 @@ public class ICDContentModel extends WHOFICContentModel {
         }
         return icdCategoryClass;
     }
-
+    
+    public RDFSNamedClass getICFCategoryClass() {
+		if (icfCategoryClass == null) {
+    		icfCategoryClass = getOwlModel().getRDFSNamedClass(ICDContentModelConstants.ICF_CATEGORY_CLASS);
+    	}
+    	return icfCategoryClass;
+    }
+    
+    public RDFSNamedClass getICHICategoryClass() {
+    	if (ichiCategoryClass == null) {
+    		ichiCategoryClass = getOwlModel().getRDFSNamedClass(ICDContentModelConstants.ICHI_CATEGORY_CLASS);
+    	}
+    	return ichiCategoryClass;
+    }
+    
     public RDFSNamedClass getExternalCausesTopClass() {
-        if (externalCausesTopClass == null) {
-            externalCausesTopClass = getOwlModel().getRDFSNamedClass(ICDContentModelConstants.EXTERNAL_CAUSES_TOP_CLASS);
+    	if (externalCausesTopClass == null) {
+    		externalCausesTopClass = getOwlModel().getRDFSNamedClass(ICDContentModelConstants.EXTERNAL_CAUSES_TOP_CLASS);
+    	}
+    	return externalCausesTopClass;
+    }
+
+    public RDFSNamedClass getHealthInterventionClass() {
+        if (healthInterventionClass == null) {
+            healthInterventionClass = getOwlModel().getRDFSNamedClass(ICDContentModelConstants.HEALTH_INTERVENTION_CLASS);
         }
-        return externalCausesTopClass;
+        return healthInterventionClass;
     }
 
 
