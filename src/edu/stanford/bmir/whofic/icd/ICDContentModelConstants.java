@@ -10,6 +10,7 @@ public class ICDContentModelConstants extends WHOFICContentModelConstants {
 
     //TODO- what should we do with the default NS?
     public final static String NS = "http://who.int/icd#";
+    public final static String NS_ICF = "http://who.int/icf#";
 
     /*
      * Metaclasses
@@ -30,6 +31,8 @@ public class ICDContentModelConstants extends WHOFICContentModelConstants {
      */
 
     public final static String ICD_CATEGORY_CLASS = NS + "ICDCategory";
+    public final static String ICF_CATEGORY_CLASS = NS_ICF + "ICFCategory";
+    public final static String ICHI_CATEGORY_CLASS = NS + "ICHICategory";
 
     /* Linearizations */
     public final static String LINEARIZATION_ICD_11_VIEW_CLASS = NS + "ICD11LinearizationView";
@@ -39,6 +42,7 @@ public class ICDContentModelConstants extends WHOFICContentModelConstants {
 	/* Post-Coordination */
 
     public final static String EXTERNAL_CAUSES_TOP_CLASS = NS + "XX";
+    public final static String HEALTH_INTERVENTION_CLASS = NS + "HealthIntervention";
 
     public final static  String CHAPTER_X_CLASS = NS + "ChapterX";
 
@@ -167,16 +171,31 @@ public class ICDContentModelConstants extends WHOFICContentModelConstants {
 	public final static String PC_AXIS_ICHI_ESSENTIAL_PATHOLOGY_TEST = NS + "essentialPathologyTest";
 	
 	public final static String PC_AXIS_ICHI_QUANTIFIER = NS + "quantifier";
-	public final static String PC_AXIS_ICHI_NR_ANATOMICAL_STRUCTURES_FOR_INTERVENTION = NS + "numberOfAnatomicalStructuresAnInterventionIsPerformedOn";
-	public final static String PC_AXIS_ICHI_NR_INTERVENTIONS_PERFORMED = NS + "numberOfInterventionsPerformed";
-	public final static String PC_AXIS_ICHI_NR_THERAPEUTIC_PRODUCTS_INSERTED = NS + "numberOfTherapeuticProductsInserted";
+	public final static String PC_AXIS_ICHI_QUANTIFIER_NR_ANATOMICAL_STRUCTURES_FOR_INTERVENTION = NS + "numberOfAnatomicalStructuresAnInterventionIsPerformedOn";
+	public final static String PC_AXIS_ICHI_QUANTIFIER_NR_INTERVENTIONS_PERFORMED = NS + "numberOfInterventionsPerformed";
+	public final static String PC_AXIS_ICHI_QUANTIFIER_NR_THERAPEUTIC_PRODUCTS_INSERTED = NS + "numberOfTherapeuticProductsInserted";
 	
 	public final static String PC_AXIS_ICHI_TELEHEALTH = NS + "telehealth";
-	public final static String PC_AXIS_ICHI_INTERVENTION_PERFORMED_WITH_ADVICE_OR_ASSIST_FROM_DISTANCE= NS + "interventionPerformedWithAdviceOrAssistanceProvidedFromADistantLocation";
+	public final static String PC_AXIS_ICHI_TELEHEALTH_INTERVENTION_PERFORMED_WITH_ADVICE_OR_ASSIST_FROM_DISTANCE= NS + "interventionPerformedWithAdviceOrAssistanceProvidedFromADistantLocation";
 	public final static String PC_AXIS_ICHI_TELEHEALTH_INTERVENTION_PROVIDED_TO_RECEIPIENT_IN_DISTANT_LOCATION = NS + "interventionProvidedToRecipientInADistantLocation";
 	public final static String PC_AXIS_ICHI_TELEHEALTH_INTERVENTION_DELIVERED_VIA_TEXH_WITHOUT_HUMAN_INVOLVMENT = NS + "interventionsDeliveredViaTechnologyWithoutDirectInvolvementOfAHumanProvider";
-	public final static String PC_AXIS_ICHI_ADDITIONAL_DESCRIPTIVE_INFORMATION = NS + "additionalDescriptiveInformationForIntervention";
 	
+	public final static String PC_AXIS_ICHI_ADDITIONAL_DESCRIPTIVE_INFORMATION = NS + "additionalDescriptiveInformationForIntervention";
+	public final static String PC_AXIS_ICHI_INITIATING_OR_MAINTAINING_OR_DISCONTINUING_OR_RESUMING = NS + "initiatingOrMaintainingOrDiscontinuingOrResuming";
+	public final static String PC_AXIS_ICHI_RELATIONSHIP_TO_OTHER_INTERVENTION = NS + "relationshipToOtherInterventions";
+	public final static String PC_AXIS_ICHI_NATURE_OF_INTERVENTION = NS + "natureOfIntervention";
+	public final static String PC_AXIS_ICHI_USE_OF_EQUIPMENT_OR_CHALLENGE = NS + "useOfEquipmentOrChallenge";
+	public final static String PC_AXIS_ICHI_RECIPIENT = NS + "recipient";
+	public final static String PC_AXIS_ICHI_CREATIVE_THERAPY = NS + "creativeTherapy";
+	public final static String PC_AXIS_ICHI_SPECIFIC_SKILLS_AND_TECHNIQUE = NS + "specificSkillsAndTechnique";
+	public final static String PC_AXIS_ICHI_TISSUE_FLAP = NS + "tissueFlap";
+	public final static String PC_AXIS_ICHI_TISSUE_GRAFT = NS + "tissueGraft";
+//	public final static String PC_AXIS_ICHI_ENABLING_FACTORS_FOR_BEHAVIOUR_CHANGE = NS + "http://who.int/icd#enablingFactorsForBehaviourChange";
+//	public final static String PC_AXIS_ICHI_ADMINISTRATIVE_SYSTEM_LEVEL_AT_WHICH_INTERVENTION_DIRECTED = NS + "http://who.int/icd#administrativeSystemLevelAtWhichInterventionDirected";
+	
+	public final static String PC_AXIS_ICHI_NATURE_OF_INTERVENTION_STANDARDISATION_OR_STRUCTURE = NS + "standardisationOrStructure";
+	public final static String PC_AXIS_ICHI_NATURE_OF_INTERVENTION_TEMPORARY_INTERVENTION = NS + "temporaryIntervention";
+	public final static String PC_AXIS_ICHI_NATURE_OF_INTERVENTION_UNPLANNED = NS + "unplanned";
 	
 	public final static List<String> PC_AXES_PROPERTIES_LIST = Arrays.asList(
 			PC_AXIS_SPECIFIC_ANATOMY, PC_AXIS_TOPOLOGY_DISTRIBUTION, PC_AXIS_TOPOLOGY_LATERALITY,
@@ -268,16 +287,30 @@ public class ICDContentModelConstants extends WHOFICContentModelConstants {
 			PC_AXIS_ICHI_ESSENTIAL_PATHOLOGY_TEST,
 				
 			PC_AXIS_ICHI_QUANTIFIER,
-			PC_AXIS_ICHI_NR_ANATOMICAL_STRUCTURES_FOR_INTERVENTION,
-			PC_AXIS_ICHI_NR_INTERVENTIONS_PERFORMED,
-			PC_AXIS_ICHI_NR_THERAPEUTIC_PRODUCTS_INSERTED,
+			PC_AXIS_ICHI_QUANTIFIER_NR_ANATOMICAL_STRUCTURES_FOR_INTERVENTION,
+			PC_AXIS_ICHI_QUANTIFIER_NR_INTERVENTIONS_PERFORMED,
+			PC_AXIS_ICHI_QUANTIFIER_NR_THERAPEUTIC_PRODUCTS_INSERTED,
 				
 			PC_AXIS_ICHI_TELEHEALTH,
-			PC_AXIS_ICHI_INTERVENTION_PERFORMED_WITH_ADVICE_OR_ASSIST_FROM_DISTANCE,
+			PC_AXIS_ICHI_TELEHEALTH_INTERVENTION_PERFORMED_WITH_ADVICE_OR_ASSIST_FROM_DISTANCE,
 			PC_AXIS_ICHI_TELEHEALTH_INTERVENTION_PROVIDED_TO_RECEIPIENT_IN_DISTANT_LOCATION,
 			PC_AXIS_ICHI_TELEHEALTH_INTERVENTION_DELIVERED_VIA_TEXH_WITHOUT_HUMAN_INVOLVMENT,
-			PC_AXIS_ICHI_ADDITIONAL_DESCRIPTIVE_INFORMATION
-		
+
+			PC_AXIS_ICHI_ADDITIONAL_DESCRIPTIVE_INFORMATION,
+			PC_AXIS_ICHI_INITIATING_OR_MAINTAINING_OR_DISCONTINUING_OR_RESUMING,
+			PC_AXIS_ICHI_RELATIONSHIP_TO_OTHER_INTERVENTION,
+			PC_AXIS_ICHI_NATURE_OF_INTERVENTION,
+			PC_AXIS_ICHI_USE_OF_EQUIPMENT_OR_CHALLENGE,
+			PC_AXIS_ICHI_RECIPIENT,
+			PC_AXIS_ICHI_CREATIVE_THERAPY,
+			PC_AXIS_ICHI_SPECIFIC_SKILLS_AND_TECHNIQUE,
+			PC_AXIS_ICHI_TISSUE_FLAP,
+			PC_AXIS_ICHI_TISSUE_GRAFT,
+			//PC_AXIS_ICHI_ENABLING_FACTORS_FOR_BEHAVIOUR_CHANGE,
+			//PC_AXIS_ICHI_ADMINISTRATIVE_SYSTEM_LEVEL_AT_WHICH_INTERVENTION_DIRECTED,
+			PC_AXIS_ICHI_NATURE_OF_INTERVENTION_STANDARDISATION_OR_STRUCTURE,
+			PC_AXIS_ICHI_NATURE_OF_INTERVENTION_TEMPORARY_INTERVENTION,
+			PC_AXIS_ICHI_NATURE_OF_INTERVENTION_UNPLANNED
 			);
 
 	

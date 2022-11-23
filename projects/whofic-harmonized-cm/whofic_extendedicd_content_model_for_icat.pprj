@@ -1,4 +1,4 @@
-; Tue Sep 27 16:05:46 EEST 2022
+; Mon Nov 21 13:35:30 EET 2022
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -6,14 +6,11 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[whofic_extendedicd_content_model_for_icat_ProjectKB_Class147]
-		[whofic_extendedicd_content_model_for_icat_ProjectKB_Class148]
-		[whofic_extendedicd_content_model_for_icat_ProjectKB_Class149]
-		[whofic_extendedicd_content_model_for_icat_ProjectKB_Class150]
-		[whofic_extendedicd_content_model_for_icat_ProjectKB_Class151]
-		[whofic_extendedicd_content_model_for_icat_ProjectKB_Class152]
-		[whofic_extendedicd_content_model_for_icat_ProjectKB_Class153]
-		[whofic_extendedicd_content_model_for_icat_ProjectKB_Class154]))
+		[whofic_extendedicd_content_model_for_icat_ProjectKB_Class59]
+		[whofic_extendedicd_content_model_for_icat_ProjectKB_Class60]
+		[whofic_extendedicd_content_model_for_icat_ProjectKB_Class61]
+		[whofic_extendedicd_content_model_for_icat_ProjectKB_Class62]
+		[whofic_extendedicd_content_model_for_icat_ProjectKB_Class63]))
 
 ([CLSES_TAB] of  Widget
 
@@ -758,7 +755,7 @@
 ([KB_444675_Instance_0] of  String
 
 	(name "SwitchableClassDefinitionType")
-	(string_value "edu.stanford.smi.protegex.owl.ui.cls.PropertiesClassDefinitionWidget"))
+	(string_value "edu.stanford.smi.protegex.owl.ui.cls.LogicClassDefinitionWidgetType"))
 
 ([KB_465546_Instance_567] of  Widget
 
@@ -766,6 +763,9 @@
 	(name "http://protege.stanford.edu/plugins/owl/protege#ExternalResource")
 	(property_list [XY_Instance_890])
 	(widget_class_name "edu.stanford.smi.protegex.owl.ui.widget.OWLFormWidget"))
+
+([KB_534856_Class0] of  Map
+)
 
 ([KB_632156_Instance_0] of  String
 
@@ -5326,9 +5326,6 @@
 ([KB_941921_Instance_7] of  Property_List
 )
 
-([KB_991626_Class0] of  Map
-)
-
 ([OWL_ProjectKB_Instance_3] of  String
 
 	(name "owl_build")
@@ -5647,7 +5644,7 @@
 
 	(is_hidden TRUE)
 	(property_list [whofic_extendedicd_content_model_for_icat_ProjectKB_Class12])
-	(widget_class_name "edu.stanford.smi.protege.query.LuceneQueryPlugin"))
+	(widget_class_name "edu.stanford.smi.protegex.server_changes.prompt.UsersTab"))
 
 ([whofic_extendedicd_content_model_for_icat_ProjectKB_Class12] of  Property_List
 )
@@ -5661,51 +5658,11 @@
 ([whofic_extendedicd_content_model_for_icat_ProjectKB_Class14] of  Property_List
 )
 
-([whofic_extendedicd_content_model_for_icat_ProjectKB_Class147] of  String
-
-	(name ":INSTANCE-ANNOTATION")
-	(string_value "%3AANNOTATION-TEXT"))
-
-([whofic_extendedicd_content_model_for_icat_ProjectKB_Class148] of  String
-
-	(name "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property")
-	(string_value "%3ANAME"))
-
-([whofic_extendedicd_content_model_for_icat_ProjectKB_Class149] of  String
-
-	(name "http://www.w3.org/2002/07/owl#Thing")
-	(string_value "%3ANAME"))
-
 ([whofic_extendedicd_content_model_for_icat_ProjectKB_Class15] of  Widget
 
 	(is_hidden TRUE)
 	(property_list [whofic_extendedicd_content_model_for_icat_ProjectKB_Class16])
 	(widget_class_name "edu.stanford.bmir.protegex.icd.diff.ICDDiff"))
-
-([whofic_extendedicd_content_model_for_icat_ProjectKB_Class150] of  String
-
-	(name "http://www.w3.org/2000/01/rdf-schema#Class")
-	(string_value "%3ANAME"))
-
-([whofic_extendedicd_content_model_for_icat_ProjectKB_Class151] of  String
-
-	(name "http://www.w3.org/2002/07/owl#Class")
-	(string_value "%3ANAME"))
-
-([whofic_extendedicd_content_model_for_icat_ProjectKB_Class152] of  String
-
-	(name ":PAL-CONSTRAINT")
-	(string_value "%3APAL-NAME"))
-
-([whofic_extendedicd_content_model_for_icat_ProjectKB_Class153] of  String
-
-	(name ":META-CLASS")
-	(string_value "%3ANAME"))
-
-([whofic_extendedicd_content_model_for_icat_ProjectKB_Class154] of  String
-
-	(name "http://who.int/icd#LinearizationView")
-	(string_value "http%3A%2F%2Fwho.int%2Ficd%23sortingCode{.+}http%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23label"))
 
 ([whofic_extendedicd_content_model_for_icat_ProjectKB_Class16] of  Property_List
 )
@@ -5753,7 +5710,7 @@
 
 	(is_hidden TRUE)
 	(property_list [whofic_extendedicd_content_model_for_icat_ProjectKB_Class26])
-	(widget_class_name "org.protege.owl.axiome.ui.AxiomeTab"))
+	(widget_class_name "ca.uvic.csr.shrimp.jambalaya.JambalayaTab"))
 
 ([whofic_extendedicd_content_model_for_icat_ProjectKB_Class26] of  Property_List
 )
@@ -5771,7 +5728,7 @@
 
 	(is_hidden TRUE)
 	(property_list [whofic_extendedicd_content_model_for_icat_ProjectKB_Class30])
-	(widget_class_name "ca.uvic.csr.shrimp.jambalaya.JambalayaTab"))
+	(widget_class_name "org.protege.owl.axiome.ui.AxiomeTab"))
 
 ([whofic_extendedicd_content_model_for_icat_ProjectKB_Class3] of  Widget
 
@@ -5917,8 +5874,33 @@
 ([whofic_extendedicd_content_model_for_icat_ProjectKB_Class58] of  Property_List
 )
 
+([whofic_extendedicd_content_model_for_icat_ProjectKB_Class59] of  String
+
+	(name ":INSTANCE-ANNOTATION")
+	(string_value "%3AANNOTATION-TEXT"))
+
 ([whofic_extendedicd_content_model_for_icat_ProjectKB_Class6] of  Property_List
 )
+
+([whofic_extendedicd_content_model_for_icat_ProjectKB_Class60] of  String
+
+	(name "http://www.w3.org/2002/07/owl#Thing")
+	(string_value "%3ANAME"))
+
+([whofic_extendedicd_content_model_for_icat_ProjectKB_Class61] of  String
+
+	(name "http://www.w3.org/2002/07/owl#Class")
+	(string_value "%3ANAME"))
+
+([whofic_extendedicd_content_model_for_icat_ProjectKB_Class62] of  String
+
+	(name ":PAL-CONSTRAINT")
+	(string_value "%3APAL-NAME"))
+
+([whofic_extendedicd_content_model_for_icat_ProjectKB_Class63] of  String
+
+	(name ":META-CLASS")
+	(string_value "%3ANAME"))
 
 ([whofic_extendedicd_content_model_for_icat_ProjectKB_Class7] of  Widget
 
@@ -5933,7 +5915,7 @@
 
 	(is_hidden TRUE)
 	(property_list [whofic_extendedicd_content_model_for_icat_ProjectKB_Class10])
-	(widget_class_name "edu.stanford.smi.protegex.server_changes.prompt.UsersTab"))
+	(widget_class_name "edu.stanford.smi.protege.query.LuceneQueryPlugin"))
 
 ([XY_Instance_0] of  Property_List
 
