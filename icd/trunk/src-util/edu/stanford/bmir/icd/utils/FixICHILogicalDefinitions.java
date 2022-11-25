@@ -5,7 +5,6 @@ import java.util.Collection;
 import java.util.Date;
 
 import edu.stanford.bmir.whofic.icd.ICDContentModel;
-import edu.stanford.smi.protege.model.Cls;
 import edu.stanford.smi.protege.model.Project;
 import edu.stanford.smi.protege.ui.ProjectManager;
 import edu.stanford.smi.protege.util.Log;
@@ -74,7 +73,7 @@ public class FixICHILogicalDefinitions {
         owlModel.setGenerateEventsEnabled(true);
     }
 
-    private static void fixLogDef(Cls c) {
+    private static void fixLogDef(RDFSNamedClass c) {
        // ----- TO DO -----
     }
 
