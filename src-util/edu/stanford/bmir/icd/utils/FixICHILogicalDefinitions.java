@@ -5,10 +5,15 @@ import java.util.Collection;
 import java.util.Date;
 
 import edu.stanford.bmir.whofic.icd.ICDContentModel;
+import edu.stanford.bmir.whofic.icd.ICDContentModelConstants;
 import edu.stanford.smi.protege.model.Project;
 import edu.stanford.smi.protege.ui.ProjectManager;
 import edu.stanford.smi.protege.util.Log;
+import edu.stanford.smi.protegex.owl.model.OWLIntersectionClass;
 import edu.stanford.smi.protegex.owl.model.OWLModel;
+import edu.stanford.smi.protegex.owl.model.OWLNamedClass;
+import edu.stanford.smi.protegex.owl.model.OWLSomeValuesFrom;
+import edu.stanford.smi.protegex.owl.model.RDFSClass;
 import edu.stanford.smi.protegex.owl.model.RDFSNamedClass;
 
 public class FixICHILogicalDefinitions {
@@ -38,7 +43,7 @@ public class FixICHILogicalDefinitions {
             return;
         }
         
-        ichiHealthIntervCls = (RDFSNamedClass) owlModel.getRDFSNamedClass("http://who.int/icd#HealthIntervention");
+        ichiHealthIntervCls = (RDFSNamedClass) owlModel.getRDFSNamedClass(ICDContentModelConstants.HEALTH_INTERVENTION_CLASS);
 
         icdContentModel = new ICDContentModel(owlModel);
 
@@ -74,7 +79,55 @@ public class FixICHILogicalDefinitions {
     }
 
     private static void fixLogDef(RDFSNamedClass c) {
-       // ----- TO DO -----
+    	Collection<?> supers = c.getSuperclasses(false);
+    	Collection<?> equivalentClasses = c.getEquivalentClasses();
+       
+        boolean isHealthIntSuper = false;
+        boolean isAnotherSuper = false;
+        
+        for (Object s : supers) {
+			if (s instanceof OWLNamedClass) {
+				if (s.equals(ichiHealthIntervCls)) {
+					isHealthIntSuper = true;
+				}
+				else {
+					isAnotherSuper = true;
+				}
+			}
+		}
+        
+        for (Object s : supers) {
+        	if (equivalentClasses.contains(s)) {
+        		continue;
+        	}
+        	if (s instanceof OWLIntersectionClass) {
+        		OWLIntersectionClass sInt = (OWLIntersectionClass)s;
+        		Collection<RDFSClass> fillers = sInt.getOperands();
+        		OWLNamedClass superClass = null;
+        	    OWLIntersectionClass copyRestr = owlModel.createOWLIntersectionClass();
+        	    
+        	    for (RDFSClass f : fillers) {
+        	    	if (f instanceof OWLNamedClass) {
+        	    		superClass = (OWLNamedClass) f;
+        	    	}
+        	    	else {
+        	    		OWLSomeValuesFrom filler = (OWLSomeValuesFrom)f;
+        	            OWLSomeValuesFrom clone = owlModel.createOWLSomeValuesFrom(filler.getOnProperty(), filler.getSomeValuesFrom());
+        	            copyRestr.addOperand(clone);
+        	    	}
+        	    }
+        	    if (superClass != null) {
+        	    	Log.getLogger().info( c.toString() + ". Superclass: " + s.toString() + ". Fillers: " + fillers.toString());
+        	    	Log.getLogger().info("     REPLACING " + sInt.getBrowserText() + " WITH:   " + superClass.getBrowserText() + "  AND " + copyRestr.getBrowserText());
+        	        if (isAnotherSuper == false) {
+//        	          c.addSuperclass(superClass);
+//        	          c.addSuperclass(copyRestr);
+//        	          c.removeSuperclass(sInt);
+        	        }
+        	    }
+
+        	}
+        }
     }
 
 }
