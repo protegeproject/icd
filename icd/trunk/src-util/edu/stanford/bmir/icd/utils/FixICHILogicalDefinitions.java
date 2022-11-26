@@ -104,22 +104,24 @@ public class FixICHILogicalDefinitions {
         		OWLIntersectionClass sInt = (OWLIntersectionClass)s;
         		Collection<RDFSClass> fillers = sInt.getOperands();
         		OWLNamedClass superClass = null;
-        	    OWLIntersectionClass copyRestr = owlModel.createOWLIntersectionClass();
+//        	    OWLIntersectionClass copyRestr = owlModel.createOWLIntersectionClass();
         	    
         	    for (RDFSClass f : fillers) {
         	    	if (f instanceof OWLNamedClass) {
         	    		superClass = (OWLNamedClass) f;
         	    	}
-        	    	else {
-        	    		OWLSomeValuesFrom filler = (OWLSomeValuesFrom)f;
-        	            OWLSomeValuesFrom clone = owlModel.createOWLSomeValuesFrom(filler.getOnProperty(), filler.getSomeValuesFrom());
-        	            copyRestr.addOperand(clone);
-        	    	}
+//        	    	else {
+//        	    		OWLSomeValuesFrom filler = (OWLSomeValuesFrom)f;
+//        	            OWLSomeValuesFrom clone = owlModel.createOWLSomeValuesFrom(filler.getOnProperty(), filler.getSomeValuesFrom());
+//        	            copyRestr.addOperand(clone);
+//        	    	}
         	    }
         	    if (superClass != null) {
         	    	Log.getLogger().info( c.toString() + ". Superclass: " + s.toString() + ". Fillers: " + fillers.toString());
-        	    	Log.getLogger().info("     REPLACING " + sInt.getBrowserText() + " WITH:   " + superClass.getBrowserText() + "  AND " + copyRestr.getBrowserText());
-        	        if (isAnotherSuper == false) {
+//        	    	Log.getLogger().info("     REPLACING " + sInt.getBrowserText() + " WITH:   " + superClass.getBrowserText() + "  AND " + copyRestr.getBrowserText());
+        	    	if (isAnotherSuper == false) {
+            	    	Log.getLogger().info("     REMOVING class from intersction: " + superClass);
+//            	    	sInt.removeOperand(superClass);
 //        	          c.addSuperclass(superClass);
 //        	          c.addSuperclass(copyRestr);
 //        	          c.removeSuperclass(sInt);
