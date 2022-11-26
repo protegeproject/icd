@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="WINDOWS-1252" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <jardesc>
     <jar path="ICD/scripts/fix_ichi_logical_defs/lib/fix_ichi_logical_defs.jar"/>
-    <options buildIfNeeded="true" compress="true" descriptionLocation="/ICD/scripts/fix_ichi_logical_defs/fix_ichi_logical_defs.jardesc" exportErrors="false" exportWarnings="true" includeDirectoryEntries="false" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+    <options buildIfNeeded="true" compress="true" descriptionLocation="/icd/scripts/fix_ichi_logical_defs/fix_ichi_logical_defs.jardesc" exportErrors="false" exportWarnings="true" includeDirectoryEntries="false" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
     <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
     <selectedProjects/>
-    <manifest generateManifest="true" mainClassHandleIdentifier="=ICD/src-util&lt;edu.stanford.bmir.icd.utils{FixICHILogicalDefinitions.java[FixICHILogicalDefinitions" manifestLocation="" manifestVersion="1.0" reuseManifest="false" saveManifest="false" usesManifest="true">
+    <manifest generateManifest="true" mainClassHandleIdentifier="=icd/src-util&lt;edu.stanford.bmir.icd.utils{FixICHILogicalDefinitions.java[FixICHILogicalDefinitions" manifestLocation="" manifestVersion="1.0" reuseManifest="false" saveManifest="false" usesManifest="true">
         <sealing sealJar="false">
             <packagesToSeal/>
             <packagesToUnSeal/>
         </sealing>
     </manifest>
     <selectedElements exportClassFiles="true" exportJavaFiles="true" exportOutputFolder="false">
-        <javaElement handleIdentifier="=ICD/src-util&lt;edu.stanford.bmir.icd.utils{FixICHILogicalDefinitions.java"/>
+        <javaElement handleIdentifier="=icd/src-util&lt;edu.stanford.bmir.icd.utils{FixICHILogicalDefinitions.java"/>
     </selectedElements>
 </jardesc>
