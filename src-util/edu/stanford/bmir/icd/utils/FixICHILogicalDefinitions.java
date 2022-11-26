@@ -118,14 +118,15 @@ public class FixICHILogicalDefinitions {
         	    }
         	    if (superClass != null) {
         	    	Log.getLogger().info( c.toString() + ". Superclass: " + s.toString() + ". Fillers: " + fillers.toString());
-//        	    	Log.getLogger().info("     REPLACING " + sInt.getBrowserText() + " WITH:   " + superClass.getBrowserText() + "  AND " + copyRestr.getBrowserText());
-        	    	if (isAnotherSuper == false) {
-            	    	Log.getLogger().info("     REMOVING class from intersction: " + superClass);
-//            	    	sInt.removeOperand(superClass);
-//        	          c.addSuperclass(superClass);
-//        	          c.addSuperclass(copyRestr);
-//        	          c.removeSuperclass(sInt);
-        	        }
+//        	    	Log.getLogger().info("     REPLACING " + sInt.getBrowserText() + " WITH:   " + superClass.getBrowserText() + " (if necessary)  AND " + copyRestr.getBrowserText());
+           	    	Log.getLogger().info("     REMOVING class from intersection: " + superClass);
+//         	    	sInt.removeOperand(superClass);
+//      	          c.addSuperclass(copyRestr);
+//      	          c.removeSuperclass(sInt);
+           	    	if (isAnotherSuper == false && isHealthIntSuper == false) {  //no named superclass
+               	    	Log.getLogger().info("     ADDING name superclass, extracted from intersection: " + superClass);
+//     	          		c.addSuperclass(superClass);
+           	    	}
         	    }
 
         	}
