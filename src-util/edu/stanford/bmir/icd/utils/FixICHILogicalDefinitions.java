@@ -68,7 +68,7 @@ public class FixICHILogicalDefinitions {
 
         for (RDFSNamedClass cls : clses) {
             i++;
-            if (i % 500 == 0) {
+            if (i % 1000 == 0) {
                 Log.getLogger().info("Fixed log defs for " + i + " classes. Time: " + new Date());
             }
             fixLogDef(cls);
