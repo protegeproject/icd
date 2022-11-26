@@ -24,7 +24,7 @@ public class FixICHILogicalDefinitions {
     private static RDFSNamedClass ichiHealthIntervCls;
 
     public static void main(String[] args) {
-        if (args.length < 2) {
+        if (args.length < 1) {
             System.out.println("Usage: FixICHILogicalDefinitions pprj_file_name");
             return;
         }
