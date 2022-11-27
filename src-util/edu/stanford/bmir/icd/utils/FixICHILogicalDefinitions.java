@@ -122,12 +122,12 @@ public class FixICHILogicalDefinitions {
         	    	Log.getLogger().info( c.toString() + ". Superclass: " + s.toString() + ". Fillers: " + fillers.toString());
 //        	    	Log.getLogger().info("     REPLACING " + sInt.getBrowserText() + " WITH:   " + superClass.getBrowserText() + " (if necessary)  AND " + copyRestr.getBrowserText());
            	    	Log.getLogger().info("     REMOVING class from intersection: " + superClass);
-//         	    	sInt.removeOperand(superClass);
+         	    	sInt.removeOperand(superClass);
 //      	          c.addSuperclass(copyRestr);
 //      	          c.removeSuperclass(sInt);
            	    	if (isAnotherSuper == false && isHealthIntSuper == false) {  //no named superclass
                	    	Log.getLogger().info("     ADDING named superclass, extracted from intersection: " + superClass + " (" + superClass.getBrowserText() + ")");
-//     	          		c.addSuperclass(superClass);
+     	          		c.addSuperclass(superClass);
            	    	}
            	    	else {
            	    		if ((! superClass.equals(ichiHealthIntervCls)) && (! namedSupers.contains(superClass)) ) {
@@ -145,7 +145,7 @@ public class FixICHILogicalDefinitions {
            	    			else {
                        	    	Log.getLogger().info("     ADDING named superclass, extracted from intersection: "
                        	    			+ superClass + " (" + superClass.getBrowserText() + ") as it is NOT the ancestor of one of its superclasses: " + namedSupers);
-//             	          		c.addSuperclass(superClass);
+             	          		c.addSuperclass(superClass);
            	    			}
            	    		}
            	    	}
