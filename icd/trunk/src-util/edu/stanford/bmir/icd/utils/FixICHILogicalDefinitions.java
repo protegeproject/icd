@@ -82,11 +82,13 @@ public class FixICHILogicalDefinitions {
     	Collection<?> supers = c.getSuperclasses(false);
     	Collection<?> equivalentClasses = c.getEquivalentClasses();
        
+    	Collection<OWLNamedClass> namedSupers = new ArrayList<OWLNamedClass>();
         boolean isHealthIntSuper = false;
         boolean isAnotherSuper = false;
-        
+    	
         for (Object s : supers) {
 			if (s instanceof OWLNamedClass) {
+	        	namedSupers.add((OWLNamedClass)s);
 				if (s.equals(ichiHealthIntervCls)) {
 					isHealthIntSuper = true;
 				}
@@ -124,8 +126,28 @@ public class FixICHILogicalDefinitions {
 //      	          c.addSuperclass(copyRestr);
 //      	          c.removeSuperclass(sInt);
            	    	if (isAnotherSuper == false && isHealthIntSuper == false) {  //no named superclass
-               	    	Log.getLogger().info("     ADDING name superclass, extracted from intersection: " + superClass);
+               	    	Log.getLogger().info("     ADDING named superclass, extracted from intersection: " + superClass + " (" + superClass.getBrowserText() + ")");
 //     	          		c.addSuperclass(superClass);
+           	    	}
+           	    	else {
+           	    		if ((! superClass.equals(ichiHealthIntervCls)) && (! namedSupers.contains(superClass)) ) {
+           	    			boolean foundSubclass = false;
+           	    			for (OWLNamedClass namedSuper : namedSupers) {
+           	    				if (namedSuper.getSuperclasses(true).contains(superClass)) {
+           	    					foundSubclass = true;
+           	    					break;
+           	    				}
+           	    			}
+           	    			if (foundSubclass) {
+                       	    	Log.getLogger().info("     NO NEED TO ADD superclass extracted from intersection: "  
+                       	    		+ superClass + " (" + superClass.getBrowserText() + ") as it is the ancestor of one of its superclasses: " + namedSupers);
+           	    			}
+           	    			else {
+                       	    	Log.getLogger().info("     ADDING named superclass, extracted from intersection: "
+                       	    			+ superClass + " (" + superClass.getBrowserText() + ") as it is NOT the ancestor of one of its superclasses: " + namedSupers);
+//             	          		c.addSuperclass(superClass);
+           	    			}
+           	    		}
            	    	}
         	    }
 
